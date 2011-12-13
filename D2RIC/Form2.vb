@@ -599,10 +599,10 @@
                 new_item_name = """" & "item_talisman_of_evasion" & """"
                 Return new_item_name
             Case "Tango"
-                new_item_name = """" & "item_tpscroll" & """"
+                new_item_name = """" & "item_tango" & """"
                 Return new_item_name
             Case "Town Portal Scroll"
-                new_item_name = """" & "item_tango" & """"
+                new_item_name = """" & "item_tpscroll" & """"
                 Return new_item_name
             Case "Ultimate Orb"
                 new_item_name = """" & "item_ultimate_orb" & """"
