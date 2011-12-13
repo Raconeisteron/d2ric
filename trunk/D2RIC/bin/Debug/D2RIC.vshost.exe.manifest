@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="D2RIC.exe" size="156672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="D2RIC.exe" size="138240">
       <assemblyIdentity name="D2RIC" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EqNUlLoAZQF0LLFG0OC9xkflqzk=</dsig:DigestValue>
+        <dsig:DigestValue>buxtQ2y1PXg/CD9AvTcUG6NCXNs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
