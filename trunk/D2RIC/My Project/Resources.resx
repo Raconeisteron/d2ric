@@ -117,4 +117,374 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Aghanim_s_Scepter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-aghanim's_scepter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Animal_Courier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-animal_courier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Arcane_Boots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-arcane_boots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Armlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-armlet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Assault_Cuirass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-assault_cuirass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Battle_Fury" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-battle_fury.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Belt_of_Strength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-belt_of_strength.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Black_King_Bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-black_king_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Blades_of_Attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-blades_of_attack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Blade_Mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-blade_mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Blade_of_Alacrity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-blade_of_alacrity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Blink_Dagger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-blink_dagger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Bloodstone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-bloodstone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Boots_of_Elvenskin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-boots_of_elvenskin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Boots_of_Speed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-boots_of_speed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Boots_of_Travel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-boots_of_travel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Bottle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-bottle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Bracer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-bracer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Broadsword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-broadsword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Buckler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-buckler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-butterfly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Chainmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-chainmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Circlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-circlet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Clarity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-clarity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Claymore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-claymore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Cloak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-cloak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Crystalys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-crystalys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Daedalus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-daedalus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Dagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-dagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Demon_Edge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-demon_edge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Desolator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-desolator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Diffusal_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-diffusal_blade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Divine_Rapier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-divine_rapier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Drum_of_Endurance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-drum_of_endurance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Dust_of_Appearance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-dust_of_appearance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Eaglesong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-eaglesong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Energy_Booster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-energy_booster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ethereal_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ethereal_blade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Eul_s_Scepter_of_Divinity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-eul's_scepter_of_divinity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Eye_of_Skadi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-eye_of_skadi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Flying_Courier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-flying_courier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Force_Staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-force_staff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Gauntlets_of_Strength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-gauntlets_of_strength.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Gem_of_True_Sight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-gem_of_true_sight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ghost_Scepter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ghost_scepter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Gloves_of_Haste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-gloves_of_haste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Hand_of_Midas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-hand_of_midas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Headdress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-headdress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Healing_Salve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-healing_salve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Heart_of_Tarrasque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-heart_of_tarrasque.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Helm_of_Iron_Will" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-helm_of_iron_will.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Helm_of_the_Dominator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-helm_of_the_dominator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Hood_of_Defiance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-hood_of_defiance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Hyperstone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-hyperstone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Iron_Branch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-iron_branch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Javelin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-javelin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Linken_s_Sphere" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-linken's_sphere.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Maelstrom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-maelstrom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Magic_Stick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-magic_stick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Magic_Wand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-magic_wand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Manta_Style" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-manta_style.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Mantle_of_Intelligence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-mantle_of_intelligence.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Mask_of_Madness" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-mask_of_madness.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Medallion_of_Courage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-medallion_of_courage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Mekansm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-mekansm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Mithril_Hammer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-mithril_hammer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Mjollnir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-mjollnir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Monkey_King_Bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-monkey_king_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Morbid_Mask" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-morbid_mask.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Mystic_Staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-mystic_staff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Necronomicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-necronomicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Null_Talisman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-null_talisman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Oblivion_Staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-oblivion_staff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Observer_Ward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-observer_ward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ogre_Club" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ogre_club.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Orb_of_Venom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-orb_of_venom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Orchid_Malevolence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-orchid_malevolence.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Perseverance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-perseverance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Phase_Boots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-phase_boots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Pipe_of_Insight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-pipe_of_insight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Platemail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-platemail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Point_Booster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-point_booster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Poor_Man_s_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-poor_man's_shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Power_Treads" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-power_treads.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Quarterstaff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-quarterstaff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Quelling_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-quelling_blade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Radiance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-radiance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Reaver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-reaver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Refresher_Orb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-refresher_orb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ring_of_Basilius" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ring_of_basilius.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ring_of_Health" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ring_of_health.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ring_of_Protection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ring_of_protection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ring_of_Regen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ring_of_regen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Robe_of_the_Magi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-robe_of_the_magi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Sacred_Relic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-sacred_relic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Sage_s_Mask" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-sage's_mask.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Sange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-sange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Sange_and_Yasha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-sange_and_yasha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Satanic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-satanic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Scythe_of_Vyse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-scythe_of_vyse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Sentry_Ward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-sentry_ward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Shadow_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-shadow_blade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Shiva_s_Guard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-shiva's_guard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Skull_Basher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-skull_basher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Slippers_of_Agility" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-slippers_of_agility.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Smoke_of_Deceit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-smoke_of_deceit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Soul_Booster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-soul_booster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Soul_Ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-soul_ring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Staff_of_Wizardry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-staff_of_wizardry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Stout_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-stout_shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Talisman_of_Evasion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-talisman_of_evasion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Tango" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-tango.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Town_Portal_Scroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-town_portal_scroll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Ultimate_Orb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-ultimate_orb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Urn_of_Shadows" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-urn_of_shadows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Vanguard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-vanguard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Veil_of_Discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-veil_of_discord.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Vitality_Booster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-vitality_booster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Vladmir_s_Offering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-vladmir's_offering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Void_Stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-void_stone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Wraith_Band" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-wraith_band.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Yasha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-yasha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

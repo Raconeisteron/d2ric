@@ -1189,4 +1189,521 @@
         Label1.Text = ListBox1.SelectedItem.ToString
         CheckFile(Selected_Hero)
     End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        PictureBox1.Image = ChangePicture(ComboBox1.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
+        PictureBox2.Image = ChangePicture(ComboBox2.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox3_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox3.SelectedIndexChanged
+        PictureBox3.Image = ChangePicture(ComboBox3.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox4_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox4.SelectedIndexChanged
+        PictureBox4.Image = ChangePicture(ComboBox4.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox5_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox5.SelectedIndexChanged
+        PictureBox5.Image = ChangePicture(ComboBox5.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox6_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox6.SelectedIndexChanged
+        PictureBox6.Image = ChangePicture(ComboBox6.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox7_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox7.SelectedIndexChanged
+        PictureBox7.Image = ChangePicture(ComboBox7.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox8_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox8.SelectedIndexChanged
+        PictureBox8.Image = ChangePicture(ComboBox8.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox9_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox9.SelectedIndexChanged
+        PictureBox9.Image = ChangePicture(ComboBox9.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox10_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox10.SelectedIndexChanged
+        PictureBox10.Image = ChangePicture(ComboBox10.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox11_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox11.SelectedIndexChanged
+        PictureBox11.Image = ChangePicture(ComboBox11.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox12_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox12.SelectedIndexChanged
+        PictureBox12.Image = ChangePicture(ComboBox12.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox13_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox13.SelectedIndexChanged
+        PictureBox13.Image = ChangePicture(ComboBox13.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox14_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox14.SelectedIndexChanged
+        PictureBox14.Image = ChangePicture(ComboBox14.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox15_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox15.SelectedIndexChanged
+        PictureBox15.Image = ChangePicture(ComboBox15.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox16_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox16.SelectedIndexChanged
+        PictureBox16.Image = ChangePicture(ComboBox16.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox17_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox17.SelectedIndexChanged
+        PictureBox17.Image = ChangePicture(ComboBox17.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox18_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox18.SelectedIndexChanged
+        PictureBox18.Image = ChangePicture(ComboBox18.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox19_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox19.SelectedIndexChanged
+        PictureBox19.Image = ChangePicture(ComboBox19.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox20_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox20.SelectedIndexChanged
+        PictureBox20.Image = ChangePicture(ComboBox20.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox21_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox21.SelectedIndexChanged
+        PictureBox21.Image = ChangePicture(ComboBox21.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox22_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox22.SelectedIndexChanged
+        PictureBox22.Image = ChangePicture(ComboBox22.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox23_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox23.SelectedIndexChanged
+        PictureBox23.Image = ChangePicture(ComboBox23.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox24_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox24.SelectedIndexChanged
+        PictureBox24.Image = ChangePicture(ComboBox24.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox25_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox25.SelectedIndexChanged
+        PictureBox25.Image = ChangePicture(ComboBox25.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox26_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox26.SelectedIndexChanged
+        PictureBox26.Image = ChangePicture(ComboBox26.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox27_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox27.SelectedIndexChanged
+        PictureBox27.Image = ChangePicture(ComboBox27.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox28_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox28.SelectedIndexChanged
+        PictureBox28.Image = ChangePicture(ComboBox28.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox29_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox29.SelectedIndexChanged
+        PictureBox29.Image = ChangePicture(ComboBox29.SelectedItem.ToString)
+    End Sub
+
+    Private Sub ComboBox30_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox30.SelectedIndexChanged
+        PictureBox30.Image = ChangePicture(ComboBox30.SelectedItem.ToString)
+    End Sub
+
+    Public Function ChangePicture(ByVal item_name As String) As System.Drawing.Image
+        Dim pic_res As System.Drawing.Image
+        ' TODO: Rezepte hinzufügen
+        Select Case item_name
+            Case "Blink Dagger"
+                pic_res = D2RIC.My.Resources.Resources._40px_Blink_Dagger
+                Return pic_res
+            Case "Blades of Attack"
+                pic_res = D2RIC.My.Resources.Resources._40px_Blades_of_Attack
+                Return pic_res
+            Case "Aghanim's Scepter"
+                pic_res = D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter
+                Return pic_res
+            Case "Animal Courier"
+                pic_res = D2RIC.My.Resources.Resources._40px_Animal_Courier
+                Return pic_res
+            Case "Arcane Boots"
+                pic_res = D2RIC.My.Resources.Resources._40px_Arcane_Boots
+                Return pic_res
+            Case "Armlet"
+                pic_res = D2RIC.My.Resources.Resources._40px_Armlet
+                Return pic_res
+            Case "Assault Cuirass"
+                pic_res = D2RIC.My.Resources.Resources._40px_Assault_Cuirass
+                Return pic_res
+            Case "Battle Fury"
+                pic_res = D2RIC.My.Resources.Resources._40px_Battle_Fury
+                Return pic_res
+            Case "Belt of Strength"
+                pic_res = D2RIC.My.Resources.Resources._40px_Belt_of_Strength
+                Return pic_res
+            Case "Black King Bar"
+                pic_res = D2RIC.My.Resources.Resources._40px_Black_King_Bar
+                Return pic_res
+            Case "Blade Mail"
+                pic_res = D2RIC.My.Resources.Resources._40px_Blade_Mail
+                Return pic_res
+            Case "Blade of Alacrity"
+                pic_res = D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity
+                Return pic_res
+            Case "Bloodstone"
+                pic_res = D2RIC.My.Resources.Resources._40px_Bloodstone
+                Return pic_res
+            Case "Boots of Elvenskin"
+                pic_res = D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin
+                Return pic_res
+            Case "Boots of Speed"
+                pic_res = D2RIC.My.Resources.Resources._40px_Boots_of_Speed
+                Return pic_res
+            Case "Boots of Travel"
+                pic_res = D2RIC.My.Resources.Resources._40px_Boots_of_Travel
+                Return pic_res
+            Case "Bottle"
+                pic_res = D2RIC.My.Resources.Resources._40px_Bottle
+                Return pic_res
+            Case "Bracer"
+                pic_res = D2RIC.My.Resources.Resources._40px_Bracer
+                Return pic_res
+            Case "Broadsword"
+                pic_res = D2RIC.My.Resources.Resources._40px_Broadsword
+                Return pic_res
+            Case "Buckler"
+                pic_res = D2RIC.My.Resources.Resources._40px_Buckler
+                Return pic_res
+            Case "Butterfly"
+                pic_res = D2RIC.My.Resources.Resources._40px_Butterfly
+                Return pic_res
+            Case "Chainmail"
+                pic_res = D2RIC.My.Resources.Resources._40px_Chainmail
+                Return pic_res
+            Case "Circlet"
+                pic_res = D2RIC.My.Resources.Resources._40px_Circlet
+                Return pic_res
+            Case "Clarity"
+                pic_res = D2RIC.My.Resources.Resources._40px_Clarity
+                Return pic_res
+            Case "Claymore"
+                pic_res = D2RIC.My.Resources.Resources._40px_Claymore
+                Return pic_res
+            Case "Cloak"
+                pic_res = D2RIC.My.Resources.Resources._40px_Cloak
+                Return pic_res
+            Case "Crystalys"
+                pic_res = D2RIC.My.Resources.Resources._40px_Crystalys
+                Return pic_res
+            Case "Daedalus"
+                pic_res = D2RIC.My.Resources.Resources._40px_Daedalus
+                Return pic_res
+            Case "Dagon 1"
+                pic_res = D2RIC.My.Resources.Resources._40px_Dagon
+                Return pic_res
+            Case "Dagon 2"
+                pic_res = D2RIC.My.Resources.Resources._40px_Dagon
+                Return pic_res
+            Case "Dagon 3"
+                pic_res = D2RIC.My.Resources.Resources._40px_Dagon
+                Return pic_res
+            Case "Dagon 4"
+                pic_res = D2RIC.My.Resources.Resources._40px_Dagon
+                Return pic_res
+            Case "Dagon 5"
+                pic_res = D2RIC.My.Resources.Resources._40px_Dagon
+                Return pic_res
+            Case "Demon Edge"
+                pic_res = D2RIC.My.Resources.Resources._40px_Demon_Edge
+                Return pic_res
+            Case "Desolator"
+                pic_res = D2RIC.My.Resources.Resources._40px_Desolator
+                Return pic_res
+            Case "Diffusal Blade 1"
+                pic_res = D2RIC.My.Resources.Resources._40px_Diffusal_Blade
+                Return pic_res
+            Case "Diffusal Blade 2"
+                pic_res = D2RIC.My.Resources.Resources._40px_Diffusal_Blade
+                Return pic_res
+            Case "Divine Rapier"
+                pic_res = D2RIC.My.Resources.Resources._40px_Divine_Rapier
+                Return pic_res
+            Case "Drum of Endurance"
+                pic_res = D2RIC.My.Resources.Resources._40px_Drum_of_Endurance
+                Return pic_res
+            Case "Dust of Appearance"
+                pic_res = D2RIC.My.Resources.Resources._40px_Dust_of_Appearance
+                Return pic_res
+            Case "Eaglesong"
+                pic_res = D2RIC.My.Resources.Resources._40px_Eaglesong
+                Return pic_res
+            Case "Energy Booster"
+                pic_res = D2RIC.My.Resources.Resources._40px_Energy_Booster
+                Return pic_res
+            Case "Ethereal Blade"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ethereal_Blade
+                Return pic_res
+            Case "Eul's Scepter of Divinity"
+                pic_res = D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity
+                Return pic_res
+            Case "Eye of Skadi"
+                pic_res = D2RIC.My.Resources.Resources._40px_Eye_of_Skadi
+                Return pic_res
+            Case "Flying Courier"
+                pic_res = D2RIC.My.Resources.Resources._40px_Flying_Courier
+                Return pic_res
+            Case "Force Staff"
+                pic_res = D2RIC.My.Resources.Resources._40px_Force_Staff
+                Return pic_res
+            Case "Gauntlets of Strength"
+                pic_res = D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength
+                Return pic_res
+            Case "Gem of True Sight"
+                pic_res = D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight
+                Return pic_res
+            Case "Ghost Scepter"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ghost_Scepter
+                Return pic_res
+            Case "Gloves of Haste"
+                pic_res = D2RIC.My.Resources.Resources._40px_Gloves_of_Haste
+                Return pic_res
+            Case "Hand of Midas"
+                pic_res = D2RIC.My.Resources.Resources._40px_Hand_of_Midas
+                Return pic_res
+            Case "Headdress"
+                pic_res = D2RIC.My.Resources.Resources._40px_Headdress
+                Return pic_res
+            Case "Healing Salve"
+                pic_res = D2RIC.My.Resources.Resources._40px_Healing_Salve
+                Return pic_res
+            Case "Heart of Tarrasque"
+                pic_res = D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque
+                Return pic_res
+            Case "Helm of Iron Will"
+                pic_res = D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will
+                Return pic_res
+            Case "Helm of the Dominator"
+                pic_res = D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator
+                Return pic_res
+            Case "Hood of Defiance"
+                pic_res = D2RIC.My.Resources.Resources._40px_Hood_of_Defiance
+                Return pic_res
+            Case "Hyperstone"
+                pic_res = D2RIC.My.Resources.Resources._40px_Hyperstone
+                Return pic_res
+            Case "Iron Branch"
+                pic_res = D2RIC.My.Resources.Resources._40px_Iron_Branch
+                Return pic_res
+            Case "Javelin"
+                pic_res = D2RIC.My.Resources.Resources._40px_Javelin
+                Return pic_res
+            Case "Linken's Sphere"
+                pic_res = D2RIC.My.Resources.Resources._40px_Linken_s_Sphere
+                Return pic_res
+            Case "Maelstrom"
+                pic_res = D2RIC.My.Resources.Resources._40px_Maelstrom
+                Return pic_res
+            Case "Magic Stick"
+                pic_res = D2RIC.My.Resources.Resources._40px_Magic_Stick
+                Return pic_res
+            Case "Magic Wand"
+                pic_res = D2RIC.My.Resources.Resources._40px_Magic_Wand
+                Return pic_res
+            Case "Manta Style"
+                pic_res = D2RIC.My.Resources.Resources._40px_Manta_Style
+                Return pic_res
+            Case "Mantle of Intelligence"
+                pic_res = D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence
+                Return pic_res
+            Case "Mask of Madness"
+                pic_res = D2RIC.My.Resources.Resources._40px_Mask_of_Madness
+                Return pic_res
+            Case "Medallion of Courage"
+                pic_res = D2RIC.My.Resources.Resources._40px_Medallion_of_Courage
+                Return pic_res
+            Case "Mekansm"
+                pic_res = D2RIC.My.Resources.Resources._40px_Mekansm
+                Return pic_res
+            Case "Mithril Hammer"
+                pic_res = D2RIC.My.Resources.Resources._40px_Mithril_Hammer
+                Return pic_res
+            Case "Mjollnir"
+                pic_res = D2RIC.My.Resources.Resources._40px_Mjollnir
+                Return pic_res
+            Case "Monkey King Bar"
+                pic_res = D2RIC.My.Resources.Resources._40px_Monkey_King_Bar
+                Return pic_res
+            Case "Morbid Mask"
+                pic_res = D2RIC.My.Resources.Resources._40px_Morbid_Mask
+                Return pic_res
+            Case "Mystic Staff"
+                pic_res = D2RIC.My.Resources.Resources._40px_Mystic_Staff
+                Return pic_res
+            Case "Necronomicon 1"
+                pic_res = D2RIC.My.Resources.Resources._40px_Necronomicon
+                Return pic_res
+            Case "Necronomicon 2"
+                pic_res = D2RIC.My.Resources.Resources._40px_Necronomicon
+                Return pic_res
+            Case "Necronomicon 3"
+                pic_res = D2RIC.My.Resources.Resources._40px_Necronomicon
+                Return pic_res
+            Case "Null Talisman"
+                pic_res = D2RIC.My.Resources.Resources._40px_Null_Talisman
+                Return pic_res
+            Case "Oblivion Staff"
+                pic_res = D2RIC.My.Resources.Resources._40px_Oblivion_Staff
+                Return pic_res
+            Case "Observer Ward"
+                pic_res = D2RIC.My.Resources.Resources._40px_Observer_Ward
+                Return pic_res
+            Case "Ogre Club"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ogre_Club
+                Return pic_res
+            Case "Orb of Venom"
+                pic_res = D2RIC.My.Resources.Resources._40px_Orb_of_Venom
+                Return pic_res
+            Case "Orchid Malevolence"
+                pic_res = D2RIC.My.Resources.Resources._40px_Orchid_Malevolence
+                Return pic_res
+            Case "Perseverance"
+                pic_res = D2RIC.My.Resources.Resources._40px_Perseverance
+                Return pic_res
+            Case "Phase Boots"
+                pic_res = D2RIC.My.Resources.Resources._40px_Phase_Boots
+                Return pic_res
+            Case "Pipe of Insight"
+                pic_res = D2RIC.My.Resources.Resources._40px_Pipe_of_Insight
+                Return pic_res
+            Case "Platemail"
+                pic_res = D2RIC.My.Resources.Resources._40px_Platemail
+                Return pic_res
+            Case "Point Booster"
+                pic_res = D2RIC.My.Resources.Resources._40px_Point_Booster
+                Return pic_res
+            Case "Poor Man's Shield"
+                pic_res = D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield
+                Return pic_res
+            Case "Power Treads"
+                pic_res = D2RIC.My.Resources.Resources._40px_Power_Treads
+                Return pic_res
+            Case "Quarterstaff"
+                pic_res = D2RIC.My.Resources.Resources._40px_Quarterstaff
+                Return pic_res
+            Case "Quelling Blade"
+                pic_res = D2RIC.My.Resources.Resources._40px_Quelling_Blade
+                Return pic_res
+            Case "Radiance"
+                pic_res = D2RIC.My.Resources.Resources._40px_Radiance
+                Return pic_res
+            Case "Reaver"
+                pic_res = D2RIC.My.Resources.Resources._40px_Reaver
+                Return pic_res
+            Case "Refresher Orb"
+                pic_res = D2RIC.My.Resources.Resources._40px_Refresher_Orb
+                Return pic_res
+            Case "Ring of Basilius"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Basilius
+                Return pic_res
+            Case "Ring of Health"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Health
+                Return pic_res
+            Case "Ring of Protection"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Protection
+                Return pic_res
+            Case "Ring of Regen"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Regen
+                Return pic_res
+            Case "Robe of the Magi"
+                pic_res = D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi
+                Return pic_res
+            Case "Sacred Relic"
+                pic_res = D2RIC.My.Resources.Resources._40px_Sacred_Relic
+                Return pic_res
+            Case "Sage's Mask"
+                pic_res = D2RIC.My.Resources.Resources._40px_Sage_s_Mask
+                Return pic_res
+            Case "Sange"
+                pic_res = D2RIC.My.Resources.Resources._40px_Sange
+                Return pic_res
+            Case "Sange and Yasha"
+                pic_res = D2RIC.My.Resources.Resources._40px_Sange_and_Yasha
+                Return pic_res
+            Case "Satanic"
+                pic_res = D2RIC.My.Resources.Resources._40px_Satanic
+                Return pic_res
+            Case "Scythe of Vyse"
+                pic_res = D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse
+                Return pic_res
+            Case "Sentry Ward"
+                pic_res = D2RIC.My.Resources.Resources._40px_Sentry_Ward
+                Return pic_res
+            Case "Shadow Blade"
+                pic_res = D2RIC.My.Resources.Resources._40px_Shadow_Blade
+                Return pic_res
+            Case "Shiva's Guard"
+                pic_res = D2RIC.My.Resources.Resources._40px_Shiva_s_Guard
+                Return pic_res
+            Case "Skull Basher"
+                pic_res = D2RIC.My.Resources.Resources._40px_Skull_Basher
+                Return pic_res
+            Case "Slippers of Agility"
+                pic_res = D2RIC.My.Resources.Resources._40px_Slippers_of_Agility
+                Return pic_res
+            Case "Smoke of Deceit"
+                pic_res = D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit
+                Return pic_res
+            Case "Soul Booster"
+                pic_res = D2RIC.My.Resources.Resources._40px_Soul_Booster
+                Return pic_res
+            Case "Soul Ring"
+                pic_res = D2RIC.My.Resources.Resources._40px_Soul_Ring
+                Return pic_res
+            Case "Staff of Wizardry"
+                pic_res = D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry
+                Return pic_res
+            Case "Stout Shield"
+                pic_res = D2RIC.My.Resources.Resources._40px_Stout_Shield
+                Return pic_res
+            Case "Talisman of Evasion"
+                pic_res = D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion
+                Return pic_res
+            Case "Tango"
+                pic_res = D2RIC.My.Resources.Resources._40px_Tango
+                Return pic_res
+            Case "Town Portal Scroll"
+                pic_res = D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll
+                Return pic_res
+            Case "Ultimate Orb"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ultimate_Orb
+                Return pic_res
+            Case "Urn of Shadows"
+                pic_res = D2RIC.My.Resources.Resources._40px_Urn_of_Shadows
+                Return pic_res
+            Case "Vanguard"
+                pic_res = D2RIC.My.Resources.Resources._40px_Vanguard
+                Return pic_res
+            Case "Veil of Discord"
+                pic_res = D2RIC.My.Resources.Resources._40px_Veil_of_Discord
+                Return pic_res
+            Case "Vitality Booster"
+                pic_res = D2RIC.My.Resources.Resources._40px_Vitality_Booster
+                Return pic_res
+            Case "Vladmir's Offering"
+                pic_res = D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering
+                Return pic_res
+            Case "Void Stone"
+                pic_res = D2RIC.My.Resources.Resources._40px_Void_Stone
+                Return pic_res
+            Case "Wraith Band"
+                pic_res = D2RIC.My.Resources.Resources._40px_Wraith_Band
+                Return pic_res
+            Case "Yasha"
+                pic_res = D2RIC.My.Resources.Resources._40px_Yasha
+                Return pic_res
+            Case Else
+                pic_res = D2RIC.My.Resources.Resources.none
+                Return pic_res
+        End Select
+    End Function
 End Class
