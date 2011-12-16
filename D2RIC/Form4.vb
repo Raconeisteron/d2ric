@@ -11,12 +11,12 @@
                 Dim DeinPfad As String = My.Settings.path + "\temp.txt"
                 Dim ItemPlace As String = "Starting Items"
                 Dim i As Integer = 1
-                Form2.Clear()
-                Form2.ListBox1.SelectedItems.Clear()
+                Form2_backup.Clear()
+                Form2_backup.ListBox1.SelectedItems.Clear()
                 For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                     If Zeile.Contains("item_") And i < 31 Then
-                        Form2.Controls.Item("ComboBox" & i).Text = Form2.RenameItem(Zeile)
-                        Form2.Controls.Item("ComboBox" & i + 30).Text = ItemPlace
+                        Form2_backup.Controls.Item("ComboBox" & i).Text = Form2_backup.RenameItem(Zeile)
+                        Form2_backup.Controls.Item("ComboBox" & i + 30).Text = ItemPlace
                         i = i + 1
                     ElseIf Zeile.Contains("Early_Game") Then
                         ItemPlace = "Early Game"
@@ -25,17 +25,17 @@
                     ElseIf Zeile.Contains("Luxury") Then
                         ItemPlace = "Luxury"
                     ElseIf Zeile.Contains("author") Then
-                        Form2.TextBox1.Text = Replace(Zeile, """", "")
-                        Form2.TextBox1.Text = Replace(Form2.TextBox1.Text, "author", "")
-                        Form2.TextBox1.Text = Replace(Form2.TextBox1.Text, vbTab, "")
+                        Form2_backup.TextBox1.Text = Replace(Zeile, """", "")
+                        Form2_backup.TextBox1.Text = Replace(Form2_backup.TextBox1.Text, "author", "")
+                        Form2_backup.TextBox1.Text = Replace(Form2_backup.TextBox1.Text, vbTab, "")
                     ElseIf Zeile.Contains("hero") Then
                         Selected_Hero = Replace(Zeile, """hero""", "")
                         Selected_Hero = Replace(Selected_Hero, """", "")
                         Selected_Hero = Replace(Selected_Hero, vbTab, "")
-                        Form2.Label1.Text = renameHero(Selected_Hero)
-                        Form2.ListBox1.SelectedItem = renameHero(Selected_Hero)
-                        Form2.Button1.Enabled = True
-                        Form2.Button3.Enabled = True
+                        Form2_backup.Label1.Text = renameHero(Selected_Hero)
+                        Form2_backup.ListBox1.SelectedItem = renameHero(Selected_Hero)
+                        Form2_backup.Button1.Enabled = True
+                        Form2_backup.Button3.Enabled = True
                     Else
 
                     End If

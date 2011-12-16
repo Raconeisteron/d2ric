@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="D2RIC.exe" size="787456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="D2RIC.exe" size="948736">
       <assemblyIdentity name="D2RIC" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YN1JBdwU9amNoC1xcH7vtQAx4Pg=</dsig:DigestValue>
+        <dsig:DigestValue>PQXq7gFYQ1ndjJO1efbljfqhIB0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -333,6 +333,42 @@
       <dsig:DigestValue>07jEAY9jxz2mypyhWOQ6cPEme1s=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Resources\40px-Dagon2.png" size="1773">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>UupcaU+7xWxC8ijn23lUBhefssY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\40px-Dagon3.png" size="1754">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>k0KeLDWpFBqjDCzhT6To/HvsCJQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\40px-Dagon4.png" size="1915">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GNealVAo6Xqm7zhLWaaBjiTpxtk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\40px-Dagon5.png" size="1753">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GChYvTPMwMzPzRjq/VnEeYpFFJA=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Resources\40px-Demon_Edge.png" size="3190">
     <hash>
       <dsig:Transforms>
@@ -358,6 +394,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>9cRcF2ni1Por3RY0sxphX86QJK0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\40px-Diffusal_Blade2.png" size="2845">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ca/cPaOpAxYBA5plYG8YrR0RI0Y=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\40px-Divine_Rapier.png" size="2707">
@@ -709,6 +754,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>PyEku7OCutKlIQbZXxw8+yYHKk0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\40px-Necronomicon2.png" size="2841">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WNmQMURPvFMFZQ2ceQbD05RoV54=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\40px-Necronomicon3.png" size="2847">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JDaP3H1wYkyHxqIpRDoxH0g3Ooo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\40px-Null_Talisman.png" size="2559">
