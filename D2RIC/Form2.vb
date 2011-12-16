@@ -4,11 +4,11 @@ Public Class Form2
     Dim Selected_Hero, NeuerText As String
     Private m_MouseIsDown As Boolean
 
-    Private Sub DragAndDropTest_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub Form2_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         End
     End Sub
 
-    Private Sub DragAndDropTest_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         PictureBox1.AllowDrop = True
         PictureBox2.AllowDrop = True
         PictureBox3.AllowDrop = True
