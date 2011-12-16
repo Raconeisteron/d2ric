@@ -120,10 +120,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Form2_backup.Designer.vb">
+      <DependentUpon>Form2_backup.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Form2_backup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form3.Designer.vb">
@@ -142,6 +142,12 @@
       <DependentUpon>Form5.vb</DependentUpon>
     </Compile>
     <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -165,8 +171,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="Form2_backup.resx">
+      <DependentUpon>Form2_backup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -250,9 +259,14 @@
     <Content Include="Resources\40px-Crystalys.png" />
     <Content Include="Resources\40px-Daedalus.png" />
     <Content Include="Resources\40px-Dagon.png" />
+    <Content Include="Resources\40px-Dagon2.png" />
+    <Content Include="Resources\40px-Dagon3.png" />
+    <Content Include="Resources\40px-Dagon4.png" />
+    <Content Include="Resources\40px-Dagon5.png" />
     <Content Include="Resources\40px-Demon_Edge.png" />
     <Content Include="Resources\40px-Desolator.png" />
     <Content Include="Resources\40px-Diffusal_Blade.png" />
+    <Content Include="Resources\40px-Diffusal_Blade2.png" />
     <Content Include="Resources\40px-Divine_Rapier.png" />
     <Content Include="Resources\40px-Drum_of_Endurance.png" />
     <Content Include="Resources\40px-Dust_of_Appearance.png" />
@@ -292,6 +306,8 @@
     <Content Include="Resources\40px-Morbid_Mask.png" />
     <Content Include="Resources\40px-Mystic_Staff.png" />
     <Content Include="Resources\40px-Necronomicon.png" />
+    <Content Include="Resources\40px-Necronomicon2.png" />
+    <Content Include="Resources\40px-Necronomicon3.png" />
     <Content Include="Resources\40px-Null_Talisman.png" />
     <Content Include="Resources\40px-Oblivion_Staff.png" />
     <Content Include="Resources\40px-Observer_Ward.png" />

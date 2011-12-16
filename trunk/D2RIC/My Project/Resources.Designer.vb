@@ -263,6 +263,34 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property _40px_Dagon2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Dagon2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Dagon3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Dagon3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Dagon4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Dagon4", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Dagon5() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Dagon5", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property _40px_Demon_Edge() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Demon_Edge", resourceCulture)
@@ -280,6 +308,13 @@ Namespace My.Resources
         Friend ReadOnly Property _40px_Diffusal_Blade() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Diffusal_Blade", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Diffusal_Blade2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Diffusal_Blade2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -553,6 +588,20 @@ Namespace My.Resources
         Friend ReadOnly Property _40px_Necronomicon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Necronomicon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Necronomicon2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Necronomicon2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Necronomicon3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Necronomicon3", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

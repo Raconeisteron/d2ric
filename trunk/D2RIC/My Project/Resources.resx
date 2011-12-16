@@ -487,4 +487,25 @@
   <data name="_40px_Yasha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\40px-yasha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_40px_Dagon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-dagon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Dagon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-dagon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Dagon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-dagon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Dagon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-dagon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Diffusal_Blade2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-diffusal_blade2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Necronomicon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-necronomicon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40px_Necronomicon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40px-necronomicon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

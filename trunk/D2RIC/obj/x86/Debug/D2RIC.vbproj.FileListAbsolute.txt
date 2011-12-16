@@ -30,3 +30,4 @@ D:\Eigene Dateien\Eigene Dokumente\Visual Studio 2010\Projects\D2RIC\D2RIC\obj\x
 D:\Eigene Dateien\Eigene Dokumente\Visual Studio 2010\Projects\D2RIC\D2RIC\obj\x86\Debug\D2RIC.application
 D:\Eigene Dateien\Eigene Dokumente\Visual Studio 2010\Projects\D2RIC\D2RIC\obj\x86\Debug\D2RIC.Form4.resources
 D:\Eigene Dateien\Eigene Dokumente\Visual Studio 2010\Projects\D2RIC\D2RIC\obj\x86\Debug\D2RIC.Form5.resources
+D:\Eigene Dateien\Eigene Dokumente\Visual Studio 2010\Projects\D2RIC\D2RIC\obj\x86\Debug\D2RIC.Form2_backup.resources
