@@ -101,6 +101,17 @@ Namespace My
                 Me("author") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property autoupdate() As Boolean
+            Get
+                Return CType(Me("autoupdate"),Boolean)
+            End Get
+            Set
+                Me("autoupdate") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

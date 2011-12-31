@@ -26,6 +26,10 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PictureBox321 = New System.Windows.Forms.PictureBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox319 = New System.Windows.Forms.PictureBox()
         Me.Label0 = New System.Windows.Forms.Label()
         Me.PictureBox159 = New System.Windows.Forms.PictureBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -197,6 +201,10 @@ Partial Class FormMain
         Me.PictureBox73 = New System.Windows.Forms.PictureBox()
         Me.PictureBox72 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PictureBox322 = New System.Windows.Forms.PictureBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox320 = New System.Windows.Forms.PictureBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -384,16 +392,14 @@ Partial Class FormMain
         Me.ButtonBackup = New System.Windows.Forms.Button()
         Me.ButtonDeleteBackup = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.PictureBox319 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox320 = New System.Windows.Forms.PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PictureBox321 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox322 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ButtonUpdate = New System.Windows.Forms.Button()
+        Me.LabelWait = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox321, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox319, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox159, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox158, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox157, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -554,6 +560,8 @@ Partial Class FormMain
         CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.PictureBox322, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox320, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox318, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox317, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox316, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -716,10 +724,6 @@ Partial Class FormMain
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
-        CType(Me.PictureBox319, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox320, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox321, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox322, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -918,6 +922,43 @@ Partial Class FormMain
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Single Change"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'PictureBox321
+        '
+        Me.PictureBox321.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.PictureBox321.Location = New System.Drawing.Point(397, 231)
+        Me.PictureBox321.Name = "PictureBox321"
+        Me.PictureBox321.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox321.TabIndex = 503
+        Me.PictureBox321.TabStop = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"none", "Aghanim's Scepter", "Animal Courier", "Arcane Boots", "Armlet", "Assault Cuirass", "Battle Fury", "Belt of Strength", "Black King Bar", "Blade Mail", "Blade of Alacrity", "Blades of Attack", "Blink Dagger", "Bloodstone", "Boots of Elvenskin", "Boots of Speed", "Boots of Travel", "Bottle", "Bracer", "Broadsword", "Buckler", "Butterfly", "Chainmail", "Circlet", "Clarity", "Claymore", "Cloak", "Crystalys", "Daedalus", "Dagon 1", "Dagon 2", "Dagon 3", "Dagon 4", "Dagon 5", "Demon Edge", "Desolator", "Diffusal Blade 1", "Diffusal Blade 2", "Divine Rapier", "Drum of Endurance", "Dust of Appearance", "Eaglesong", "Energy Booster", "Ethereal Blade", "Eul's Scepter of Divinity", "Eye of Skadi", "Flying Courier", "Force Staff", "Gauntlets of Strength", "Gem of True Sight", "Ghost Scepter", "Gloves of Haste", "Hand of Midas", "Headdress", "Healing Salve", "Heart of Tarrasque", "Helm of Iron Will", "Helm of the Dominator", "Hood of Defiance", "Hyperstone", "Iron Branch", "Javelin", "Linken's Sphere", "Maelstrom", "Magic Stick", "Magic Wand", "Manta Style", "Mantle of Intelligence", "Mask of Madness", "Medallion of Courage", "Mekansm", "Mithril Hammer", "Mjollnir", "Monkey King Bar", "Morbid Mask", "Mystic Staff", "Necronomicon 1", "Necronomicon 2", "Necronomicon 3", "Null Talisman", "Oblivion Staff", "Observer Ward", "Ogre Club", "Orb of Venom", "Orchid Malevolence", "Perseverance", "Phase Boots", "Pipe of Insight", "Platemail", "Point Booster", "Poor Man's Shield", "Power Treads", "Quarterstaff", "Quelling Blade", "Radiance", "Reaver", "Refresher Orb", "Ring of Basilius", "Ring of Health", "Ring of Protection", "Ring of Regen", "Robe of the Magi", "Sacred Relic", "Sage's Mask", "Sange", "Sange and Yasha", "Satanic", "Scythe of Vyse", "Sentry Ward", "Shadow Blade", "Shiva's Guard", "Skull Basher", "Slippers of Agility", "Smoke of Deceit", "Soul Booster", "Soul Ring", "Staff of Wizardry", "Stout Shield", "Talisman of Evasion", "Tango", "Town Portal Scroll", "Ultimate Orb", "Urn of Shadows", "Vanguard", "Veil of Discord", "Vitality Booster", "Vladmir's Offering", "Void Stone", "Wraith Band", "Yasha"})
+        Me.ComboBox1.Location = New System.Drawing.Point(270, 240)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 502
+        Me.ComboBox1.Text = "none"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(200, 243)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 13)
+        Me.Label10.TabIndex = 501
+        Me.Label10.Text = "Search Item"
+        '
+        'PictureBox319
+        '
+        Me.PictureBox319.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.PictureBox319.Location = New System.Drawing.Point(615, 565)
+        Me.PictureBox319.Name = "PictureBox319"
+        Me.PictureBox319.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox319.TabIndex = 500
+        Me.PictureBox319.TabStop = False
         '
         'Label0
         '
@@ -2636,6 +2677,43 @@ Partial Class FormMain
         Me.TabPage2.Text = "Multi Change"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'PictureBox322
+        '
+        Me.PictureBox322.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.PictureBox322.Location = New System.Drawing.Point(397, 231)
+        Me.PictureBox322.Name = "PictureBox322"
+        Me.PictureBox322.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox322.TabIndex = 506
+        Me.PictureBox322.TabStop = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"none", "Aghanim's Scepter", "Animal Courier", "Arcane Boots", "Armlet", "Assault Cuirass", "Battle Fury", "Belt of Strength", "Black King Bar", "Blade Mail", "Blade of Alacrity", "Blades of Attack", "Blink Dagger", "Bloodstone", "Boots of Elvenskin", "Boots of Speed", "Boots of Travel", "Bottle", "Bracer", "Broadsword", "Buckler", "Butterfly", "Chainmail", "Circlet", "Clarity", "Claymore", "Cloak", "Crystalys", "Daedalus", "Dagon 1", "Dagon 2", "Dagon 3", "Dagon 4", "Dagon 5", "Demon Edge", "Desolator", "Diffusal Blade 1", "Diffusal Blade 2", "Divine Rapier", "Drum of Endurance", "Dust of Appearance", "Eaglesong", "Energy Booster", "Ethereal Blade", "Eul's Scepter of Divinity", "Eye of Skadi", "Flying Courier", "Force Staff", "Gauntlets of Strength", "Gem of True Sight", "Ghost Scepter", "Gloves of Haste", "Hand of Midas", "Headdress", "Healing Salve", "Heart of Tarrasque", "Helm of Iron Will", "Helm of the Dominator", "Hood of Defiance", "Hyperstone", "Iron Branch", "Javelin", "Linken's Sphere", "Maelstrom", "Magic Stick", "Magic Wand", "Manta Style", "Mantle of Intelligence", "Mask of Madness", "Medallion of Courage", "Mekansm", "Mithril Hammer", "Mjollnir", "Monkey King Bar", "Morbid Mask", "Mystic Staff", "Necronomicon 1", "Necronomicon 2", "Necronomicon 3", "Null Talisman", "Oblivion Staff", "Observer Ward", "Ogre Club", "Orb of Venom", "Orchid Malevolence", "Perseverance", "Phase Boots", "Pipe of Insight", "Platemail", "Point Booster", "Poor Man's Shield", "Power Treads", "Quarterstaff", "Quelling Blade", "Radiance", "Reaver", "Refresher Orb", "Ring of Basilius", "Ring of Health", "Ring of Protection", "Ring of Regen", "Robe of the Magi", "Sacred Relic", "Sage's Mask", "Sange", "Sange and Yasha", "Satanic", "Scythe of Vyse", "Sentry Ward", "Shadow Blade", "Shiva's Guard", "Skull Basher", "Slippers of Agility", "Smoke of Deceit", "Soul Booster", "Soul Ring", "Staff of Wizardry", "Stout Shield", "Talisman of Evasion", "Tango", "Town Portal Scroll", "Ultimate Orb", "Urn of Shadows", "Vanguard", "Veil of Discord", "Vitality Booster", "Vladmir's Offering", "Void Stone", "Wraith Band", "Yasha"})
+        Me.ComboBox2.Location = New System.Drawing.Point(270, 240)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 505
+        Me.ComboBox2.Text = "none"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(200, 243)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(64, 13)
+        Me.Label11.TabIndex = 504
+        Me.Label11.Text = "Search Item"
+        '
+        'PictureBox320
+        '
+        Me.PictureBox320.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.PictureBox320.Location = New System.Drawing.Point(615, 564)
+        Me.PictureBox320.Name = "PictureBox320"
+        Me.PictureBox320.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox320.TabIndex = 500
+        Me.PictureBox320.TabStop = False
+        '
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
@@ -4246,6 +4324,7 @@ Partial Class FormMain
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.CheckBox5)
         Me.TabPage5.Controls.Add(Me.ButtonOpenBackupFolder)
         Me.TabPage5.Controls.Add(Me.Label9)
         Me.TabPage5.Controls.Add(Me.Label8)
@@ -4334,85 +4413,50 @@ Partial Class FormMain
         Me.ButtonDeleteBackup.Text = "Delete backups"
         Me.ButtonDeleteBackup.UseVisualStyleBackColor = True
         '
-        'PictureBox319
+        'ButtonUpdate
         '
-        Me.PictureBox319.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox319.Location = New System.Drawing.Point(615, 565)
-        Me.PictureBox319.Name = "PictureBox319"
-        Me.PictureBox319.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox319.TabIndex = 500
-        Me.PictureBox319.TabStop = False
+        Me.ButtonUpdate.Location = New System.Drawing.Point(804, 5)
+        Me.ButtonUpdate.Name = "ButtonUpdate"
+        Me.ButtonUpdate.Size = New System.Drawing.Size(109, 23)
+        Me.ButtonUpdate.TabIndex = 1
+        Me.ButtonUpdate.Text = "Check for Updates"
+        Me.ButtonUpdate.UseVisualStyleBackColor = True
         '
-        'PictureBox320
+        'LabelWait
         '
-        Me.PictureBox320.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox320.Location = New System.Drawing.Point(615, 564)
-        Me.PictureBox320.Name = "PictureBox320"
-        Me.PictureBox320.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox320.TabIndex = 500
-        Me.PictureBox320.TabStop = False
+        Me.LabelWait.AutoSize = True
+        Me.LabelWait.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelWait.ForeColor = System.Drawing.Color.Red
+        Me.LabelWait.Location = New System.Drawing.Point(400, 5)
+        Me.LabelWait.Name = "LabelWait"
+        Me.LabelWait.Size = New System.Drawing.Size(269, 26)
+        Me.LabelWait.TabIndex = 2
+        Me.LabelWait.Text = "Checking for Updates ..."
+        Me.LabelWait.Visible = False
         '
-        'Label10
+        'BackgroundWorker1
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(200, 243)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 13)
-        Me.Label10.TabIndex = 501
-        Me.Label10.Text = "Search Item"
         '
-        'ComboBox1
+        'CheckBox5
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"none", "Aghanim's Scepter", "Animal Courier", "Arcane Boots", "Armlet", "Assault Cuirass", "Battle Fury", "Belt of Strength", "Black King Bar", "Blade Mail", "Blade of Alacrity", "Blades of Attack", "Blink Dagger", "Bloodstone", "Boots of Elvenskin", "Boots of Speed", "Boots of Travel", "Bottle", "Bracer", "Broadsword", "Buckler", "Butterfly", "Chainmail", "Circlet", "Clarity", "Claymore", "Cloak", "Crystalys", "Daedalus", "Dagon 1", "Dagon 2", "Dagon 3", "Dagon 4", "Dagon 5", "Demon Edge", "Desolator", "Diffusal Blade 1", "Diffusal Blade 2", "Divine Rapier", "Drum of Endurance", "Dust of Appearance", "Eaglesong", "Energy Booster", "Ethereal Blade", "Eul's Scepter of Divinity", "Eye of Skadi", "Flying Courier", "Force Staff", "Gauntlets of Strength", "Gem of True Sight", "Ghost Scepter", "Gloves of Haste", "Hand of Midas", "Headdress", "Healing Salve", "Heart of Tarrasque", "Helm of Iron Will", "Helm of the Dominator", "Hood of Defiance", "Hyperstone", "Iron Branch", "Javelin", "Linken's Sphere", "Maelstrom", "Magic Stick", "Magic Wand", "Manta Style", "Mantle of Intelligence", "Mask of Madness", "Medallion of Courage", "Mekansm", "Mithril Hammer", "Mjollnir", "Monkey King Bar", "Morbid Mask", "Mystic Staff", "Necronomicon 1", "Necronomicon 2", "Necronomicon 3", "Null Talisman", "Oblivion Staff", "Observer Ward", "Ogre Club", "Orb of Venom", "Orchid Malevolence", "Perseverance", "Phase Boots", "Pipe of Insight", "Platemail", "Point Booster", "Poor Man's Shield", "Power Treads", "Quarterstaff", "Quelling Blade", "Radiance", "Reaver", "Refresher Orb", "Ring of Basilius", "Ring of Health", "Ring of Protection", "Ring of Regen", "Robe of the Magi", "Sacred Relic", "Sage's Mask", "Sange", "Sange and Yasha", "Satanic", "Scythe of Vyse", "Sentry Ward", "Shadow Blade", "Shiva's Guard", "Skull Basher", "Slippers of Agility", "Smoke of Deceit", "Soul Booster", "Soul Ring", "Staff of Wizardry", "Stout Shield", "Talisman of Evasion", "Tango", "Town Portal Scroll", "Ultimate Orb", "Urn of Shadows", "Vanguard", "Veil of Discord", "Vitality Booster", "Vladmir's Offering", "Void Stone", "Wraith Band", "Yasha"})
-        Me.ComboBox1.Location = New System.Drawing.Point(270, 240)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 502
-        Me.ComboBox1.Text = "none"
-        '
-        'PictureBox321
-        '
-        Me.PictureBox321.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox321.Location = New System.Drawing.Point(397, 231)
-        Me.PictureBox321.Name = "PictureBox321"
-        Me.PictureBox321.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox321.TabIndex = 503
-        Me.PictureBox321.TabStop = False
-        '
-        'PictureBox322
-        '
-        Me.PictureBox322.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox322.Location = New System.Drawing.Point(397, 231)
-        Me.PictureBox322.Name = "PictureBox322"
-        Me.PictureBox322.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox322.TabIndex = 506
-        Me.PictureBox322.TabStop = False
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"none", "Aghanim's Scepter", "Animal Courier", "Arcane Boots", "Armlet", "Assault Cuirass", "Battle Fury", "Belt of Strength", "Black King Bar", "Blade Mail", "Blade of Alacrity", "Blades of Attack", "Blink Dagger", "Bloodstone", "Boots of Elvenskin", "Boots of Speed", "Boots of Travel", "Bottle", "Bracer", "Broadsword", "Buckler", "Butterfly", "Chainmail", "Circlet", "Clarity", "Claymore", "Cloak", "Crystalys", "Daedalus", "Dagon 1", "Dagon 2", "Dagon 3", "Dagon 4", "Dagon 5", "Demon Edge", "Desolator", "Diffusal Blade 1", "Diffusal Blade 2", "Divine Rapier", "Drum of Endurance", "Dust of Appearance", "Eaglesong", "Energy Booster", "Ethereal Blade", "Eul's Scepter of Divinity", "Eye of Skadi", "Flying Courier", "Force Staff", "Gauntlets of Strength", "Gem of True Sight", "Ghost Scepter", "Gloves of Haste", "Hand of Midas", "Headdress", "Healing Salve", "Heart of Tarrasque", "Helm of Iron Will", "Helm of the Dominator", "Hood of Defiance", "Hyperstone", "Iron Branch", "Javelin", "Linken's Sphere", "Maelstrom", "Magic Stick", "Magic Wand", "Manta Style", "Mantle of Intelligence", "Mask of Madness", "Medallion of Courage", "Mekansm", "Mithril Hammer", "Mjollnir", "Monkey King Bar", "Morbid Mask", "Mystic Staff", "Necronomicon 1", "Necronomicon 2", "Necronomicon 3", "Null Talisman", "Oblivion Staff", "Observer Ward", "Ogre Club", "Orb of Venom", "Orchid Malevolence", "Perseverance", "Phase Boots", "Pipe of Insight", "Platemail", "Point Booster", "Poor Man's Shield", "Power Treads", "Quarterstaff", "Quelling Blade", "Radiance", "Reaver", "Refresher Orb", "Ring of Basilius", "Ring of Health", "Ring of Protection", "Ring of Regen", "Robe of the Magi", "Sacred Relic", "Sage's Mask", "Sange", "Sange and Yasha", "Satanic", "Scythe of Vyse", "Sentry Ward", "Shadow Blade", "Shiva's Guard", "Skull Basher", "Slippers of Agility", "Smoke of Deceit", "Soul Booster", "Soul Ring", "Staff of Wizardry", "Stout Shield", "Talisman of Evasion", "Tango", "Town Portal Scroll", "Ultimate Orb", "Urn of Shadows", "Vanguard", "Veil of Discord", "Vitality Booster", "Vladmir's Offering", "Void Stone", "Wraith Band", "Yasha"})
-        Me.ComboBox2.Location = New System.Drawing.Point(270, 240)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 505
-        Me.ComboBox2.Text = "none"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(200, 243)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(64, 13)
-        Me.Label11.TabIndex = 504
-        Me.Label11.Text = "Search Item"
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Checked = True
+        Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox5.Location = New System.Drawing.Point(24, 277)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(213, 19)
+        Me.CheckBox5.TabIndex = 346
+        Me.CheckBox5.Text = "Check for Updates on Startup"
+        Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(921, 697)
+        Me.Controls.Add(Me.LabelWait)
+        Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -4424,6 +4468,8 @@ Partial Class FormMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.PictureBox321, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox319, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox159, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox158, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox157, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4585,6 +4631,8 @@ Partial Class FormMain
         CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.PictureBox322, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox320, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox318, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox317, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox316, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4750,11 +4798,8 @@ Partial Class FormMain
         Me.TabPage4.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
-        CType(Me.PictureBox319, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox320, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox321, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox322, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
@@ -5125,4 +5170,8 @@ Partial Class FormMain
     Friend WithEvents PictureBox322 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents ButtonUpdate As System.Windows.Forms.Button
+    Friend WithEvents LabelWait As System.Windows.Forms.Label
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
 End Class

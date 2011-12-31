@@ -1,4 +1,4 @@
-﻿Imports System.Security.Cryptography
+﻿Imports System.Security.Cryptography, System.Net
 
 Public Class FormMain
 
@@ -6,6 +6,7 @@ Public Class FormMain
     Private m_MouseIsDown As Boolean
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        My.Settings.Save()
         End
     End Sub
 
@@ -333,6 +334,15 @@ Public Class FormMain
             .SetToolTip(PictureBox319, "Delete Item")
             .SetToolTip(PictureBox320, "Delete Item")
         End With
+
+        If (My.Settings.autoupdate = False) Then
+            CheckBox5.Checked = False
+        Else
+            CheckBox5.Checked = True
+            LabelWait.Visible = True
+            BackgroundWorker1.RunWorkerAsync()
+        End If
+
     End Sub
 
     Public Sub ClearSingle()
@@ -7774,5 +7784,47 @@ Public Class FormMain
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
         PictureBox322.Image = ChangePicture(ComboBox2.Text)
+    End Sub
+
+    Private WithEvents WebClient1 As New WebClient
+    Public Sub Check4Update()
+        Dim oAssembly As System.Reflection.AssemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName
+        Dim pgversion As String = oAssembly.Version.ToString()
+        Dim aktversion As String = WebClient1.DownloadString("http://holyzone.bplaced.net/maddy/d2ric_version.txt")
+
+        If pgversion < aktversion Then 'Wenn die Programmversion kleiner als die Aktuelle Version ist:
+            If MessageBox.Show("New Update available!!" + vbNewLine + "Open the Download page?", "Update", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                Process.Start("http://code.google.com/p/d2ric/downloads/list")
+            End If
+        Else
+            'Nothing
+        End If
+    End Sub
+
+    Private Sub ButtonUpdate_Click(sender As System.Object, e As System.EventArgs) Handles ButtonUpdate.Click
+        LabelWait.Visible = True
+        BackgroundWorker1.RunWorkerAsync()
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Check4Update()
+    End Sub
+
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As System.Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        LabelWait.Visible = False
+    End Sub
+
+    Dim FirstChange As Boolean = True
+    Private Sub CheckBox5_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox5.CheckedChanged
+        If FirstChange = False Then
+            If CheckBox5.Checked Then
+                My.Settings.autoupdate = True
+            Else
+                My.Settings.autoupdate = False
+            End If
+        Else
+            FirstChange = False
+        End If
     End Sub
 End Class
