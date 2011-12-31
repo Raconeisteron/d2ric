@@ -330,6 +330,8 @@ Public Class FormMain
             .SetToolTip(PictureBox316, "Void Stone")
             .SetToolTip(PictureBox317, "Wraith Band")
             .SetToolTip(PictureBox318, "Yasha")
+            .SetToolTip(PictureBox319, "Delete Item")
+            .SetToolTip(PictureBox320, "Delete Item")
         End With
     End Sub
 
@@ -3747,6 +3749,26 @@ Public Class FormMain
             ToolTip1.SetToolTip(PictureBox189, GetToolTip(PictureBox189.Image))
         Else
             ToolTip1.SetToolTip(PictureBox189, "none")
+        End If
+    End Sub
+
+    Private Sub PictureBox321_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox321.MouseHover
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox321.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox321, "")
+            ToolTip1.SetToolTip(PictureBox321, GetToolTip(PictureBox321.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox321, "none")
+        End If
+    End Sub
+
+    Private Sub PictureBox322_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox322.MouseHover
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox322.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox322, "")
+            ToolTip1.SetToolTip(PictureBox322, GetToolTip(PictureBox322.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox322, "none")
         End If
     End Sub
 
@@ -7363,6 +7385,62 @@ Public Class FormMain
         m_MouseIsDown = False
     End Sub
 
+    Private Sub PictureBox319_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox319.MouseDown
+        If Not PictureBox319.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox319_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox319.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox319.DoDragDrop(PictureBox319.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+    Private Sub PictureBox320_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox320.MouseDown
+        If Not PictureBox320.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox320_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox320.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox320.DoDragDrop(PictureBox320.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+    Private Sub PictureBox321_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox321.MouseDown
+        If Not PictureBox321.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox321_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox321.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox321.DoDragDrop(PictureBox321.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+    Private Sub PictureBox322_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox322.MouseDown
+        If Not PictureBox322.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox322_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox322.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox322.DoDragDrop(PictureBox322.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
     Private Sub ButtonOpenFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenFolder.Click
         System.Diagnostics.Process.Start("explorer", My.Settings.path)
     End Sub
@@ -7688,5 +7766,13 @@ Public Class FormMain
                 End If
             Next i
         End With
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        PictureBox321.Image = ChangePicture(ComboBox1.Text)
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
+        PictureBox322.Image = ChangePicture(ComboBox2.Text)
     End Sub
 End Class
