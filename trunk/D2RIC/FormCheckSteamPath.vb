@@ -1,8 +1,8 @@
-﻿Public Class Form1
+﻿Public Class FormCheckSteamPath
 
-    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub FormCheckSteamPath_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If (My.Settings.path <> "") Then
-            Form2.Visible = True
+            FormMain.Visible = True
             Me.Close()
         End If
     End Sub
@@ -23,7 +23,7 @@
             ' existiert
             My.Settings.path = dota_path
             My.Settings.Save()
-            Form2.Visible = True
+            FormMain.Visible = True
             Me.Close()
         Else
             ' existiert nicht
