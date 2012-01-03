@@ -26,6 +26,8 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox321 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -383,6 +385,7 @@ Partial Class FormMain
         Me.ButtonCopy = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.ButtonOpenBackupFolder = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -395,7 +398,8 @@ Partial Class FormMain
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox321, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -741,6 +745,8 @@ Partial Class FormMain
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ComboBox3)
+        Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.PictureBox321)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
         Me.TabPage1.Controls.Add(Me.Label10)
@@ -923,6 +929,25 @@ Partial Class FormMain
         Me.TabPage1.Text = "Single Change"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'ComboBox3
+        '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"All", "Strength", "Agility", "Intelligence", "Carry", "Support", "Ganker", "Initiator", "Pusher", "Jungler", "Tank"})
+        Me.ComboBox3.Location = New System.Drawing.Point(72, 22)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox3.TabIndex = 505
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(6, 25)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(60, 13)
+        Me.Label12.TabIndex = 504
+        Me.Label12.Text = "Sort Heros:"
+        '
         'PictureBox321
         '
         Me.PictureBox321.Image = Global.D2RIC.My.Resources.Resources.none
@@ -983,9 +1008,9 @@ Partial Class FormMain
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Items.AddRange(New Object() {"Abaddon", "Alchemist", "Ancient Apparition", "Anti-Mage", "Axe", "Bane", "Batrider", "Beastmaster", "Bloodseeker", "Bounty Hunter", "Bristleback", "Broodmother", "Centaur Warchief", "Chaos Knight", "Chen", "Clinkz", "Clockwerk", "Crystal Maiden", "Dark Seer", "Dazzle", "Death Prophet", "Dirge", "Disruptor", "Doom Bringer", "Dragon Knight", "Drow Ranger", "Earthshaker", "Enchantress", "Enigma", "Faceless Void", "Goblin Techies", "Guardian Wisp", "Gyrocopter", "Harbinger", "Huskar", "Invoker", "Jakiro", "Juggernaut", "Keeper of the Light", "Kunkka", "Lanaya", "Leshrac", "Lich", "Lifestealer", "Lina", "Lion", "Lone Druid", "Luna", "Lycanthrope", "Magnataur", "Medusa", "Meepo", "Mirana", "Morphling", "Mortred", "Naga Siren", "Nature's Prophet", "Necrolyte", "Nerubian Assassin", "Night Stalker", "Ogre Magi", "Omniknight", "Pandaren Brewmaster", "Phantom Lancer", "Phoenix", "Pit Lord", "Puck", "Pudge", "Pugna", "Queen of Pain", "Razor", "Riki", "Rubick", "Sand King", "Shadow Demon", "Shadow Fiend", "Shadow Shaman", "Silencer", "Skeleton King", "Slardar", "Slark", "Sniper", "Soul Keeper", "Spectre", "Spirit Breaker", "Storm Spirit", "Sven", "Tauren Chieftain", "Tidehunter", "Tinker", "Tiny", "Treant Protector", "Troll Warlord", "Tuskarr", "Ursa", "Vengeful Spirit", "Venomancer", "Viper", "Visage", "Warlock", "Weaver", "Windrunner", "Witch Doctor", "Zeus"})
-        Me.ListBox1.Location = New System.Drawing.Point(5, 24)
+        Me.ListBox1.Location = New System.Drawing.Point(5, 50)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(143, 628)
+        Me.ListBox1.Size = New System.Drawing.Size(143, 602)
         Me.ListBox1.TabIndex = 325
         '
         'PictureBox158
@@ -2496,6 +2521,8 @@ Partial Class FormMain
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.ComboBox4)
+        Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.PictureBox322)
         Me.TabPage2.Controls.Add(Me.ComboBox2)
         Me.TabPage2.Controls.Add(Me.Label11)
@@ -4237,10 +4264,10 @@ Partial Class FormMain
         '
         Me.ListBox2.FormattingEnabled = True
         Me.ListBox2.Items.AddRange(New Object() {"Abaddon", "Alchemist", "Ancient Apparition", "Anti-Mage", "Axe", "Bane", "Batrider", "Beastmaster", "Bloodseeker", "Bounty Hunter", "Bristleback", "Broodmother", "Centaur Warchief", "Chaos Knight", "Chen", "Clinkz", "Clockwerk", "Crystal Maiden", "Dark Seer", "Dazzle", "Death Prophet", "Dirge", "Disruptor", "Doom Bringer", "Dragon Knight", "Drow Ranger", "Earthshaker", "Enchantress", "Enigma", "Faceless Void", "Goblin Techies", "Guardian Wisp", "Gyrocopter", "Harbinger", "Huskar", "Invoker", "Jakiro", "Juggernaut", "Keeper of the Light", "Kunkka", "Lanaya", "Leshrac", "Lich", "Lifestealer", "Lina", "Lion", "Lone Druid", "Luna", "Lycanthrope", "Magnataur", "Medusa", "Meepo", "Mirana", "Morphling", "Mortred", "Naga Siren", "Nature's Prophet", "Necrolyte", "Nerubian Assassin", "Night Stalker", "Ogre Magi", "Omniknight", "Pandaren Brewmaster", "Phantom Lancer", "Phoenix", "Pit Lord", "Puck", "Pudge", "Pugna", "Queen of Pain", "Razor", "Riki", "Rubick", "Sand King", "Shadow Demon", "Shadow Fiend", "Shadow Shaman", "Silencer", "Skeleton King", "Slardar", "Slark", "Sniper", "Soul Keeper", "Spectre", "Spirit Breaker", "Storm Spirit", "Sven", "Tauren Chieftain", "Tidehunter", "Tinker", "Tiny", "Treant Protector", "Troll Warlord", "Tuskarr", "Ursa", "Vengeful Spirit", "Venomancer", "Viper", "Visage", "Warlock", "Weaver", "Windrunner", "Witch Doctor", "Zeus"})
-        Me.ListBox2.Location = New System.Drawing.Point(5, 24)
+        Me.ListBox2.Location = New System.Drawing.Point(5, 50)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.ListBox2.Size = New System.Drawing.Size(143, 628)
+        Me.ListBox2.Size = New System.Drawing.Size(143, 602)
         Me.ListBox2.TabIndex = 325
         '
         'TabPage3
@@ -4340,6 +4367,19 @@ Partial Class FormMain
         Me.TabPage5.Text = "Options"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Checked = True
+        Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox5.Location = New System.Drawing.Point(24, 277)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(213, 19)
+        Me.CheckBox5.TabIndex = 346
+        Me.CheckBox5.Text = "Check for Updates on Startup"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
         'ButtonOpenBackupFolder
         '
         Me.ButtonOpenBackupFolder.Location = New System.Drawing.Point(24, 212)
@@ -4437,18 +4477,24 @@ Partial Class FormMain
         'BackgroundWorker1
         '
         '
-        'CheckBox5
+        'ComboBox4
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Checked = True
-        Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox5.Location = New System.Drawing.Point(24, 277)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(213, 19)
-        Me.CheckBox5.TabIndex = 346
-        Me.CheckBox5.Text = "Check for Updates on Startup"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"All", "Strength", "Agility", "Intelligence", "Carry", "Support", "Ganker", "Initiator", "Pusher", "Jungler", "Tank"})
+        Me.ComboBox4.Location = New System.Drawing.Point(72, 22)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox4.TabIndex = 508
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(6, 25)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(60, 13)
+        Me.Label13.TabIndex = 507
+        Me.Label13.Text = "Sort Heros:"
         '
         'FormMain
         '
@@ -5174,4 +5220,8 @@ Partial Class FormMain
     Friend WithEvents LabelWait As System.Windows.Forms.Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
 End Class
