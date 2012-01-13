@@ -194,6 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dota2.ico" />
+    <None Include="Resources\40px-Abyssal_Blade.png" />
     <Content Include="Resources\40px-Aghanim%27s_Scepter.png" />
     <Content Include="Resources\40px-Animal_Courier.png" />
     <Content Include="Resources\40px-Arcane_Boots.png" />
@@ -249,6 +250,7 @@
     <Content Include="Resources\40px-Headdress.png" />
     <Content Include="Resources\40px-Healing_Salve.png" />
     <Content Include="Resources\40px-Heart_of_Tarrasque.png" />
+    <None Include="Resources\40px-Heaven%27s_Halberd.png" />
     <Content Include="Resources\40px-Helm_of_Iron_Will.png" />
     <Content Include="Resources\40px-Helm_of_the_Dominator.png" />
     <Content Include="Resources\40px-Hood_of_Defiance.png" />
@@ -290,11 +292,13 @@
     <Content Include="Resources\40px-Radiance.png" />
     <Content Include="Resources\40px-Reaver.png" />
     <Content Include="Resources\40px-Refresher_Orb.png" />
+    <None Include="Resources\40px-Ring_of_Aquila.png" />
     <Content Include="Resources\40px-Ring_of_Basilius.png" />
     <Content Include="Resources\40px-Ring_of_Health.png" />
     <Content Include="Resources\40px-Ring_of_Protection.png" />
     <Content Include="Resources\40px-Ring_of_Regen.png" />
     <Content Include="Resources\40px-Robe_of_the_Magi.png" />
+    <None Include="Resources\40px-Rod_of_Atos.png" />
     <Content Include="Resources\40px-Sacred_Relic.png" />
     <Content Include="Resources\40px-Sage%27s_Mask.png" />
     <Content Include="Resources\40px-Sange.png" />
@@ -314,6 +318,7 @@
     <Content Include="Resources\40px-Talisman_of_Evasion.png" />
     <Content Include="Resources\40px-Tango.png" />
     <Content Include="Resources\40px-Town_Portal_Scroll.png" />
+    <None Include="Resources\40px-Tranquil_Boots.png" />
     <Content Include="Resources\40px-Ultimate_Orb.png" />
     <Content Include="Resources\40px-Urn_of_Shadows.png" />
     <Content Include="Resources\40px-Vanguard.png" />

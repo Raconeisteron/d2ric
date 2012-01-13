@@ -60,6 +60,13 @@ Namespace My.Resources
             End Set
         End Property
         
+        Friend ReadOnly Property _40px_Abyssal_Blade() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Abyssal_Blade", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property _40px_Aghanim_s_Scepter() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Aghanim_s_Scepter", resourceCulture)
@@ -445,6 +452,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property _40px_Heaven_s_Halberd() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Heaven_s_Halberd", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property _40px_Helm_of_Iron_Will() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Helm_of_Iron_Will", resourceCulture)
@@ -732,6 +746,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property _40px_Ring_of_Aquila() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Ring_of_Aquila", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property _40px_Ring_of_Basilius() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Ring_of_Basilius", resourceCulture)
@@ -763,6 +784,13 @@ Namespace My.Resources
         Friend ReadOnly Property _40px_Robe_of_the_Magi() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Robe_of_the_Magi", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Rod_of_Atos() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Rod_of_Atos", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -896,6 +924,13 @@ Namespace My.Resources
         Friend ReadOnly Property _40px_Town_Portal_Scroll() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("_40px_Town_Portal_Scroll", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property _40px_Tranquil_Boots() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_40px_Tranquil_Boots", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
