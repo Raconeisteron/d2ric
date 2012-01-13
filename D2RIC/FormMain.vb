@@ -73,135 +73,201 @@ Public Class FormMain
         PictureBox189.AllowDrop = True
         ButtonSave.Enabled = False
         With ToolTip1
-            .SetToolTip(PictureBox31, "Aghanim's Scepter")
-            .SetToolTip(PictureBox32, "Animal Courier")
-            .SetToolTip(PictureBox33, "Arcane Boots")
-            .SetToolTip(PictureBox34, "Armlet")
-            .SetToolTip(PictureBox35, "Assault Cuirass")
-            .SetToolTip(PictureBox36, "Battle Fury")
-            .SetToolTip(PictureBox37, "Belt of Strength")
-            .SetToolTip(PictureBox38, "Black King Bar")
-            .SetToolTip(PictureBox39, "Blade Mail")
-            .SetToolTip(PictureBox40, "Blade of Alacrity")
-            .SetToolTip(PictureBox41, "Blades of Attack")
-            .SetToolTip(PictureBox42, "Blink Dagger")
-            .SetToolTip(PictureBox43, "Bloodstone")
-            .SetToolTip(PictureBox44, "Boots of Elvenskin")
-            .SetToolTip(PictureBox45, "Boots of Speed")
-            .SetToolTip(PictureBox46, "Boots of Travel")
-            .SetToolTip(PictureBox47, "Bottle")
-            .SetToolTip(PictureBox48, "Bracer")
-            .SetToolTip(PictureBox49, "Broadsword")
-            .SetToolTip(PictureBox50, "Buckler")
-            .SetToolTip(PictureBox51, "Butterfly")
-            .SetToolTip(PictureBox52, "Chainmail")
-            .SetToolTip(PictureBox53, "Circlet")
-            .SetToolTip(PictureBox54, "Clarity")
-            .SetToolTip(PictureBox55, "Claymore")
-            .SetToolTip(PictureBox56, "Cloak")
-            .SetToolTip(PictureBox57, "Crystalys")
-            .SetToolTip(PictureBox58, "Daedalus")
-            .SetToolTip(PictureBox59, "Dagon 1")
-            .SetToolTip(PictureBox60, "Dagon 2")
-            .SetToolTip(PictureBox61, "Dagon 3")
-            .SetToolTip(PictureBox62, "Dagon 4")
-            .SetToolTip(PictureBox63, "Dagon 5")
-            .SetToolTip(PictureBox64, "Demon Edge")
-            .SetToolTip(PictureBox65, "Desolator")
-            .SetToolTip(PictureBox66, "Diffusal Blade 1")
-            .SetToolTip(PictureBox67, "Diffusal Blade 2")
-            .SetToolTip(PictureBox68, "Divine Rapier")
-            .SetToolTip(PictureBox69, "Drum of Endurance")
-            .SetToolTip(PictureBox70, "Dust of Appearance")
-            .SetToolTip(PictureBox71, "Eaglesong")
-            .SetToolTip(PictureBox72, "Energy Booster")
-            .SetToolTip(PictureBox73, "Ethereal Blade")
-            .SetToolTip(PictureBox74, "Eul's Scepter of Divinity")
-            .SetToolTip(PictureBox75, "Eye of Skadi")
-            .SetToolTip(PictureBox76, "Flying Courier")
-            .SetToolTip(PictureBox77, "Force Staff")
-            .SetToolTip(PictureBox78, "Gauntlets of Strength")
-            .SetToolTip(PictureBox79, "Gem of True Sight")
-            .SetToolTip(PictureBox80, "Ghost Scepter")
-            .SetToolTip(PictureBox81, "Gloves of Haste")
-            .SetToolTip(PictureBox82, "Hand of Midas")
-            .SetToolTip(PictureBox83, "Headdress")
-            .SetToolTip(PictureBox84, "Healing Salve")
-            .SetToolTip(PictureBox85, "Heart of Tarrasque")
-            .SetToolTip(PictureBox86, "Helm of Iron Will")
-            .SetToolTip(PictureBox87, "Helm of the Dominator")
-            .SetToolTip(PictureBox88, "Hood of Defiance")
-            .SetToolTip(PictureBox89, "Hyperstone")
-            .SetToolTip(PictureBox90, "Iron Branch")
-            .SetToolTip(PictureBox91, "Javelin")
-            .SetToolTip(PictureBox92, "Linken's Sphere")
-            .SetToolTip(PictureBox93, "Maelstrom")
-            .SetToolTip(PictureBox94, "Magic Stick")
-            .SetToolTip(PictureBox95, "Magic Wand")
-            .SetToolTip(PictureBox96, "Manta Style")
-            .SetToolTip(PictureBox97, "Mantle of Intelligence")
-            .SetToolTip(PictureBox98, "Mask of Madness")
-            .SetToolTip(PictureBox99, "Medallion of Courage")
-            .SetToolTip(PictureBox100, "Mekansm")
-            .SetToolTip(PictureBox101, "Mithril Hammer")
-            .SetToolTip(PictureBox102, "Mjollnir")
-            .SetToolTip(PictureBox103, "Monkey King Bar")
-            .SetToolTip(PictureBox104, "Morbid Mask")
-            .SetToolTip(PictureBox105, "Mystic Staff")
-            .SetToolTip(PictureBox121, "Necronomicon 1")
-            .SetToolTip(PictureBox106, "Necronomicon 2")
-            .SetToolTip(PictureBox107, "Necronomicon 3")
-            .SetToolTip(PictureBox108, "Null Talisman")
-            .SetToolTip(PictureBox109, "Oblivion Staff")
-            .SetToolTip(PictureBox110, "Observer Ward")
-            .SetToolTip(PictureBox111, "Ogre Club")
-            .SetToolTip(PictureBox112, "Orb of Venom")
-            .SetToolTip(PictureBox113, "Orchid Malevolence")
-            .SetToolTip(PictureBox114, "Perseverance")
-            .SetToolTip(PictureBox115, "Phase Boots")
-            .SetToolTip(PictureBox116, "Pipe of Insight")
-            .SetToolTip(PictureBox117, "Platemail")
-            .SetToolTip(PictureBox118, "Point Booster")
-            .SetToolTip(PictureBox119, "Poor Man's Shield")
-            .SetToolTip(PictureBox120, "Power Treads")
-            .SetToolTip(PictureBox122, "Quarterstaff")
-            .SetToolTip(PictureBox123, "Quelling Blade")
-            .SetToolTip(PictureBox124, "Radiance")
-            .SetToolTip(PictureBox125, "Reaver")
-            .SetToolTip(PictureBox126, "Refresher Orb")
-            .SetToolTip(PictureBox127, "Ring of Basilius")
-            .SetToolTip(PictureBox128, "Ring of Health")
-            .SetToolTip(PictureBox129, "Ring of Protection")
-            .SetToolTip(PictureBox130, "Ring of Regen")
-            .SetToolTip(PictureBox131, "Robe of the Magi")
-            .SetToolTip(PictureBox132, "Sacred Relic")
-            .SetToolTip(PictureBox133, "Sage's Mask")
-            .SetToolTip(PictureBox134, "Sange")
-            .SetToolTip(PictureBox135, "Sange and Yasha")
-            .SetToolTip(PictureBox136, "Satanic")
-            .SetToolTip(PictureBox137, "Scythe of Vyse")
-            .SetToolTip(PictureBox138, "Sentry Ward")
-            .SetToolTip(PictureBox139, "Shadow Blade")
-            .SetToolTip(PictureBox140, "Shiva's Guard")
-            .SetToolTip(PictureBox141, "Skull Basher")
-            .SetToolTip(PictureBox142, "Slippers of Agility")
-            .SetToolTip(PictureBox143, "Smoke of Deceit")
-            .SetToolTip(PictureBox144, "Soul Booster")
-            .SetToolTip(PictureBox145, "Soul Ring")
-            .SetToolTip(PictureBox146, "Staff of Wizardry")
-            .SetToolTip(PictureBox147, "Stout Shield")
-            .SetToolTip(PictureBox148, "Talisman of Evasion")
-            .SetToolTip(PictureBox149, "Tango")
-            .SetToolTip(PictureBox150, "Town Portal Scroll")
-            .SetToolTip(PictureBox151, "Ultimate Orb")
-            .SetToolTip(PictureBox152, "Urn of Shadows")
-            .SetToolTip(PictureBox153, "Vanguard")
-            .SetToolTip(PictureBox154, "Veil of Discord")
-            .SetToolTip(PictureBox155, "Vitality Booster")
-            .SetToolTip(PictureBox156, "Vladmir's Offering")
-            .SetToolTip(PictureBox157, "Void Stone")
-            .SetToolTip(PictureBox158, "Wraith Band")
-            .SetToolTip(PictureBox159, "Yasha")
+            .SetToolTip(PictureBox1, "none")
+            .SetToolTip(PictureBox2, "none")
+            .SetToolTip(PictureBox3, "none")
+            .SetToolTip(PictureBox4, "none")
+            .SetToolTip(PictureBox5, "none")
+            .SetToolTip(PictureBox6, "none")
+            .SetToolTip(PictureBox7, "none")
+            .SetToolTip(PictureBox8, "none")
+            .SetToolTip(PictureBox9, "none")
+            .SetToolTip(PictureBox10, "none")
+            .SetToolTip(PictureBox11, "none")
+            .SetToolTip(PictureBox12, "none")
+            .SetToolTip(PictureBox13, "none")
+            .SetToolTip(PictureBox14, "none")
+            .SetToolTip(PictureBox15, "none")
+            .SetToolTip(PictureBox16, "none")
+            .SetToolTip(PictureBox17, "none")
+            .SetToolTip(PictureBox18, "none")
+            .SetToolTip(PictureBox19, "none")
+            .SetToolTip(PictureBox20, "none")
+            .SetToolTip(PictureBox21, "none")
+            .SetToolTip(PictureBox22, "none")
+            .SetToolTip(PictureBox23, "none")
+            .SetToolTip(PictureBox24, "none")
+            .SetToolTip(PictureBox25, "none")
+            .SetToolTip(PictureBox26, "none")
+            .SetToolTip(PictureBox27, "none")
+            .SetToolTip(PictureBox28, "none")
+            .SetToolTip(PictureBox29, "none")
+            .SetToolTip(PictureBox30, "none")
+            .SetToolTip(PictureBox31, "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)")
+            .SetToolTip(PictureBox32, "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier")
+            .SetToolTip(PictureBox33, "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)")
+            .SetToolTip(PictureBox34, "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)")
+            .SetToolTip(PictureBox35, "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)")
+            .SetToolTip(PictureBox36, "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave")
+            .SetToolTip(PictureBox37, "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength")
+            .SetToolTip(PictureBox38, "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)")
+            .SetToolTip(PictureBox39, "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)")
+            .SetToolTip(PictureBox40, "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility")
+            .SetToolTip(PictureBox41, "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage")
+            .SetToolTip(PictureBox42, "Blink Dagger" + vbNewLine + vbNewLine + "Blink")
+            .SetToolTip(PictureBox43, "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges")
+            .SetToolTip(PictureBox44, "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility")
+            .SetToolTip(PictureBox45, "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed")
+            .SetToolTip(PictureBox46, "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)")
+            .SetToolTip(PictureBox47, "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture")
+            .SetToolTip(PictureBox48, "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence")
+            .SetToolTip(PictureBox49, "Broadsword" + vbNewLine + vbNewLine + "+18 Damage")
+            .SetToolTip(PictureBox50, "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)")
+            .SetToolTip(PictureBox51, "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed")
+            .SetToolTip(PictureBox52, "Chainmail" + vbNewLine + vbNewLine + "+5 Armor")
+            .SetToolTip(PictureBox53, "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes")
+            .SetToolTip(PictureBox54, "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges")
+            .SetToolTip(PictureBox55, "Claymore" + vbNewLine + vbNewLine + "+21 Damage")
+            .SetToolTip(PictureBox56, "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance")
+            .SetToolTip(PictureBox57, "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike")
+            .SetToolTip(PictureBox58, "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike")
+            .SetToolTip(PictureBox59, "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
+            .SetToolTip(PictureBox60, "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
+            .SetToolTip(PictureBox61, "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
+            .SetToolTip(PictureBox62, "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
+            .SetToolTip(PictureBox63, "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
+            .SetToolTip(PictureBox64, "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage")
+            .SetToolTip(PictureBox65, "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption")
+            .SetToolTip(PictureBox66, "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges")
+            .SetToolTip(PictureBox67, "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges")
+            .SetToolTip(PictureBox68, "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage")
+            .SetToolTip(PictureBox69, "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges")
+            .SetToolTip(PictureBox70, "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges")
+            .SetToolTip(PictureBox71, "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility")
+            .SetToolTip(PictureBox72, "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana")
+            .SetToolTip(PictureBox73, "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)")
+            .SetToolTip(PictureBox74, "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)")
+            .SetToolTip(PictureBox75, "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack")
+            .SetToolTip(PictureBox76, "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier")
+            .SetToolTip(PictureBox77, "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)")
+            .SetToolTip(PictureBox78, "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength")
+            .SetToolTip(PictureBox79, "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight")
+            .SetToolTip(PictureBox80, "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)")
+            .SetToolTip(PictureBox81, "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed")
+            .SetToolTip(PictureBox82, "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)")
+            .SetToolTip(PictureBox83, "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura")
+            .SetToolTip(PictureBox84, "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges")
+            .SetToolTip(PictureBox85, "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration")
+            .SetToolTip(PictureBox86, "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration")
+            .SetToolTip(PictureBox87, "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)")
+            .SetToolTip(PictureBox88, "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration")
+            .SetToolTip(PictureBox89, "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed")
+            .SetToolTip(PictureBox90, "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes")
+            .SetToolTip(PictureBox91, "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage")
+            .SetToolTip(PictureBox92, "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block")
+            .SetToolTip(PictureBox93, "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning")
+            .SetToolTip(PictureBox94, "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)")
+            .SetToolTip(PictureBox95, "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)")
+            .SetToolTip(PictureBox96, "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)")
+            .SetToolTip(PictureBox97, "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence")
+            .SetToolTip(PictureBox98, "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)")
+            .SetToolTip(PictureBox99, "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)")
+            .SetToolTip(PictureBox100, "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)")
+            .SetToolTip(PictureBox101, "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage")
+            .SetToolTip(PictureBox102, "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)")
+            .SetToolTip(PictureBox103, "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash")
+            .SetToolTip(PictureBox104, "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal")
+            .SetToolTip(PictureBox105, "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence")
+            .SetToolTip(PictureBox121, "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)")
+            .SetToolTip(PictureBox106, "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)")
+            .SetToolTip(PictureBox107, "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)")
+            .SetToolTip(PictureBox108, "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility")
+            .SetToolTip(PictureBox109, "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration")
+            .SetToolTip(PictureBox110, "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges")
+            .SetToolTip(PictureBox111, "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength")
+            .SetToolTip(PictureBox112, "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack")
+            .SetToolTip(PictureBox113, "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)")
+            .SetToolTip(PictureBox114, "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration")
+            .SetToolTip(PictureBox115, "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)")
+            .SetToolTip(PictureBox116, "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)")
+            .SetToolTip(PictureBox117, "Platemail" + vbNewLine + vbNewLine + "+10 Armor")
+            .SetToolTip(PictureBox118, "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana")
+            .SetToolTip(PictureBox119, "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block")
+            .SetToolTip(PictureBox120, "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)")
+            .SetToolTip(PictureBox122, "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed")
+            .SetToolTip(PictureBox123, "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)")
+            .SetToolTip(PictureBox124, "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage")
+            .SetToolTip(PictureBox125, "Reaver" + vbNewLine + vbNewLine + "+25 Strength")
+            .SetToolTip(PictureBox126, "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)")
+            .SetToolTip(PictureBox127, "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura")
+            .SetToolTip(PictureBox128, "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration")
+            .SetToolTip(PictureBox129, "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor")
+            .SetToolTip(PictureBox130, "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration")
+            .SetToolTip(PictureBox131, "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence")
+            .SetToolTip(PictureBox132, "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage")
+            .SetToolTip(PictureBox133, "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration")
+            .SetToolTip(PictureBox134, "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim")
+            .SetToolTip(PictureBox135, "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim")
+            .SetToolTip(PictureBox136, "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "Lifesteal" + vbNewLine + "Unholy Rage (active)")
+            .SetToolTip(PictureBox137, "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)")
+            .SetToolTip(PictureBox138, "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight" + vbNewLine + "2 Charges")
+            .SetToolTip(PictureBox139, "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)")
+            .SetToolTip(PictureBox140, "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)")
+            .SetToolTip(PictureBox141, "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash")
+            .SetToolTip(PictureBox142, "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility")
+            .SetToolTip(PictureBox143, "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges")
+            .SetToolTip(PictureBox144, "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration")
+            .SetToolTip(PictureBox145, "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)")
+            .SetToolTip(PictureBox146, "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence")
+            .SetToolTip(PictureBox147, "Stout Shield" + vbNewLine + vbNewLine + "Damage Block")
+            .SetToolTip(PictureBox148, "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion")
+            .SetToolTip(PictureBox149, "Tango" + vbNewLine + vbNewLine + "Eat Tree (active)" + vbNewLine + "3 Charges")
+            .SetToolTip(PictureBox150, "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport (active)" + vbNewLine + "1 Charges")
+            .SetToolTip(PictureBox151, "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes")
+            .SetToolTip(PictureBox152, "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)")
+            .SetToolTip(PictureBox153, "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+250 HP" + vbNewLine + "Damage Block")
+            .SetToolTip(PictureBox154, "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)")
+            .SetToolTip(PictureBox155, "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP")
+            .SetToolTip(PictureBox156, "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura")
+            .SetToolTip(PictureBox157, "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration")
+            .SetToolTip(PictureBox158, "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence")
+            .SetToolTip(PictureBox159, "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed")
+            .SetToolTip(PictureBox323, "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)")
+            .SetToolTip(PictureBox324, "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)")
+            .SetToolTip(PictureBox325, "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura")
+            .SetToolTip(PictureBox326, "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)")
+            .SetToolTip(PictureBox327, "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)")
+            .SetToolTip(PictureBox319, "Delete Item")
+            .SetToolTip(PictureBox160, "none")
+            .SetToolTip(PictureBox161, "none")
+            .SetToolTip(PictureBox162, "none")
+            .SetToolTip(PictureBox163, "none")
+            .SetToolTip(PictureBox164, "none")
+            .SetToolTip(PictureBox165, "none")
+            .SetToolTip(PictureBox166, "none")
+            .SetToolTip(PictureBox167, "none")
+            .SetToolTip(PictureBox168, "none")
+            .SetToolTip(PictureBox169, "none")
+            .SetToolTip(PictureBox170, "none")
+            .SetToolTip(PictureBox171, "none")
+            .SetToolTip(PictureBox172, "none")
+            .SetToolTip(PictureBox173, "none")
+            .SetToolTip(PictureBox174, "none")
+            .SetToolTip(PictureBox175, "none")
+            .SetToolTip(PictureBox176, "none")
+            .SetToolTip(PictureBox177, "none")
+            .SetToolTip(PictureBox178, "none")
+            .SetToolTip(PictureBox179, "none")
+            .SetToolTip(PictureBox180, "none")
+            .SetToolTip(PictureBox181, "none")
+            .SetToolTip(PictureBox182, "none")
+            .SetToolTip(PictureBox183, "none")
+            .SetToolTip(PictureBox184, "none")
+            .SetToolTip(PictureBox185, "none")
+            .SetToolTip(PictureBox186, "none")
+            .SetToolTip(PictureBox187, "none")
+            .SetToolTip(PictureBox188, "none")
+            .SetToolTip(PictureBox189, "none")
             .SetToolTip(PictureBox190, "Aghanim's Scepter")
             .SetToolTip(PictureBox191, "Animal Courier")
             .SetToolTip(PictureBox192, "Arcane Boots")
@@ -331,7 +397,11 @@ Public Class FormMain
             .SetToolTip(PictureBox316, "Void Stone")
             .SetToolTip(PictureBox317, "Wraith Band")
             .SetToolTip(PictureBox318, "Yasha")
-            .SetToolTip(PictureBox319, "Delete Item")
+            .SetToolTip(PictureBox328, "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)")
+            .SetToolTip(PictureBox329, "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)")
+            .SetToolTip(PictureBox330, "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura")
+            .SetToolTip(PictureBox331, "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)")
+            .SetToolTip(PictureBox332, "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)")
             .SetToolTip(PictureBox320, "Delete Item")
         End With
 
@@ -882,6 +952,21 @@ Public Class FormMain
         ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Yasha) Then
             new_item_name = """" & "item_yasha" & """"
             Return new_item_name
+        ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
+            new_item_name = """" & "item_abyssal_blade" & """"
+            Return new_item_name
+        ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
+            new_item_name = """" & "item_heavens_halberd" & """"
+            Return new_item_name
+        ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
+            new_item_name = """" & "item_ring_of_aquila" & """"
+            Return new_item_name
+        ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
+            new_item_name = """" & "item_rod_of_atos" & """"
+            Return new_item_name
+        ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Tranquil_Boots) Then
+            new_item_name = """" & "item_tranquil_boots" & """"
+            Return new_item_name
         Else
             new_item_name = ""
             Return new_item_name
@@ -1279,6 +1364,21 @@ Public Class FormMain
                 Return rename_item_name
             Case item_name2 Like "*item_yasha"
                 rename_item_name = "Yasha"
+                Return rename_item_name
+            Case item_name2 Like "*item_abyssal_blade"
+                rename_item_name = "Abyssal Blade"
+                Return rename_item_name
+            Case item_name2 Like "*item_heavens_halberd"
+                rename_item_name = "Heaven's Halberd"
+                Return rename_item_name
+            Case item_name2 Like "*item_ring_of_aquila"
+                rename_item_name = "Ring of Aquila"
+                Return rename_item_name
+            Case item_name2 Like "*item_rod_of_atos"
+                rename_item_name = "Rod of Atos"
+                Return rename_item_name
+            Case item_name2 Like "*item_tranquil_boots"
+                rename_item_name = "Tranquil Boots"
                 Return rename_item_name
             Case Else
                 rename_item_name = "Error!"
@@ -2003,6 +2103,21 @@ Public Class FormMain
             Case "Yasha"
                 pic_res = D2RIC.My.Resources.Resources._40px_Yasha
                 Return pic_res
+            Case "Abyssal Blade"
+                pic_res = D2RIC.My.Resources.Resources._40px_Abyssal_Blade
+                Return pic_res
+            Case "Heaven's Halberd"
+                pic_res = D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd
+                Return pic_res
+            Case "Ring of Aquila"
+                pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Aquila
+                Return pic_res
+            Case "Rod of Atos"
+                pic_res = D2RIC.My.Resources.Resources._40px_Rod_of_Atos
+                Return pic_res
+            Case "Tranquil Boots"
+                pic_res = D2RIC.My.Resources.Resources._40px_Tranquil_Boots
+                Return pic_res
             Case Else
                 pic_res = D2RIC.My.Resources.Resources.none
                 Return pic_res
@@ -2052,391 +2167,406 @@ Public Class FormMain
     Public Function GetToolTip(ByVal img_res As System.Drawing.Bitmap) As String
         Dim pic_res As String
         If doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blink_Dagger) Then
-            pic_res = "Blink Dagger"
+            pic_res = "Blink Dagger" + vbNewLine + vbNewLine + "Blink"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blades_of_Attack) Then
-            pic_res = "Blades of Attack"
+            pic_res = "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter) Then
-            pic_res = "Aghanim's Scepter"
+            pic_res = "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Animal_Courier) Then
-            pic_res = "Animal Courier"
+            pic_res = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Arcane_Boots) Then
-            pic_res = "Arcane Boots"
+            pic_res = "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Armlet) Then
-            pic_res = "Armlet"
+            pic_res = "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Assault_Cuirass) Then
-            pic_res = "Assault Cuirass"
+            pic_res = "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Battle_Fury) Then
-            pic_res = "Battle Fury"
+            pic_res = "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Belt_of_Strength) Then
-            pic_res = "Belt of Strength"
+            pic_res = "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Black_King_Bar) Then
-            pic_res = "Black King Bar"
+            pic_res = "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)"""
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_Mail) Then
-            pic_res = "Blade Mail"
+            pic_res = "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity) Then
-            pic_res = "Blade of Alacrity"
+            pic_res = "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bloodstone) Then
-            pic_res = "Bloodstone"
+            pic_res = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin) Then
-            pic_res = "Boots of Elvenskin"
+            pic_res = "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Speed) Then
-            pic_res = "Boots of Speed"
+            pic_res = "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Travel) Then
-            pic_res = "Boots of Travel"
+            pic_res = "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bottle) Then
-            pic_res = "Bottle"
+            pic_res = "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bracer) Then
-            pic_res = "Bracer"
+            pic_res = "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Broadsword) Then
-            pic_res = "Broadsword"
+            pic_res = "Broadsword" + vbNewLine + vbNewLine + "+18 Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Buckler) Then
-            pic_res = "Buckler"
+            pic_res = "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Butterfly) Then
-            pic_res = "Butterfly"
+            pic_res = "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Chainmail) Then
-            pic_res = "Chainmail"
+            pic_res = "Chainmail" + vbNewLine + vbNewLine + "+5 Armor"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Circlet) Then
-            pic_res = "Circlet"
+            pic_res = "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Clarity) Then
-            pic_res = "Clarity"
+            pic_res = "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Claymore) Then
-            pic_res = "Claymore"
+            pic_res = "Claymore" + vbNewLine + vbNewLine + "+21 Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Cloak) Then
-            pic_res = "Cloak"
+            pic_res = "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Crystalys) Then
-            pic_res = "Crystalys"
+            pic_res = "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Daedalus) Then
-            pic_res = "Daedalus"
+            pic_res = "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon) Then
-            pic_res = "Dagon 1"
+            pic_res = "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon2) Then
-            pic_res = "Dagon 2"
+            pic_res = "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon3) Then
-            pic_res = "Dagon 3"
+            pic_res = "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon4) Then
-            pic_res = "Dagon 4"
+            pic_res = "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon5) Then
-            pic_res = "Dagon 5"
+            pic_res = "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Demon_Edge) Then
-            pic_res = "Demon Edge"
+            pic_res = "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Desolator) Then
-            pic_res = "Desolator"
+            pic_res = "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade) Then
-            pic_res = "Diffusal Blade 1"
+            pic_res = "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade2) Then
-            pic_res = "Diffusal Blade 2"
+            pic_res = "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Divine_Rapier) Then
-            pic_res = "Divine Rapier"
+            pic_res = "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
-            pic_res = "Drum of Endurance"
+            pic_res = "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dust_of_Appearance) Then
-            pic_res = "Dust of Appearance"
+            pic_res = "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eaglesong) Then
-            pic_res = "Eaglesong"
+            pic_res = "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Energy_Booster) Then
-            pic_res = "Energy Booster"
+            pic_res = "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
-            pic_res = "Ethereal Blade"
+            pic_res = "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity) Then
-            pic_res = "Eul's Scepter of Divinity"
+            pic_res = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eye_of_Skadi) Then
-            pic_res = "Eye of Skadi"
+            pic_res = "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Flying_Courier) Then
-            pic_res = "Flying Courier"
+            pic_res = "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Force_Staff) Then
-            pic_res = "Force Staff"
+            pic_res = "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength) Then
-            pic_res = "Gauntlets of Strength"
+            pic_res = "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight) Then
-            pic_res = "Gem of True Sight"
+            pic_res = "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ghost_Scepter) Then
-            pic_res = "Ghost Scepter"
+            pic_res = "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gloves_of_Haste) Then
-            pic_res = "Gloves of Haste"
+            pic_res = "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hand_of_Midas) Then
-            pic_res = "Hand of Midas"
+            pic_res = "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Headdress) Then
-            pic_res = "Headdress"
+            pic_res = "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Healing_Salve) Then
-            pic_res = "Healing Salve"
+            pic_res = "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque) Then
-            pic_res = "Heart of Tarrasque"
+            pic_res = "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will) Then
-            pic_res = "Helm of Iron Will"
+            pic_res = "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator) Then
-            pic_res = "Helm of the Dominator"
+            pic_res = "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hood_of_Defiance) Then
-            pic_res = "Hood of Defiance"
+            pic_res = "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hyperstone) Then
-            pic_res = "Hyperstone"
+            pic_res = "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Iron_Branch) Then
-            pic_res = "Iron Branch"
+            pic_res = "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Javelin) Then
-            pic_res = "Javelin"
+            pic_res = "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Linken_s_Sphere) Then
-            pic_res = "Linken's Sphere"
+            pic_res = "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Maelstrom) Then
-            pic_res = "Maelstrom"
+            pic_res = "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Stick) Then
-            pic_res = "Magic Stick"
+            pic_res = "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Wand) Then
-            pic_res = "Magic Wand"
+            pic_res = "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Manta_Style) Then
-            pic_res = "Manta Style"
+            pic_res = "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence) Then
-            pic_res = "Mantle of Intelligence"
+            pic_res = "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mask_of_Madness) Then
-            pic_res = "Mask of Madness"
+            pic_res = "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
-            pic_res = "Medallion of Courage"
+            pic_res = "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mekansm) Then
-            pic_res = "Mekansm"
+            pic_res = "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mithril_Hammer) Then
-            pic_res = "Mithril Hammer"
+            pic_res = "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mjollnir) Then
-            pic_res = "Mjollnir"
+            pic_res = "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Monkey_King_Bar) Then
-            pic_res = "Monkey King Bar"
+            pic_res = "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Morbid_Mask) Then
-            pic_res = "Morbid Mask"
+            pic_res = "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mystic_Staff) Then
-            pic_res = "Mystic Staff"
+            pic_res = "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon) Then
-            pic_res = "Necronomicon 1"
+            pic_res = "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon2) Then
-            pic_res = "Necronomicon 2"
+            pic_res = "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon3) Then
-            pic_res = "Necronomicon 3"
+            pic_res = "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Null_Talisman) Then
-            pic_res = "Null Talisman"
+            pic_res = "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Oblivion_Staff) Then
-            pic_res = "Oblivion Staff"
+            pic_res = "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Observer_Ward) Then
-            pic_res = "Observer Ward"
+            pic_res = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ogre_Club) Then
-            pic_res = "Ogre Club"
+            pic_res = "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
-            pic_res = "Orb of Venom"
+            pic_res = "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orchid_Malevolence) Then
-            pic_res = "Orchid Malevolence"
+            pic_res = "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Perseverance) Then
-            pic_res = "Perseverance"
+            pic_res = "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Phase_Boots) Then
-            pic_res = "Phase Boots"
+            pic_res = "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Pipe_of_Insight) Then
-            pic_res = "Pipe of Insight"
+            pic_res = "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Platemail) Then
-            pic_res = "Platemail"
+            pic_res = "Platemail" + vbNewLine + vbNewLine + "+10 Armor"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Point_Booster) Then
-            pic_res = "Point Booster"
+            pic_res = "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield) Then
-            pic_res = "Poor Man's Shield"
+            pic_res = "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Power_Treads) Then
-            pic_res = "Power Treads"
+            pic_res = "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quarterstaff) Then
-            pic_res = "Quarterstaff"
+            pic_res = "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quelling_Blade) Then
-            pic_res = "Quelling Blade"
+            pic_res = "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Radiance) Then
-            pic_res = "Radiance"
+            pic_res = "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Reaver) Then
-            pic_res = "Reaver"
+            pic_res = "Reaver" + vbNewLine + vbNewLine + "+25 Strength"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Refresher_Orb) Then
-            pic_res = "Refresher Orb"
+            pic_res = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Basilius) Then
-            pic_res = "Ring of Basilius"
+            pic_res = "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Health) Then
-            pic_res = "Ring of Health"
+            pic_res = "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Protection) Then
-            pic_res = "Ring of Protection"
+            pic_res = "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Regen) Then
-            pic_res = "Ring of Regen"
+            pic_res = "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi) Then
-            pic_res = "Robe of the Magi"
+            pic_res = "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sacred_Relic) Then
-            pic_res = "Sacred Relic"
+            pic_res = "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sage_s_Mask) Then
-            pic_res = "Sage's Mask"
+            pic_res = "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange) Then
-            pic_res = "Sange"
+            pic_res = "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange_and_Yasha) Then
-            pic_res = "Sange and Yasha"
+            pic_res = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Satanic) Then
-            pic_res = "Satanic"
+            pic_res = "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+25% Lifesteal" + vbNewLine + "Unholy Rage (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse) Then
-            pic_res = "Scythe of Vyse"
+            pic_res = "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sentry_Ward) Then
-            pic_res = "Sentry Ward"
+            pic_res = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight " + vbNewLine + "2 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shadow_Blade) Then
-            pic_res = "Shadow Blade"
+            pic_res = "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shiva_s_Guard) Then
-            pic_res = "Shiva's Guard"
+            pic_res = "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Skull_Basher) Then
-            pic_res = "Skull Basher"
+            pic_res = "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Slippers_of_Agility) Then
-            pic_res = "Slippers of Agility"
+            pic_res = "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
-            pic_res = "Smoke of Deceit"
+            pic_res = "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Booster) Then
-            pic_res = "Soul Booster"
+            pic_res = "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Ring) Then
-            pic_res = "Soul Ring"
+            pic_res = "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry) Then
-            pic_res = "Staff of Wizardry"
+            pic_res = "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Stout_Shield) Then
-            pic_res = "Stout Shield"
+            pic_res = "Stout Shield" + vbNewLine + vbNewLine + "Damage Block"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion) Then
-            pic_res = "Talisman of Evasion"
+            pic_res = "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tango) Then
-            pic_res = "Tango"
+            pic_res = "Tango" + vbNewLine + vbNewLine + "Eat Tree" + vbNewLine + "3 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll) Then
-            pic_res = "Town Portal Scroll"
+            pic_res = "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport" + vbNewLine + "1 Charges"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ultimate_Orb) Then
-            pic_res = "Ultimate Orb"
+            pic_res = "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
-            pic_res = "Urn of Shadows"
+            pic_res = "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vanguard) Then
-            pic_res = "Vanguard"
+            pic_res = "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+275 HP" + vbNewLine + "Damage Block"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
-            pic_res = "Veil of Discord"
+            pic_res = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vitality_Booster) Then
-            pic_res = "Vitality Booster"
+            pic_res = "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering) Then
-            pic_res = "Vladmir's Offering"
+            pic_res = "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Void_Stone) Then
-            pic_res = "Void Stone"
+            pic_res = "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Wraith_Band) Then
-            pic_res = "Wraith Band"
+            pic_res = "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Yasha) Then
-            pic_res = "Yasha"
+            pic_res = "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed"
+            Return pic_res
+        ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
+            pic_res = "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)"
+            Return pic_res
+        ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
+            pic_res = "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)"
+            Return pic_res
+        ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
+            pic_res = "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura"
+            Return pic_res
+        ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
+            pic_res = "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)"
+            Return pic_res
+        ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tranquil_Boots) Then
+            pic_res = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
             Return pic_res
         Else
             pic_res = "Error!"
@@ -2444,6 +2574,7 @@ Public Class FormMain
         End If
     End Function
 
+    'TARGET PICTUREBOXES
     Private Sub PictureBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox1.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
@@ -2454,6 +2585,12 @@ Public Class FormMain
     Private Sub PictureBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox1.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox1.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox1.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox1, GetToolTip(PictureBox1.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox1, "none")
+        End If
     End Sub
 
     Private Sub PictureBox2_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox2.DragEnter
@@ -2466,6 +2603,12 @@ Public Class FormMain
     Private Sub PictureBox2_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox2.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox2.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox2.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox2, GetToolTip(PictureBox2.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox2, "none")
+        End If
     End Sub
 
     Private Sub PictureBox3_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox3.DragEnter
@@ -2478,6 +2621,12 @@ Public Class FormMain
     Private Sub PictureBox3_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox3.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox3.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox3.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox3, GetToolTip(PictureBox3.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox3, "none")
+        End If
     End Sub
 
     Private Sub PictureBox4_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox4.DragEnter
@@ -2490,6 +2639,12 @@ Public Class FormMain
     Private Sub PictureBox4_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox4.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox4.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox4.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox4, GetToolTip(PictureBox4.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox4, "none")
+        End If
     End Sub
 
     Private Sub PictureBox5_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox5.DragEnter
@@ -2502,6 +2657,12 @@ Public Class FormMain
     Private Sub PictureBox5_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox5.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox5.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox5.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox5, GetToolTip(PictureBox5.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox5, "none")
+        End If
     End Sub
 
     Private Sub PictureBox6_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox6.DragEnter
@@ -2514,6 +2675,12 @@ Public Class FormMain
     Private Sub PictureBox6_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox6.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox6.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox6.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox6, GetToolTip(PictureBox6.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox6, "none")
+        End If
     End Sub
 
     Private Sub PictureBox7_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox7.DragEnter
@@ -2526,6 +2693,12 @@ Public Class FormMain
     Private Sub PictureBox7_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox7.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox7.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox7.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox7, GetToolTip(PictureBox7.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox7, "none")
+        End If
     End Sub
 
     Private Sub PictureBox8_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox8.DragEnter
@@ -2538,6 +2711,12 @@ Public Class FormMain
     Private Sub PictureBox8_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox8.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox8.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox8.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox8, GetToolTip(PictureBox8.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox8, "none")
+        End If
     End Sub
 
     Private Sub PictureBox9_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox9.DragEnter
@@ -2550,6 +2729,12 @@ Public Class FormMain
     Private Sub PictureBox9_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox9.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox9.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox9.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox9, GetToolTip(PictureBox9.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox9, "none")
+        End If
     End Sub
 
     Private Sub PictureBox10_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox10.DragEnter
@@ -2562,6 +2747,12 @@ Public Class FormMain
     Private Sub PictureBox10_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox10.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox10.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox10.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox10, GetToolTip(PictureBox10.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox10, "none")
+        End If
     End Sub
 
     Private Sub PictureBox11_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox11.DragEnter
@@ -2574,6 +2765,12 @@ Public Class FormMain
     Private Sub PictureBox11_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox11.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox11.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox11.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox11, GetToolTip(PictureBox11.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox11, "none")
+        End If
     End Sub
 
     Private Sub PictureBox12_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox12.DragEnter
@@ -2586,6 +2783,12 @@ Public Class FormMain
     Private Sub PictureBox12_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox12.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox12.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox12.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox12, GetToolTip(PictureBox12.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox12, "none")
+        End If
     End Sub
 
     Private Sub PictureBox13_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox13.DragEnter
@@ -2598,6 +2801,12 @@ Public Class FormMain
     Private Sub PictureBox13_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox13.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox13.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox13.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox13, GetToolTip(PictureBox13.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox13, "none")
+        End If
     End Sub
 
     Private Sub PictureBox14_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox14.DragEnter
@@ -2610,6 +2819,12 @@ Public Class FormMain
     Private Sub PictureBox14_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox14.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox14.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox14.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox14, GetToolTip(PictureBox14.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox14, "none")
+        End If
     End Sub
 
     Private Sub PictureBox15_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox15.DragEnter
@@ -2622,6 +2837,12 @@ Public Class FormMain
     Private Sub PictureBox15_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox15.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox15.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox15.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox15, GetToolTip(PictureBox15.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox15, "none")
+        End If
     End Sub
 
     Private Sub PictureBox16_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox16.DragEnter
@@ -2634,6 +2855,12 @@ Public Class FormMain
     Private Sub PictureBox16_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox16.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox16.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox16.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox16, GetToolTip(PictureBox16.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox16, "none")
+        End If
     End Sub
 
     Private Sub PictureBox17_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox17.DragEnter
@@ -2646,6 +2873,12 @@ Public Class FormMain
     Private Sub PictureBox17_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox17.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox17.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox17.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox17, GetToolTip(PictureBox17.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox17, "none")
+        End If
     End Sub
 
     Private Sub PictureBox18_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox18.DragEnter
@@ -2658,6 +2891,12 @@ Public Class FormMain
     Private Sub PictureBox18_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox18.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox18.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox18.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox18, GetToolTip(PictureBox18.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox18, "none")
+        End If
     End Sub
 
     Private Sub PictureBox19_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox19.DragEnter
@@ -2670,6 +2909,12 @@ Public Class FormMain
     Private Sub PictureBox19_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox19.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox19.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox19.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox19, GetToolTip(PictureBox19.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox19, "none")
+        End If
     End Sub
 
     Private Sub PictureBox20_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox20.DragEnter
@@ -2682,6 +2927,12 @@ Public Class FormMain
     Private Sub PictureBox20_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox20.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox20.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox20.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox20, GetToolTip(PictureBox20.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox20, "none")
+        End If
     End Sub
 
     Private Sub PictureBox21_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox21.DragEnter
@@ -2694,6 +2945,12 @@ Public Class FormMain
     Private Sub PictureBox21_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox21.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox21.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox21.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox21, GetToolTip(PictureBox21.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox21, "none")
+        End If
     End Sub
 
     Private Sub PictureBox22_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox22.DragEnter
@@ -2706,6 +2963,12 @@ Public Class FormMain
     Private Sub PictureBox22_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox22.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox22.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox22.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox22, GetToolTip(PictureBox22.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox22, "none")
+        End If
     End Sub
 
     Private Sub PictureBox23_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox23.DragEnter
@@ -2718,6 +2981,12 @@ Public Class FormMain
     Private Sub PictureBox23_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox23.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox23.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox23.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox23, GetToolTip(PictureBox23.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox23, "none")
+        End If
     End Sub
 
     Private Sub PictureBox24_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox24.DragEnter
@@ -2730,6 +2999,12 @@ Public Class FormMain
     Private Sub PictureBox24_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox24.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox24.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox24.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox24, GetToolTip(PictureBox24.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox24, "none")
+        End If
     End Sub
 
     Private Sub PictureBox25_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox25.DragEnter
@@ -2742,6 +3017,12 @@ Public Class FormMain
     Private Sub PictureBox25_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox25.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox25.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox25.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox25, GetToolTip(PictureBox25.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox25, "none")
+        End If
     End Sub
 
     Private Sub PictureBox26_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox26.DragEnter
@@ -2754,6 +3035,12 @@ Public Class FormMain
     Private Sub PictureBox26_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox26.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox26.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox26.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox26, GetToolTip(PictureBox26.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox26, "none")
+        End If
     End Sub
 
     Private Sub PictureBox27_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox27.DragEnter
@@ -2766,6 +3053,12 @@ Public Class FormMain
     Private Sub PictureBox27_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox27.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox27.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox27.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox27, GetToolTip(PictureBox27.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox27, "none")
+        End If
     End Sub
 
     Private Sub PictureBox28_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox28.DragEnter
@@ -2778,6 +3071,12 @@ Public Class FormMain
     Private Sub PictureBox28_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox28.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox28.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox28.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox28, GetToolTip(PictureBox28.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox28, "none")
+        End If
     End Sub
 
     Private Sub PictureBox29_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox29.DragEnter
@@ -2790,6 +3089,12 @@ Public Class FormMain
     Private Sub PictureBox29_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox29.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox29.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox29.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox29, GetToolTip(PictureBox29.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox29, "none")
+        End If
     End Sub
 
     Private Sub PictureBox30_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox30.DragEnter
@@ -2802,6 +3107,12 @@ Public Class FormMain
     Private Sub PictureBox30_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox30.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox30.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox30.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox30, GetToolTip(PictureBox30.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox30, "none")
+        End If
     End Sub
 
     Private Sub PictureBox160_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox160.DragEnter
@@ -2814,6 +3125,12 @@ Public Class FormMain
     Private Sub PictureBox160_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox160.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox160.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox160.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox160, GetToolTip(PictureBox160.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox160, "none")
+        End If
     End Sub
 
     Private Sub PictureBox161_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox161.DragEnter
@@ -2826,6 +3143,12 @@ Public Class FormMain
     Private Sub PictureBox161_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox161.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox161.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox161.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox161, GetToolTip(PictureBox161.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox161, "none")
+        End If
     End Sub
 
     Private Sub PictureBox162_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox162.DragEnter
@@ -2838,6 +3161,12 @@ Public Class FormMain
     Private Sub PictureBox162_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox162.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox162.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox162.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox162, GetToolTip(PictureBox162.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox162, "none")
+        End If
     End Sub
 
     Private Sub PictureBox163_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox163.DragEnter
@@ -2850,6 +3179,12 @@ Public Class FormMain
     Private Sub PictureBox163_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox163.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox163.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox163.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox163, GetToolTip(PictureBox163.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox163, "none")
+        End If
     End Sub
 
     Private Sub PictureBox164_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox164.DragEnter
@@ -2862,6 +3197,12 @@ Public Class FormMain
     Private Sub PictureBox164_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox164.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox164.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox164.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox164, GetToolTip(PictureBox164.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox164, "none")
+        End If
     End Sub
 
     Private Sub PictureBox165_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox165.DragEnter
@@ -2874,6 +3215,12 @@ Public Class FormMain
     Private Sub PictureBox165_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox165.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox165.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox165.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox165, GetToolTip(PictureBox165.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox165, "none")
+        End If
     End Sub
 
     Private Sub PictureBox166_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox166.DragEnter
@@ -2886,6 +3233,12 @@ Public Class FormMain
     Private Sub PictureBox166_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox166.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox166.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox166.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox166, GetToolTip(PictureBox166.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox166, "none")
+        End If
     End Sub
 
     Private Sub PictureBox167_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox167.DragEnter
@@ -2898,6 +3251,12 @@ Public Class FormMain
     Private Sub PictureBox167_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox167.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox167.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox167.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox167, GetToolTip(PictureBox167.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox167, "none")
+        End If
     End Sub
 
     Private Sub PictureBox168_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox168.DragEnter
@@ -2910,6 +3269,12 @@ Public Class FormMain
     Private Sub PictureBox168_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox168.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox168.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox168.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox168, GetToolTip(PictureBox168.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox168, "none")
+        End If
     End Sub
 
     Private Sub PictureBox169_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox169.DragEnter
@@ -2922,6 +3287,12 @@ Public Class FormMain
     Private Sub PictureBox169_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox169.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox169.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox169.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox169, GetToolTip(PictureBox169.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox169, "none")
+        End If
     End Sub
 
     Private Sub PictureBox170_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox170.DragEnter
@@ -2934,6 +3305,12 @@ Public Class FormMain
     Private Sub PictureBox170_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox170.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox170.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox170.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox170, GetToolTip(PictureBox170.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox170, "none")
+        End If
     End Sub
 
     Private Sub PictureBox171_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox171.DragEnter
@@ -2946,6 +3323,12 @@ Public Class FormMain
     Private Sub PictureBox171_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox171.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox171.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox171.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox171, GetToolTip(PictureBox171.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox171, "none")
+        End If
     End Sub
 
     Private Sub PictureBox172_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox172.DragEnter
@@ -2958,6 +3341,12 @@ Public Class FormMain
     Private Sub PictureBox172_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox172.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox172.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox172.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox172, GetToolTip(PictureBox172.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox172, "none")
+        End If
     End Sub
 
     Private Sub PictureBox173_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox173.DragEnter
@@ -2970,6 +3359,12 @@ Public Class FormMain
     Private Sub PictureBox173_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox173.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox173.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox173.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox173, GetToolTip(PictureBox173.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox173, "none")
+        End If
     End Sub
 
     Private Sub PictureBox174_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox174.DragEnter
@@ -2982,6 +3377,12 @@ Public Class FormMain
     Private Sub PictureBox174_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox174.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox174.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox174.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox174, GetToolTip(PictureBox174.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox174, "none")
+        End If
     End Sub
 
     Private Sub PictureBox175_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox175.DragEnter
@@ -2994,6 +3395,12 @@ Public Class FormMain
     Private Sub PictureBox175_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox175.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox175.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox175.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox175, GetToolTip(PictureBox175.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox175, "none")
+        End If
     End Sub
 
     Private Sub PictureBox176_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox176.DragEnter
@@ -3006,6 +3413,12 @@ Public Class FormMain
     Private Sub PictureBox176_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox176.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox176.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox176.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox176, GetToolTip(PictureBox176.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox176, "none")
+        End If
     End Sub
 
     Private Sub PictureBox177_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox177.DragEnter
@@ -3018,6 +3431,12 @@ Public Class FormMain
     Private Sub PictureBox177_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox177.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox177.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox177.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox177, GetToolTip(PictureBox177.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox177, "none")
+        End If
     End Sub
 
     Private Sub PictureBox178_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox178.DragEnter
@@ -3030,6 +3449,12 @@ Public Class FormMain
     Private Sub PictureBox178_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox178.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox178.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox178.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox178, GetToolTip(PictureBox178.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox178, "none")
+        End If
     End Sub
 
     Private Sub PictureBox179_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox179.DragEnter
@@ -3042,6 +3467,12 @@ Public Class FormMain
     Private Sub PictureBox179_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox179.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox179.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox179.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox179, GetToolTip(PictureBox179.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox179, "none")
+        End If
     End Sub
 
     Private Sub PictureBox180_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox180.DragEnter
@@ -3054,6 +3485,12 @@ Public Class FormMain
     Private Sub PictureBox180_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox180.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox180.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox180.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox180, GetToolTip(PictureBox180.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox180, "none")
+        End If
     End Sub
 
     Private Sub PictureBox181_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox181.DragEnter
@@ -3066,6 +3503,12 @@ Public Class FormMain
     Private Sub PictureBox181_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox181.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox181.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox181.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox181, GetToolTip(PictureBox181.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox181, "none")
+        End If
     End Sub
 
     Private Sub PictureBox182_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox182.DragEnter
@@ -3078,6 +3521,12 @@ Public Class FormMain
     Private Sub PictureBox182_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox182.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox182.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox182.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox182, GetToolTip(PictureBox182.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox182, "none")
+        End If
     End Sub
 
     Private Sub PictureBox183_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox183.DragEnter
@@ -3090,6 +3539,12 @@ Public Class FormMain
     Private Sub PictureBox183_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox183.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox183.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox183.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox183, GetToolTip(PictureBox183.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox183, "none")
+        End If
     End Sub
 
     Private Sub PictureBox184_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox184.DragEnter
@@ -3102,6 +3557,12 @@ Public Class FormMain
     Private Sub PictureBox184_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox184.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox184.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox184.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox184, GetToolTip(PictureBox184.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox184, "none")
+        End If
     End Sub
 
     Private Sub PictureBox185_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox185.DragEnter
@@ -3114,6 +3575,12 @@ Public Class FormMain
     Private Sub PictureBox185_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox185.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox185.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox185.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox185, GetToolTip(PictureBox185.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox185, "none")
+        End If
     End Sub
 
     Private Sub PictureBox186_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox186.DragEnter
@@ -3126,6 +3593,12 @@ Public Class FormMain
     Private Sub PictureBox186_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox186.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox186.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox186.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox186, GetToolTip(PictureBox186.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox186, "none")
+        End If
     End Sub
 
     Private Sub PictureBox187_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox187.DragEnter
@@ -3138,6 +3611,12 @@ Public Class FormMain
     Private Sub PictureBox187_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox187.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox187.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox187.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox187, GetToolTip(PictureBox187.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox187, "none")
+        End If
     End Sub
 
     Private Sub PictureBox188_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox188.DragEnter
@@ -3150,6 +3629,12 @@ Public Class FormMain
     Private Sub PictureBox188_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox188.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox188.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox188.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox188, GetToolTip(PictureBox188.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox188, "none")
+        End If
     End Sub
 
     Private Sub PictureBox189_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox189.DragEnter
@@ -3162,628 +3647,14 @@ Public Class FormMain
     Private Sub PictureBox189_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox189.DragDrop
         ' Assign the image to the PictureBox. 
         PictureBox189.Image = e.Data.GetData(DataFormats.Bitmap)
-    End Sub
-
-    'TOOLTIPS
-    Private Sub PictureBox1_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox1.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox1.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox1, "")
-            ToolTip1.SetToolTip(PictureBox1, GetToolTip(PictureBox1.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox1, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox2_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox2.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox2.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox2, "")
-            ToolTip1.SetToolTip(PictureBox2, GetToolTip(PictureBox2.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox2, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox3_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox3.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox3.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox3, "")
-            ToolTip1.SetToolTip(PictureBox3, GetToolTip(PictureBox3.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox3, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox4_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox4.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox4.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox4, "")
-            ToolTip1.SetToolTip(PictureBox4, GetToolTip(PictureBox4.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox4, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox5_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox5.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox5.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox5, "")
-            ToolTip1.SetToolTip(PictureBox5, GetToolTip(PictureBox5.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox5, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox6_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox6.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox6.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox6, "")
-            ToolTip1.SetToolTip(PictureBox6, GetToolTip(PictureBox6.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox6, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox7_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox7.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox7.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox7, "")
-            ToolTip1.SetToolTip(PictureBox7, GetToolTip(PictureBox7.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox7, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox8_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox8.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox8.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox8, "")
-            ToolTip1.SetToolTip(PictureBox8, GetToolTip(PictureBox8.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox8, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox9_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox9.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox9.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox9, "")
-            ToolTip1.SetToolTip(PictureBox9, GetToolTip(PictureBox9.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox9, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox10_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox10.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox10.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox10, "")
-            ToolTip1.SetToolTip(PictureBox10, GetToolTip(PictureBox10.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox10, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox11_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox11.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox11.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox11, "")
-            ToolTip1.SetToolTip(PictureBox11, GetToolTip(PictureBox11.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox11, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox12_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox12.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox12.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox12, "")
-            ToolTip1.SetToolTip(PictureBox12, GetToolTip(PictureBox12.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox12, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox13_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox13.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox13.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox13, "")
-            ToolTip1.SetToolTip(PictureBox13, GetToolTip(PictureBox13.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox13, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox14_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox14.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox14.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox14, "")
-            ToolTip1.SetToolTip(PictureBox14, GetToolTip(PictureBox14.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox14, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox15_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox15.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox15.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox15, "")
-            ToolTip1.SetToolTip(PictureBox15, GetToolTip(PictureBox15.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox15, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox16_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox16.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox16.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox16, "")
-            ToolTip1.SetToolTip(PictureBox16, GetToolTip(PictureBox16.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox16, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox17_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox17.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox17.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox17, "")
-            ToolTip1.SetToolTip(PictureBox17, GetToolTip(PictureBox17.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox17, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox18_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox18.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox18.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox18, "")
-            ToolTip1.SetToolTip(PictureBox18, GetToolTip(PictureBox18.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox18, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox19_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox19.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox19.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox19, "")
-            ToolTip1.SetToolTip(PictureBox19, GetToolTip(PictureBox19.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox19, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox20_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox20.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox20.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox20, "")
-            ToolTip1.SetToolTip(PictureBox20, GetToolTip(PictureBox20.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox20, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox21_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox21.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox21.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox21, "")
-            ToolTip1.SetToolTip(PictureBox21, GetToolTip(PictureBox21.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox21, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox22_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox22.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox22.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox22, "")
-            ToolTip1.SetToolTip(PictureBox22, GetToolTip(PictureBox22.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox22, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox23_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox23.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox23.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox23, "")
-            ToolTip1.SetToolTip(PictureBox23, GetToolTip(PictureBox23.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox23, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox24_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox24.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox24.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox24, "")
-            ToolTip1.SetToolTip(PictureBox24, GetToolTip(PictureBox24.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox24, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox25_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox25.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox25.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox25, "")
-            ToolTip1.SetToolTip(PictureBox25, GetToolTip(PictureBox25.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox25, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox26_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox26.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox26.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox26, "")
-            ToolTip1.SetToolTip(PictureBox26, GetToolTip(PictureBox26.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox26, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox27_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox27.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox27.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox27, "")
-            ToolTip1.SetToolTip(PictureBox27, GetToolTip(PictureBox27.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox27, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox28_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox28.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox28.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox28, "")
-            ToolTip1.SetToolTip(PictureBox28, GetToolTip(PictureBox28.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox28, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox29_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox29.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox29.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox29, "")
-            ToolTip1.SetToolTip(PictureBox29, GetToolTip(PictureBox29.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox29, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox30_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox30.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox30.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox30, "")
-            ToolTip1.SetToolTip(PictureBox30, GetToolTip(PictureBox30.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox30, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox160_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox160.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox160.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox160, "")
-            ToolTip1.SetToolTip(PictureBox160, GetToolTip(PictureBox160.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox160, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox161_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox161.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox161.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox161, "")
-            ToolTip1.SetToolTip(PictureBox161, GetToolTip(PictureBox161.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox161, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox162_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox162.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox162.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox162, "")
-            ToolTip1.SetToolTip(PictureBox162, GetToolTip(PictureBox162.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox162, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox163_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox163.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox163.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox163, "")
-            ToolTip1.SetToolTip(PictureBox163, GetToolTip(PictureBox163.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox163, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox164_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox164.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox164.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox164, "")
-            ToolTip1.SetToolTip(PictureBox164, GetToolTip(PictureBox164.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox164, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox165_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox165.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox165.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox165, "")
-            ToolTip1.SetToolTip(PictureBox165, GetToolTip(PictureBox165.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox165, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox166_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox166.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox166.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox166, "")
-            ToolTip1.SetToolTip(PictureBox166, GetToolTip(PictureBox166.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox166, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox167_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox167.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox167.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox167, "")
-            ToolTip1.SetToolTip(PictureBox167, GetToolTip(PictureBox167.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox167, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox168_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox168.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox168.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox168, "")
-            ToolTip1.SetToolTip(PictureBox168, GetToolTip(PictureBox168.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox168, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox169_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox169.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox169.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox169, "")
-            ToolTip1.SetToolTip(PictureBox169, GetToolTip(PictureBox169.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox169, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox170_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox170.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox170.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox170, "")
-            ToolTip1.SetToolTip(PictureBox170, GetToolTip(PictureBox170.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox170, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox171_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox171.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox171.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox171, "")
-            ToolTip1.SetToolTip(PictureBox171, GetToolTip(PictureBox171.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox171, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox172_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox172.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox172.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox172, "")
-            ToolTip1.SetToolTip(PictureBox172, GetToolTip(PictureBox172.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox172, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox173_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox173.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox173.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox173, "")
-            ToolTip1.SetToolTip(PictureBox173, GetToolTip(PictureBox173.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox173, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox174_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox174.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox174.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox174, "")
-            ToolTip1.SetToolTip(PictureBox174, GetToolTip(PictureBox174.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox174, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox175_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox175.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox175.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox175, "")
-            ToolTip1.SetToolTip(PictureBox175, GetToolTip(PictureBox175.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox175, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox176_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox176.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox176.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox176, "")
-            ToolTip1.SetToolTip(PictureBox176, GetToolTip(PictureBox176.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox176, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox177_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox177.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox177.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox177, "")
-            ToolTip1.SetToolTip(PictureBox177, GetToolTip(PictureBox177.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox177, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox178_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox178.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox178.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox178, "")
-            ToolTip1.SetToolTip(PictureBox178, GetToolTip(PictureBox178.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox178, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox179_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox179.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox179.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox179, "")
-            ToolTip1.SetToolTip(PictureBox179, GetToolTip(PictureBox179.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox179, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox180_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox180.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox180.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox180, "")
-            ToolTip1.SetToolTip(PictureBox180, GetToolTip(PictureBox180.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox180, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox181_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox181.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox181.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox181, "")
-            ToolTip1.SetToolTip(PictureBox181, GetToolTip(PictureBox181.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox181, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox182_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox182.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox182.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox182, "")
-            ToolTip1.SetToolTip(PictureBox182, GetToolTip(PictureBox182.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox182, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox183_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox183.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox183.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox183, "")
-            ToolTip1.SetToolTip(PictureBox183, GetToolTip(PictureBox183.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox183, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox184_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox184.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox184.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox184, "")
-            ToolTip1.SetToolTip(PictureBox184, GetToolTip(PictureBox184.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox184, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox185_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox185.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox185.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox185, "")
-            ToolTip1.SetToolTip(PictureBox185, GetToolTip(PictureBox185.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox185, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox186_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox186.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox186.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox186, "")
-            ToolTip1.SetToolTip(PictureBox186, GetToolTip(PictureBox186.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox186, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox187_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox187.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox187.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox187, "")
-            ToolTip1.SetToolTip(PictureBox187, GetToolTip(PictureBox187.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox187, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox188_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox188.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox188.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox188, "")
-            ToolTip1.SetToolTip(PictureBox188, GetToolTip(PictureBox188.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox188, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox189_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox189.MouseHover
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox189.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox189, "")
             ToolTip1.SetToolTip(PictureBox189, GetToolTip(PictureBox189.Image))
         Else
             ToolTip1.SetToolTip(PictureBox189, "none")
         End If
     End Sub
 
-    Private Sub PictureBox321_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox321.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox321.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox321, "")
-            ToolTip1.SetToolTip(PictureBox321, GetToolTip(PictureBox321.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox321, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox322_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox322.MouseHover
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox322.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox322, "")
-            ToolTip1.SetToolTip(PictureBox322, GetToolTip(PictureBox322.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox322, "none")
-        End If
-    End Sub
 
     'SOURCE PICTUREBOXES
     Private Sub PictureBox31_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox31.MouseDown
@@ -7454,6 +7325,155 @@ Public Class FormMain
         m_MouseIsDown = False
     End Sub
 
+    Private Sub PictureBox323_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox323.MouseDown
+        If Not PictureBox323.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox323_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox323.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox323.DoDragDrop(PictureBox323.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox324_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox324.MouseDown
+        If Not PictureBox324.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox324_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox324.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox324.DoDragDrop(PictureBox324.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox325_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox325.MouseDown
+        If Not PictureBox325.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox325_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox325.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox325.DoDragDrop(PictureBox325.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox326_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox326.MouseDown
+        If Not PictureBox326.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox326_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox326.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox326.DoDragDrop(PictureBox326.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox327_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox327.MouseDown
+        If Not PictureBox327.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox327_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox327.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox327.DoDragDrop(PictureBox327.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox328_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox328.MouseDown
+        If Not PictureBox328.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox328_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox328.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox328.DoDragDrop(PictureBox328.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox329_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox329.MouseDown
+        If Not PictureBox329.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox329_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox329.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox329.DoDragDrop(PictureBox329.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox330_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox330.MouseDown
+        If Not PictureBox330.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox330_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox330.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox330.DoDragDrop(PictureBox330.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox331_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox331.MouseDown
+        If Not PictureBox331.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox331_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox331.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox331.DoDragDrop(PictureBox331.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+
+    Private Sub PictureBox332_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox332.MouseDown
+        If Not PictureBox332.Image Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub PictureBox332_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox332.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            PictureBox332.DoDragDrop(PictureBox332.Image, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
     Private Sub ButtonOpenFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenFolder.Click
         System.Diagnostics.Process.Start("explorer", My.Settings.path)
     End Sub
@@ -7783,20 +7803,31 @@ Public Class FormMain
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
         PictureBox321.Image = ChangePicture(ComboBox1.Text)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox321.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox321, GetToolTip(PictureBox321.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox321, "none")
+        End If
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
         PictureBox322.Image = ChangePicture(ComboBox2.Text)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(PictureBox322.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox322, GetToolTip(PictureBox322.Image))
+        Else
+            ToolTip1.SetToolTip(PictureBox322, "none")
+        End If
     End Sub
 
     Private WithEvents WebClient1 As New WebClient
     Public Sub Check4Update()
-        Dim oAssembly As System.Reflection.AssemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName
-        Dim pgversion As String = oAssembly.Version.ToString()
+        Dim pgversion As String = Application.ProductVersion.Substring(0, Application.ProductVersion.Length - 2)
         Dim aktversion As String = WebClient1.DownloadString("http://holyzone.bplaced.net/maddy/d2ric_version.txt")
 
         If pgversion < aktversion Then 'Wenn die Programmversion kleiner als die Aktuelle Version ist:
-            If MessageBox.Show("New Update available!!" + vbNewLine + "Open the Download page?", "Update", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show("New Update available!!" + vbNewLine + vbNewLine + "Your Version: " + pgversion + vbNewLine + "New Version: " + aktversion + vbNewLine + vbNewLine + "Open the Download page?", "Update", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 Process.Start("http://code.google.com/p/d2ric/downloads/list")
             End If
         Else
@@ -7951,6 +7982,77 @@ Public Class FormMain
             For i = lb.Items.Count - 1 To 0 Step -1
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
+            ListBox1.Items.Add("Abaddon")
+            ListBox1.Items.Add("Alchemist")
+            ListBox1.Items.Add("Anti-Mage")
+            ListBox1.Items.Add("Bloodseeker")
+            ListBox1.Items.Add("Bounty Hunter")
+            ListBox1.Items.Add("Bristleback")
+            ListBox1.Items.Add("Broodmother")
+            ListBox1.Items.Add("Chaos Knight")
+            ListBox1.Items.Add("Clinkz")
+            ListBox1.Items.Add("Dirge")
+            ListBox1.Items.Add("Doom Bringer")
+            ListBox1.Items.Add("Dragon Knight")
+            ListBox1.Items.Add("Drow Ranger")
+            ListBox1.Items.Add("Ember Spirit")
+            ListBox1.Items.Add("Faceless Void")
+            ListBox1.Items.Add("Goblin Shredder")
+            ListBox1.Items.Add("Goblin Techies")
+            ListBox1.Items.Add("Guardian Wisp")
+            ListBox1.Items.Add("Gyrocopter")
+            ListBox1.Items.Add("Harbinger")
+            ListBox1.Items.Add("Huskar")
+            ListBox1.Items.Add("Invoker")
+            ListBox1.Items.Add("Juggernaut")
+            ListBox1.Items.Add("Keeper of the Light")
+            ListBox1.Items.Add("Kunkka")
+            ListBox1.Items.Add("Lanaya")
+            ListBox1.Items.Add("Legion Commander")
+            ListBox1.Items.Add("Leshrac")
+            ListBox1.Items.Add("Lone Druid")
+            ListBox1.Items.Add("Luna")
+            ListBox1.Items.Add("Lycanthrope")
+            ListBox1.Items.Add("Magnataur")
+            ListBox1.Items.Add("Medusa")
+            ListBox1.Items.Add("Meepo")
+            ListBox1.Items.Add("Mirana")
+            ListBox1.Items.Add("Morphling")
+            ListBox1.Items.Add("Mortred")
+            ListBox1.Items.Add("Naga Siren")
+            ListBox1.Items.Add("Necrolyte")
+            ListBox1.Items.Add("Night Stalker")
+            ListBox1.Items.Add("Ogre Magi")
+            ListBox1.Items.Add("Phantom Lancer")
+            ListBox1.Items.Add("Phoenix")
+            ListBox1.Items.Add("Pit Lord")
+            ListBox1.Items.Add("Queen of Pain")
+            ListBox1.Items.Add("Razor")
+            ListBox1.Items.Add("Riki")
+            ListBox1.Items.Add("Rubick")
+            ListBox1.Items.Add("Shadow Demon")
+            ListBox1.Items.Add("Shadow Fiend")
+            ListBox1.Items.Add("Silencer")
+            ListBox1.Items.Add("Skeleton King")
+            ListBox1.Items.Add("Skywrath Mage")
+            ListBox1.Items.Add("Slardar")
+            ListBox1.Items.Add("Slark")
+            ListBox1.Items.Add("Sniper")
+            ListBox1.Items.Add("Soul Keeper")
+            ListBox1.Items.Add("Spectre")
+            ListBox1.Items.Add("Storm Spirit")
+            ListBox1.Items.Add("Sven")
+            ListBox1.Items.Add("Tauren Chieftain")
+            ListBox1.Items.Add("Tinker")
+            ListBox1.Items.Add("Treant Protector")
+            ListBox1.Items.Add("Troll Warlord")
+            ListBox1.Items.Add("Tuskarr")
+            ListBox1.Items.Add("Ursa")
+            ListBox1.Items.Add("Venomancer")
+            ListBox1.Items.Add("Viper")
+            ListBox1.Items.Add("Visage")
+            ListBox1.Items.Add("Weaver")
+            ListBox1.Items.Add("Windrunner")
         ElseIf cb.SelectedItem = "Support" Then
             lb.SelectedItems.Clear()
             For i = lb.Items.Count - 1 To 0 Step -1
@@ -7986,6 +8088,72 @@ Public Class FormMain
             For i = lb.Items.Count - 1 To 0 Step -1
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
+            ListBox1.Items.Add("Ancient Apparition")
+            ListBox1.Items.Add("Bane")
+            ListBox1.Items.Add("Batrider")
+            ListBox1.Items.Add("Beastmaster")
+            ListBox1.Items.Add("Bloodseeker")
+            ListBox1.Items.Add("Bounty Hunter")
+            ListBox1.Items.Add("Bristleback")
+            ListBox1.Items.Add("Chaos Knight")
+            ListBox1.Items.Add("Clockwerk")
+            ListBox1.Items.Add("Dirge")
+            ListBox1.Items.Add("Disruptor")
+            ListBox1.Items.Add("Doom Bringer")
+            ListBox1.Items.Add("Earthshaker")
+            ListBox1.Items.Add("Ember Spirit")
+            ListBox1.Items.Add("Goblin Shredder")
+            ListBox1.Items.Add("Goblin Techies")
+            ListBox1.Items.Add("Guardian Wisp")
+            ListBox1.Items.Add("Gyrocopter")
+            ListBox1.Items.Add("Harbinger")
+            ListBox1.Items.Add("Invoker")
+            ListBox1.Items.Add("Jakiro")
+            ListBox1.Items.Add("Keeper of the Light")
+            ListBox1.Items.Add("Kunkka")
+            ListBox1.Items.Add("Lanaya")
+            ListBox1.Items.Add("Legion Commander")
+            ListBox1.Items.Add("Lich")
+            ListBox1.Items.Add("Lifestealer")
+            ListBox1.Items.Add("Lina")
+            ListBox1.Items.Add("Lion")
+            ListBox1.Items.Add("Lone Druid")
+            ListBox1.Items.Add("Lycanthrope")
+            ListBox1.Items.Add("Magnataur")
+            ListBox1.Items.Add("Medusa")
+            ListBox1.Items.Add("Mirana")
+            ListBox1.Items.Add("Morphling")
+            ListBox1.Items.Add("Naga Siren")
+            ListBox1.Items.Add("Nature's Prophet")
+            ListBox1.Items.Add("Nerubian Assassin")
+            ListBox1.Items.Add("Night Stalker")
+            ListBox1.Items.Add("Ogre Magi")
+            ListBox1.Items.Add("Phoenix")
+            ListBox1.Items.Add("Pit Lord")
+            ListBox1.Items.Add("Pudge")
+            ListBox1.Items.Add("Queen of Pain")
+            ListBox1.Items.Add("Riki")
+            ListBox1.Items.Add("Rubick")
+            ListBox1.Items.Add("Sand King")
+            ListBox1.Items.Add("Shadow Demon")
+            ListBox1.Items.Add("Skywrath Mage")
+            ListBox1.Items.Add("Slark")
+            ListBox1.Items.Add("Soul Keeper")
+            ListBox1.Items.Add("Spirit Breaker")
+            ListBox1.Items.Add("Storm Spirit")
+            ListBox1.Items.Add("Sven")
+            ListBox1.Items.Add("Tauren Chieftain")
+            ListBox1.Items.Add("Tidehunter")
+            ListBox1.Items.Add("Tinker")
+            ListBox1.Items.Add("Tiny")
+            ListBox1.Items.Add("Treant Protector")
+            ListBox1.Items.Add("Troll Warlord")
+            ListBox1.Items.Add("Tuskarr")
+            ListBox1.Items.Add("Vengeful Spirit")
+            ListBox1.Items.Add("Visage")
+            ListBox1.Items.Add("Weaver")
+            ListBox1.Items.Add("Witch Doctor")
+            ListBox1.Items.Add("Zeus")
         ElseIf cb.SelectedItem = "Initiator" Then
             lb.SelectedItems.Clear()
             For i = lb.Items.Count - 1 To 0 Step -1
