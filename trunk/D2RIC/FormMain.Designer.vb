@@ -26,17 +26,19 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.PictureBox327 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox326 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox325 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox324 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox323 = New System.Windows.Forms.PictureBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.PictureBox164 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox163 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox162 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox161 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox160 = New System.Windows.Forms.PictureBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.PictureBox321 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox166 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.PictureBox319 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox165 = New System.Windows.Forms.PictureBox()
         Me.Label0 = New System.Windows.Forms.Label()
         Me.PictureBox159 = New System.Windows.Forms.PictureBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -207,187 +209,6 @@ Partial Class FormMain
         Me.PictureBox71 = New System.Windows.Forms.PictureBox()
         Me.PictureBox73 = New System.Windows.Forms.PictureBox()
         Me.PictureBox72 = New System.Windows.Forms.PictureBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.PictureBox332 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox331 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox330 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox329 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox328 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.ButtonClearMulti = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.ButtonSaveMulti = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.PictureBox322 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox320 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox318 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox317 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox316 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox315 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox314 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox313 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox312 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox311 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox310 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox309 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox308 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox307 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox306 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox305 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox304 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox303 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox302 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox301 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox300 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox299 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox298 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox297 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox296 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox295 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox294 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox293 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox292 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox291 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox290 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox289 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox288 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox287 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox286 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox285 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox284 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox283 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox282 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox281 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox265 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox280 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox279 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox278 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox277 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox276 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox275 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox274 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox273 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox272 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox271 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox270 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox269 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox268 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox267 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox266 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox264 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox263 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox262 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox261 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox260 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox259 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox258 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox257 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox256 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox255 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox254 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox253 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox252 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox251 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox250 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox249 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox248 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox247 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox246 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox245 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox244 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox243 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox242 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox241 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox240 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox239 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox238 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox237 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox236 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox235 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox234 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox233 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox232 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox231 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox230 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox229 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox228 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox227 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox226 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox225 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox224 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox223 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox222 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox221 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox220 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox219 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox218 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox217 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox216 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox215 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox214 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox213 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox212 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox211 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox210 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox209 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox208 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox207 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox206 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox205 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox204 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox203 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox202 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox201 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox200 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox199 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox198 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox197 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox196 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox195 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox194 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox193 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox192 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox191 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox190 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox189 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox188 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox187 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox186 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox185 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox184 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox183 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox182 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox181 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox180 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox179 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox178 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox177 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox176 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox175 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox174 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox173 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox172 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox171 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox170 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox169 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox168 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox167 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox166 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox165 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox164 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox163 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox162 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox161 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox160 = New System.Windows.Forms.PictureBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.ButtonOpenTextfile = New System.Windows.Forms.Button()
         Me.ButtonImport = New System.Windows.Forms.Button()
@@ -396,6 +217,7 @@ Partial Class FormMain
         Me.ButtonSaveTextfile = New System.Windows.Forms.Button()
         Me.ButtonCopy = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.ButtonOpenBackupFolder = New System.Windows.Forms.Button()
@@ -410,15 +232,16 @@ Partial Class FormMain
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.PictureBox327, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox326, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox325, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox324, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox323, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox321, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox319, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox164, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox163, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox161, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox160, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox166, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox165, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox159, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox158, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox157, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -578,173 +401,6 @@ Partial Class FormMain
         CType(Me.PictureBox71, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox332, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox331, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox330, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox329, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox328, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox322, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox320, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox318, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox317, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox316, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox315, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox314, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox313, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox312, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox311, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox310, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox309, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox308, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox307, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox306, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox305, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox304, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox303, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox302, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox301, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox300, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox299, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox298, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox297, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox296, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox295, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox294, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox293, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox292, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox291, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox290, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox289, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox288, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox287, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox286, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox285, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox284, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox283, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox282, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox281, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox265, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox280, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox279, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox278, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox277, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox276, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox275, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox274, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox273, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox272, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox271, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox270, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox269, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox268, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox267, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox266, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox264, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox263, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox262, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox261, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox260, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox259, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox258, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox257, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox256, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox255, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox254, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox253, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox252, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox251, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox250, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox249, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox248, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox247, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox246, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox245, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox244, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox243, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox242, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox241, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox240, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox239, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox238, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox237, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox236, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox235, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox234, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox233, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox232, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox231, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox230, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox229, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox228, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox227, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox226, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox225, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox224, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox223, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox222, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox221, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox220, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox219, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox218, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox217, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox216, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox215, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox214, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox213, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox212, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox211, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox210, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox209, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox208, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox207, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox206, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox205, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox204, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox203, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox202, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox201, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox200, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox199, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox198, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox197, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox196, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox195, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox194, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox193, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox192, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox191, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox190, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox189, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox188, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox187, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox186, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox185, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox184, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox183, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox182, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox181, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox180, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox179, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox178, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox177, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox176, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox175, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox174, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox173, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox172, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox171, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox170, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox169, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox168, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox167, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox166, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox165, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox164, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox163, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox161, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox160, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
@@ -753,9 +409,9 @@ Partial Class FormMain
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Location = New System.Drawing.Point(2, 12)
         Me.TabControl1.Name = "TabControl1"
@@ -765,17 +421,19 @@ Partial Class FormMain
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.PictureBox327)
-        Me.TabPage1.Controls.Add(Me.PictureBox326)
-        Me.TabPage1.Controls.Add(Me.PictureBox325)
-        Me.TabPage1.Controls.Add(Me.PictureBox324)
-        Me.TabPage1.Controls.Add(Me.PictureBox323)
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.ComboBox5)
+        Me.TabPage1.Controls.Add(Me.PictureBox164)
+        Me.TabPage1.Controls.Add(Me.PictureBox163)
+        Me.TabPage1.Controls.Add(Me.PictureBox162)
+        Me.TabPage1.Controls.Add(Me.PictureBox161)
+        Me.TabPage1.Controls.Add(Me.PictureBox160)
         Me.TabPage1.Controls.Add(Me.ComboBox3)
         Me.TabPage1.Controls.Add(Me.Label12)
-        Me.TabPage1.Controls.Add(Me.PictureBox321)
+        Me.TabPage1.Controls.Add(Me.PictureBox166)
         Me.TabPage1.Controls.Add(Me.ComboBox1)
         Me.TabPage1.Controls.Add(Me.Label10)
-        Me.TabPage1.Controls.Add(Me.PictureBox319)
+        Me.TabPage1.Controls.Add(Me.PictureBox165)
         Me.TabPage1.Controls.Add(Me.Label0)
         Me.TabPage1.Controls.Add(Me.PictureBox159)
         Me.TabPage1.Controls.Add(Me.ListBox1)
@@ -951,53 +609,72 @@ Partial Class FormMain
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(910, 657)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Single Change"
+        Me.TabPage1.Text = "Change Itembuild"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'PictureBox327
+        'Label11
         '
-        Me.PictureBox327.Image = Global.D2RIC.My.Resources.Resources._40px_Tranquil_Boots
-        Me.PictureBox327.Location = New System.Drawing.Point(798, 564)
-        Me.PictureBox327.Name = "PictureBox327"
-        Me.PictureBox327.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox327.TabIndex = 510
-        Me.PictureBox327.TabStop = False
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(507, 243)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(56, 13)
+        Me.Label11.TabIndex = 512
+        Me.Label11.Text = "Item Order"
         '
-        'PictureBox326
+        'ComboBox5
         '
-        Me.PictureBox326.Image = Global.D2RIC.My.Resources.Resources._40px_Rod_of_Atos
-        Me.PictureBox326.Location = New System.Drawing.Point(753, 564)
-        Me.PictureBox326.Name = "PictureBox326"
-        Me.PictureBox326.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox326.TabIndex = 509
-        Me.PictureBox326.TabStop = False
+        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"Alphabetical Order", "DotA Like"})
+        Me.ComboBox5.Location = New System.Drawing.Point(569, 240)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox5.TabIndex = 511
         '
-        'PictureBox325
+        'PictureBox164
         '
-        Me.PictureBox325.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Aquila
-        Me.PictureBox325.Location = New System.Drawing.Point(707, 564)
-        Me.PictureBox325.Name = "PictureBox325"
-        Me.PictureBox325.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox325.TabIndex = 508
-        Me.PictureBox325.TabStop = False
+        Me.PictureBox164.Image = Global.D2RIC.My.Resources.Resources._40px_Tranquil_Boots
+        Me.PictureBox164.Location = New System.Drawing.Point(798, 564)
+        Me.PictureBox164.Name = "PictureBox164"
+        Me.PictureBox164.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox164.TabIndex = 510
+        Me.PictureBox164.TabStop = False
         '
-        'PictureBox324
+        'PictureBox163
         '
-        Me.PictureBox324.Image = Global.D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd
-        Me.PictureBox324.Location = New System.Drawing.Point(661, 564)
-        Me.PictureBox324.Name = "PictureBox324"
-        Me.PictureBox324.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox324.TabIndex = 507
-        Me.PictureBox324.TabStop = False
+        Me.PictureBox163.Image = Global.D2RIC.My.Resources.Resources._40px_Rod_of_Atos
+        Me.PictureBox163.Location = New System.Drawing.Point(753, 564)
+        Me.PictureBox163.Name = "PictureBox163"
+        Me.PictureBox163.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox163.TabIndex = 509
+        Me.PictureBox163.TabStop = False
         '
-        'PictureBox323
+        'PictureBox162
         '
-        Me.PictureBox323.Image = Global.D2RIC.My.Resources.Resources._40px_Abyssal_Blade
-        Me.PictureBox323.Location = New System.Drawing.Point(615, 564)
-        Me.PictureBox323.Name = "PictureBox323"
-        Me.PictureBox323.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox323.TabIndex = 506
-        Me.PictureBox323.TabStop = False
+        Me.PictureBox162.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Aquila
+        Me.PictureBox162.Location = New System.Drawing.Point(707, 564)
+        Me.PictureBox162.Name = "PictureBox162"
+        Me.PictureBox162.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox162.TabIndex = 508
+        Me.PictureBox162.TabStop = False
+        '
+        'PictureBox161
+        '
+        Me.PictureBox161.Image = Global.D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd
+        Me.PictureBox161.Location = New System.Drawing.Point(661, 564)
+        Me.PictureBox161.Name = "PictureBox161"
+        Me.PictureBox161.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox161.TabIndex = 507
+        Me.PictureBox161.TabStop = False
+        '
+        'PictureBox160
+        '
+        Me.PictureBox160.Image = Global.D2RIC.My.Resources.Resources._40px_Abyssal_Blade
+        Me.PictureBox160.Location = New System.Drawing.Point(615, 564)
+        Me.PictureBox160.Name = "PictureBox160"
+        Me.PictureBox160.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox160.TabIndex = 506
+        Me.PictureBox160.TabStop = False
         '
         'ComboBox3
         '
@@ -1018,14 +695,14 @@ Partial Class FormMain
         Me.Label12.TabIndex = 504
         Me.Label12.Text = "Sort Heros:"
         '
-        'PictureBox321
+        'PictureBox166
         '
-        Me.PictureBox321.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox321.Location = New System.Drawing.Point(397, 231)
-        Me.PictureBox321.Name = "PictureBox321"
-        Me.PictureBox321.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox321.TabIndex = 503
-        Me.PictureBox321.TabStop = False
+        Me.PictureBox166.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.PictureBox166.Location = New System.Drawing.Point(397, 231)
+        Me.PictureBox166.Name = "PictureBox166"
+        Me.PictureBox166.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox166.TabIndex = 503
+        Me.PictureBox166.TabStop = False
         '
         'ComboBox1
         '
@@ -1046,14 +723,14 @@ Partial Class FormMain
         Me.Label10.TabIndex = 501
         Me.Label10.Text = "Search Item"
         '
-        'PictureBox319
+        'PictureBox165
         '
-        Me.PictureBox319.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox319.Location = New System.Drawing.Point(845, 564)
-        Me.PictureBox319.Name = "PictureBox319"
-        Me.PictureBox319.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox319.TabIndex = 500
-        Me.PictureBox319.TabStop = False
+        Me.PictureBox165.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.PictureBox165.Location = New System.Drawing.Point(845, 564)
+        Me.PictureBox165.Name = "PictureBox165"
+        Me.PictureBox165.Size = New System.Drawing.Size(40, 30)
+        Me.PictureBox165.TabIndex = 500
+        Me.PictureBox165.TabStop = False
         '
         'Label0
         '
@@ -2589,1826 +2266,6 @@ Partial Class FormMain
         Me.PictureBox72.TabIndex = 412
         Me.PictureBox72.TabStop = False
         '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.PictureBox332)
-        Me.TabPage2.Controls.Add(Me.PictureBox331)
-        Me.TabPage2.Controls.Add(Me.PictureBox330)
-        Me.TabPage2.Controls.Add(Me.PictureBox329)
-        Me.TabPage2.Controls.Add(Me.PictureBox328)
-        Me.TabPage2.Controls.Add(Me.ComboBox4)
-        Me.TabPage2.Controls.Add(Me.Label13)
-        Me.TabPage2.Controls.Add(Me.ComboBox2)
-        Me.TabPage2.Controls.Add(Me.Label11)
-        Me.TabPage2.Controls.Add(Me.CheckBox4)
-        Me.TabPage2.Controls.Add(Me.CheckBox3)
-        Me.TabPage2.Controls.Add(Me.CheckBox2)
-        Me.TabPage2.Controls.Add(Me.CheckBox1)
-        Me.TabPage2.Controls.Add(Me.ButtonClearMulti)
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Controls.Add(Me.Label14)
-        Me.TabPage2.Controls.Add(Me.ButtonSaveMulti)
-        Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Controls.Add(Me.PictureBox322)
-        Me.TabPage2.Controls.Add(Me.PictureBox320)
-        Me.TabPage2.Controls.Add(Me.PictureBox318)
-        Me.TabPage2.Controls.Add(Me.PictureBox317)
-        Me.TabPage2.Controls.Add(Me.PictureBox316)
-        Me.TabPage2.Controls.Add(Me.PictureBox315)
-        Me.TabPage2.Controls.Add(Me.PictureBox314)
-        Me.TabPage2.Controls.Add(Me.PictureBox313)
-        Me.TabPage2.Controls.Add(Me.PictureBox312)
-        Me.TabPage2.Controls.Add(Me.PictureBox311)
-        Me.TabPage2.Controls.Add(Me.PictureBox310)
-        Me.TabPage2.Controls.Add(Me.PictureBox309)
-        Me.TabPage2.Controls.Add(Me.PictureBox308)
-        Me.TabPage2.Controls.Add(Me.PictureBox307)
-        Me.TabPage2.Controls.Add(Me.PictureBox306)
-        Me.TabPage2.Controls.Add(Me.PictureBox305)
-        Me.TabPage2.Controls.Add(Me.PictureBox304)
-        Me.TabPage2.Controls.Add(Me.PictureBox303)
-        Me.TabPage2.Controls.Add(Me.PictureBox302)
-        Me.TabPage2.Controls.Add(Me.PictureBox301)
-        Me.TabPage2.Controls.Add(Me.PictureBox300)
-        Me.TabPage2.Controls.Add(Me.PictureBox299)
-        Me.TabPage2.Controls.Add(Me.PictureBox298)
-        Me.TabPage2.Controls.Add(Me.PictureBox297)
-        Me.TabPage2.Controls.Add(Me.PictureBox296)
-        Me.TabPage2.Controls.Add(Me.PictureBox295)
-        Me.TabPage2.Controls.Add(Me.PictureBox294)
-        Me.TabPage2.Controls.Add(Me.PictureBox293)
-        Me.TabPage2.Controls.Add(Me.PictureBox292)
-        Me.TabPage2.Controls.Add(Me.PictureBox291)
-        Me.TabPage2.Controls.Add(Me.PictureBox290)
-        Me.TabPage2.Controls.Add(Me.PictureBox289)
-        Me.TabPage2.Controls.Add(Me.PictureBox288)
-        Me.TabPage2.Controls.Add(Me.PictureBox287)
-        Me.TabPage2.Controls.Add(Me.PictureBox286)
-        Me.TabPage2.Controls.Add(Me.PictureBox285)
-        Me.TabPage2.Controls.Add(Me.PictureBox284)
-        Me.TabPage2.Controls.Add(Me.PictureBox283)
-        Me.TabPage2.Controls.Add(Me.PictureBox282)
-        Me.TabPage2.Controls.Add(Me.PictureBox281)
-        Me.TabPage2.Controls.Add(Me.PictureBox265)
-        Me.TabPage2.Controls.Add(Me.PictureBox280)
-        Me.TabPage2.Controls.Add(Me.PictureBox279)
-        Me.TabPage2.Controls.Add(Me.PictureBox278)
-        Me.TabPage2.Controls.Add(Me.PictureBox277)
-        Me.TabPage2.Controls.Add(Me.PictureBox276)
-        Me.TabPage2.Controls.Add(Me.PictureBox275)
-        Me.TabPage2.Controls.Add(Me.PictureBox274)
-        Me.TabPage2.Controls.Add(Me.PictureBox273)
-        Me.TabPage2.Controls.Add(Me.PictureBox272)
-        Me.TabPage2.Controls.Add(Me.PictureBox271)
-        Me.TabPage2.Controls.Add(Me.PictureBox270)
-        Me.TabPage2.Controls.Add(Me.PictureBox269)
-        Me.TabPage2.Controls.Add(Me.PictureBox268)
-        Me.TabPage2.Controls.Add(Me.PictureBox267)
-        Me.TabPage2.Controls.Add(Me.PictureBox266)
-        Me.TabPage2.Controls.Add(Me.PictureBox264)
-        Me.TabPage2.Controls.Add(Me.PictureBox263)
-        Me.TabPage2.Controls.Add(Me.PictureBox262)
-        Me.TabPage2.Controls.Add(Me.PictureBox261)
-        Me.TabPage2.Controls.Add(Me.PictureBox260)
-        Me.TabPage2.Controls.Add(Me.PictureBox259)
-        Me.TabPage2.Controls.Add(Me.PictureBox258)
-        Me.TabPage2.Controls.Add(Me.PictureBox257)
-        Me.TabPage2.Controls.Add(Me.PictureBox256)
-        Me.TabPage2.Controls.Add(Me.PictureBox255)
-        Me.TabPage2.Controls.Add(Me.PictureBox254)
-        Me.TabPage2.Controls.Add(Me.PictureBox253)
-        Me.TabPage2.Controls.Add(Me.PictureBox252)
-        Me.TabPage2.Controls.Add(Me.PictureBox251)
-        Me.TabPage2.Controls.Add(Me.PictureBox250)
-        Me.TabPage2.Controls.Add(Me.PictureBox249)
-        Me.TabPage2.Controls.Add(Me.PictureBox248)
-        Me.TabPage2.Controls.Add(Me.PictureBox247)
-        Me.TabPage2.Controls.Add(Me.PictureBox246)
-        Me.TabPage2.Controls.Add(Me.PictureBox245)
-        Me.TabPage2.Controls.Add(Me.PictureBox244)
-        Me.TabPage2.Controls.Add(Me.PictureBox243)
-        Me.TabPage2.Controls.Add(Me.PictureBox242)
-        Me.TabPage2.Controls.Add(Me.PictureBox241)
-        Me.TabPage2.Controls.Add(Me.PictureBox240)
-        Me.TabPage2.Controls.Add(Me.PictureBox239)
-        Me.TabPage2.Controls.Add(Me.PictureBox238)
-        Me.TabPage2.Controls.Add(Me.PictureBox237)
-        Me.TabPage2.Controls.Add(Me.PictureBox236)
-        Me.TabPage2.Controls.Add(Me.PictureBox235)
-        Me.TabPage2.Controls.Add(Me.PictureBox234)
-        Me.TabPage2.Controls.Add(Me.PictureBox233)
-        Me.TabPage2.Controls.Add(Me.PictureBox232)
-        Me.TabPage2.Controls.Add(Me.PictureBox231)
-        Me.TabPage2.Controls.Add(Me.PictureBox230)
-        Me.TabPage2.Controls.Add(Me.PictureBox229)
-        Me.TabPage2.Controls.Add(Me.PictureBox228)
-        Me.TabPage2.Controls.Add(Me.PictureBox227)
-        Me.TabPage2.Controls.Add(Me.PictureBox226)
-        Me.TabPage2.Controls.Add(Me.PictureBox225)
-        Me.TabPage2.Controls.Add(Me.PictureBox224)
-        Me.TabPage2.Controls.Add(Me.PictureBox223)
-        Me.TabPage2.Controls.Add(Me.PictureBox222)
-        Me.TabPage2.Controls.Add(Me.PictureBox221)
-        Me.TabPage2.Controls.Add(Me.PictureBox220)
-        Me.TabPage2.Controls.Add(Me.PictureBox219)
-        Me.TabPage2.Controls.Add(Me.PictureBox218)
-        Me.TabPage2.Controls.Add(Me.PictureBox217)
-        Me.TabPage2.Controls.Add(Me.PictureBox216)
-        Me.TabPage2.Controls.Add(Me.PictureBox215)
-        Me.TabPage2.Controls.Add(Me.PictureBox214)
-        Me.TabPage2.Controls.Add(Me.PictureBox213)
-        Me.TabPage2.Controls.Add(Me.PictureBox212)
-        Me.TabPage2.Controls.Add(Me.PictureBox211)
-        Me.TabPage2.Controls.Add(Me.PictureBox210)
-        Me.TabPage2.Controls.Add(Me.PictureBox209)
-        Me.TabPage2.Controls.Add(Me.PictureBox208)
-        Me.TabPage2.Controls.Add(Me.PictureBox207)
-        Me.TabPage2.Controls.Add(Me.PictureBox206)
-        Me.TabPage2.Controls.Add(Me.PictureBox205)
-        Me.TabPage2.Controls.Add(Me.PictureBox204)
-        Me.TabPage2.Controls.Add(Me.PictureBox203)
-        Me.TabPage2.Controls.Add(Me.PictureBox202)
-        Me.TabPage2.Controls.Add(Me.PictureBox201)
-        Me.TabPage2.Controls.Add(Me.PictureBox200)
-        Me.TabPage2.Controls.Add(Me.PictureBox199)
-        Me.TabPage2.Controls.Add(Me.PictureBox198)
-        Me.TabPage2.Controls.Add(Me.PictureBox197)
-        Me.TabPage2.Controls.Add(Me.PictureBox196)
-        Me.TabPage2.Controls.Add(Me.PictureBox195)
-        Me.TabPage2.Controls.Add(Me.PictureBox194)
-        Me.TabPage2.Controls.Add(Me.PictureBox193)
-        Me.TabPage2.Controls.Add(Me.PictureBox192)
-        Me.TabPage2.Controls.Add(Me.PictureBox191)
-        Me.TabPage2.Controls.Add(Me.PictureBox190)
-        Me.TabPage2.Controls.Add(Me.PictureBox189)
-        Me.TabPage2.Controls.Add(Me.PictureBox188)
-        Me.TabPage2.Controls.Add(Me.PictureBox187)
-        Me.TabPage2.Controls.Add(Me.PictureBox186)
-        Me.TabPage2.Controls.Add(Me.PictureBox185)
-        Me.TabPage2.Controls.Add(Me.PictureBox184)
-        Me.TabPage2.Controls.Add(Me.PictureBox183)
-        Me.TabPage2.Controls.Add(Me.PictureBox182)
-        Me.TabPage2.Controls.Add(Me.PictureBox181)
-        Me.TabPage2.Controls.Add(Me.PictureBox180)
-        Me.TabPage2.Controls.Add(Me.PictureBox179)
-        Me.TabPage2.Controls.Add(Me.PictureBox178)
-        Me.TabPage2.Controls.Add(Me.PictureBox177)
-        Me.TabPage2.Controls.Add(Me.PictureBox176)
-        Me.TabPage2.Controls.Add(Me.PictureBox175)
-        Me.TabPage2.Controls.Add(Me.PictureBox174)
-        Me.TabPage2.Controls.Add(Me.PictureBox173)
-        Me.TabPage2.Controls.Add(Me.PictureBox172)
-        Me.TabPage2.Controls.Add(Me.PictureBox171)
-        Me.TabPage2.Controls.Add(Me.PictureBox170)
-        Me.TabPage2.Controls.Add(Me.PictureBox169)
-        Me.TabPage2.Controls.Add(Me.PictureBox168)
-        Me.TabPage2.Controls.Add(Me.PictureBox167)
-        Me.TabPage2.Controls.Add(Me.PictureBox166)
-        Me.TabPage2.Controls.Add(Me.PictureBox165)
-        Me.TabPage2.Controls.Add(Me.PictureBox164)
-        Me.TabPage2.Controls.Add(Me.PictureBox163)
-        Me.TabPage2.Controls.Add(Me.PictureBox162)
-        Me.TabPage2.Controls.Add(Me.PictureBox161)
-        Me.TabPage2.Controls.Add(Me.PictureBox160)
-        Me.TabPage2.Controls.Add(Me.ListBox2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(910, 657)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Multi Change"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'PictureBox332
-        '
-        Me.PictureBox332.Image = Global.D2RIC.My.Resources.Resources._40px_Tranquil_Boots
-        Me.PictureBox332.Location = New System.Drawing.Point(799, 564)
-        Me.PictureBox332.Name = "PictureBox332"
-        Me.PictureBox332.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox332.TabIndex = 513
-        Me.PictureBox332.TabStop = False
-        '
-        'PictureBox331
-        '
-        Me.PictureBox331.Image = Global.D2RIC.My.Resources.Resources._40px_Rod_of_Atos
-        Me.PictureBox331.Location = New System.Drawing.Point(753, 564)
-        Me.PictureBox331.Name = "PictureBox331"
-        Me.PictureBox331.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox331.TabIndex = 512
-        Me.PictureBox331.TabStop = False
-        '
-        'PictureBox330
-        '
-        Me.PictureBox330.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Aquila
-        Me.PictureBox330.Location = New System.Drawing.Point(707, 564)
-        Me.PictureBox330.Name = "PictureBox330"
-        Me.PictureBox330.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox330.TabIndex = 511
-        Me.PictureBox330.TabStop = False
-        '
-        'PictureBox329
-        '
-        Me.PictureBox329.Image = Global.D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd
-        Me.PictureBox329.Location = New System.Drawing.Point(661, 564)
-        Me.PictureBox329.Name = "PictureBox329"
-        Me.PictureBox329.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox329.TabIndex = 510
-        Me.PictureBox329.TabStop = False
-        '
-        'PictureBox328
-        '
-        Me.PictureBox328.Image = Global.D2RIC.My.Resources.Resources._40px_Abyssal_Blade
-        Me.PictureBox328.Location = New System.Drawing.Point(615, 564)
-        Me.PictureBox328.Name = "PictureBox328"
-        Me.PictureBox328.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox328.TabIndex = 509
-        Me.PictureBox328.TabStop = False
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"All", "Strength", "Agility", "Intelligence", "Carry", "Support", "Ganker", "Initiator", "Pusher", "Jungler", "Tank"})
-        Me.ComboBox4.Location = New System.Drawing.Point(72, 22)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox4.TabIndex = 508
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(6, 25)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(60, 13)
-        Me.Label13.TabIndex = 507
-        Me.Label13.Text = "Sort Heros:"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"none", "Abyssal Blade", "Aghanim's Scepter", "Animal Courier", "Arcane Boots", "Armlet", "Assault Cuirass", "Battle Fury", "Belt of Strength", "Black King Bar", "Blade Mail", "Blade of Alacrity", "Blades of Attack", "Blink Dagger", "Bloodstone", "Boots of Elvenskin", "Boots of Speed", "Boots of Travel", "Bottle", "Bracer", "Broadsword", "Buckler", "Butterfly", "Chainmail", "Circlet", "Clarity", "Claymore", "Cloak", "Crystalys", "Daedalus", "Dagon 1", "Dagon 2", "Dagon 3", "Dagon 4", "Dagon 5", "Demon Edge", "Desolator", "Diffusal Blade 1", "Diffusal Blade 2", "Divine Rapier", "Drum of Endurance", "Dust of Appearance", "Eaglesong", "Energy Booster", "Ethereal Blade", "Eul's Scepter of Divinity", "Eye of Skadi", "Flying Courier", "Force Staff", "Gauntlets of Strength", "Gem of True Sight", "Ghost Scepter", "Gloves of Haste", "Hand of Midas", "Headdress", "Healing Salve", "Heart of Tarrasque", "Heaven's Halberd", "Helm of Iron Will", "Helm of the Dominator", "Hood of Defiance", "Hyperstone", "Iron Branch", "Javelin", "Linken's Sphere", "Maelstrom", "Magic Stick", "Magic Wand", "Manta Style", "Mantle of Intelligence", "Mask of Madness", "Medallion of Courage", "Mekansm", "Mithril Hammer", "Mjollnir", "Monkey King Bar", "Morbid Mask", "Mystic Staff", "Necronomicon 1", "Necronomicon 2", "Necronomicon 3", "Null Talisman", "Oblivion Staff", "Observer Ward", "Ogre Club", "Orb of Venom", "Orchid Malevolence", "Perseverance", "Phase Boots", "Pipe of Insight", "Platemail", "Point Booster", "Poor Man's Shield", "Power Treads", "Quarterstaff", "Quelling Blade", "Radiance", "Reaver", "Refresher Orb", "Ring of Aquila", "Ring of Basilius", "Ring of Health", "Ring of Protection", "Ring of Regen", "Robe of the Magi", "Rod of Atos", "Sacred Relic", "Sage's Mask", "Sange", "Sange and Yasha", "Satanic", "Scythe of Vyse", "Sentry Ward", "Shadow Blade", "Shiva's Guard", "Skull Basher", "Slippers of Agility", "Smoke of Deceit", "Soul Booster", "Soul Ring", "Staff of Wizardry", "Stout Shield", "Talisman of Evasion", "Tango", "Town Portal Scroll", "Tranquil Boots", "Ultimate Orb", "Urn of Shadows", "Vanguard", "Veil of Discord", "Vitality Booster", "Vladmir's Offering", "Void Stone", "Wraith Band", "Yasha"})
-        Me.ComboBox2.Location = New System.Drawing.Point(270, 240)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 505
-        Me.ComboBox2.Text = "none"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(200, 243)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(64, 13)
-        Me.Label11.TabIndex = 504
-        Me.Label11.Text = "Search Item"
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(795, 72)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(63, 17)
-        Me.CheckBox4.TabIndex = 499
-        Me.CheckBox4.Text = "Luxury"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(601, 72)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(86, 17)
-        Me.CheckBox3.TabIndex = 498
-        Me.CheckBox3.Text = "Core Items"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(418, 72)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(90, 17)
-        Me.CheckBox2.TabIndex = 497
-        Me.CheckBox2.Text = "Early Game"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(224, 72)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(104, 17)
-        Me.CheckBox1.TabIndex = 496
-        Me.CheckBox1.Text = "Starting Items"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'ButtonClearMulti
-        '
-        Me.ButtonClearMulti.Location = New System.Drawing.Point(201, 623)
-        Me.ButtonClearMulti.Name = "ButtonClearMulti"
-        Me.ButtonClearMulti.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonClearMulti.TabIndex = 495
-        Me.ButtonClearMulti.Text = "Clear"
-        Me.ButtonClearMulti.UseVisualStyleBackColor = True
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(247, 198)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox5.TabIndex = 329
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(200, 201)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(41, 13)
-        Me.Label14.TabIndex = 328
-        Me.Label14.Text = "Author:"
-        '
-        'ButtonSaveMulti
-        '
-        Me.ButtonSaveMulti.Location = New System.Drawing.Point(619, 623)
-        Me.ButtonSaveMulti.Name = "ButtonSaveMulti"
-        Me.ButtonSaveMulti.Size = New System.Drawing.Size(59, 23)
-        Me.ButtonSaveMulti.TabIndex = 327
-        Me.ButtonSaveMulti.Text = "Save"
-        Me.ButtonSaveMulti.UseVisualStyleBackColor = True
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(6, 3)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(47, 13)
-        Me.Label15.TabIndex = 326
-        Me.Label15.Text = "Heroes"
-        '
-        'PictureBox322
-        '
-        Me.PictureBox322.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox322.Location = New System.Drawing.Point(397, 231)
-        Me.PictureBox322.Name = "PictureBox322"
-        Me.PictureBox322.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox322.TabIndex = 506
-        Me.PictureBox322.TabStop = False
-        '
-        'PictureBox320
-        '
-        Me.PictureBox320.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox320.Location = New System.Drawing.Point(845, 564)
-        Me.PictureBox320.Name = "PictureBox320"
-        Me.PictureBox320.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox320.TabIndex = 500
-        Me.PictureBox320.TabStop = False
-        '
-        'PictureBox318
-        '
-        Me.PictureBox318.Image = Global.D2RIC.My.Resources.Resources._40px_Yasha
-        Me.PictureBox318.Location = New System.Drawing.Point(569, 564)
-        Me.PictureBox318.Name = "PictureBox318"
-        Me.PictureBox318.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox318.TabIndex = 494
-        Me.PictureBox318.TabStop = False
-        '
-        'PictureBox317
-        '
-        Me.PictureBox317.Image = Global.D2RIC.My.Resources.Resources._40px_Wraith_Band
-        Me.PictureBox317.Location = New System.Drawing.Point(523, 564)
-        Me.PictureBox317.Name = "PictureBox317"
-        Me.PictureBox317.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox317.TabIndex = 493
-        Me.PictureBox317.TabStop = False
-        '
-        'PictureBox316
-        '
-        Me.PictureBox316.Image = Global.D2RIC.My.Resources.Resources._40px_Void_Stone
-        Me.PictureBox316.Location = New System.Drawing.Point(477, 564)
-        Me.PictureBox316.Name = "PictureBox316"
-        Me.PictureBox316.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox316.TabIndex = 492
-        Me.PictureBox316.TabStop = False
-        '
-        'PictureBox315
-        '
-        Me.PictureBox315.Image = Global.D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering
-        Me.PictureBox315.Location = New System.Drawing.Point(431, 564)
-        Me.PictureBox315.Name = "PictureBox315"
-        Me.PictureBox315.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox315.TabIndex = 491
-        Me.PictureBox315.TabStop = False
-        '
-        'PictureBox314
-        '
-        Me.PictureBox314.Image = Global.D2RIC.My.Resources.Resources._40px_Vitality_Booster
-        Me.PictureBox314.Location = New System.Drawing.Point(385, 564)
-        Me.PictureBox314.Name = "PictureBox314"
-        Me.PictureBox314.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox314.TabIndex = 490
-        Me.PictureBox314.TabStop = False
-        '
-        'PictureBox313
-        '
-        Me.PictureBox313.Image = Global.D2RIC.My.Resources.Resources._40px_Veil_of_Discord
-        Me.PictureBox313.Location = New System.Drawing.Point(339, 564)
-        Me.PictureBox313.Name = "PictureBox313"
-        Me.PictureBox313.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox313.TabIndex = 489
-        Me.PictureBox313.TabStop = False
-        '
-        'PictureBox312
-        '
-        Me.PictureBox312.Image = Global.D2RIC.My.Resources.Resources._40px_Vanguard
-        Me.PictureBox312.Location = New System.Drawing.Point(293, 564)
-        Me.PictureBox312.Name = "PictureBox312"
-        Me.PictureBox312.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox312.TabIndex = 488
-        Me.PictureBox312.TabStop = False
-        '
-        'PictureBox311
-        '
-        Me.PictureBox311.Image = Global.D2RIC.My.Resources.Resources._40px_Urn_of_Shadows
-        Me.PictureBox311.Location = New System.Drawing.Point(247, 564)
-        Me.PictureBox311.Name = "PictureBox311"
-        Me.PictureBox311.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox311.TabIndex = 487
-        Me.PictureBox311.TabStop = False
-        '
-        'PictureBox310
-        '
-        Me.PictureBox310.Image = Global.D2RIC.My.Resources.Resources._40px_Ultimate_Orb
-        Me.PictureBox310.Location = New System.Drawing.Point(201, 564)
-        Me.PictureBox310.Name = "PictureBox310"
-        Me.PictureBox310.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox310.TabIndex = 486
-        Me.PictureBox310.TabStop = False
-        '
-        'PictureBox309
-        '
-        Me.PictureBox309.Image = Global.D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll
-        Me.PictureBox309.Location = New System.Drawing.Point(845, 528)
-        Me.PictureBox309.Name = "PictureBox309"
-        Me.PictureBox309.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox309.TabIndex = 485
-        Me.PictureBox309.TabStop = False
-        '
-        'PictureBox308
-        '
-        Me.PictureBox308.Image = Global.D2RIC.My.Resources.Resources._40px_Tango
-        Me.PictureBox308.Location = New System.Drawing.Point(799, 528)
-        Me.PictureBox308.Name = "PictureBox308"
-        Me.PictureBox308.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox308.TabIndex = 484
-        Me.PictureBox308.TabStop = False
-        '
-        'PictureBox307
-        '
-        Me.PictureBox307.Image = Global.D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion
-        Me.PictureBox307.Location = New System.Drawing.Point(753, 528)
-        Me.PictureBox307.Name = "PictureBox307"
-        Me.PictureBox307.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox307.TabIndex = 483
-        Me.PictureBox307.TabStop = False
-        '
-        'PictureBox306
-        '
-        Me.PictureBox306.Image = Global.D2RIC.My.Resources.Resources._40px_Stout_Shield
-        Me.PictureBox306.Location = New System.Drawing.Point(707, 528)
-        Me.PictureBox306.Name = "PictureBox306"
-        Me.PictureBox306.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox306.TabIndex = 482
-        Me.PictureBox306.TabStop = False
-        '
-        'PictureBox305
-        '
-        Me.PictureBox305.Image = Global.D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry
-        Me.PictureBox305.Location = New System.Drawing.Point(661, 528)
-        Me.PictureBox305.Name = "PictureBox305"
-        Me.PictureBox305.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox305.TabIndex = 481
-        Me.PictureBox305.TabStop = False
-        '
-        'PictureBox304
-        '
-        Me.PictureBox304.Image = Global.D2RIC.My.Resources.Resources._40px_Soul_Ring
-        Me.PictureBox304.Location = New System.Drawing.Point(615, 528)
-        Me.PictureBox304.Name = "PictureBox304"
-        Me.PictureBox304.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox304.TabIndex = 480
-        Me.PictureBox304.TabStop = False
-        '
-        'PictureBox303
-        '
-        Me.PictureBox303.Image = Global.D2RIC.My.Resources.Resources._40px_Soul_Booster
-        Me.PictureBox303.Location = New System.Drawing.Point(569, 528)
-        Me.PictureBox303.Name = "PictureBox303"
-        Me.PictureBox303.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox303.TabIndex = 479
-        Me.PictureBox303.TabStop = False
-        '
-        'PictureBox302
-        '
-        Me.PictureBox302.Image = Global.D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit
-        Me.PictureBox302.Location = New System.Drawing.Point(523, 528)
-        Me.PictureBox302.Name = "PictureBox302"
-        Me.PictureBox302.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox302.TabIndex = 478
-        Me.PictureBox302.TabStop = False
-        '
-        'PictureBox301
-        '
-        Me.PictureBox301.Image = Global.D2RIC.My.Resources.Resources._40px_Slippers_of_Agility
-        Me.PictureBox301.Location = New System.Drawing.Point(477, 528)
-        Me.PictureBox301.Name = "PictureBox301"
-        Me.PictureBox301.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox301.TabIndex = 477
-        Me.PictureBox301.TabStop = False
-        '
-        'PictureBox300
-        '
-        Me.PictureBox300.Image = Global.D2RIC.My.Resources.Resources._40px_Skull_Basher
-        Me.PictureBox300.Location = New System.Drawing.Point(431, 528)
-        Me.PictureBox300.Name = "PictureBox300"
-        Me.PictureBox300.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox300.TabIndex = 476
-        Me.PictureBox300.TabStop = False
-        '
-        'PictureBox299
-        '
-        Me.PictureBox299.Image = Global.D2RIC.My.Resources.Resources._40px_Shiva_s_Guard
-        Me.PictureBox299.Location = New System.Drawing.Point(385, 528)
-        Me.PictureBox299.Name = "PictureBox299"
-        Me.PictureBox299.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox299.TabIndex = 475
-        Me.PictureBox299.TabStop = False
-        '
-        'PictureBox298
-        '
-        Me.PictureBox298.Image = Global.D2RIC.My.Resources.Resources._40px_Shadow_Blade
-        Me.PictureBox298.Location = New System.Drawing.Point(339, 528)
-        Me.PictureBox298.Name = "PictureBox298"
-        Me.PictureBox298.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox298.TabIndex = 474
-        Me.PictureBox298.TabStop = False
-        '
-        'PictureBox297
-        '
-        Me.PictureBox297.Image = Global.D2RIC.My.Resources.Resources._40px_Sentry_Ward
-        Me.PictureBox297.Location = New System.Drawing.Point(293, 528)
-        Me.PictureBox297.Name = "PictureBox297"
-        Me.PictureBox297.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox297.TabIndex = 473
-        Me.PictureBox297.TabStop = False
-        '
-        'PictureBox296
-        '
-        Me.PictureBox296.Image = Global.D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse
-        Me.PictureBox296.Location = New System.Drawing.Point(247, 528)
-        Me.PictureBox296.Name = "PictureBox296"
-        Me.PictureBox296.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox296.TabIndex = 472
-        Me.PictureBox296.TabStop = False
-        '
-        'PictureBox295
-        '
-        Me.PictureBox295.Image = Global.D2RIC.My.Resources.Resources._40px_Satanic
-        Me.PictureBox295.Location = New System.Drawing.Point(201, 528)
-        Me.PictureBox295.Name = "PictureBox295"
-        Me.PictureBox295.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox295.TabIndex = 471
-        Me.PictureBox295.TabStop = False
-        '
-        'PictureBox294
-        '
-        Me.PictureBox294.Image = Global.D2RIC.My.Resources.Resources._40px_Sange_and_Yasha
-        Me.PictureBox294.Location = New System.Drawing.Point(845, 492)
-        Me.PictureBox294.Name = "PictureBox294"
-        Me.PictureBox294.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox294.TabIndex = 470
-        Me.PictureBox294.TabStop = False
-        '
-        'PictureBox293
-        '
-        Me.PictureBox293.Image = Global.D2RIC.My.Resources.Resources._40px_Sange
-        Me.PictureBox293.Location = New System.Drawing.Point(799, 492)
-        Me.PictureBox293.Name = "PictureBox293"
-        Me.PictureBox293.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox293.TabIndex = 469
-        Me.PictureBox293.TabStop = False
-        '
-        'PictureBox292
-        '
-        Me.PictureBox292.Image = Global.D2RIC.My.Resources.Resources._40px_Sage_s_Mask
-        Me.PictureBox292.Location = New System.Drawing.Point(753, 492)
-        Me.PictureBox292.Name = "PictureBox292"
-        Me.PictureBox292.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox292.TabIndex = 468
-        Me.PictureBox292.TabStop = False
-        '
-        'PictureBox291
-        '
-        Me.PictureBox291.Image = Global.D2RIC.My.Resources.Resources._40px_Sacred_Relic
-        Me.PictureBox291.Location = New System.Drawing.Point(707, 492)
-        Me.PictureBox291.Name = "PictureBox291"
-        Me.PictureBox291.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox291.TabIndex = 467
-        Me.PictureBox291.TabStop = False
-        '
-        'PictureBox290
-        '
-        Me.PictureBox290.Image = Global.D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi
-        Me.PictureBox290.Location = New System.Drawing.Point(661, 492)
-        Me.PictureBox290.Name = "PictureBox290"
-        Me.PictureBox290.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox290.TabIndex = 466
-        Me.PictureBox290.TabStop = False
-        '
-        'PictureBox289
-        '
-        Me.PictureBox289.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Regen
-        Me.PictureBox289.Location = New System.Drawing.Point(615, 492)
-        Me.PictureBox289.Name = "PictureBox289"
-        Me.PictureBox289.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox289.TabIndex = 465
-        Me.PictureBox289.TabStop = False
-        '
-        'PictureBox288
-        '
-        Me.PictureBox288.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Protection
-        Me.PictureBox288.Location = New System.Drawing.Point(569, 492)
-        Me.PictureBox288.Name = "PictureBox288"
-        Me.PictureBox288.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox288.TabIndex = 464
-        Me.PictureBox288.TabStop = False
-        '
-        'PictureBox287
-        '
-        Me.PictureBox287.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Health
-        Me.PictureBox287.Location = New System.Drawing.Point(523, 492)
-        Me.PictureBox287.Name = "PictureBox287"
-        Me.PictureBox287.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox287.TabIndex = 463
-        Me.PictureBox287.TabStop = False
-        '
-        'PictureBox286
-        '
-        Me.PictureBox286.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Basilius
-        Me.PictureBox286.Location = New System.Drawing.Point(477, 492)
-        Me.PictureBox286.Name = "PictureBox286"
-        Me.PictureBox286.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox286.TabIndex = 462
-        Me.PictureBox286.TabStop = False
-        '
-        'PictureBox285
-        '
-        Me.PictureBox285.Image = Global.D2RIC.My.Resources.Resources._40px_Refresher_Orb
-        Me.PictureBox285.Location = New System.Drawing.Point(431, 492)
-        Me.PictureBox285.Name = "PictureBox285"
-        Me.PictureBox285.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox285.TabIndex = 461
-        Me.PictureBox285.TabStop = False
-        '
-        'PictureBox284
-        '
-        Me.PictureBox284.Image = Global.D2RIC.My.Resources.Resources._40px_Reaver
-        Me.PictureBox284.Location = New System.Drawing.Point(385, 492)
-        Me.PictureBox284.Name = "PictureBox284"
-        Me.PictureBox284.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox284.TabIndex = 460
-        Me.PictureBox284.TabStop = False
-        '
-        'PictureBox283
-        '
-        Me.PictureBox283.Image = Global.D2RIC.My.Resources.Resources._40px_Radiance
-        Me.PictureBox283.Location = New System.Drawing.Point(339, 492)
-        Me.PictureBox283.Name = "PictureBox283"
-        Me.PictureBox283.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox283.TabIndex = 459
-        Me.PictureBox283.TabStop = False
-        '
-        'PictureBox282
-        '
-        Me.PictureBox282.Image = Global.D2RIC.My.Resources.Resources._40px_Quelling_Blade
-        Me.PictureBox282.Location = New System.Drawing.Point(293, 492)
-        Me.PictureBox282.Name = "PictureBox282"
-        Me.PictureBox282.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox282.TabIndex = 458
-        Me.PictureBox282.TabStop = False
-        '
-        'PictureBox281
-        '
-        Me.PictureBox281.Image = Global.D2RIC.My.Resources.Resources._40px_Quarterstaff
-        Me.PictureBox281.Location = New System.Drawing.Point(247, 492)
-        Me.PictureBox281.Name = "PictureBox281"
-        Me.PictureBox281.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox281.TabIndex = 457
-        Me.PictureBox281.TabStop = False
-        '
-        'PictureBox265
-        '
-        Me.PictureBox265.Image = Global.D2RIC.My.Resources.Resources._40px_Necronomicon
-        Me.PictureBox265.Location = New System.Drawing.Point(201, 456)
-        Me.PictureBox265.Name = "PictureBox265"
-        Me.PictureBox265.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox265.TabIndex = 456
-        Me.PictureBox265.TabStop = False
-        '
-        'PictureBox280
-        '
-        Me.PictureBox280.Image = Global.D2RIC.My.Resources.Resources._40px_Power_Treads
-        Me.PictureBox280.Location = New System.Drawing.Point(201, 492)
-        Me.PictureBox280.Name = "PictureBox280"
-        Me.PictureBox280.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox280.TabIndex = 455
-        Me.PictureBox280.TabStop = False
-        '
-        'PictureBox279
-        '
-        Me.PictureBox279.Image = Global.D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield
-        Me.PictureBox279.Location = New System.Drawing.Point(845, 456)
-        Me.PictureBox279.Name = "PictureBox279"
-        Me.PictureBox279.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox279.TabIndex = 454
-        Me.PictureBox279.TabStop = False
-        '
-        'PictureBox278
-        '
-        Me.PictureBox278.Image = Global.D2RIC.My.Resources.Resources._40px_Point_Booster
-        Me.PictureBox278.Location = New System.Drawing.Point(799, 456)
-        Me.PictureBox278.Name = "PictureBox278"
-        Me.PictureBox278.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox278.TabIndex = 453
-        Me.PictureBox278.TabStop = False
-        '
-        'PictureBox277
-        '
-        Me.PictureBox277.Image = Global.D2RIC.My.Resources.Resources._40px_Platemail
-        Me.PictureBox277.Location = New System.Drawing.Point(753, 456)
-        Me.PictureBox277.Name = "PictureBox277"
-        Me.PictureBox277.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox277.TabIndex = 452
-        Me.PictureBox277.TabStop = False
-        '
-        'PictureBox276
-        '
-        Me.PictureBox276.Image = Global.D2RIC.My.Resources.Resources._40px_Pipe_of_Insight
-        Me.PictureBox276.Location = New System.Drawing.Point(707, 456)
-        Me.PictureBox276.Name = "PictureBox276"
-        Me.PictureBox276.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox276.TabIndex = 451
-        Me.PictureBox276.TabStop = False
-        '
-        'PictureBox275
-        '
-        Me.PictureBox275.Image = Global.D2RIC.My.Resources.Resources._40px_Phase_Boots
-        Me.PictureBox275.Location = New System.Drawing.Point(661, 456)
-        Me.PictureBox275.Name = "PictureBox275"
-        Me.PictureBox275.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox275.TabIndex = 450
-        Me.PictureBox275.TabStop = False
-        '
-        'PictureBox274
-        '
-        Me.PictureBox274.Image = Global.D2RIC.My.Resources.Resources._40px_Perseverance
-        Me.PictureBox274.Location = New System.Drawing.Point(615, 456)
-        Me.PictureBox274.Name = "PictureBox274"
-        Me.PictureBox274.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox274.TabIndex = 449
-        Me.PictureBox274.TabStop = False
-        '
-        'PictureBox273
-        '
-        Me.PictureBox273.Image = Global.D2RIC.My.Resources.Resources._40px_Orchid_Malevolence
-        Me.PictureBox273.Location = New System.Drawing.Point(569, 456)
-        Me.PictureBox273.Name = "PictureBox273"
-        Me.PictureBox273.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox273.TabIndex = 448
-        Me.PictureBox273.TabStop = False
-        '
-        'PictureBox272
-        '
-        Me.PictureBox272.Image = Global.D2RIC.My.Resources.Resources._40px_Orb_of_Venom
-        Me.PictureBox272.Location = New System.Drawing.Point(523, 456)
-        Me.PictureBox272.Name = "PictureBox272"
-        Me.PictureBox272.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox272.TabIndex = 447
-        Me.PictureBox272.TabStop = False
-        '
-        'PictureBox271
-        '
-        Me.PictureBox271.Image = Global.D2RIC.My.Resources.Resources._40px_Ogre_Club
-        Me.PictureBox271.Location = New System.Drawing.Point(477, 456)
-        Me.PictureBox271.Name = "PictureBox271"
-        Me.PictureBox271.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox271.TabIndex = 446
-        Me.PictureBox271.TabStop = False
-        '
-        'PictureBox270
-        '
-        Me.PictureBox270.Image = Global.D2RIC.My.Resources.Resources._40px_Observer_Ward
-        Me.PictureBox270.Location = New System.Drawing.Point(431, 456)
-        Me.PictureBox270.Name = "PictureBox270"
-        Me.PictureBox270.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox270.TabIndex = 445
-        Me.PictureBox270.TabStop = False
-        '
-        'PictureBox269
-        '
-        Me.PictureBox269.Image = Global.D2RIC.My.Resources.Resources._40px_Oblivion_Staff
-        Me.PictureBox269.Location = New System.Drawing.Point(385, 456)
-        Me.PictureBox269.Name = "PictureBox269"
-        Me.PictureBox269.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox269.TabIndex = 444
-        Me.PictureBox269.TabStop = False
-        '
-        'PictureBox268
-        '
-        Me.PictureBox268.Image = Global.D2RIC.My.Resources.Resources._40px_Null_Talisman
-        Me.PictureBox268.Location = New System.Drawing.Point(339, 456)
-        Me.PictureBox268.Name = "PictureBox268"
-        Me.PictureBox268.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox268.TabIndex = 443
-        Me.PictureBox268.TabStop = False
-        '
-        'PictureBox267
-        '
-        Me.PictureBox267.Image = Global.D2RIC.My.Resources.Resources._40px_Necronomicon3
-        Me.PictureBox267.Location = New System.Drawing.Point(293, 456)
-        Me.PictureBox267.Name = "PictureBox267"
-        Me.PictureBox267.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox267.TabIndex = 442
-        Me.PictureBox267.TabStop = False
-        '
-        'PictureBox266
-        '
-        Me.PictureBox266.Image = Global.D2RIC.My.Resources.Resources._40px_Necronomicon2
-        Me.PictureBox266.Location = New System.Drawing.Point(247, 456)
-        Me.PictureBox266.Name = "PictureBox266"
-        Me.PictureBox266.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox266.TabIndex = 441
-        Me.PictureBox266.TabStop = False
-        '
-        'PictureBox264
-        '
-        Me.PictureBox264.Image = Global.D2RIC.My.Resources.Resources._40px_Mystic_Staff
-        Me.PictureBox264.Location = New System.Drawing.Point(845, 420)
-        Me.PictureBox264.Name = "PictureBox264"
-        Me.PictureBox264.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox264.TabIndex = 440
-        Me.PictureBox264.TabStop = False
-        '
-        'PictureBox263
-        '
-        Me.PictureBox263.Image = Global.D2RIC.My.Resources.Resources._40px_Morbid_Mask
-        Me.PictureBox263.Location = New System.Drawing.Point(799, 420)
-        Me.PictureBox263.Name = "PictureBox263"
-        Me.PictureBox263.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox263.TabIndex = 439
-        Me.PictureBox263.TabStop = False
-        '
-        'PictureBox262
-        '
-        Me.PictureBox262.Image = Global.D2RIC.My.Resources.Resources._40px_Monkey_King_Bar
-        Me.PictureBox262.Location = New System.Drawing.Point(753, 420)
-        Me.PictureBox262.Name = "PictureBox262"
-        Me.PictureBox262.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox262.TabIndex = 438
-        Me.PictureBox262.TabStop = False
-        '
-        'PictureBox261
-        '
-        Me.PictureBox261.Image = Global.D2RIC.My.Resources.Resources._40px_Mjollnir
-        Me.PictureBox261.Location = New System.Drawing.Point(707, 420)
-        Me.PictureBox261.Name = "PictureBox261"
-        Me.PictureBox261.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox261.TabIndex = 437
-        Me.PictureBox261.TabStop = False
-        '
-        'PictureBox260
-        '
-        Me.PictureBox260.Image = Global.D2RIC.My.Resources.Resources._40px_Mithril_Hammer
-        Me.PictureBox260.Location = New System.Drawing.Point(661, 420)
-        Me.PictureBox260.Name = "PictureBox260"
-        Me.PictureBox260.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox260.TabIndex = 436
-        Me.PictureBox260.TabStop = False
-        '
-        'PictureBox259
-        '
-        Me.PictureBox259.Image = Global.D2RIC.My.Resources.Resources._40px_Mekansm
-        Me.PictureBox259.Location = New System.Drawing.Point(615, 420)
-        Me.PictureBox259.Name = "PictureBox259"
-        Me.PictureBox259.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox259.TabIndex = 435
-        Me.PictureBox259.TabStop = False
-        '
-        'PictureBox258
-        '
-        Me.PictureBox258.Image = Global.D2RIC.My.Resources.Resources._40px_Medallion_of_Courage
-        Me.PictureBox258.Location = New System.Drawing.Point(569, 420)
-        Me.PictureBox258.Name = "PictureBox258"
-        Me.PictureBox258.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox258.TabIndex = 434
-        Me.PictureBox258.TabStop = False
-        '
-        'PictureBox257
-        '
-        Me.PictureBox257.Image = Global.D2RIC.My.Resources.Resources._40px_Mask_of_Madness
-        Me.PictureBox257.Location = New System.Drawing.Point(523, 420)
-        Me.PictureBox257.Name = "PictureBox257"
-        Me.PictureBox257.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox257.TabIndex = 433
-        Me.PictureBox257.TabStop = False
-        '
-        'PictureBox256
-        '
-        Me.PictureBox256.Image = Global.D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence
-        Me.PictureBox256.Location = New System.Drawing.Point(477, 420)
-        Me.PictureBox256.Name = "PictureBox256"
-        Me.PictureBox256.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox256.TabIndex = 432
-        Me.PictureBox256.TabStop = False
-        '
-        'PictureBox255
-        '
-        Me.PictureBox255.Image = Global.D2RIC.My.Resources.Resources._40px_Manta_Style
-        Me.PictureBox255.Location = New System.Drawing.Point(431, 420)
-        Me.PictureBox255.Name = "PictureBox255"
-        Me.PictureBox255.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox255.TabIndex = 431
-        Me.PictureBox255.TabStop = False
-        '
-        'PictureBox254
-        '
-        Me.PictureBox254.Image = Global.D2RIC.My.Resources.Resources._40px_Magic_Wand
-        Me.PictureBox254.Location = New System.Drawing.Point(385, 420)
-        Me.PictureBox254.Name = "PictureBox254"
-        Me.PictureBox254.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox254.TabIndex = 430
-        Me.PictureBox254.TabStop = False
-        '
-        'PictureBox253
-        '
-        Me.PictureBox253.Image = Global.D2RIC.My.Resources.Resources._40px_Magic_Stick
-        Me.PictureBox253.Location = New System.Drawing.Point(339, 420)
-        Me.PictureBox253.Name = "PictureBox253"
-        Me.PictureBox253.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox253.TabIndex = 429
-        Me.PictureBox253.TabStop = False
-        '
-        'PictureBox252
-        '
-        Me.PictureBox252.Image = Global.D2RIC.My.Resources.Resources._40px_Maelstrom
-        Me.PictureBox252.Location = New System.Drawing.Point(293, 420)
-        Me.PictureBox252.Name = "PictureBox252"
-        Me.PictureBox252.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox252.TabIndex = 428
-        Me.PictureBox252.TabStop = False
-        '
-        'PictureBox251
-        '
-        Me.PictureBox251.Image = Global.D2RIC.My.Resources.Resources._40px_Linken_s_Sphere
-        Me.PictureBox251.Location = New System.Drawing.Point(247, 420)
-        Me.PictureBox251.Name = "PictureBox251"
-        Me.PictureBox251.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox251.TabIndex = 427
-        Me.PictureBox251.TabStop = False
-        '
-        'PictureBox250
-        '
-        Me.PictureBox250.Image = Global.D2RIC.My.Resources.Resources._40px_Javelin
-        Me.PictureBox250.Location = New System.Drawing.Point(201, 420)
-        Me.PictureBox250.Name = "PictureBox250"
-        Me.PictureBox250.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox250.TabIndex = 426
-        Me.PictureBox250.TabStop = False
-        '
-        'PictureBox249
-        '
-        Me.PictureBox249.Image = Global.D2RIC.My.Resources.Resources._40px_Iron_Branch
-        Me.PictureBox249.Location = New System.Drawing.Point(845, 384)
-        Me.PictureBox249.Name = "PictureBox249"
-        Me.PictureBox249.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox249.TabIndex = 425
-        Me.PictureBox249.TabStop = False
-        '
-        'PictureBox248
-        '
-        Me.PictureBox248.Image = Global.D2RIC.My.Resources.Resources._40px_Hyperstone
-        Me.PictureBox248.Location = New System.Drawing.Point(799, 384)
-        Me.PictureBox248.Name = "PictureBox248"
-        Me.PictureBox248.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox248.TabIndex = 424
-        Me.PictureBox248.TabStop = False
-        '
-        'PictureBox247
-        '
-        Me.PictureBox247.Image = Global.D2RIC.My.Resources.Resources._40px_Hood_of_Defiance
-        Me.PictureBox247.Location = New System.Drawing.Point(753, 384)
-        Me.PictureBox247.Name = "PictureBox247"
-        Me.PictureBox247.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox247.TabIndex = 423
-        Me.PictureBox247.TabStop = False
-        '
-        'PictureBox246
-        '
-        Me.PictureBox246.Image = Global.D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator
-        Me.PictureBox246.Location = New System.Drawing.Point(707, 384)
-        Me.PictureBox246.Name = "PictureBox246"
-        Me.PictureBox246.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox246.TabIndex = 422
-        Me.PictureBox246.TabStop = False
-        '
-        'PictureBox245
-        '
-        Me.PictureBox245.Image = Global.D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will
-        Me.PictureBox245.Location = New System.Drawing.Point(661, 384)
-        Me.PictureBox245.Name = "PictureBox245"
-        Me.PictureBox245.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox245.TabIndex = 421
-        Me.PictureBox245.TabStop = False
-        '
-        'PictureBox244
-        '
-        Me.PictureBox244.Image = Global.D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque
-        Me.PictureBox244.Location = New System.Drawing.Point(615, 384)
-        Me.PictureBox244.Name = "PictureBox244"
-        Me.PictureBox244.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox244.TabIndex = 420
-        Me.PictureBox244.TabStop = False
-        '
-        'PictureBox243
-        '
-        Me.PictureBox243.Image = Global.D2RIC.My.Resources.Resources._40px_Healing_Salve
-        Me.PictureBox243.Location = New System.Drawing.Point(569, 384)
-        Me.PictureBox243.Name = "PictureBox243"
-        Me.PictureBox243.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox243.TabIndex = 419
-        Me.PictureBox243.TabStop = False
-        '
-        'PictureBox242
-        '
-        Me.PictureBox242.Image = Global.D2RIC.My.Resources.Resources._40px_Headdress
-        Me.PictureBox242.Location = New System.Drawing.Point(523, 384)
-        Me.PictureBox242.Name = "PictureBox242"
-        Me.PictureBox242.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox242.TabIndex = 418
-        Me.PictureBox242.TabStop = False
-        '
-        'PictureBox241
-        '
-        Me.PictureBox241.Image = Global.D2RIC.My.Resources.Resources._40px_Hand_of_Midas
-        Me.PictureBox241.Location = New System.Drawing.Point(477, 384)
-        Me.PictureBox241.Name = "PictureBox241"
-        Me.PictureBox241.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox241.TabIndex = 417
-        Me.PictureBox241.TabStop = False
-        '
-        'PictureBox240
-        '
-        Me.PictureBox240.Image = Global.D2RIC.My.Resources.Resources._40px_Gloves_of_Haste
-        Me.PictureBox240.Location = New System.Drawing.Point(431, 384)
-        Me.PictureBox240.Name = "PictureBox240"
-        Me.PictureBox240.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox240.TabIndex = 416
-        Me.PictureBox240.TabStop = False
-        '
-        'PictureBox239
-        '
-        Me.PictureBox239.Image = Global.D2RIC.My.Resources.Resources._40px_Ghost_Scepter
-        Me.PictureBox239.Location = New System.Drawing.Point(385, 384)
-        Me.PictureBox239.Name = "PictureBox239"
-        Me.PictureBox239.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox239.TabIndex = 415
-        Me.PictureBox239.TabStop = False
-        '
-        'PictureBox238
-        '
-        Me.PictureBox238.Image = Global.D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight
-        Me.PictureBox238.Location = New System.Drawing.Point(339, 384)
-        Me.PictureBox238.Name = "PictureBox238"
-        Me.PictureBox238.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox238.TabIndex = 414
-        Me.PictureBox238.TabStop = False
-        '
-        'PictureBox237
-        '
-        Me.PictureBox237.Image = Global.D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength
-        Me.PictureBox237.Location = New System.Drawing.Point(293, 384)
-        Me.PictureBox237.Name = "PictureBox237"
-        Me.PictureBox237.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox237.TabIndex = 413
-        Me.PictureBox237.TabStop = False
-        '
-        'PictureBox236
-        '
-        Me.PictureBox236.Image = Global.D2RIC.My.Resources.Resources._40px_Force_Staff
-        Me.PictureBox236.Location = New System.Drawing.Point(247, 384)
-        Me.PictureBox236.Name = "PictureBox236"
-        Me.PictureBox236.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox236.TabIndex = 412
-        Me.PictureBox236.TabStop = False
-        '
-        'PictureBox235
-        '
-        Me.PictureBox235.Image = Global.D2RIC.My.Resources.Resources._40px_Flying_Courier
-        Me.PictureBox235.Location = New System.Drawing.Point(201, 384)
-        Me.PictureBox235.Name = "PictureBox235"
-        Me.PictureBox235.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox235.TabIndex = 411
-        Me.PictureBox235.TabStop = False
-        '
-        'PictureBox234
-        '
-        Me.PictureBox234.Image = Global.D2RIC.My.Resources.Resources._40px_Eye_of_Skadi
-        Me.PictureBox234.Location = New System.Drawing.Point(845, 348)
-        Me.PictureBox234.Name = "PictureBox234"
-        Me.PictureBox234.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox234.TabIndex = 410
-        Me.PictureBox234.TabStop = False
-        '
-        'PictureBox233
-        '
-        Me.PictureBox233.Image = Global.D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity
-        Me.PictureBox233.Location = New System.Drawing.Point(799, 348)
-        Me.PictureBox233.Name = "PictureBox233"
-        Me.PictureBox233.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox233.TabIndex = 409
-        Me.PictureBox233.TabStop = False
-        '
-        'PictureBox232
-        '
-        Me.PictureBox232.Image = Global.D2RIC.My.Resources.Resources._40px_Ethereal_Blade
-        Me.PictureBox232.Location = New System.Drawing.Point(753, 348)
-        Me.PictureBox232.Name = "PictureBox232"
-        Me.PictureBox232.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox232.TabIndex = 408
-        Me.PictureBox232.TabStop = False
-        '
-        'PictureBox231
-        '
-        Me.PictureBox231.Image = Global.D2RIC.My.Resources.Resources._40px_Energy_Booster
-        Me.PictureBox231.Location = New System.Drawing.Point(707, 348)
-        Me.PictureBox231.Name = "PictureBox231"
-        Me.PictureBox231.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox231.TabIndex = 407
-        Me.PictureBox231.TabStop = False
-        '
-        'PictureBox230
-        '
-        Me.PictureBox230.Image = Global.D2RIC.My.Resources.Resources._40px_Eaglesong
-        Me.PictureBox230.Location = New System.Drawing.Point(661, 348)
-        Me.PictureBox230.Name = "PictureBox230"
-        Me.PictureBox230.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox230.TabIndex = 406
-        Me.PictureBox230.TabStop = False
-        '
-        'PictureBox229
-        '
-        Me.PictureBox229.Image = Global.D2RIC.My.Resources.Resources._40px_Dust_of_Appearance
-        Me.PictureBox229.Location = New System.Drawing.Point(615, 348)
-        Me.PictureBox229.Name = "PictureBox229"
-        Me.PictureBox229.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox229.TabIndex = 405
-        Me.PictureBox229.TabStop = False
-        '
-        'PictureBox228
-        '
-        Me.PictureBox228.Image = Global.D2RIC.My.Resources.Resources._40px_Drum_of_Endurance
-        Me.PictureBox228.Location = New System.Drawing.Point(569, 348)
-        Me.PictureBox228.Name = "PictureBox228"
-        Me.PictureBox228.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox228.TabIndex = 404
-        Me.PictureBox228.TabStop = False
-        '
-        'PictureBox227
-        '
-        Me.PictureBox227.Image = Global.D2RIC.My.Resources.Resources._40px_Divine_Rapier
-        Me.PictureBox227.Location = New System.Drawing.Point(523, 348)
-        Me.PictureBox227.Name = "PictureBox227"
-        Me.PictureBox227.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox227.TabIndex = 403
-        Me.PictureBox227.TabStop = False
-        '
-        'PictureBox226
-        '
-        Me.PictureBox226.Image = Global.D2RIC.My.Resources.Resources._40px_Diffusal_Blade2
-        Me.PictureBox226.Location = New System.Drawing.Point(477, 348)
-        Me.PictureBox226.Name = "PictureBox226"
-        Me.PictureBox226.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox226.TabIndex = 402
-        Me.PictureBox226.TabStop = False
-        '
-        'PictureBox225
-        '
-        Me.PictureBox225.Image = Global.D2RIC.My.Resources.Resources._40px_Diffusal_Blade
-        Me.PictureBox225.Location = New System.Drawing.Point(431, 348)
-        Me.PictureBox225.Name = "PictureBox225"
-        Me.PictureBox225.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox225.TabIndex = 401
-        Me.PictureBox225.TabStop = False
-        '
-        'PictureBox224
-        '
-        Me.PictureBox224.Image = Global.D2RIC.My.Resources.Resources._40px_Desolator
-        Me.PictureBox224.Location = New System.Drawing.Point(385, 348)
-        Me.PictureBox224.Name = "PictureBox224"
-        Me.PictureBox224.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox224.TabIndex = 400
-        Me.PictureBox224.TabStop = False
-        '
-        'PictureBox223
-        '
-        Me.PictureBox223.Image = Global.D2RIC.My.Resources.Resources._40px_Demon_Edge
-        Me.PictureBox223.Location = New System.Drawing.Point(339, 348)
-        Me.PictureBox223.Name = "PictureBox223"
-        Me.PictureBox223.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox223.TabIndex = 399
-        Me.PictureBox223.TabStop = False
-        '
-        'PictureBox222
-        '
-        Me.PictureBox222.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon5
-        Me.PictureBox222.Location = New System.Drawing.Point(293, 348)
-        Me.PictureBox222.Name = "PictureBox222"
-        Me.PictureBox222.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox222.TabIndex = 398
-        Me.PictureBox222.TabStop = False
-        '
-        'PictureBox221
-        '
-        Me.PictureBox221.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon4
-        Me.PictureBox221.Location = New System.Drawing.Point(247, 348)
-        Me.PictureBox221.Name = "PictureBox221"
-        Me.PictureBox221.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox221.TabIndex = 397
-        Me.PictureBox221.TabStop = False
-        '
-        'PictureBox220
-        '
-        Me.PictureBox220.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon3
-        Me.PictureBox220.Location = New System.Drawing.Point(201, 348)
-        Me.PictureBox220.Name = "PictureBox220"
-        Me.PictureBox220.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox220.TabIndex = 396
-        Me.PictureBox220.TabStop = False
-        '
-        'PictureBox219
-        '
-        Me.PictureBox219.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon2
-        Me.PictureBox219.Location = New System.Drawing.Point(845, 312)
-        Me.PictureBox219.Name = "PictureBox219"
-        Me.PictureBox219.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox219.TabIndex = 395
-        Me.PictureBox219.TabStop = False
-        '
-        'PictureBox218
-        '
-        Me.PictureBox218.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon
-        Me.PictureBox218.Location = New System.Drawing.Point(799, 312)
-        Me.PictureBox218.Name = "PictureBox218"
-        Me.PictureBox218.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox218.TabIndex = 394
-        Me.PictureBox218.TabStop = False
-        '
-        'PictureBox217
-        '
-        Me.PictureBox217.Image = Global.D2RIC.My.Resources.Resources._40px_Daedalus
-        Me.PictureBox217.Location = New System.Drawing.Point(753, 312)
-        Me.PictureBox217.Name = "PictureBox217"
-        Me.PictureBox217.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox217.TabIndex = 393
-        Me.PictureBox217.TabStop = False
-        '
-        'PictureBox216
-        '
-        Me.PictureBox216.Image = Global.D2RIC.My.Resources.Resources._40px_Crystalys
-        Me.PictureBox216.Location = New System.Drawing.Point(707, 312)
-        Me.PictureBox216.Name = "PictureBox216"
-        Me.PictureBox216.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox216.TabIndex = 392
-        Me.PictureBox216.TabStop = False
-        '
-        'PictureBox215
-        '
-        Me.PictureBox215.Image = Global.D2RIC.My.Resources.Resources._40px_Cloak
-        Me.PictureBox215.Location = New System.Drawing.Point(661, 312)
-        Me.PictureBox215.Name = "PictureBox215"
-        Me.PictureBox215.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox215.TabIndex = 391
-        Me.PictureBox215.TabStop = False
-        '
-        'PictureBox214
-        '
-        Me.PictureBox214.Image = Global.D2RIC.My.Resources.Resources._40px_Claymore
-        Me.PictureBox214.Location = New System.Drawing.Point(615, 312)
-        Me.PictureBox214.Name = "PictureBox214"
-        Me.PictureBox214.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox214.TabIndex = 390
-        Me.PictureBox214.TabStop = False
-        '
-        'PictureBox213
-        '
-        Me.PictureBox213.Image = Global.D2RIC.My.Resources.Resources._40px_Clarity
-        Me.PictureBox213.Location = New System.Drawing.Point(569, 312)
-        Me.PictureBox213.Name = "PictureBox213"
-        Me.PictureBox213.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox213.TabIndex = 389
-        Me.PictureBox213.TabStop = False
-        '
-        'PictureBox212
-        '
-        Me.PictureBox212.Image = Global.D2RIC.My.Resources.Resources._40px_Circlet
-        Me.PictureBox212.Location = New System.Drawing.Point(523, 312)
-        Me.PictureBox212.Name = "PictureBox212"
-        Me.PictureBox212.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox212.TabIndex = 388
-        Me.PictureBox212.TabStop = False
-        '
-        'PictureBox211
-        '
-        Me.PictureBox211.Image = Global.D2RIC.My.Resources.Resources._40px_Chainmail
-        Me.PictureBox211.Location = New System.Drawing.Point(477, 312)
-        Me.PictureBox211.Name = "PictureBox211"
-        Me.PictureBox211.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox211.TabIndex = 387
-        Me.PictureBox211.TabStop = False
-        '
-        'PictureBox210
-        '
-        Me.PictureBox210.Image = Global.D2RIC.My.Resources.Resources._40px_Butterfly
-        Me.PictureBox210.Location = New System.Drawing.Point(431, 312)
-        Me.PictureBox210.Name = "PictureBox210"
-        Me.PictureBox210.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox210.TabIndex = 386
-        Me.PictureBox210.TabStop = False
-        '
-        'PictureBox209
-        '
-        Me.PictureBox209.Image = Global.D2RIC.My.Resources.Resources._40px_Buckler
-        Me.PictureBox209.Location = New System.Drawing.Point(385, 312)
-        Me.PictureBox209.Name = "PictureBox209"
-        Me.PictureBox209.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox209.TabIndex = 385
-        Me.PictureBox209.TabStop = False
-        '
-        'PictureBox208
-        '
-        Me.PictureBox208.Image = Global.D2RIC.My.Resources.Resources._40px_Broadsword
-        Me.PictureBox208.Location = New System.Drawing.Point(339, 312)
-        Me.PictureBox208.Name = "PictureBox208"
-        Me.PictureBox208.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox208.TabIndex = 384
-        Me.PictureBox208.TabStop = False
-        '
-        'PictureBox207
-        '
-        Me.PictureBox207.Image = Global.D2RIC.My.Resources.Resources._40px_Bracer
-        Me.PictureBox207.Location = New System.Drawing.Point(293, 312)
-        Me.PictureBox207.Name = "PictureBox207"
-        Me.PictureBox207.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox207.TabIndex = 383
-        Me.PictureBox207.TabStop = False
-        '
-        'PictureBox206
-        '
-        Me.PictureBox206.Image = Global.D2RIC.My.Resources.Resources._40px_Bottle
-        Me.PictureBox206.Location = New System.Drawing.Point(247, 312)
-        Me.PictureBox206.Name = "PictureBox206"
-        Me.PictureBox206.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox206.TabIndex = 382
-        Me.PictureBox206.TabStop = False
-        '
-        'PictureBox205
-        '
-        Me.PictureBox205.Image = Global.D2RIC.My.Resources.Resources._40px_Boots_of_Travel
-        Me.PictureBox205.Location = New System.Drawing.Point(201, 312)
-        Me.PictureBox205.Name = "PictureBox205"
-        Me.PictureBox205.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox205.TabIndex = 381
-        Me.PictureBox205.TabStop = False
-        '
-        'PictureBox204
-        '
-        Me.PictureBox204.Image = Global.D2RIC.My.Resources.Resources._40px_Boots_of_Speed
-        Me.PictureBox204.Location = New System.Drawing.Point(845, 276)
-        Me.PictureBox204.Name = "PictureBox204"
-        Me.PictureBox204.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox204.TabIndex = 380
-        Me.PictureBox204.TabStop = False
-        '
-        'PictureBox203
-        '
-        Me.PictureBox203.Image = Global.D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin
-        Me.PictureBox203.Location = New System.Drawing.Point(799, 276)
-        Me.PictureBox203.Name = "PictureBox203"
-        Me.PictureBox203.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox203.TabIndex = 379
-        Me.PictureBox203.TabStop = False
-        '
-        'PictureBox202
-        '
-        Me.PictureBox202.Image = Global.D2RIC.My.Resources.Resources._40px_Bloodstone
-        Me.PictureBox202.Location = New System.Drawing.Point(753, 276)
-        Me.PictureBox202.Name = "PictureBox202"
-        Me.PictureBox202.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox202.TabIndex = 378
-        Me.PictureBox202.TabStop = False
-        '
-        'PictureBox201
-        '
-        Me.PictureBox201.Image = Global.D2RIC.My.Resources.Resources._40px_Blink_Dagger
-        Me.PictureBox201.Location = New System.Drawing.Point(707, 276)
-        Me.PictureBox201.Name = "PictureBox201"
-        Me.PictureBox201.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox201.TabIndex = 377
-        Me.PictureBox201.TabStop = False
-        '
-        'PictureBox200
-        '
-        Me.PictureBox200.Image = Global.D2RIC.My.Resources.Resources._40px_Blades_of_Attack
-        Me.PictureBox200.Location = New System.Drawing.Point(661, 276)
-        Me.PictureBox200.Name = "PictureBox200"
-        Me.PictureBox200.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox200.TabIndex = 376
-        Me.PictureBox200.TabStop = False
-        '
-        'PictureBox199
-        '
-        Me.PictureBox199.Image = Global.D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity
-        Me.PictureBox199.Location = New System.Drawing.Point(615, 276)
-        Me.PictureBox199.Name = "PictureBox199"
-        Me.PictureBox199.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox199.TabIndex = 375
-        Me.PictureBox199.TabStop = False
-        '
-        'PictureBox198
-        '
-        Me.PictureBox198.Image = Global.D2RIC.My.Resources.Resources._40px_Blade_Mail
-        Me.PictureBox198.Location = New System.Drawing.Point(569, 276)
-        Me.PictureBox198.Name = "PictureBox198"
-        Me.PictureBox198.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox198.TabIndex = 374
-        Me.PictureBox198.TabStop = False
-        '
-        'PictureBox197
-        '
-        Me.PictureBox197.Image = Global.D2RIC.My.Resources.Resources._40px_Black_King_Bar
-        Me.PictureBox197.Location = New System.Drawing.Point(523, 276)
-        Me.PictureBox197.Name = "PictureBox197"
-        Me.PictureBox197.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox197.TabIndex = 373
-        Me.PictureBox197.TabStop = False
-        '
-        'PictureBox196
-        '
-        Me.PictureBox196.Image = Global.D2RIC.My.Resources.Resources._40px_Belt_of_Strength
-        Me.PictureBox196.Location = New System.Drawing.Point(477, 276)
-        Me.PictureBox196.Name = "PictureBox196"
-        Me.PictureBox196.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox196.TabIndex = 372
-        Me.PictureBox196.TabStop = False
-        '
-        'PictureBox195
-        '
-        Me.PictureBox195.Image = Global.D2RIC.My.Resources.Resources._40px_Battle_Fury
-        Me.PictureBox195.Location = New System.Drawing.Point(431, 276)
-        Me.PictureBox195.Name = "PictureBox195"
-        Me.PictureBox195.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox195.TabIndex = 371
-        Me.PictureBox195.TabStop = False
-        '
-        'PictureBox194
-        '
-        Me.PictureBox194.Image = Global.D2RIC.My.Resources.Resources._40px_Assault_Cuirass
-        Me.PictureBox194.Location = New System.Drawing.Point(385, 276)
-        Me.PictureBox194.Name = "PictureBox194"
-        Me.PictureBox194.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox194.TabIndex = 370
-        Me.PictureBox194.TabStop = False
-        '
-        'PictureBox193
-        '
-        Me.PictureBox193.Image = Global.D2RIC.My.Resources.Resources._40px_Armlet
-        Me.PictureBox193.Location = New System.Drawing.Point(339, 276)
-        Me.PictureBox193.Name = "PictureBox193"
-        Me.PictureBox193.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox193.TabIndex = 369
-        Me.PictureBox193.TabStop = False
-        '
-        'PictureBox192
-        '
-        Me.PictureBox192.Image = Global.D2RIC.My.Resources.Resources._40px_Arcane_Boots
-        Me.PictureBox192.Location = New System.Drawing.Point(293, 276)
-        Me.PictureBox192.Name = "PictureBox192"
-        Me.PictureBox192.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox192.TabIndex = 368
-        Me.PictureBox192.TabStop = False
-        '
-        'PictureBox191
-        '
-        Me.PictureBox191.Image = Global.D2RIC.My.Resources.Resources._40px_Animal_Courier
-        Me.PictureBox191.Location = New System.Drawing.Point(247, 276)
-        Me.PictureBox191.Name = "PictureBox191"
-        Me.PictureBox191.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox191.TabIndex = 367
-        Me.PictureBox191.TabStop = False
-        '
-        'PictureBox190
-        '
-        Me.PictureBox190.Image = Global.D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter
-        Me.PictureBox190.Location = New System.Drawing.Point(201, 276)
-        Me.PictureBox190.Name = "PictureBox190"
-        Me.PictureBox190.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox190.TabIndex = 366
-        Me.PictureBox190.TabStop = False
-        '
-        'PictureBox189
-        '
-        Me.PictureBox189.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox189.Location = New System.Drawing.Point(845, 198)
-        Me.PictureBox189.Name = "PictureBox189"
-        Me.PictureBox189.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox189.TabIndex = 361
-        Me.PictureBox189.TabStop = False
-        '
-        'PictureBox188
-        '
-        Me.PictureBox188.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox188.Location = New System.Drawing.Point(799, 198)
-        Me.PictureBox188.Name = "PictureBox188"
-        Me.PictureBox188.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox188.TabIndex = 360
-        Me.PictureBox188.TabStop = False
-        '
-        'PictureBox187
-        '
-        Me.PictureBox187.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox187.Location = New System.Drawing.Point(753, 198)
-        Me.PictureBox187.Name = "PictureBox187"
-        Me.PictureBox187.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox187.TabIndex = 359
-        Me.PictureBox187.TabStop = False
-        '
-        'PictureBox186
-        '
-        Me.PictureBox186.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox186.Location = New System.Drawing.Point(845, 162)
-        Me.PictureBox186.Name = "PictureBox186"
-        Me.PictureBox186.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox186.TabIndex = 358
-        Me.PictureBox186.TabStop = False
-        '
-        'PictureBox185
-        '
-        Me.PictureBox185.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox185.Location = New System.Drawing.Point(799, 162)
-        Me.PictureBox185.Name = "PictureBox185"
-        Me.PictureBox185.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox185.TabIndex = 357
-        Me.PictureBox185.TabStop = False
-        '
-        'PictureBox184
-        '
-        Me.PictureBox184.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox184.Location = New System.Drawing.Point(753, 162)
-        Me.PictureBox184.Name = "PictureBox184"
-        Me.PictureBox184.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox184.TabIndex = 356
-        Me.PictureBox184.TabStop = False
-        '
-        'PictureBox183
-        '
-        Me.PictureBox183.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox183.Location = New System.Drawing.Point(845, 126)
-        Me.PictureBox183.Name = "PictureBox183"
-        Me.PictureBox183.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox183.TabIndex = 355
-        Me.PictureBox183.TabStop = False
-        '
-        'PictureBox182
-        '
-        Me.PictureBox182.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox182.Location = New System.Drawing.Point(799, 126)
-        Me.PictureBox182.Name = "PictureBox182"
-        Me.PictureBox182.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox182.TabIndex = 354
-        Me.PictureBox182.TabStop = False
-        '
-        'PictureBox181
-        '
-        Me.PictureBox181.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox181.Location = New System.Drawing.Point(753, 126)
-        Me.PictureBox181.Name = "PictureBox181"
-        Me.PictureBox181.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox181.TabIndex = 353
-        Me.PictureBox181.TabStop = False
-        '
-        'PictureBox180
-        '
-        Me.PictureBox180.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox180.Location = New System.Drawing.Point(845, 90)
-        Me.PictureBox180.Name = "PictureBox180"
-        Me.PictureBox180.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox180.TabIndex = 352
-        Me.PictureBox180.TabStop = False
-        '
-        'PictureBox179
-        '
-        Me.PictureBox179.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox179.Location = New System.Drawing.Point(799, 90)
-        Me.PictureBox179.Name = "PictureBox179"
-        Me.PictureBox179.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox179.TabIndex = 351
-        Me.PictureBox179.TabStop = False
-        '
-        'PictureBox178
-        '
-        Me.PictureBox178.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox178.Location = New System.Drawing.Point(753, 90)
-        Me.PictureBox178.Name = "PictureBox178"
-        Me.PictureBox178.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox178.TabIndex = 350
-        Me.PictureBox178.TabStop = False
-        '
-        'PictureBox177
-        '
-        Me.PictureBox177.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox177.Location = New System.Drawing.Point(661, 126)
-        Me.PictureBox177.Name = "PictureBox177"
-        Me.PictureBox177.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox177.TabIndex = 349
-        Me.PictureBox177.TabStop = False
-        '
-        'PictureBox176
-        '
-        Me.PictureBox176.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox176.Location = New System.Drawing.Point(615, 126)
-        Me.PictureBox176.Name = "PictureBox176"
-        Me.PictureBox176.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox176.TabIndex = 348
-        Me.PictureBox176.TabStop = False
-        '
-        'PictureBox175
-        '
-        Me.PictureBox175.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox175.Location = New System.Drawing.Point(569, 126)
-        Me.PictureBox175.Name = "PictureBox175"
-        Me.PictureBox175.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox175.TabIndex = 347
-        Me.PictureBox175.TabStop = False
-        '
-        'PictureBox174
-        '
-        Me.PictureBox174.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox174.Location = New System.Drawing.Point(661, 90)
-        Me.PictureBox174.Name = "PictureBox174"
-        Me.PictureBox174.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox174.TabIndex = 346
-        Me.PictureBox174.TabStop = False
-        '
-        'PictureBox173
-        '
-        Me.PictureBox173.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox173.Location = New System.Drawing.Point(615, 90)
-        Me.PictureBox173.Name = "PictureBox173"
-        Me.PictureBox173.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox173.TabIndex = 345
-        Me.PictureBox173.TabStop = False
-        '
-        'PictureBox172
-        '
-        Me.PictureBox172.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox172.Location = New System.Drawing.Point(569, 90)
-        Me.PictureBox172.Name = "PictureBox172"
-        Me.PictureBox172.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox172.TabIndex = 344
-        Me.PictureBox172.TabStop = False
-        '
-        'PictureBox171
-        '
-        Me.PictureBox171.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox171.Location = New System.Drawing.Point(477, 126)
-        Me.PictureBox171.Name = "PictureBox171"
-        Me.PictureBox171.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox171.TabIndex = 343
-        Me.PictureBox171.TabStop = False
-        '
-        'PictureBox170
-        '
-        Me.PictureBox170.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox170.Location = New System.Drawing.Point(431, 126)
-        Me.PictureBox170.Name = "PictureBox170"
-        Me.PictureBox170.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox170.TabIndex = 342
-        Me.PictureBox170.TabStop = False
-        '
-        'PictureBox169
-        '
-        Me.PictureBox169.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox169.Location = New System.Drawing.Point(385, 126)
-        Me.PictureBox169.Name = "PictureBox169"
-        Me.PictureBox169.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox169.TabIndex = 341
-        Me.PictureBox169.TabStop = False
-        '
-        'PictureBox168
-        '
-        Me.PictureBox168.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox168.Location = New System.Drawing.Point(477, 90)
-        Me.PictureBox168.Name = "PictureBox168"
-        Me.PictureBox168.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox168.TabIndex = 340
-        Me.PictureBox168.TabStop = False
-        '
-        'PictureBox167
-        '
-        Me.PictureBox167.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox167.Location = New System.Drawing.Point(431, 90)
-        Me.PictureBox167.Name = "PictureBox167"
-        Me.PictureBox167.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox167.TabIndex = 339
-        Me.PictureBox167.TabStop = False
-        '
-        'PictureBox166
-        '
-        Me.PictureBox166.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox166.Location = New System.Drawing.Point(385, 90)
-        Me.PictureBox166.Name = "PictureBox166"
-        Me.PictureBox166.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox166.TabIndex = 338
-        Me.PictureBox166.TabStop = False
-        '
-        'PictureBox165
-        '
-        Me.PictureBox165.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox165.Location = New System.Drawing.Point(293, 126)
-        Me.PictureBox165.Name = "PictureBox165"
-        Me.PictureBox165.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox165.TabIndex = 337
-        Me.PictureBox165.TabStop = False
-        '
-        'PictureBox164
-        '
-        Me.PictureBox164.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox164.Location = New System.Drawing.Point(247, 126)
-        Me.PictureBox164.Name = "PictureBox164"
-        Me.PictureBox164.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox164.TabIndex = 336
-        Me.PictureBox164.TabStop = False
-        '
-        'PictureBox163
-        '
-        Me.PictureBox163.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox163.Location = New System.Drawing.Point(201, 126)
-        Me.PictureBox163.Name = "PictureBox163"
-        Me.PictureBox163.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox163.TabIndex = 335
-        Me.PictureBox163.TabStop = False
-        '
-        'PictureBox162
-        '
-        Me.PictureBox162.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox162.Location = New System.Drawing.Point(293, 90)
-        Me.PictureBox162.Name = "PictureBox162"
-        Me.PictureBox162.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox162.TabIndex = 334
-        Me.PictureBox162.TabStop = False
-        '
-        'PictureBox161
-        '
-        Me.PictureBox161.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox161.Location = New System.Drawing.Point(247, 90)
-        Me.PictureBox161.Name = "PictureBox161"
-        Me.PictureBox161.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox161.TabIndex = 333
-        Me.PictureBox161.TabStop = False
-        '
-        'PictureBox160
-        '
-        Me.PictureBox160.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox160.Location = New System.Drawing.Point(201, 90)
-        Me.PictureBox160.Name = "PictureBox160"
-        Me.PictureBox160.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox160.TabIndex = 332
-        Me.PictureBox160.TabStop = False
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Items.AddRange(New Object() {"Abaddon", "Alchemist", "Ancient Apparition", "Anti-Mage", "Axe", "Bane", "Batrider", "Beastmaster", "Bloodseeker", "Bounty Hunter", "Bristleback", "Broodmother", "Centaur Warchief", "Chaos Knight", "Chen", "Clinkz", "Clockwerk", "Crystal Maiden", "Dark Seer", "Dazzle", "Death Prophet", "Dirge", "Disruptor", "Doom Bringer", "Dragon Knight", "Drow Ranger", "Earthshaker", "Enchantress", "Enigma", "Faceless Void", "Goblin Techies", "Guardian Wisp", "Gyrocopter", "Harbinger", "Huskar", "Invoker", "Jakiro", "Juggernaut", "Keeper of the Light", "Kunkka", "Lanaya", "Leshrac", "Lich", "Lifestealer", "Lina", "Lion", "Lone Druid", "Luna", "Lycanthrope", "Magnataur", "Medusa", "Meepo", "Mirana", "Morphling", "Mortred", "Naga Siren", "Nature's Prophet", "Necrolyte", "Nerubian Assassin", "Night Stalker", "Ogre Magi", "Omniknight", "Pandaren Brewmaster", "Phantom Lancer", "Phoenix", "Pit Lord", "Puck", "Pudge", "Pugna", "Queen of Pain", "Razor", "Riki", "Rubick", "Sand King", "Shadow Demon", "Shadow Fiend", "Shadow Shaman", "Silencer", "Skeleton King", "Slardar", "Slark", "Sniper", "Soul Keeper", "Spectre", "Spirit Breaker", "Storm Spirit", "Sven", "Tauren Chieftain", "Tidehunter", "Tinker", "Tiny", "Treant Protector", "Troll Warlord", "Tuskarr", "Ursa", "Vengeful Spirit", "Venomancer", "Viper", "Visage", "Warlock", "Weaver", "Windrunner", "Witch Doctor", "Zeus"})
-        Me.ListBox2.Location = New System.Drawing.Point(5, 50)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.ListBox2.Size = New System.Drawing.Size(143, 602)
-        Me.ListBox2.TabIndex = 325
-        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.ButtonOpenTextfile)
@@ -4418,7 +2275,7 @@ Partial Class FormMain
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(910, 657)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Import"
+        Me.TabPage3.Text = "Import Itembuild"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'ButtonOpenTextfile
@@ -4457,7 +2314,7 @@ Partial Class FormMain
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(910, 657)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Export"
+        Me.TabPage4.Text = "Export Itembuild"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'ButtonSaveTextfile
@@ -4488,6 +2345,16 @@ Partial Class FormMain
         Me.TextBox3.Size = New System.Drawing.Size(911, 592)
         Me.TextBox3.TabIndex = 4
         '
+        'TabPage2
+        '
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(910, 657)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Autoexec"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
         'TabPage5
         '
         Me.TabPage5.Controls.Add(Me.CheckBox5)
@@ -4503,7 +2370,7 @@ Partial Class FormMain
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Size = New System.Drawing.Size(910, 657)
         Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Options"
+        Me.TabPage5.Text = "D2RIC Options"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
         'CheckBox5
@@ -4592,6 +2459,10 @@ Partial Class FormMain
         Me.ButtonDeleteBackup.Text = "Delete backups"
         Me.ButtonDeleteBackup.UseVisualStyleBackColor = True
         '
+        'ToolTip1
+        '
+        Me.ToolTip1.IsBalloon = True
+        '
         'ButtonUpdate
         '
         Me.ButtonUpdate.Location = New System.Drawing.Point(804, 5)
@@ -4606,7 +2477,7 @@ Partial Class FormMain
         Me.LabelWait.AutoSize = True
         Me.LabelWait.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelWait.ForeColor = System.Drawing.Color.Red
-        Me.LabelWait.Location = New System.Drawing.Point(400, 5)
+        Me.LabelWait.Location = New System.Drawing.Point(420, 5)
         Me.LabelWait.Name = "LabelWait"
         Me.LabelWait.Size = New System.Drawing.Size(269, 26)
         Me.LabelWait.TabIndex = 2
@@ -4615,6 +2486,11 @@ Partial Class FormMain
         '
         'BackgroundWorker1
         '
+        '
+        'ToolTip2
+        '
+        Me.ToolTip2.IsBalloon = True
+        Me.ToolTip2.ToolTipTitle = "Description"
         '
         'FormMain
         '
@@ -4634,13 +2510,13 @@ Partial Class FormMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.PictureBox327, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox326, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox325, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox324, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox323, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox321, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox319, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox164, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox163, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox161, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox160, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox166, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox165, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox159, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox158, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox157, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4800,174 +2676,6 @@ Partial Class FormMain
         CType(Me.PictureBox71, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox73, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox72, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.PictureBox332, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox331, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox330, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox329, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox328, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox322, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox320, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox318, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox317, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox316, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox315, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox314, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox313, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox312, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox311, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox310, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox309, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox308, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox307, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox306, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox305, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox304, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox303, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox302, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox301, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox300, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox299, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox298, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox297, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox296, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox295, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox294, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox293, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox292, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox291, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox290, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox289, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox288, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox287, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox286, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox285, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox284, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox283, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox282, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox281, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox265, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox280, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox279, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox278, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox277, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox276, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox275, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox274, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox273, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox272, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox271, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox270, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox269, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox268, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox267, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox266, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox264, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox263, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox262, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox261, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox260, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox259, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox258, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox257, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox256, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox255, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox254, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox253, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox252, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox251, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox250, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox249, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox248, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox247, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox246, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox245, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox244, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox243, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox242, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox241, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox240, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox239, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox238, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox237, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox236, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox235, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox234, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox233, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox232, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox231, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox230, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox229, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox228, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox227, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox226, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox225, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox224, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox223, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox222, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox221, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox220, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox219, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox218, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox217, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox216, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox215, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox214, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox213, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox212, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox211, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox210, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox209, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox208, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox207, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox206, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox205, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox204, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox203, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox202, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox201, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox200, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox199, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox198, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox197, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox196, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox195, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox194, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox193, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox192, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox191, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox190, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox189, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox188, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox187, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox186, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox185, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox184, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox183, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox182, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox181, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox180, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox179, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox178, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox177, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox176, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox175, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox174, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox173, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox172, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox171, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox170, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox169, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox168, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox167, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox166, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox165, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox164, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox163, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox161, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox160, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
@@ -5169,199 +2877,22 @@ Partial Class FormMain
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents ButtonOpenBackupFolder As System.Windows.Forms.Button
-    Friend WithEvents ButtonClearMulti As System.Windows.Forms.Button
-    Friend WithEvents PictureBox318 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox317 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox316 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox315 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox314 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox313 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox312 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox311 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox310 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox309 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox308 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox307 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox306 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox305 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox304 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox303 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox302 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox301 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox300 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox299 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox298 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox297 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox296 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox295 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox294 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox293 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox292 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox291 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox290 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox289 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox288 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox287 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox286 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox285 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox284 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox283 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox282 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox281 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox265 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox280 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox279 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox278 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox277 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox276 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox275 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox274 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox273 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox272 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox271 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox270 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox269 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox268 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox267 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox266 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox264 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox263 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox262 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox261 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox260 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox259 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox258 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox257 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox256 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox255 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox254 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox253 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox252 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox251 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox250 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox249 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox248 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox247 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox246 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox245 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox244 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox243 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox242 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox241 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox240 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox239 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox238 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox237 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox236 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox235 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox234 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox233 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox232 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox231 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox230 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox229 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox228 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox227 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox226 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox225 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox224 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox223 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox222 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox221 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox220 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox219 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox218 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox217 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox216 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox215 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox214 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox213 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox212 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox211 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox210 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox209 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox208 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox207 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox206 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox205 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox204 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox203 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox202 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox201 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox200 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox199 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox198 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox197 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox196 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox195 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox194 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox193 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox192 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox191 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox190 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox189 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox188 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox187 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox186 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox185 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox184 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox183 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox182 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox181 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox180 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox179 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox178 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox177 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox176 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox175 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox174 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox173 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox172 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox171 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox170 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox169 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox168 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox167 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox166 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox165 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox164 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox163 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox162 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox161 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox160 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents ButtonSaveMulti As System.Windows.Forms.Button
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents ListBox2 As System.Windows.Forms.ListBox
-    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents PictureBox319 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox320 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox321 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox166 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox322 As System.Windows.Forms.PictureBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents ButtonUpdate As System.Windows.Forms.Button
     Friend WithEvents LabelWait As System.Windows.Forms.Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox327 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox326 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox325 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox324 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox323 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox332 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox331 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox330 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox329 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox328 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox164 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox163 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox162 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox161 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox160 As System.Windows.Forms.PictureBox
+    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents ToolTip2 As System.Windows.Forms.ToolTip
 End Class

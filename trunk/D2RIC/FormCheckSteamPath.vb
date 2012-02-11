@@ -2,8 +2,13 @@
 
     Private Sub FormCheckSteamPath_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If (My.Settings.path <> "") Then
-            FormMain.Visible = True
-            Me.Close()
+            TextBox1.Text = Replace(My.Settings.path, "\SteamApps\common\dota 2 beta\dota\itembuilds", "")
+            If My.Computer.FileSystem.DirectoryExists(My.Settings.path) Then
+                FormMain.Visible = True
+                Me.Close()
+            Else
+                MsgBox("Please check your Steam path!!!")
+            End If
         End If
     End Sub
 
@@ -19,7 +24,7 @@
     End Sub
 
     Private Sub Check(ByVal dota_path As String)
-        If My.Computer.FileSystem.DirectoryExists(dota_path) = True Then
+        If My.Computer.FileSystem.DirectoryExists(dota_path) Then
             ' existiert
             My.Settings.path = dota_path
             My.Settings.Save()
@@ -31,10 +36,11 @@
         End If
     End Sub
 
-    Dim FolderBrowserDialog1 As FolderBrowserDialog = New FolderBrowserDialog
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
-            TextBox1.Text = FolderBrowserDialog1.SelectedPath
-        End If
+        Using FolderBrowserDialog1 As FolderBrowserDialog = New FolderBrowserDialog
+            If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+                TextBox1.Text = FolderBrowserDialog1.SelectedPath
+            End If
+        End Using
     End Sub
 End Class

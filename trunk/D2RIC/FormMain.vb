@@ -41,36 +41,6 @@ Public Class FormMain
         PictureBox28.AllowDrop = True
         PictureBox29.AllowDrop = True
         PictureBox30.AllowDrop = True
-        PictureBox160.AllowDrop = True
-        PictureBox161.AllowDrop = True
-        PictureBox162.AllowDrop = True
-        PictureBox163.AllowDrop = True
-        PictureBox164.AllowDrop = True
-        PictureBox165.AllowDrop = True
-        PictureBox166.AllowDrop = True
-        PictureBox167.AllowDrop = True
-        PictureBox168.AllowDrop = True
-        PictureBox169.AllowDrop = True
-        PictureBox170.AllowDrop = True
-        PictureBox171.AllowDrop = True
-        PictureBox172.AllowDrop = True
-        PictureBox173.AllowDrop = True
-        PictureBox174.AllowDrop = True
-        PictureBox175.AllowDrop = True
-        PictureBox176.AllowDrop = True
-        PictureBox177.AllowDrop = True
-        PictureBox178.AllowDrop = True
-        PictureBox179.AllowDrop = True
-        PictureBox180.AllowDrop = True
-        PictureBox181.AllowDrop = True
-        PictureBox182.AllowDrop = True
-        PictureBox183.AllowDrop = True
-        PictureBox184.AllowDrop = True
-        PictureBox185.AllowDrop = True
-        PictureBox186.AllowDrop = True
-        PictureBox187.AllowDrop = True
-        PictureBox188.AllowDrop = True
-        PictureBox189.AllowDrop = True
         ButtonSave.Enabled = False
         With ToolTip1
             .SetToolTip(PictureBox1, "none")
@@ -232,190 +202,23 @@ Public Class FormMain
             .SetToolTip(PictureBox157, "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration")
             .SetToolTip(PictureBox158, "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence")
             .SetToolTip(PictureBox159, "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed")
-            .SetToolTip(PictureBox323, "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)")
-            .SetToolTip(PictureBox324, "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)")
-            .SetToolTip(PictureBox325, "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura")
-            .SetToolTip(PictureBox326, "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)")
-            .SetToolTip(PictureBox327, "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)")
-            .SetToolTip(PictureBox319, "Delete Item")
-            .SetToolTip(PictureBox160, "none")
-            .SetToolTip(PictureBox161, "none")
-            .SetToolTip(PictureBox162, "none")
-            .SetToolTip(PictureBox163, "none")
-            .SetToolTip(PictureBox164, "none")
-            .SetToolTip(PictureBox165, "none")
-            .SetToolTip(PictureBox166, "none")
-            .SetToolTip(PictureBox167, "none")
-            .SetToolTip(PictureBox168, "none")
-            .SetToolTip(PictureBox169, "none")
-            .SetToolTip(PictureBox170, "none")
-            .SetToolTip(PictureBox171, "none")
-            .SetToolTip(PictureBox172, "none")
-            .SetToolTip(PictureBox173, "none")
-            .SetToolTip(PictureBox174, "none")
-            .SetToolTip(PictureBox175, "none")
-            .SetToolTip(PictureBox176, "none")
-            .SetToolTip(PictureBox177, "none")
-            .SetToolTip(PictureBox178, "none")
-            .SetToolTip(PictureBox179, "none")
-            .SetToolTip(PictureBox180, "none")
-            .SetToolTip(PictureBox181, "none")
-            .SetToolTip(PictureBox182, "none")
-            .SetToolTip(PictureBox183, "none")
-            .SetToolTip(PictureBox184, "none")
-            .SetToolTip(PictureBox185, "none")
-            .SetToolTip(PictureBox186, "none")
-            .SetToolTip(PictureBox187, "none")
-            .SetToolTip(PictureBox188, "none")
-            .SetToolTip(PictureBox189, "none")
-            .SetToolTip(PictureBox190, "Aghanim's Scepter")
-            .SetToolTip(PictureBox191, "Animal Courier")
-            .SetToolTip(PictureBox192, "Arcane Boots")
-            .SetToolTip(PictureBox193, "Armlet")
-            .SetToolTip(PictureBox194, "Assault Cuirass")
-            .SetToolTip(PictureBox195, "Battle Fury")
-            .SetToolTip(PictureBox196, "Belt of Strength")
-            .SetToolTip(PictureBox197, "Black King Bar")
-            .SetToolTip(PictureBox198, "Blade Mail")
-            .SetToolTip(PictureBox199, "Blade of Alacrity")
-            .SetToolTip(PictureBox200, "Blades of Attack")
-            .SetToolTip(PictureBox201, "Blink Dagger")
-            .SetToolTip(PictureBox202, "Bloodstone")
-            .SetToolTip(PictureBox203, "Boots of Elvenskin")
-            .SetToolTip(PictureBox204, "Boots of Speed")
-            .SetToolTip(PictureBox205, "Boots of Travel")
-            .SetToolTip(PictureBox206, "Bottle")
-            .SetToolTip(PictureBox207, "Bracer")
-            .SetToolTip(PictureBox208, "Broadsword")
-            .SetToolTip(PictureBox209, "Buckler")
-            .SetToolTip(PictureBox210, "Butterfly")
-            .SetToolTip(PictureBox211, "Chainmail")
-            .SetToolTip(PictureBox212, "Circlet")
-            .SetToolTip(PictureBox213, "Clarity")
-            .SetToolTip(PictureBox214, "Claymore")
-            .SetToolTip(PictureBox215, "Cloak")
-            .SetToolTip(PictureBox216, "Crystalys")
-            .SetToolTip(PictureBox217, "Daedalus")
-            .SetToolTip(PictureBox218, "Dagon 1")
-            .SetToolTip(PictureBox219, "Dagon 2")
-            .SetToolTip(PictureBox220, "Dagon 3")
-            .SetToolTip(PictureBox221, "Dagon 4")
-            .SetToolTip(PictureBox222, "Dagon 5")
-            .SetToolTip(PictureBox223, "Demon Edge")
-            .SetToolTip(PictureBox224, "Desolator")
-            .SetToolTip(PictureBox225, "Diffusal Blade 1")
-            .SetToolTip(PictureBox226, "Diffusal Blade 2")
-            .SetToolTip(PictureBox227, "Divine Rapier")
-            .SetToolTip(PictureBox228, "Drum of Endurance")
-            .SetToolTip(PictureBox229, "Dust of Appearance")
-            .SetToolTip(PictureBox230, "Eaglesong")
-            .SetToolTip(PictureBox231, "Energy Booster")
-            .SetToolTip(PictureBox232, "Ethereal Blade")
-            .SetToolTip(PictureBox233, "Eul's Scepter of Divinity")
-            .SetToolTip(PictureBox234, "Eye of Skadi")
-            .SetToolTip(PictureBox235, "Flying Courier")
-            .SetToolTip(PictureBox236, "Force Staff")
-            .SetToolTip(PictureBox237, "Gauntlets of Strength")
-            .SetToolTip(PictureBox238, "Gem of True Sight")
-            .SetToolTip(PictureBox239, "Ghost Scepter")
-            .SetToolTip(PictureBox240, "Gloves of Haste")
-            .SetToolTip(PictureBox241, "Hand of Midas")
-            .SetToolTip(PictureBox242, "Headdress")
-            .SetToolTip(PictureBox243, "Healing Salve")
-            .SetToolTip(PictureBox244, "Heart of Tarrasque")
-            .SetToolTip(PictureBox245, "Helm of Iron Will")
-            .SetToolTip(PictureBox246, "Helm of the Dominator")
-            .SetToolTip(PictureBox247, "Hood of Defiance")
-            .SetToolTip(PictureBox248, "Hyperstone")
-            .SetToolTip(PictureBox249, "Iron Branch")
-            .SetToolTip(PictureBox250, "Javelin")
-            .SetToolTip(PictureBox251, "Linken's Sphere")
-            .SetToolTip(PictureBox252, "Maelstrom")
-            .SetToolTip(PictureBox253, "Magic Stick")
-            .SetToolTip(PictureBox254, "Magic Wand")
-            .SetToolTip(PictureBox255, "Manta Style")
-            .SetToolTip(PictureBox256, "Mantle of Intelligence")
-            .SetToolTip(PictureBox257, "Mask of Madness")
-            .SetToolTip(PictureBox258, "Medallion of Courage")
-            .SetToolTip(PictureBox259, "Mekansm")
-            .SetToolTip(PictureBox260, "Mithril Hammer")
-            .SetToolTip(PictureBox261, "Mjollnir")
-            .SetToolTip(PictureBox262, "Monkey King Bar")
-            .SetToolTip(PictureBox263, "Morbid Mask")
-            .SetToolTip(PictureBox264, "Mystic Staff")
-            .SetToolTip(PictureBox265, "Necronomicon 1")
-            .SetToolTip(PictureBox266, "Necronomicon 2")
-            .SetToolTip(PictureBox267, "Necronomicon 3")
-            .SetToolTip(PictureBox268, "Null Talisman")
-            .SetToolTip(PictureBox269, "Oblivion Staff")
-            .SetToolTip(PictureBox270, "Observer Ward")
-            .SetToolTip(PictureBox271, "Ogre Club")
-            .SetToolTip(PictureBox272, "Orb of Venom")
-            .SetToolTip(PictureBox273, "Orchid Malevolence")
-            .SetToolTip(PictureBox274, "Perseverance")
-            .SetToolTip(PictureBox275, "Phase Boots")
-            .SetToolTip(PictureBox276, "Pipe of Insight")
-            .SetToolTip(PictureBox277, "Platemail")
-            .SetToolTip(PictureBox278, "Point Booster")
-            .SetToolTip(PictureBox279, "Poor Man's Shield")
-            .SetToolTip(PictureBox280, "Power Treads")
-            .SetToolTip(PictureBox281, "Quarterstaff")
-            .SetToolTip(PictureBox282, "Quelling Blade")
-            .SetToolTip(PictureBox283, "Radiance")
-            .SetToolTip(PictureBox284, "Reaver")
-            .SetToolTip(PictureBox285, "Refresher Orb")
-            .SetToolTip(PictureBox286, "Ring of Basilius")
-            .SetToolTip(PictureBox287, "Ring of Health")
-            .SetToolTip(PictureBox288, "Ring of Protection")
-            .SetToolTip(PictureBox289, "Ring of Regen")
-            .SetToolTip(PictureBox290, "Robe of the Magi")
-            .SetToolTip(PictureBox291, "Sacred Relic")
-            .SetToolTip(PictureBox292, "Sage's Mask")
-            .SetToolTip(PictureBox293, "Sange")
-            .SetToolTip(PictureBox294, "Sange and Yasha")
-            .SetToolTip(PictureBox295, "Satanic")
-            .SetToolTip(PictureBox296, "Scythe of Vyse")
-            .SetToolTip(PictureBox297, "Sentry Ward")
-            .SetToolTip(PictureBox298, "Shadow Blade")
-            .SetToolTip(PictureBox299, "Shiva's Guard")
-            .SetToolTip(PictureBox300, "Skull Basher")
-            .SetToolTip(PictureBox301, "Slippers of Agility")
-            .SetToolTip(PictureBox302, "Smoke of Deceit")
-            .SetToolTip(PictureBox303, "Soul Booster")
-            .SetToolTip(PictureBox304, "Soul Ring")
-            .SetToolTip(PictureBox305, "Staff of Wizardry")
-            .SetToolTip(PictureBox306, "Stout Shield")
-            .SetToolTip(PictureBox307, "Talisman of Evasion")
-            .SetToolTip(PictureBox308, "Tango")
-            .SetToolTip(PictureBox309, "Town Portal Scroll")
-            .SetToolTip(PictureBox310, "Ultimate Orb")
-            .SetToolTip(PictureBox311, "Urn of Shadows")
-            .SetToolTip(PictureBox312, "Vanguard")
-            .SetToolTip(PictureBox313, "Veil of Discord")
-            .SetToolTip(PictureBox314, "Vitality Booster")
-            .SetToolTip(PictureBox315, "Vladmir's Offering")
-            .SetToolTip(PictureBox316, "Void Stone")
-            .SetToolTip(PictureBox317, "Wraith Band")
-            .SetToolTip(PictureBox318, "Yasha")
-            .SetToolTip(PictureBox328, "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)")
-            .SetToolTip(PictureBox329, "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)")
-            .SetToolTip(PictureBox330, "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura")
-            .SetToolTip(PictureBox331, "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)")
-            .SetToolTip(PictureBox332, "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)")
-            .SetToolTip(PictureBox320, "Delete Item")
+            .SetToolTip(PictureBox160, "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)")
+            .SetToolTip(PictureBox161, "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)")
+            .SetToolTip(PictureBox162, "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura")
+            .SetToolTip(PictureBox163, "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)")
+            .SetToolTip(PictureBox164, "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)")
+            .SetToolTip(PictureBox165, "Delete Item")
         End With
-
         ComboBox3.SelectedItem = "All"
-        ComboBox4.SelectedItem = "All"
+        ComboBox5.SelectedItem = "Alphabetical Order"
 
-        If (My.Settings.autoupdate = False) Then
+        If Not My.Settings.autoupdate Then
             CheckBox5.Checked = False
         Else
             CheckBox5.Checked = True
             LabelWait.Visible = True
             BackgroundWorker1.RunWorkerAsync()
         End If
-
     End Sub
 
     Public Sub ClearSingle()
@@ -427,18 +230,7 @@ Public Class FormMain
         For picbox = 1 To 30
             pb = TabPage1.Controls.Item("PictureBox" & picbox)
             pb.image = D2RIC.My.Resources.Resources.none
-        Next
-    End Sub
-
-    Public Sub ClearMulti()
-        TextBox5.Text = ""
-        NeuerText = ""
-        ListBox2.SelectedItems.Clear()
-        Dim pb As Object
-        Dim picbox As Integer = 1
-        For picbox = 160 To 189
-            pb = TabPage2.Controls.Item("PictureBox" & picbox)
-            pb.image = D2RIC.My.Resources.Resources.none
+            ToolTip1.SetToolTip(pb, "none")
         Next
     End Sub
 
@@ -452,6 +244,7 @@ Public Class FormMain
                 If Zeile.Contains("item_") And i < 31 Then
                     pb = TabPage1.Controls.Item("PictureBox" & i)
                     pb.image = ChangePicture(RenameItem(Zeile))
+                    ToolTip1.SetToolTip(pb, GetToolTip(RenameItem(Zeile)))
                     i = i + 1
                 ElseIf Zeile.Contains("Early_Game") Then
                     ItemPlace = "Early Game"
@@ -1468,6 +1261,8 @@ Public Class FormMain
                 hero = "Shadow Fiend"
             Case hero Like "npc_dota_hero_?ight_?talker"
                 hero = "Night Stalker"
+            Case hero Like "npc_dota_hero_?bsidian_?estroyer"
+                hero = "Obsidian Destroyer"
             Case hero Like "npc_dota_hero_?mniknight"
                 hero = "Omniknight"
             Case hero Like "npc_dota_hero_?hantom_?ssassin"
@@ -1549,8 +1344,6 @@ Public Class FormMain
                 hero = "Goblin Techies"
             Case hero Like "npc_dota_hero_?uardian_?isp"
                 hero = "Guardian Wisp"
-            Case hero Like "npc_dota_hero_?arbinger"
-                hero = "Harbinger"
             Case hero Like "npc_dota_hero_?eeperoftheLight"
                 hero = "Keeper of the Light"
             Case hero Like "npc_dota_hero_?one_?ruid"
@@ -1616,6 +1409,8 @@ Public Class FormMain
                 Selected_Hero = "antimage"
             Case "Ancient Apparition"
                 Selected_Hero = "ancient_apparition"
+            Case "Bounty Hunter"
+                Selected_Hero = "bounty_hunter"
             Case "Crystal Maiden"
                 Selected_Hero = "crystal_maiden"
             Case "Dark Seer"
@@ -1652,13 +1447,15 @@ Public Class FormMain
                 Selected_Hero = "witch_doctor"
             Case "Zeus"
                 Selected_Hero = "zuus"
+            Case "Lanaya"
+                Selected_Hero = "templar_assassin"
             Case "Lifestealer"
                 Selected_Hero = "life_stealer"
             Case "Mortred"
                 Selected_Hero = "phantom_assassin"
+            Case "Obsidian Destroyer"
+                Selected_Hero = "obsidian_destroyer"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
-            Case "Bounty Hunter"
-                Selected_Hero = "bounty_hunter"
             Case "Centaur Warchief"
                 Selected_Hero = "centaur_warchief"
             Case "Chaos Knight"
@@ -2154,7 +1951,7 @@ Public Class FormMain
                 If Not (imgHash1(i) = imgHash2(i)) Then
                     Return False
                 End If
-                i += 1
+                i += 30
             End While
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -2164,414 +1961,824 @@ Public Class FormMain
         Return True
     End Function
 
-    Public Function GetToolTip(ByVal img_res As System.Drawing.Bitmap) As String
+    Public Function PicRes2Name(ByVal img_res As System.Drawing.Bitmap) As String
         Dim pic_res As String
         If doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blink_Dagger) Then
-            pic_res = "Blink Dagger" + vbNewLine + vbNewLine + "Blink"
+            pic_res = "Blink Dagger"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blades_of_Attack) Then
-            pic_res = "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage"
+            pic_res = "Blades of Attack"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter) Then
-            pic_res = "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)"
+            pic_res = "Aghanim's Scepter"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Animal_Courier) Then
-            pic_res = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
+            pic_res = "Animal Courier"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Arcane_Boots) Then
-            pic_res = "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
+            pic_res = "Arcane Boots"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Armlet) Then
-            pic_res = "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)"
+            pic_res = "Armlet"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Assault_Cuirass) Then
-            pic_res = "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)"
+            pic_res = "Assault Cuirass"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Battle_Fury) Then
-            pic_res = "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave"
+            pic_res = "Battle Fury"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Belt_of_Strength) Then
-            pic_res = "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength"
+            pic_res = "Belt of Strength"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Black_King_Bar) Then
-            pic_res = "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)"""
+            pic_res = "Black King Bar"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_Mail) Then
-            pic_res = "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)"
+            pic_res = "Blade Mail"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity) Then
-            pic_res = "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility"
+            pic_res = "Blade of Alacrity"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bloodstone) Then
-            pic_res = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
+            pic_res = "Bloodstone"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin) Then
-            pic_res = "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility"
+            pic_res = "Boots of Elvenskin"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Speed) Then
-            pic_res = "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed"
+            pic_res = "Boots of Speed"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Travel) Then
-            pic_res = "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)"
+            pic_res = "Boots of Travel"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bottle) Then
-            pic_res = "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture"
+            pic_res = "Bottle"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bracer) Then
-            pic_res = "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence"
+            pic_res = "Bracer"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Broadsword) Then
-            pic_res = "Broadsword" + vbNewLine + vbNewLine + "+18 Damage"
+            pic_res = "Broadsword"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Buckler) Then
-            pic_res = "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)"
+            pic_res = "Buckler"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Butterfly) Then
-            pic_res = "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed"
+            pic_res = "Butterfly"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Chainmail) Then
-            pic_res = "Chainmail" + vbNewLine + vbNewLine + "+5 Armor"
+            pic_res = "Chainmail"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Circlet) Then
-            pic_res = "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes"
+            pic_res = "Circlet"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Clarity) Then
-            pic_res = "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges"
+            pic_res = "Clarity"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Claymore) Then
-            pic_res = "Claymore" + vbNewLine + vbNewLine + "+21 Damage"
+            pic_res = "Claymore"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Cloak) Then
-            pic_res = "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance"
+            pic_res = "Cloak"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Crystalys) Then
-            pic_res = "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike"
+            pic_res = "Crystalys"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Daedalus) Then
-            pic_res = "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike"
+            pic_res = "Daedalus"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon) Then
-            pic_res = "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            pic_res = "Dagon 1"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon2) Then
-            pic_res = "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            pic_res = "Dagon 2"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon3) Then
-            pic_res = "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            pic_res = "Dagon 3"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon4) Then
-            pic_res = "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            pic_res = "Dagon 4"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon5) Then
-            pic_res = "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            pic_res = "Dagon 5"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Demon_Edge) Then
-            pic_res = "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage"
+            pic_res = "Demon Edge"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Desolator) Then
-            pic_res = "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption"
+            pic_res = "Desolator"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade) Then
-            pic_res = "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
+            pic_res = "Diffusal Blade 1"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade2) Then
-            pic_res = "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
+            pic_res = "Diffusal Blade 2"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Divine_Rapier) Then
-            pic_res = "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage"
+            pic_res = "Divine Rapier"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
-            pic_res = "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges"
+            pic_res = "Drum of Endurance"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dust_of_Appearance) Then
-            pic_res = "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges"
+            pic_res = "Dust of Appearance"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eaglesong) Then
-            pic_res = "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility"
+            pic_res = "Eaglesong"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Energy_Booster) Then
-            pic_res = "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana"
+            pic_res = "Energy Booster"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
-            pic_res = "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)"
+            pic_res = "Ethereal Blade"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity) Then
-            pic_res = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)"
+            pic_res = "Eul's Scepter of Divinity"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eye_of_Skadi) Then
-            pic_res = "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack"
+            pic_res = "Eye of Skadi"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Flying_Courier) Then
-            pic_res = "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier"
+            pic_res = "Flying Courier"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Force_Staff) Then
-            pic_res = "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)"
+            pic_res = "Force Staff"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength) Then
-            pic_res = "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength"
+            pic_res = "Gauntlets of Strength"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight) Then
-            pic_res = "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight"
+            pic_res = "Gem of True Sight"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ghost_Scepter) Then
-            pic_res = "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)"
+            pic_res = "Ghost Scepter"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gloves_of_Haste) Then
-            pic_res = "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed"
+            pic_res = "Gloves of Haste"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hand_of_Midas) Then
-            pic_res = "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)"
+            pic_res = "Hand of Midas"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Headdress) Then
-            pic_res = "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura"
+            pic_res = "Headdress"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Healing_Salve) Then
-            pic_res = "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges"
+            pic_res = "Healing Salve"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque) Then
-            pic_res = "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration"
+            pic_res = "Heart of Tarrasque"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will) Then
-            pic_res = "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration"
+            pic_res = "Helm of Iron Will"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator) Then
-            pic_res = "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)"
+            pic_res = "Helm of the Dominator"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hood_of_Defiance) Then
-            pic_res = "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration"
+            pic_res = "Hood of Defiance"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hyperstone) Then
-            pic_res = "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed"
+            pic_res = "Hyperstone"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Iron_Branch) Then
-            pic_res = "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes"
+            pic_res = "Iron Branch"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Javelin) Then
-            pic_res = "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage"
+            pic_res = "Javelin"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Linken_s_Sphere) Then
-            pic_res = "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block"
+            pic_res = "Linken's Sphere"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Maelstrom) Then
-            pic_res = "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning"
+            pic_res = "Maelstrom"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Stick) Then
-            pic_res = "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)"
+            pic_res = "Magic Stick"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Wand) Then
-            pic_res = "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)"
+            pic_res = "Magic Wand"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Manta_Style) Then
-            pic_res = "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)"
+            pic_res = "Manta Style"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence) Then
-            pic_res = "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence"
+            pic_res = "Mantle of Intelligence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mask_of_Madness) Then
-            pic_res = "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)"
+            pic_res = "Mask of Madness"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
-            pic_res = "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)"
+            pic_res = "Medallion of Courage"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mekansm) Then
-            pic_res = "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)"
+            pic_res = "Mekansm"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mithril_Hammer) Then
-            pic_res = "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage"
+            pic_res = "Mithril Hammer"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mjollnir) Then
-            pic_res = "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)"
+            pic_res = "Mjollnir"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Monkey_King_Bar) Then
-            pic_res = "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash"
+            pic_res = "Monkey King Bar"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Morbid_Mask) Then
-            pic_res = "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal"
+            pic_res = "Morbid Mask"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mystic_Staff) Then
-            pic_res = "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence"
+            pic_res = "Mystic Staff"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon) Then
-            pic_res = "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)"
+            pic_res = "Necronomicon 1"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon2) Then
-            pic_res = "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)"
+            pic_res = "Necronomicon 2"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon3) Then
-            pic_res = "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)"
+            pic_res = "Necronomicon 3"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Null_Talisman) Then
-            pic_res = "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility"
+            pic_res = "Null Talisman"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Oblivion_Staff) Then
-            pic_res = "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration"
+            pic_res = "Oblivion Staff"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Observer_Ward) Then
-            pic_res = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges"
+            pic_res = "Observer Ward"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ogre_Club) Then
-            pic_res = "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength"
+            pic_res = "Ogre Club"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
-            pic_res = "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack"
+            pic_res = "Orb of Venom"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orchid_Malevolence) Then
-            pic_res = "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)"
+            pic_res = "Orchid Malevolence"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Perseverance) Then
-            pic_res = "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration"
+            pic_res = "Perseverance"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Phase_Boots) Then
-            pic_res = "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
+            pic_res = "Phase Boots"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Pipe_of_Insight) Then
-            pic_res = "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)"
+            pic_res = "Pipe of Insight"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Platemail) Then
-            pic_res = "Platemail" + vbNewLine + vbNewLine + "+10 Armor"
+            pic_res = "Platemail"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Point_Booster) Then
-            pic_res = "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana"
+            pic_res = "Point Booster"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield) Then
-            pic_res = "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block"
+            pic_res = "Poor Man's Shield"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Power_Treads) Then
-            pic_res = "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
+            pic_res = "Power Treads"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quarterstaff) Then
-            pic_res = "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed"
+            pic_res = "Quarterstaff"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quelling_Blade) Then
-            pic_res = "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)"
+            pic_res = "Quelling Blade"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Radiance) Then
-            pic_res = "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage"
+            pic_res = "Radiance"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Reaver) Then
-            pic_res = "Reaver" + vbNewLine + vbNewLine + "+25 Strength"
+            pic_res = "Reaver"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Refresher_Orb) Then
-            pic_res = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
+            pic_res = "Refresher Orb"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Basilius) Then
-            pic_res = "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura"
+            pic_res = "Ring of Basilius"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Health) Then
-            pic_res = "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration"
+            pic_res = "Ring of Health"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Protection) Then
-            pic_res = "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor"
+            pic_res = "Ring of Protection"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Regen) Then
-            pic_res = "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration"
+            pic_res = "Ring of Regen"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi) Then
-            pic_res = "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence"
+            pic_res = "Robe of the Magi"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sacred_Relic) Then
-            pic_res = "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage"
+            pic_res = "Sacred Relic"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sage_s_Mask) Then
-            pic_res = "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration"
+            pic_res = "Sage's Mask"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange) Then
-            pic_res = "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim"
+            pic_res = "Sange"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange_and_Yasha) Then
-            pic_res = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim"
+            pic_res = "Sange and Yasha"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Satanic) Then
-            pic_res = "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+25% Lifesteal" + vbNewLine + "Unholy Rage (active)"
+            pic_res = "Satanic"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse) Then
-            pic_res = "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)"
+            pic_res = "Scythe of Vyse"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sentry_Ward) Then
-            pic_res = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight " + vbNewLine + "2 Charges"
+            pic_res = "Sentry Ward"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shadow_Blade) Then
-            pic_res = "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)"
+            pic_res = "Shadow Blade"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shiva_s_Guard) Then
-            pic_res = "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)"
+            pic_res = "Shiva's Guard"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Skull_Basher) Then
-            pic_res = "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash"
+            pic_res = "Skull Basher"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Slippers_of_Agility) Then
-            pic_res = "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility"
+            pic_res = "Slippers of Agility"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
-            pic_res = "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges"
+            pic_res = "Smoke of Deceit"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Booster) Then
-            pic_res = "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration"
+            pic_res = "Soul Booster"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Ring) Then
-            pic_res = "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)"
+            pic_res = "Soul Ring"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry) Then
-            pic_res = "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence"
+            pic_res = "Staff of Wizardry"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Stout_Shield) Then
-            pic_res = "Stout Shield" + vbNewLine + vbNewLine + "Damage Block"
+            pic_res = "Stout Shield"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion) Then
-            pic_res = "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion"
+            pic_res = "Talisman of Evasion"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tango) Then
-            pic_res = "Tango" + vbNewLine + vbNewLine + "Eat Tree" + vbNewLine + "3 Charges"
+            pic_res = "Tango"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll) Then
-            pic_res = "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport" + vbNewLine + "1 Charges"
+            pic_res = "Town Portal Scroll"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ultimate_Orb) Then
-            pic_res = "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes"
+            pic_res = "Ultimate Orb"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
-            pic_res = "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)"
+            pic_res = "Urn of Shadows"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vanguard) Then
-            pic_res = "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+275 HP" + vbNewLine + "Damage Block"
+            pic_res = "Vanguard"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
-            pic_res = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)"
+            pic_res = "Veil of Discord"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vitality_Booster) Then
-            pic_res = "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP"
+            pic_res = "Vitality Booster"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering) Then
-            pic_res = "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura"
+            pic_res = "Vladmir's Offering"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Void_Stone) Then
-            pic_res = "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration"
+            pic_res = "Void Stone"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Wraith_Band) Then
-            pic_res = "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence"
+            pic_res = "Wraith Band"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Yasha) Then
-            pic_res = "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed"
+            pic_res = "Yasha"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
-            pic_res = "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)"
+            pic_res = "Abyssal Blade"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
-            pic_res = "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)"
+            pic_res = "Heaven's Halberd"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
-            pic_res = "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura"
+            pic_res = "Ring of Aquila"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
-            pic_res = "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)"
+            pic_res = "Rod of Atos"
             Return pic_res
         ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tranquil_Boots) Then
-            pic_res = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
+            pic_res = "Tranquil Boots"
             Return pic_res
         Else
             pic_res = "Error!"
             Return pic_res
         End If
+    End Function
+    Public Function GetToolTip(ByVal item_name As String) As String
+        Dim tooltip As String
+        Select Case item_name
+            Case "Blink Dagger"
+                tooltip = "Blink Dagger" + vbNewLine + vbNewLine + "Blink"
+                Return tooltip
+            Case "Blades of Attack"
+                tooltip = "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage"
+                Return tooltip
+            Case "Aghanim's Scepter"
+                tooltip = "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)"
+                Return tooltip
+            Case "Animal Courier"
+                tooltip = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
+                Return tooltip
+            Case "Arcane Boots"
+                tooltip = "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
+                Return tooltip
+            Case "Armlet"
+                tooltip = "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)"
+                Return tooltip
+            Case "Assault Cuirass"
+                tooltip = "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)"
+                Return tooltip
+            Case "Battle Fury"
+                tooltip = "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave"
+                Return tooltip
+            Case "Belt of Strength"
+                tooltip = "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength"
+                Return tooltip
+            Case "Black King Bar"
+                tooltip = "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)"""
+                Return tooltip
+            Case "Blade Mail"
+                tooltip = "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)"
+                Return tooltip
+            Case "Blade of Alacrity"
+                tooltip = "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility"
+                Return tooltip
+            Case "Bloodstone"
+                tooltip = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
+                Return tooltip
+            Case "Boots of Elvenskin"
+                tooltip = "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility"
+                Return tooltip
+            Case "Boots of Speed"
+                tooltip = "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed"
+                Return tooltip
+            Case "Boots of Travel"
+                tooltip = "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)"
+                Return tooltip
+            Case "Bottle"
+                tooltip = "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture"
+                Return tooltip
+            Case "Bracer"
+                tooltip = "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence"
+                Return tooltip
+            Case "Broadsword"
+                tooltip = "Broadsword" + vbNewLine + vbNewLine + "+18 Damage"
+                Return tooltip
+            Case "Buckler"
+                tooltip = "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)"
+                Return tooltip
+            Case "Butterfly"
+                tooltip = "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed"
+                Return tooltip
+            Case "Chainmail"
+                tooltip = "Chainmail" + vbNewLine + vbNewLine + "+5 Armor"
+                Return tooltip
+            Case "Circlet"
+                tooltip = "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes"
+                Return tooltip
+            Case "Clarity"
+                tooltip = "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges"
+                Return tooltip
+            Case "Claymore"
+                tooltip = "Claymore" + vbNewLine + vbNewLine + "+21 Damage"
+                Return tooltip
+            Case "Cloak"
+                tooltip = "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance"
+                Return tooltip
+            Case "Crystalys"
+                tooltip = "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike"
+                Return tooltip
+            Case "Daedalus"
+                tooltip = "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike"
+                Return tooltip
+            Case "Dagon 1"
+                tooltip = "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+                Return tooltip
+            Case "Dagon 2"
+                tooltip = "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+                Return tooltip
+            Case "Dagon 3"
+                tooltip = "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+                Return tooltip
+            Case "Dagon 4"
+                tooltip = "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+                Return tooltip
+            Case "Dagon 5"
+                tooltip = "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+                Return tooltip
+            Case "Demon Edge"
+                tooltip = "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage"
+                Return tooltip
+            Case "Desolator"
+                tooltip = "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption"
+                Return tooltip
+            Case "Diffusal Blade 1"
+                tooltip = "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
+                Return tooltip
+            Case "Diffusal Blade 2"
+                tooltip = "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
+                Return tooltip
+            Case "Divine Rapier"
+                tooltip = "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage"
+                Return tooltip
+            Case "Drum of Endurance"
+                tooltip = "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges"
+                Return tooltip
+            Case "Dust of Appearance"
+                tooltip = "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges"
+                Return tooltip
+            Case "Eaglesong"
+                tooltip = "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility"
+                Return tooltip
+            Case "Energy Booster"
+                tooltip = "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana"
+                Return tooltip
+            Case "Ethereal Blade"
+                tooltip = "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)"
+                Return tooltip
+            Case "Eul's Scepter of Divinity"
+                tooltip = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)"
+                Return tooltip
+            Case "Eye of Skadi"
+                tooltip = "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack"
+                Return tooltip
+            Case "Flying Courier"
+                tooltip = "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier"
+                Return tooltip
+            Case "Force Staff"
+                tooltip = "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)"
+                Return tooltip
+            Case "Gauntlets of Strength"
+                tooltip = "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength"
+                Return tooltip
+            Case "Gem of True Sight"
+                tooltip = "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight"
+                Return tooltip
+            Case "Ghost Scepter"
+                tooltip = "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)"
+                Return tooltip
+            Case "Gloves of Haste"
+                tooltip = "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed"
+                Return tooltip
+            Case "Hand of Midas"
+                tooltip = "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)"
+                Return tooltip
+            Case "Headdress"
+                tooltip = "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura"
+                Return tooltip
+            Case "Healing Salve"
+                tooltip = "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges"
+                Return tooltip
+            Case "Heart of Tarrasque"
+                tooltip = "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration"
+                Return tooltip
+            Case "Helm of Iron Will"
+                tooltip = "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration"
+                Return tooltip
+            Case "Helm of the Dominator"
+                tooltip = "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)"
+                Return tooltip
+            Case "Hood of Defiance"
+                tooltip = "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration"
+                Return tooltip
+            Case "Hyperstone"
+                tooltip = "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed"
+                Return tooltip
+            Case "Iron Branch"
+                tooltip = "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes"
+                Return tooltip
+            Case "Javelin"
+                tooltip = "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage"
+                Return tooltip
+            Case "Linken's Sphere"
+                tooltip = "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block"
+                Return tooltip
+            Case "Maelstrom"
+                tooltip = "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning"
+                Return tooltip
+            Case "Magic Stick"
+                tooltip = "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)"
+                Return tooltip
+            Case "Magic Wand"
+                tooltip = "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)"
+                Return tooltip
+            Case "Manta Style"
+                tooltip = "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)"
+                Return tooltip
+            Case "Mantle of Intelligence"
+                tooltip = "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence"
+                Return tooltip
+            Case "Mask of Madness"
+                tooltip = "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)"
+                Return tooltip
+            Case "Medallion of Courage"
+                tooltip = "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)"
+                Return tooltip
+            Case "Mekansm"
+                tooltip = "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)"
+                Return tooltip
+            Case "Mithril Hammer"
+                tooltip = "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage"
+                Return tooltip
+            Case "Mjollnir"
+                tooltip = "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)"
+                Return tooltip
+            Case "Monkey King Bar"
+                tooltip = "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash"
+                Return tooltip
+            Case "Morbid Mask"
+                tooltip = "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal"
+                Return tooltip
+            Case "Mystic Staff"
+                tooltip = "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence"
+                Return tooltip
+            Case "Necronomicon 1"
+                tooltip = "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)"
+                Return tooltip
+            Case "Necronomicon 2"
+                tooltip = "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)"
+                Return tooltip
+            Case "Necronomicon 3"
+                tooltip = "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)"
+                Return tooltip
+            Case "Null Talisman"
+                tooltip = "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility"
+                Return tooltip
+            Case "Oblivion Staff"
+                tooltip = "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration"
+                Return tooltip
+            Case "Observer Ward"
+                tooltip = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges"
+                Return tooltip
+            Case "Ogre Club"
+                tooltip = "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength"
+                Return tooltip
+            Case "Orb of Venom"
+                tooltip = "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack"
+                Return tooltip
+            Case "Orchid Malevolence"
+                tooltip = "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)"
+                Return tooltip
+            Case "Perseverance"
+                tooltip = "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration"
+                Return tooltip
+            Case "Phase Boots"
+                tooltip = "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
+                Return tooltip
+            Case "Pipe of Insight"
+                tooltip = "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)"
+                Return tooltip
+            Case "Platemail"
+                tooltip = "Platemail" + vbNewLine + vbNewLine + "+10 Armor"
+                Return tooltip
+            Case "Point Booster"
+                tooltip = "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana"
+                Return tooltip
+            Case "Poor Man's Shield"
+                tooltip = "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block"
+                Return tooltip
+            Case "Power Treads"
+                tooltip = "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
+                Return tooltip
+            Case "Quarterstaff"
+                tooltip = "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed"
+                Return tooltip
+            Case "Quelling Blade"
+                tooltip = "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)"
+                Return tooltip
+            Case "Radiance"
+                tooltip = "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage"
+                Return tooltip
+            Case "Reaver"
+                tooltip = "Reaver" + vbNewLine + vbNewLine + "+25 Strength"
+                Return tooltip
+            Case "Refresher Orb"
+                tooltip = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
+                Return tooltip
+            Case "Ring of Basilius"
+                tooltip = "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura"
+                Return tooltip
+            Case "Ring of Health"
+                tooltip = "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration"
+                Return tooltip
+            Case "Ring of Protection"
+                tooltip = "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor"
+                Return tooltip
+            Case "Ring of Regen"
+                tooltip = "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration"
+                Return tooltip
+            Case "Robe of the Magi"
+                tooltip = "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence"
+                Return tooltip
+            Case "Sacred Relic"
+                tooltip = "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage"
+                Return tooltip
+            Case "Sage's Mask"
+                tooltip = "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration"
+                Return tooltip
+            Case "Sange"
+                tooltip = "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim"
+                Return tooltip
+            Case "Sange and Yasha"
+                tooltip = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim"
+                Return tooltip
+            Case "Satanic"
+                tooltip = "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+25% Lifesteal" + vbNewLine + "Unholy Rage (active)"
+                Return tooltip
+            Case "Scythe of Vyse"
+                tooltip = "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)"
+                Return tooltip
+            Case "Sentry Ward"
+                tooltip = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight " + vbNewLine + "2 Charges"
+                Return tooltip
+            Case "Shadow Blade"
+                tooltip = "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)"
+                Return tooltip
+            Case "Shiva's Guard"
+                tooltip = "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)"
+                Return tooltip
+            Case "Skull Basher"
+                tooltip = "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash"
+                Return tooltip
+            Case "Slippers of Agility"
+                tooltip = "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility"
+                Return tooltip
+            Case "Smoke of Deceit"
+                tooltip = "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges"
+                Return tooltip
+            Case "Soul Booster"
+                tooltip = "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration"
+                Return tooltip
+            Case "Soul Ring"
+                tooltip = "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)"
+                Return tooltip
+            Case "Staff of Wizardry"
+                tooltip = "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence"
+                Return tooltip
+            Case "Stout Shield"
+                tooltip = "Stout Shield" + vbNewLine + vbNewLine + "Damage Block"
+                Return tooltip
+            Case "Talisman of Evasion"
+                tooltip = "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion"
+                Return tooltip
+            Case "Tango"
+                tooltip = "Tango" + vbNewLine + vbNewLine + "Eat Tree" + vbNewLine + "3 Charges"
+                Return tooltip
+            Case "Town Portal Scroll"
+                tooltip = "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport" + vbNewLine + "1 Charges"
+                Return tooltip
+            Case "Ultimate Orb"
+                tooltip = "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes"
+                Return tooltip
+            Case "Urn of Shadows"
+                tooltip = "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)"
+                Return tooltip
+            Case "Vanguard"
+                tooltip = "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+275 HP" + vbNewLine + "Damage Block"
+                Return tooltip
+            Case "Veil of Discord"
+                tooltip = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)"
+                Return tooltip
+            Case "Vitality Booster"
+                tooltip = "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP"
+                Return tooltip
+            Case "Vladmir's Offering"
+                tooltip = "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura"
+                Return tooltip
+            Case "Void Stone"
+                tooltip = "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration"
+                Return tooltip
+            Case "Wraith Band"
+                tooltip = "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence"
+                Return tooltip
+            Case "Yasha"
+                tooltip = "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed"
+                Return tooltip
+            Case "Abyssal Blade"
+                tooltip = "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)"
+                Return tooltip
+            Case "Heaven's Halberd"
+                tooltip = "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)"
+                Return tooltip
+            Case "Ring of Aquila"
+                tooltip = "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura"
+                Return tooltip
+            Case "Rod of Atos"
+                tooltip = "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)"
+                Return tooltip
+            Case "Tranquil Boots"
+                tooltip = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
+                Return tooltip
+            Case Else
+                tooltip = "Error!"
+                Return tooltip
+        End Select
     End Function
 
     'TARGET PICTUREBOXES
@@ -2587,11 +2794,12 @@ Public Class FormMain
         PictureBox1.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox1.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox1, GetToolTip(PictureBox1.Image))
+            ToolTip1.SetToolTip(PictureBox1, GetToolTip(PicRes2Name(PictureBox1.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox1, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox2_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox2.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2605,11 +2813,12 @@ Public Class FormMain
         PictureBox2.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox2.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox2, GetToolTip(PictureBox2.Image))
+            ToolTip1.SetToolTip(PictureBox2, GetToolTip(PicRes2Name(PictureBox2.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox2, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox3_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox3.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2623,11 +2832,12 @@ Public Class FormMain
         PictureBox3.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox3.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox3, GetToolTip(PictureBox3.Image))
+            ToolTip1.SetToolTip(PictureBox3, GetToolTip(PicRes2Name(PictureBox3.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox3, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox4_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox4.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2641,11 +2851,12 @@ Public Class FormMain
         PictureBox4.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox4.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox4, GetToolTip(PictureBox4.Image))
+            ToolTip1.SetToolTip(PictureBox4, GetToolTip(PicRes2Name(PictureBox4.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox4, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox5_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox5.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2659,11 +2870,12 @@ Public Class FormMain
         PictureBox5.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox5.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox5, GetToolTip(PictureBox5.Image))
+            ToolTip1.SetToolTip(PictureBox5, GetToolTip(PicRes2Name(PictureBox5.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox5, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox6_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox6.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2677,11 +2889,12 @@ Public Class FormMain
         PictureBox6.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox6.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox6, GetToolTip(PictureBox6.Image))
+            ToolTip1.SetToolTip(PictureBox6, GetToolTip(PicRes2Name(PictureBox6.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox6, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox7_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox7.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2695,11 +2908,12 @@ Public Class FormMain
         PictureBox7.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox7.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox7, GetToolTip(PictureBox7.Image))
+            ToolTip1.SetToolTip(PictureBox7, GetToolTip(PicRes2Name(PictureBox7.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox7, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox8_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox8.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2713,11 +2927,12 @@ Public Class FormMain
         PictureBox8.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox8.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox8, GetToolTip(PictureBox8.Image))
+            ToolTip1.SetToolTip(PictureBox8, GetToolTip(PicRes2Name(PictureBox8.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox8, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox9_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox9.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2731,11 +2946,12 @@ Public Class FormMain
         PictureBox9.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox9.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox9, GetToolTip(PictureBox9.Image))
+            ToolTip1.SetToolTip(PictureBox9, GetToolTip(PicRes2Name(PictureBox9.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox9, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox10_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox10.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2749,11 +2965,12 @@ Public Class FormMain
         PictureBox10.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox10.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox10, GetToolTip(PictureBox10.Image))
+            ToolTip1.SetToolTip(PictureBox10, GetToolTip(PicRes2Name(PictureBox10.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox10, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox11_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox11.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2767,11 +2984,12 @@ Public Class FormMain
         PictureBox11.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox11.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox11, GetToolTip(PictureBox11.Image))
+            ToolTip1.SetToolTip(PictureBox11, GetToolTip(PicRes2Name(PictureBox11.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox11, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox12_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox12.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2785,11 +3003,12 @@ Public Class FormMain
         PictureBox12.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox12.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox12, GetToolTip(PictureBox12.Image))
+            ToolTip1.SetToolTip(PictureBox12, GetToolTip(PicRes2Name(PictureBox12.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox12, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox13_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox13.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2803,11 +3022,12 @@ Public Class FormMain
         PictureBox13.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox13.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox13, GetToolTip(PictureBox13.Image))
+            ToolTip1.SetToolTip(PictureBox13, GetToolTip(PicRes2Name(PictureBox13.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox13, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox14_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox14.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2821,11 +3041,12 @@ Public Class FormMain
         PictureBox14.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox14.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox14, GetToolTip(PictureBox14.Image))
+            ToolTip1.SetToolTip(PictureBox14, GetToolTip(PicRes2Name(PictureBox14.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox14, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox15_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox15.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2839,11 +3060,12 @@ Public Class FormMain
         PictureBox15.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox15.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox15, GetToolTip(PictureBox15.Image))
+            ToolTip1.SetToolTip(PictureBox15, GetToolTip(PicRes2Name(PictureBox15.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox15, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox16_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox16.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2857,11 +3079,12 @@ Public Class FormMain
         PictureBox16.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox16.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox16, GetToolTip(PictureBox16.Image))
+            ToolTip1.SetToolTip(PictureBox16, GetToolTip(PicRes2Name(PictureBox16.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox16, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox17_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox17.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2875,11 +3098,12 @@ Public Class FormMain
         PictureBox17.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox17.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox17, GetToolTip(PictureBox17.Image))
+            ToolTip1.SetToolTip(PictureBox17, GetToolTip(PicRes2Name(PictureBox17.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox17, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox18_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox18.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2893,11 +3117,12 @@ Public Class FormMain
         PictureBox18.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox18.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox18, GetToolTip(PictureBox18.Image))
+            ToolTip1.SetToolTip(PictureBox18, GetToolTip(PicRes2Name(PictureBox18.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox18, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox19_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox19.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2911,11 +3136,12 @@ Public Class FormMain
         PictureBox19.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox19.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox19, GetToolTip(PictureBox19.Image))
+            ToolTip1.SetToolTip(PictureBox19, GetToolTip(PicRes2Name(PictureBox19.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox19, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox20_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox20.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2929,11 +3155,12 @@ Public Class FormMain
         PictureBox20.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox20.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox20, GetToolTip(PictureBox20.Image))
+            ToolTip1.SetToolTip(PictureBox20, GetToolTip(PicRes2Name(PictureBox20.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox20, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox21_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox21.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2947,11 +3174,12 @@ Public Class FormMain
         PictureBox21.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox21.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox21, GetToolTip(PictureBox21.Image))
+            ToolTip1.SetToolTip(PictureBox21, GetToolTip(PicRes2Name(PictureBox21.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox21, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox22_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox22.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2965,11 +3193,12 @@ Public Class FormMain
         PictureBox22.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox22.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox22, GetToolTip(PictureBox22.Image))
+            ToolTip1.SetToolTip(PictureBox22, GetToolTip(PicRes2Name(PictureBox22.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox22, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox23_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox23.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -2983,11 +3212,12 @@ Public Class FormMain
         PictureBox23.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox23.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox23, GetToolTip(PictureBox23.Image))
+            ToolTip1.SetToolTip(PictureBox23, GetToolTip(PicRes2Name(PictureBox23.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox23, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox24_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox24.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -3001,11 +3231,12 @@ Public Class FormMain
         PictureBox24.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox24.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox24, GetToolTip(PictureBox24.Image))
+            ToolTip1.SetToolTip(PictureBox24, GetToolTip(PicRes2Name(PictureBox24.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox24, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox25_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox25.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -3019,11 +3250,12 @@ Public Class FormMain
         PictureBox25.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox25.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox25, GetToolTip(PictureBox25.Image))
+            ToolTip1.SetToolTip(PictureBox25, GetToolTip(PicRes2Name(PictureBox25.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox25, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox26_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox26.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -3037,11 +3269,12 @@ Public Class FormMain
         PictureBox26.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox26.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox26, GetToolTip(PictureBox26.Image))
+            ToolTip1.SetToolTip(PictureBox26, GetToolTip(PicRes2Name(PictureBox26.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox26, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox27_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox27.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -3055,11 +3288,12 @@ Public Class FormMain
         PictureBox27.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox27.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox27, GetToolTip(PictureBox27.Image))
+            ToolTip1.SetToolTip(PictureBox27, GetToolTip(PicRes2Name(PictureBox27.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox27, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox28_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox28.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -3073,11 +3307,12 @@ Public Class FormMain
         PictureBox28.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox28.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox28, GetToolTip(PictureBox28.Image))
+            ToolTip1.SetToolTip(PictureBox28, GetToolTip(PicRes2Name(PictureBox28.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox28, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox29_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox29.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -3091,11 +3326,12 @@ Public Class FormMain
         PictureBox29.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox29.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox29, GetToolTip(PictureBox29.Image))
+            ToolTip1.SetToolTip(PictureBox29, GetToolTip(PicRes2Name(PictureBox29.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox29, "none")
         End If
     End Sub
+
 
     Private Sub PictureBox30_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox30.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
@@ -3109,552 +3345,11 @@ Public Class FormMain
         PictureBox30.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         If Not doImagesMatch(PictureBox30.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox30, GetToolTip(PictureBox30.Image))
+            ToolTip1.SetToolTip(PictureBox30, GetToolTip(PicRes2Name(PictureBox30.Image)))
         Else
             ToolTip1.SetToolTip(PictureBox30, "none")
         End If
     End Sub
-
-    Private Sub PictureBox160_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox160.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox160_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox160.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox160.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox160.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox160, GetToolTip(PictureBox160.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox160, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox161_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox161.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox161_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox161.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox161.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox161.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox161, GetToolTip(PictureBox161.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox161, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox162_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox162.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox162_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox162.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox162.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox162.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox162, GetToolTip(PictureBox162.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox162, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox163_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox163.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox163_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox163.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox163.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox163.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox163, GetToolTip(PictureBox163.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox163, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox164_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox164.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox164_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox164.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox164.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox164.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox164, GetToolTip(PictureBox164.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox164, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox165_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox165.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox165_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox165.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox165.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox165.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox165, GetToolTip(PictureBox165.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox165, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox166_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox166.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox166_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox166.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox166.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox166.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox166, GetToolTip(PictureBox166.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox166, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox167_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox167.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox167_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox167.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox167.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox167.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox167, GetToolTip(PictureBox167.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox167, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox168_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox168.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox168_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox168.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox168.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox168.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox168, GetToolTip(PictureBox168.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox168, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox169_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox169.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox169_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox169.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox169.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox169.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox169, GetToolTip(PictureBox169.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox169, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox170_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox170.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox170_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox170.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox170.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox170.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox170, GetToolTip(PictureBox170.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox170, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox171_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox171.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox171_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox171.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox171.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox171.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox171, GetToolTip(PictureBox171.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox171, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox172_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox172.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox172_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox172.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox172.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox172.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox172, GetToolTip(PictureBox172.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox172, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox173_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox173.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox173_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox173.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox173.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox173.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox173, GetToolTip(PictureBox173.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox173, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox174_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox174.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox174_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox174.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox174.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox174.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox174, GetToolTip(PictureBox174.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox174, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox175_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox175.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox175_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox175.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox175.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox175.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox175, GetToolTip(PictureBox175.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox175, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox176_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox176.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox176_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox176.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox176.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox176.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox176, GetToolTip(PictureBox176.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox176, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox177_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox177.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox177_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox177.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox177.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox177.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox177, GetToolTip(PictureBox177.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox177, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox178_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox178.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox178_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox178.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox178.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox178.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox178, GetToolTip(PictureBox178.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox178, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox179_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox179.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox179_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox179.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox179.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox179.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox179, GetToolTip(PictureBox179.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox179, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox180_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox180.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox180_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox180.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox180.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox180.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox180, GetToolTip(PictureBox180.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox180, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox181_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox181.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox181_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox181.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox181.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox181.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox181, GetToolTip(PictureBox181.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox181, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox182_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox182.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox182_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox182.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox182.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox182.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox182, GetToolTip(PictureBox182.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox182, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox183_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox183.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox183_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox183.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox183.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox183.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox183, GetToolTip(PictureBox183.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox183, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox184_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox184.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox184_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox184.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox184.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox184.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox184, GetToolTip(PictureBox184.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox184, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox185_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox185.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox185_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox185.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox185.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox185.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox185, GetToolTip(PictureBox185.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox185, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox186_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox186.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox186_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox186.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox186.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox186.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox186, GetToolTip(PictureBox186.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox186, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox187_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox187.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox187_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox187.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox187.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox187.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox187, GetToolTip(PictureBox187.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox187, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox188_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox188.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox188_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox188.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox188.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox188.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox188, GetToolTip(PictureBox188.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox188, "none")
-        End If
-    End Sub
-
-    Private Sub PictureBox189_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox189.DragEnter
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
-    Private Sub PictureBox189_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox189.DragDrop
-        ' Assign the image to the PictureBox. 
-        PictureBox189.Image = e.Data.GetData(DataFormats.Bitmap)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox189.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox189, GetToolTip(PictureBox189.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox189, "none")
-        End If
-    End Sub
-
 
     'SOURCE PICTUREBOXES
     Private Sub PictureBox31_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox31.MouseDown
@@ -3775,7 +3470,7 @@ Public Class FormMain
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox39MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox39.MouseMove
+    Private Sub PictureBox39_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox39.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
             PictureBox39.DoDragDrop(PictureBox39.Image, DragDropEffects.Copy)
@@ -5463,2016 +5158,104 @@ Public Class FormMain
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox190_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox190.MouseDown
-        If Not PictureBox190.Image Is Nothing Then
+    Private Sub PictureBox160_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox160.MouseDown
+        If Not PictureBox160.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox190_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox190.MouseMove
+    Private Sub PictureBox160_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox160.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
-            PictureBox190.DoDragDrop(PictureBox190.Image, DragDropEffects.Copy)
+            PictureBox160.DoDragDrop(PictureBox160.Image, DragDropEffects.Copy)
         End If
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox191_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox191.MouseDown
-        If Not PictureBox191.Image Is Nothing Then
+    Private Sub PictureBox161_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox161.MouseDown
+        If Not PictureBox161.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox191_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox191.MouseMove
+    Private Sub PictureBox161_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox161.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
-            PictureBox191.DoDragDrop(PictureBox191.Image, DragDropEffects.Copy)
+            PictureBox161.DoDragDrop(PictureBox161.Image, DragDropEffects.Copy)
         End If
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox192_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox192.MouseDown
-        If Not PictureBox192.Image Is Nothing Then
+    Private Sub PictureBox162_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox162.MouseDown
+        If Not PictureBox162.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox192_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox192.MouseMove
+    Private Sub PictureBox162_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox162.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
-            PictureBox192.DoDragDrop(PictureBox192.Image, DragDropEffects.Copy)
+            PictureBox162.DoDragDrop(PictureBox162.Image, DragDropEffects.Copy)
         End If
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox193_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox193.MouseDown
-        If Not PictureBox193.Image Is Nothing Then
+    Private Sub PictureBox163_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox163.MouseDown
+        If Not PictureBox163.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox193_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox193.MouseMove
+    Private Sub PictureBox163_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox163.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
-            PictureBox193.DoDragDrop(PictureBox193.Image, DragDropEffects.Copy)
+            PictureBox163.DoDragDrop(PictureBox163.Image, DragDropEffects.Copy)
         End If
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox194_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox194.MouseDown
-        If Not PictureBox194.Image Is Nothing Then
+    Private Sub PictureBox164_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox164.MouseDown
+        If Not PictureBox164.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox194_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox194.MouseMove
+    Private Sub PictureBox164_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox164.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
-            PictureBox194.DoDragDrop(PictureBox194.Image, DragDropEffects.Copy)
+            PictureBox164.DoDragDrop(PictureBox164.Image, DragDropEffects.Copy)
         End If
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox195_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox195.MouseDown
-        If Not PictureBox195.Image Is Nothing Then
+    Private Sub PictureBox165_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox165.MouseDown
+        If Not PictureBox165.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox195_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox195.MouseMove
+    Private Sub PictureBox165_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox165.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
-            PictureBox195.DoDragDrop(PictureBox195.Image, DragDropEffects.Copy)
+            PictureBox165.DoDragDrop(PictureBox165.Image, DragDropEffects.Copy)
         End If
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox196_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox196.MouseDown
-        If Not PictureBox196.Image Is Nothing Then
+    Private Sub PictureBox166_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox166.MouseDown
+        If Not PictureBox166.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
         End If
     End Sub
-    Private Sub PictureBox196_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox196.MouseMove
+    Private Sub PictureBox166_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox166.MouseMove
         If m_MouseIsDown Then
             ' Initiate dragging and allow either copy. 
-            PictureBox196.DoDragDrop(PictureBox196.Image, DragDropEffects.Copy)
+            PictureBox166.DoDragDrop(PictureBox166.Image, DragDropEffects.Copy)
         End If
         m_MouseIsDown = False
     End Sub
 
-    Private Sub PictureBox197_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox197.MouseDown
-        If Not PictureBox197.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox197_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox197.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox197.DoDragDrop(PictureBox197.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox198_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox198.MouseDown
-        If Not PictureBox198.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox198_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox198.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox198.DoDragDrop(PictureBox198.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox199_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox199.MouseDown
-        If Not PictureBox199.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox199_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox199.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox199.DoDragDrop(PictureBox199.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox200_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox200.MouseDown
-        If Not PictureBox200.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox200_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox200.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox200.DoDragDrop(PictureBox200.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox201_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox201.MouseDown
-        If Not PictureBox201.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox201_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox201.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox201.DoDragDrop(PictureBox201.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox202_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox202.MouseDown
-        If Not PictureBox202.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox202_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox202.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox202.DoDragDrop(PictureBox202.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox203_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox203.MouseDown
-        If Not PictureBox203.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox203_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox203.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox203.DoDragDrop(PictureBox203.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox204_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox204.MouseDown
-        If Not PictureBox204.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox204_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox204.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox204.DoDragDrop(PictureBox204.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox205_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox205.MouseDown
-        If Not PictureBox205.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox205_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox205.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox205.DoDragDrop(PictureBox205.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox206_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox206.MouseDown
-        If Not PictureBox206.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox206_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox206.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox206.DoDragDrop(PictureBox206.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox207_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox207.MouseDown
-        If Not PictureBox207.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox207_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox207.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox207.DoDragDrop(PictureBox207.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox208_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox208.MouseDown
-        If Not PictureBox208.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox208_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox208.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox208.DoDragDrop(PictureBox208.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox209_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox209.MouseDown
-        If Not PictureBox209.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox209_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox209.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox209.DoDragDrop(PictureBox209.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox210_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox210.MouseDown
-        If Not PictureBox210.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox210_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox210.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox210.DoDragDrop(PictureBox210.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox211_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox211.MouseDown
-        If Not PictureBox211.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox211_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox211.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox211.DoDragDrop(PictureBox211.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox212_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox212.MouseDown
-        If Not PictureBox212.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox212_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox212.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox212.DoDragDrop(PictureBox212.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox213_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox213.MouseDown
-        If Not PictureBox213.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox213_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox213.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox213.DoDragDrop(PictureBox213.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox214_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox214.MouseDown
-        If Not PictureBox214.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox214_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox214.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox214.DoDragDrop(PictureBox214.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox215_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox215.MouseDown
-        If Not PictureBox215.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox215_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox215.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox215.DoDragDrop(PictureBox215.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox216_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox216.MouseDown
-        If Not PictureBox216.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox216_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox216.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox216.DoDragDrop(PictureBox216.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox217_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox217.MouseDown
-        If Not PictureBox217.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox217_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox217.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox217.DoDragDrop(PictureBox217.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox218_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox218.MouseDown
-        If Not PictureBox218.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox218_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox218.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox218.DoDragDrop(PictureBox218.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox219_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox219.MouseDown
-        If Not PictureBox219.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox219_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox219.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox219.DoDragDrop(PictureBox219.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox220_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox220.MouseDown
-        If Not PictureBox220.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox220_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox220.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox220.DoDragDrop(PictureBox220.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox221_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox221.MouseDown
-        If Not PictureBox221.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox221_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox221.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox221.DoDragDrop(PictureBox221.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox222_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox222.MouseDown
-        If Not PictureBox222.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox222_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox222.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox222.DoDragDrop(PictureBox222.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox223_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox223.MouseDown
-        If Not PictureBox223.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox223_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox223.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox223.DoDragDrop(PictureBox223.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox224_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox224.MouseDown
-        If Not PictureBox224.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox224_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox224.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox224.DoDragDrop(PictureBox224.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox225_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox225.MouseDown
-        If Not PictureBox225.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox225_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox225.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox225.DoDragDrop(PictureBox225.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox226_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox226.MouseDown
-        If Not PictureBox226.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox226_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox226.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox226.DoDragDrop(PictureBox226.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox227_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox227.MouseDown
-        If Not PictureBox227.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox227_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox227.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox227.DoDragDrop(PictureBox227.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox228_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox228.MouseDown
-        If Not PictureBox228.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox228_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox228.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox228.DoDragDrop(PictureBox228.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox229_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox229.MouseDown
-        If Not PictureBox229.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox229_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox229.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox229.DoDragDrop(PictureBox229.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox230_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox230.MouseDown
-        If Not PictureBox230.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox230_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox230.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox230.DoDragDrop(PictureBox230.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox231_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox231.MouseDown
-        If Not PictureBox231.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox231_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox231.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox231.DoDragDrop(PictureBox231.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox232_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox232.MouseDown
-        If Not PictureBox232.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox232_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox232.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox232.DoDragDrop(PictureBox232.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox233_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox233.MouseDown
-        If Not PictureBox233.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox233_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox233.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox233.DoDragDrop(PictureBox233.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox234_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox234.MouseDown
-        If Not PictureBox234.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox234_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox234.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox234.DoDragDrop(PictureBox234.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox235_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox235.MouseDown
-        If Not PictureBox235.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox235_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox235.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox235.DoDragDrop(PictureBox235.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox236_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox236.MouseDown
-        If Not PictureBox236.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox236_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox236.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox236.DoDragDrop(PictureBox236.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox237_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox237.MouseDown
-        If Not PictureBox237.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox237_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox237.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox237.DoDragDrop(PictureBox237.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox238_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox238.MouseDown
-        If Not PictureBox238.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox238_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox238.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox238.DoDragDrop(PictureBox238.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox239_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox239.MouseDown
-        If Not PictureBox239.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox239_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox239.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox239.DoDragDrop(PictureBox239.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox240_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox240.MouseDown
-        If Not PictureBox240.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox240_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox240.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox240.DoDragDrop(PictureBox240.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox241_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox241.MouseDown
-        If Not PictureBox241.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox241_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox241.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox241.DoDragDrop(PictureBox241.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox242_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox242.MouseDown
-        If Not PictureBox242.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox242_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox242.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox242.DoDragDrop(PictureBox242.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox243_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox243.MouseDown
-        If Not PictureBox243.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox243_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox243.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox243.DoDragDrop(PictureBox243.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox244_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox244.MouseDown
-        If Not PictureBox244.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox244_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox244.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox244.DoDragDrop(PictureBox244.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox245_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox245.MouseDown
-        If Not PictureBox245.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox245_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox245.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox245.DoDragDrop(PictureBox245.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox246_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox246.MouseDown
-        If Not PictureBox246.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox246_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox246.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox246.DoDragDrop(PictureBox246.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox247_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox247.MouseDown
-        If Not PictureBox247.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox247_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox247.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox247.DoDragDrop(PictureBox247.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox248_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox248.MouseDown
-        If Not PictureBox248.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox248_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox248.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox248.DoDragDrop(PictureBox248.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox249_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox249.MouseDown
-        If Not PictureBox249.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox249_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox249.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox249.DoDragDrop(PictureBox249.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox250_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox250.MouseDown
-        If Not PictureBox250.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox250_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox250.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox250.DoDragDrop(PictureBox250.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox251_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox251.MouseDown
-        If Not PictureBox251.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox251_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox251.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox251.DoDragDrop(PictureBox251.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox252_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox252.MouseDown
-        If Not PictureBox252.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox252_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox252.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox252.DoDragDrop(PictureBox252.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox253_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox253.MouseDown
-        If Not PictureBox253.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox253_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox253.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox253.DoDragDrop(PictureBox253.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox254_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox254.MouseDown
-        If Not PictureBox254.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox254_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox254.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox254.DoDragDrop(PictureBox254.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox255_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox255.MouseDown
-        If Not PictureBox255.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox255_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox255.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox255.DoDragDrop(PictureBox255.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox256_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox256.MouseDown
-        If Not PictureBox256.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox256_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox256.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox256.DoDragDrop(PictureBox256.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox257_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox257.MouseDown
-        If Not PictureBox257.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox257_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox257.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox257.DoDragDrop(PictureBox257.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox258_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox258.MouseDown
-        If Not PictureBox258.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox258_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox258.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox258.DoDragDrop(PictureBox258.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox259_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox259.MouseDown
-        If Not PictureBox259.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox259_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox259.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox259.DoDragDrop(PictureBox259.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox260_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox260.MouseDown
-        If Not PictureBox260.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox260_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox260.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox260.DoDragDrop(PictureBox260.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox261_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox261.MouseDown
-        If Not PictureBox261.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox261_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox261.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox261.DoDragDrop(PictureBox261.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox262_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox262.MouseDown
-        If Not PictureBox262.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox262_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox262.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox262.DoDragDrop(PictureBox262.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox263_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox263.MouseDown
-        If Not PictureBox263.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox263_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox263.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox263.DoDragDrop(PictureBox263.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox264_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox264.MouseDown
-        If Not PictureBox264.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox264_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox264.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox264.DoDragDrop(PictureBox264.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox265_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox265.MouseDown
-        If Not PictureBox265.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox265_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox265.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox265.DoDragDrop(PictureBox265.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox266_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox266.MouseDown
-        If Not PictureBox266.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox266_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox266.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox266.DoDragDrop(PictureBox266.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox267_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox267.MouseDown
-        If Not PictureBox267.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox267_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox267.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox267.DoDragDrop(PictureBox267.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox268_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox268.MouseDown
-        If Not PictureBox268.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox268_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox268.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox268.DoDragDrop(PictureBox268.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox269_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox269.MouseDown
-        If Not PictureBox269.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox269_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox269.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox269.DoDragDrop(PictureBox269.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox270_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox270.MouseDown
-        If Not PictureBox270.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox270_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox270.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox270.DoDragDrop(PictureBox270.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox271_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox271.MouseDown
-        If Not PictureBox271.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox271_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox271.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox271.DoDragDrop(PictureBox271.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox272_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox272.MouseDown
-        If Not PictureBox272.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox272_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox272.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox272.DoDragDrop(PictureBox272.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox273_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox273.MouseDown
-        If Not PictureBox273.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox273_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox273.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox273.DoDragDrop(PictureBox273.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox274_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox274.MouseDown
-        If Not PictureBox274.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox274_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox274.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox274.DoDragDrop(PictureBox274.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox275_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox275.MouseDown
-        If Not PictureBox275.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox275_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox275.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox275.DoDragDrop(PictureBox275.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox276_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox276.MouseDown
-        If Not PictureBox276.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox276_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox276.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox276.DoDragDrop(PictureBox276.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox277_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox277.MouseDown
-        If Not PictureBox277.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox277_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox277.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox277.DoDragDrop(PictureBox277.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox278_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox278.MouseDown
-        If Not PictureBox278.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox278_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox278.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox278.DoDragDrop(PictureBox278.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox279_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox279.MouseDown
-        If Not PictureBox279.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox279_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox279.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox279.DoDragDrop(PictureBox279.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox280_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox280.MouseDown
-        If Not PictureBox280.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox280_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox280.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox280.DoDragDrop(PictureBox280.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox281_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox281.MouseDown
-        If Not PictureBox281.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox281_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox281.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox281.DoDragDrop(PictureBox281.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox282_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox282.MouseDown
-        If Not PictureBox282.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox282_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox282.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox282.DoDragDrop(PictureBox282.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox283_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox283.MouseDown
-        If Not PictureBox283.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox283_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox283.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox283.DoDragDrop(PictureBox283.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox284_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox284.MouseDown
-        If Not PictureBox284.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox284_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox284.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox284.DoDragDrop(PictureBox284.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox285_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox285.MouseDown
-        If Not PictureBox285.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox285_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox285.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox285.DoDragDrop(PictureBox285.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox286_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox286.MouseDown
-        If Not PictureBox286.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox286_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox286.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox286.DoDragDrop(PictureBox286.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox287_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox287.MouseDown
-        If Not PictureBox287.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox287_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox287.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox287.DoDragDrop(PictureBox287.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox288_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox288.MouseDown
-        If Not PictureBox288.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox288_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox288.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox288.DoDragDrop(PictureBox288.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox289_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox289.MouseDown
-        If Not PictureBox289.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox289_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox289.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox289.DoDragDrop(PictureBox289.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox290_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox290.MouseDown
-        If Not PictureBox290.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox290_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox290.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox290.DoDragDrop(PictureBox290.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox291_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox291.MouseDown
-        If Not PictureBox291.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox291_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox291.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox291.DoDragDrop(PictureBox291.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox292_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox292.MouseDown
-        If Not PictureBox292.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox292_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox292.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox292.DoDragDrop(PictureBox292.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox293_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox293.MouseDown
-        If Not PictureBox293.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox293_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox293.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox293.DoDragDrop(PictureBox293.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox294_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox294.MouseDown
-        If Not PictureBox294.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox294_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox294.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox294.DoDragDrop(PictureBox294.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox295_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox295.MouseDown
-        If Not PictureBox295.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox295_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox295.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox295.DoDragDrop(PictureBox295.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox296_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox296.MouseDown
-        If Not PictureBox296.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox296_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox296.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox296.DoDragDrop(PictureBox296.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox297_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox297.MouseDown
-        If Not PictureBox297.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox297_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox297.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox297.DoDragDrop(PictureBox297.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox298_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox298.MouseDown
-        If Not PictureBox298.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox298_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox298.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox298.DoDragDrop(PictureBox298.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox299_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox299.MouseDown
-        If Not PictureBox299.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox299_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox299.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox299.DoDragDrop(PictureBox299.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox300_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox300.MouseDown
-        If Not PictureBox300.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox300_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox300.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox300.DoDragDrop(PictureBox300.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox301_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox301.MouseDown
-        If Not PictureBox301.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox301_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox301.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox301.DoDragDrop(PictureBox301.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox302_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox302.MouseDown
-        If Not PictureBox302.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox302_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox302.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox302.DoDragDrop(PictureBox302.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox303_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox303.MouseDown
-        If Not PictureBox303.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox303_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox303.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox303.DoDragDrop(PictureBox303.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox304_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox304.MouseDown
-        If Not PictureBox304.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox304_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox304.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox304.DoDragDrop(PictureBox304.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox305_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox305.MouseDown
-        If Not PictureBox305.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox305_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox305.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox305.DoDragDrop(PictureBox305.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox306_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox306.MouseDown
-        If Not PictureBox306.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox306_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox306.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox306.DoDragDrop(PictureBox306.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox307_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox307.MouseDown
-        If Not PictureBox307.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox307_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox307.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox307.DoDragDrop(PictureBox307.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox308_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox308.MouseDown
-        If Not PictureBox308.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox308_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox308.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox308.DoDragDrop(PictureBox308.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox309_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox309.MouseDown
-        If Not PictureBox309.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox309_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox309.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox309.DoDragDrop(PictureBox309.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox310_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox310.MouseDown
-        If Not PictureBox310.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox310_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox310.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox310.DoDragDrop(PictureBox310.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox311_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox311.MouseDown
-        If Not PictureBox311.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox311_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox311.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox311.DoDragDrop(PictureBox311.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox312_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox312.MouseDown
-        If Not PictureBox312.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox312_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox312.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox312.DoDragDrop(PictureBox312.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox313_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox313.MouseDown
-        If Not PictureBox313.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox313_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox313.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox313.DoDragDrop(PictureBox313.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox314_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox314.MouseDown
-        If Not PictureBox314.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox314_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox314.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox314.DoDragDrop(PictureBox314.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox315_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox315.MouseDown
-        If Not PictureBox315.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox315_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox315.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox315.DoDragDrop(PictureBox315.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox316_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox316.MouseDown
-        If Not PictureBox316.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox316_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox316.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox316.DoDragDrop(PictureBox316.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox317_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox317.MouseDown
-        If Not PictureBox317.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox317_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox317.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox317.DoDragDrop(PictureBox317.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox318_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox318.MouseDown
-        If Not PictureBox318.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox318_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox318.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox318.DoDragDrop(PictureBox318.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox319_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox319.MouseDown
-        If Not PictureBox319.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox319_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox319.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox319.DoDragDrop(PictureBox319.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox320_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox320.MouseDown
-        If Not PictureBox320.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox320_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox320.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox320.DoDragDrop(PictureBox320.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox321_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox321.MouseDown
-        If Not PictureBox321.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox321_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox321.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox321.DoDragDrop(PictureBox321.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox322_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox322.MouseDown
-        If Not PictureBox322.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox322_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox322.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox322.DoDragDrop(PictureBox322.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox323_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox323.MouseDown
-        If Not PictureBox323.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox323_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox323.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox323.DoDragDrop(PictureBox323.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox324_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox324.MouseDown
-        If Not PictureBox324.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox324_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox324.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox324.DoDragDrop(PictureBox324.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox325_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox325.MouseDown
-        If Not PictureBox325.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox325_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox325.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox325.DoDragDrop(PictureBox325.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox326_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox326.MouseDown
-        If Not PictureBox326.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox326_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox326.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox326.DoDragDrop(PictureBox326.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox327_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox327.MouseDown
-        If Not PictureBox327.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox327_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox327.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox327.DoDragDrop(PictureBox327.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox328_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox328.MouseDown
-        If Not PictureBox328.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox328_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox328.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox328.DoDragDrop(PictureBox328.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox329_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox329.MouseDown
-        If Not PictureBox329.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox329_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox329.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox329.DoDragDrop(PictureBox329.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox330_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox330.MouseDown
-        If Not PictureBox330.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox330_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox330.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox330.DoDragDrop(PictureBox330.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox331_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox331.MouseDown
-        If Not PictureBox331.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox331_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox331.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox331.DoDragDrop(PictureBox331.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-
-    Private Sub PictureBox332_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox332.MouseDown
-        If Not PictureBox332.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-        End If
-    End Sub
-    Private Sub PictureBox332_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox332.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox332.DoDragDrop(PictureBox332.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
 
     Private Sub ButtonOpenFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenFolder.Click
         System.Diagnostics.Process.Start("explorer", My.Settings.path)
@@ -7521,19 +5304,20 @@ Public Class FormMain
         End If
     End Sub
 
-    Dim OpenFileDialog1 As OpenFileDialog = New OpenFileDialog
     Private Sub ButtonOpenTextfile_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenTextfile.Click
-        OpenFileDialog1.Filter = "txt(*.txt)| *.txt"
-        OpenFileDialog1.ShowDialog()
-        If OpenFileDialog1.FileName <> "" Then
-            If IO.File.Exists(OpenFileDialog1.FileName) Then
-                TextBox2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
+        Using OpenFileDialog1 As OpenFileDialog = New OpenFileDialog
+            OpenFileDialog1.Filter = "txt(*.txt)| *.txt"
+            OpenFileDialog1.ShowDialog()
+            If OpenFileDialog1.FileName <> "" Then
+                If IO.File.Exists(OpenFileDialog1.FileName) Then
+                    TextBox2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
+                Else
+                    MsgBox("Error while reading.")
+                End If
             Else
-                MsgBox("Error while reading.")
+                TextBox2.Text = "Error!"
             End If
-        Else
-            TextBox2.Text = "Error!"
-        End If
+        End Using
     End Sub
 
     Private Sub ButtonImport_Click(sender As System.Object, e As System.EventArgs) Handles ButtonImport.Click
@@ -7587,17 +5371,16 @@ Public Class FormMain
 
     Private Sub TabControl1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
         If TabControl1.SelectedTab Is TabPage4 Then
+            TextBox3.Text = "Please choose a hero first."
             If (Selected_Hero <> "") Then
                 SaveChanges()
                 ChangeAuthor(TextBox1.Text, Selected_Hero)
                 My.Settings.clipboard = NeuerText
-            Else
-                TextBox3.Text = "Please choose a hero first."
-            End If
-            If (My.Settings.clipboard <> "") Then
-                TextBox3.Text = My.Settings.clipboard
-            Else
-                TextBox3.Text = "Error!"
+                If (My.Settings.clipboard <> "") Then
+                    TextBox3.Text = My.Settings.clipboard
+                Else
+                    TextBox3.Text = "Error!"
+                End If
             End If
         ElseIf TabControl1.SelectedTab Is TabPage5 Then
             If (My.Settings.path <> "") Then
@@ -7608,23 +5391,26 @@ Public Class FormMain
 
     Private Sub ButtonCopy_Click(sender As System.Object, e As System.EventArgs) Handles ButtonCopy.Click
         Clipboard.Clear()
-        Clipboard.SetText(TextBox3.Text)
-    End Sub
-
-    Dim SaveFileDialog1 As SaveFileDialog = New SaveFileDialog
-    Private Sub ButtonSaveTextfile_Click(sender As System.Object, e As System.EventArgs) Handles ButtonSaveTextfile.Click
-        SaveFileDialog1.Filter = "txt(*.txt)| *.txt"
-        SaveFileDialog1.ShowDialog()
-        If SaveFileDialog1.FileName <> "" Then
-            FileOpen(1, SaveFileDialog1.FileName, OpenMode.Output)
-            PrintLine(1, TextBox3.Text)
-            FileClose(1)
-            MsgBox("File saved.")
+        If TextBox3.Text <> "" Then
+            Clipboard.SetText(TextBox3.Text)
         End If
     End Sub
 
+    Private Sub ButtonSaveTextfile_Click(sender As System.Object, e As System.EventArgs) Handles ButtonSaveTextfile.Click
+        Using SaveFileDialog1 As SaveFileDialog = New SaveFileDialog
+            SaveFileDialog1.Filter = "txt(*.txt)| *.txt"
+            SaveFileDialog1.ShowDialog()
+            If SaveFileDialog1.FileName <> "" Then
+                FileOpen(1, SaveFileDialog1.FileName, OpenMode.Output)
+                PrintLine(1, TextBox3.Text)
+                FileClose(1)
+                MsgBox("File saved.")
+            End If
+        End Using
+    End Sub
+
     Private Sub Check(ByVal dota_path As String)
-        If My.Computer.FileSystem.DirectoryExists(dota_path) = True Then
+        If My.Computer.FileSystem.DirectoryExists(dota_path) Then
             ' existiert
             My.Settings.path = dota_path
             My.Settings.Save()
@@ -7635,189 +5421,29 @@ Public Class FormMain
         End If
     End Sub
 
-    Dim FolderBrowserDialog1 As FolderBrowserDialog = New FolderBrowserDialog
     Private Sub ButtonChangeSteam_Click(sender As System.Object, e As System.EventArgs) Handles ButtonChangeSteam.Click
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
-            TextBox1.Text = FolderBrowserDialog1.SelectedPath
-        End If
-        Dim steam_path, path As String
-        steam_path = TextBox1.Text
-        path = steam_path + "\SteamApps\common\dota 2 beta\dota\itembuilds"
-        Check(path)
+        Using FolderBrowserDialog1 As FolderBrowserDialog = New FolderBrowserDialog
+            If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+                TextBox4.Text = FolderBrowserDialog1.SelectedPath
+            End If
+            Dim steam_path, path As String
+            steam_path = TextBox4.Text
+            path = steam_path + "\SteamApps\common\dota 2 beta\dota\itembuilds"
+            Check(path)
+        End Using
     End Sub
 
     Private Sub ButtonOpenBackupFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenBackupFolder.Click
         System.Diagnostics.Process.Start("explorer", My.Settings.path + "\Backup")
     End Sub
 
-    Private Sub ButtonClearMulti_Click(sender As System.Object, e As System.EventArgs) Handles ButtonClearMulti.Click
-        ClearMulti()
-    End Sub
-
-    Private Sub SaveChangesMulti()
-        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NeuerTextMulti)
-        If IO.File.Exists(My.Settings.path + "\temp.txt") Then
-            NeuerTextMulti = ""
-            Dim DeinPfad As String = My.Settings.path + "\temp.txt"
-            Dim i As Integer = 1
-            Dim ItemPlace As String = ""
-            Dim StartingItems As String = ""
-            Dim Earlygame As String = ""
-            Dim CoreItems As String = ""
-            Dim Luxury As String = ""
-            Dim a As Integer = 160
-            Dim pb As Object
-            Dim Jump As Boolean = False
-
-            For a = 160 To 189
-                pb = TabPage2.Controls.Item("PictureBox" & a)
-                If a < 166 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    If StartingItems <> "" Then
-                        StartingItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    Else
-                        StartingItems &= vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    End If
-                ElseIf 165 < a And a < 172 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    If Earlygame <> "" Then
-                        Earlygame &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    Else
-                        Earlygame &= vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    End If
-                ElseIf 171 < a And a < 178 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    If CoreItems <> "" Then
-                        CoreItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    Else
-                        CoreItems &= vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    End If
-                ElseIf 177 < a And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    If Luxury <> "" Then
-                        Luxury &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    Else
-                        Luxury &= vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                    End If
-                Else
-                    'nichts
-                End If
-            Next
-
-            For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                If Zeile.Contains("DOTA_Item_Build_Starting_Items") Then
-                    ItemPlace = "Starting Items"
-                    NeuerTextMulti &= Zeile & vbNewLine
-                ElseIf Zeile.Contains("Early_Game") Then
-                    ItemPlace = "Early Game"
-                    Jump = False
-                    NeuerTextMulti &= Zeile & vbNewLine
-                ElseIf Zeile.Contains("Core_Items") Then
-                    ItemPlace = "Core Items"
-                    Jump = False
-                    NeuerTextMulti &= Zeile & vbNewLine
-                ElseIf Zeile.Contains("Luxury") Then
-                    ItemPlace = "Luxury"
-                    Jump = False
-                    NeuerTextMulti &= Zeile & vbNewLine
-                ElseIf Zeile.Contains("item_") Or Zeile.Length = 0 Then
-                    If ItemPlace = "Starting Items" And CheckBox1.Checked = True Then
-                        If Jump = False Then
-                            ' Start Items hinzufügen
-                            NeuerTextMulti &= StartingItems & vbNewLine
-                            Jump = True
-                        End If
-                    ElseIf ItemPlace = "Early Game" And CheckBox2.Checked = True Then
-                        If Jump = False Then
-                            ' Early Items hinzufügen
-                            NeuerTextMulti &= vbTab & vbTab & Earlygame & vbNewLine
-                            Jump = True
-                        End If
-                    ElseIf ItemPlace = "Core Items" And CheckBox3.Checked = True Then
-                        If Jump = False Then
-                            ' Core Items hinzufügen
-                            NeuerTextMulti &= vbTab & vbTab & CoreItems & vbNewLine
-                            Jump = True
-                        End If
-                    ElseIf ItemPlace = "Luxury" And CheckBox4.Checked = True Then
-                        If Jump = False Then
-                            ' Luxury Items hinzufügen
-                            NeuerTextMulti &= vbTab & vbTab & Luxury & vbNewLine
-                            Jump = True
-                        End If
-                    Else
-                        NeuerTextMulti &= Zeile & vbNewLine
-                    End If
-                Else
-                    NeuerTextMulti &= Zeile & vbNewLine
-                End If
-            Next
-            IO.File.Delete(My.Settings.path + "\temp.txt")
-        Else
-            MsgBox("Error!")
-        End If
-    End Sub
-
-    Private Sub ChangeAuthorMulti(ByVal author As String, ByVal hero As String)
-        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NeuerTextMulti)
-        If IO.File.Exists(My.Settings.path + "\temp.txt") Then
-            NeuerTextMulti = ""
-            Dim DeinPfad As String = My.Settings.path + "\temp.txt"
-            Dim i As Integer = 1
-            For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                If Zeile.Contains("author") Then
-                    NeuerTextMulti &= vbTab & """author""" & vbTab & vbTab & """" & author & """" & vbNewLine
-                ElseIf Zeile.Contains("hero") Then
-                    NeuerTextMulti &= vbTab & """hero""" & vbTab & vbTab & vbTab & """npc_dota_hero_" & hero & """" & vbNewLine
-                Else
-                    NeuerTextMulti &= Zeile & vbNewLine
-                End If
-            Next
-            IO.File.Delete(My.Settings.path + "\temp.txt")
-        Else
-
-        End If
-    End Sub
-
-    Private Sub ButtonSaveMulti_Click(sender As System.Object, e As System.EventArgs) Handles ButtonSaveMulti.Click
-        Dim i As Integer
-        Dim Hero As String
-        With ListBox2
-            For i = 0 To .SelectedItems.Count - 1
-                NeuerTextMulti = ""
-                ' ausgewählte Einträge ermitteln ...
-                Hero = CheckHero(.SelectedItems(i).ToString)
-                If IO.File.Exists(My.Settings.path + "\default_" + Hero + ".txt") Then
-                    Dim DeinPfad As String = My.Settings.path + "\default_" + Hero + ".txt"
-                    Dim ItemPlace As String = "Starting Items"
-                    For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                        NeuerTextMulti &= Zeile & vbNewLine
-                    Next
-                    SaveChangesMulti()
-                    If TextBox5.Text <> "" Then
-                        ChangeAuthorMulti(TextBox5.Text, Hero)
-                    End If
-                    IO.File.WriteAllText(My.Settings.path + "\default_" + Hero + ".txt", NeuerTextMulti)
-                Else
-                    MsgBox("Error! " + Hero + " maybe not implemented yet.")
-                End If
-            Next i
-        End With
-    End Sub
-
     Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
-        PictureBox321.Image = ChangePicture(ComboBox1.Text)
+        PictureBox166.Image = ChangePicture(ComboBox1.Text)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox321.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox321, GetToolTip(PictureBox321.Image))
+        If Not doImagesMatch(PictureBox166.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(PictureBox166, GetToolTip(PicRes2Name(PictureBox166.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox321, "none")
-        End If
-    End Sub
-
-    Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
-        PictureBox322.Image = ChangePicture(ComboBox2.Text)
-        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox322.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox322, GetToolTip(PictureBox322.Image))
-        Else
-            ToolTip1.SetToolTip(PictureBox322, "none")
+            ToolTip1.SetToolTip(PictureBox166, "none")
         End If
     End Sub
 
@@ -7851,7 +5477,7 @@ Public Class FormMain
 
     Dim FirstChange As Boolean = True
     Private Sub CheckBox5_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox5.CheckedChanged
-        If FirstChange = False Then
+        If Not FirstChange Then
             If CheckBox5.Checked Then
                 My.Settings.autoupdate = True
             Else
@@ -7904,7 +5530,6 @@ Public Class FormMain
             lb.Items.Add("Goblin Techies")
             lb.Items.Add("Guardian Wisp")
             lb.Items.Add("Gyrocopter")
-            lb.Items.Add("Harbinger")
             lb.Items.Add("Huskar")
             lb.Items.Add("Invoker")
             lb.Items.Add("Jakiro")
@@ -7932,6 +5557,7 @@ Public Class FormMain
             lb.Items.Add("Necrolyte")
             lb.Items.Add("Nerubian Assassin")
             lb.Items.Add("Night Stalker")
+            lb.Items.Add("Obsidian Destroyer")
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Omniknight")
             lb.Items.Add("Pandaren Brewmaster")
@@ -7982,77 +5608,76 @@ Public Class FormMain
             For i = lb.Items.Count - 1 To 0 Step -1
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
-            ListBox1.Items.Add("Abaddon")
-            ListBox1.Items.Add("Alchemist")
-            ListBox1.Items.Add("Anti-Mage")
-            ListBox1.Items.Add("Bloodseeker")
-            ListBox1.Items.Add("Bounty Hunter")
-            ListBox1.Items.Add("Bristleback")
-            ListBox1.Items.Add("Broodmother")
-            ListBox1.Items.Add("Chaos Knight")
-            ListBox1.Items.Add("Clinkz")
-            ListBox1.Items.Add("Dirge")
-            ListBox1.Items.Add("Doom Bringer")
-            ListBox1.Items.Add("Dragon Knight")
-            ListBox1.Items.Add("Drow Ranger")
-            ListBox1.Items.Add("Ember Spirit")
-            ListBox1.Items.Add("Faceless Void")
-            ListBox1.Items.Add("Goblin Shredder")
-            ListBox1.Items.Add("Goblin Techies")
-            ListBox1.Items.Add("Guardian Wisp")
-            ListBox1.Items.Add("Gyrocopter")
-            ListBox1.Items.Add("Harbinger")
-            ListBox1.Items.Add("Huskar")
-            ListBox1.Items.Add("Invoker")
-            ListBox1.Items.Add("Juggernaut")
-            ListBox1.Items.Add("Keeper of the Light")
-            ListBox1.Items.Add("Kunkka")
-            ListBox1.Items.Add("Lanaya")
-            ListBox1.Items.Add("Legion Commander")
-            ListBox1.Items.Add("Leshrac")
-            ListBox1.Items.Add("Lone Druid")
-            ListBox1.Items.Add("Luna")
-            ListBox1.Items.Add("Lycanthrope")
-            ListBox1.Items.Add("Magnataur")
-            ListBox1.Items.Add("Medusa")
-            ListBox1.Items.Add("Meepo")
-            ListBox1.Items.Add("Mirana")
-            ListBox1.Items.Add("Morphling")
-            ListBox1.Items.Add("Mortred")
-            ListBox1.Items.Add("Naga Siren")
-            ListBox1.Items.Add("Necrolyte")
-            ListBox1.Items.Add("Night Stalker")
-            ListBox1.Items.Add("Ogre Magi")
-            ListBox1.Items.Add("Phantom Lancer")
-            ListBox1.Items.Add("Phoenix")
-            ListBox1.Items.Add("Pit Lord")
-            ListBox1.Items.Add("Queen of Pain")
-            ListBox1.Items.Add("Razor")
-            ListBox1.Items.Add("Riki")
-            ListBox1.Items.Add("Rubick")
-            ListBox1.Items.Add("Shadow Demon")
-            ListBox1.Items.Add("Shadow Fiend")
-            ListBox1.Items.Add("Silencer")
-            ListBox1.Items.Add("Skeleton King")
-            ListBox1.Items.Add("Skywrath Mage")
-            ListBox1.Items.Add("Slardar")
-            ListBox1.Items.Add("Slark")
-            ListBox1.Items.Add("Sniper")
-            ListBox1.Items.Add("Soul Keeper")
-            ListBox1.Items.Add("Spectre")
-            ListBox1.Items.Add("Storm Spirit")
-            ListBox1.Items.Add("Sven")
-            ListBox1.Items.Add("Tauren Chieftain")
-            ListBox1.Items.Add("Tinker")
-            ListBox1.Items.Add("Treant Protector")
-            ListBox1.Items.Add("Troll Warlord")
-            ListBox1.Items.Add("Tuskarr")
-            ListBox1.Items.Add("Ursa")
-            ListBox1.Items.Add("Venomancer")
-            ListBox1.Items.Add("Viper")
-            ListBox1.Items.Add("Visage")
-            ListBox1.Items.Add("Weaver")
-            ListBox1.Items.Add("Windrunner")
+            lb.Items.Add("Abaddon")
+            lb.Items.Add("Alchemist")
+            lb.Items.Add("Anti-Mage")
+            lb.Items.Add("Bloodseeker")
+            lb.Items.Add("Bounty Hunter")
+            lb.Items.Add("Bristleback")
+            lb.Items.Add("Broodmother")
+            lb.Items.Add("Clinkz")
+            lb.Items.Add("Dirge")
+            lb.Items.Add("Doom Bringer")
+            lb.Items.Add("Dragon Knight")
+            lb.Items.Add("Drow Ranger")
+            lb.Items.Add("Ember Spirit")
+            lb.Items.Add("Faceless Void")
+            lb.Items.Add("Goblin Shredder")
+            lb.Items.Add("Goblin Techies")
+            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Gyrocopter")
+            lb.Items.Add("Huskar")
+            lb.Items.Add("Invoker")
+            lb.Items.Add("Juggernaut")
+            lb.Items.Add("Keeper of the Light")
+            lb.Items.Add("Kunkka")
+            lb.Items.Add("Lanaya")
+            lb.Items.Add("Legion Commander")
+            lb.Items.Add("Leshrac")
+            lb.Items.Add("Lone Druid")
+            lb.Items.Add("Luna")
+            lb.Items.Add("Lycanthrope")
+            lb.Items.Add("Magnataur")
+            lb.Items.Add("Medusa")
+            lb.Items.Add("Meepo")
+            lb.Items.Add("Mirana")
+            lb.Items.Add("Morphling")
+            lb.Items.Add("Mortred")
+            lb.Items.Add("Naga Siren")
+            lb.Items.Add("Necrolyte")
+            lb.Items.Add("Night Stalker")
+            lb.Items.Add("Obsidian Destroyer")
+            lb.Items.Add("Ogre Magi")
+            lb.Items.Add("Phantom Lancer")
+            lb.Items.Add("Phoenix")
+            lb.Items.Add("Pit Lord")
+            lb.Items.Add("Queen of Pain")
+            lb.Items.Add("Razor")
+            lb.Items.Add("Riki")
+            lb.Items.Add("Rubick")
+            lb.Items.Add("Shadow Demon")
+            lb.Items.Add("Shadow Fiend")
+            lb.Items.Add("Silencer")
+            lb.Items.Add("Skeleton King")
+            lb.Items.Add("Skywrath Mage")
+            lb.Items.Add("Slardar")
+            lb.Items.Add("Slark")
+            lb.Items.Add("Sniper")
+            lb.Items.Add("Soul Keeper")
+            lb.Items.Add("Spectre")
+            lb.Items.Add("Storm Spirit")
+            lb.Items.Add("Sven")
+            lb.Items.Add("Tauren Chieftain")
+            lb.Items.Add("Tinker")
+            lb.Items.Add("Treant Protector")
+            lb.Items.Add("Troll Warlord")
+            lb.Items.Add("Tuskarr")
+            lb.Items.Add("Ursa")
+            lb.Items.Add("Venomancer")
+            lb.Items.Add("Viper")
+            lb.Items.Add("Visage")
+            lb.Items.Add("Weaver")
+            lb.Items.Add("Windrunner")
         ElseIf cb.SelectedItem = "Support" Then
             lb.SelectedItems.Clear()
             For i = lb.Items.Count - 1 To 0 Step -1
@@ -8068,12 +5693,12 @@ Public Class FormMain
             lb.Items.Add("Disruptor")
             lb.Items.Add("Goblin Techies")
             lb.Items.Add("Guardian Wisp")
-            lb.Items.Add("Harbinger")
             lb.Items.Add("Invoker")
             lb.Items.Add("Keeper of the Light")
             lb.Items.Add("Lich")
             lb.Items.Add("Lion")
             lb.Items.Add("Necrolyte")
+            lb.Items.Add("Obsidian Destroyer")
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Omniknight")
             lb.Items.Add("Rubick")
@@ -8088,72 +5713,70 @@ Public Class FormMain
             For i = lb.Items.Count - 1 To 0 Step -1
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
-            ListBox1.Items.Add("Ancient Apparition")
-            ListBox1.Items.Add("Bane")
-            ListBox1.Items.Add("Batrider")
-            ListBox1.Items.Add("Beastmaster")
-            ListBox1.Items.Add("Bloodseeker")
-            ListBox1.Items.Add("Bounty Hunter")
-            ListBox1.Items.Add("Bristleback")
-            ListBox1.Items.Add("Chaos Knight")
-            ListBox1.Items.Add("Clockwerk")
-            ListBox1.Items.Add("Dirge")
-            ListBox1.Items.Add("Disruptor")
-            ListBox1.Items.Add("Doom Bringer")
-            ListBox1.Items.Add("Earthshaker")
-            ListBox1.Items.Add("Ember Spirit")
-            ListBox1.Items.Add("Goblin Shredder")
-            ListBox1.Items.Add("Goblin Techies")
-            ListBox1.Items.Add("Guardian Wisp")
-            ListBox1.Items.Add("Gyrocopter")
-            ListBox1.Items.Add("Harbinger")
-            ListBox1.Items.Add("Invoker")
-            ListBox1.Items.Add("Jakiro")
-            ListBox1.Items.Add("Keeper of the Light")
-            ListBox1.Items.Add("Kunkka")
-            ListBox1.Items.Add("Lanaya")
-            ListBox1.Items.Add("Legion Commander")
-            ListBox1.Items.Add("Lich")
-            ListBox1.Items.Add("Lifestealer")
-            ListBox1.Items.Add("Lina")
-            ListBox1.Items.Add("Lion")
-            ListBox1.Items.Add("Lone Druid")
-            ListBox1.Items.Add("Lycanthrope")
-            ListBox1.Items.Add("Magnataur")
-            ListBox1.Items.Add("Medusa")
-            ListBox1.Items.Add("Mirana")
-            ListBox1.Items.Add("Morphling")
-            ListBox1.Items.Add("Naga Siren")
-            ListBox1.Items.Add("Nature's Prophet")
-            ListBox1.Items.Add("Nerubian Assassin")
-            ListBox1.Items.Add("Night Stalker")
-            ListBox1.Items.Add("Ogre Magi")
-            ListBox1.Items.Add("Phoenix")
-            ListBox1.Items.Add("Pit Lord")
-            ListBox1.Items.Add("Pudge")
-            ListBox1.Items.Add("Queen of Pain")
-            ListBox1.Items.Add("Riki")
-            ListBox1.Items.Add("Rubick")
-            ListBox1.Items.Add("Sand King")
-            ListBox1.Items.Add("Shadow Demon")
-            ListBox1.Items.Add("Skywrath Mage")
-            ListBox1.Items.Add("Slark")
-            ListBox1.Items.Add("Soul Keeper")
-            ListBox1.Items.Add("Spirit Breaker")
-            ListBox1.Items.Add("Storm Spirit")
-            ListBox1.Items.Add("Sven")
-            ListBox1.Items.Add("Tauren Chieftain")
-            ListBox1.Items.Add("Tidehunter")
-            ListBox1.Items.Add("Tinker")
-            ListBox1.Items.Add("Tiny")
-            ListBox1.Items.Add("Treant Protector")
-            ListBox1.Items.Add("Troll Warlord")
-            ListBox1.Items.Add("Tuskarr")
-            ListBox1.Items.Add("Vengeful Spirit")
-            ListBox1.Items.Add("Visage")
-            ListBox1.Items.Add("Weaver")
-            ListBox1.Items.Add("Witch Doctor")
-            ListBox1.Items.Add("Zeus")
+            lb.Items.Add("Ancient Apparition")
+            lb.Items.Add("Bane")
+            lb.Items.Add("Batrider")
+            lb.Items.Add("Beastmaster")
+            lb.Items.Add("Bloodseeker")
+            lb.Items.Add("Bounty Hunter")
+            lb.Items.Add("Bristleback")
+            lb.Items.Add("Chaos Knight")
+            lb.Items.Add("Clockwerk")
+            lb.Items.Add("Dirge")
+            lb.Items.Add("Disruptor")
+            lb.Items.Add("Doom Bringer")
+            lb.Items.Add("Earthshaker")
+            lb.Items.Add("Ember Spirit")
+            lb.Items.Add("Goblin Shredder")
+            lb.Items.Add("Goblin Techies")
+            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Invoker")
+            lb.Items.Add("Jakiro")
+            lb.Items.Add("Keeper of the Light")
+            lb.Items.Add("Kunkka")
+            lb.Items.Add("Lanaya")
+            lb.Items.Add("Legion Commander")
+            lb.Items.Add("Lich")
+            lb.Items.Add("Lifestealer")
+            lb.Items.Add("Lina")
+            lb.Items.Add("Lion")
+            lb.Items.Add("Lone Druid")
+            lb.Items.Add("Lycanthrope")
+            lb.Items.Add("Magnataur")
+            lb.Items.Add("Medusa")
+            lb.Items.Add("Mirana")
+            lb.Items.Add("Morphling")
+            lb.Items.Add("Naga Siren")
+            lb.Items.Add("Nature's Prophet")
+            lb.Items.Add("Nerubian Assassin")
+            lb.Items.Add("Night Stalker")
+            lb.Items.Add("Obsidian Destroyer")
+            lb.Items.Add("Ogre Magi")
+            lb.Items.Add("Phoenix")
+            lb.Items.Add("Pit Lord")
+            lb.Items.Add("Pudge")
+            lb.Items.Add("Queen of Pain")
+            lb.Items.Add("Riki")
+            lb.Items.Add("Rubick")
+            lb.Items.Add("Sand King")
+            lb.Items.Add("Shadow Demon")
+            lb.Items.Add("Skywrath Mage")
+            lb.Items.Add("Slark")
+            lb.Items.Add("Soul Keeper")
+            lb.Items.Add("Spirit Breaker")
+            lb.Items.Add("Storm Spirit")
+            lb.Items.Add("Sven")
+            lb.Items.Add("Tauren Chieftain")
+            lb.Items.Add("Tidehunter")
+            lb.Items.Add("Tinker")
+            lb.Items.Add("Tiny")
+            lb.Items.Add("Treant Protector")
+            lb.Items.Add("Tuskarr")
+            lb.Items.Add("Vengeful Spirit")
+            lb.Items.Add("Visage")
+            lb.Items.Add("Weaver")
+            lb.Items.Add("Witch Doctor")
+            lb.Items.Add("Zeus")
         ElseIf cb.SelectedItem = "Initiator" Then
             lb.SelectedItems.Clear()
             For i = lb.Items.Count - 1 To 0 Step -1
@@ -8219,12 +5842,10 @@ Public Class FormMain
             lb.Items.Add("Abaddon")
             lb.Items.Add("Bristleback")
             lb.Items.Add("Centaur Warchief")
-            lb.Items.Add("Chaos Knight")
             lb.Items.Add("Death Prophet")
             lb.Items.Add("Dirge")
             lb.Items.Add("Goblin Shredder")
             lb.Items.Add("Guardian Wisp")
-            lb.Items.Add("Gyrocopter")
             lb.Items.Add("Legion Commander")
             lb.Items.Add("Lone Druid")
             lb.Items.Add("Lycanthrope")
@@ -8334,7 +5955,6 @@ Public Class FormMain
             lb.Items.Add("Enchantress")
             lb.Items.Add("Enigma")
             lb.Items.Add("Goblin Techies")
-            lb.Items.Add("Harbinger")
             lb.Items.Add("Invoker")
             lb.Items.Add("Jakiro")
             lb.Items.Add("Keeper of the Light")
@@ -8344,6 +5964,7 @@ Public Class FormMain
             lb.Items.Add("Lion")
             lb.Items.Add("Nature's Prophet")
             lb.Items.Add("Necrolyte")
+            lb.Items.Add("Obsidian Destroyer")
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Puck")
             lb.Items.Add("Pugna")
@@ -8367,7 +5988,279 @@ Public Class FormMain
         ChangeHeroList(ComboBox3, ListBox1)
     End Sub
 
-    Private Sub ComboBox4_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox4.SelectedIndexChanged
-        ChangeHeroList(ComboBox4, ListBox2)
+    Private Sub ComboBox5_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox5.SelectedIndexChanged
+        If ComboBox5.SelectedItem = "DotA Like" Then
+            PictureBox31.Location = New Point(201, 276)
+            PictureBox32.Location = New Point(201, 276)
+            PictureBox33.Location = New Point(201, 276)
+            PictureBox34.Location = New Point(201, 276)
+            PictureBox35.Location = New Point(201, 276)
+            PictureBox36.Location = New Point(201, 276)
+            PictureBox37.Location = New Point(201, 276)
+            PictureBox38.Location = New Point(201, 276)
+            PictureBox39.Location = New Point(201, 276)
+            PictureBox40.Location = New Point(201, 276)
+            PictureBox41.Location = New Point(201, 276)
+            PictureBox42.Location = New Point(201, 276)
+            PictureBox43.Location = New Point(201, 276)
+            PictureBox44.Location = New Point(201, 276)
+            PictureBox45.Location = New Point(201, 276)
+            PictureBox46.Location = New Point(201, 276)
+            PictureBox47.Location = New Point(201, 276)
+            PictureBox48.Location = New Point(201, 276)
+            PictureBox49.Location = New Point(201, 276)
+            PictureBox50.Location = New Point(201, 276)
+            PictureBox51.Location = New Point(201, 276)
+            PictureBox52.Location = New Point(201, 276)
+            PictureBox53.Location = New Point(201, 276)
+            PictureBox54.Location = New Point(201, 276)
+            PictureBox55.Location = New Point(201, 276)
+            PictureBox56.Location = New Point(201, 276)
+            PictureBox57.Location = New Point(201, 276)
+            PictureBox58.Location = New Point(201, 276)
+            PictureBox59.Location = New Point(201, 276)
+            PictureBox60.Location = New Point(201, 276)
+            PictureBox61.Location = New Point(201, 276)
+            PictureBox62.Location = New Point(201, 276)
+            PictureBox63.Location = New Point(201, 276)
+            PictureBox64.Location = New Point(201, 276)
+            PictureBox65.Location = New Point(201, 276)
+            PictureBox66.Location = New Point(201, 276)
+            PictureBox67.Location = New Point(201, 276)
+            PictureBox68.Location = New Point(201, 276)
+            PictureBox69.Location = New Point(201, 276)
+            PictureBox70.Location = New Point(201, 276)
+            PictureBox71.Location = New Point(201, 276)
+            PictureBox72.Location = New Point(201, 276)
+            PictureBox73.Location = New Point(201, 276)
+            PictureBox74.Location = New Point(201, 276)
+            PictureBox75.Location = New Point(201, 276)
+            PictureBox76.Location = New Point(201, 276)
+            PictureBox77.Location = New Point(201, 276)
+            PictureBox78.Location = New Point(201, 276)
+            PictureBox79.Location = New Point(201, 276)
+            PictureBox80.Location = New Point(201, 276)
+            PictureBox81.Location = New Point(201, 276)
+            PictureBox82.Location = New Point(201, 276)
+            PictureBox83.Location = New Point(201, 276)
+            PictureBox84.Location = New Point(201, 276)
+            PictureBox85.Location = New Point(201, 276)
+            PictureBox86.Location = New Point(201, 276)
+            PictureBox87.Location = New Point(201, 276)
+            PictureBox88.Location = New Point(201, 276)
+            PictureBox89.Location = New Point(201, 276)
+            PictureBox90.Location = New Point(201, 276)
+            PictureBox91.Location = New Point(201, 276)
+            PictureBox92.Location = New Point(201, 276)
+            PictureBox93.Location = New Point(201, 276)
+            PictureBox94.Location = New Point(201, 276)
+            PictureBox95.Location = New Point(201, 276)
+            PictureBox96.Location = New Point(201, 276)
+            PictureBox97.Location = New Point(201, 276)
+            PictureBox98.Location = New Point(201, 276)
+            PictureBox99.Location = New Point(201, 276)
+            PictureBox100.Location = New Point(201, 276)
+            PictureBox101.Location = New Point(201, 276)
+            PictureBox102.Location = New Point(201, 276)
+            PictureBox103.Location = New Point(201, 276)
+            PictureBox104.Location = New Point(201, 276)
+            PictureBox105.Location = New Point(201, 276)
+            PictureBox106.Location = New Point(201, 276)
+            PictureBox107.Location = New Point(201, 276)
+            PictureBox108.Location = New Point(201, 276)
+            PictureBox109.Location = New Point(201, 276)
+            PictureBox110.Location = New Point(201, 276)
+            PictureBox111.Location = New Point(201, 276)
+            PictureBox112.Location = New Point(201, 276)
+            PictureBox113.Location = New Point(201, 276)
+            PictureBox114.Location = New Point(201, 276)
+            PictureBox115.Location = New Point(201, 276)
+            PictureBox116.Location = New Point(201, 276)
+            PictureBox117.Location = New Point(201, 276)
+            PictureBox118.Location = New Point(201, 276)
+            PictureBox119.Location = New Point(201, 276)
+            PictureBox120.Location = New Point(201, 276)
+            PictureBox121.Location = New Point(201, 276)
+            PictureBox122.Location = New Point(201, 276)
+            PictureBox123.Location = New Point(201, 276)
+            PictureBox124.Location = New Point(201, 276)
+            PictureBox125.Location = New Point(201, 276)
+            PictureBox126.Location = New Point(201, 276)
+            PictureBox127.Location = New Point(201, 276)
+            PictureBox128.Location = New Point(201, 276)
+            PictureBox129.Location = New Point(201, 276)
+            PictureBox130.Location = New Point(201, 276)
+            PictureBox131.Location = New Point(201, 276)
+            PictureBox132.Location = New Point(201, 276)
+            PictureBox133.Location = New Point(201, 276)
+            PictureBox134.Location = New Point(201, 276)
+            PictureBox135.Location = New Point(201, 276)
+            PictureBox136.Location = New Point(201, 276)
+            PictureBox137.Location = New Point(201, 276)
+            PictureBox138.Location = New Point(201, 276)
+            PictureBox139.Location = New Point(201, 276)
+            PictureBox140.Location = New Point(201, 276)
+            PictureBox141.Location = New Point(201, 276)
+            PictureBox142.Location = New Point(201, 276)
+            PictureBox143.Location = New Point(201, 276)
+            PictureBox144.Location = New Point(201, 276)
+            PictureBox145.Location = New Point(201, 276)
+            PictureBox146.Location = New Point(201, 276)
+            PictureBox147.Location = New Point(201, 276)
+            PictureBox148.Location = New Point(201, 276)
+            PictureBox149.Location = New Point(201, 276)
+            PictureBox150.Location = New Point(201, 276)
+            PictureBox151.Location = New Point(201, 276)
+            PictureBox152.Location = New Point(201, 276)
+            PictureBox153.Location = New Point(201, 276)
+            PictureBox154.Location = New Point(201, 276)
+            PictureBox155.Location = New Point(201, 276)
+            PictureBox156.Location = New Point(201, 276)
+            PictureBox157.Location = New Point(201, 276)
+            PictureBox158.Location = New Point(201, 276)
+            PictureBox159.Location = New Point(201, 276)
+            PictureBox160.Location = New Point(201, 276)
+            PictureBox161.Location = New Point(201, 276)
+            PictureBox162.Location = New Point(201, 276)
+            PictureBox163.Location = New Point(201, 276)
+            PictureBox164.Location = New Point(201, 276)
+            PictureBox165.Location = New Point(845, 564)
+        Else
+            PictureBox160.Location = New Point(201, 276)
+            PictureBox31.Location = New Point(247, 276)
+            PictureBox32.Location = New Point(293, 276)
+            PictureBox33.Location = New Point(339, 276)
+            PictureBox34.Location = New Point(385, 276)
+            PictureBox35.Location = New Point(431, 276)
+            PictureBox36.Location = New Point(477, 276)
+            PictureBox37.Location = New Point(523, 276)
+            PictureBox38.Location = New Point(569, 276)
+            PictureBox39.Location = New Point(615, 276)
+            PictureBox40.Location = New Point(661, 276)
+            PictureBox41.Location = New Point(707, 276)
+            PictureBox42.Location = New Point(753, 276)
+            PictureBox43.Location = New Point(799, 276)
+            PictureBox44.Location = New Point(845, 276)
+            PictureBox45.Location = New Point(201, 312)
+            PictureBox46.Location = New Point(247, 312)
+            PictureBox47.Location = New Point(293, 312)
+            PictureBox48.Location = New Point(339, 312)
+            PictureBox49.Location = New Point(385, 312)
+            PictureBox50.Location = New Point(431, 312)
+            PictureBox51.Location = New Point(477, 312)
+            PictureBox52.Location = New Point(523, 312)
+            PictureBox53.Location = New Point(569, 312)
+            PictureBox54.Location = New Point(615, 312)
+            PictureBox55.Location = New Point(661, 312)
+            PictureBox56.Location = New Point(707, 312)
+            PictureBox57.Location = New Point(753, 312)
+            PictureBox58.Location = New Point(799, 312)
+            PictureBox59.Location = New Point(845, 312)
+            PictureBox60.Location = New Point(201, 348)
+            PictureBox61.Location = New Point(247, 348)
+            PictureBox62.Location = New Point(293, 348)
+            PictureBox63.Location = New Point(339, 348)
+            PictureBox64.Location = New Point(385, 348)
+            PictureBox65.Location = New Point(431, 348)
+            PictureBox66.Location = New Point(477, 348)
+            PictureBox67.Location = New Point(523, 348)
+            PictureBox68.Location = New Point(569, 348)
+            PictureBox69.Location = New Point(615, 348)
+            PictureBox70.Location = New Point(661, 348)
+            PictureBox71.Location = New Point(707, 348)
+            PictureBox72.Location = New Point(753, 348)
+            PictureBox73.Location = New Point(799, 348)
+            PictureBox74.Location = New Point(845, 348)
+            PictureBox75.Location = New Point(201, 384)
+            PictureBox76.Location = New Point(247, 384)
+            PictureBox77.Location = New Point(293, 384)
+            PictureBox78.Location = New Point(339, 384)
+            PictureBox79.Location = New Point(385, 384)
+            PictureBox80.Location = New Point(431, 384)
+            PictureBox81.Location = New Point(477, 384)
+            PictureBox82.Location = New Point(523, 384)
+            PictureBox83.Location = New Point(569, 384)
+            PictureBox84.Location = New Point(615, 384)
+            PictureBox85.Location = New Point(661, 384)
+            PictureBox161.Location = New Point(707, 384)
+            PictureBox86.Location = New Point(753, 384)
+            PictureBox87.Location = New Point(799, 384)
+            PictureBox88.Location = New Point(845, 384)
+            PictureBox89.Location = New Point(201, 420)
+            PictureBox90.Location = New Point(247, 420)
+            PictureBox91.Location = New Point(293, 420)
+            PictureBox92.Location = New Point(339, 420)
+            PictureBox93.Location = New Point(385, 420)
+            PictureBox94.Location = New Point(431, 420)
+            PictureBox95.Location = New Point(477, 420)
+            PictureBox96.Location = New Point(523, 420)
+            PictureBox97.Location = New Point(569, 420)
+            PictureBox98.Location = New Point(615, 420)
+            PictureBox99.Location = New Point(661, 420)
+            PictureBox100.Location = New Point(707, 420)
+            PictureBox101.Location = New Point(753, 420)
+            PictureBox102.Location = New Point(799, 420)
+            PictureBox103.Location = New Point(845, 420)
+            PictureBox104.Location = New Point(201, 456)
+            PictureBox105.Location = New Point(247, 456)
+            PictureBox121.Location = New Point(293, 456)
+            PictureBox106.Location = New Point(339, 456)
+            PictureBox107.Location = New Point(385, 456)
+            PictureBox108.Location = New Point(431, 456)
+            PictureBox109.Location = New Point(477, 456)
+            PictureBox110.Location = New Point(523, 456)
+            PictureBox111.Location = New Point(569, 456)
+            PictureBox112.Location = New Point(615, 456)
+            PictureBox113.Location = New Point(661, 456)
+            PictureBox114.Location = New Point(707, 456)
+            PictureBox115.Location = New Point(753, 456)
+            PictureBox116.Location = New Point(799, 456)
+            PictureBox117.Location = New Point(845, 456)
+            PictureBox118.Location = New Point(201, 492)
+            PictureBox119.Location = New Point(247, 492)
+            PictureBox120.Location = New Point(293, 492)
+            PictureBox122.Location = New Point(339, 492)
+            PictureBox123.Location = New Point(385, 492)
+            PictureBox124.Location = New Point(431, 492)
+            PictureBox125.Location = New Point(477, 492)
+            PictureBox126.Location = New Point(523, 492)
+            PictureBox127.Location = New Point(569, 492)
+            PictureBox162.Location = New Point(615, 492)
+            PictureBox128.Location = New Point(661, 492)
+            PictureBox129.Location = New Point(707, 492)
+            PictureBox130.Location = New Point(753, 492)
+            PictureBox131.Location = New Point(799, 492)
+            PictureBox132.Location = New Point(845, 492)
+            PictureBox163.Location = New Point(201, 528)
+            PictureBox133.Location = New Point(247, 528)
+            PictureBox134.Location = New Point(293, 528)
+            PictureBox135.Location = New Point(339, 528)
+            PictureBox136.Location = New Point(385, 528)
+            PictureBox137.Location = New Point(431, 528)
+            PictureBox138.Location = New Point(477, 528)
+            PictureBox139.Location = New Point(523, 528)
+            PictureBox140.Location = New Point(569, 528)
+            PictureBox141.Location = New Point(615, 528)
+            PictureBox142.Location = New Point(661, 528)
+            PictureBox143.Location = New Point(707, 528)
+            PictureBox144.Location = New Point(753, 528)
+            PictureBox145.Location = New Point(799, 528)
+            PictureBox146.Location = New Point(845, 528)
+            PictureBox147.Location = New Point(201, 564)
+            PictureBox148.Location = New Point(247, 564)
+            PictureBox149.Location = New Point(293, 564)
+            PictureBox150.Location = New Point(339, 564)
+            PictureBox164.Location = New Point(385, 564)
+            PictureBox151.Location = New Point(431, 564)
+            PictureBox152.Location = New Point(477, 564)
+            PictureBox153.Location = New Point(523, 564)
+            PictureBox154.Location = New Point(569, 564)
+            PictureBox155.Location = New Point(615, 564)
+            PictureBox156.Location = New Point(661, 564)
+            PictureBox157.Location = New Point(707, 564)
+            PictureBox158.Location = New Point(753, 564)
+            PictureBox159.Location = New Point(799, 564)
+            PictureBox165.Location = New Point(845, 564)
+        End If
     End Sub
 End Class
