@@ -26,6 +26,26 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Item39 = New System.Windows.Forms.PictureBox()
+        Me.Item38 = New System.Windows.Forms.PictureBox()
+        Me.Item37 = New System.Windows.Forms.PictureBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Item36 = New System.Windows.Forms.PictureBox()
+        Me.Item35 = New System.Windows.Forms.PictureBox()
+        Me.Item34 = New System.Windows.Forms.PictureBox()
+        Me.Item33 = New System.Windows.Forms.PictureBox()
+        Me.Item32 = New System.Windows.Forms.PictureBox()
+        Me.Item31 = New System.Windows.Forms.PictureBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.PictureBox164 = New System.Windows.Forms.PictureBox()
@@ -58,65 +78,65 @@ Partial Class FormMain
         Me.PictureBox150 = New System.Windows.Forms.PictureBox()
         Me.PictureBox149 = New System.Windows.Forms.PictureBox()
         Me.PictureBox148 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Item1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox147 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Item2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox146 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Item3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox145 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Item4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox144 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Item5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox143 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Item6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox142 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Item7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox141 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Item8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox140 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.Item9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox139 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.Item10 = New System.Windows.Forms.PictureBox()
         Me.PictureBox138 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Item11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox137 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.Item12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox136 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.Item13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox135 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.Item14 = New System.Windows.Forms.PictureBox()
         Me.PictureBox134 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.Item15 = New System.Windows.Forms.PictureBox()
         Me.PictureBox133 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.Item16 = New System.Windows.Forms.PictureBox()
         Me.PictureBox132 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.Item17 = New System.Windows.Forms.PictureBox()
         Me.PictureBox131 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.Item18 = New System.Windows.Forms.PictureBox()
         Me.PictureBox130 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.Item19 = New System.Windows.Forms.PictureBox()
         Me.PictureBox129 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.Item20 = New System.Windows.Forms.PictureBox()
         Me.PictureBox128 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.Item21 = New System.Windows.Forms.PictureBox()
         Me.PictureBox127 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.Item22 = New System.Windows.Forms.PictureBox()
         Me.PictureBox126 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.Item23 = New System.Windows.Forms.PictureBox()
         Me.PictureBox125 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.Item24 = New System.Windows.Forms.PictureBox()
         Me.PictureBox124 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.Item25 = New System.Windows.Forms.PictureBox()
         Me.PictureBox123 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.Item26 = New System.Windows.Forms.PictureBox()
         Me.PictureBox122 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
+        Me.Item27 = New System.Windows.Forms.PictureBox()
         Me.PictureBox121 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
+        Me.Item28 = New System.Windows.Forms.PictureBox()
         Me.PictureBox120 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.Item29 = New System.Windows.Forms.PictureBox()
         Me.PictureBox119 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
+        Me.Item30 = New System.Windows.Forms.PictureBox()
         Me.PictureBox118 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox117 = New System.Windows.Forms.PictureBox()
@@ -209,6 +229,18 @@ Partial Class FormMain
         Me.PictureBox71 = New System.Windows.Forms.PictureBox()
         Me.PictureBox73 = New System.Windows.Forms.PictureBox()
         Me.PictureBox72 = New System.Windows.Forms.PictureBox()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape11 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape10 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape9 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape8 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape7 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape6 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape5 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.ButtonOpenTextfile = New System.Windows.Forms.Button()
         Me.ButtonImport = New System.Windows.Forms.Button()
@@ -235,6 +267,15 @@ Partial Class FormMain
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.Item39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item31, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox164, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox163, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -254,65 +295,65 @@ Partial Class FormMain
         CType(Me.PictureBox150, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox149, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox148, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox147, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox146, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox145, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox144, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox143, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox142, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox141, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox140, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox139, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox138, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox137, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox136, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox135, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox134, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox133, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox132, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox131, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox130, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox129, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox128, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox127, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox126, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox125, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox124, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox123, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox122, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox121, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item28, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox120, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item29, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox119, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Item30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox118, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox117, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox116, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -416,11 +457,31 @@ Partial Class FormMain
         Me.TabControl1.Location = New System.Drawing.Point(2, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(918, 683)
+        Me.TabControl1.Size = New System.Drawing.Size(936, 708)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Item39)
+        Me.TabPage1.Controls.Add(Me.Item38)
+        Me.TabPage1.Controls.Add(Me.Item37)
+        Me.TabPage1.Controls.Add(Me.Label23)
+        Me.TabPage1.Controls.Add(Me.Label22)
+        Me.TabPage1.Controls.Add(Me.Label21)
+        Me.TabPage1.Controls.Add(Me.Label20)
+        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.Label18)
+        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.Label16)
+        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.Label14)
+        Me.TabPage1.Controls.Add(Me.Label13)
+        Me.TabPage1.Controls.Add(Me.Item36)
+        Me.TabPage1.Controls.Add(Me.Item35)
+        Me.TabPage1.Controls.Add(Me.Item34)
+        Me.TabPage1.Controls.Add(Me.Item33)
+        Me.TabPage1.Controls.Add(Me.Item32)
+        Me.TabPage1.Controls.Add(Me.Item31)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.ComboBox5)
         Me.TabPage1.Controls.Add(Me.PictureBox164)
@@ -453,65 +514,65 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.PictureBox150)
         Me.TabPage1.Controls.Add(Me.PictureBox149)
         Me.TabPage1.Controls.Add(Me.PictureBox148)
-        Me.TabPage1.Controls.Add(Me.PictureBox1)
+        Me.TabPage1.Controls.Add(Me.Item1)
         Me.TabPage1.Controls.Add(Me.PictureBox147)
-        Me.TabPage1.Controls.Add(Me.PictureBox2)
+        Me.TabPage1.Controls.Add(Me.Item2)
         Me.TabPage1.Controls.Add(Me.PictureBox146)
-        Me.TabPage1.Controls.Add(Me.PictureBox3)
+        Me.TabPage1.Controls.Add(Me.Item3)
         Me.TabPage1.Controls.Add(Me.PictureBox145)
-        Me.TabPage1.Controls.Add(Me.PictureBox4)
+        Me.TabPage1.Controls.Add(Me.Item4)
         Me.TabPage1.Controls.Add(Me.PictureBox144)
-        Me.TabPage1.Controls.Add(Me.PictureBox5)
+        Me.TabPage1.Controls.Add(Me.Item5)
         Me.TabPage1.Controls.Add(Me.PictureBox143)
-        Me.TabPage1.Controls.Add(Me.PictureBox6)
+        Me.TabPage1.Controls.Add(Me.Item6)
         Me.TabPage1.Controls.Add(Me.PictureBox142)
-        Me.TabPage1.Controls.Add(Me.PictureBox7)
+        Me.TabPage1.Controls.Add(Me.Item7)
         Me.TabPage1.Controls.Add(Me.PictureBox141)
-        Me.TabPage1.Controls.Add(Me.PictureBox8)
+        Me.TabPage1.Controls.Add(Me.Item8)
         Me.TabPage1.Controls.Add(Me.PictureBox140)
-        Me.TabPage1.Controls.Add(Me.PictureBox9)
+        Me.TabPage1.Controls.Add(Me.Item9)
         Me.TabPage1.Controls.Add(Me.PictureBox139)
-        Me.TabPage1.Controls.Add(Me.PictureBox10)
+        Me.TabPage1.Controls.Add(Me.Item10)
         Me.TabPage1.Controls.Add(Me.PictureBox138)
-        Me.TabPage1.Controls.Add(Me.PictureBox11)
+        Me.TabPage1.Controls.Add(Me.Item11)
         Me.TabPage1.Controls.Add(Me.PictureBox137)
-        Me.TabPage1.Controls.Add(Me.PictureBox12)
+        Me.TabPage1.Controls.Add(Me.Item12)
         Me.TabPage1.Controls.Add(Me.PictureBox136)
-        Me.TabPage1.Controls.Add(Me.PictureBox13)
+        Me.TabPage1.Controls.Add(Me.Item13)
         Me.TabPage1.Controls.Add(Me.PictureBox135)
-        Me.TabPage1.Controls.Add(Me.PictureBox14)
+        Me.TabPage1.Controls.Add(Me.Item14)
         Me.TabPage1.Controls.Add(Me.PictureBox134)
-        Me.TabPage1.Controls.Add(Me.PictureBox15)
+        Me.TabPage1.Controls.Add(Me.Item15)
         Me.TabPage1.Controls.Add(Me.PictureBox133)
-        Me.TabPage1.Controls.Add(Me.PictureBox16)
+        Me.TabPage1.Controls.Add(Me.Item16)
         Me.TabPage1.Controls.Add(Me.PictureBox132)
-        Me.TabPage1.Controls.Add(Me.PictureBox17)
+        Me.TabPage1.Controls.Add(Me.Item17)
         Me.TabPage1.Controls.Add(Me.PictureBox131)
-        Me.TabPage1.Controls.Add(Me.PictureBox18)
+        Me.TabPage1.Controls.Add(Me.Item18)
         Me.TabPage1.Controls.Add(Me.PictureBox130)
-        Me.TabPage1.Controls.Add(Me.PictureBox19)
+        Me.TabPage1.Controls.Add(Me.Item19)
         Me.TabPage1.Controls.Add(Me.PictureBox129)
-        Me.TabPage1.Controls.Add(Me.PictureBox20)
+        Me.TabPage1.Controls.Add(Me.Item20)
         Me.TabPage1.Controls.Add(Me.PictureBox128)
-        Me.TabPage1.Controls.Add(Me.PictureBox21)
+        Me.TabPage1.Controls.Add(Me.Item21)
         Me.TabPage1.Controls.Add(Me.PictureBox127)
-        Me.TabPage1.Controls.Add(Me.PictureBox22)
+        Me.TabPage1.Controls.Add(Me.Item22)
         Me.TabPage1.Controls.Add(Me.PictureBox126)
-        Me.TabPage1.Controls.Add(Me.PictureBox23)
+        Me.TabPage1.Controls.Add(Me.Item23)
         Me.TabPage1.Controls.Add(Me.PictureBox125)
-        Me.TabPage1.Controls.Add(Me.PictureBox24)
+        Me.TabPage1.Controls.Add(Me.Item24)
         Me.TabPage1.Controls.Add(Me.PictureBox124)
-        Me.TabPage1.Controls.Add(Me.PictureBox25)
+        Me.TabPage1.Controls.Add(Me.Item25)
         Me.TabPage1.Controls.Add(Me.PictureBox123)
-        Me.TabPage1.Controls.Add(Me.PictureBox26)
+        Me.TabPage1.Controls.Add(Me.Item26)
         Me.TabPage1.Controls.Add(Me.PictureBox122)
-        Me.TabPage1.Controls.Add(Me.PictureBox27)
+        Me.TabPage1.Controls.Add(Me.Item27)
         Me.TabPage1.Controls.Add(Me.PictureBox121)
-        Me.TabPage1.Controls.Add(Me.PictureBox28)
+        Me.TabPage1.Controls.Add(Me.Item28)
         Me.TabPage1.Controls.Add(Me.PictureBox120)
-        Me.TabPage1.Controls.Add(Me.PictureBox29)
+        Me.TabPage1.Controls.Add(Me.Item29)
         Me.TabPage1.Controls.Add(Me.PictureBox119)
-        Me.TabPage1.Controls.Add(Me.PictureBox30)
+        Me.TabPage1.Controls.Add(Me.Item30)
         Me.TabPage1.Controls.Add(Me.PictureBox118)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.PictureBox117)
@@ -604,18 +665,210 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.PictureBox71)
         Me.TabPage1.Controls.Add(Me.PictureBox73)
         Me.TabPage1.Controls.Add(Me.PictureBox72)
+        Me.TabPage1.Controls.Add(Me.ShapeContainer1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(910, 657)
+        Me.TabPage1.Size = New System.Drawing.Size(928, 682)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Change Itembuild"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Item39
+        '
+        Me.Item39.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item39.Location = New System.Drawing.Point(845, 155)
+        Me.Item39.Name = "Item39"
+        Me.Item39.Size = New System.Drawing.Size(40, 30)
+        Me.Item39.TabIndex = 533
+        Me.Item39.TabStop = False
+        '
+        'Item38
+        '
+        Me.Item38.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item38.Location = New System.Drawing.Point(799, 155)
+        Me.Item38.Name = "Item38"
+        Me.Item38.Size = New System.Drawing.Size(40, 30)
+        Me.Item38.TabIndex = 532
+        Me.Item38.TabStop = False
+        '
+        'Item37
+        '
+        Me.Item37.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item37.Location = New System.Drawing.Point(753, 155)
+        Me.Item37.Name = "Item37"
+        Me.Item37.Size = New System.Drawing.Size(40, 30)
+        Me.Item37.TabIndex = 531
+        Me.Item37.TabStop = False
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(410, 501)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(54, 13)
+        Me.Label23.TabIndex = 530
+        Me.Label23.Text = "Artifacts"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(591, 501)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(77, 13)
+        Me.Label22.TabIndex = 529
+        Me.Label22.Text = "Secret Shop"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(224, 501)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(39, 13)
+        Me.Label21.TabIndex = 528
+        Me.Label21.Text = "Armor"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(418, 355)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(60, 13)
+        Me.Label20.TabIndex = 527
+        Me.Label20.Text = "Weapons"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(604, 355)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(51, 13)
+        Me.Label19.TabIndex = 526
+        Me.Label19.Text = "Support"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(807, 355)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(43, 13)
+        Me.Label18.TabIndex = 525
+        Me.Label18.Text = "Caster"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(224, 355)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(54, 13)
+        Me.Label17.TabIndex = 524
+        Me.Label17.Text = "Common"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(791, 216)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(47, 13)
+        Me.Label16.TabIndex = 523
+        Me.Label16.Text = "Arcane"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(606, 216)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(68, 13)
+        Me.Label15.TabIndex = 522
+        Me.Label15.Text = "Armaments"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(410, 216)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(61, 13)
+        Me.Label14.TabIndex = 521
+        Me.Label14.Text = "Attributes"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(206, 216)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(81, 13)
+        Me.Label13.TabIndex = 519
+        Me.Label13.Text = "Consumables"
+        '
+        'Item36
+        '
+        Me.Item36.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item36.Location = New System.Drawing.Point(844, 119)
+        Me.Item36.Name = "Item36"
+        Me.Item36.Size = New System.Drawing.Size(40, 30)
+        Me.Item36.TabIndex = 518
+        Me.Item36.TabStop = False
+        '
+        'Item35
+        '
+        Me.Item35.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item35.Location = New System.Drawing.Point(798, 119)
+        Me.Item35.Name = "Item35"
+        Me.Item35.Size = New System.Drawing.Size(40, 30)
+        Me.Item35.TabIndex = 517
+        Me.Item35.TabStop = False
+        '
+        'Item34
+        '
+        Me.Item34.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item34.Location = New System.Drawing.Point(753, 119)
+        Me.Item34.Name = "Item34"
+        Me.Item34.Size = New System.Drawing.Size(40, 30)
+        Me.Item34.TabIndex = 516
+        Me.Item34.TabStop = False
+        '
+        'Item33
+        '
+        Me.Item33.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item33.Location = New System.Drawing.Point(845, 83)
+        Me.Item33.Name = "Item33"
+        Me.Item33.Size = New System.Drawing.Size(40, 30)
+        Me.Item33.TabIndex = 515
+        Me.Item33.TabStop = False
+        '
+        'Item32
+        '
+        Me.Item32.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item32.Location = New System.Drawing.Point(799, 83)
+        Me.Item32.Name = "Item32"
+        Me.Item32.Size = New System.Drawing.Size(40, 30)
+        Me.Item32.TabIndex = 514
+        Me.Item32.TabStop = False
+        '
+        'Item31
+        '
+        Me.Item31.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item31.Location = New System.Drawing.Point(753, 83)
+        Me.Item31.Name = "Item31"
+        Me.Item31.Size = New System.Drawing.Size(40, 30)
+        Me.Item31.TabIndex = 513
+        Me.Item31.TabStop = False
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(507, 243)
+        Me.Label11.Location = New System.Drawing.Point(691, 194)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(56, 13)
         Me.Label11.TabIndex = 512
@@ -626,7 +879,7 @@ Partial Class FormMain
         Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {"Alphabetical Order", "DotA Like"})
-        Me.ComboBox5.Location = New System.Drawing.Point(569, 240)
+        Me.ComboBox5.Location = New System.Drawing.Point(753, 191)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox5.TabIndex = 511
@@ -634,7 +887,7 @@ Partial Class FormMain
         'PictureBox164
         '
         Me.PictureBox164.Image = Global.D2RIC.My.Resources.Resources._40px_Tranquil_Boots
-        Me.PictureBox164.Location = New System.Drawing.Point(798, 564)
+        Me.PictureBox164.Location = New System.Drawing.Point(589, 416)
         Me.PictureBox164.Name = "PictureBox164"
         Me.PictureBox164.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox164.TabIndex = 510
@@ -643,7 +896,7 @@ Partial Class FormMain
         'PictureBox163
         '
         Me.PictureBox163.Image = Global.D2RIC.My.Resources.Resources._40px_Rod_of_Atos
-        Me.PictureBox163.Location = New System.Drawing.Point(753, 564)
+        Me.PictureBox163.Location = New System.Drawing.Point(736, 452)
         Me.PictureBox163.Name = "PictureBox163"
         Me.PictureBox163.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox163.TabIndex = 509
@@ -652,7 +905,7 @@ Partial Class FormMain
         'PictureBox162
         '
         Me.PictureBox162.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Aquila
-        Me.PictureBox162.Location = New System.Drawing.Point(707, 564)
+        Me.PictureBox162.Location = New System.Drawing.Point(543, 380)
         Me.PictureBox162.Name = "PictureBox162"
         Me.PictureBox162.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox162.TabIndex = 508
@@ -661,7 +914,7 @@ Partial Class FormMain
         'PictureBox161
         '
         Me.PictureBox161.Image = Global.D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd
-        Me.PictureBox161.Location = New System.Drawing.Point(661, 564)
+        Me.PictureBox161.Location = New System.Drawing.Point(398, 598)
         Me.PictureBox161.Name = "PictureBox161"
         Me.PictureBox161.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox161.TabIndex = 507
@@ -670,7 +923,7 @@ Partial Class FormMain
         'PictureBox160
         '
         Me.PictureBox160.Image = Global.D2RIC.My.Resources.Resources._40px_Abyssal_Blade
-        Me.PictureBox160.Location = New System.Drawing.Point(615, 564)
+        Me.PictureBox160.Location = New System.Drawing.Point(444, 452)
         Me.PictureBox160.Name = "PictureBox160"
         Me.PictureBox160.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox160.TabIndex = 506
@@ -683,7 +936,7 @@ Partial Class FormMain
         Me.ComboBox3.Items.AddRange(New Object() {"All", "Strength", "Agility", "Intelligence", "Carry", "Support", "Ganker", "Initiator", "Pusher", "Jungler", "Tank"})
         Me.ComboBox3.Location = New System.Drawing.Point(72, 22)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox3.Size = New System.Drawing.Size(80, 21)
         Me.ComboBox3.TabIndex = 505
         '
         'Label12
@@ -698,7 +951,7 @@ Partial Class FormMain
         'PictureBox166
         '
         Me.PictureBox166.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox166.Location = New System.Drawing.Point(397, 231)
+        Me.PictureBox166.Location = New System.Drawing.Point(615, 183)
         Me.PictureBox166.Name = "PictureBox166"
         Me.PictureBox166.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox166.TabIndex = 503
@@ -708,16 +961,16 @@ Partial Class FormMain
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"none", "Abyssal Blade", "Aghanim's Scepter", "Animal Courier", "Arcane Boots", "Armlet", "Assault Cuirass", "Battle Fury", "Belt of Strength", "Black King Bar", "Blade Mail", "Blade of Alacrity", "Blades of Attack", "Blink Dagger", "Bloodstone", "Boots of Elvenskin", "Boots of Speed", "Boots of Travel", "Bottle", "Bracer", "Broadsword", "Buckler", "Butterfly", "Chainmail", "Circlet", "Clarity", "Claymore", "Cloak", "Crystalys", "Daedalus", "Dagon 1", "Dagon 2", "Dagon 3", "Dagon 4", "Dagon 5", "Demon Edge", "Desolator", "Diffusal Blade 1", "Diffusal Blade 2", "Divine Rapier", "Drum of Endurance", "Dust of Appearance", "Eaglesong", "Energy Booster", "Ethereal Blade", "Eul's Scepter of Divinity", "Eye of Skadi", "Flying Courier", "Force Staff", "Gauntlets of Strength", "Gem of True Sight", "Ghost Scepter", "Gloves of Haste", "Hand of Midas", "Headdress", "Healing Salve", "Heart of Tarrasque", "Heaven's Halberd", "Helm of Iron Will", "Helm of the Dominator", "Hood of Defiance", "Hyperstone", "Iron Branch", "Javelin", "Linken's Sphere", "Maelstrom", "Magic Stick", "Magic Wand", "Manta Style", "Mantle of Intelligence", "Mask of Madness", "Medallion of Courage", "Mekansm", "Mithril Hammer", "Mjollnir", "Monkey King Bar", "Morbid Mask", "Mystic Staff", "Necronomicon 1", "Necronomicon 2", "Necronomicon 3", "Null Talisman", "Oblivion Staff", "Observer Ward", "Ogre Club", "Orb of Venom", "Orchid Malevolence", "Perseverance", "Phase Boots", "Pipe of Insight", "Platemail", "Point Booster", "Poor Man's Shield", "Power Treads", "Quarterstaff", "Quelling Blade", "Radiance", "Reaver", "Refresher Orb", "Ring of Aquila", "Ring of Basilius", "Ring of Health", "Ring of Protection", "Ring of Regen", "Robe of the Magi", "Rod of Atos", "Sacred Relic", "Sage's Mask", "Sange", "Sange and Yasha", "Satanic", "Scythe of Vyse", "Sentry Ward", "Shadow Blade", "Shiva's Guard", "Skull Basher", "Slippers of Agility", "Smoke of Deceit", "Soul Booster", "Soul Ring", "Staff of Wizardry", "Stout Shield", "Talisman of Evasion", "Tango", "Town Portal Scroll", "Tranquil Boots", "Ultimate Orb", "Urn of Shadows", "Vanguard", "Veil of Discord", "Vitality Booster", "Vladmir's Offering", "Void Stone", "Wraith Band", "Yasha"})
-        Me.ComboBox1.Location = New System.Drawing.Point(270, 240)
+        Me.ComboBox1.Location = New System.Drawing.Point(453, 191)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(150, 21)
         Me.ComboBox1.TabIndex = 502
         Me.ComboBox1.Text = "none"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(200, 243)
+        Me.Label10.Location = New System.Drawing.Point(382, 195)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 13)
         Me.Label10.TabIndex = 501
@@ -726,7 +979,7 @@ Partial Class FormMain
         'PictureBox165
         '
         Me.PictureBox165.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox165.Location = New System.Drawing.Point(845, 564)
+        Me.PictureBox165.Location = New System.Drawing.Point(782, 562)
         Me.PictureBox165.Name = "PictureBox165"
         Me.PictureBox165.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox165.TabIndex = 500
@@ -745,7 +998,7 @@ Partial Class FormMain
         'PictureBox159
         '
         Me.PictureBox159.Image = Global.D2RIC.My.Resources.Resources._40px_Yasha
-        Me.PictureBox159.Location = New System.Drawing.Point(569, 564)
+        Me.PictureBox159.Location = New System.Drawing.Point(490, 562)
         Me.PictureBox159.Name = "PictureBox159"
         Me.PictureBox159.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox159.TabIndex = 499
@@ -757,13 +1010,13 @@ Partial Class FormMain
         Me.ListBox1.Items.AddRange(New Object() {"Abaddon", "Alchemist", "Ancient Apparition", "Anti-Mage", "Axe", "Bane", "Batrider", "Beastmaster", "Bloodseeker", "Bounty Hunter", "Bristleback", "Broodmother", "Centaur Warchief", "Chaos Knight", "Chen", "Clinkz", "Clockwerk", "Crystal Maiden", "Dark Seer", "Dazzle", "Death Prophet", "Dirge", "Disruptor", "Doom Bringer", "Dragon Knight", "Drow Ranger", "Earthshaker", "Enchantress", "Enigma", "Faceless Void", "Goblin Techies", "Guardian Wisp", "Gyrocopter", "Harbinger", "Huskar", "Invoker", "Jakiro", "Juggernaut", "Keeper of the Light", "Kunkka", "Lanaya", "Leshrac", "Lich", "Lifestealer", "Lina", "Lion", "Lone Druid", "Luna", "Lycanthrope", "Magnataur", "Medusa", "Meepo", "Mirana", "Morphling", "Mortred", "Naga Siren", "Nature's Prophet", "Necrolyte", "Nerubian Assassin", "Night Stalker", "Ogre Magi", "Omniknight", "Pandaren Brewmaster", "Phantom Lancer", "Phoenix", "Pit Lord", "Puck", "Pudge", "Pugna", "Queen of Pain", "Razor", "Riki", "Rubick", "Sand King", "Shadow Demon", "Shadow Fiend", "Shadow Shaman", "Silencer", "Skeleton King", "Slardar", "Slark", "Sniper", "Soul Keeper", "Spectre", "Spirit Breaker", "Storm Spirit", "Sven", "Tauren Chieftain", "Tidehunter", "Tinker", "Tiny", "Treant Protector", "Troll Warlord", "Tuskarr", "Ursa", "Vengeful Spirit", "Venomancer", "Viper", "Visage", "Warlock", "Weaver", "Windrunner", "Witch Doctor", "Zeus"})
         Me.ListBox1.Location = New System.Drawing.Point(5, 50)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(143, 602)
+        Me.ListBox1.Size = New System.Drawing.Size(147, 628)
         Me.ListBox1.TabIndex = 325
         '
         'PictureBox158
         '
         Me.PictureBox158.Image = Global.D2RIC.My.Resources.Resources._40px_Wraith_Band
-        Me.PictureBox158.Location = New System.Drawing.Point(523, 564)
+        Me.PictureBox158.Location = New System.Drawing.Point(159, 380)
         Me.PictureBox158.Name = "PictureBox158"
         Me.PictureBox158.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox158.TabIndex = 498
@@ -771,7 +1024,7 @@ Partial Class FormMain
         '
         'ButtonOpenFolder
         '
-        Me.ButtonOpenFolder.Location = New System.Drawing.Point(201, 623)
+        Me.ButtonOpenFolder.Location = New System.Drawing.Point(201, 653)
         Me.ButtonOpenFolder.Name = "ButtonOpenFolder"
         Me.ButtonOpenFolder.Size = New System.Drawing.Size(132, 23)
         Me.ButtonOpenFolder.TabIndex = 327
@@ -781,7 +1034,7 @@ Partial Class FormMain
         'PictureBox157
         '
         Me.PictureBox157.Image = Global.D2RIC.My.Resources.Resources._40px_Void_Stone
-        Me.PictureBox157.Location = New System.Drawing.Point(477, 564)
+        Me.PictureBox157.Location = New System.Drawing.Point(681, 598)
         Me.PictureBox157.Name = "PictureBox157"
         Me.PictureBox157.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox157.TabIndex = 497
@@ -789,7 +1042,7 @@ Partial Class FormMain
         '
         'ButtonSave
         '
-        Me.ButtonSave.Location = New System.Drawing.Point(619, 623)
+        Me.ButtonSave.Location = New System.Drawing.Point(615, 653)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(59, 23)
         Me.ButtonSave.TabIndex = 328
@@ -799,7 +1052,7 @@ Partial Class FormMain
         'PictureBox156
         '
         Me.PictureBox156.Image = Global.D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering
-        Me.PictureBox156.Location = New System.Drawing.Point(431, 564)
+        Me.PictureBox156.Location = New System.Drawing.Point(634, 416)
         Me.PictureBox156.Name = "PictureBox156"
         Me.PictureBox156.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox156.TabIndex = 496
@@ -808,7 +1061,7 @@ Partial Class FormMain
         'PictureBox155
         '
         Me.PictureBox155.Image = Global.D2RIC.My.Resources.Resources._40px_Vitality_Booster
-        Me.PictureBox155.Location = New System.Drawing.Point(385, 564)
+        Me.PictureBox155.Location = New System.Drawing.Point(681, 562)
         Me.PictureBox155.Name = "PictureBox155"
         Me.PictureBox155.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox155.TabIndex = 495
@@ -817,7 +1070,7 @@ Partial Class FormMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(200, 201)
+        Me.Label2.Location = New System.Drawing.Point(198, 194)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 330
@@ -826,7 +1079,7 @@ Partial Class FormMain
         'PictureBox154
         '
         Me.PictureBox154.Image = Global.D2RIC.My.Resources.Resources._40px_Veil_of_Discord
-        Me.PictureBox154.Location = New System.Drawing.Point(339, 564)
+        Me.PictureBox154.Location = New System.Drawing.Point(736, 380)
         Me.PictureBox154.Name = "PictureBox154"
         Me.PictureBox154.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox154.TabIndex = 494
@@ -834,7 +1087,7 @@ Partial Class FormMain
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(247, 198)
+        Me.TextBox1.Location = New System.Drawing.Point(245, 191)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(122, 20)
         Me.TextBox1.TabIndex = 331
@@ -842,7 +1095,7 @@ Partial Class FormMain
         'PictureBox153
         '
         Me.PictureBox153.Image = Global.D2RIC.My.Resources.Resources._40px_Vanguard
-        Me.PictureBox153.Location = New System.Drawing.Point(293, 564)
+        Me.PictureBox153.Location = New System.Drawing.Point(251, 598)
         Me.PictureBox153.Name = "PictureBox153"
         Me.PictureBox153.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox153.TabIndex = 493
@@ -852,7 +1105,7 @@ Partial Class FormMain
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(473, 24)
+        Me.Label1.Location = New System.Drawing.Point(473, 2)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 20)
         Me.Label1.TabIndex = 332
@@ -861,7 +1114,7 @@ Partial Class FormMain
         'PictureBox152
         '
         Me.PictureBox152.Image = Global.D2RIC.My.Resources.Resources._40px_Urn_of_Shadows
-        Me.PictureBox152.Location = New System.Drawing.Point(247, 564)
+        Me.PictureBox152.Location = New System.Drawing.Point(589, 452)
         Me.PictureBox152.Name = "PictureBox152"
         Me.PictureBox152.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox152.TabIndex = 492
@@ -870,7 +1123,7 @@ Partial Class FormMain
         'PictureBox151
         '
         Me.PictureBox151.Image = Global.D2RIC.My.Resources.Resources._40px_Ultimate_Orb
-        Me.PictureBox151.Location = New System.Drawing.Point(201, 564)
+        Me.PictureBox151.Location = New System.Drawing.Point(488, 238)
         Me.PictureBox151.Name = "PictureBox151"
         Me.PictureBox151.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox151.TabIndex = 491
@@ -879,7 +1132,7 @@ Partial Class FormMain
         'PictureBox150
         '
         Me.PictureBox150.Image = Global.D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll
-        Me.PictureBox150.Location = New System.Drawing.Point(845, 528)
+        Me.PictureBox150.Location = New System.Drawing.Point(205, 238)
         Me.PictureBox150.Name = "PictureBox150"
         Me.PictureBox150.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox150.TabIndex = 490
@@ -888,7 +1141,7 @@ Partial Class FormMain
         'PictureBox149
         '
         Me.PictureBox149.Image = Global.D2RIC.My.Resources.Resources._40px_Tango
-        Me.PictureBox149.Location = New System.Drawing.Point(799, 528)
+        Me.PictureBox149.Location = New System.Drawing.Point(159, 274)
         Me.PictureBox149.Name = "PictureBox149"
         Me.PictureBox149.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox149.TabIndex = 489
@@ -897,547 +1150,547 @@ Partial Class FormMain
         'PictureBox148
         '
         Me.PictureBox148.Image = Global.D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion
-        Me.PictureBox148.Location = New System.Drawing.Point(753, 528)
+        Me.PictureBox148.Location = New System.Drawing.Point(782, 274)
         Me.PictureBox148.Name = "PictureBox148"
         Me.PictureBox148.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox148.TabIndex = 488
         Me.PictureBox148.TabStop = False
         '
-        'PictureBox1
+        'Item1
         '
-        Me.PictureBox1.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox1.Location = New System.Drawing.Point(201, 90)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox1.TabIndex = 337
-        Me.PictureBox1.TabStop = False
+        Me.Item1.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item1.Location = New System.Drawing.Point(201, 47)
+        Me.Item1.Name = "Item1"
+        Me.Item1.Size = New System.Drawing.Size(40, 30)
+        Me.Item1.TabIndex = 337
+        Me.Item1.TabStop = False
         '
         'PictureBox147
         '
         Me.PictureBox147.Image = Global.D2RIC.My.Resources.Resources._40px_Stout_Shield
-        Me.PictureBox147.Location = New System.Drawing.Point(707, 528)
+        Me.PictureBox147.Location = New System.Drawing.Point(589, 310)
         Me.PictureBox147.Name = "PictureBox147"
         Me.PictureBox147.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox147.TabIndex = 487
         Me.PictureBox147.TabStop = False
         '
-        'PictureBox2
+        'Item2
         '
-        Me.PictureBox2.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox2.Location = New System.Drawing.Point(247, 90)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox2.TabIndex = 338
-        Me.PictureBox2.TabStop = False
+        Me.Item2.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item2.Location = New System.Drawing.Point(247, 47)
+        Me.Item2.Name = "Item2"
+        Me.Item2.Size = New System.Drawing.Size(40, 30)
+        Me.Item2.TabIndex = 338
+        Me.Item2.TabStop = False
         '
         'PictureBox146
         '
         Me.PictureBox146.Image = Global.D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry
-        Me.PictureBox146.Location = New System.Drawing.Point(661, 528)
+        Me.PictureBox146.Location = New System.Drawing.Point(442, 274)
         Me.PictureBox146.Name = "PictureBox146"
         Me.PictureBox146.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox146.TabIndex = 486
         Me.PictureBox146.TabStop = False
         '
-        'PictureBox3
+        'Item3
         '
-        Me.PictureBox3.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox3.Location = New System.Drawing.Point(293, 90)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox3.TabIndex = 339
-        Me.PictureBox3.TabStop = False
+        Me.Item3.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item3.Location = New System.Drawing.Point(293, 47)
+        Me.Item3.Name = "Item3"
+        Me.Item3.Size = New System.Drawing.Size(40, 30)
+        Me.Item3.TabIndex = 339
+        Me.Item3.TabStop = False
         '
         'PictureBox145
         '
         Me.PictureBox145.Image = Global.D2RIC.My.Resources.Resources._40px_Soul_Ring
-        Me.PictureBox145.Location = New System.Drawing.Point(615, 528)
+        Me.PictureBox145.Location = New System.Drawing.Point(251, 416)
         Me.PictureBox145.Name = "PictureBox145"
         Me.PictureBox145.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox145.TabIndex = 485
         Me.PictureBox145.TabStop = False
         '
-        'PictureBox4
+        'Item4
         '
-        Me.PictureBox4.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox4.Location = New System.Drawing.Point(201, 126)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox4.TabIndex = 340
-        Me.PictureBox4.TabStop = False
+        Me.Item4.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item4.Location = New System.Drawing.Point(201, 83)
+        Me.Item4.Name = "Item4"
+        Me.Item4.Size = New System.Drawing.Size(40, 30)
+        Me.Item4.TabIndex = 340
+        Me.Item4.TabStop = False
         '
         'PictureBox144
         '
         Me.PictureBox144.Image = Global.D2RIC.My.Resources.Resources._40px_Soul_Booster
-        Me.PictureBox144.Location = New System.Drawing.Point(569, 528)
+        Me.PictureBox144.Location = New System.Drawing.Point(205, 562)
         Me.PictureBox144.Name = "PictureBox144"
         Me.PictureBox144.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox144.TabIndex = 484
         Me.PictureBox144.TabStop = False
         '
-        'PictureBox5
+        'Item5
         '
-        Me.PictureBox5.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox5.Location = New System.Drawing.Point(247, 126)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox5.TabIndex = 341
-        Me.PictureBox5.TabStop = False
+        Me.Item5.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item5.Location = New System.Drawing.Point(247, 83)
+        Me.Item5.Name = "Item5"
+        Me.Item5.Size = New System.Drawing.Size(40, 30)
+        Me.Item5.TabIndex = 341
+        Me.Item5.TabStop = False
         '
         'PictureBox143
         '
         Me.PictureBox143.Image = Global.D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit
-        Me.PictureBox143.Location = New System.Drawing.Point(523, 528)
+        Me.PictureBox143.Location = New System.Drawing.Point(297, 274)
         Me.PictureBox143.Name = "PictureBox143"
         Me.PictureBox143.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox143.TabIndex = 483
         Me.PictureBox143.TabStop = False
         '
-        'PictureBox6
+        'Item6
         '
-        Me.PictureBox6.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox6.Location = New System.Drawing.Point(293, 126)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox6.TabIndex = 342
-        Me.PictureBox6.TabStop = False
+        Me.Item6.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item6.Location = New System.Drawing.Point(293, 83)
+        Me.Item6.Name = "Item6"
+        Me.Item6.Size = New System.Drawing.Size(40, 30)
+        Me.Item6.TabIndex = 342
+        Me.Item6.TabStop = False
         '
         'PictureBox142
         '
         Me.PictureBox142.Image = Global.D2RIC.My.Resources.Resources._40px_Slippers_of_Agility
-        Me.PictureBox142.Location = New System.Drawing.Point(477, 528)
+        Me.PictureBox142.Location = New System.Drawing.Point(442, 238)
         Me.PictureBox142.Name = "PictureBox142"
         Me.PictureBox142.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox142.TabIndex = 482
         Me.PictureBox142.TabStop = False
         '
-        'PictureBox7
+        'Item7
         '
-        Me.PictureBox7.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox7.Location = New System.Drawing.Point(385, 90)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox7.TabIndex = 343
-        Me.PictureBox7.TabStop = False
+        Me.Item7.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item7.Location = New System.Drawing.Point(201, 119)
+        Me.Item7.Name = "Item7"
+        Me.Item7.Size = New System.Drawing.Size(40, 30)
+        Me.Item7.TabIndex = 343
+        Me.Item7.TabStop = False
         '
         'PictureBox141
         '
         Me.PictureBox141.Image = Global.D2RIC.My.Resources.Resources._40px_Skull_Basher
-        Me.PictureBox141.Location = New System.Drawing.Point(431, 528)
+        Me.PictureBox141.Location = New System.Drawing.Point(490, 416)
         Me.PictureBox141.Name = "PictureBox141"
         Me.PictureBox141.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox141.TabIndex = 481
         Me.PictureBox141.TabStop = False
         '
-        'PictureBox8
+        'Item8
         '
-        Me.PictureBox8.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox8.Location = New System.Drawing.Point(431, 90)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox8.TabIndex = 344
-        Me.PictureBox8.TabStop = False
+        Me.Item8.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item8.Location = New System.Drawing.Point(247, 119)
+        Me.Item8.Name = "Item8"
+        Me.Item8.Size = New System.Drawing.Size(40, 30)
+        Me.Item8.TabIndex = 344
+        Me.Item8.TabStop = False
         '
         'PictureBox140
         '
         Me.PictureBox140.Image = Global.D2RIC.My.Resources.Resources._40px_Shiva_s_Guard
-        Me.PictureBox140.Location = New System.Drawing.Point(385, 528)
+        Me.PictureBox140.Location = New System.Drawing.Point(159, 562)
         Me.PictureBox140.Name = "PictureBox140"
         Me.PictureBox140.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox140.TabIndex = 480
         Me.PictureBox140.TabStop = False
         '
-        'PictureBox9
+        'Item9
         '
-        Me.PictureBox9.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox9.Location = New System.Drawing.Point(477, 90)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox9.TabIndex = 345
-        Me.PictureBox9.TabStop = False
+        Me.Item9.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item9.Location = New System.Drawing.Point(293, 119)
+        Me.Item9.Name = "Item9"
+        Me.Item9.Size = New System.Drawing.Size(40, 30)
+        Me.Item9.TabIndex = 345
+        Me.Item9.TabStop = False
         '
         'PictureBox139
         '
         Me.PictureBox139.Image = Global.D2RIC.My.Resources.Resources._40px_Shadow_Blade
-        Me.PictureBox139.Location = New System.Drawing.Point(339, 528)
+        Me.PictureBox139.Location = New System.Drawing.Point(398, 452)
         Me.PictureBox139.Name = "PictureBox139"
         Me.PictureBox139.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox139.TabIndex = 479
         Me.PictureBox139.TabStop = False
         '
-        'PictureBox10
+        'Item10
         '
-        Me.PictureBox10.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox10.Location = New System.Drawing.Point(385, 126)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox10.TabIndex = 346
-        Me.PictureBox10.TabStop = False
+        Me.Item10.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item10.Location = New System.Drawing.Point(385, 47)
+        Me.Item10.Name = "Item10"
+        Me.Item10.Size = New System.Drawing.Size(40, 30)
+        Me.Item10.TabIndex = 346
+        Me.Item10.TabStop = False
         '
         'PictureBox138
         '
         Me.PictureBox138.Image = Global.D2RIC.My.Resources.Resources._40px_Sentry_Ward
-        Me.PictureBox138.Location = New System.Drawing.Point(293, 528)
+        Me.PictureBox138.Location = New System.Drawing.Point(251, 274)
         Me.PictureBox138.Name = "PictureBox138"
         Me.PictureBox138.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox138.TabIndex = 478
         Me.PictureBox138.TabStop = False
         '
-        'PictureBox11
+        'Item11
         '
-        Me.PictureBox11.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox11.Location = New System.Drawing.Point(431, 126)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox11.TabIndex = 347
-        Me.PictureBox11.TabStop = False
+        Me.Item11.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item11.Location = New System.Drawing.Point(431, 47)
+        Me.Item11.Name = "Item11"
+        Me.Item11.Size = New System.Drawing.Size(40, 30)
+        Me.Item11.TabIndex = 347
+        Me.Item11.TabStop = False
         '
         'PictureBox137
         '
         Me.PictureBox137.Image = Global.D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse
-        Me.PictureBox137.Location = New System.Drawing.Point(247, 528)
+        Me.PictureBox137.Location = New System.Drawing.Point(782, 452)
         Me.PictureBox137.Name = "PictureBox137"
         Me.PictureBox137.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox137.TabIndex = 477
         Me.PictureBox137.TabStop = False
         '
-        'PictureBox12
+        'Item12
         '
-        Me.PictureBox12.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox12.Location = New System.Drawing.Point(477, 126)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox12.TabIndex = 348
-        Me.PictureBox12.TabStop = False
+        Me.Item12.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item12.Location = New System.Drawing.Point(477, 47)
+        Me.Item12.Name = "Item12"
+        Me.Item12.Size = New System.Drawing.Size(40, 30)
+        Me.Item12.TabIndex = 348
+        Me.Item12.TabStop = False
         '
         'PictureBox136
         '
         Me.PictureBox136.Image = Global.D2RIC.My.Resources.Resources._40px_Satanic
-        Me.PictureBox136.Location = New System.Drawing.Point(201, 528)
+        Me.PictureBox136.Location = New System.Drawing.Point(352, 634)
         Me.PictureBox136.Name = "PictureBox136"
         Me.PictureBox136.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox136.TabIndex = 476
         Me.PictureBox136.TabStop = False
         '
-        'PictureBox13
+        'Item13
         '
-        Me.PictureBox13.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox13.Location = New System.Drawing.Point(569, 90)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox13.TabIndex = 349
-        Me.PictureBox13.TabStop = False
+        Me.Item13.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item13.Location = New System.Drawing.Point(385, 83)
+        Me.Item13.Name = "Item13"
+        Me.Item13.Size = New System.Drawing.Size(40, 30)
+        Me.Item13.TabIndex = 349
+        Me.Item13.TabStop = False
         '
         'PictureBox135
         '
         Me.PictureBox135.Image = Global.D2RIC.My.Resources.Resources._40px_Sange_and_Yasha
-        Me.PictureBox135.Location = New System.Drawing.Point(845, 492)
+        Me.PictureBox135.Location = New System.Drawing.Point(398, 526)
         Me.PictureBox135.Name = "PictureBox135"
         Me.PictureBox135.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox135.TabIndex = 475
         Me.PictureBox135.TabStop = False
         '
-        'PictureBox14
+        'Item14
         '
-        Me.PictureBox14.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox14.Location = New System.Drawing.Point(615, 90)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox14.TabIndex = 350
-        Me.PictureBox14.TabStop = False
+        Me.Item14.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item14.Location = New System.Drawing.Point(431, 83)
+        Me.Item14.Name = "Item14"
+        Me.Item14.Size = New System.Drawing.Size(40, 30)
+        Me.Item14.TabIndex = 350
+        Me.Item14.TabStop = False
         '
         'PictureBox134
         '
         Me.PictureBox134.Image = Global.D2RIC.My.Resources.Resources._40px_Sange
-        Me.PictureBox134.Location = New System.Drawing.Point(799, 492)
+        Me.PictureBox134.Location = New System.Drawing.Point(352, 598)
         Me.PictureBox134.Name = "PictureBox134"
         Me.PictureBox134.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox134.TabIndex = 474
         Me.PictureBox134.TabStop = False
         '
-        'PictureBox15
+        'Item15
         '
-        Me.PictureBox15.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox15.Location = New System.Drawing.Point(661, 90)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox15.TabIndex = 351
-        Me.PictureBox15.TabStop = False
+        Me.Item15.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item15.Location = New System.Drawing.Point(477, 83)
+        Me.Item15.Name = "Item15"
+        Me.Item15.Size = New System.Drawing.Size(40, 30)
+        Me.Item15.TabIndex = 351
+        Me.Item15.TabStop = False
         '
         'PictureBox133
         '
         Me.PictureBox133.Image = Global.D2RIC.My.Resources.Resources._40px_Sage_s_Mask
-        Me.PictureBox133.Location = New System.Drawing.Point(753, 492)
+        Me.PictureBox133.Location = New System.Drawing.Point(736, 274)
         Me.PictureBox133.Name = "PictureBox133"
         Me.PictureBox133.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox133.TabIndex = 473
         Me.PictureBox133.TabStop = False
         '
-        'PictureBox16
+        'Item16
         '
-        Me.PictureBox16.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox16.Location = New System.Drawing.Point(569, 126)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox16.TabIndex = 352
-        Me.PictureBox16.TabStop = False
+        Me.Item16.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item16.Location = New System.Drawing.Point(385, 119)
+        Me.Item16.Name = "Item16"
+        Me.Item16.Size = New System.Drawing.Size(40, 30)
+        Me.Item16.TabIndex = 352
+        Me.Item16.TabStop = False
         '
         'PictureBox132
         '
         Me.PictureBox132.Image = Global.D2RIC.My.Resources.Resources._40px_Sacred_Relic
-        Me.PictureBox132.Location = New System.Drawing.Point(707, 492)
+        Me.PictureBox132.Location = New System.Drawing.Point(635, 526)
         Me.PictureBox132.Name = "PictureBox132"
         Me.PictureBox132.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox132.TabIndex = 472
         Me.PictureBox132.TabStop = False
         '
-        'PictureBox17
+        'Item17
         '
-        Me.PictureBox17.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox17.Location = New System.Drawing.Point(615, 126)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox17.TabIndex = 353
-        Me.PictureBox17.TabStop = False
+        Me.Item17.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item17.Location = New System.Drawing.Point(431, 119)
+        Me.Item17.Name = "Item17"
+        Me.Item17.Size = New System.Drawing.Size(40, 30)
+        Me.Item17.TabIndex = 353
+        Me.Item17.TabStop = False
         '
         'PictureBox131
         '
         Me.PictureBox131.Image = Global.D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi
-        Me.PictureBox131.Location = New System.Drawing.Point(661, 492)
+        Me.PictureBox131.Location = New System.Drawing.Point(396, 274)
         Me.PictureBox131.Name = "PictureBox131"
         Me.PictureBox131.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox131.TabIndex = 471
         Me.PictureBox131.TabStop = False
         '
-        'PictureBox18
+        'Item18
         '
-        Me.PictureBox18.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox18.Location = New System.Drawing.Point(661, 126)
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox18.TabIndex = 354
-        Me.PictureBox18.TabStop = False
+        Me.Item18.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item18.Location = New System.Drawing.Point(477, 119)
+        Me.Item18.Name = "Item18"
+        Me.Item18.Size = New System.Drawing.Size(40, 30)
+        Me.Item18.TabIndex = 354
+        Me.Item18.TabStop = False
         '
         'PictureBox130
         '
         Me.PictureBox130.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Regen
-        Me.PictureBox130.Location = New System.Drawing.Point(615, 492)
+        Me.PictureBox130.Location = New System.Drawing.Point(782, 310)
         Me.PictureBox130.Name = "PictureBox130"
         Me.PictureBox130.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox130.TabIndex = 470
         Me.PictureBox130.TabStop = False
         '
-        'PictureBox19
+        'Item19
         '
-        Me.PictureBox19.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox19.Location = New System.Drawing.Point(753, 90)
-        Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox19.TabIndex = 355
-        Me.PictureBox19.TabStop = False
+        Me.Item19.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item19.Location = New System.Drawing.Point(569, 47)
+        Me.Item19.Name = "Item19"
+        Me.Item19.Size = New System.Drawing.Size(40, 30)
+        Me.Item19.TabIndex = 355
+        Me.Item19.TabStop = False
         '
         'PictureBox129
         '
         Me.PictureBox129.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Protection
-        Me.PictureBox129.Location = New System.Drawing.Point(569, 492)
+        Me.PictureBox129.Location = New System.Drawing.Point(543, 238)
         Me.PictureBox129.Name = "PictureBox129"
         Me.PictureBox129.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox129.TabIndex = 469
         Me.PictureBox129.TabStop = False
         '
-        'PictureBox20
+        'Item20
         '
-        Me.PictureBox20.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox20.Location = New System.Drawing.Point(799, 90)
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox20.TabIndex = 356
-        Me.PictureBox20.TabStop = False
+        Me.Item20.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item20.Location = New System.Drawing.Point(615, 47)
+        Me.Item20.Name = "Item20"
+        Me.Item20.Size = New System.Drawing.Size(40, 30)
+        Me.Item20.TabIndex = 356
+        Me.Item20.TabStop = False
         '
         'PictureBox128
         '
         Me.PictureBox128.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Health
-        Me.PictureBox128.Location = New System.Drawing.Point(523, 492)
+        Me.PictureBox128.Location = New System.Drawing.Point(589, 598)
         Me.PictureBox128.Name = "PictureBox128"
         Me.PictureBox128.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox128.TabIndex = 468
         Me.PictureBox128.TabStop = False
         '
-        'PictureBox21
+        'Item21
         '
-        Me.PictureBox21.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox21.Location = New System.Drawing.Point(845, 90)
-        Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox21.TabIndex = 357
-        Me.PictureBox21.TabStop = False
+        Me.Item21.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item21.Location = New System.Drawing.Point(661, 47)
+        Me.Item21.Name = "Item21"
+        Me.Item21.Size = New System.Drawing.Size(40, 30)
+        Me.Item21.TabIndex = 357
+        Me.Item21.TabStop = False
         '
         'PictureBox127
         '
         Me.PictureBox127.Image = Global.D2RIC.My.Resources.Resources._40px_Ring_of_Basilius
-        Me.PictureBox127.Location = New System.Drawing.Point(477, 492)
+        Me.PictureBox127.Location = New System.Drawing.Point(589, 380)
         Me.PictureBox127.Name = "PictureBox127"
         Me.PictureBox127.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox127.TabIndex = 467
         Me.PictureBox127.TabStop = False
         '
-        'PictureBox22
+        'Item22
         '
-        Me.PictureBox22.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox22.Location = New System.Drawing.Point(753, 126)
-        Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox22.TabIndex = 358
-        Me.PictureBox22.TabStop = False
+        Me.Item22.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item22.Location = New System.Drawing.Point(569, 83)
+        Me.Item22.Name = "Item22"
+        Me.Item22.Size = New System.Drawing.Size(40, 30)
+        Me.Item22.TabIndex = 358
+        Me.Item22.TabStop = False
         '
         'PictureBox126
         '
         Me.PictureBox126.Image = Global.D2RIC.My.Resources.Resources._40px_Refresher_Orb
-        Me.PictureBox126.Location = New System.Drawing.Point(431, 492)
+        Me.PictureBox126.Location = New System.Drawing.Point(828, 380)
         Me.PictureBox126.Name = "PictureBox126"
         Me.PictureBox126.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox126.TabIndex = 466
         Me.PictureBox126.TabStop = False
         '
-        'PictureBox23
+        'Item23
         '
-        Me.PictureBox23.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox23.Location = New System.Drawing.Point(799, 126)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox23.TabIndex = 359
-        Me.PictureBox23.TabStop = False
+        Me.Item23.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item23.Location = New System.Drawing.Point(615, 83)
+        Me.Item23.Name = "Item23"
+        Me.Item23.Size = New System.Drawing.Size(40, 30)
+        Me.Item23.TabIndex = 359
+        Me.Item23.TabStop = False
         '
         'PictureBox125
         '
         Me.PictureBox125.Image = Global.D2RIC.My.Resources.Resources._40px_Reaver
-        Me.PictureBox125.Location = New System.Drawing.Point(385, 492)
+        Me.PictureBox125.Location = New System.Drawing.Point(635, 562)
         Me.PictureBox125.Name = "PictureBox125"
         Me.PictureBox125.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox125.TabIndex = 465
         Me.PictureBox125.TabStop = False
         '
-        'PictureBox24
+        'Item24
         '
-        Me.PictureBox24.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox24.Location = New System.Drawing.Point(845, 126)
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox24.TabIndex = 360
-        Me.PictureBox24.TabStop = False
+        Me.Item24.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item24.Location = New System.Drawing.Point(661, 83)
+        Me.Item24.Name = "Item24"
+        Me.Item24.Size = New System.Drawing.Size(40, 30)
+        Me.Item24.TabIndex = 360
+        Me.Item24.TabStop = False
         '
         'PictureBox124
         '
         Me.PictureBox124.Image = Global.D2RIC.My.Resources.Resources._40px_Radiance
-        Me.PictureBox124.Location = New System.Drawing.Point(339, 492)
+        Me.PictureBox124.Location = New System.Drawing.Point(352, 452)
         Me.PictureBox124.Name = "PictureBox124"
         Me.PictureBox124.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox124.TabIndex = 464
         Me.PictureBox124.TabStop = False
         '
-        'PictureBox25
+        'Item25
         '
-        Me.PictureBox25.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox25.Location = New System.Drawing.Point(753, 162)
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox25.TabIndex = 361
-        Me.PictureBox25.TabStop = False
+        Me.Item25.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item25.Location = New System.Drawing.Point(569, 119)
+        Me.Item25.Name = "Item25"
+        Me.Item25.Size = New System.Drawing.Size(40, 30)
+        Me.Item25.TabIndex = 361
+        Me.Item25.TabStop = False
         '
         'PictureBox123
         '
         Me.PictureBox123.Image = Global.D2RIC.My.Resources.Resources._40px_Quelling_Blade
-        Me.PictureBox123.Location = New System.Drawing.Point(293, 492)
+        Me.PictureBox123.Location = New System.Drawing.Point(589, 274)
         Me.PictureBox123.Name = "PictureBox123"
         Me.PictureBox123.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox123.TabIndex = 463
         Me.PictureBox123.TabStop = False
         '
-        'PictureBox26
+        'Item26
         '
-        Me.PictureBox26.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox26.Location = New System.Drawing.Point(799, 162)
-        Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox26.TabIndex = 362
-        Me.PictureBox26.TabStop = False
+        Me.Item26.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item26.Location = New System.Drawing.Point(615, 119)
+        Me.Item26.Name = "Item26"
+        Me.Item26.Size = New System.Drawing.Size(40, 30)
+        Me.Item26.TabIndex = 362
+        Me.Item26.TabStop = False
         '
         'PictureBox122
         '
         Me.PictureBox122.Image = Global.D2RIC.My.Resources.Resources._40px_Quarterstaff
-        Me.PictureBox122.Location = New System.Drawing.Point(247, 492)
+        Me.PictureBox122.Location = New System.Drawing.Point(681, 274)
         Me.PictureBox122.Name = "PictureBox122"
         Me.PictureBox122.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox122.TabIndex = 462
         Me.PictureBox122.TabStop = False
         '
-        'PictureBox27
+        'Item27
         '
-        Me.PictureBox27.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox27.Location = New System.Drawing.Point(845, 162)
-        Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox27.TabIndex = 363
-        Me.PictureBox27.TabStop = False
+        Me.Item27.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item27.Location = New System.Drawing.Point(661, 119)
+        Me.Item27.Name = "Item27"
+        Me.Item27.Size = New System.Drawing.Size(40, 30)
+        Me.Item27.TabIndex = 363
+        Me.Item27.TabStop = False
         '
         'PictureBox121
         '
         Me.PictureBox121.Image = Global.D2RIC.My.Resources.Resources._40px_Necronomicon
-        Me.PictureBox121.Location = New System.Drawing.Point(201, 456)
+        Me.PictureBox121.Location = New System.Drawing.Point(736, 416)
         Me.PictureBox121.Name = "PictureBox121"
         Me.PictureBox121.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox121.TabIndex = 461
         Me.PictureBox121.TabStop = False
         '
-        'PictureBox28
+        'Item28
         '
-        Me.PictureBox28.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox28.Location = New System.Drawing.Point(753, 198)
-        Me.PictureBox28.Name = "PictureBox28"
-        Me.PictureBox28.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox28.TabIndex = 364
-        Me.PictureBox28.TabStop = False
+        Me.Item28.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item28.Location = New System.Drawing.Point(753, 47)
+        Me.Item28.Name = "Item28"
+        Me.Item28.Size = New System.Drawing.Size(40, 30)
+        Me.Item28.TabIndex = 364
+        Me.Item28.TabStop = False
         '
         'PictureBox120
         '
         Me.PictureBox120.Image = Global.D2RIC.My.Resources.Resources._40px_Power_Treads
-        Me.PictureBox120.Location = New System.Drawing.Point(201, 492)
+        Me.PictureBox120.Location = New System.Drawing.Point(159, 416)
         Me.PictureBox120.Name = "PictureBox120"
         Me.PictureBox120.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox120.TabIndex = 460
         Me.PictureBox120.TabStop = False
         '
-        'PictureBox29
+        'Item29
         '
-        Me.PictureBox29.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox29.Location = New System.Drawing.Point(799, 198)
-        Me.PictureBox29.Name = "PictureBox29"
-        Me.PictureBox29.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox29.TabIndex = 365
-        Me.PictureBox29.TabStop = False
+        Me.Item29.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item29.Location = New System.Drawing.Point(799, 47)
+        Me.Item29.Name = "Item29"
+        Me.Item29.Size = New System.Drawing.Size(40, 30)
+        Me.Item29.TabIndex = 365
+        Me.Item29.TabStop = False
         '
         'PictureBox119
         '
         Me.PictureBox119.Image = Global.D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield
-        Me.PictureBox119.Location = New System.Drawing.Point(844, 456)
+        Me.PictureBox119.Location = New System.Drawing.Point(205, 380)
         Me.PictureBox119.Name = "PictureBox119"
         Me.PictureBox119.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox119.TabIndex = 459
         Me.PictureBox119.TabStop = False
         '
-        'PictureBox30
+        'Item30
         '
-        Me.PictureBox30.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox30.Location = New System.Drawing.Point(845, 198)
-        Me.PictureBox30.Name = "PictureBox30"
-        Me.PictureBox30.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox30.TabIndex = 366
-        Me.PictureBox30.TabStop = False
+        Me.Item30.Image = Global.D2RIC.My.Resources.Resources.none
+        Me.Item30.Location = New System.Drawing.Point(845, 47)
+        Me.Item30.Name = "Item30"
+        Me.Item30.Size = New System.Drawing.Size(40, 30)
+        Me.Item30.TabIndex = 366
+        Me.Item30.TabStop = False
         '
         'PictureBox118
         '
         Me.PictureBox118.Image = Global.D2RIC.My.Resources.Resources._40px_Point_Booster
-        Me.PictureBox118.Location = New System.Drawing.Point(799, 456)
+        Me.PictureBox118.Location = New System.Drawing.Point(589, 526)
         Me.PictureBox118.Name = "PictureBox118"
         Me.PictureBox118.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox118.TabIndex = 458
@@ -1447,7 +1700,7 @@ Partial Class FormMain
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(224, 72)
+        Me.Label3.Location = New System.Drawing.Point(224, 29)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(85, 13)
         Me.Label3.TabIndex = 367
@@ -1456,7 +1709,7 @@ Partial Class FormMain
         'PictureBox117
         '
         Me.PictureBox117.Image = Global.D2RIC.My.Resources.Resources._40px_Platemail
-        Me.PictureBox117.Location = New System.Drawing.Point(753, 456)
+        Me.PictureBox117.Location = New System.Drawing.Point(635, 310)
         Me.PictureBox117.Name = "PictureBox117"
         Me.PictureBox117.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox117.TabIndex = 457
@@ -1466,7 +1719,7 @@ Partial Class FormMain
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(418, 72)
+        Me.Label4.Location = New System.Drawing.Point(418, 29)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 13)
         Me.Label4.TabIndex = 368
@@ -1475,7 +1728,7 @@ Partial Class FormMain
         'PictureBox116
         '
         Me.PictureBox116.Image = Global.D2RIC.My.Resources.Resources._40px_Pipe_of_Insight
-        Me.PictureBox116.Location = New System.Drawing.Point(707, 456)
+        Me.PictureBox116.Location = New System.Drawing.Point(681, 416)
         Me.PictureBox116.Name = "PictureBox116"
         Me.PictureBox116.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox116.TabIndex = 456
@@ -1485,7 +1738,7 @@ Partial Class FormMain
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(601, 72)
+        Me.Label5.Location = New System.Drawing.Point(601, 29)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 13)
         Me.Label5.TabIndex = 369
@@ -1494,7 +1747,7 @@ Partial Class FormMain
         'PictureBox115
         '
         Me.PictureBox115.Image = Global.D2RIC.My.Resources.Resources._40px_Phase_Boots
-        Me.PictureBox115.Location = New System.Drawing.Point(661, 456)
+        Me.PictureBox115.Location = New System.Drawing.Point(297, 380)
         Me.PictureBox115.Name = "PictureBox115"
         Me.PictureBox115.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox115.TabIndex = 455
@@ -1504,7 +1757,7 @@ Partial Class FormMain
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(795, 72)
+        Me.Label6.Location = New System.Drawing.Point(795, 29)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 370
@@ -1513,7 +1766,7 @@ Partial Class FormMain
         'PictureBox114
         '
         Me.PictureBox114.Image = Global.D2RIC.My.Resources.Resources._40px_Perseverance
-        Me.PictureBox114.Location = New System.Drawing.Point(615, 456)
+        Me.PictureBox114.Location = New System.Drawing.Point(205, 452)
         Me.PictureBox114.Name = "PictureBox114"
         Me.PictureBox114.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox114.TabIndex = 454
@@ -1522,7 +1775,7 @@ Partial Class FormMain
         'PictureBox31
         '
         Me.PictureBox31.Image = Global.D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter
-        Me.PictureBox31.Location = New System.Drawing.Point(201, 276)
+        Me.PictureBox31.Location = New System.Drawing.Point(828, 452)
         Me.PictureBox31.Name = "PictureBox31"
         Me.PictureBox31.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox31.TabIndex = 371
@@ -1531,7 +1784,7 @@ Partial Class FormMain
         'PictureBox113
         '
         Me.PictureBox113.Image = Global.D2RIC.My.Resources.Resources._40px_Orchid_Malevolence
-        Me.PictureBox113.Location = New System.Drawing.Point(569, 456)
+        Me.PictureBox113.Location = New System.Drawing.Point(874, 416)
         Me.PictureBox113.Name = "PictureBox113"
         Me.PictureBox113.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox113.TabIndex = 453
@@ -1540,7 +1793,7 @@ Partial Class FormMain
         'PictureBox32
         '
         Me.PictureBox32.Image = Global.D2RIC.My.Resources.Resources._40px_Animal_Courier
-        Me.PictureBox32.Location = New System.Drawing.Point(247, 276)
+        Me.PictureBox32.Location = New System.Drawing.Point(251, 310)
         Me.PictureBox32.Name = "PictureBox32"
         Me.PictureBox32.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox32.TabIndex = 372
@@ -1549,7 +1802,7 @@ Partial Class FormMain
         'PictureBox112
         '
         Me.PictureBox112.Image = Global.D2RIC.My.Resources.Resources._40px_Orb_of_Venom
-        Me.PictureBox112.Location = New System.Drawing.Point(523, 456)
+        Me.PictureBox112.Location = New System.Drawing.Point(681, 526)
         Me.PictureBox112.Name = "PictureBox112"
         Me.PictureBox112.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox112.TabIndex = 452
@@ -1558,7 +1811,7 @@ Partial Class FormMain
         'PictureBox33
         '
         Me.PictureBox33.Image = Global.D2RIC.My.Resources.Resources._40px_Arcane_Boots
-        Me.PictureBox33.Location = New System.Drawing.Point(293, 276)
+        Me.PictureBox33.Location = New System.Drawing.Point(681, 452)
         Me.PictureBox33.Name = "PictureBox33"
         Me.PictureBox33.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox33.TabIndex = 373
@@ -1567,7 +1820,7 @@ Partial Class FormMain
         'PictureBox111
         '
         Me.PictureBox111.Image = Global.D2RIC.My.Resources.Resources._40px_Ogre_Club
-        Me.PictureBox111.Location = New System.Drawing.Point(477, 456)
+        Me.PictureBox111.Location = New System.Drawing.Point(352, 310)
         Me.PictureBox111.Name = "PictureBox111"
         Me.PictureBox111.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox111.TabIndex = 451
@@ -1576,7 +1829,7 @@ Partial Class FormMain
         'PictureBox34
         '
         Me.PictureBox34.Image = Global.D2RIC.My.Resources.Resources._40px_Armlet
-        Me.PictureBox34.Location = New System.Drawing.Point(339, 276)
+        Me.PictureBox34.Location = New System.Drawing.Point(490, 380)
         Me.PictureBox34.Name = "PictureBox34"
         Me.PictureBox34.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox34.TabIndex = 374
@@ -1585,7 +1838,7 @@ Partial Class FormMain
         'PictureBox110
         '
         Me.PictureBox110.Image = Global.D2RIC.My.Resources.Resources._40px_Observer_Ward
-        Me.PictureBox110.Location = New System.Drawing.Point(431, 456)
+        Me.PictureBox110.Location = New System.Drawing.Point(205, 274)
         Me.PictureBox110.Name = "PictureBox110"
         Me.PictureBox110.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox110.TabIndex = 450
@@ -1594,7 +1847,7 @@ Partial Class FormMain
         'PictureBox35
         '
         Me.PictureBox35.Image = Global.D2RIC.My.Resources.Resources._40px_Assault_Cuirass
-        Me.PictureBox35.Location = New System.Drawing.Point(385, 276)
+        Me.PictureBox35.Location = New System.Drawing.Point(159, 526)
         Me.PictureBox35.Name = "PictureBox35"
         Me.PictureBox35.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox35.TabIndex = 375
@@ -1603,7 +1856,7 @@ Partial Class FormMain
         'PictureBox109
         '
         Me.PictureBox109.Image = Global.D2RIC.My.Resources.Resources._40px_Oblivion_Staff
-        Me.PictureBox109.Location = New System.Drawing.Point(385, 456)
+        Me.PictureBox109.Location = New System.Drawing.Point(251, 380)
         Me.PictureBox109.Name = "PictureBox109"
         Me.PictureBox109.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox109.TabIndex = 449
@@ -1612,7 +1865,7 @@ Partial Class FormMain
         'PictureBox36
         '
         Me.PictureBox36.Image = Global.D2RIC.My.Resources.Resources._40px_Battle_Fury
-        Me.PictureBox36.Location = New System.Drawing.Point(431, 276)
+        Me.PictureBox36.Location = New System.Drawing.Point(352, 416)
         Me.PictureBox36.Name = "PictureBox36"
         Me.PictureBox36.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox36.TabIndex = 376
@@ -1621,7 +1874,7 @@ Partial Class FormMain
         'PictureBox108
         '
         Me.PictureBox108.Image = Global.D2RIC.My.Resources.Resources._40px_Null_Talisman
-        Me.PictureBox108.Location = New System.Drawing.Point(339, 456)
+        Me.PictureBox108.Location = New System.Drawing.Point(159, 452)
         Me.PictureBox108.Name = "PictureBox108"
         Me.PictureBox108.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox108.TabIndex = 448
@@ -1630,7 +1883,7 @@ Partial Class FormMain
         'PictureBox37
         '
         Me.PictureBox37.Image = Global.D2RIC.My.Resources.Resources._40px_Belt_of_Strength
-        Me.PictureBox37.Location = New System.Drawing.Point(477, 276)
+        Me.PictureBox37.Location = New System.Drawing.Point(396, 310)
         Me.PictureBox37.Name = "PictureBox37"
         Me.PictureBox37.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox37.TabIndex = 377
@@ -1639,7 +1892,7 @@ Partial Class FormMain
         'PictureBox107
         '
         Me.PictureBox107.Image = Global.D2RIC.My.Resources.Resources._40px_Necronomicon3
-        Me.PictureBox107.Location = New System.Drawing.Point(293, 456)
+        Me.PictureBox107.Location = New System.Drawing.Point(828, 416)
         Me.PictureBox107.Name = "PictureBox107"
         Me.PictureBox107.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox107.TabIndex = 447
@@ -1648,7 +1901,7 @@ Partial Class FormMain
         'PictureBox38
         '
         Me.PictureBox38.Image = Global.D2RIC.My.Resources.Resources._40px_Black_King_Bar
-        Me.PictureBox38.Location = New System.Drawing.Point(523, 276)
+        Me.PictureBox38.Location = New System.Drawing.Point(297, 562)
         Me.PictureBox38.Name = "PictureBox38"
         Me.PictureBox38.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox38.TabIndex = 378
@@ -1657,7 +1910,7 @@ Partial Class FormMain
         'PictureBox106
         '
         Me.PictureBox106.Image = Global.D2RIC.My.Resources.Resources._40px_Necronomicon2
-        Me.PictureBox106.Location = New System.Drawing.Point(247, 456)
+        Me.PictureBox106.Location = New System.Drawing.Point(782, 416)
         Me.PictureBox106.Name = "PictureBox106"
         Me.PictureBox106.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox106.TabIndex = 446
@@ -1666,7 +1919,7 @@ Partial Class FormMain
         'PictureBox39
         '
         Me.PictureBox39.Image = Global.D2RIC.My.Resources.Resources._40px_Blade_Mail
-        Me.PictureBox39.Location = New System.Drawing.Point(569, 276)
+        Me.PictureBox39.Location = New System.Drawing.Point(205, 598)
         Me.PictureBox39.Name = "PictureBox39"
         Me.PictureBox39.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox39.TabIndex = 379
@@ -1675,7 +1928,7 @@ Partial Class FormMain
         'PictureBox105
         '
         Me.PictureBox105.Image = Global.D2RIC.My.Resources.Resources._40px_Mystic_Staff
-        Me.PictureBox105.Location = New System.Drawing.Point(845, 420)
+        Me.PictureBox105.Location = New System.Drawing.Point(589, 562)
         Me.PictureBox105.Name = "PictureBox105"
         Me.PictureBox105.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox105.TabIndex = 445
@@ -1684,7 +1937,7 @@ Partial Class FormMain
         'PictureBox40
         '
         Me.PictureBox40.Image = Global.D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity
-        Me.PictureBox40.Location = New System.Drawing.Point(615, 276)
+        Me.PictureBox40.Location = New System.Drawing.Point(350, 238)
         Me.PictureBox40.Name = "PictureBox40"
         Me.PictureBox40.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox40.TabIndex = 380
@@ -1693,7 +1946,7 @@ Partial Class FormMain
         'PictureBox104
         '
         Me.PictureBox104.Image = Global.D2RIC.My.Resources.Resources._40px_Morbid_Mask
-        Me.PictureBox104.Location = New System.Drawing.Point(799, 420)
+        Me.PictureBox104.Location = New System.Drawing.Point(874, 274)
         Me.PictureBox104.Name = "PictureBox104"
         Me.PictureBox104.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox104.TabIndex = 444
@@ -1702,7 +1955,7 @@ Partial Class FormMain
         'PictureBox41
         '
         Me.PictureBox41.Image = Global.D2RIC.My.Resources.Resources._40px_Blades_of_Attack
-        Me.PictureBox41.Location = New System.Drawing.Point(661, 276)
+        Me.PictureBox41.Location = New System.Drawing.Point(681, 310)
         Me.PictureBox41.Name = "PictureBox41"
         Me.PictureBox41.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox41.TabIndex = 381
@@ -1711,7 +1964,7 @@ Partial Class FormMain
         'PictureBox103
         '
         Me.PictureBox103.Image = Global.D2RIC.My.Resources.Resources._40px_Monkey_King_Bar
-        Me.PictureBox103.Location = New System.Drawing.Point(753, 420)
+        Me.PictureBox103.Location = New System.Drawing.Point(490, 452)
         Me.PictureBox103.Name = "PictureBox103"
         Me.PictureBox103.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox103.TabIndex = 443
@@ -1720,7 +1973,7 @@ Partial Class FormMain
         'PictureBox42
         '
         Me.PictureBox42.Image = Global.D2RIC.My.Resources.Resources._40px_Blink_Dagger
-        Me.PictureBox42.Location = New System.Drawing.Point(707, 276)
+        Me.PictureBox42.Location = New System.Drawing.Point(828, 310)
         Me.PictureBox42.Name = "PictureBox42"
         Me.PictureBox42.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox42.TabIndex = 382
@@ -1729,7 +1982,7 @@ Partial Class FormMain
         'PictureBox102
         '
         Me.PictureBox102.Image = Global.D2RIC.My.Resources.Resources._40px_Mjollnir
-        Me.PictureBox102.Location = New System.Drawing.Point(707, 420)
+        Me.PictureBox102.Location = New System.Drawing.Point(352, 562)
         Me.PictureBox102.Name = "PictureBox102"
         Me.PictureBox102.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox102.TabIndex = 442
@@ -1738,7 +1991,7 @@ Partial Class FormMain
         'PictureBox43
         '
         Me.PictureBox43.Image = Global.D2RIC.My.Resources.Resources._40px_Bloodstone
-        Me.PictureBox43.Location = New System.Drawing.Point(753, 276)
+        Me.PictureBox43.Location = New System.Drawing.Point(251, 526)
         Me.PictureBox43.Name = "PictureBox43"
         Me.PictureBox43.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox43.TabIndex = 383
@@ -1747,7 +2000,7 @@ Partial Class FormMain
         'PictureBox101
         '
         Me.PictureBox101.Image = Global.D2RIC.My.Resources.Resources._40px_Mithril_Hammer
-        Me.PictureBox101.Location = New System.Drawing.Point(661, 420)
+        Me.PictureBox101.Location = New System.Drawing.Point(681, 238)
         Me.PictureBox101.Name = "PictureBox101"
         Me.PictureBox101.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox101.TabIndex = 441
@@ -1756,7 +2009,7 @@ Partial Class FormMain
         'PictureBox44
         '
         Me.PictureBox44.Image = Global.D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin
-        Me.PictureBox44.Location = New System.Drawing.Point(799, 276)
+        Me.PictureBox44.Location = New System.Drawing.Point(396, 238)
         Me.PictureBox44.Name = "PictureBox44"
         Me.PictureBox44.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox44.TabIndex = 384
@@ -1765,7 +2018,7 @@ Partial Class FormMain
         'PictureBox100
         '
         Me.PictureBox100.Image = Global.D2RIC.My.Resources.Resources._40px_Mekansm
-        Me.PictureBox100.Location = New System.Drawing.Point(615, 420)
+        Me.PictureBox100.Location = New System.Drawing.Point(543, 452)
         Me.PictureBox100.Name = "PictureBox100"
         Me.PictureBox100.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox100.TabIndex = 440
@@ -1774,7 +2027,7 @@ Partial Class FormMain
         'PictureBox45
         '
         Me.PictureBox45.Image = Global.D2RIC.My.Resources.Resources._40px_Boots_of_Speed
-        Me.PictureBox45.Location = New System.Drawing.Point(845, 276)
+        Me.PictureBox45.Location = New System.Drawing.Point(874, 238)
         Me.PictureBox45.Name = "PictureBox45"
         Me.PictureBox45.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox45.TabIndex = 385
@@ -1783,7 +2036,7 @@ Partial Class FormMain
         'PictureBox99
         '
         Me.PictureBox99.Image = Global.D2RIC.My.Resources.Resources._40px_Medallion_of_Courage
-        Me.PictureBox99.Location = New System.Drawing.Point(569, 420)
+        Me.PictureBox99.Location = New System.Drawing.Point(635, 452)
         Me.PictureBox99.Name = "PictureBox99"
         Me.PictureBox99.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox99.TabIndex = 439
@@ -1792,7 +2045,7 @@ Partial Class FormMain
         'PictureBox46
         '
         Me.PictureBox46.Image = Global.D2RIC.My.Resources.Resources._40px_Boots_of_Travel
-        Me.PictureBox46.Location = New System.Drawing.Point(201, 312)
+        Me.PictureBox46.Location = New System.Drawing.Point(297, 452)
         Me.PictureBox46.Name = "PictureBox46"
         Me.PictureBox46.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox46.TabIndex = 386
@@ -1801,7 +2054,7 @@ Partial Class FormMain
         'PictureBox98
         '
         Me.PictureBox98.Image = Global.D2RIC.My.Resources.Resources._40px_Mask_of_Madness
-        Me.PictureBox98.Location = New System.Drawing.Point(523, 420)
+        Me.PictureBox98.Location = New System.Drawing.Point(490, 526)
         Me.PictureBox98.Name = "PictureBox98"
         Me.PictureBox98.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox98.TabIndex = 438
@@ -1810,7 +2063,7 @@ Partial Class FormMain
         'PictureBox47
         '
         Me.PictureBox47.Image = Global.D2RIC.My.Resources.Resources._40px_Bottle
-        Me.PictureBox47.Location = New System.Drawing.Point(247, 312)
+        Me.PictureBox47.Location = New System.Drawing.Point(159, 238)
         Me.PictureBox47.Name = "PictureBox47"
         Me.PictureBox47.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox47.TabIndex = 387
@@ -1819,7 +2072,7 @@ Partial Class FormMain
         'PictureBox97
         '
         Me.PictureBox97.Image = Global.D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence
-        Me.PictureBox97.Location = New System.Drawing.Point(477, 420)
+        Me.PictureBox97.Location = New System.Drawing.Point(350, 274)
         Me.PictureBox97.Name = "PictureBox97"
         Me.PictureBox97.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox97.TabIndex = 437
@@ -1828,7 +2081,7 @@ Partial Class FormMain
         'PictureBox48
         '
         Me.PictureBox48.Image = Global.D2RIC.My.Resources.Resources._40px_Bracer
-        Me.PictureBox48.Location = New System.Drawing.Point(293, 312)
+        Me.PictureBox48.Location = New System.Drawing.Point(251, 452)
         Me.PictureBox48.Name = "PictureBox48"
         Me.PictureBox48.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox48.TabIndex = 388
@@ -1837,7 +2090,7 @@ Partial Class FormMain
         'PictureBox96
         '
         Me.PictureBox96.Image = Global.D2RIC.My.Resources.Resources._40px_Manta_Style
-        Me.PictureBox96.Location = New System.Drawing.Point(431, 420)
+        Me.PictureBox96.Location = New System.Drawing.Point(251, 562)
         Me.PictureBox96.Name = "PictureBox96"
         Me.PictureBox96.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox96.TabIndex = 436
@@ -1846,7 +2099,7 @@ Partial Class FormMain
         'PictureBox49
         '
         Me.PictureBox49.Image = Global.D2RIC.My.Resources.Resources._40px_Broadsword
-        Me.PictureBox49.Location = New System.Drawing.Point(339, 312)
+        Me.PictureBox49.Location = New System.Drawing.Point(589, 238)
         Me.PictureBox49.Name = "PictureBox49"
         Me.PictureBox49.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox49.TabIndex = 389
@@ -1855,7 +2108,7 @@ Partial Class FormMain
         'PictureBox95
         '
         Me.PictureBox95.Image = Global.D2RIC.My.Resources.Resources._40px_Magic_Wand
-        Me.PictureBox95.Location = New System.Drawing.Point(385, 420)
+        Me.PictureBox95.Location = New System.Drawing.Point(205, 416)
         Me.PictureBox95.Name = "PictureBox95"
         Me.PictureBox95.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox95.TabIndex = 435
@@ -1864,7 +2117,7 @@ Partial Class FormMain
         'PictureBox50
         '
         Me.PictureBox50.Image = Global.D2RIC.My.Resources.Resources._40px_Buckler
-        Me.PictureBox50.Location = New System.Drawing.Point(385, 312)
+        Me.PictureBox50.Location = New System.Drawing.Point(635, 380)
         Me.PictureBox50.Name = "PictureBox50"
         Me.PictureBox50.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox50.TabIndex = 390
@@ -1873,7 +2126,7 @@ Partial Class FormMain
         'PictureBox94
         '
         Me.PictureBox94.Image = Global.D2RIC.My.Resources.Resources._40px_Magic_Stick
-        Me.PictureBox94.Location = New System.Drawing.Point(339, 420)
+        Me.PictureBox94.Location = New System.Drawing.Point(828, 238)
         Me.PictureBox94.Name = "PictureBox94"
         Me.PictureBox94.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox94.TabIndex = 434
@@ -1882,7 +2135,7 @@ Partial Class FormMain
         'PictureBox51
         '
         Me.PictureBox51.Image = Global.D2RIC.My.Resources.Resources._40px_Butterfly
-        Me.PictureBox51.Location = New System.Drawing.Point(431, 312)
+        Me.PictureBox51.Location = New System.Drawing.Point(444, 380)
         Me.PictureBox51.Name = "PictureBox51"
         Me.PictureBox51.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox51.TabIndex = 391
@@ -1891,7 +2144,7 @@ Partial Class FormMain
         'PictureBox93
         '
         Me.PictureBox93.Image = Global.D2RIC.My.Resources.Resources._40px_Maelstrom
-        Me.PictureBox93.Location = New System.Drawing.Point(293, 420)
+        Me.PictureBox93.Location = New System.Drawing.Point(444, 526)
         Me.PictureBox93.Name = "PictureBox93"
         Me.PictureBox93.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox93.TabIndex = 433
@@ -1900,7 +2153,7 @@ Partial Class FormMain
         'PictureBox52
         '
         Me.PictureBox52.Image = Global.D2RIC.My.Resources.Resources._40px_Chainmail
-        Me.PictureBox52.Location = New System.Drawing.Point(477, 312)
+        Me.PictureBox52.Location = New System.Drawing.Point(635, 238)
         Me.PictureBox52.Name = "PictureBox52"
         Me.PictureBox52.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox52.TabIndex = 392
@@ -1909,7 +2162,7 @@ Partial Class FormMain
         'PictureBox92
         '
         Me.PictureBox92.Image = Global.D2RIC.My.Resources.Resources._40px_Linken_s_Sphere
-        Me.PictureBox92.Location = New System.Drawing.Point(247, 420)
+        Me.PictureBox92.Location = New System.Drawing.Point(297, 526)
         Me.PictureBox92.Name = "PictureBox92"
         Me.PictureBox92.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox92.TabIndex = 432
@@ -1918,7 +2171,7 @@ Partial Class FormMain
         'PictureBox53
         '
         Me.PictureBox53.Image = Global.D2RIC.My.Resources.Resources._40px_Circlet
-        Me.PictureBox53.Location = New System.Drawing.Point(523, 312)
+        Me.PictureBox53.Location = New System.Drawing.Point(488, 274)
         Me.PictureBox53.Name = "PictureBox53"
         Me.PictureBox53.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox53.TabIndex = 393
@@ -1927,7 +2180,7 @@ Partial Class FormMain
         'PictureBox91
         '
         Me.PictureBox91.Image = Global.D2RIC.My.Resources.Resources._40px_Javelin
-        Me.PictureBox91.Location = New System.Drawing.Point(201, 420)
+        Me.PictureBox91.Location = New System.Drawing.Point(634, 274)
         Me.PictureBox91.Name = "PictureBox91"
         Me.PictureBox91.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox91.TabIndex = 431
@@ -1936,7 +2189,7 @@ Partial Class FormMain
         'PictureBox54
         '
         Me.PictureBox54.Image = Global.D2RIC.My.Resources.Resources._40px_Clarity
-        Me.PictureBox54.Location = New System.Drawing.Point(569, 312)
+        Me.PictureBox54.Location = New System.Drawing.Point(251, 238)
         Me.PictureBox54.Name = "PictureBox54"
         Me.PictureBox54.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox54.TabIndex = 394
@@ -1945,7 +2198,7 @@ Partial Class FormMain
         'PictureBox90
         '
         Me.PictureBox90.Image = Global.D2RIC.My.Resources.Resources._40px_Iron_Branch
-        Me.PictureBox90.Location = New System.Drawing.Point(845, 384)
+        Me.PictureBox90.Location = New System.Drawing.Point(488, 310)
         Me.PictureBox90.Name = "PictureBox90"
         Me.PictureBox90.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox90.TabIndex = 430
@@ -1954,7 +2207,7 @@ Partial Class FormMain
         'PictureBox55
         '
         Me.PictureBox55.Image = Global.D2RIC.My.Resources.Resources._40px_Claymore
-        Me.PictureBox55.Location = New System.Drawing.Point(615, 312)
+        Me.PictureBox55.Location = New System.Drawing.Point(543, 310)
         Me.PictureBox55.Name = "PictureBox55"
         Me.PictureBox55.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox55.TabIndex = 395
@@ -1963,7 +2216,7 @@ Partial Class FormMain
         'PictureBox89
         '
         Me.PictureBox89.Image = Global.D2RIC.My.Resources.Resources._40px_Hyperstone
-        Me.PictureBox89.Location = New System.Drawing.Point(799, 384)
+        Me.PictureBox89.Location = New System.Drawing.Point(543, 562)
         Me.PictureBox89.Name = "PictureBox89"
         Me.PictureBox89.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox89.TabIndex = 429
@@ -1972,7 +2225,7 @@ Partial Class FormMain
         'PictureBox56
         '
         Me.PictureBox56.Image = Global.D2RIC.My.Resources.Resources._40px_Cloak
-        Me.PictureBox56.Location = New System.Drawing.Point(661, 312)
+        Me.PictureBox56.Location = New System.Drawing.Point(828, 274)
         Me.PictureBox56.Name = "PictureBox56"
         Me.PictureBox56.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox56.TabIndex = 396
@@ -1981,7 +2234,7 @@ Partial Class FormMain
         'PictureBox88
         '
         Me.PictureBox88.Image = Global.D2RIC.My.Resources.Resources._40px_Hood_of_Defiance
-        Me.PictureBox88.Location = New System.Drawing.Point(753, 384)
+        Me.PictureBox88.Location = New System.Drawing.Point(205, 526)
         Me.PictureBox88.Name = "PictureBox88"
         Me.PictureBox88.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox88.TabIndex = 428
@@ -1990,7 +2243,7 @@ Partial Class FormMain
         'PictureBox57
         '
         Me.PictureBox57.Image = Global.D2RIC.My.Resources.Resources._40px_Crystalys
-        Me.PictureBox57.Location = New System.Drawing.Point(707, 312)
+        Me.PictureBox57.Location = New System.Drawing.Point(352, 380)
         Me.PictureBox57.Name = "PictureBox57"
         Me.PictureBox57.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox57.TabIndex = 397
@@ -1999,7 +2252,7 @@ Partial Class FormMain
         'PictureBox87
         '
         Me.PictureBox87.Image = Global.D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator
-        Me.PictureBox87.Location = New System.Drawing.Point(707, 384)
+        Me.PictureBox87.Location = New System.Drawing.Point(352, 526)
         Me.PictureBox87.Name = "PictureBox87"
         Me.PictureBox87.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox87.TabIndex = 427
@@ -2008,7 +2261,7 @@ Partial Class FormMain
         'PictureBox58
         '
         Me.PictureBox58.Image = Global.D2RIC.My.Resources.Resources._40px_Daedalus
-        Me.PictureBox58.Location = New System.Drawing.Point(753, 312)
+        Me.PictureBox58.Location = New System.Drawing.Point(398, 380)
         Me.PictureBox58.Name = "PictureBox58"
         Me.PictureBox58.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox58.TabIndex = 398
@@ -2017,7 +2270,7 @@ Partial Class FormMain
         'PictureBox86
         '
         Me.PictureBox86.Image = Global.D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will
-        Me.PictureBox86.Location = New System.Drawing.Point(661, 384)
+        Me.PictureBox86.Location = New System.Drawing.Point(543, 274)
         Me.PictureBox86.Name = "PictureBox86"
         Me.PictureBox86.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox86.TabIndex = 426
@@ -2026,7 +2279,7 @@ Partial Class FormMain
         'PictureBox59
         '
         Me.PictureBox59.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon
-        Me.PictureBox59.Location = New System.Drawing.Point(799, 312)
+        Me.PictureBox59.Location = New System.Drawing.Point(874, 452)
         Me.PictureBox59.Name = "PictureBox59"
         Me.PictureBox59.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox59.TabIndex = 399
@@ -2035,7 +2288,7 @@ Partial Class FormMain
         'PictureBox85
         '
         Me.PictureBox85.Image = Global.D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque
-        Me.PictureBox85.Location = New System.Drawing.Point(615, 384)
+        Me.PictureBox85.Location = New System.Drawing.Point(159, 598)
         Me.PictureBox85.Name = "PictureBox85"
         Me.PictureBox85.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox85.TabIndex = 425
@@ -2044,7 +2297,7 @@ Partial Class FormMain
         'PictureBox60
         '
         Me.PictureBox60.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon2
-        Me.PictureBox60.Location = New System.Drawing.Point(845, 312)
+        Me.PictureBox60.Location = New System.Drawing.Point(736, 488)
         Me.PictureBox60.Name = "PictureBox60"
         Me.PictureBox60.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox60.TabIndex = 400
@@ -2053,7 +2306,7 @@ Partial Class FormMain
         'PictureBox84
         '
         Me.PictureBox84.Image = Global.D2RIC.My.Resources.Resources._40px_Healing_Salve
-        Me.PictureBox84.Location = New System.Drawing.Point(569, 384)
+        Me.PictureBox84.Location = New System.Drawing.Point(297, 238)
         Me.PictureBox84.Name = "PictureBox84"
         Me.PictureBox84.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox84.TabIndex = 424
@@ -2062,7 +2315,7 @@ Partial Class FormMain
         'PictureBox61
         '
         Me.PictureBox61.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon3
-        Me.PictureBox61.Location = New System.Drawing.Point(201, 348)
+        Me.PictureBox61.Location = New System.Drawing.Point(782, 488)
         Me.PictureBox61.Name = "PictureBox61"
         Me.PictureBox61.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox61.TabIndex = 401
@@ -2071,7 +2324,7 @@ Partial Class FormMain
         'PictureBox83
         '
         Me.PictureBox83.Image = Global.D2RIC.My.Resources.Resources._40px_Headdress
-        Me.PictureBox83.Location = New System.Drawing.Point(523, 384)
+        Me.PictureBox83.Location = New System.Drawing.Point(681, 380)
         Me.PictureBox83.Name = "PictureBox83"
         Me.PictureBox83.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox83.TabIndex = 423
@@ -2080,7 +2333,7 @@ Partial Class FormMain
         'PictureBox62
         '
         Me.PictureBox62.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon4
-        Me.PictureBox62.Location = New System.Drawing.Point(247, 348)
+        Me.PictureBox62.Location = New System.Drawing.Point(828, 488)
         Me.PictureBox62.Name = "PictureBox62"
         Me.PictureBox62.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox62.TabIndex = 402
@@ -2089,7 +2342,7 @@ Partial Class FormMain
         'PictureBox82
         '
         Me.PictureBox82.Image = Global.D2RIC.My.Resources.Resources._40px_Hand_of_Midas
-        Me.PictureBox82.Location = New System.Drawing.Point(477, 384)
+        Me.PictureBox82.Location = New System.Drawing.Point(297, 416)
         Me.PictureBox82.Name = "PictureBox82"
         Me.PictureBox82.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox82.TabIndex = 422
@@ -2098,7 +2351,7 @@ Partial Class FormMain
         'PictureBox63
         '
         Me.PictureBox63.Image = Global.D2RIC.My.Resources.Resources._40px_Dagon5
-        Me.PictureBox63.Location = New System.Drawing.Point(293, 348)
+        Me.PictureBox63.Location = New System.Drawing.Point(874, 488)
         Me.PictureBox63.Name = "PictureBox63"
         Me.PictureBox63.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox63.TabIndex = 403
@@ -2107,7 +2360,7 @@ Partial Class FormMain
         'PictureBox81
         '
         Me.PictureBox81.Image = Global.D2RIC.My.Resources.Resources._40px_Gloves_of_Haste
-        Me.PictureBox81.Location = New System.Drawing.Point(431, 384)
+        Me.PictureBox81.Location = New System.Drawing.Point(736, 238)
         Me.PictureBox81.Name = "PictureBox81"
         Me.PictureBox81.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox81.TabIndex = 421
@@ -2116,7 +2369,7 @@ Partial Class FormMain
         'PictureBox64
         '
         Me.PictureBox64.Image = Global.D2RIC.My.Resources.Resources._40px_Demon_Edge
-        Me.PictureBox64.Location = New System.Drawing.Point(339, 348)
+        Me.PictureBox64.Location = New System.Drawing.Point(635, 598)
         Me.PictureBox64.Name = "PictureBox64"
         Me.PictureBox64.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox64.TabIndex = 404
@@ -2125,7 +2378,7 @@ Partial Class FormMain
         'PictureBox80
         '
         Me.PictureBox80.Image = Global.D2RIC.My.Resources.Resources._40px_Ghost_Scepter
-        Me.PictureBox80.Location = New System.Drawing.Point(385, 384)
+        Me.PictureBox80.Location = New System.Drawing.Point(782, 238)
         Me.PictureBox80.Name = "PictureBox80"
         Me.PictureBox80.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox80.TabIndex = 420
@@ -2134,7 +2387,7 @@ Partial Class FormMain
         'PictureBox65
         '
         Me.PictureBox65.Image = Global.D2RIC.My.Resources.Resources._40px_Desolator
-        Me.PictureBox65.Location = New System.Drawing.Point(385, 348)
+        Me.PictureBox65.Location = New System.Drawing.Point(444, 598)
         Me.PictureBox65.Name = "PictureBox65"
         Me.PictureBox65.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox65.TabIndex = 405
@@ -2143,7 +2396,7 @@ Partial Class FormMain
         'PictureBox79
         '
         Me.PictureBox79.Image = Global.D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight
-        Me.PictureBox79.Location = New System.Drawing.Point(339, 384)
+        Me.PictureBox79.Location = New System.Drawing.Point(736, 310)
         Me.PictureBox79.Name = "PictureBox79"
         Me.PictureBox79.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox79.TabIndex = 419
@@ -2152,7 +2405,7 @@ Partial Class FormMain
         'PictureBox66
         '
         Me.PictureBox66.Image = Global.D2RIC.My.Resources.Resources._40px_Diffusal_Blade
-        Me.PictureBox66.Location = New System.Drawing.Point(431, 348)
+        Me.PictureBox66.Location = New System.Drawing.Point(398, 562)
         Me.PictureBox66.Name = "PictureBox66"
         Me.PictureBox66.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox66.TabIndex = 406
@@ -2161,7 +2414,7 @@ Partial Class FormMain
         'PictureBox78
         '
         Me.PictureBox78.Image = Global.D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength
-        Me.PictureBox78.Location = New System.Drawing.Point(293, 384)
+        Me.PictureBox78.Location = New System.Drawing.Point(442, 310)
         Me.PictureBox78.Name = "PictureBox78"
         Me.PictureBox78.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox78.TabIndex = 418
@@ -2170,7 +2423,7 @@ Partial Class FormMain
         'PictureBox67
         '
         Me.PictureBox67.Image = Global.D2RIC.My.Resources.Resources._40px_Diffusal_Blade2
-        Me.PictureBox67.Location = New System.Drawing.Point(477, 348)
+        Me.PictureBox67.Location = New System.Drawing.Point(444, 562)
         Me.PictureBox67.Name = "PictureBox67"
         Me.PictureBox67.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox67.TabIndex = 407
@@ -2179,7 +2432,7 @@ Partial Class FormMain
         'PictureBox77
         '
         Me.PictureBox77.Image = Global.D2RIC.My.Resources.Resources._40px_Force_Staff
-        Me.PictureBox77.Location = New System.Drawing.Point(247, 384)
+        Me.PictureBox77.Location = New System.Drawing.Point(782, 380)
         Me.PictureBox77.Name = "PictureBox77"
         Me.PictureBox77.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox77.TabIndex = 417
@@ -2188,7 +2441,7 @@ Partial Class FormMain
         'PictureBox68
         '
         Me.PictureBox68.Image = Global.D2RIC.My.Resources.Resources._40px_Divine_Rapier
-        Me.PictureBox68.Location = New System.Drawing.Point(523, 348)
+        Me.PictureBox68.Location = New System.Drawing.Point(444, 416)
         Me.PictureBox68.Name = "PictureBox68"
         Me.PictureBox68.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox68.TabIndex = 408
@@ -2197,7 +2450,7 @@ Partial Class FormMain
         'PictureBox76
         '
         Me.PictureBox76.Image = Global.D2RIC.My.Resources.Resources._40px_Flying_Courier
-        Me.PictureBox76.Location = New System.Drawing.Point(201, 384)
+        Me.PictureBox76.Location = New System.Drawing.Point(205, 310)
         Me.PictureBox76.Name = "PictureBox76"
         Me.PictureBox76.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox76.TabIndex = 416
@@ -2206,7 +2459,7 @@ Partial Class FormMain
         'PictureBox69
         '
         Me.PictureBox69.Image = Global.D2RIC.My.Resources.Resources._40px_Drum_of_Endurance
-        Me.PictureBox69.Location = New System.Drawing.Point(569, 348)
+        Me.PictureBox69.Location = New System.Drawing.Point(543, 416)
         Me.PictureBox69.Name = "PictureBox69"
         Me.PictureBox69.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox69.TabIndex = 409
@@ -2215,7 +2468,7 @@ Partial Class FormMain
         'PictureBox75
         '
         Me.PictureBox75.Image = Global.D2RIC.My.Resources.Resources._40px_Eye_of_Skadi
-        Me.PictureBox75.Location = New System.Drawing.Point(845, 348)
+        Me.PictureBox75.Location = New System.Drawing.Point(490, 598)
         Me.PictureBox75.Name = "PictureBox75"
         Me.PictureBox75.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox75.TabIndex = 415
@@ -2224,7 +2477,7 @@ Partial Class FormMain
         'PictureBox70
         '
         Me.PictureBox70.Image = Global.D2RIC.My.Resources.Resources._40px_Dust_of_Appearance
-        Me.PictureBox70.Location = New System.Drawing.Point(615, 348)
+        Me.PictureBox70.Location = New System.Drawing.Point(159, 310)
         Me.PictureBox70.Name = "PictureBox70"
         Me.PictureBox70.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox70.TabIndex = 410
@@ -2233,7 +2486,7 @@ Partial Class FormMain
         'PictureBox74
         '
         Me.PictureBox74.Image = Global.D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity
-        Me.PictureBox74.Location = New System.Drawing.Point(799, 348)
+        Me.PictureBox74.Location = New System.Drawing.Point(874, 380)
         Me.PictureBox74.Name = "PictureBox74"
         Me.PictureBox74.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox74.TabIndex = 414
@@ -2242,7 +2495,7 @@ Partial Class FormMain
         'PictureBox71
         '
         Me.PictureBox71.Image = Global.D2RIC.My.Resources.Resources._40px_Eaglesong
-        Me.PictureBox71.Location = New System.Drawing.Point(661, 348)
+        Me.PictureBox71.Location = New System.Drawing.Point(543, 598)
         Me.PictureBox71.Name = "PictureBox71"
         Me.PictureBox71.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox71.TabIndex = 411
@@ -2251,7 +2504,7 @@ Partial Class FormMain
         'PictureBox73
         '
         Me.PictureBox73.Image = Global.D2RIC.My.Resources.Resources._40px_Ethereal_Blade
-        Me.PictureBox73.Location = New System.Drawing.Point(753, 348)
+        Me.PictureBox73.Location = New System.Drawing.Point(398, 416)
         Me.PictureBox73.Name = "PictureBox73"
         Me.PictureBox73.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox73.TabIndex = 413
@@ -2260,11 +2513,98 @@ Partial Class FormMain
         'PictureBox72
         '
         Me.PictureBox72.Image = Global.D2RIC.My.Resources.Resources._40px_Energy_Booster
-        Me.PictureBox72.Location = New System.Drawing.Point(707, 348)
+        Me.PictureBox72.Location = New System.Drawing.Point(543, 526)
         Me.PictureBox72.Name = "PictureBox72"
         Me.PictureBox72.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox72.TabIndex = 412
         Me.PictureBox72.TabStop = False
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape11, Me.RectangleShape10, Me.RectangleShape9, Me.RectangleShape8, Me.RectangleShape7, Me.RectangleShape6, Me.RectangleShape5, Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(922, 676)
+        Me.ShapeContainer1.TabIndex = 520
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape11
+        '
+        Me.RectangleShape11.Enabled = False
+        Me.RectangleShape11.Location = New System.Drawing.Point(344, 520)
+        Me.RectangleShape11.Name = "RectangleShape11"
+        Me.RectangleShape11.Size = New System.Drawing.Size(185, 143)
+        '
+        'RectangleShape10
+        '
+        Me.RectangleShape10.Enabled = False
+        Me.RectangleShape10.Location = New System.Drawing.Point(537, 520)
+        Me.RectangleShape10.Name = "RectangleShape10"
+        Me.RectangleShape10.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape9
+        '
+        Me.RectangleShape9.Enabled = False
+        Me.RectangleShape9.Location = New System.Drawing.Point(153, 520)
+        Me.RectangleShape9.Name = "RectangleShape9"
+        Me.RectangleShape9.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape8
+        '
+        Me.RectangleShape8.Enabled = False
+        Me.RectangleShape8.Location = New System.Drawing.Point(344, 374)
+        Me.RectangleShape8.Name = "RectangleShape8"
+        Me.RectangleShape8.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape7
+        '
+        Me.RectangleShape7.Enabled = False
+        Me.RectangleShape7.Location = New System.Drawing.Point(537, 374)
+        Me.RectangleShape7.Name = "RectangleShape7"
+        Me.RectangleShape7.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape6
+        '
+        Me.RectangleShape6.Enabled = False
+        Me.RectangleShape6.Location = New System.Drawing.Point(730, 374)
+        Me.RectangleShape6.Name = "RectangleShape6"
+        Me.RectangleShape6.Size = New System.Drawing.Size(185, 143)
+        '
+        'RectangleShape5
+        '
+        Me.RectangleShape5.Enabled = False
+        Me.RectangleShape5.Location = New System.Drawing.Point(153, 374)
+        Me.RectangleShape5.Name = "RectangleShape5"
+        Me.RectangleShape5.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape4
+        '
+        Me.RectangleShape4.Enabled = False
+        Me.RectangleShape4.Location = New System.Drawing.Point(730, 232)
+        Me.RectangleShape4.Name = "RectangleShape4"
+        Me.RectangleShape4.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape3
+        '
+        Me.RectangleShape3.Enabled = False
+        Me.RectangleShape3.Location = New System.Drawing.Point(537, 232)
+        Me.RectangleShape3.Name = "RectangleShape3"
+        Me.RectangleShape3.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.Enabled = False
+        Me.RectangleShape2.Location = New System.Drawing.Point(344, 232)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(185, 107)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.Enabled = False
+        Me.RectangleShape1.Location = New System.Drawing.Point(153, 232)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(185, 107)
         '
         'TabPage3
         '
@@ -2273,14 +2613,14 @@ Partial Class FormMain
         Me.TabPage3.Controls.Add(Me.TextBox2)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(910, 657)
+        Me.TabPage3.Size = New System.Drawing.Size(928, 682)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Import Itembuild"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'ButtonOpenTextfile
         '
-        Me.ButtonOpenTextfile.Location = New System.Drawing.Point(426, 601)
+        Me.ButtonOpenTextfile.Location = New System.Drawing.Point(451, 653)
         Me.ButtonOpenTextfile.Name = "ButtonOpenTextfile"
         Me.ButtonOpenTextfile.Size = New System.Drawing.Size(106, 23)
         Me.ButtonOpenTextfile.TabIndex = 7
@@ -2289,7 +2629,7 @@ Partial Class FormMain
         '
         'ButtonImport
         '
-        Me.ButtonImport.Location = New System.Drawing.Point(345, 601)
+        Me.ButtonImport.Location = New System.Drawing.Point(370, 653)
         Me.ButtonImport.Name = "ButtonImport"
         Me.ButtonImport.Size = New System.Drawing.Size(75, 23)
         Me.ButtonImport.TabIndex = 5
@@ -2302,7 +2642,7 @@ Partial Class FormMain
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox2.Size = New System.Drawing.Size(897, 592)
+        Me.TextBox2.Size = New System.Drawing.Size(915, 644)
         Me.TextBox2.TabIndex = 4
         '
         'TabPage4
@@ -2312,14 +2652,14 @@ Partial Class FormMain
         Me.TabPage4.Controls.Add(Me.TextBox3)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(910, 657)
+        Me.TabPage4.Size = New System.Drawing.Size(928, 682)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Export Itembuild"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'ButtonSaveTextfile
         '
-        Me.ButtonSaveTextfile.Location = New System.Drawing.Point(426, 601)
+        Me.ButtonSaveTextfile.Location = New System.Drawing.Point(451, 653)
         Me.ButtonSaveTextfile.Name = "ButtonSaveTextfile"
         Me.ButtonSaveTextfile.Size = New System.Drawing.Size(88, 23)
         Me.ButtonSaveTextfile.TabIndex = 7
@@ -2328,7 +2668,7 @@ Partial Class FormMain
         '
         'ButtonCopy
         '
-        Me.ButtonCopy.Location = New System.Drawing.Point(345, 601)
+        Me.ButtonCopy.Location = New System.Drawing.Point(370, 653)
         Me.ButtonCopy.Name = "ButtonCopy"
         Me.ButtonCopy.Size = New System.Drawing.Size(75, 23)
         Me.ButtonCopy.TabIndex = 5
@@ -2342,7 +2682,7 @@ Partial Class FormMain
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox3.Size = New System.Drawing.Size(911, 592)
+        Me.TextBox3.Size = New System.Drawing.Size(918, 644)
         Me.TextBox3.TabIndex = 4
         '
         'TabPage2
@@ -2350,7 +2690,7 @@ Partial Class FormMain
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(910, 657)
+        Me.TabPage2.Size = New System.Drawing.Size(928, 682)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Autoexec"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -2368,7 +2708,7 @@ Partial Class FormMain
         Me.TabPage5.Controls.Add(Me.ButtonDeleteBackup)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(910, 657)
+        Me.TabPage5.Size = New System.Drawing.Size(928, 682)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "D2RIC Options"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -2459,13 +2799,9 @@ Partial Class FormMain
         Me.ButtonDeleteBackup.Text = "Delete backups"
         Me.ButtonDeleteBackup.UseVisualStyleBackColor = True
         '
-        'ToolTip1
-        '
-        Me.ToolTip1.IsBalloon = True
-        '
         'ButtonUpdate
         '
-        Me.ButtonUpdate.Location = New System.Drawing.Point(804, 5)
+        Me.ButtonUpdate.Location = New System.Drawing.Point(825, 4)
         Me.ButtonUpdate.Name = "ButtonUpdate"
         Me.ButtonUpdate.Size = New System.Drawing.Size(109, 23)
         Me.ButtonUpdate.TabIndex = 1
@@ -2477,7 +2813,7 @@ Partial Class FormMain
         Me.LabelWait.AutoSize = True
         Me.LabelWait.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelWait.ForeColor = System.Drawing.Color.Red
-        Me.LabelWait.Location = New System.Drawing.Point(420, 5)
+        Me.LabelWait.Location = New System.Drawing.Point(458, 1)
         Me.LabelWait.Name = "LabelWait"
         Me.LabelWait.Size = New System.Drawing.Size(269, 26)
         Me.LabelWait.TabIndex = 2
@@ -2494,15 +2830,14 @@ Partial Class FormMain
         '
         'FormMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(921, 697)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.AutoScroll = True
+        Me.ClientSize = New System.Drawing.Size(939, 722)
         Me.Controls.Add(Me.LabelWait)
         Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.TabControl1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
         Me.Name = "FormMain"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -2510,6 +2845,15 @@ Partial Class FormMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.Item39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox164, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox163, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2529,65 +2873,65 @@ Partial Class FormMain
         CType(Me.PictureBox150, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox149, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox148, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox147, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox146, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox145, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox144, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox143, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox142, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox141, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox140, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox139, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox138, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox137, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox136, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox135, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox134, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox133, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox132, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox131, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox130, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox129, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox128, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox127, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox126, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox125, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox124, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox123, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox122, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item27, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox121, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item28, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox120, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item29, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox119, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Item30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox118, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox117, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox116, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2710,65 +3054,65 @@ Partial Class FormMain
     Friend WithEvents PictureBox150 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox149 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox148 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox147 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox146 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox145 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox144 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item5 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox143 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item6 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox142 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox141 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item8 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox140 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item9 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox139 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item10 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox138 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item11 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox137 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item12 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox136 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item13 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox135 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item14 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox134 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item15 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox133 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item16 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox132 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item17 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox131 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item18 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox130 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox19 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item19 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox129 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox20 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item20 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox128 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox21 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item21 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox127 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox22 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item22 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox126 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox23 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item23 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox125 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox24 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item24 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox124 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox25 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item25 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox123 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox26 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item26 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox122 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox27 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item27 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox121 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox28 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item28 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox120 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox29 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item29 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox119 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox30 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item30 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox118 As System.Windows.Forms.PictureBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents PictureBox117 As System.Windows.Forms.PictureBox
@@ -2895,4 +3239,36 @@ Partial Class FormMain
     Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents ToolTip2 As System.Windows.Forms.ToolTip
+    Friend WithEvents Item36 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item35 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item34 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item33 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item32 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item31 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape4 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape3 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape2 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents RectangleShape8 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape7 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape6 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape5 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents RectangleShape11 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape9 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape10 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents Item39 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item38 As System.Windows.Forms.PictureBox
+    Friend WithEvents Item37 As System.Windows.Forms.PictureBox
 End Class

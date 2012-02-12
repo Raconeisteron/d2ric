@@ -2,7 +2,7 @@
 
 Public Class FormMain
 
-    Dim Selected_Hero, NeuerText, NeuerTextMulti As String
+    Dim Selected_Hero, NeuerText As String
     Private m_MouseIsDown As Boolean
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
@@ -11,68 +11,86 @@ Public Class FormMain
     End Sub
 
     Private Sub FormMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        PictureBox1.AllowDrop = True
-        PictureBox2.AllowDrop = True
-        PictureBox3.AllowDrop = True
-        PictureBox4.AllowDrop = True
-        PictureBox5.AllowDrop = True
-        PictureBox6.AllowDrop = True
-        PictureBox7.AllowDrop = True
-        PictureBox8.AllowDrop = True
-        PictureBox9.AllowDrop = True
-        PictureBox10.AllowDrop = True
-        PictureBox11.AllowDrop = True
-        PictureBox12.AllowDrop = True
-        PictureBox13.AllowDrop = True
-        PictureBox14.AllowDrop = True
-        PictureBox15.AllowDrop = True
-        PictureBox16.AllowDrop = True
-        PictureBox17.AllowDrop = True
-        PictureBox18.AllowDrop = True
-        PictureBox19.AllowDrop = True
-        PictureBox20.AllowDrop = True
-        PictureBox21.AllowDrop = True
-        PictureBox22.AllowDrop = True
-        PictureBox23.AllowDrop = True
-        PictureBox24.AllowDrop = True
-        PictureBox25.AllowDrop = True
-        PictureBox26.AllowDrop = True
-        PictureBox27.AllowDrop = True
-        PictureBox28.AllowDrop = True
-        PictureBox29.AllowDrop = True
-        PictureBox30.AllowDrop = True
+        Item1.AllowDrop = True
+        Item2.AllowDrop = True
+        Item3.AllowDrop = True
+        Item4.AllowDrop = True
+        Item5.AllowDrop = True
+        Item6.AllowDrop = True
+        Item7.AllowDrop = True
+        Item8.AllowDrop = True
+        Item9.AllowDrop = True
+        Item10.AllowDrop = True
+        Item11.AllowDrop = True
+        Item12.AllowDrop = True
+        Item13.AllowDrop = True
+        Item14.AllowDrop = True
+        Item15.AllowDrop = True
+        Item16.AllowDrop = True
+        Item17.AllowDrop = True
+        Item18.AllowDrop = True
+        Item19.AllowDrop = True
+        Item20.AllowDrop = True
+        Item21.AllowDrop = True
+        Item22.AllowDrop = True
+        Item23.AllowDrop = True
+        Item24.AllowDrop = True
+        Item25.AllowDrop = True
+        Item26.AllowDrop = True
+        Item27.AllowDrop = True
+        Item28.AllowDrop = True
+        Item29.AllowDrop = True
+        Item30.AllowDrop = True
+        Item31.AllowDrop = True
+        Item32.AllowDrop = True
+        Item33.AllowDrop = True
+        Item34.AllowDrop = True
+        Item35.AllowDrop = True
+        Item36.AllowDrop = True
+        Item37.AllowDrop = True
+        Item38.AllowDrop = True
+        Item39.AllowDrop = True
         ButtonSave.Enabled = False
         With ToolTip1
-            .SetToolTip(PictureBox1, "none")
-            .SetToolTip(PictureBox2, "none")
-            .SetToolTip(PictureBox3, "none")
-            .SetToolTip(PictureBox4, "none")
-            .SetToolTip(PictureBox5, "none")
-            .SetToolTip(PictureBox6, "none")
-            .SetToolTip(PictureBox7, "none")
-            .SetToolTip(PictureBox8, "none")
-            .SetToolTip(PictureBox9, "none")
-            .SetToolTip(PictureBox10, "none")
-            .SetToolTip(PictureBox11, "none")
-            .SetToolTip(PictureBox12, "none")
-            .SetToolTip(PictureBox13, "none")
-            .SetToolTip(PictureBox14, "none")
-            .SetToolTip(PictureBox15, "none")
-            .SetToolTip(PictureBox16, "none")
-            .SetToolTip(PictureBox17, "none")
-            .SetToolTip(PictureBox18, "none")
-            .SetToolTip(PictureBox19, "none")
-            .SetToolTip(PictureBox20, "none")
-            .SetToolTip(PictureBox21, "none")
-            .SetToolTip(PictureBox22, "none")
-            .SetToolTip(PictureBox23, "none")
-            .SetToolTip(PictureBox24, "none")
-            .SetToolTip(PictureBox25, "none")
-            .SetToolTip(PictureBox26, "none")
-            .SetToolTip(PictureBox27, "none")
-            .SetToolTip(PictureBox28, "none")
-            .SetToolTip(PictureBox29, "none")
-            .SetToolTip(PictureBox30, "none")
+            .SetToolTip(Item1, "none")
+            .SetToolTip(Item2, "none")
+            .SetToolTip(Item3, "none")
+            .SetToolTip(Item4, "none")
+            .SetToolTip(Item5, "none")
+            .SetToolTip(Item6, "none")
+            .SetToolTip(Item7, "none")
+            .SetToolTip(Item8, "none")
+            .SetToolTip(Item9, "none")
+            .SetToolTip(Item10, "none")
+            .SetToolTip(Item11, "none")
+            .SetToolTip(Item12, "none")
+            .SetToolTip(Item13, "none")
+            .SetToolTip(Item14, "none")
+            .SetToolTip(Item15, "none")
+            .SetToolTip(Item16, "none")
+            .SetToolTip(Item17, "none")
+            .SetToolTip(Item18, "none")
+            .SetToolTip(Item19, "none")
+            .SetToolTip(Item20, "none")
+            .SetToolTip(Item21, "none")
+            .SetToolTip(Item22, "none")
+            .SetToolTip(Item23, "none")
+            .SetToolTip(Item24, "none")
+            .SetToolTip(Item25, "none")
+            .SetToolTip(Item26, "none")
+            .SetToolTip(Item27, "none")
+            .SetToolTip(Item28, "none")
+            .SetToolTip(Item29, "none")
+            .SetToolTip(Item30, "none")
+            .SetToolTip(Item31, "none")
+            .SetToolTip(Item32, "none")
+            .SetToolTip(Item33, "none")
+            .SetToolTip(Item34, "none")
+            .SetToolTip(Item35, "none")
+            .SetToolTip(Item36, "none")
+            .SetToolTip(Item37, "none")
+            .SetToolTip(Item38, "none")
+            .SetToolTip(Item39, "none")
             .SetToolTip(PictureBox31, "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)")
             .SetToolTip(PictureBox32, "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier")
             .SetToolTip(PictureBox33, "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)")
@@ -210,7 +228,7 @@ Public Class FormMain
             .SetToolTip(PictureBox165, "Delete Item")
         End With
         ComboBox3.SelectedItem = "All"
-        ComboBox5.SelectedItem = "Alphabetical Order"
+        ComboBox5.SelectedItem = "DotA Like"
 
         If Not My.Settings.autoupdate Then
             CheckBox5.Checked = False
@@ -227,8 +245,8 @@ Public Class FormMain
         NeuerText = ""
         Dim pb As Object
         Dim picbox As Integer = 1
-        For picbox = 1 To 30
-            pb = TabPage1.Controls.Item("PictureBox" & picbox)
+        For picbox = 1 To 39
+            pb = TabPage1.Controls.Item("Item" & picbox)
             pb.image = D2RIC.My.Resources.Resources.none
             ToolTip1.SetToolTip(pb, "none")
         Next
@@ -241,22 +259,22 @@ Public Class FormMain
             Dim i As Integer = 1
             Dim pb As Object
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                If Zeile.Contains("item_") And i < 31 Then
-                    pb = TabPage1.Controls.Item("PictureBox" & i)
+                If Zeile.Contains("item_") And i <= 39 Then
+                    pb = TabPage1.Controls.Item("Item" & i)
                     pb.image = ChangePicture(RenameItem(Zeile))
                     ToolTip1.SetToolTip(pb, GetToolTip(RenameItem(Zeile)))
                     i = i + 1
                 ElseIf Zeile.Contains("Early_Game") Then
                     ItemPlace = "Early Game"
-                    i = 7
+                    i = 10
                     NeuerText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Core_Items") Then
                     ItemPlace = "Core Items"
-                    i = 13
+                    i = 19
                     NeuerText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Luxury") Then
                     ItemPlace = "Luxury"
-                    i = 19
+                    i = 28
                     NeuerText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("author") Then
                     TextBox1.Text = Replace(Zeile, """", "")
@@ -301,7 +319,6 @@ Public Class FormMain
         If IO.File.Exists(My.Settings.path + "\temp.txt") Then
             NeuerText = ""
             Dim DeinPfad As String = My.Settings.path + "\temp.txt"
-            Dim i As Integer = 1
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                 If Zeile.Contains("DOTA_Item_Build_Starting_Items") Then
                     NeuerText &= Zeile & vbNewLine
@@ -319,15 +336,15 @@ Public Class FormMain
             Dim a As Integer = 1
             Dim pb As Object
 
-            For a = 1 To 30
-                pb = TabPage1.Controls.Item("PictureBox" & a)
-                If a < 7 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
+            For a = 1 To 39
+                pb = TabPage1.Controls.Item("Item" & a)
+                If a < 10 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
                     StartingItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                ElseIf 6 < a And a < 13 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
+                ElseIf 9 < a And a < 19 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
                     Earlygame &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                ElseIf 12 < a And a < 19 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
+                ElseIf 18 < a And a < 27 And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
                     CoreItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
-                ElseIf 18 < a And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
+                ElseIf 26 < a And Not doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
                     Luxury &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & CheckItem(pb.Image)
                 Else
                     'nichts
@@ -2782,572 +2799,705 @@ Public Class FormMain
     End Function
 
     'TARGET PICTUREBOXES
-    Private Sub PictureBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox1.DragEnter
+    Private Sub Item1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item1.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox1.DragDrop
+    Private Sub Item1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item1.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox1.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item1.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox1.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox1, GetToolTip(PicRes2Name(PictureBox1.Image)))
+        If Not doImagesMatch(Item1.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item1, GetToolTip(PicRes2Name(Item1.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox1, "none")
+            ToolTip1.SetToolTip(Item1, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox2_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox2.DragEnter
+    Private Sub Item2_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item2.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox2_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox2.DragDrop
+    Private Sub Item2_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item2.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox2.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item2.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox2.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox2, GetToolTip(PicRes2Name(PictureBox2.Image)))
+        If Not doImagesMatch(Item2.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item2, GetToolTip(PicRes2Name(Item2.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox2, "none")
+            ToolTip1.SetToolTip(Item2, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox3_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox3.DragEnter
+    Private Sub Item3_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item3.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox3_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox3.DragDrop
+    Private Sub Item3_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item3.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox3.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item3.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox3.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox3, GetToolTip(PicRes2Name(PictureBox3.Image)))
+        If Not doImagesMatch(Item3.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item3, GetToolTip(PicRes2Name(Item3.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox3, "none")
+            ToolTip1.SetToolTip(Item3, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox4_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox4.DragEnter
+    Private Sub Item4_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item4.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox4_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox4.DragDrop
+    Private Sub Item4_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item4.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox4.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item4.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox4.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox4, GetToolTip(PicRes2Name(PictureBox4.Image)))
+        If Not doImagesMatch(Item4.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item4, GetToolTip(PicRes2Name(Item4.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox4, "none")
+            ToolTip1.SetToolTip(Item4, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox5_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox5.DragEnter
+    Private Sub Item5_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item5.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox5_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox5.DragDrop
+    Private Sub Item5_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item5.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox5.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item5.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox5.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox5, GetToolTip(PicRes2Name(PictureBox5.Image)))
+        If Not doImagesMatch(Item5.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item5, GetToolTip(PicRes2Name(Item5.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox5, "none")
+            ToolTip1.SetToolTip(Item5, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox6_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox6.DragEnter
+    Private Sub Item6_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item6.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox6_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox6.DragDrop
+    Private Sub Item6_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item6.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox6.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item6.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox6.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox6, GetToolTip(PicRes2Name(PictureBox6.Image)))
+        If Not doImagesMatch(Item6.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item6, GetToolTip(PicRes2Name(Item6.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox6, "none")
+            ToolTip1.SetToolTip(Item6, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox7_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox7.DragEnter
+    Private Sub Item7_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item7.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox7_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox7.DragDrop
+    Private Sub Item7_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item7.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox7.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item7.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox7.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox7, GetToolTip(PicRes2Name(PictureBox7.Image)))
+        If Not doImagesMatch(Item7.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item7, GetToolTip(PicRes2Name(Item7.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox7, "none")
+            ToolTip1.SetToolTip(Item7, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox8_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox8.DragEnter
+    Private Sub Item8_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item8.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox8_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox8.DragDrop
+    Private Sub Item8_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item8.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox8.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item8.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox8.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox8, GetToolTip(PicRes2Name(PictureBox8.Image)))
+        If Not doImagesMatch(Item8.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item8, GetToolTip(PicRes2Name(Item8.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox8, "none")
+            ToolTip1.SetToolTip(Item8, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox9_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox9.DragEnter
+    Private Sub Item9_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item9.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox9_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox9.DragDrop
+    Private Sub Item9_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item9.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox9.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item9.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox9.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox9, GetToolTip(PicRes2Name(PictureBox9.Image)))
+        If Not doImagesMatch(Item9.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item9, GetToolTip(PicRes2Name(Item9.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox9, "none")
+            ToolTip1.SetToolTip(Item9, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox10_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox10.DragEnter
+    Private Sub Item10_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item10.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox10_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox10.DragDrop
+    Private Sub Item10_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item10.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox10.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item10.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox10.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox10, GetToolTip(PicRes2Name(PictureBox10.Image)))
+        If Not doImagesMatch(Item10.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item10, GetToolTip(PicRes2Name(Item10.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox10, "none")
+            ToolTip1.SetToolTip(Item10, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox11_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox11.DragEnter
+    Private Sub Item11_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item11.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox11_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox11.DragDrop
+    Private Sub Item11_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item11.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox11.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item11.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox11.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox11, GetToolTip(PicRes2Name(PictureBox11.Image)))
+        If Not doImagesMatch(Item11.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item11, GetToolTip(PicRes2Name(Item11.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox11, "none")
+            ToolTip1.SetToolTip(Item11, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox12_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox12.DragEnter
+    Private Sub Item12_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item12.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox12_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox12.DragDrop
+    Private Sub Item12_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item12.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox12.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item12.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox12.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox12, GetToolTip(PicRes2Name(PictureBox12.Image)))
+        If Not doImagesMatch(Item12.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item12, GetToolTip(PicRes2Name(Item12.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox12, "none")
+            ToolTip1.SetToolTip(Item12, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox13_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox13.DragEnter
+    Private Sub Item13_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item13.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox13_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox13.DragDrop
+    Private Sub Item13_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item13.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox13.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item13.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox13.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox13, GetToolTip(PicRes2Name(PictureBox13.Image)))
+        If Not doImagesMatch(Item13.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item13, GetToolTip(PicRes2Name(Item13.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox13, "none")
+            ToolTip1.SetToolTip(Item13, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox14_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox14.DragEnter
+    Private Sub Item14_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item14.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox14_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox14.DragDrop
+    Private Sub Item14_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item14.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox14.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item14.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox14.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox14, GetToolTip(PicRes2Name(PictureBox14.Image)))
+        If Not doImagesMatch(Item14.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item14, GetToolTip(PicRes2Name(Item14.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox14, "none")
+            ToolTip1.SetToolTip(Item14, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox15_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox15.DragEnter
+    Private Sub Item15_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item15.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox15_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox15.DragDrop
+    Private Sub Item15_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item15.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox15.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item15.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox15.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox15, GetToolTip(PicRes2Name(PictureBox15.Image)))
+        If Not doImagesMatch(Item15.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item15, GetToolTip(PicRes2Name(Item15.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox15, "none")
+            ToolTip1.SetToolTip(Item15, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox16_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox16.DragEnter
+    Private Sub Item16_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item16.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox16_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox16.DragDrop
+    Private Sub Item16_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item16.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox16.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item16.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox16.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox16, GetToolTip(PicRes2Name(PictureBox16.Image)))
+        If Not doImagesMatch(Item16.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item16, GetToolTip(PicRes2Name(Item16.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox16, "none")
+            ToolTip1.SetToolTip(Item16, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox17_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox17.DragEnter
+    Private Sub Item17_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item17.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox17_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox17.DragDrop
+    Private Sub Item17_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item17.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox17.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item17.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox17.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox17, GetToolTip(PicRes2Name(PictureBox17.Image)))
+        If Not doImagesMatch(Item17.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item17, GetToolTip(PicRes2Name(Item17.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox17, "none")
+            ToolTip1.SetToolTip(Item17, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox18_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox18.DragEnter
+    Private Sub Item18_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item18.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox18_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox18.DragDrop
+    Private Sub Item18_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item18.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox18.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item18.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox18.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox18, GetToolTip(PicRes2Name(PictureBox18.Image)))
+        If Not doImagesMatch(Item18.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item18, GetToolTip(PicRes2Name(Item18.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox18, "none")
+            ToolTip1.SetToolTip(Item18, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox19_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox19.DragEnter
+    Private Sub Item19_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item19.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox19_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox19.DragDrop
+    Private Sub Item19_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item19.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox19.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item19.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox19.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox19, GetToolTip(PicRes2Name(PictureBox19.Image)))
+        If Not doImagesMatch(Item19.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item19, GetToolTip(PicRes2Name(Item19.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox19, "none")
+            ToolTip1.SetToolTip(Item19, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox20_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox20.DragEnter
+    Private Sub Item20_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item20.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox20_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox20.DragDrop
+    Private Sub Item20_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item20.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox20.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item20.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox20.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox20, GetToolTip(PicRes2Name(PictureBox20.Image)))
+        If Not doImagesMatch(Item20.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item20, GetToolTip(PicRes2Name(Item20.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox20, "none")
+            ToolTip1.SetToolTip(Item20, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox21_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox21.DragEnter
+    Private Sub Item21_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item21.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox21_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox21.DragDrop
+    Private Sub Item21_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item21.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox21.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item21.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox21.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox21, GetToolTip(PicRes2Name(PictureBox21.Image)))
+        If Not doImagesMatch(Item21.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item21, GetToolTip(PicRes2Name(Item21.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox21, "none")
+            ToolTip1.SetToolTip(Item21, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox22_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox22.DragEnter
+    Private Sub Item22_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item22.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox22_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox22.DragDrop
+    Private Sub Item22_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item22.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox22.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item22.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox22.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox22, GetToolTip(PicRes2Name(PictureBox22.Image)))
+        If Not doImagesMatch(Item22.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item22, GetToolTip(PicRes2Name(Item22.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox22, "none")
+            ToolTip1.SetToolTip(Item22, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox23_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox23.DragEnter
+    Private Sub Item23_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item23.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox23_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox23.DragDrop
+    Private Sub Item23_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item23.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox23.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item23.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox23.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox23, GetToolTip(PicRes2Name(PictureBox23.Image)))
+        If Not doImagesMatch(Item23.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item23, GetToolTip(PicRes2Name(Item23.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox23, "none")
+            ToolTip1.SetToolTip(Item23, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox24_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox24.DragEnter
+    Private Sub Item24_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item24.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox24_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox24.DragDrop
+    Private Sub Item24_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item24.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox24.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item24.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox24.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox24, GetToolTip(PicRes2Name(PictureBox24.Image)))
+        If Not doImagesMatch(Item24.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item24, GetToolTip(PicRes2Name(Item24.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox24, "none")
+            ToolTip1.SetToolTip(Item24, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox25_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox25.DragEnter
+    Private Sub Item25_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item25.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox25_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox25.DragDrop
+    Private Sub Item25_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item25.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox25.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item25.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox25.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox25, GetToolTip(PicRes2Name(PictureBox25.Image)))
+        If Not doImagesMatch(Item25.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item25, GetToolTip(PicRes2Name(Item25.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox25, "none")
+            ToolTip1.SetToolTip(Item25, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox26_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox26.DragEnter
+    Private Sub Item26_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item26.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox26_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox26.DragDrop
+    Private Sub Item26_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item26.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox26.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item26.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox26.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox26, GetToolTip(PicRes2Name(PictureBox26.Image)))
+        If Not doImagesMatch(Item26.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item26, GetToolTip(PicRes2Name(Item26.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox26, "none")
+            ToolTip1.SetToolTip(Item26, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox27_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox27.DragEnter
+    Private Sub Item27_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item27.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox27_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox27.DragDrop
+    Private Sub Item27_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item27.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox27.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item27.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox27.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox27, GetToolTip(PicRes2Name(PictureBox27.Image)))
+        If Not doImagesMatch(Item27.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item27, GetToolTip(PicRes2Name(Item27.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox27, "none")
+            ToolTip1.SetToolTip(Item27, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox28_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox28.DragEnter
+    Private Sub Item28_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item28.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox28_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox28.DragDrop
+    Private Sub Item28_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item28.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox28.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item28.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox28.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox28, GetToolTip(PicRes2Name(PictureBox28.Image)))
+        If Not doImagesMatch(Item28.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item28, GetToolTip(PicRes2Name(Item28.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox28, "none")
+            ToolTip1.SetToolTip(Item28, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox29_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox29.DragEnter
+    Private Sub Item29_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item29.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox29_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox29.DragDrop
+    Private Sub Item29_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item29.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox29.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item29.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox29.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox29, GetToolTip(PicRes2Name(PictureBox29.Image)))
+        If Not doImagesMatch(Item29.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item29, GetToolTip(PicRes2Name(Item29.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox29, "none")
+            ToolTip1.SetToolTip(Item29, "none")
         End If
     End Sub
 
-
-    Private Sub PictureBox30_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox30.DragEnter
+    Private Sub Item30_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item30.DragEnter
         If e.Data.GetDataPresent(DataFormats.Bitmap) Then
             e.Effect = DragDropEffects.Copy
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
-    Private Sub PictureBox30_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles PictureBox30.DragDrop
+    Private Sub Item30_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item30.DragDrop
         ' Assign the image to the PictureBox. 
-        PictureBox30.Image = e.Data.GetData(DataFormats.Bitmap)
+        Item30.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(PictureBox30.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(PictureBox30, GetToolTip(PicRes2Name(PictureBox30.Image)))
+        If Not doImagesMatch(Item30.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item30, GetToolTip(PicRes2Name(Item30.Image)))
         Else
-            ToolTip1.SetToolTip(PictureBox30, "none")
+            ToolTip1.SetToolTip(Item30, "none")
+        End If
+    End Sub
+
+    Private Sub Item31_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item31.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item31_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item31.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item31.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item31.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item31, GetToolTip(PicRes2Name(Item31.Image)))
+        Else
+            ToolTip1.SetToolTip(Item31, "none")
+        End If
+    End Sub
+
+    Private Sub Item32_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item32.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item32_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item32.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item32.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item32.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item32, GetToolTip(PicRes2Name(Item32.Image)))
+        Else
+            ToolTip1.SetToolTip(Item32, "none")
+        End If
+    End Sub
+
+    Private Sub Item33_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item33.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item33_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item33.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item33.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item33.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item33, GetToolTip(PicRes2Name(Item33.Image)))
+        Else
+            ToolTip1.SetToolTip(Item33, "none")
+        End If
+    End Sub
+
+    Private Sub Item34_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item34.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item34_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item34.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item34.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item34.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item34, GetToolTip(PicRes2Name(Item34.Image)))
+        Else
+            ToolTip1.SetToolTip(Item34, "none")
+        End If
+    End Sub
+
+    Private Sub Item35_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item35.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item35_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item35.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item35.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item35.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item35, GetToolTip(PicRes2Name(Item35.Image)))
+        Else
+            ToolTip1.SetToolTip(Item35, "none")
+        End If
+    End Sub
+
+    Private Sub Item36_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item36.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item36_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item36.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item36.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item36.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item36, GetToolTip(PicRes2Name(Item36.Image)))
+        Else
+            ToolTip1.SetToolTip(Item36, "none")
+        End If
+    End Sub
+
+    Private Sub Item37_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item37.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item37_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item37.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item37.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item37.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item37, GetToolTip(PicRes2Name(Item37.Image)))
+        Else
+            ToolTip1.SetToolTip(Item37, "none")
+        End If
+    End Sub
+
+    Private Sub Item38_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item38.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item38_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item38.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item38.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item38.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item38, GetToolTip(PicRes2Name(Item38.Image)))
+        Else
+            ToolTip1.SetToolTip(Item38, "none")
+        End If
+    End Sub
+
+    Private Sub Item39_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item39.DragEnter
+        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+    Private Sub Item39_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item39.DragDrop
+        ' Assign the image to the PictureBox. 
+        Item39.Image = e.Data.GetData(DataFormats.Bitmap)
+        ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
+        If Not doImagesMatch(Item39.Image, D2RIC.My.Resources.Resources.none) Then
+            ToolTip1.SetToolTip(Item39, GetToolTip(PicRes2Name(Item39.Image)))
+        Else
+            ToolTip1.SetToolTip(Item39, "none")
         End If
     End Sub
 
@@ -5331,19 +5481,19 @@ Public Class FormMain
                 ClearSingle()
                 ListBox1.SelectedItems.Clear()
                 For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                    If Zeile.Contains("item_") And i < 31 Then
-                        pb = TabPage1.Controls.Item("PictureBox" & i)
+                    If Zeile.Contains("item_") And i <= 39 Then
+                        pb = TabPage1.Controls.Item("Item" & i)
                         pb.image = ChangePicture(RenameItem(Zeile))
                         i = i + 1
                     ElseIf Zeile.Contains("Early_Game") Then
                         ItemPlace = "Early Game"
-                        i = 7
+                        i = 10
                     ElseIf Zeile.Contains("Core_Items") Then
                         ItemPlace = "Core Items"
-                        i = 13
+                        i = 19
                     ElseIf Zeile.Contains("Luxury") Then
                         ItemPlace = "Luxury"
-                        i = 19
+                        i = 28
                     ElseIf Zeile.Contains("author") Then
                         TextBox1.Text = Replace(Zeile, """", "")
                         TextBox1.Text = Replace(TextBox1.Text, "author", "")
@@ -5386,6 +5536,9 @@ Public Class FormMain
             If (My.Settings.path <> "") Then
                 TextBox4.Text = Replace(My.Settings.path, "\SteamApps\common\dota 2 beta\dota\itembuilds", "")
             End If
+        ElseIf TabControl1.SelectedTab Is TabPage2 Then
+            MsgBox("Not finished yet!")
+            TabControl1.SelectedTab = TabPage1
         End If
     End Sub
 
@@ -5990,142 +6143,198 @@ Public Class FormMain
 
     Private Sub ComboBox5_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox5.SelectedIndexChanged
         If ComboBox5.SelectedItem = "DotA Like" Then
-            PictureBox31.Location = New Point(201, 276)
-            PictureBox32.Location = New Point(201, 276)
-            PictureBox33.Location = New Point(201, 276)
-            PictureBox34.Location = New Point(201, 276)
-            PictureBox35.Location = New Point(201, 276)
-            PictureBox36.Location = New Point(201, 276)
-            PictureBox37.Location = New Point(201, 276)
-            PictureBox38.Location = New Point(201, 276)
-            PictureBox39.Location = New Point(201, 276)
-            PictureBox40.Location = New Point(201, 276)
-            PictureBox41.Location = New Point(201, 276)
-            PictureBox42.Location = New Point(201, 276)
-            PictureBox43.Location = New Point(201, 276)
-            PictureBox44.Location = New Point(201, 276)
-            PictureBox45.Location = New Point(201, 276)
-            PictureBox46.Location = New Point(201, 276)
-            PictureBox47.Location = New Point(201, 276)
-            PictureBox48.Location = New Point(201, 276)
-            PictureBox49.Location = New Point(201, 276)
-            PictureBox50.Location = New Point(201, 276)
-            PictureBox51.Location = New Point(201, 276)
-            PictureBox52.Location = New Point(201, 276)
-            PictureBox53.Location = New Point(201, 276)
-            PictureBox54.Location = New Point(201, 276)
-            PictureBox55.Location = New Point(201, 276)
-            PictureBox56.Location = New Point(201, 276)
-            PictureBox57.Location = New Point(201, 276)
-            PictureBox58.Location = New Point(201, 276)
-            PictureBox59.Location = New Point(201, 276)
-            PictureBox60.Location = New Point(201, 276)
-            PictureBox61.Location = New Point(201, 276)
-            PictureBox62.Location = New Point(201, 276)
-            PictureBox63.Location = New Point(201, 276)
-            PictureBox64.Location = New Point(201, 276)
-            PictureBox65.Location = New Point(201, 276)
-            PictureBox66.Location = New Point(201, 276)
-            PictureBox67.Location = New Point(201, 276)
-            PictureBox68.Location = New Point(201, 276)
-            PictureBox69.Location = New Point(201, 276)
-            PictureBox70.Location = New Point(201, 276)
-            PictureBox71.Location = New Point(201, 276)
-            PictureBox72.Location = New Point(201, 276)
-            PictureBox73.Location = New Point(201, 276)
-            PictureBox74.Location = New Point(201, 276)
-            PictureBox75.Location = New Point(201, 276)
-            PictureBox76.Location = New Point(201, 276)
-            PictureBox77.Location = New Point(201, 276)
-            PictureBox78.Location = New Point(201, 276)
-            PictureBox79.Location = New Point(201, 276)
-            PictureBox80.Location = New Point(201, 276)
-            PictureBox81.Location = New Point(201, 276)
-            PictureBox82.Location = New Point(201, 276)
-            PictureBox83.Location = New Point(201, 276)
-            PictureBox84.Location = New Point(201, 276)
-            PictureBox85.Location = New Point(201, 276)
-            PictureBox86.Location = New Point(201, 276)
-            PictureBox87.Location = New Point(201, 276)
-            PictureBox88.Location = New Point(201, 276)
-            PictureBox89.Location = New Point(201, 276)
-            PictureBox90.Location = New Point(201, 276)
-            PictureBox91.Location = New Point(201, 276)
-            PictureBox92.Location = New Point(201, 276)
-            PictureBox93.Location = New Point(201, 276)
-            PictureBox94.Location = New Point(201, 276)
-            PictureBox95.Location = New Point(201, 276)
-            PictureBox96.Location = New Point(201, 276)
-            PictureBox97.Location = New Point(201, 276)
-            PictureBox98.Location = New Point(201, 276)
-            PictureBox99.Location = New Point(201, 276)
-            PictureBox100.Location = New Point(201, 276)
-            PictureBox101.Location = New Point(201, 276)
-            PictureBox102.Location = New Point(201, 276)
-            PictureBox103.Location = New Point(201, 276)
-            PictureBox104.Location = New Point(201, 276)
-            PictureBox105.Location = New Point(201, 276)
-            PictureBox106.Location = New Point(201, 276)
-            PictureBox107.Location = New Point(201, 276)
-            PictureBox108.Location = New Point(201, 276)
-            PictureBox109.Location = New Point(201, 276)
-            PictureBox110.Location = New Point(201, 276)
-            PictureBox111.Location = New Point(201, 276)
-            PictureBox112.Location = New Point(201, 276)
-            PictureBox113.Location = New Point(201, 276)
-            PictureBox114.Location = New Point(201, 276)
-            PictureBox115.Location = New Point(201, 276)
-            PictureBox116.Location = New Point(201, 276)
-            PictureBox117.Location = New Point(201, 276)
-            PictureBox118.Location = New Point(201, 276)
-            PictureBox119.Location = New Point(201, 276)
-            PictureBox120.Location = New Point(201, 276)
-            PictureBox121.Location = New Point(201, 276)
-            PictureBox122.Location = New Point(201, 276)
-            PictureBox123.Location = New Point(201, 276)
-            PictureBox124.Location = New Point(201, 276)
-            PictureBox125.Location = New Point(201, 276)
-            PictureBox126.Location = New Point(201, 276)
-            PictureBox127.Location = New Point(201, 276)
-            PictureBox128.Location = New Point(201, 276)
-            PictureBox129.Location = New Point(201, 276)
-            PictureBox130.Location = New Point(201, 276)
-            PictureBox131.Location = New Point(201, 276)
-            PictureBox132.Location = New Point(201, 276)
-            PictureBox133.Location = New Point(201, 276)
-            PictureBox134.Location = New Point(201, 276)
-            PictureBox135.Location = New Point(201, 276)
-            PictureBox136.Location = New Point(201, 276)
-            PictureBox137.Location = New Point(201, 276)
-            PictureBox138.Location = New Point(201, 276)
-            PictureBox139.Location = New Point(201, 276)
-            PictureBox140.Location = New Point(201, 276)
-            PictureBox141.Location = New Point(201, 276)
-            PictureBox142.Location = New Point(201, 276)
-            PictureBox143.Location = New Point(201, 276)
-            PictureBox144.Location = New Point(201, 276)
-            PictureBox145.Location = New Point(201, 276)
-            PictureBox146.Location = New Point(201, 276)
-            PictureBox147.Location = New Point(201, 276)
-            PictureBox148.Location = New Point(201, 276)
-            PictureBox149.Location = New Point(201, 276)
-            PictureBox150.Location = New Point(201, 276)
-            PictureBox151.Location = New Point(201, 276)
-            PictureBox152.Location = New Point(201, 276)
-            PictureBox153.Location = New Point(201, 276)
-            PictureBox154.Location = New Point(201, 276)
-            PictureBox155.Location = New Point(201, 276)
-            PictureBox156.Location = New Point(201, 276)
-            PictureBox157.Location = New Point(201, 276)
-            PictureBox158.Location = New Point(201, 276)
-            PictureBox159.Location = New Point(201, 276)
-            PictureBox160.Location = New Point(201, 276)
-            PictureBox161.Location = New Point(201, 276)
-            PictureBox162.Location = New Point(201, 276)
-            PictureBox163.Location = New Point(201, 276)
-            PictureBox164.Location = New Point(201, 276)
-            PictureBox165.Location = New Point(845, 564)
+            Label13.Visible = True
+            Label14.Visible = True
+            Label15.Visible = True
+            Label16.Visible = True
+            Label17.Visible = True
+            Label18.Visible = True
+            Label19.Visible = True
+            Label20.Visible = True
+            Label21.Visible = True
+            Label22.Visible = True
+            Label23.Visible = True
+            RectangleShape1.Visible = True
+            RectangleShape2.Visible = True
+            RectangleShape3.Visible = True
+            RectangleShape4.Visible = True
+            RectangleShape5.Visible = True
+            RectangleShape6.Visible = True
+            RectangleShape7.Visible = True
+            RectangleShape8.Visible = True
+            RectangleShape9.Visible = True
+            RectangleShape10.Visible = True
+            RectangleShape11.Visible = True
+            'Consumables
+            PictureBox54.Location = New Point(159, 238)
+            PictureBox149.Location = New Point(205, 238)
+            PictureBox84.Location = New Point(251, 238)
+            PictureBox143.Location = New Point(297, 238)
+            PictureBox150.Location = New Point(159, 274)
+            PictureBox70.Location = New Point(205, 274)
+            PictureBox32.Location = New Point(251, 274)
+            PictureBox76.Location = New Point(297, 274)
+            PictureBox110.Location = New Point(159, 310)
+            PictureBox138.Location = New Point(205, 310)
+            PictureBox47.Location = New Point(251, 310)
+            'Attributes
+            PictureBox90.Location = New Point(350, 238)
+            PictureBox78.Location = New Point(396, 238)
+            PictureBox142.Location = New Point(442, 238)
+            PictureBox97.Location = New Point(488, 238)
+            PictureBox53.Location = New Point(350, 274)
+            PictureBox37.Location = New Point(396, 274)
+            PictureBox44.Location = New Point(442, 274)
+            PictureBox131.Location = New Point(488, 274)
+            PictureBox111.Location = New Point(350, 310)
+            PictureBox40.Location = New Point(396, 310)
+            PictureBox146.Location = New Point(442, 310)
+            PictureBox151.Location = New Point(488, 310)
+            'Armaments
+            PictureBox129.Location = New Point(543, 238)
+            PictureBox123.Location = New Point(589, 238)
+            PictureBox147.Location = New Point(635, 238)
+            PictureBox41.Location = New Point(681, 238)
+            PictureBox52.Location = New Point(543, 274)
+            PictureBox86.Location = New Point(589, 274)
+            PictureBox49.Location = New Point(635, 274)
+            PictureBox122.Location = New Point(681, 274)
+            PictureBox55.Location = New Point(543, 310)
+            PictureBox91.Location = New Point(589, 310)
+            PictureBox117.Location = New Point(635, 310)
+            PictureBox101.Location = New Point(681, 310)
+            'Arcane
+            PictureBox94.Location = New Point(736, 238)
+            PictureBox133.Location = New Point(782, 238)
+            PictureBox130.Location = New Point(828, 238)
+            PictureBox45.Location = New Point(874, 238)
+            PictureBox81.Location = New Point(736, 274)
+            PictureBox56.Location = New Point(782, 274)
+            PictureBox79.Location = New Point(828, 274)
+            PictureBox104.Location = New Point(874, 274)
+            PictureBox80.Location = New Point(736, 310)
+            PictureBox148.Location = New Point(782, 310)
+            PictureBox42.Location = New Point(828, 310)
+            'Common
+            PictureBox158.Location = New Point(159, 380)
+            PictureBox108.Location = New Point(205, 380)
+            PictureBox95.Location = New Point(251, 380)
+            PictureBox48.Location = New Point(297, 380)
+            PictureBox119.Location = New Point(159, 416)
+            PictureBox145.Location = New Point(205, 416)
+            PictureBox115.Location = New Point(251, 416)
+            PictureBox120.Location = New Point(297, 416)
+            PictureBox109.Location = New Point(159, 452)
+            PictureBox114.Location = New Point(205, 452)
+            PictureBox82.Location = New Point(251, 452)
+            PictureBox46.Location = New Point(297, 452)
+            'Weapons
+            PictureBox57.Location = New Point(350, 380)
+            PictureBox34.Location = New Point(396, 380)
+            PictureBox141.Location = New Point(442, 380)
+            PictureBox139.Location = New Point(488, 380)
+            PictureBox36.Location = New Point(350, 416)
+            PictureBox73.Location = New Point(396, 416)
+            PictureBox124.Location = New Point(442, 416)
+            PictureBox103.Location = New Point(488, 416)
+            PictureBox58.Location = New Point(350, 452)
+            PictureBox51.Location = New Point(396, 452)
+            PictureBox68.Location = New Point(442, 452)
+            PictureBox160.Location = New Point(488, 452)
+            'Support
+            PictureBox127.Location = New Point(543, 380)
+            PictureBox83.Location = New Point(589, 380)
+            PictureBox50.Location = New Point(635, 380)
+            PictureBox152.Location = New Point(681, 380)
+            PictureBox99.Location = New Point(543, 416)
+            PictureBox33.Location = New Point(589, 416)
+            PictureBox69.Location = New Point(635, 416)
+            PictureBox156.Location = New Point(681, 416)
+            PictureBox100.Location = New Point(543, 452)
+            PictureBox116.Location = New Point(589, 452)
+            PictureBox162.Location = New Point(635, 452)
+            PictureBox164.Location = New Point(681, 452)
+            'Caster
+            PictureBox77.Location = New Point(736, 380)
+            PictureBox121.Location = New Point(782, 380)
+            PictureBox106.Location = New Point(828, 380)
+            PictureBox107.Location = New Point(874, 380)
+            PictureBox74.Location = New Point(736, 416)
+            PictureBox59.Location = New Point(782, 416)
+            PictureBox60.Location = New Point(828, 416)
+            PictureBox61.Location = New Point(874, 416)
+            PictureBox62.Location = New Point(736, 452)
+            PictureBox63.Location = New Point(782, 452)
+            PictureBox154.Location = New Point(828, 452)
+            PictureBox31.Location = New Point(874, 452)
+            PictureBox113.Location = New Point(736, 488)
+            PictureBox126.Location = New Point(782, 488)
+            PictureBox137.Location = New Point(828, 488)
+            PictureBox163.Location = New Point(874, 488)
+            'Armor
+            PictureBox88.Location = New Point(159, 526)
+            PictureBox39.Location = New Point(205, 526)
+            PictureBox153.Location = New Point(251, 526)
+            PictureBox144.Location = New Point(297, 526)
+            PictureBox38.Location = New Point(159, 562)
+            PictureBox140.Location = New Point(205, 562)
+            PictureBox96.Location = New Point(251, 562)
+            PictureBox43.Location = New Point(297, 562)
+            PictureBox92.Location = New Point(159, 598)
+            PictureBox35.Location = New Point(205, 598)
+            PictureBox85.Location = New Point(251, 598)
+            'Artifacts
+            PictureBox87.Location = New Point(350, 526)
+            PictureBox98.Location = New Point(396, 526)
+            PictureBox134.Location = New Point(442, 526)
+            PictureBox159.Location = New Point(488, 526)
+            PictureBox93.Location = New Point(350, 562)
+            PictureBox66.Location = New Point(396, 562)
+            PictureBox67.Location = New Point(442, 562)
+            PictureBox65.Location = New Point(488, 562)
+            PictureBox135.Location = New Point(350, 598)
+            PictureBox102.Location = New Point(396, 598)
+            PictureBox75.Location = New Point(442, 598)
+            PictureBox136.Location = New Point(488, 598)
+            PictureBox161.Location = New Point(350, 634)
+            'Secret Shop
+            PictureBox112.Location = New Point(543, 526)
+            PictureBox128.Location = New Point(589, 526)
+            PictureBox157.Location = New Point(635, 526)
+            PictureBox72.Location = New Point(681, 526)
+            PictureBox155.Location = New Point(543, 562)
+            PictureBox118.Location = New Point(589, 562)
+            PictureBox89.Location = New Point(635, 562)
+            PictureBox64.Location = New Point(681, 562)
+            PictureBox105.Location = New Point(543, 598)
+            PictureBox125.Location = New Point(589, 598)
+            PictureBox71.Location = New Point(635, 598)
+            PictureBox132.Location = New Point(681, 598)
+            'Delete
+            PictureBox165.Location = New Point(782, 562)
         Else
+            Label13.Visible = False
+            Label14.Visible = False
+            Label15.Visible = False
+            Label16.Visible = False
+            Label17.Visible = False
+            Label18.Visible = False
+            Label19.Visible = False
+            Label20.Visible = False
+            Label21.Visible = False
+            Label22.Visible = False
+            Label23.Visible = False
+            RectangleShape1.Visible = False
+            RectangleShape2.Visible = False
+            RectangleShape3.Visible = False
+            RectangleShape4.Visible = False
+            RectangleShape5.Visible = False
+            RectangleShape6.Visible = False
+            RectangleShape7.Visible = False
+            RectangleShape8.Visible = False
+            RectangleShape9.Visible = False
+            RectangleShape10.Visible = False
+            RectangleShape11.Visible = False
             PictureBox160.Location = New Point(201, 276)
             PictureBox31.Location = New Point(247, 276)
             PictureBox32.Location = New Point(293, 276)
