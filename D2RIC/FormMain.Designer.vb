@@ -229,18 +229,6 @@ Partial Class FormMain
         Me.PictureBox71 = New System.Windows.Forms.PictureBox()
         Me.PictureBox73 = New System.Windows.Forms.PictureBox()
         Me.PictureBox72 = New System.Windows.Forms.PictureBox()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.RectangleShape11 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape10 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape9 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape8 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape7 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape6 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape5 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.ButtonOpenTextfile = New System.Windows.Forms.Button()
         Me.ButtonImport = New System.Windows.Forms.Button()
@@ -665,7 +653,6 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.PictureBox71)
         Me.TabPage1.Controls.Add(Me.PictureBox73)
         Me.TabPage1.Controls.Add(Me.PictureBox72)
-        Me.TabPage1.Controls.Add(Me.ShapeContainer1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -2519,93 +2506,6 @@ Partial Class FormMain
         Me.PictureBox72.TabIndex = 412
         Me.PictureBox72.TabStop = False
         '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(3, 3)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape11, Me.RectangleShape10, Me.RectangleShape9, Me.RectangleShape8, Me.RectangleShape7, Me.RectangleShape6, Me.RectangleShape5, Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(922, 676)
-        Me.ShapeContainer1.TabIndex = 520
-        Me.ShapeContainer1.TabStop = False
-        '
-        'RectangleShape11
-        '
-        Me.RectangleShape11.Enabled = False
-        Me.RectangleShape11.Location = New System.Drawing.Point(344, 520)
-        Me.RectangleShape11.Name = "RectangleShape11"
-        Me.RectangleShape11.Size = New System.Drawing.Size(185, 143)
-        '
-        'RectangleShape10
-        '
-        Me.RectangleShape10.Enabled = False
-        Me.RectangleShape10.Location = New System.Drawing.Point(537, 520)
-        Me.RectangleShape10.Name = "RectangleShape10"
-        Me.RectangleShape10.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape9
-        '
-        Me.RectangleShape9.Enabled = False
-        Me.RectangleShape9.Location = New System.Drawing.Point(153, 520)
-        Me.RectangleShape9.Name = "RectangleShape9"
-        Me.RectangleShape9.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape8
-        '
-        Me.RectangleShape8.Enabled = False
-        Me.RectangleShape8.Location = New System.Drawing.Point(344, 374)
-        Me.RectangleShape8.Name = "RectangleShape8"
-        Me.RectangleShape8.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape7
-        '
-        Me.RectangleShape7.Enabled = False
-        Me.RectangleShape7.Location = New System.Drawing.Point(537, 374)
-        Me.RectangleShape7.Name = "RectangleShape7"
-        Me.RectangleShape7.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape6
-        '
-        Me.RectangleShape6.Enabled = False
-        Me.RectangleShape6.Location = New System.Drawing.Point(730, 374)
-        Me.RectangleShape6.Name = "RectangleShape6"
-        Me.RectangleShape6.Size = New System.Drawing.Size(185, 143)
-        '
-        'RectangleShape5
-        '
-        Me.RectangleShape5.Enabled = False
-        Me.RectangleShape5.Location = New System.Drawing.Point(153, 374)
-        Me.RectangleShape5.Name = "RectangleShape5"
-        Me.RectangleShape5.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape4
-        '
-        Me.RectangleShape4.Enabled = False
-        Me.RectangleShape4.Location = New System.Drawing.Point(730, 232)
-        Me.RectangleShape4.Name = "RectangleShape4"
-        Me.RectangleShape4.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape3
-        '
-        Me.RectangleShape3.Enabled = False
-        Me.RectangleShape3.Location = New System.Drawing.Point(537, 232)
-        Me.RectangleShape3.Name = "RectangleShape3"
-        Me.RectangleShape3.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape2
-        '
-        Me.RectangleShape2.Enabled = False
-        Me.RectangleShape2.Location = New System.Drawing.Point(344, 232)
-        Me.RectangleShape2.Name = "RectangleShape2"
-        Me.RectangleShape2.Size = New System.Drawing.Size(185, 107)
-        '
-        'RectangleShape1
-        '
-        Me.RectangleShape1.Enabled = False
-        Me.RectangleShape1.Location = New System.Drawing.Point(153, 232)
-        Me.RectangleShape1.Name = "RectangleShape1"
-        Me.RectangleShape1.Size = New System.Drawing.Size(185, 107)
-        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.ButtonOpenTextfile)
@@ -3249,25 +3149,13 @@ Partial Class FormMain
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
-    Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape4 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape3 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape2 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents RectangleShape8 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape7 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape6 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape5 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents RectangleShape11 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape9 As Microsoft.VisualBasic.PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape10 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents Item39 As System.Windows.Forms.PictureBox
     Friend WithEvents Item38 As System.Windows.Forms.PictureBox
     Friend WithEvents Item37 As System.Windows.Forms.PictureBox

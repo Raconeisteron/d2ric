@@ -6154,17 +6154,6 @@ Public Class FormMain
             Label21.Visible = True
             Label22.Visible = True
             Label23.Visible = True
-            RectangleShape1.Visible = True
-            RectangleShape2.Visible = True
-            RectangleShape3.Visible = True
-            RectangleShape4.Visible = True
-            RectangleShape5.Visible = True
-            RectangleShape6.Visible = True
-            RectangleShape7.Visible = True
-            RectangleShape8.Visible = True
-            RectangleShape9.Visible = True
-            RectangleShape10.Visible = True
-            RectangleShape11.Visible = True
             'Consumables
             PictureBox54.Location = New Point(159, 238)
             PictureBox149.Location = New Point(205, 238)
@@ -6324,17 +6313,6 @@ Public Class FormMain
             Label21.Visible = False
             Label22.Visible = False
             Label23.Visible = False
-            RectangleShape1.Visible = False
-            RectangleShape2.Visible = False
-            RectangleShape3.Visible = False
-            RectangleShape4.Visible = False
-            RectangleShape5.Visible = False
-            RectangleShape6.Visible = False
-            RectangleShape7.Visible = False
-            RectangleShape8.Visible = False
-            RectangleShape9.Visible = False
-            RectangleShape10.Visible = False
-            RectangleShape11.Visible = False
             PictureBox160.Location = New Point(201, 276)
             PictureBox31.Location = New Point(247, 276)
             PictureBox32.Location = New Point(293, 276)
