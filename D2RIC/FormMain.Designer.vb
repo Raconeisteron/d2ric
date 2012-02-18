@@ -26,6 +26,7 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Item39 = New System.Windows.Forms.PictureBox()
         Me.Item38 = New System.Windows.Forms.PictureBox()
         Me.Item37 = New System.Windows.Forms.PictureBox()
@@ -55,9 +56,6 @@ Partial Class FormMain
         Me.PictureBox160 = New System.Windows.Forms.PictureBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.PictureBox166 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox165 = New System.Windows.Forms.PictureBox()
         Me.Label0 = New System.Windows.Forms.Label()
         Me.PictureBox159 = New System.Windows.Forms.PictureBox()
@@ -237,9 +235,10 @@ Partial Class FormMain
         Me.ButtonSaveTextfile = New System.Windows.Forms.Button()
         Me.ButtonCopy = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.ComboBoxItemIcons = New System.Windows.Forms.ComboBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.ButtonOpenBackupFolder = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -252,7 +251,6 @@ Partial Class FormMain
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.Item39, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -269,7 +267,6 @@ Partial Class FormMain
         CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox161, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox160, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox166, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox165, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox159, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox158, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -437,10 +434,12 @@ Partial Class FormMain
         '
         'TabControl1
         '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Location = New System.Drawing.Point(2, 12)
         Me.TabControl1.Name = "TabControl1"
@@ -450,6 +449,7 @@ Partial Class FormMain
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label24)
         Me.TabPage1.Controls.Add(Me.Item39)
         Me.TabPage1.Controls.Add(Me.Item38)
         Me.TabPage1.Controls.Add(Me.Item37)
@@ -479,9 +479,6 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.PictureBox160)
         Me.TabPage1.Controls.Add(Me.ComboBox3)
         Me.TabPage1.Controls.Add(Me.Label12)
-        Me.TabPage1.Controls.Add(Me.PictureBox166)
-        Me.TabPage1.Controls.Add(Me.ComboBox1)
-        Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.PictureBox165)
         Me.TabPage1.Controls.Add(Me.Label0)
         Me.TabPage1.Controls.Add(Me.PictureBox159)
@@ -660,6 +657,15 @@ Partial Class FormMain
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Change Itembuild"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(198, 155)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(231, 13)
+        Me.Label24.TabIndex = 534
+        Me.Label24.Text = "You can delete items with right clicking the box."
         '
         'Item39
         '
@@ -855,7 +861,7 @@ Partial Class FormMain
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(691, 194)
+        Me.Label11.Location = New System.Drawing.Point(415, 194)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(56, 13)
         Me.Label11.TabIndex = 512
@@ -866,7 +872,7 @@ Partial Class FormMain
         Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {"Alphabetical Order", "DotA Like"})
-        Me.ComboBox5.Location = New System.Drawing.Point(753, 191)
+        Me.ComboBox5.Location = New System.Drawing.Point(477, 191)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox5.TabIndex = 511
@@ -935,34 +941,6 @@ Partial Class FormMain
         Me.Label12.TabIndex = 504
         Me.Label12.Text = "Sort Heros:"
         '
-        'PictureBox166
-        '
-        Me.PictureBox166.Image = Global.D2RIC.My.Resources.Resources.none
-        Me.PictureBox166.Location = New System.Drawing.Point(615, 183)
-        Me.PictureBox166.Name = "PictureBox166"
-        Me.PictureBox166.Size = New System.Drawing.Size(40, 30)
-        Me.PictureBox166.TabIndex = 503
-        Me.PictureBox166.TabStop = False
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"none", "Abyssal Blade", "Aghanim's Scepter", "Animal Courier", "Arcane Boots", "Armlet", "Assault Cuirass", "Battle Fury", "Belt of Strength", "Black King Bar", "Blade Mail", "Blade of Alacrity", "Blades of Attack", "Blink Dagger", "Bloodstone", "Boots of Elvenskin", "Boots of Speed", "Boots of Travel", "Bottle", "Bracer", "Broadsword", "Buckler", "Butterfly", "Chainmail", "Circlet", "Clarity", "Claymore", "Cloak", "Crystalys", "Daedalus", "Dagon 1", "Dagon 2", "Dagon 3", "Dagon 4", "Dagon 5", "Demon Edge", "Desolator", "Diffusal Blade 1", "Diffusal Blade 2", "Divine Rapier", "Drum of Endurance", "Dust of Appearance", "Eaglesong", "Energy Booster", "Ethereal Blade", "Eul's Scepter of Divinity", "Eye of Skadi", "Flying Courier", "Force Staff", "Gauntlets of Strength", "Gem of True Sight", "Ghost Scepter", "Gloves of Haste", "Hand of Midas", "Headdress", "Healing Salve", "Heart of Tarrasque", "Heaven's Halberd", "Helm of Iron Will", "Helm of the Dominator", "Hood of Defiance", "Hyperstone", "Iron Branch", "Javelin", "Linken's Sphere", "Maelstrom", "Magic Stick", "Magic Wand", "Manta Style", "Mantle of Intelligence", "Mask of Madness", "Medallion of Courage", "Mekansm", "Mithril Hammer", "Mjollnir", "Monkey King Bar", "Morbid Mask", "Mystic Staff", "Necronomicon 1", "Necronomicon 2", "Necronomicon 3", "Null Talisman", "Oblivion Staff", "Observer Ward", "Ogre Club", "Orb of Venom", "Orchid Malevolence", "Perseverance", "Phase Boots", "Pipe of Insight", "Platemail", "Point Booster", "Poor Man's Shield", "Power Treads", "Quarterstaff", "Quelling Blade", "Radiance", "Reaver", "Refresher Orb", "Ring of Aquila", "Ring of Basilius", "Ring of Health", "Ring of Protection", "Ring of Regen", "Robe of the Magi", "Rod of Atos", "Sacred Relic", "Sage's Mask", "Sange", "Sange and Yasha", "Satanic", "Scythe of Vyse", "Sentry Ward", "Shadow Blade", "Shiva's Guard", "Skull Basher", "Slippers of Agility", "Smoke of Deceit", "Soul Booster", "Soul Ring", "Staff of Wizardry", "Stout Shield", "Talisman of Evasion", "Tango", "Town Portal Scroll", "Tranquil Boots", "Ultimate Orb", "Urn of Shadows", "Vanguard", "Veil of Discord", "Vitality Booster", "Vladmir's Offering", "Void Stone", "Wraith Band", "Yasha"})
-        Me.ComboBox1.Location = New System.Drawing.Point(453, 191)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(150, 21)
-        Me.ComboBox1.TabIndex = 502
-        Me.ComboBox1.Text = "none"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(382, 195)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 13)
-        Me.Label10.TabIndex = 501
-        Me.Label10.Text = "Search Item"
-        '
         'PictureBox165
         '
         Me.PictureBox165.Image = Global.D2RIC.My.Resources.Resources.none
@@ -971,6 +949,7 @@ Partial Class FormMain
         Me.PictureBox165.Size = New System.Drawing.Size(40, 30)
         Me.PictureBox165.TabIndex = 500
         Me.PictureBox165.TabStop = False
+        Me.PictureBox165.Visible = False
         '
         'Label0
         '
@@ -993,6 +972,8 @@ Partial Class FormMain
         '
         'ListBox1
         '
+        Me.ListBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Items.AddRange(New Object() {"Abaddon", "Alchemist", "Ancient Apparition", "Anti-Mage", "Axe", "Bane", "Batrider", "Beastmaster", "Bloodseeker", "Bounty Hunter", "Bristleback", "Broodmother", "Centaur Warchief", "Chaos Knight", "Chen", "Clinkz", "Clockwerk", "Crystal Maiden", "Dark Seer", "Dazzle", "Death Prophet", "Dirge", "Disruptor", "Doom Bringer", "Dragon Knight", "Drow Ranger", "Earthshaker", "Enchantress", "Enigma", "Faceless Void", "Goblin Techies", "Guardian Wisp", "Gyrocopter", "Harbinger", "Huskar", "Invoker", "Jakiro", "Juggernaut", "Keeper of the Light", "Kunkka", "Lanaya", "Leshrac", "Lich", "Lifestealer", "Lina", "Lion", "Lone Druid", "Luna", "Lycanthrope", "Magnataur", "Medusa", "Meepo", "Mirana", "Morphling", "Mortred", "Naga Siren", "Nature's Prophet", "Necrolyte", "Nerubian Assassin", "Night Stalker", "Ogre Magi", "Omniknight", "Pandaren Brewmaster", "Phantom Lancer", "Phoenix", "Pit Lord", "Puck", "Pudge", "Pugna", "Queen of Pain", "Razor", "Riki", "Rubick", "Sand King", "Shadow Demon", "Shadow Fiend", "Shadow Shaman", "Silencer", "Skeleton King", "Slardar", "Slark", "Sniper", "Soul Keeper", "Spectre", "Spirit Breaker", "Storm Spirit", "Sven", "Tauren Chieftain", "Tidehunter", "Tinker", "Tiny", "Treant Protector", "Troll Warlord", "Tuskarr", "Ursa", "Vengeful Spirit", "Venomancer", "Viper", "Visage", "Warlock", "Weaver", "Windrunner", "Witch Doctor", "Zeus"})
         Me.ListBox1.Location = New System.Drawing.Point(5, 50)
@@ -1011,6 +992,7 @@ Partial Class FormMain
         '
         'ButtonOpenFolder
         '
+        Me.ButtonOpenFolder.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonOpenFolder.Location = New System.Drawing.Point(201, 653)
         Me.ButtonOpenFolder.Name = "ButtonOpenFolder"
         Me.ButtonOpenFolder.Size = New System.Drawing.Size(132, 23)
@@ -1029,6 +1011,7 @@ Partial Class FormMain
         '
         'ButtonSave
         '
+        Me.ButtonSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonSave.Location = New System.Drawing.Point(615, 653)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(59, 23)
@@ -2520,6 +2503,7 @@ Partial Class FormMain
         '
         'ButtonOpenTextfile
         '
+        Me.ButtonOpenTextfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonOpenTextfile.Location = New System.Drawing.Point(451, 653)
         Me.ButtonOpenTextfile.Name = "ButtonOpenTextfile"
         Me.ButtonOpenTextfile.Size = New System.Drawing.Size(106, 23)
@@ -2529,6 +2513,7 @@ Partial Class FormMain
         '
         'ButtonImport
         '
+        Me.ButtonImport.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonImport.Location = New System.Drawing.Point(370, 653)
         Me.ButtonImport.Name = "ButtonImport"
         Me.ButtonImport.Size = New System.Drawing.Size(75, 23)
@@ -2538,6 +2523,9 @@ Partial Class FormMain
         '
         'TextBox2
         '
+        Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Location = New System.Drawing.Point(6, 3)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
@@ -2559,6 +2547,7 @@ Partial Class FormMain
         '
         'ButtonSaveTextfile
         '
+        Me.ButtonSaveTextfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonSaveTextfile.Location = New System.Drawing.Point(451, 653)
         Me.ButtonSaveTextfile.Name = "ButtonSaveTextfile"
         Me.ButtonSaveTextfile.Size = New System.Drawing.Size(88, 23)
@@ -2568,6 +2557,7 @@ Partial Class FormMain
         '
         'ButtonCopy
         '
+        Me.ButtonCopy.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonCopy.Location = New System.Drawing.Point(370, 653)
         Me.ButtonCopy.Name = "ButtonCopy"
         Me.ButtonCopy.Size = New System.Drawing.Size(75, 23)
@@ -2577,6 +2567,9 @@ Partial Class FormMain
         '
         'TextBox3
         '
+        Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Location = New System.Drawing.Point(3, 3)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
@@ -2585,19 +2578,11 @@ Partial Class FormMain
         Me.TextBox3.Size = New System.Drawing.Size(918, 644)
         Me.TextBox3.TabIndex = 4
         '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(928, 682)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Autoexec"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
         'TabPage5
         '
-        Me.TabPage5.Controls.Add(Me.CheckBox5)
+        Me.TabPage5.Controls.Add(Me.ComboBoxItemIcons)
+        Me.TabPage5.Controls.Add(Me.Label49)
+        Me.TabPage5.Controls.Add(Me.CheckBox1)
         Me.TabPage5.Controls.Add(Me.ButtonOpenBackupFolder)
         Me.TabPage5.Controls.Add(Me.Label9)
         Me.TabPage5.Controls.Add(Me.Label8)
@@ -2613,18 +2598,38 @@ Partial Class FormMain
         Me.TabPage5.Text = "D2RIC Options"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'CheckBox5
+        'ComboBoxItemIcons
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Checked = True
-        Me.CheckBox5.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox5.Location = New System.Drawing.Point(24, 277)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(213, 19)
-        Me.CheckBox5.TabIndex = 346
-        Me.CheckBox5.Text = "Check for Updates on Startup"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.ComboBoxItemIcons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxItemIcons.FormattingEnabled = True
+        Me.ComboBoxItemIcons.Items.AddRange(New Object() {"DotA 2", "DotA 1", "HoN"})
+        Me.ComboBoxItemIcons.Location = New System.Drawing.Point(24, 350)
+        Me.ComboBoxItemIcons.Name = "ComboBoxItemIcons"
+        Me.ComboBoxItemIcons.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxItemIcons.TabIndex = 348
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(21, 332)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(73, 15)
+        Me.Label49.TabIndex = 347
+        Me.Label49.Text = "Item Icons"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox1.Location = New System.Drawing.Point(24, 277)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(213, 19)
+        Me.CheckBox1.TabIndex = 346
+        Me.CheckBox1.Text = "Check for Updates on Startup"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'ButtonOpenBackupFolder
         '
@@ -2701,6 +2706,7 @@ Partial Class FormMain
         '
         'ButtonUpdate
         '
+        Me.ButtonUpdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonUpdate.Location = New System.Drawing.Point(825, 4)
         Me.ButtonUpdate.Name = "ButtonUpdate"
         Me.ButtonUpdate.Size = New System.Drawing.Size(109, 23)
@@ -2723,11 +2729,6 @@ Partial Class FormMain
         'BackgroundWorker1
         '
         '
-        'ToolTip2
-        '
-        Me.ToolTip2.IsBalloon = True
-        Me.ToolTip2.ToolTipTitle = "Description"
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -2738,6 +2739,7 @@ Partial Class FormMain
         Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(955, 760)
         Me.Name = "FormMain"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -2759,7 +2761,6 @@ Partial Class FormMain
         CType(Me.PictureBox162, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox161, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox160, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox166, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox165, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox159, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox158, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2932,7 +2933,6 @@ Partial Class FormMain
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents Label0 As System.Windows.Forms.Label
@@ -3122,13 +3122,10 @@ Partial Class FormMain
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents ButtonOpenBackupFolder As System.Windows.Forms.Button
     Friend WithEvents PictureBox165 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox166 As System.Windows.Forms.PictureBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents ButtonUpdate As System.Windows.Forms.Button
     Friend WithEvents LabelWait As System.Windows.Forms.Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents PictureBox164 As System.Windows.Forms.PictureBox
@@ -3138,7 +3135,6 @@ Partial Class FormMain
     Friend WithEvents PictureBox160 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents ToolTip2 As System.Windows.Forms.ToolTip
     Friend WithEvents Item36 As System.Windows.Forms.PictureBox
     Friend WithEvents Item35 As System.Windows.Forms.PictureBox
     Friend WithEvents Item34 As System.Windows.Forms.PictureBox
@@ -3159,4 +3155,7 @@ Partial Class FormMain
     Friend WithEvents Item39 As System.Windows.Forms.PictureBox
     Friend WithEvents Item38 As System.Windows.Forms.PictureBox
     Friend WithEvents Item37 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxItemIcons As System.Windows.Forms.ComboBox
+    Friend WithEvents Label49 As System.Windows.Forms.Label
 End Class

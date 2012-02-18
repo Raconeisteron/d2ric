@@ -523,4 +523,772 @@
   <data name="_40px_Tranquil_Boots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\40px-Tranquil_Boots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AbyssalBlade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AbyssalBlade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Aghanimsscepter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aghanimsscepter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ancientjanggoofendurance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancientjanggoofendurance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ancienttangoofessifation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancienttangoofessifation.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Animalcourier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Animalcourier.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArcaneBoots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArcaneBoots.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Armletofmordiggian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Armletofmordiggian.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Assaultcuirass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assaultcuirass.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battlefury" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battlefury.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Beltofgiantstrength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beltofgiantstrength.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blackkingbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blackkingbar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blademail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blademail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bladesofalacrity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bladesofalacrity.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bladesofattack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bladesofattack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bloodstone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bloodstone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bootsofelvenskin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bootsofelvenskin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bootsofspeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bootsofspeed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bootsoftravel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bootsoftravel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bottle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bottle.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bracer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bracer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Broadsword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Broadsword.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Burizadokyanon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Burizadokyanon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Butterfly.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chainmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chainmail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circletofnobility" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circletofnobility.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Claritypotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Claritypotion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Claymore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Claymore.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Craniumbasher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Craniumbasher.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Crystalys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crystalys.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dagon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dagon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dagon2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dagon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dagon3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dagon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dagon4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dagon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dagon5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Demonedge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Demonedge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diffusalblade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diffusalblade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diffusalblade2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diffusalblade2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Divinerapier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Divinerapier.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dustofappearance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dustofappearance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eaglehorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eaglehorn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Energybooster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Energybooster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Etheral_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Etheral_Blade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eulsscepterofdivinity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eulsscepterofdivinity.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eyeofskadi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eyeofskadi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fatalbonds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fatalbonds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Flyingcourier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flyingcourier.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Forcestaff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forcestaff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gauntletsofstrength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gauntletsofstrength.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gemoftruesight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gemoftruesight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ghostscepter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ghostscepter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glovesofhaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glovesofhaste.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guinsoosscytheofvyse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guinsoosscytheofvyse.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halberd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halberd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Handofmidas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Handofmidas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Headdressofrejuvenation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Headdressofrejuvenation.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Healingsalve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Healingsalve.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heartoftarrasque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heartoftarrasque.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Helmofironwill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Helmofironwill.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Helmofthedominator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Helmofthedominator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hoodofdefiance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hoodofdefiance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hyperstone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hyperstone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ironwoodbranch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ironwoodbranch.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Javelin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Javelin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kelensdagger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kelensdagger.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Khadgarspipeofinsight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Khadgarspipeofinsight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Linkenssphere" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Linkenssphere.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lotharsedge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lotharsedge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maelstrom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maelstrom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Magicstick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magicstick.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Magicwand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magicwand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mantastyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mantastyle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mantleofintelligence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mantleofintelligence.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maskofdeath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maskofdeath.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maskofmadness" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maskofmadness.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medallionofcourage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medallionofcourage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mekansm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mekansm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Messerschmidtsreaver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Messerschmidtsreaver.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mithrilhammer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mithrilhammer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mjollnir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mjollnir.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Monkeykingbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Monkeykingbar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mysticstaff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mysticstaff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nathrezimbuckler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nathrezimbuckler.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Necronomicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Necronomicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Necronomicon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Necronomicon2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Necronomicon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Necronomicon3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nulltalisman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nulltalisman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oblivionstaff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oblivionstaff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Observerwards" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Observerwards.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ogreaxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ogreaxe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OrbOfVenom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OrbOfVenom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orchidmalevolence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orchidmalevolence.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Perseverance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Perseverance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Phaseboots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phaseboots.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Planeswalkerscloak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Planeswalkerscloak.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Platemail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Platemail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pointbooster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pointbooster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Poormansshield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Poormansshield.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Powertreads" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Powertreads.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quarterstaff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Quarterstaff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quellingblade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Quellingblade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Radiance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Radiance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresherorb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresherorb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RingofAquila" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RingofAquila.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ringofbasilius" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ringofbasilius.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ringofhealth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ringofhealth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ringofprotection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ringofprotection.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ringofregeneration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ringofregeneration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Robeofthemagi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Robeofthemagi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RodofAtos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RodofAtos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sacredrelic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sacredrelic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sange.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sangeandyasha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sangeandyasha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Satanic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Satanic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sentrywards" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sentrywards.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shivasguard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shivasguard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Slippersofagility" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Slippersofagility.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmokeOfDeceit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmokeOfDeceit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sobimask" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sobimask.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Soulbooster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Soulbooster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Soul_Ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Soul_Ring.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Staffofwizardry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Staffofwizardry.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stoutshield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stoutshield.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stygiandesolator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stygiandesolator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Talismanofevasion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Talismanofevasion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Townportal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Townportal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TranquilBoots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TranquilBoots.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ultimateorb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ultimateorb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Urnofshadows" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Urnofshadows.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vanguard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vanguard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vitalitybooster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vitalitybooster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vladimirsoffering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vladimirsoffering.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Voidstone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Voidstone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wraithband" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wraithband.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Yasha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Yasha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Abyssal_Skull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Abyssal-Skull.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Acolytes_Staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Acolytes-Staff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Alchemist_Bones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Alchemist-Bones.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Apprentices_Robe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Apprentices-Robe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Astrolabe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Astrolabe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Axe_Of_The_Malphai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Axe-Of-The-Malphai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Barbed_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Barbed-Armor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Barrier_Idol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Barrier-Idol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Bastard_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Bastard-Sword.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Beastheart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Beastheart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Behemoths_Hearth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Behemoths-Hearth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Blessed_Orb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Blessed-Orb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Blood_Chalice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Blood-Chalice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Bolstering_Armband" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Bolstering-Armband.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Bottle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Bottle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Bound_Eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Bound-Eye.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Broadsword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Broadsword.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Brutalizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Brutalizer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Charged_Hammer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Charged-Hammer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Codex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Codex.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Codex2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Codex2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Codex3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Codex3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Codex4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Codex4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Codex5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Codex5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Crushing_Claws" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Crushing-Claws.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Daemonic_Breastplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Daemonic-Breastplate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Dancing_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Dancing_Blade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Doombringer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Doombringer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Duck_Boots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Duck-Boots.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Dust_Of_Revelation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Dust-Of-Revelation.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Elder_Parasite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Elder-Parasite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Enhanced_Marchers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Enhanced-Marchers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Firebrand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Firebrand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Fleet_Feet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Fleet-Feet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Fortified_Bracelet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Fortified-Bracelet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Frostburn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Frostburn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Frostfield_Plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Frostfield-Plate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Frostwolfs_Skull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Frostwolfs-Skull.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Geometers_Bane" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Geometers-Bane.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Gloves_of_the_Swift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Gloves-of-the-Swift.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Glowstone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Glowstone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Great_Arcana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Great-Arcana.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Guardian_Ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Guardian-Ring.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Halberd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Halberd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Health_Potion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Health-Potion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Hellflower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Hellflower.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Helm_Of_The_Black_Legion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Helm-Of-The-Black-Legion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Helm_Of_The_Victim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Helm-Of-The-Victim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Homecoming_Stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Homecoming-Stone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Hungry_Spirit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Hungry-Spirit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Icebrand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Icebrand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Icon_Of_The_Goddess" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Icon-Of-The-Goddess.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Insanitarius" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Insanitarius.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Iron_Buckler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Iron-Buckler.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Iron_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Iron-Shield.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Kuldras_Sheepstick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Kuldras-Sheepstick.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Lifetube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Lifetube.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Loggers_Hatchet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Loggers-Hatchet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Manatube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Manatube.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Mana_Battery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Mana-Battery.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Mana_Potion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Mana-Potion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Marchers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Marchers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Mark_Of_The_Novice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Mark-Of-The-Novice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Mighty_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Mighty-Blade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Minor_Totem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Minor-Totem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Mock_of_Brilliance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Mock-of-Brilliance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Monkey_Courier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Monkey-Courier.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Mystic_Vestments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Mystic-Vestments.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Neophytes_Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Neophytes-Book.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Nullfire_Blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Nullfire-Blade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Nullfire_Blade2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Nullfire-Blade2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Null_Stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Null-Stone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Pickled_Brain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Pickled-Brain.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Platemail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Platemail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Portal_Key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Portal-Key.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Post_Haste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Post-Haste.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Power_Supply" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Power-Supply.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Pretenders_Crown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Pretenders-Crown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Punchdagger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Punchdagger.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Puzzlebox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Puzzlebox.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Puzzlebox2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Puzzlebox2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Puzzlebox3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Puzzlebox3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Quickblade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Quickblade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Refreshing_Ornament" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Refreshing-Ornament.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Restoration_Stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Restoration-Stone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Riftshards" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Riftshards.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Ringmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Ringmail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Ring_Of_Sorcery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Ring-Of-Sorcery.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Ring_Of_The_Teacher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Ring-Of-The-Teacher.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Runed_Axe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Runed-Axe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Runes_Of_The_Blight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Runes-Of-The-Blight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Sacrificial_Stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Sacrificial-Stone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Savage_Mace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Savage-Mace.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Scarab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Scarab.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Shamans_Headress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Shamans-Headress.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Shieldbreaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Shieldbreaker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Shield_Of_The_Five" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Shield-Of-The-Five.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Shroud_Of_The_Assasin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Shroud-Of-The-Assasin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Shrunken_Head" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Shrunken-Head.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Slayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Slayer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Snake_Bracelet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Snake-Bracelet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Soulscream_Ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Soulscream-Ring.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Staff_Of_The_Master" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Staff-Of-The-Master.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Steamboots_Strength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Steamboots-Strength.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Steamstaff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Steamstaff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Stormspirit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Stormspirit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Striders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Striders.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Sustainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Sustainer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Sword_Of_The_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Sword-Of-The-High.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Symbol_Of_Rage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Symbol-Of-Rage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Tablet_of_Command" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Tablet-of-Command.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Talisman_Of_Exile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Talisman-Of-Exile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Thunderclaw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Thunderclaw.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Trinket_Of_Restoration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Trinket-Of-Restoration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Void_Talisman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Void-Talisman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Wards_of_Revelation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Wards-of-Revelation.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Wards_of_Sight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Wards-of-Sight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Warhammer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Warhammer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Warpcleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Warpcleft.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Whispering_Helm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Whispering-Helm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Wingbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Wingbow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoN_Winged_Courier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoN-Winged-Courier.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
