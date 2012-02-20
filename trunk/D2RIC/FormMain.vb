@@ -143,6 +143,9 @@ Public Class FormMain
     'CHANGE THE HEROS SHOWN IN THE LIST
     Private Sub ComboBox3_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox3.SelectedIndexChanged
         Itembuild.ChangeHeroList(ComboBox3, ListBox1)
+        If CheckBox2.Checked Then
+            Itembuild.ClearNotImplemented()
+        End If
     End Sub
 
     'CHANGE PICTUREBOX aka ITEM POSITION/ORDER
@@ -152,6 +155,17 @@ Public Class FormMain
 
     Private Sub ComboBoxItemIcons_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxItemIcons.SelectedIndexChanged
         Options.ChangeItemIcons()
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox2.CheckedChanged
+        Itembuild.ChangeHeroList(ComboBox3, ListBox1)
+        If CheckBox2.Checked Then
+            Itembuild.ClearNotImplemented()
+        End If
+    End Sub
+
+    Private Sub ButtonDefaultItembuild_Click(sender As System.Object, e As System.EventArgs) Handles ButtonDefaultItembuild.Click
+        Itembuild.LoadDefault()
     End Sub
 
     ''' method for comparing 2 images to see if they are the same. First
