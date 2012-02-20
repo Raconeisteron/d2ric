@@ -251,6 +251,8 @@ Partial Class FormMain
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.ButtonDefaultItembuild = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.Item39, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -449,6 +451,8 @@ Partial Class FormMain
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ButtonDefaultItembuild)
+        Me.TabPage1.Controls.Add(Me.CheckBox2)
         Me.TabPage1.Controls.Add(Me.Label24)
         Me.TabPage1.Controls.Add(Me.Item39)
         Me.TabPage1.Controls.Add(Me.Item38)
@@ -2729,6 +2733,25 @@ Partial Class FormMain
         'BackgroundWorker1
         '
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(71, 2)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(137, 17)
+        Me.CheckBox2.TabIndex = 535
+        Me.CheckBox2.Text = "Show only implemented"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'ButtonDefaultItembuild
+        '
+        Me.ButtonDefaultItembuild.Location = New System.Drawing.Point(444, 653)
+        Me.ButtonDefaultItembuild.Name = "ButtonDefaultItembuild"
+        Me.ButtonDefaultItembuild.Size = New System.Drawing.Size(95, 23)
+        Me.ButtonDefaultItembuild.TabIndex = 536
+        Me.ButtonDefaultItembuild.Text = "Default Itembuild"
+        Me.ButtonDefaultItembuild.UseVisualStyleBackColor = True
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -3158,4 +3181,6 @@ Partial Class FormMain
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents ComboBoxItemIcons As System.Windows.Forms.ComboBox
     Friend WithEvents Label49 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents ButtonDefaultItembuild As System.Windows.Forms.Button
 End Class

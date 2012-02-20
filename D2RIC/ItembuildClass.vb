@@ -224,6 +224,9 @@
         'PRESELECT THE BOX
         FormMain.ComboBox3.SelectedItem = "All"
         FormMain.ComboBox5.SelectedItem = "DotA Like"
+
+        FormMain.CheckBox2.Checked = True
+        ClearNotImplemented()
     End Sub
 
     Public Sub ClearSingle()
@@ -293,6 +296,51 @@
         End If
     End Sub
 
+    Public Sub LoadDefault()
+        If IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
+            Dim DeinPfad As String = My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt"
+            Dim ItemPlace As String = "Starting Items"
+            Dim i As Integer = 1
+            Dim pb As Object
+            Dim picbox As Integer = 1
+            For picbox = 1 To 39
+                pb = FormMain.TabPage1.Controls.Item("Item" & picbox)
+                pb.image = D2RIC.My.Resources.Resources.none
+                FormMain.ToolTip1.SetToolTip(pb, "none")
+            Next
+            For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
+                If Zeile.Contains("item_") And i <= 39 Then
+                    pb = FormMain.TabPage1.Controls.Item("Item" & i)
+                    pb.image = FormMain.ChangePicture(FormMain.RenameItem(Zeile))
+                    FormMain.ToolTip1.SetToolTip(pb, GetToolTip(FormMain.RenameItem(Zeile)))
+                    i = i + 1
+                ElseIf Zeile.Contains("Early_Game") Then
+                    ItemPlace = "Early Game"
+                    i = 10
+                    NeuerText &= Zeile & vbNewLine
+                ElseIf Zeile.Contains("Core_Items") Then
+                    ItemPlace = "Core Items"
+                    i = 19
+                    NeuerText &= Zeile & vbNewLine
+                ElseIf Zeile.Contains("Luxury") Then
+                    ItemPlace = "Luxury"
+                    i = 28
+                    NeuerText &= Zeile & vbNewLine
+                ElseIf Zeile.Contains("author") Then
+                    FormMain.TextBox1.Text = Replace(Zeile, """", "")
+                    FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
+                    FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
+                    NeuerText &= Zeile & vbNewLine
+                Else
+                    NeuerText &= Zeile & vbNewLine
+                End If
+            Next
+            FormMain.ButtonSave.Enabled = True
+        Else
+            MsgBox("Backup not found.")
+        End If
+    End Sub
+
     Public Sub ChangeAuthor(ByVal author As String, ByVal hero As String)
         IO.File.WriteAllText(My.Settings.path + "\temp.txt", NeuerText)
         If IO.File.Exists(My.Settings.path + "\temp.txt") Then
@@ -315,6 +363,26 @@
     End Sub
 
     Public Sub SaveChanges()
+        If Not IO.File.Exists(My.Settings.path + "Backup\" + Selected_Hero + ".txt") Then
+            If Not IO.Directory.Exists(My.Settings.path & "\Backup") Then
+                ' Nein! Jetzt erstellen...
+                Try
+                    IO.Directory.CreateDirectory(My.Settings.path & "\Backup")
+                    ' Ordner wurde korrekt erstellt!
+                Catch ex As Exception
+                    ' Ordner wurde nich erstellt
+                    MsgBox("Error while backup creating folder")
+                End Try
+            End If
+            'Create Backup
+            Try
+                IO.File.Copy(My.Settings.path + "\default_" + Selected_Hero + ".txt", My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt", True)  ' Kopiert die Dateien
+            Catch ex As Exception
+                ' Ordner wurde nich erstellt
+                MsgBox("Error while creating backup")
+            End Try
+        End If
+
         IO.File.WriteAllText(My.Settings.path + "\temp.txt", NeuerText)
         If IO.File.Exists(My.Settings.path + "\temp.txt") Then
             NeuerText = ""
@@ -807,12 +875,10 @@
             For i = lb.Items.Count - 1 To 0 Step -1
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
-            lb.Items.Add("Abaddon")
             lb.Items.Add("Alchemist")
             lb.Items.Add("Anti-Mage")
             lb.Items.Add("Bloodseeker")
             lb.Items.Add("Bounty Hunter")
-            lb.Items.Add("Bristleback")
             lb.Items.Add("Broodmother")
             lb.Items.Add("Clinkz")
             lb.Items.Add("Dirge")
@@ -828,7 +894,6 @@
             lb.Items.Add("Huskar")
             lb.Items.Add("Invoker")
             lb.Items.Add("Juggernaut")
-            lb.Items.Add("Keeper of the Light")
             lb.Items.Add("Kunkka")
             lb.Items.Add("Lanaya")
             lb.Items.Add("Legion Commander")
@@ -836,7 +901,6 @@
             lb.Items.Add("Lone Druid")
             lb.Items.Add("Luna")
             lb.Items.Add("Lycanthrope")
-            lb.Items.Add("Magnataur")
             lb.Items.Add("Medusa")
             lb.Items.Add("Meepo")
             lb.Items.Add("Mirana")
@@ -846,21 +910,17 @@
             lb.Items.Add("Necrolyte")
             lb.Items.Add("Night Stalker")
             lb.Items.Add("Obsidian Destroyer")
-            lb.Items.Add("Ogre Magi")
             lb.Items.Add("Phantom Lancer")
             lb.Items.Add("Phoenix")
-            lb.Items.Add("Pit Lord")
             lb.Items.Add("Queen of Pain")
             lb.Items.Add("Razor")
             lb.Items.Add("Riki")
             lb.Items.Add("Rubick")
-            lb.Items.Add("Shadow Demon")
             lb.Items.Add("Shadow Fiend")
             lb.Items.Add("Silencer")
             lb.Items.Add("Skeleton King")
             lb.Items.Add("Skywrath Mage")
             lb.Items.Add("Slardar")
-            lb.Items.Add("Slark")
             lb.Items.Add("Sniper")
             lb.Items.Add("Soul Keeper")
             lb.Items.Add("Spectre")
@@ -868,9 +928,7 @@
             lb.Items.Add("Sven")
             lb.Items.Add("Tauren Chieftain")
             lb.Items.Add("Tinker")
-            lb.Items.Add("Treant Protector")
             lb.Items.Add("Troll Warlord")
-            lb.Items.Add("Tuskarr")
             lb.Items.Add("Ursa")
             lb.Items.Add("Venomancer")
             lb.Items.Add("Viper")
@@ -897,7 +955,6 @@
             lb.Items.Add("Lich")
             lb.Items.Add("Lion")
             lb.Items.Add("Necrolyte")
-            lb.Items.Add("Obsidian Destroyer")
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Omniknight")
             lb.Items.Add("Rubick")
@@ -931,7 +988,6 @@
             lb.Items.Add("Guardian Wisp")
             lb.Items.Add("Invoker")
             lb.Items.Add("Jakiro")
-            lb.Items.Add("Keeper of the Light")
             lb.Items.Add("Kunkka")
             lb.Items.Add("Lanaya")
             lb.Items.Add("Legion Commander")
@@ -939,29 +995,20 @@
             lb.Items.Add("Lifestealer")
             lb.Items.Add("Lina")
             lb.Items.Add("Lion")
-            lb.Items.Add("Lone Druid")
-            lb.Items.Add("Lycanthrope")
-            lb.Items.Add("Magnataur")
-            lb.Items.Add("Medusa")
             lb.Items.Add("Mirana")
             lb.Items.Add("Morphling")
             lb.Items.Add("Naga Siren")
             lb.Items.Add("Nature's Prophet")
             lb.Items.Add("Nerubian Assassin")
             lb.Items.Add("Night Stalker")
-            lb.Items.Add("Obsidian Destroyer")
-            lb.Items.Add("Ogre Magi")
             lb.Items.Add("Phoenix")
-            lb.Items.Add("Pit Lord")
             lb.Items.Add("Pudge")
             lb.Items.Add("Queen of Pain")
             lb.Items.Add("Riki")
             lb.Items.Add("Rubick")
             lb.Items.Add("Sand King")
-            lb.Items.Add("Shadow Demon")
             lb.Items.Add("Skywrath Mage")
             lb.Items.Add("Slark")
-            lb.Items.Add("Soul Keeper")
             lb.Items.Add("Spirit Breaker")
             lb.Items.Add("Storm Spirit")
             lb.Items.Add("Sven")
@@ -969,7 +1016,6 @@
             lb.Items.Add("Tidehunter")
             lb.Items.Add("Tinker")
             lb.Items.Add("Tiny")
-            lb.Items.Add("Treant Protector")
             lb.Items.Add("Tuskarr")
             lb.Items.Add("Vengeful Spirit")
             lb.Items.Add("Visage")
@@ -992,11 +1038,9 @@
             lb.Items.Add("Pudge")
             lb.Items.Add("Sand King")
             lb.Items.Add("Slardar")
-            lb.Items.Add("Slark")
             lb.Items.Add("Tidehunter")
             lb.Items.Add("Tiny")
             lb.Items.Add("Treant Protector")
-            lb.Items.Add("Tuskarr")
         ElseIf cb.SelectedItem = "Pusher" Then
             lb.SelectedItems.Clear()
             For i = lb.Items.Count - 1 To 0 Step -1
@@ -1011,6 +1055,8 @@
             lb.Items.Add("Keeper of the Light")
             lb.Items.Add("Kunkka")
             lb.Items.Add("Leshrac")
+            lb.Items.Add("Lone Druid")
+            lb.Items.Add("Lycanthrope")
             lb.Items.Add("Meepo")
             lb.Items.Add("Nature's Prophet")
             lb.Items.Add("Necrolyte")
@@ -1031,31 +1077,22 @@
             lb.Items.Add("Enigma")
             lb.Items.Add("Lycanthrope")
             lb.Items.Add("Nature's Prophet")
-            lb.Items.Add("Pit Lord")
             lb.Items.Add("Ursa")
         ElseIf cb.SelectedItem = "Tank" Then
             lb.SelectedItems.Clear()
             For i = lb.Items.Count - 1 To 0 Step -1
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
-            lb.Items.Add("Abaddon")
-            lb.Items.Add("Bristleback")
             lb.Items.Add("Centaur Warchief")
             lb.Items.Add("Death Prophet")
             lb.Items.Add("Dirge")
             lb.Items.Add("Goblin Shredder")
             lb.Items.Add("Guardian Wisp")
             lb.Items.Add("Legion Commander")
-            lb.Items.Add("Lone Druid")
-            lb.Items.Add("Lycanthrope")
-            lb.Items.Add("Magnataur")
             lb.Items.Add("Pandaren Brewmaster")
             lb.Items.Add("Phoenix")
-            lb.Items.Add("Pit Lord")
             lb.Items.Add("Skeleton King")
             lb.Items.Add("Tauren Chieftain")
-            lb.Items.Add("Treant Protector")
-            lb.Items.Add("Tuskarr")
             lb.Items.Add("Visage")
         ElseIf cb.SelectedItem = "Strength" Then
             lb.SelectedItems.Clear()
@@ -1181,6 +1218,47 @@
             lb.Items.Add("Witch Doctor")
             lb.Items.Add("Zeus")
         End If
+    End Sub
+
+    Public Sub ClearNotImplemented()
+        With FormMain.ListBox1
+            .Items.Remove("Abaddon")
+            .Items.Remove("Bane")
+            .Items.Remove("Bristleback")
+            .Items.Remove("Centaur Warchief")
+            .Items.Remove("Chaos Knight")
+            .Items.Remove("Dirge")
+            .Items.Remove("Disruptor")
+            .Items.Remove("Ember Spirit")
+            .Items.Remove("Goblin Shredder")
+            .Items.Remove("Goblin Techies")
+            .Items.Remove("Guardian Wisp")
+            .Items.Remove("Keeper of the Light")
+            .Items.Remove("Legion Commander")
+            .Items.Remove("Lone Druid")
+            .Items.Remove("Luna")
+            .Items.Remove("Lycanthrope")
+            .Items.Remove("Magnataur")
+            .Items.Remove("Medusa")
+            .Items.Remove("Meepo")
+            .Items.Remove("Naga Siren")
+            .Items.Remove("Nerubian Assassin")
+            .Items.Remove("Ogre Magi")
+            .Items.Remove("Pandaren Brewmaster")
+            .Items.Remove("Phantom Lancer")
+            .Items.Remove("Phoenix")
+            .Items.Remove("Pit Lord")
+            .Items.Remove("Rubick")
+            .Items.Remove("Shadow Demon")
+            .Items.Remove("Skywrath Mage")
+            .Items.Remove("Slark")
+            .Items.Remove("Soul Keeper")
+            .Items.Remove("Tauren Chieftain")
+            .Items.Remove("Treant Protector")
+            .Items.Remove("Troll Warlord")
+            .Items.Remove("Tuskarr")
+            .Items.Remove("Visage")
+        End With
     End Sub
 
     Public Function GetToolTip(ByVal item_name As String) As String
