@@ -42,7 +42,7 @@
         End If
         If IO.Directory.Exists(My.Settings.path & "\Backup") Then
             For Each file As String In IO.Directory.GetFiles(My.Settings.path) ' Ermittelt alle Dateien des Ordners
-                IO.File.Copy(file, My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "_" & cut_file(file), True)  ' Kopiert die Dateien
+                IO.File.Copy(file, My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "_" & Replace(cut_file(file), "default_", ""), True)  ' Kopiert die Dateien
             Next
         End If
     End Sub
@@ -51,7 +51,9 @@
         If MessageBox.Show("Delete backups?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             If IO.Directory.Exists(My.Settings.path & "\Backup") Then
                 For Each file As String In IO.Directory.GetFiles(My.Settings.path & "\Backup") ' Ermittelt alle Dateien des Ordners
-                    IO.File.Delete(file)  ' Löscht die Dateien
+                    If Not file.Contains("default") Then
+                        IO.File.Delete(file)  ' Löscht die Dateien
+                    End If
                 Next
             End If
         Else
