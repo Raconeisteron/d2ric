@@ -26,6 +26,8 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ButtonDefaultItembuild = New System.Windows.Forms.Button()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Item39 = New System.Windows.Forms.PictureBox()
         Me.Item38 = New System.Windows.Forms.PictureBox()
@@ -236,6 +238,8 @@ Partial Class FormMain
         Me.ButtonCopy = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ComboBoxClient = New System.Windows.Forms.ComboBox()
         Me.ComboBoxItemIcons = New System.Windows.Forms.ComboBox()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -251,8 +255,6 @@ Partial Class FormMain
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.ButtonDefaultItembuild = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.Item39, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -451,6 +453,7 @@ Partial Class FormMain
         '
         'TabPage1
         '
+        Me.TabPage1.AllowDrop = True
         Me.TabPage1.Controls.Add(Me.ButtonDefaultItembuild)
         Me.TabPage1.Controls.Add(Me.CheckBox2)
         Me.TabPage1.Controls.Add(Me.Label24)
@@ -661,6 +664,26 @@ Partial Class FormMain
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Change Itembuild"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'ButtonDefaultItembuild
+        '
+        Me.ButtonDefaultItembuild.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonDefaultItembuild.Location = New System.Drawing.Point(444, 653)
+        Me.ButtonDefaultItembuild.Name = "ButtonDefaultItembuild"
+        Me.ButtonDefaultItembuild.Size = New System.Drawing.Size(95, 23)
+        Me.ButtonDefaultItembuild.TabIndex = 536
+        Me.ButtonDefaultItembuild.Text = "Default Itembuild"
+        Me.ButtonDefaultItembuild.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(71, 2)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(137, 17)
+        Me.CheckBox2.TabIndex = 535
+        Me.CheckBox2.Text = "Show only implemented"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'Label24
         '
@@ -2584,6 +2607,8 @@ Partial Class FormMain
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.Label10)
+        Me.TabPage5.Controls.Add(Me.ComboBoxClient)
         Me.TabPage5.Controls.Add(Me.ComboBoxItemIcons)
         Me.TabPage5.Controls.Add(Me.Label49)
         Me.TabPage5.Controls.Add(Me.CheckBox1)
@@ -2602,12 +2627,32 @@ Partial Class FormMain
         Me.TabPage5.Text = "D2RIC Options"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(21, 69)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(44, 15)
+        Me.Label10.TabIndex = 350
+        Me.Label10.Text = "Client"
+        '
+        'ComboBoxClient
+        '
+        Me.ComboBoxClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxClient.FormattingEnabled = True
+        Me.ComboBoxClient.Items.AddRange(New Object() {"Test Client", "Beta Client"})
+        Me.ComboBoxClient.Location = New System.Drawing.Point(19, 99)
+        Me.ComboBoxClient.Name = "ComboBoxClient"
+        Me.ComboBoxClient.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxClient.TabIndex = 349
+        '
         'ComboBoxItemIcons
         '
         Me.ComboBoxItemIcons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxItemIcons.FormattingEnabled = True
         Me.ComboBoxItemIcons.Items.AddRange(New Object() {"DotA 2", "DotA 1", "HoN"})
-        Me.ComboBoxItemIcons.Location = New System.Drawing.Point(24, 350)
+        Me.ComboBoxItemIcons.Location = New System.Drawing.Point(24, 441)
         Me.ComboBoxItemIcons.Name = "ComboBoxItemIcons"
         Me.ComboBoxItemIcons.Size = New System.Drawing.Size(121, 21)
         Me.ComboBoxItemIcons.TabIndex = 348
@@ -2616,7 +2661,7 @@ Partial Class FormMain
         '
         Me.Label49.AutoSize = True
         Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(21, 332)
+        Me.Label49.Location = New System.Drawing.Point(21, 423)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(73, 15)
         Me.Label49.TabIndex = 347
@@ -2628,7 +2673,7 @@ Partial Class FormMain
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox1.Location = New System.Drawing.Point(24, 277)
+        Me.CheckBox1.Location = New System.Drawing.Point(24, 368)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(213, 19)
         Me.CheckBox1.TabIndex = 346
@@ -2637,7 +2682,7 @@ Partial Class FormMain
         '
         'ButtonOpenBackupFolder
         '
-        Me.ButtonOpenBackupFolder.Location = New System.Drawing.Point(24, 212)
+        Me.ButtonOpenBackupFolder.Location = New System.Drawing.Point(24, 303)
         Me.ButtonOpenBackupFolder.Name = "ButtonOpenBackupFolder"
         Me.ButtonOpenBackupFolder.Size = New System.Drawing.Size(116, 23)
         Me.ButtonOpenBackupFolder.TabIndex = 344
@@ -2648,7 +2693,7 @@ Partial Class FormMain
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(21, 155)
+        Me.Label9.Location = New System.Drawing.Point(21, 246)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(54, 15)
         Me.Label9.TabIndex = 343
@@ -2658,7 +2703,7 @@ Partial Class FormMain
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(21, 64)
+        Me.Label8.Location = New System.Drawing.Point(21, 154)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 15)
         Me.Label8.TabIndex = 342
@@ -2676,7 +2721,7 @@ Partial Class FormMain
         '
         'ButtonChangeSteam
         '
-        Me.ButtonChangeSteam.Location = New System.Drawing.Point(378, 91)
+        Me.ButtonChangeSteam.Location = New System.Drawing.Point(378, 181)
         Me.ButtonChangeSteam.Name = "ButtonChangeSteam"
         Me.ButtonChangeSteam.Size = New System.Drawing.Size(75, 23)
         Me.ButtonChangeSteam.TabIndex = 340
@@ -2685,14 +2730,14 @@ Partial Class FormMain
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(24, 93)
+        Me.TextBox4.Location = New System.Drawing.Point(24, 183)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(348, 20)
         Me.TextBox4.TabIndex = 339
         '
         'ButtonBackup
         '
-        Me.ButtonBackup.Location = New System.Drawing.Point(24, 183)
+        Me.ButtonBackup.Location = New System.Drawing.Point(24, 274)
         Me.ButtonBackup.Name = "ButtonBackup"
         Me.ButtonBackup.Size = New System.Drawing.Size(75, 23)
         Me.ButtonBackup.TabIndex = 337
@@ -2701,7 +2746,7 @@ Partial Class FormMain
         '
         'ButtonDeleteBackup
         '
-        Me.ButtonDeleteBackup.Location = New System.Drawing.Point(105, 183)
+        Me.ButtonDeleteBackup.Location = New System.Drawing.Point(105, 274)
         Me.ButtonDeleteBackup.Name = "ButtonDeleteBackup"
         Me.ButtonDeleteBackup.Size = New System.Drawing.Size(111, 23)
         Me.ButtonDeleteBackup.TabIndex = 338
@@ -2732,25 +2777,6 @@ Partial Class FormMain
         '
         'BackgroundWorker1
         '
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(71, 2)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(137, 17)
-        Me.CheckBox2.TabIndex = 535
-        Me.CheckBox2.Text = "Show only implemented"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'ButtonDefaultItembuild
-        '
-        Me.ButtonDefaultItembuild.Location = New System.Drawing.Point(444, 653)
-        Me.ButtonDefaultItembuild.Name = "ButtonDefaultItembuild"
-        Me.ButtonDefaultItembuild.Size = New System.Drawing.Size(95, 23)
-        Me.ButtonDefaultItembuild.TabIndex = 536
-        Me.ButtonDefaultItembuild.Text = "Default Itembuild"
-        Me.ButtonDefaultItembuild.UseVisualStyleBackColor = True
         '
         'FormMain
         '
@@ -3183,4 +3209,6 @@ Partial Class FormMain
     Friend WithEvents Label49 As System.Windows.Forms.Label
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents ButtonDefaultItembuild As System.Windows.Forms.Button
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxClient As System.Windows.Forms.ComboBox
 End Class

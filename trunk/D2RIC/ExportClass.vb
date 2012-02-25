@@ -15,7 +15,7 @@
                 FileOpen(1, SaveFileDialog1.FileName, OpenMode.Output)
                 PrintLine(1, FormMain.TextBox3.Text)
                 FileClose(1)
-                MsgBox("File saved.")
+                MessageBox.Show("File saved.")
             End If
         End Using
     End Sub

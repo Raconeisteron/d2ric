@@ -8,18 +8,48 @@
             End If
             Dim steam_path, path As String
             steam_path = FormMain.TextBox4.Text
-            path = steam_path + "\SteamApps\common\dota 2 beta\dota\itembuilds"
+            If My.Settings.client = "Release Client" Then
+                path = steam_path + "\SteamApps\common\dota 2\dota\itembuilds"
+            ElseIf My.Settings.client = "Test Client" Then
+                path = steam_path + "\SteamApps\common\dota 2 test\dota\itembuilds"
+            Else
+                path = steam_path + "\SteamApps\common\dota 2 beta\dota\itembuilds"
+            End If
 
             If My.Computer.FileSystem.DirectoryExists(path) Then
                 ' existiert
                 My.Settings.path = path
                 My.Settings.Save()
-                MsgBox("Path changed successfully.")
+                MessageBox.Show("Path changed successfully.")
             Else
                 ' existiert nicht
-                MsgBox("Please check your Steam path!!!")
+                MessageBox.Show("Please check your Steam path!!!")
             End If
         End Using
+    End Sub
+
+    Public Sub ChangeClient()
+        Dim steam_path, path As String
+        steam_path = FormMain.TextBox4.Text
+        If FormMain.ComboBoxClient.Text = "Release Client" Then
+            path = steam_path + "\SteamApps\common\dota 2\dota\itembuilds"
+        ElseIf FormMain.ComboBoxClient.Text = "Test Client" Then
+            path = steam_path + "\SteamApps\common\dota 2 test\dota\itembuilds"
+        Else
+            path = steam_path + "\SteamApps\common\dota 2 beta\dota\itembuilds"
+        End If
+
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            ' existiert
+            My.Settings.client = FormMain.ComboBoxClient.Text
+            My.Settings.path = path
+            My.Settings.Save()
+            Itembuild.ClearSingle()
+        Else
+            ' existiert nicht
+            MessageBox.Show("Client not found.")
+            FormMain.ComboBoxClient.Text = My.Settings.client
+        End If
     End Sub
 
     Private Function cut_file(ByVal file As String) As String ' Funktion zum Entfernen der Backslashs / Ordner
@@ -37,7 +67,7 @@
                 ' Ordner wurde korrekt erstellt!
             Catch ex As Exception
                 ' Ordner wurde nich erstellt
-                MsgBox("Error while creating folder")
+                MessageBox.Show("Error while creating folder")
             End Try
         End If
         If IO.Directory.Exists(My.Settings.path & "\Backup") Then
@@ -65,7 +95,7 @@
         If IO.Directory.Exists(My.Settings.path & "\Backup") Then
             System.Diagnostics.Process.Start("explorer", My.Settings.path + "\Backup")
         Else
-            MsgBox("Backup folder doesn't exist.")
+            MessageBox.Show("Backup folder doesn't exist.")
         End If
     End Sub
 
@@ -122,7 +152,7 @@
             FormMain.PictureBox78.Image = D2RIC.My.Resources.Resources.Gauntletsofstrength
             FormMain.PictureBox79.Image = D2RIC.My.Resources.Resources.Gemoftruesight
             FormMain.PictureBox80.Image = D2RIC.My.Resources.Resources.Ghostscepter
-            FormMain.PictureBox81.Image = D2RIC.My.Resources.Resources.Ghostscepter
+            FormMain.PictureBox81.Image = D2RIC.My.Resources.Resources.Glovesofhaste
             FormMain.PictureBox82.Image = D2RIC.My.Resources.Resources.Handofmidas
             FormMain.PictureBox83.Image = D2RIC.My.Resources.Resources.Headdressofrejuvenation
             FormMain.PictureBox84.Image = D2RIC.My.Resources.Resources.Healingsalve
