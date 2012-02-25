@@ -1,5 +1,6 @@
 ﻿Public Class ItembuildClass
-    Public Selected_Hero, NeuerText As String
+    Public NeuerText As String
+    Public Shared Selected_Hero As String
 
     Public Sub Initialize()
         'ALLOW TO DROP SOMETHING IN THE PICTUREBOX
@@ -248,10 +249,9 @@
             If FormMain.TextBox1.Text <> "" Then
                 ChangeAuthor(FormMain.TextBox1.Text, Selected_Hero)
             End If
-            'MsgBox(NeuerText)
             IO.File.WriteAllText(My.Settings.path + "\default_" + Selected_Hero + ".txt", NeuerText)
         Else
-            MsgBox("Please choose a hero first.")
+            MessageBox.Show("Please choose a hero first.")
         End If
     End Sub
 
@@ -292,7 +292,7 @@
         Else
             ClearSingle()
             FormMain.ButtonSave.Enabled = False
-            MsgBox("Error! Hero maybe not implemented yet.")
+            MessageBox.Show("Error! Hero maybe not implemented yet.")
         End If
     End Sub
 
@@ -337,7 +337,7 @@
             Next
             FormMain.ButtonSave.Enabled = True
         Else
-            MsgBox("Backup not found.")
+            MessageBox.Show("Backup not found.")
         End If
     End Sub
 
@@ -371,7 +371,7 @@
                     ' Ordner wurde korrekt erstellt!
                 Catch ex As Exception
                     ' Ordner wurde nich erstellt
-                    MsgBox("Error while backup creating folder")
+                    MessageBox.Show("Error while backup creating folder")
                 End Try
             End If
             'Create Backup
@@ -379,7 +379,7 @@
                 IO.File.Copy(My.Settings.path + "\default_" + Selected_Hero + ".txt", My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt", True)  ' Kopiert die Dateien
             Catch ex As Exception
                 ' Ordner wurde nich erstellt
-                MsgBox("Error while creating backup")
+                MessageBox.Show("Error while creating backup")
             End Try
         End If
 
@@ -437,7 +437,7 @@
             NeuerText &= vbTab & vbTab & "}" & vbNewLine & vbTab & "}" & vbNewLine & "}"
 
         Else
-            MsgBox("Error!")
+            MessageBox.Show("Error!")
         End If
     End Sub
 
@@ -524,7 +524,7 @@
             Case hero Like "npc_dota_hero_?ight_?talker"
                 hero = "Night Stalker"
             Case hero Like "npc_dota_hero_?bsidian_?estroyer"
-                hero = "Obsidian Destroyer"
+                hero = "Outworld Destroyer"
             Case hero Like "npc_dota_hero_?mniknight"
                 hero = "Omniknight"
             Case hero Like "npc_dota_hero_?hantom_?ssassin"
@@ -708,7 +708,7 @@
                 Selected_Hero = "life_stealer"
             Case "Mortred"
                 Selected_Hero = "phantom_assassin"
-            Case "Obsidian Destroyer"
+            Case "Outworld Destroyer"
                 Selected_Hero = "obsidian_destroyer"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Centaur Warchief"
@@ -824,9 +824,9 @@
             lb.Items.Add("Necrolyte")
             lb.Items.Add("Nerubian Assassin")
             lb.Items.Add("Night Stalker")
-            lb.Items.Add("Obsidian Destroyer")
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Omniknight")
+            lb.Items.Add("Outworld Destroyer")
             lb.Items.Add("Pandaren Brewmaster")
             lb.Items.Add("Phantom Lancer")
             lb.Items.Add("Phoenix")
@@ -909,7 +909,7 @@
             lb.Items.Add("Naga Siren")
             lb.Items.Add("Necrolyte")
             lb.Items.Add("Night Stalker")
-            lb.Items.Add("Obsidian Destroyer")
+            lb.Items.Add("Outworld Destroyer")
             lb.Items.Add("Phantom Lancer")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Queen of Pain")
@@ -1200,7 +1200,7 @@
             lb.Items.Add("Lion")
             lb.Items.Add("Nature's Prophet")
             lb.Items.Add("Necrolyte")
-            lb.Items.Add("Obsidian Destroyer")
+            lb.Items.Add("Outworld Destroyer")
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Puck")
             lb.Items.Add("Pugna")
@@ -1223,7 +1223,6 @@
     Public Sub ClearNotImplemented()
         With FormMain.ListBox1
             .Items.Remove("Abaddon")
-            .Items.Remove("Bane")
             .Items.Remove("Bristleback")
             .Items.Remove("Centaur Warchief")
             .Items.Remove("Chaos Knight")

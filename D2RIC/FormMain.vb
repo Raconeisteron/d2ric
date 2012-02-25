@@ -38,16 +38,16 @@ Public Class FormMain
             Itembuild.CheckHero(ListBox1.SelectedItem.ToString)
             Itembuild.ClearSingle()
             Label1.Text = ListBox1.SelectedItem.ToString
-            Itembuild.CheckFile(Itembuild.Selected_Hero)
+            Itembuild.CheckFile(ItembuildClass.Selected_Hero)
         End If
     End Sub
 
     Private Sub TabControl1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
         If TabControl1.SelectedTab Is TabPage4 Then
             TextBox3.Text = "Please choose a hero first."
-            If (Itembuild.Selected_Hero <> "") Then
+            If (ItembuildClass.Selected_Hero <> "") Then
                 Itembuild.SaveChanges()
-                Itembuild.ChangeAuthor(TextBox1.Text, Itembuild.Selected_Hero)
+                Itembuild.ChangeAuthor(TextBox1.Text, ItembuildClass.Selected_Hero)
                 My.Settings.clipboard = Itembuild.NeuerText
                 If (My.Settings.clipboard <> "") Then
                     TextBox3.Text = My.Settings.clipboard
@@ -57,7 +57,14 @@ Public Class FormMain
             End If
         ElseIf TabControl1.SelectedTab Is TabPage5 Then
             If (My.Settings.path <> "") Then
-                TextBox4.Text = Replace(My.Settings.path, "\SteamApps\common\dota 2 beta\dota\itembuilds", "")
+                TextBox4.Text = Microsoft.VisualBasic.Left(My.Settings.path, My.Settings.path.IndexOf("\SteamApps"))
+            End If
+            If My.Settings.client = "Release Client" Then
+                ComboBoxClient.Text = "Release Client"
+            ElseIf My.Settings.client = "Test Client" Then
+                ComboBoxClient.Text = "Test Client"
+            Else
+                ComboBoxClient.Text = "Beta Client"
             End If
         End If
     End Sub
@@ -126,6 +133,10 @@ Public Class FormMain
 
     Private Sub ButtonChangeSteam_Click(sender As System.Object, e As System.EventArgs) Handles ButtonChangeSteam.Click
         Options.ChangeSteamPath()
+    End Sub
+
+    Private Sub ComboBoxClient_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxClient.SelectedIndexChanged
+        Options.ChangeClient()
     End Sub
 
     Private Sub ButtonOpenBackupFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenBackupFolder.Click

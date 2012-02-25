@@ -11,6 +11,7 @@
                 Dim pb As Object
                 Itembuild.ClearSingle()
                 FormMain.ListBox1.SelectedItems.Clear()
+                ItembuildClass.Selected_Hero = ""
                 For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                     If Zeile.Contains("item_") And i <= 39 Then
                         pb = FormMain.TabPage1.Controls.Item("Item" & i)
@@ -30,12 +31,13 @@
                         FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
                         FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
                     ElseIf Zeile.Contains("hero") Then
-                        Itembuild.Selected_Hero = Replace(Zeile, """hero""", "")
-                        Itembuild.Selected_Hero = Replace(Itembuild.Selected_Hero, """", "")
-                        Itembuild.Selected_Hero = Replace(Itembuild.Selected_Hero, vbTab, "")
-                        FormMain.Label1.Text = Itembuild.renameHero(Itembuild.Selected_Hero)
-                        If Itembuild.renameHero(Itembuild.Selected_Hero) <> "Unknown hero!" Then
-                            FormMain.ListBox1.SelectedItem = Itembuild.renameHero(Itembuild.Selected_Hero)
+                        ItembuildClass.Selected_Hero = Replace(Zeile, """hero""", "")
+                        ItembuildClass.Selected_Hero = Replace(ItembuildClass.Selected_Hero, """", "")
+                        ItembuildClass.Selected_Hero = Replace(ItembuildClass.Selected_Hero, vbTab, "")
+                        ItembuildClass.Selected_Hero = Itembuild.renameHero(ItembuildClass.Selected_Hero)
+                        FormMain.Label1.Text = ItembuildClass.Selected_Hero
+                        If ItembuildClass.Selected_Hero <> "Unknown hero!" Then
+                            FormMain.ListBox1.SelectedItem = ItembuildClass.Selected_Hero
                         End If
                         FormMain.ButtonSave.Enabled = True
                     Else
@@ -45,7 +47,7 @@
                 IO.File.Delete(My.Settings.path + "\temp.txt")
                 FormMain.TabControl1.SelectedTab = FormMain.TabPage1
             Else
-                MsgBox("Error! Hero maybe not implemented yet.")
+                MessageBox.Show("Error! Hero maybe not implemented yet.")
             End If
         End If
     End Sub
@@ -58,7 +60,7 @@
                 If IO.File.Exists(OpenFileDialog1.FileName) Then
                     FormMain.TextBox2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
                 Else
-                    MsgBox("Error while reading.")
+                    MessageBox.Show("Error while reading.")
                 End If
             Else
                 FormMain.TextBox2.Text = "Error!"
