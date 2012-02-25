@@ -1,7 +1,6 @@
 ﻿Imports System.Security.Cryptography, System.Net
 
 Public Class FormMain
-
     Dim FirstChange As Boolean = True
     Private m_MouseIsDown As Boolean
     Friend WithEvents Import As New ImportClass
@@ -9,6 +8,7 @@ Public Class FormMain
     Friend WithEvents Options As New OptionsClass
     Friend WithEvents Itembuild As New ItembuildClass
     Private WithEvents WebClient1 As New WebClient
+    Dim pic31, pic32, pic33, pic34, pic35, pic36, pic37, pic38, pic39, pic40, pic41, pic42, pic43, pic44, pic45, pic46, pic47, pic48, pic49, pic50, pic51, pic52, pic53, pic54, pic55, pic56, pic57, pic58, pic59, pic60, pic61, pic62, pic63, pic64, pic65, pic66, pic67, pic68, pic69, pic70, pic71, pic72, pic73, pic74, pic75, pic76, pic77, pic78, pic79, pic80, pic81, pic82, pic83, pic84, pic85, pic86, pic87, pic88, pic89, pic90, pic91, pic92, pic93, pic94, pic95, pic96, pic97, pic98, pic99, pic100, pic101, pic102, pic103, pic104, pic105, pic106, pic107, pic108, pic109, pic110, pic111, pic112, pic113, pic114, pic115, pic116, pic117, pic118, pic119, pic120, pic121, pic122, pic123, pic124, pic125, pic126, pic127, pic128, pic129, pic130, pic131, pic132, pic133, pic134, pic135, pic136, pic137, pic138, pic139, pic140, pic141, pic142, pic143, pic144, pic145, pic146, pic147, pic148, pic149, pic150, pic151, pic152, pic153, pic154, pic155, pic156, pic157, pic158, pic159, pic160, pic161, pic162, pic163, pic164, pic165 As Icon
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         My.Settings.Save()
@@ -3905,413 +3905,413 @@ Public Class FormMain
                 Return pic_res
             End If
         Else
-                If doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blink_Dagger) Then
-                    pic_res = "Blink Dagger"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blades_of_Attack) Then
-                    pic_res = "Blades of Attack"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter) Then
-                    pic_res = "Aghanim's Scepter"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Animal_Courier) Then
-                    pic_res = "Animal Courier"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Arcane_Boots) Then
-                    pic_res = "Arcane Boots"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Armlet) Then
-                    pic_res = "Armlet"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Assault_Cuirass) Then
-                    pic_res = "Assault Cuirass"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Battle_Fury) Then
-                    pic_res = "Battle Fury"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Belt_of_Strength) Then
-                    pic_res = "Belt of Strength"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Black_King_Bar) Then
-                    pic_res = "Black King Bar"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_Mail) Then
-                    pic_res = "Blade Mail"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity) Then
-                    pic_res = "Blade of Alacrity"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bloodstone) Then
-                    pic_res = "Bloodstone"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin) Then
-                    pic_res = "Boots of Elvenskin"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Speed) Then
-                    pic_res = "Boots of Speed"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Travel) Then
-                    pic_res = "Boots of Travel"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bottle) Then
-                    pic_res = "Bottle"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bracer) Then
-                    pic_res = "Bracer"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Broadsword) Then
-                    pic_res = "Broadsword"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Buckler) Then
-                    pic_res = "Buckler"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Butterfly) Then
-                    pic_res = "Butterfly"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Chainmail) Then
-                    pic_res = "Chainmail"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Circlet) Then
-                    pic_res = "Circlet"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Clarity) Then
-                    pic_res = "Clarity"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Claymore) Then
-                    pic_res = "Claymore"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Cloak) Then
-                    pic_res = "Cloak"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Crystalys) Then
-                    pic_res = "Crystalys"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Daedalus) Then
-                    pic_res = "Daedalus"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon) Then
-                    pic_res = "Dagon 1"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon2) Then
-                    pic_res = "Dagon 2"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon3) Then
-                    pic_res = "Dagon 3"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon4) Then
-                    pic_res = "Dagon 4"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon5) Then
-                    pic_res = "Dagon 5"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Demon_Edge) Then
-                    pic_res = "Demon Edge"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Desolator) Then
-                    pic_res = "Desolator"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade) Then
-                    pic_res = "Diffusal Blade 1"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade2) Then
-                    pic_res = "Diffusal Blade 2"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Divine_Rapier) Then
-                    pic_res = "Divine Rapier"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
-                    pic_res = "Drum of Endurance"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dust_of_Appearance) Then
-                    pic_res = "Dust of Appearance"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eaglesong) Then
-                    pic_res = "Eaglesong"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Energy_Booster) Then
-                    pic_res = "Energy Booster"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
-                    pic_res = "Ethereal Blade"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity) Then
-                    pic_res = "Eul's Scepter of Divinity"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eye_of_Skadi) Then
-                    pic_res = "Eye of Skadi"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Flying_Courier) Then
-                    pic_res = "Flying Courier"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Force_Staff) Then
-                    pic_res = "Force Staff"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength) Then
-                    pic_res = "Gauntlets of Strength"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight) Then
-                    pic_res = "Gem of True Sight"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ghost_Scepter) Then
-                    pic_res = "Ghost Scepter"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gloves_of_Haste) Then
-                    pic_res = "Gloves of Haste"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hand_of_Midas) Then
-                    pic_res = "Hand of Midas"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Headdress) Then
-                    pic_res = "Headdress"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Healing_Salve) Then
-                    pic_res = "Healing Salve"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque) Then
-                    pic_res = "Heart of Tarrasque"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will) Then
-                    pic_res = "Helm of Iron Will"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator) Then
-                    pic_res = "Helm of the Dominator"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hood_of_Defiance) Then
-                    pic_res = "Hood of Defiance"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hyperstone) Then
-                    pic_res = "Hyperstone"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Iron_Branch) Then
-                    pic_res = "Iron Branch"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Javelin) Then
-                    pic_res = "Javelin"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Linken_s_Sphere) Then
-                    pic_res = "Linken's Sphere"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Maelstrom) Then
-                    pic_res = "Maelstrom"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Stick) Then
-                    pic_res = "Magic Stick"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Wand) Then
-                    pic_res = "Magic Wand"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Manta_Style) Then
-                    pic_res = "Manta Style"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence) Then
-                    pic_res = "Mantle of Intelligence"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mask_of_Madness) Then
-                    pic_res = "Mask of Madness"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
-                    pic_res = "Medallion of Courage"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mekansm) Then
-                    pic_res = "Mekansm"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mithril_Hammer) Then
-                    pic_res = "Mithril Hammer"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mjollnir) Then
-                    pic_res = "Mjollnir"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Monkey_King_Bar) Then
-                    pic_res = "Monkey King Bar"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Morbid_Mask) Then
-                    pic_res = "Morbid Mask"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mystic_Staff) Then
-                    pic_res = "Mystic Staff"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon) Then
-                    pic_res = "Necronomicon 1"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon2) Then
-                    pic_res = "Necronomicon 2"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon3) Then
-                    pic_res = "Necronomicon 3"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Null_Talisman) Then
-                    pic_res = "Null Talisman"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Oblivion_Staff) Then
-                    pic_res = "Oblivion Staff"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Observer_Ward) Then
-                    pic_res = "Observer Ward"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ogre_Club) Then
-                    pic_res = "Ogre Club"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
-                    pic_res = "Orb of Venom"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orchid_Malevolence) Then
-                    pic_res = "Orchid Malevolence"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Perseverance) Then
-                    pic_res = "Perseverance"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Phase_Boots) Then
-                    pic_res = "Phase Boots"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Pipe_of_Insight) Then
-                    pic_res = "Pipe of Insight"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Platemail) Then
-                    pic_res = "Platemail"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Point_Booster) Then
-                    pic_res = "Point Booster"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield) Then
-                    pic_res = "Poor Man's Shield"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Power_Treads) Then
-                    pic_res = "Power Treads"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quarterstaff) Then
-                    pic_res = "Quarterstaff"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quelling_Blade) Then
-                    pic_res = "Quelling Blade"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Radiance) Then
-                    pic_res = "Radiance"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Reaver) Then
-                    pic_res = "Reaver"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Refresher_Orb) Then
-                    pic_res = "Refresher Orb"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Basilius) Then
-                    pic_res = "Ring of Basilius"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Health) Then
-                    pic_res = "Ring of Health"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Protection) Then
-                    pic_res = "Ring of Protection"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Regen) Then
-                    pic_res = "Ring of Regen"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi) Then
-                    pic_res = "Robe of the Magi"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sacred_Relic) Then
-                    pic_res = "Sacred Relic"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sage_s_Mask) Then
-                    pic_res = "Sage's Mask"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange) Then
-                    pic_res = "Sange"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange_and_Yasha) Then
-                    pic_res = "Sange and Yasha"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Satanic) Then
-                    pic_res = "Satanic"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse) Then
-                    pic_res = "Scythe of Vyse"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sentry_Ward) Then
-                    pic_res = "Sentry Ward"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shadow_Blade) Then
-                    pic_res = "Shadow Blade"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shiva_s_Guard) Then
-                    pic_res = "Shiva's Guard"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Skull_Basher) Then
-                    pic_res = "Skull Basher"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Slippers_of_Agility) Then
-                    pic_res = "Slippers of Agility"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
-                    pic_res = "Smoke of Deceit"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Booster) Then
-                    pic_res = "Soul Booster"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Ring) Then
-                    pic_res = "Soul Ring"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry) Then
-                    pic_res = "Staff of Wizardry"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Stout_Shield) Then
-                    pic_res = "Stout Shield"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion) Then
-                    pic_res = "Talisman of Evasion"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tango) Then
-                    pic_res = "Tango"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll) Then
-                    pic_res = "Town Portal Scroll"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ultimate_Orb) Then
-                    pic_res = "Ultimate Orb"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
-                    pic_res = "Urn of Shadows"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vanguard) Then
-                    pic_res = "Vanguard"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
-                    pic_res = "Veil of Discord"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vitality_Booster) Then
-                    pic_res = "Vitality Booster"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering) Then
-                    pic_res = "Vladmir's Offering"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Void_Stone) Then
-                    pic_res = "Void Stone"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Wraith_Band) Then
-                    pic_res = "Wraith Band"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Yasha) Then
-                    pic_res = "Yasha"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
-                    pic_res = "Abyssal Blade"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
-                    pic_res = "Heaven's Halberd"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
-                    pic_res = "Ring of Aquila"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
-                    pic_res = "Rod of Atos"
-                    Return pic_res
-                ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tranquil_Boots) Then
-                    pic_res = "Tranquil Boots"
-                    Return pic_res
-                Else
-                    pic_res = "Error!"
-                    Return pic_res
-                End If
+            If doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blink_Dagger) Then
+                pic_res = "Blink Dagger"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blades_of_Attack) Then
+                pic_res = "Blades of Attack"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter) Then
+                pic_res = "Aghanim's Scepter"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Animal_Courier) Then
+                pic_res = "Animal Courier"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Arcane_Boots) Then
+                pic_res = "Arcane Boots"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Armlet) Then
+                pic_res = "Armlet"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Assault_Cuirass) Then
+                pic_res = "Assault Cuirass"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Battle_Fury) Then
+                pic_res = "Battle Fury"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Belt_of_Strength) Then
+                pic_res = "Belt of Strength"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Black_King_Bar) Then
+                pic_res = "Black King Bar"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_Mail) Then
+                pic_res = "Blade Mail"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity) Then
+                pic_res = "Blade of Alacrity"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bloodstone) Then
+                pic_res = "Bloodstone"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin) Then
+                pic_res = "Boots of Elvenskin"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Speed) Then
+                pic_res = "Boots of Speed"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Travel) Then
+                pic_res = "Boots of Travel"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bottle) Then
+                pic_res = "Bottle"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bracer) Then
+                pic_res = "Bracer"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Broadsword) Then
+                pic_res = "Broadsword"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Buckler) Then
+                pic_res = "Buckler"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Butterfly) Then
+                pic_res = "Butterfly"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Chainmail) Then
+                pic_res = "Chainmail"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Circlet) Then
+                pic_res = "Circlet"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Clarity) Then
+                pic_res = "Clarity"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Claymore) Then
+                pic_res = "Claymore"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Cloak) Then
+                pic_res = "Cloak"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Crystalys) Then
+                pic_res = "Crystalys"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Daedalus) Then
+                pic_res = "Daedalus"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon) Then
+                pic_res = "Dagon 1"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon2) Then
+                pic_res = "Dagon 2"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon3) Then
+                pic_res = "Dagon 3"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon4) Then
+                pic_res = "Dagon 4"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon5) Then
+                pic_res = "Dagon 5"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Demon_Edge) Then
+                pic_res = "Demon Edge"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Desolator) Then
+                pic_res = "Desolator"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade) Then
+                pic_res = "Diffusal Blade 1"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade2) Then
+                pic_res = "Diffusal Blade 2"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Divine_Rapier) Then
+                pic_res = "Divine Rapier"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
+                pic_res = "Drum of Endurance"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dust_of_Appearance) Then
+                pic_res = "Dust of Appearance"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eaglesong) Then
+                pic_res = "Eaglesong"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Energy_Booster) Then
+                pic_res = "Energy Booster"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
+                pic_res = "Ethereal Blade"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity) Then
+                pic_res = "Eul's Scepter of Divinity"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eye_of_Skadi) Then
+                pic_res = "Eye of Skadi"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Flying_Courier) Then
+                pic_res = "Flying Courier"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Force_Staff) Then
+                pic_res = "Force Staff"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength) Then
+                pic_res = "Gauntlets of Strength"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight) Then
+                pic_res = "Gem of True Sight"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ghost_Scepter) Then
+                pic_res = "Ghost Scepter"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gloves_of_Haste) Then
+                pic_res = "Gloves of Haste"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hand_of_Midas) Then
+                pic_res = "Hand of Midas"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Headdress) Then
+                pic_res = "Headdress"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Healing_Salve) Then
+                pic_res = "Healing Salve"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque) Then
+                pic_res = "Heart of Tarrasque"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will) Then
+                pic_res = "Helm of Iron Will"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator) Then
+                pic_res = "Helm of the Dominator"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hood_of_Defiance) Then
+                pic_res = "Hood of Defiance"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hyperstone) Then
+                pic_res = "Hyperstone"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Iron_Branch) Then
+                pic_res = "Iron Branch"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Javelin) Then
+                pic_res = "Javelin"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Linken_s_Sphere) Then
+                pic_res = "Linken's Sphere"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Maelstrom) Then
+                pic_res = "Maelstrom"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Stick) Then
+                pic_res = "Magic Stick"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Wand) Then
+                pic_res = "Magic Wand"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Manta_Style) Then
+                pic_res = "Manta Style"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence) Then
+                pic_res = "Mantle of Intelligence"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mask_of_Madness) Then
+                pic_res = "Mask of Madness"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
+                pic_res = "Medallion of Courage"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mekansm) Then
+                pic_res = "Mekansm"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mithril_Hammer) Then
+                pic_res = "Mithril Hammer"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mjollnir) Then
+                pic_res = "Mjollnir"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Monkey_King_Bar) Then
+                pic_res = "Monkey King Bar"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Morbid_Mask) Then
+                pic_res = "Morbid Mask"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mystic_Staff) Then
+                pic_res = "Mystic Staff"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon) Then
+                pic_res = "Necronomicon 1"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon2) Then
+                pic_res = "Necronomicon 2"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon3) Then
+                pic_res = "Necronomicon 3"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Null_Talisman) Then
+                pic_res = "Null Talisman"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Oblivion_Staff) Then
+                pic_res = "Oblivion Staff"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Observer_Ward) Then
+                pic_res = "Observer Ward"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ogre_Club) Then
+                pic_res = "Ogre Club"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
+                pic_res = "Orb of Venom"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orchid_Malevolence) Then
+                pic_res = "Orchid Malevolence"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Perseverance) Then
+                pic_res = "Perseverance"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Phase_Boots) Then
+                pic_res = "Phase Boots"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Pipe_of_Insight) Then
+                pic_res = "Pipe of Insight"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Platemail) Then
+                pic_res = "Platemail"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Point_Booster) Then
+                pic_res = "Point Booster"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield) Then
+                pic_res = "Poor Man's Shield"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Power_Treads) Then
+                pic_res = "Power Treads"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quarterstaff) Then
+                pic_res = "Quarterstaff"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quelling_Blade) Then
+                pic_res = "Quelling Blade"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Radiance) Then
+                pic_res = "Radiance"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Reaver) Then
+                pic_res = "Reaver"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Refresher_Orb) Then
+                pic_res = "Refresher Orb"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Basilius) Then
+                pic_res = "Ring of Basilius"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Health) Then
+                pic_res = "Ring of Health"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Protection) Then
+                pic_res = "Ring of Protection"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Regen) Then
+                pic_res = "Ring of Regen"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi) Then
+                pic_res = "Robe of the Magi"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sacred_Relic) Then
+                pic_res = "Sacred Relic"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sage_s_Mask) Then
+                pic_res = "Sage's Mask"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange) Then
+                pic_res = "Sange"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange_and_Yasha) Then
+                pic_res = "Sange and Yasha"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Satanic) Then
+                pic_res = "Satanic"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse) Then
+                pic_res = "Scythe of Vyse"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sentry_Ward) Then
+                pic_res = "Sentry Ward"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shadow_Blade) Then
+                pic_res = "Shadow Blade"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shiva_s_Guard) Then
+                pic_res = "Shiva's Guard"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Skull_Basher) Then
+                pic_res = "Skull Basher"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Slippers_of_Agility) Then
+                pic_res = "Slippers of Agility"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
+                pic_res = "Smoke of Deceit"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Booster) Then
+                pic_res = "Soul Booster"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Ring) Then
+                pic_res = "Soul Ring"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry) Then
+                pic_res = "Staff of Wizardry"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Stout_Shield) Then
+                pic_res = "Stout Shield"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion) Then
+                pic_res = "Talisman of Evasion"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tango) Then
+                pic_res = "Tango"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll) Then
+                pic_res = "Town Portal Scroll"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ultimate_Orb) Then
+                pic_res = "Ultimate Orb"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
+                pic_res = "Urn of Shadows"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vanguard) Then
+                pic_res = "Vanguard"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
+                pic_res = "Veil of Discord"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vitality_Booster) Then
+                pic_res = "Vitality Booster"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering) Then
+                pic_res = "Vladmir's Offering"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Void_Stone) Then
+                pic_res = "Void Stone"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Wraith_Band) Then
+                pic_res = "Wraith Band"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Yasha) Then
+                pic_res = "Yasha"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
+                pic_res = "Abyssal Blade"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
+                pic_res = "Heaven's Halberd"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
+                pic_res = "Ring of Aquila"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
+                pic_res = "Rod of Atos"
+                Return pic_res
+            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tranquil_Boots) Then
+                pic_res = "Tranquil Boots"
+                Return pic_res
+            Else
+                pic_res = "Error!"
+                Return pic_res
             End If
+        End If
     End Function
 
 
@@ -5024,6 +5024,9 @@ Public Class FormMain
         If Not PictureBox31.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox31.Image, 75)
+            pic31 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox31_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox31.MouseMove
@@ -5038,6 +5041,9 @@ Public Class FormMain
         If Not PictureBox32.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox32.Image, 75)
+            pic32 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox32_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox32.MouseMove
@@ -5052,6 +5058,9 @@ Public Class FormMain
         If Not PictureBox33.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox33.Image, 75)
+            pic33 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox33_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox33.MouseMove
@@ -5066,6 +5075,9 @@ Public Class FormMain
         If Not PictureBox34.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox34.Image, 75)
+            pic34 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox34_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox34.MouseMove
@@ -5080,6 +5092,9 @@ Public Class FormMain
         If Not PictureBox35.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox35.Image, 75)
+            pic35 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox35_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox35.MouseMove
@@ -5094,6 +5109,9 @@ Public Class FormMain
         If Not PictureBox36.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox36.Image, 75)
+            pic36 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox36_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox36.MouseMove
@@ -5108,6 +5126,9 @@ Public Class FormMain
         If Not PictureBox37.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox37.Image, 75)
+            pic37 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox37_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox37.MouseMove
@@ -5122,6 +5143,9 @@ Public Class FormMain
         If Not PictureBox38.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox38.Image, 75)
+            pic38 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox38_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox38.MouseMove
@@ -5136,6 +5160,9 @@ Public Class FormMain
         If Not PictureBox39.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox39.Image, 75)
+            pic39 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox39_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox39.MouseMove
@@ -5150,6 +5177,9 @@ Public Class FormMain
         If Not PictureBox40.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox40.Image, 75)
+            pic40 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox40_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox40.MouseMove
@@ -5164,6 +5194,9 @@ Public Class FormMain
         If Not PictureBox41.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox41.Image, 75)
+            pic41 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox41_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox41.MouseMove
@@ -5178,6 +5211,9 @@ Public Class FormMain
         If Not PictureBox42.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox42.Image, 75)
+            pic42 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox42_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox42.MouseMove
@@ -5192,6 +5228,9 @@ Public Class FormMain
         If Not PictureBox43.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox43.Image, 75)
+            pic43 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox43_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox43.MouseMove
@@ -5206,6 +5245,9 @@ Public Class FormMain
         If Not PictureBox44.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox44.Image, 75)
+            pic44 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox44_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox44.MouseMove
@@ -5220,6 +5262,9 @@ Public Class FormMain
         If Not PictureBox45.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox45.Image, 75)
+            pic45 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox45_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox45.MouseMove
@@ -5234,6 +5279,9 @@ Public Class FormMain
         If Not PictureBox46.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox46.Image, 75)
+            pic46 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox46_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox46.MouseMove
@@ -5248,6 +5296,9 @@ Public Class FormMain
         If Not PictureBox47.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox47.Image, 75)
+            pic47 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox47_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox47.MouseMove
@@ -5262,6 +5313,9 @@ Public Class FormMain
         If Not PictureBox48.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox48.Image, 75)
+            pic48 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox48_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox48.MouseMove
@@ -5276,6 +5330,9 @@ Public Class FormMain
         If Not PictureBox49.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox49.Image, 75)
+            pic49 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox49_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox49.MouseMove
@@ -5290,6 +5347,9 @@ Public Class FormMain
         If Not PictureBox50.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox50.Image, 75)
+            pic50 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox50_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox50.MouseMove
@@ -5304,6 +5364,9 @@ Public Class FormMain
         If Not PictureBox51.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox51.Image, 75)
+            pic51 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox51_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox51.MouseMove
@@ -5318,6 +5381,9 @@ Public Class FormMain
         If Not PictureBox52.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox52.Image, 75)
+            pic52 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox52_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox52.MouseMove
@@ -5332,6 +5398,9 @@ Public Class FormMain
         If Not PictureBox53.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox53.Image, 75)
+            pic53 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox53_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox53.MouseMove
@@ -5346,6 +5415,9 @@ Public Class FormMain
         If Not PictureBox54.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox54.Image, 75)
+            pic54 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox54_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox54.MouseMove
@@ -5360,6 +5432,9 @@ Public Class FormMain
         If Not PictureBox55.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox55.Image, 75)
+            pic55 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox55_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox55.MouseMove
@@ -5374,6 +5449,9 @@ Public Class FormMain
         If Not PictureBox56.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox56.Image, 75)
+            pic56 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox56_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox56.MouseMove
@@ -5388,6 +5466,9 @@ Public Class FormMain
         If Not PictureBox57.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox57.Image, 75)
+            pic57 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox57_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox57.MouseMove
@@ -5402,6 +5483,9 @@ Public Class FormMain
         If Not PictureBox58.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox58.Image, 75)
+            pic58 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox58_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox58.MouseMove
@@ -5416,6 +5500,9 @@ Public Class FormMain
         If Not PictureBox59.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox59.Image, 75)
+            pic59 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox59_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox59.MouseMove
@@ -5430,6 +5517,9 @@ Public Class FormMain
         If Not PictureBox60.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox60.Image, 75)
+            pic60 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox60_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox60.MouseMove
@@ -5444,6 +5534,9 @@ Public Class FormMain
         If Not PictureBox61.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox61.Image, 75)
+            pic61 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox61_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox61.MouseMove
@@ -5458,6 +5551,9 @@ Public Class FormMain
         If Not PictureBox62.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox62.Image, 75)
+            pic62 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox62_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox62.MouseMove
@@ -5472,6 +5568,9 @@ Public Class FormMain
         If Not PictureBox63.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox63.Image, 75)
+            pic63 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox63_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox63.MouseMove
@@ -5486,6 +5585,9 @@ Public Class FormMain
         If Not PictureBox64.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox64.Image, 75)
+            pic64 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox64_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox64.MouseMove
@@ -5500,6 +5602,9 @@ Public Class FormMain
         If Not PictureBox65.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox65.Image, 75)
+            pic65 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox65_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox65.MouseMove
@@ -5514,6 +5619,9 @@ Public Class FormMain
         If Not PictureBox66.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox66.Image, 75)
+            pic66 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox66_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox66.MouseMove
@@ -5528,6 +5636,9 @@ Public Class FormMain
         If Not PictureBox67.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox67.Image, 75)
+            pic67 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox67_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox67.MouseMove
@@ -5542,6 +5653,9 @@ Public Class FormMain
         If Not PictureBox68.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox68.Image, 75)
+            pic68 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox68_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox68.MouseMove
@@ -5556,6 +5670,9 @@ Public Class FormMain
         If Not PictureBox69.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox69.Image, 75)
+            pic69 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox69_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox69.MouseMove
@@ -5570,6 +5687,9 @@ Public Class FormMain
         If Not PictureBox70.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox70.Image, 75)
+            pic70 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox70_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox70.MouseMove
@@ -5584,6 +5704,9 @@ Public Class FormMain
         If Not PictureBox71.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox71.Image, 75)
+            pic71 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox71_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox71.MouseMove
@@ -5598,6 +5721,9 @@ Public Class FormMain
         If Not PictureBox72.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox72.Image, 75)
+            pic72 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox72_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox72.MouseMove
@@ -5612,6 +5738,9 @@ Public Class FormMain
         If Not PictureBox73.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox73.Image, 75)
+            pic73 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox73_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox73.MouseMove
@@ -5626,6 +5755,9 @@ Public Class FormMain
         If Not PictureBox74.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox74.Image, 75)
+            pic74 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox74_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox74.MouseMove
@@ -5640,6 +5772,9 @@ Public Class FormMain
         If Not PictureBox75.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox75.Image, 75)
+            pic75 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox75_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox75.MouseMove
@@ -5654,6 +5789,9 @@ Public Class FormMain
         If Not PictureBox76.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox76.Image, 75)
+            pic76 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox76_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox76.MouseMove
@@ -5668,6 +5806,9 @@ Public Class FormMain
         If Not PictureBox77.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox77.Image, 75)
+            pic77 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox77_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox77.MouseMove
@@ -5682,6 +5823,9 @@ Public Class FormMain
         If Not PictureBox78.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox78.Image, 75)
+            pic78 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox78_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox78.MouseMove
@@ -5696,6 +5840,9 @@ Public Class FormMain
         If Not PictureBox79.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox79.Image, 75)
+            pic79 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox79_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox79.MouseMove
@@ -5710,6 +5857,9 @@ Public Class FormMain
         If Not PictureBox80.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox80.Image, 75)
+            pic80 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox80_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox80.MouseMove
@@ -5724,6 +5874,9 @@ Public Class FormMain
         If Not PictureBox81.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox81.Image, 75)
+            pic81 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox81_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox81.MouseMove
@@ -5738,6 +5891,9 @@ Public Class FormMain
         If Not PictureBox82.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox82.Image, 75)
+            pic82 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox82_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox82.MouseMove
@@ -5752,6 +5908,9 @@ Public Class FormMain
         If Not PictureBox83.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox83.Image, 75)
+            pic83 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox83_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox83.MouseMove
@@ -5766,6 +5925,9 @@ Public Class FormMain
         If Not PictureBox84.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox84.Image, 75)
+            pic84 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox84_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox84.MouseMove
@@ -5780,6 +5942,9 @@ Public Class FormMain
         If Not PictureBox85.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox85.Image, 75)
+            pic85 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox85_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox85.MouseMove
@@ -5794,6 +5959,9 @@ Public Class FormMain
         If Not PictureBox86.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox86.Image, 75)
+            pic86 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox86_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox86.MouseMove
@@ -5808,6 +5976,9 @@ Public Class FormMain
         If Not PictureBox87.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox87.Image, 75)
+            pic87 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox87_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox87.MouseMove
@@ -5822,6 +5993,9 @@ Public Class FormMain
         If Not PictureBox88.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox88.Image, 75)
+            pic88 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox88_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox88.MouseMove
@@ -5836,6 +6010,9 @@ Public Class FormMain
         If Not PictureBox89.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox89.Image, 75)
+            pic89 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox89_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox89.MouseMove
@@ -5850,6 +6027,9 @@ Public Class FormMain
         If Not PictureBox90.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox90.Image, 75)
+            pic90 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox90_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox90.MouseMove
@@ -5864,6 +6044,9 @@ Public Class FormMain
         If Not PictureBox91.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox91.Image, 75)
+            pic91 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox91_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox91.MouseMove
@@ -5878,6 +6061,9 @@ Public Class FormMain
         If Not PictureBox92.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox92.Image, 75)
+            pic92 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox92_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox92.MouseMove
@@ -5892,6 +6078,9 @@ Public Class FormMain
         If Not PictureBox93.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox93.Image, 75)
+            pic93 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox93_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox93.MouseMove
@@ -5906,6 +6095,9 @@ Public Class FormMain
         If Not PictureBox94.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox94.Image, 75)
+            pic94 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox94_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox94.MouseMove
@@ -5920,6 +6112,9 @@ Public Class FormMain
         If Not PictureBox95.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox95.Image, 75)
+            pic95 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox95_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox95.MouseMove
@@ -5934,6 +6129,9 @@ Public Class FormMain
         If Not PictureBox96.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox96.Image, 75)
+            pic96 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox96_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox96.MouseMove
@@ -5948,6 +6146,9 @@ Public Class FormMain
         If Not PictureBox97.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox97.Image, 75)
+            pic97 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox97_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox97.MouseMove
@@ -5962,6 +6163,9 @@ Public Class FormMain
         If Not PictureBox98.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox98.Image, 75)
+            pic98 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox98_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox98.MouseMove
@@ -5976,6 +6180,9 @@ Public Class FormMain
         If Not PictureBox99.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox99.Image, 75)
+            pic99 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox99_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox99.MouseMove
@@ -5990,6 +6197,9 @@ Public Class FormMain
         If Not PictureBox100.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox100.Image, 75)
+            pic100 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox100_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox100.MouseMove
@@ -6004,6 +6214,9 @@ Public Class FormMain
         If Not PictureBox101.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox101.Image, 75)
+            pic101 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox101_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox101.MouseMove
@@ -6018,6 +6231,9 @@ Public Class FormMain
         If Not PictureBox102.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox102.Image, 75)
+            pic102 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox102_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox102.MouseMove
@@ -6032,6 +6248,9 @@ Public Class FormMain
         If Not PictureBox103.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox103.Image, 75)
+            pic103 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox103_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox103.MouseMove
@@ -6046,6 +6265,9 @@ Public Class FormMain
         If Not PictureBox104.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox104.Image, 75)
+            pic104 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox104_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox104.MouseMove
@@ -6060,6 +6282,9 @@ Public Class FormMain
         If Not PictureBox105.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox105.Image, 75)
+            pic105 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox105_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox105.MouseMove
@@ -6074,6 +6299,9 @@ Public Class FormMain
         If Not PictureBox106.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox106.Image, 75)
+            pic106 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox106_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox106.MouseMove
@@ -6088,6 +6316,9 @@ Public Class FormMain
         If Not PictureBox107.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox107.Image, 75)
+            pic107 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox107_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox107.MouseMove
@@ -6102,6 +6333,9 @@ Public Class FormMain
         If Not PictureBox108.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox108.Image, 75)
+            pic108 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox108_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox108.MouseMove
@@ -6116,6 +6350,9 @@ Public Class FormMain
         If Not PictureBox109.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox109.Image, 75)
+            pic109 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox109_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox109.MouseMove
@@ -6130,6 +6367,9 @@ Public Class FormMain
         If Not PictureBox110.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox110.Image, 75)
+            pic110 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox110_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox110.MouseMove
@@ -6144,6 +6384,9 @@ Public Class FormMain
         If Not PictureBox111.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox111.Image, 75)
+            pic111 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox111_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox111.MouseMove
@@ -6158,6 +6401,9 @@ Public Class FormMain
         If Not PictureBox112.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox112.Image, 75)
+            pic112 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox112_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox112.MouseMove
@@ -6172,6 +6418,9 @@ Public Class FormMain
         If Not PictureBox113.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox113.Image, 75)
+            pic113 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox113_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox113.MouseMove
@@ -6186,6 +6435,9 @@ Public Class FormMain
         If Not PictureBox114.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox114.Image, 75)
+            pic114 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox114_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox114.MouseMove
@@ -6200,6 +6452,9 @@ Public Class FormMain
         If Not PictureBox115.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox115.Image, 75)
+            pic115 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox115_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox115.MouseMove
@@ -6214,6 +6469,9 @@ Public Class FormMain
         If Not PictureBox116.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox116.Image, 75)
+            pic116 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox116_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox116.MouseMove
@@ -6228,6 +6486,9 @@ Public Class FormMain
         If Not PictureBox117.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox117.Image, 75)
+            pic117 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox117_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox117.MouseMove
@@ -6242,6 +6503,9 @@ Public Class FormMain
         If Not PictureBox118.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox118.Image, 75)
+            pic118 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox118_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox118.MouseMove
@@ -6256,6 +6520,9 @@ Public Class FormMain
         If Not PictureBox119.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox119.Image, 75)
+            pic119 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox119_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox119.MouseMove
@@ -6270,6 +6537,9 @@ Public Class FormMain
         If Not PictureBox120.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox120.Image, 75)
+            pic120 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox120_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox120.MouseMove
@@ -6284,6 +6554,9 @@ Public Class FormMain
         If Not PictureBox121.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox121.Image, 75)
+            pic121 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox121_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox121.MouseMove
@@ -6298,6 +6571,9 @@ Public Class FormMain
         If Not PictureBox122.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox122.Image, 75)
+            pic122 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox122_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox122.MouseMove
@@ -6312,6 +6588,9 @@ Public Class FormMain
         If Not PictureBox123.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox123.Image, 75)
+            pic123 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox123_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox123.MouseMove
@@ -6326,6 +6605,9 @@ Public Class FormMain
         If Not PictureBox124.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox124.Image, 75)
+            pic124 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox124_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox124.MouseMove
@@ -6340,6 +6622,9 @@ Public Class FormMain
         If Not PictureBox125.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox125.Image, 75)
+            pic125 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox125_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox125.MouseMove
@@ -6354,6 +6639,9 @@ Public Class FormMain
         If Not PictureBox126.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox126.Image, 75)
+            pic126 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox126_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox126.MouseMove
@@ -6368,6 +6656,9 @@ Public Class FormMain
         If Not PictureBox127.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox127.Image, 75)
+            pic127 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox127_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox127.MouseMove
@@ -6382,6 +6673,9 @@ Public Class FormMain
         If Not PictureBox128.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox128.Image, 75)
+            pic128 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox128_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox128.MouseMove
@@ -6396,6 +6690,9 @@ Public Class FormMain
         If Not PictureBox129.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox129.Image, 75)
+            pic129 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox129_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox129.MouseMove
@@ -6410,6 +6707,9 @@ Public Class FormMain
         If Not PictureBox130.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox130.Image, 75)
+            pic130 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox130_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox130.MouseMove
@@ -6424,6 +6724,9 @@ Public Class FormMain
         If Not PictureBox131.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox131.Image, 75)
+            pic131 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox131_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox131.MouseMove
@@ -6438,6 +6741,9 @@ Public Class FormMain
         If Not PictureBox132.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox132.Image, 75)
+            pic132 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox132_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox132.MouseMove
@@ -6452,6 +6758,9 @@ Public Class FormMain
         If Not PictureBox133.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox133.Image, 75)
+            pic133 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox133_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox133.MouseMove
@@ -6466,6 +6775,9 @@ Public Class FormMain
         If Not PictureBox134.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox134.Image, 75)
+            pic134 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox134_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox134.MouseMove
@@ -6480,6 +6792,9 @@ Public Class FormMain
         If Not PictureBox135.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox135.Image, 75)
+            pic135 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox135_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox135.MouseMove
@@ -6494,6 +6809,9 @@ Public Class FormMain
         If Not PictureBox136.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox136.Image, 75)
+            pic136 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox136_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox136.MouseMove
@@ -6508,6 +6826,9 @@ Public Class FormMain
         If Not PictureBox137.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox137.Image, 75)
+            pic137 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox137_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox137.MouseMove
@@ -6522,6 +6843,9 @@ Public Class FormMain
         If Not PictureBox138.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox138.Image, 75)
+            pic138 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox138_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox138.MouseMove
@@ -6536,6 +6860,9 @@ Public Class FormMain
         If Not PictureBox139.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox139.Image, 75)
+            pic139 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox139_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox139.MouseMove
@@ -6550,6 +6877,9 @@ Public Class FormMain
         If Not PictureBox140.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox140.Image, 75)
+            pic140 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox140_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox140.MouseMove
@@ -6564,6 +6894,9 @@ Public Class FormMain
         If Not PictureBox141.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox141.Image, 75)
+            pic141 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox141_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox141.MouseMove
@@ -6578,6 +6911,9 @@ Public Class FormMain
         If Not PictureBox142.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox142.Image, 75)
+            pic142 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox142_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox142.MouseMove
@@ -6592,6 +6928,9 @@ Public Class FormMain
         If Not PictureBox143.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox143.Image, 75)
+            pic143 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox143_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox143.MouseMove
@@ -6606,6 +6945,9 @@ Public Class FormMain
         If Not PictureBox144.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox144.Image, 75)
+            pic144 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox144_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox144.MouseMove
@@ -6620,6 +6962,9 @@ Public Class FormMain
         If Not PictureBox145.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox145.Image, 75)
+            pic145 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox145_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox145.MouseMove
@@ -6634,6 +6979,9 @@ Public Class FormMain
         If Not PictureBox146.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox146.Image, 75)
+            pic146 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox146_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox146.MouseMove
@@ -6648,6 +6996,9 @@ Public Class FormMain
         If Not PictureBox147.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox147.Image, 75)
+            pic147 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox147_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox147.MouseMove
@@ -6662,6 +7013,9 @@ Public Class FormMain
         If Not PictureBox148.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox148.Image, 75)
+            pic148 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox148_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox148.MouseMove
@@ -6676,6 +7030,9 @@ Public Class FormMain
         If Not PictureBox149.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox149.Image, 75)
+            pic149 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox149_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox149.MouseMove
@@ -6690,6 +7047,9 @@ Public Class FormMain
         If Not PictureBox150.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox150.Image, 75)
+            pic150 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox150_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox150.MouseMove
@@ -6704,6 +7064,9 @@ Public Class FormMain
         If Not PictureBox151.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox151.Image, 75)
+            pic151 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox151_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox151.MouseMove
@@ -6718,6 +7081,9 @@ Public Class FormMain
         If Not PictureBox152.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox152.Image, 75)
+            pic152 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox152_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox152.MouseMove
@@ -6732,6 +7098,9 @@ Public Class FormMain
         If Not PictureBox153.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox153.Image, 75)
+            pic153 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox153_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox153.MouseMove
@@ -6746,6 +7115,9 @@ Public Class FormMain
         If Not PictureBox154.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox154.Image, 75)
+            pic154 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox154_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox154.MouseMove
@@ -6760,6 +7132,9 @@ Public Class FormMain
         If Not PictureBox155.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox155.Image, 75)
+            pic155 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox155_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox155.MouseMove
@@ -6774,6 +7149,9 @@ Public Class FormMain
         If Not PictureBox156.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox156.Image, 75)
+            pic156 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox156_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox156.MouseMove
@@ -6788,6 +7166,9 @@ Public Class FormMain
         If Not PictureBox157.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox157.Image, 75)
+            pic157 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox157_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox157.MouseMove
@@ -6802,6 +7183,9 @@ Public Class FormMain
         If Not PictureBox158.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox158.Image, 75)
+            pic158 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox158_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox158.MouseMove
@@ -6816,6 +7200,9 @@ Public Class FormMain
         If Not PictureBox159.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox159.Image, 75)
+            pic159 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox159_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox159.MouseMove
@@ -6830,6 +7217,9 @@ Public Class FormMain
         If Not PictureBox160.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox160.Image, 75)
+            pic160 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox160_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox160.MouseMove
@@ -6844,6 +7234,9 @@ Public Class FormMain
         If Not PictureBox161.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox161.Image, 75)
+            pic161 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox161_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox161.MouseMove
@@ -6858,6 +7251,9 @@ Public Class FormMain
         If Not PictureBox162.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox162.Image, 75)
+            pic162 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox162_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox162.MouseMove
@@ -6872,6 +7268,9 @@ Public Class FormMain
         If Not PictureBox163.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox163.Image, 75)
+            pic163 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox163_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox163.MouseMove
@@ -6886,6 +7285,9 @@ Public Class FormMain
         If Not PictureBox164.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox164.Image, 75)
+            pic164 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox164_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox164.MouseMove
@@ -6900,6 +7302,9 @@ Public Class FormMain
         If Not PictureBox165.Image Is Nothing Then
             ' Set a flag to show that the mouse is down. 
             m_MouseIsDown = True
+            Dim blubb As Bitmap = SetImageAlpha(PictureBox165.Image, 75)
+            pic165 = Icon.FromHandle(blubb.GetHicon())
+
         End If
     End Sub
     Private Sub PictureBox165_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox165.MouseMove
@@ -7181,6 +7586,1256 @@ Public Class FormMain
         If e.Button = MouseButtons.Right Then
             Item39.Image = My.Resources.none
             ToolTip1.SetToolTip(Item39, "none")
+        End If
+    End Sub
+
+    Private Function Bitmap2Icon(ByVal Picture) As Icon
+        Dim bitmap As Bitmap = Picture
+        Dim ico As Icon = Icon.FromHandle(bitmap.GetHicon())
+
+        Return ico
+    End Function
+
+    'Source: http://dotnet-snippets.de/dns/bild-transparent-machen-mit-colormatrix-SID168.aspx
+    Public Function SetImageAlpha(ByVal Image As Image, ByVal Alpha As Single) As Image
+        Dim ImgAttr As New Imaging.ImageAttributes()
+
+        'Standard-ColorMatrix für Transparenz
+        Dim ColorMatrix As New Imaging.ColorMatrix(New Single()() {New Single() {1, 0, 0, 0, 0}, New Single() {0, 1, 0, 0, 0}, New Single() {0, 0, 1, 0, 0}, New Single() {0, 0, 0, CSng(Alpha / 100), 0}, New Single() {0, 0, 0, 0, 1}})
+
+        'ColorMatrix an ImageAttribute-Objekt übergeben
+        ImgAttr.SetColorMatrix(ColorMatrix)
+
+        'Neue 32bit Bitmap erstellen
+        Dim NewBitmap = New Bitmap(Image.Width, Image.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb)
+
+        'Resolution (DPI) vom Quellbitmap auf Zielbitmap übertragen
+        NewBitmap.SetResolution(Image.HorizontalResolution, Image.VerticalResolution)
+
+        'Graphicsobjekt von NewBitmap erstellen
+        Dim NewGraphics As Graphics = Graphics.FromImage(NewBitmap)
+
+        'NewBitmap auf NewGraphics zeichnen
+        NewGraphics.DrawImage(Image, New Rectangle(0, 0, NewBitmap.Width, NewBitmap.Height), 0, 0, Image.Width, Image.Height, GraphicsUnit.Pixel, ImgAttr)
+
+        'Ressource freigeben
+        NewGraphics.Dispose()
+        ImgAttr.Dispose()
+        Return NewBitmap
+    End Function
+
+    Private Sub PictureBox31_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox31.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic31.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox32_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox32.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic32.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox33_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox33.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic33.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox34_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox34.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic34.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox35_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox35.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic35.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox36_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox36.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic36.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox37_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox37.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic37.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox38_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox38.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic38.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox39_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox39.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic39.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox40_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox40.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic40.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox41_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox41.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic41.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox42_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox42.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic42.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox43_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox43.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic43.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox44_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox44.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic44.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox45_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox45.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic45.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox46_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox46.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic46.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox47_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox47.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic47.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox48_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox48.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic48.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox49_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox49.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic49.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox50_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox50.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic50.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox51_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox51.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic51.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox52_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox52.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic52.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox53_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox53.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic53.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox54_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox54.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic54.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox55_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox55.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic55.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox56_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox56.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic56.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox57_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox57.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic57.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox58_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox58.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic58.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox59_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox59.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic59.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox60_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox60.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic60.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox61_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox61.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic61.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox62_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox62.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic62.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox63_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox63.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic63.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox64_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox64.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic64.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox65_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox65.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic65.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox66_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox66.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic66.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox67_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox67.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic67.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox68_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox68.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic68.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox69_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox69.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic69.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox70_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox70.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic70.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox71_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox71.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic71.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox72_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox72.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic72.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox73_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox73.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic73.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox74_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox74.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic74.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox75_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox75.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic75.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox76_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox76.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic76.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox77_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox77.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic77.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox78_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox78.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic78.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox79_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox79.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic79.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox80_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox80.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic80.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox81_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox81.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic81.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox82_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox82.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic82.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox83_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox83.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic83.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox84_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox84.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic84.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox85_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox85.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic85.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox86_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox86.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic86.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox87_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox87.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic87.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox88_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox88.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic88.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox89_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox89.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic89.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox90_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox90.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic90.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox91_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox91.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic91.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox92_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox92.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic92.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox93_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox93.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic93.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox94_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox94.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic94.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox95_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox95.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic95.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox96_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox96.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic96.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox97_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox97.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic97.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox98_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox98.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic98.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox99_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox99.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic99.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox100_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox100.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic100.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox101_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox101.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic101.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox102_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox102.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic102.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox103_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox103.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic103.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox104_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox104.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic104.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox105_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox105.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic105.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox106_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox106.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic106.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox107_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox107.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic107.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox108_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox108.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic108.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox109_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox109.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic109.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox110_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox110.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic110.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox111_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox111.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic111.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox112_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox112.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic112.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox113_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox113.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic113.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox114_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox114.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic114.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox115_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox115.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic115.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox116_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox116.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic116.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox117_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox117.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic117.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox118_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox118.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic118.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox119_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox119.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic119.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox120_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox120.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic120.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox121_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox121.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic121.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox122_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox122.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic122.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox123_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox123.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic123.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox124_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox124.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic124.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox125_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox125.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic125.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox126_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox126.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic126.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox127_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox127.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic127.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox128_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox128.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic128.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox129_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox129.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic129.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox130_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox130.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic130.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox131_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox131.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic131.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox132_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox132.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic132.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox133_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox133.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic133.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox134_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox134.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic134.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox135_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox135.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic135.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox136_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox136.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic136.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox137_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox137.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic137.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox138_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox138.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic138.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox139_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox139.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic139.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox140_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox140.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic140.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox141_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox141.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic141.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox142_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox142.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic142.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox143_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox143.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic143.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox144_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox144.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic144.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox145_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox145.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic145.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox146_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox146.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic146.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox147_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox147.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic147.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox148_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox148.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic148.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox149_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox149.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic149.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox150_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox150.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic150.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox151_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox151.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic151.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox152_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox152.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic152.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox153_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox153.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic153.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox154_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox154.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic154.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox155_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox155.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic155.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox156_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox156.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic156.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox157_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox157.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic157.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox158_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox158.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic158.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox159_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox159.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic159.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox160_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox160.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic160.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox161_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox161.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic161.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox162_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox162.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic162.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox163_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox163.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic163.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox164_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox164.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic164.Handle)
+        End If
+    End Sub
+
+    Private Sub PictureBox165_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox165.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(pic165.Handle)
         End If
     End Sub
 

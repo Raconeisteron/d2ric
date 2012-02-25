@@ -45,6 +45,7 @@
             My.Settings.path = path
             My.Settings.Save()
             Itembuild.ClearSingle()
+            FormMain.ListBox1.ClearSelected()
         Else
             ' existiert nicht
             MessageBox.Show("Client not found.")
