@@ -70,7 +70,10 @@ Public Class FormMain
     End Sub
 
     Public Sub Check4Update()
-        Dim pgversion As String = Application.ProductVersion.Substring(0, Application.ProductVersion.Length - 2)
+        Dim pgversion As String = Application.ProductVersion
+        If pgversion.Substring(pgversion.Length - 1) = "0" Then
+            pgversion = pgversion.Substring(0, pgversion.Length - 2)
+        End If
         Dim aktversion As String = WebClient1.DownloadString("http://holyzone.bplaced.net/maddy/d2ric_version.txt")
 
         If pgversion < aktversion Then 'Wenn die Programmversion kleiner als die Aktuelle Version ist:

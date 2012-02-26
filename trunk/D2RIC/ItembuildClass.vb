@@ -363,7 +363,7 @@
     End Sub
 
     Public Sub SaveChanges()
-        If Not IO.File.Exists(My.Settings.path + "Backup\" + Selected_Hero + ".txt") Then
+        If Not IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
             If Not IO.Directory.Exists(My.Settings.path & "\Backup") Then
                 ' Nein! Jetzt erstellen...
                 Try
