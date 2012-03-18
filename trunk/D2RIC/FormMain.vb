@@ -8,7 +8,9 @@ Public Class FormMain
     Friend WithEvents Options As New OptionsClass
     Friend WithEvents Itembuild As New ItembuildClass
     Private WithEvents WebClient1 As New WebClient
-    Dim pic31, pic32, pic33, pic34, pic35, pic36, pic37, pic38, pic39, pic40, pic41, pic42, pic43, pic44, pic45, pic46, pic47, pic48, pic49, pic50, pic51, pic52, pic53, pic54, pic55, pic56, pic57, pic58, pic59, pic60, pic61, pic62, pic63, pic64, pic65, pic66, pic67, pic68, pic69, pic70, pic71, pic72, pic73, pic74, pic75, pic76, pic77, pic78, pic79, pic80, pic81, pic82, pic83, pic84, pic85, pic86, pic87, pic88, pic89, pic90, pic91, pic92, pic93, pic94, pic95, pic96, pic97, pic98, pic99, pic100, pic101, pic102, pic103, pic104, pic105, pic106, pic107, pic108, pic109, pic110, pic111, pic112, pic113, pic114, pic115, pic116, pic117, pic118, pic119, pic120, pic121, pic122, pic123, pic124, pic125, pic126, pic127, pic128, pic129, pic130, pic131, pic132, pic133, pic134, pic135, pic136, pic137, pic138, pic139, pic140, pic141, pic142, pic143, pic144, pic145, pic146, pic147, pic148, pic149, pic150, pic151, pic152, pic153, pic154, pic155, pic156, pic157, pic158, pic159, pic160, pic161, pic162, pic163, pic164, pic165 As Icon
+    Dim cursor_image As Icon
+    Dim Selected_Item As Bitmap
+    Dim IntPrice As Integer
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         My.Settings.Save()
@@ -17,6 +19,7 @@ Public Class FormMain
 
     Private Sub FormMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Itembuild.Initialize()
+        Itembuild.InitializeListbox()
 
         If Not My.Settings.autoupdate Then
             CheckBox1.Checked = False
@@ -162,12 +165,10 @@ Public Class FormMain
         End If
     End Sub
 
-    'CHANGE PICTUREBOX aka ITEM POSITION/ORDER
-    Private Sub ComboBox5_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox5.SelectedIndexChanged
-        Itembuild.ChangeItemPosition()
-    End Sub
-
     Private Sub ComboBoxItemIcons_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxItemIcons.SelectedIndexChanged
+        If ComboBoxItemIcons.Text <> "DotA 2" Then
+            ComboBoxItemIcons.Text = "Dota 2"
+        End If
         Options.ChangeItemIcons()
     End Sub
 
@@ -180,6 +181,107 @@ Public Class FormMain
 
     Private Sub ButtonDefaultItembuild_Click(sender As System.Object, e As System.EventArgs) Handles ButtonDefaultItembuild.Click
         Itembuild.LoadDefault()
+    End Sub
+
+    'Source: http://dotnet-snippets.de/dns/bild-transparent-machen-mit-colormatrix-SID168.aspx
+    Public Function SetImageAlpha(ByVal Image As Image, ByVal Alpha As Single) As Image
+        Dim ImgAttr As New Imaging.ImageAttributes()
+
+        'Standard-ColorMatrix für Transparenz
+        Dim ColorMatrix As New Imaging.ColorMatrix(New Single()() {New Single() {1, 0, 0, 0, 0}, New Single() {0, 1, 0, 0, 0}, New Single() {0, 0, 1, 0, 0}, New Single() {0, 0, 0, CSng(Alpha / 100), 0}, New Single() {0, 0, 0, 0, 1}})
+
+        'ColorMatrix an ImageAttribute-Objekt übergeben
+        ImgAttr.SetColorMatrix(ColorMatrix)
+
+        'Neue 32bit Bitmap erstellen
+        Dim NewBitmap = New Bitmap(Image.Width, Image.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb)
+
+        'Resolution (DPI) vom Quellbitmap auf Zielbitmap übertragen
+        NewBitmap.SetResolution(Image.HorizontalResolution, Image.VerticalResolution)
+
+        'Graphicsobjekt von NewBitmap erstellen
+        Dim NewGraphics As Graphics = Graphics.FromImage(NewBitmap)
+
+        'NewBitmap auf NewGraphics zeichnen
+        NewGraphics.DrawImage(Image, New Rectangle(0, 0, NewBitmap.Width, NewBitmap.Height), 0, 0, Image.Width, Image.Height, GraphicsUnit.Pixel, ImgAttr)
+
+        'Ressource freigeben
+        NewGraphics.Dispose()
+        ImgAttr.Dispose()
+        Return NewBitmap
+    End Function
+
+    Private Function ListView_GetItemIndex(ByRef lv As ListView) As Integer
+        If lv.SelectedItems.Count > 0 Then
+            Dim lvi As ListViewItem = lv.SelectedItems.Item(0)
+            If lvi.Selected Then
+                Return lvi.Index
+            Else
+                Return -1
+            End If
+        End If
+        Return -1
+    End Function
+
+    Private Sub ListView1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView1.MouseDown
+        If Not Selected_Item Is Nothing Then
+            ' Set a flag to show that the mouse is down. 
+            m_MouseIsDown = True
+        End If
+    End Sub
+    Private Sub ListView1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView1.MouseMove
+        If m_MouseIsDown Then
+            ' Initiate dragging and allow either copy. 
+            ListView1.DoDragDrop(Selected_Item, DragDropEffects.Copy)
+        End If
+        m_MouseIsDown = False
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListView1.SelectedIndexChanged
+        Dim Index As Integer = ListView_GetItemIndex(ListView1)
+        Dim blubb As Bitmap
+        If Index > -1 Then
+            Selected_Item = ImageList1.Images(ListView1.Items(Index).ImageIndex)
+            blubb = SetImageAlpha(Selected_Item, 75)
+            cursor_image = Icon.FromHandle(blubb.GetHicon())
+        End If
+    End Sub
+
+    Private Sub ListView1_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles ListView1.GiveFeedback
+        e.UseDefaultCursors = False
+        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
+            Cursor.Current = Cursors.Hand
+        Else
+            Cursor.Current = New Cursor(cursor_image.Handle)
+        End If
+    End Sub
+
+    Private Sub TextBoxItemsearch_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBoxItemsearch.TextChanged
+        Timer1.Stop()
+        Timer1.Start()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Timer2.Stop()
+        Timer2.Start()
+    End Sub
+
+    Private Sub Searchitem(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick, Timer2.Tick
+        Timer1.Stop()
+        Timer2.Stop()
+        Itembuild.InitializeListbox()
+        For Each item As ListViewItem In ListView1.Items
+            If Not item.Text.ToLower.Contains(TextBoxItemsearch.Text.ToLower) Then
+                item.Remove()
+            End If
+        Next
+        If ComboBox1.Text <> "" Then
+            For Each item As ListViewItem In ListView1.Items
+                If Not item.ToolTipText.ToLower.Contains(ComboBox1.Text.ToLower) Then
+                    item.Remove()
+                End If
+            Next
+        End If
     End Sub
 
     ''' method for comparing 2 images to see if they are the same. First
@@ -638,406 +740,406 @@ Public Class FormMain
     Public Function CheckItem(ByVal item_name As System.Drawing.Image) As String
         Dim new_item_name As String
         If ComboBoxItemIcons.Text = "DotA 1" Then
-            If doImagesMatch(item_name, D2RIC.My.Resources.Resources.Kelensdagger) Then
+            If doImagesMatch(item_name, ImageList1.Images(146)) Then
                 new_item_name = """" & "item_blink" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bladesofattack) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(145)) Then
                 new_item_name = """" & "item_blades_of_attack" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Aghanimsscepter) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(135)) Then
                 new_item_name = """" & "item_ultimate_scepter" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Animalcourier) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(136)) Then
                 new_item_name = """" & "item_courier" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.ArcaneBoots) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(137)) Then
                 new_item_name = """" & "item_arcane_boots" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Armletofmordiggian) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(138)) Then
                 new_item_name = """" & "item_armlet" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Assaultcuirass) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(139)) Then
                 new_item_name = """" & "item_assault" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Battlefury) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(140)) Then
                 new_item_name = """" & "item_bfury" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Blackkingbar) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(141)) Then
                 new_item_name = """" & "item_black_king_bar" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Beltofgiantstrength) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(142)) Then
                 new_item_name = """" & "item_belt_of_strength" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Blademail) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(143)) Then
                 new_item_name = """" & "item_blade_mail" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bladesofalacrity) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(144)) Then
                 new_item_name = """" & "item_blade_of_alacrity" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bloodstone) Then
-                new_item_name = """" & "item_bloodstone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bootsofelvenskin) Then
-                new_item_name = """" & "item_boots_of_elves" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bootsofspeed) Then
-                new_item_name = """" & "item_boots" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bootsoftravel) Then
-                new_item_name = """" & "item_travel_boots" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bottle) Then
-                new_item_name = """" & "item_bottle" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Bracer) Then
-                new_item_name = """" & "item_bracer" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Broadsword) Then
-                new_item_name = """" & "item_broadsword" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Nathrezimbuckler) Then
-                new_item_name = """" & "item_buckler" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Butterfly) Then
-                new_item_name = """" & "item_butterfly" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Chainmail) Then
-                new_item_name = """" & "item_chainmail" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Circletofnobility) Then
-                new_item_name = """" & "item_circlet" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Claritypotion) Then
-                new_item_name = """" & "item_clarity" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Claymore) Then
-                new_item_name = """" & "item_claymore" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Planeswalkerscloak) Then
-                new_item_name = """" & "item_cloak" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Crystalys) Then
-                new_item_name = """" & "item_lesser_crit" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Burizadokyanon) Then
-                new_item_name = """" & "item_greater_crit" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Dagon) Then
-                new_item_name = """" & "item_dagon" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Dagon2) Then
-                new_item_name = """" & "item_dagon_2" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Dagon3) Then
-                new_item_name = """" & "item_dagon_3" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Dagon4) Then
-                new_item_name = """" & "item_dagon_4" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Dagon5) Then
-                new_item_name = """" & "item_dagon_5" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Demonedge) Then
-                new_item_name = """" & "item_demon_edge" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Stygiandesolator) Then
-                new_item_name = """" & "item_desolator" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Diffusalblade) Then
-                new_item_name = """" & "item_diffusal_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Diffusalblade2) Then
-                new_item_name = """" & "item_diffusal_blade_2" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Divinerapier) Then
-                new_item_name = """" & "item_rapier" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ancientjanggoofendurance) Then
-                new_item_name = """" & "item_ancient_janggo" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Dustofappearance) Then
-                new_item_name = """" & "item_dust" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Eaglehorn) Then
-                new_item_name = """" & "item_eagle" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Energybooster) Then
-                new_item_name = """" & "item_energy_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Etheral_Blade) Then
-                new_item_name = """" & "item_ethereal_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Eulsscepterofdivinity) Then
-                new_item_name = """" & "item_cyclone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Eyeofskadi) Then
-                new_item_name = """" & "item_skadi" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Flyingcourier) Then
-                new_item_name = """" & "item_flying_courier" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Forcestaff) Then
-                new_item_name = """" & "item_force_staff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Gauntletsofstrength) Then
-                new_item_name = """" & "item_gauntlets" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Gemoftruesight) Then
-                new_item_name = """" & "item_gem" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ghostscepter) Then
-                new_item_name = """" & "item_ghost" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Glovesofhaste) Then
-                new_item_name = """" & "item_gloves" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Handofmidas) Then
-                new_item_name = """" & "item_hand_of_midas" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Headdressofrejuvenation) Then
-                new_item_name = """" & "item_headdress" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Healingsalve) Then
-                new_item_name = """" & "item_flask" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Heartoftarrasque) Then
-                new_item_name = """" & "item_heart" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Helmofironwill) Then
-                new_item_name = """" & "item_helm_of_iron_will" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Helmofthedominator) Then
-                new_item_name = """" & "item_helm_of_the_dominator" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Hoodofdefiance) Then
-                new_item_name = """" & "item_hood_of_defiance" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Hyperstone) Then
-                new_item_name = """" & "item_hyperstone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ironwoodbranch) Then
-                new_item_name = """" & "item_branches" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Javelin) Then
-                new_item_name = """" & "item_javelin" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Linkenssphere) Then
-                new_item_name = """" & "item_sphere" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Maelstrom) Then
-                new_item_name = """" & "item_maelstrom" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Magicstick) Then
-                new_item_name = """" & "item_magic_stick" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Magicwand) Then
-                new_item_name = """" & "item_magic_wand" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Mantastyle) Then
-                new_item_name = """" & "item_manta" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Mantleofintelligence) Then
-                new_item_name = """" & "item_mantle" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Maskofmadness) Then
-                new_item_name = """" & "item_mask_of_madness" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Medallionofcourage) Then
-                new_item_name = """" & "item_medallion_of_courage" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Mekansm) Then
-                new_item_name = """" & "item_mekansm" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Mithrilhammer) Then
-                new_item_name = """" & "item_mithril_hammer" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Mjollnir) Then
-                new_item_name = """" & "item_mjollnir" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Monkeykingbar) Then
-                new_item_name = """" & "item_monkey_king_bar" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Maskofdeath) Then
-                new_item_name = """" & "item_lifesteal" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Mysticstaff) Then
-                new_item_name = """" & "item_mystic_staff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Necronomicon) Then
-                new_item_name = """" & "item_necronomicon" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Necronomicon2) Then
-                new_item_name = """" & "item_necronomicon_2" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Necronomicon3) Then
-                new_item_name = """" & "item_necronomicon_3" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Nulltalisman) Then
-                new_item_name = """" & "item_null_talisman" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Oblivionstaff) Then
-                new_item_name = """" & "item_oblivion_staff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Observerwards) Then
-                new_item_name = """" & "item_ward_observer" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ogreaxe) Then
-                new_item_name = """" & "item_ogre_axe" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.OrbOfVenom) Then
-                new_item_name = """" & "item_orb_of_venom" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Orchidmalevolence) Then
-                new_item_name = """" & "item_orchid" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Perseverance) Then
-                new_item_name = """" & "item_pers" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Phaseboots) Then
-                new_item_name = """" & "item_phase_boots" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Khadgarspipeofinsight) Then
-                new_item_name = """" & "item_pipe" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Platemail) Then
-                new_item_name = """" & "item_platemail" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Pointbooster) Then
-                new_item_name = """" & "item_point_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Poormansshield) Then
-                new_item_name = """" & "item_poor_mans_shield" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Powertreads) Then
-                new_item_name = """" & "item_power_treads" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Quarterstaff) Then
-                new_item_name = """" & "item_quarterstaff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Quellingblade) Then
-                new_item_name = """" & "item_quelling_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Radiance) Then
-                new_item_name = """" & "item_radiance" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Messerschmidtsreaver) Then
-                new_item_name = """" & "item_reaver" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Refresherorb) Then
-                new_item_name = """" & "item_refresher" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ringofbasilius) Then
-                new_item_name = """" & "item_ring_of_basilius" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ringofhealth) Then
-                new_item_name = """" & "item_ring_of_health" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ringofprotection) Then
-                new_item_name = """" & "item_ring_of_protection" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ringofregeneration) Then
-                new_item_name = """" & "item_ring_of_regen" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Robeofthemagi) Then
-                new_item_name = """" & "item_robe" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Sacredrelic) Then
-                new_item_name = """" & "item_relic" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Sobimask) Then
-                new_item_name = """" & "item_sobi_mask" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Sange) Then
-                new_item_name = """" & "item_sange" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Sangeandyasha) Then
-                new_item_name = """" & "item_sange_and_yasha" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Satanic) Then
-                new_item_name = """" & "item_satanic" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Guinsoosscytheofvyse) Then
-                new_item_name = """" & "item_sheepstick" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Sentrywards) Then
-                new_item_name = """" & "item_ward_sentry" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Lotharsedge) Then
-                new_item_name = """" & "item_invis_sword" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Shivasguard) Then
-                new_item_name = """" & "item_shivas_guard" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Craniumbasher) Then
-                new_item_name = """" & "item_basher" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Slippersofagility) Then
-                new_item_name = """" & "item_slippers" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.SmokeOfDeceit) Then
-                new_item_name = """" & "item_smoke_of_deceit" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Soulbooster) Then
-                new_item_name = """" & "item_soul_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Soul_Ring) Then
-                new_item_name = """" & "item_soul_ring" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Staffofwizardry) Then
-                new_item_name = """" & "item_staff_of_wizardry" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Stoutshield) Then
-                new_item_name = """" & "item_stout_shield" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Talismanofevasion) Then
-                new_item_name = """" & "item_talisman_of_evasion" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ancienttangoofessifation) Then
-                new_item_name = """" & "item_tango" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Townportal) Then
-                new_item_name = """" & "item_tpscroll" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Ultimateorb) Then
-                new_item_name = """" & "item_ultimate_orb" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Urnofshadows) Then
-                new_item_name = """" & "item_urn_of_shadows" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Vanguard) Then
-                new_item_name = """" & "item_vanguard" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Fatalbonds) Then
-                new_item_name = """" & "item_veil_of_discord" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Vitalitybooster) Then
-                new_item_name = """" & "item_vitality_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Vladimirsoffering) Then
-                new_item_name = """" & "item_vladmir" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Voidstone) Then
-                new_item_name = """" & "item_void_stone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Wraithband) Then
-                new_item_name = """" & "item_wraith_band" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Yasha) Then
-                new_item_name = """" & "item_yasha" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.AbyssalBlade) Then
-                new_item_name = """" & "item_abyssal_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.Halberd) Then
-                new_item_name = """" & "item_heavens_halberd" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.RingofAquila) Then
-                new_item_name = """" & "item_ring_of_aquila" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.RodofAtos) Then
-                new_item_name = """" & "item_rod_of_atos" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.TranquilBoots) Then
+                'ElseIf doImagesMatch(item_name, Bloodstone) Then
+                '    new_item_name = """" & "item_bloodstone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Bootsofelvenskin) Then
+                '    new_item_name = """" & "item_boots_of_elves" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Bootsofspeed) Then
+                '    new_item_name = """" & "item_boots" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Bootsoftravel) Then
+                '    new_item_name = """" & "item_travel_boots" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Bottle) Then
+                '    new_item_name = """" & "item_bottle" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Bracer) Then
+                '    new_item_name = """" & "item_bracer" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Broadsword) Then
+                '    new_item_name = """" & "item_broadsword" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Nathrezimbuckler) Then
+                '    new_item_name = """" & "item_buckler" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Butterfly) Then
+                '    new_item_name = """" & "item_butterfly" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Chainmail) Then
+                '    new_item_name = """" & "item_chainmail" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Circletofnobility) Then
+                '    new_item_name = """" & "item_circlet" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Claritypotion) Then
+                '    new_item_name = """" & "item_clarity" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Claymore) Then
+                '    new_item_name = """" & "item_claymore" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Planeswalkerscloak) Then
+                '    new_item_name = """" & "item_cloak" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Crystalys) Then
+                '    new_item_name = """" & "item_lesser_crit" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Burizadokyanon) Then
+                '    new_item_name = """" & "item_greater_crit" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Dagon) Then
+                '    new_item_name = """" & "item_dagon" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Dagon2) Then
+                '    new_item_name = """" & "item_dagon_2" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Dagon3) Then
+                '    new_item_name = """" & "item_dagon_3" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Dagon4) Then
+                '    new_item_name = """" & "item_dagon_4" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Dagon5) Then
+                '    new_item_name = """" & "item_dagon_5" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Demonedge) Then
+                '    new_item_name = """" & "item_demon_edge" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Stygiandesolator) Then
+                '    new_item_name = """" & "item_desolator" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Diffusalblade) Then
+                '    new_item_name = """" & "item_diffusal_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Diffusalblade2) Then
+                '    new_item_name = """" & "item_diffusal_blade_2" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Divinerapier) Then
+                '    new_item_name = """" & "item_rapier" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ancientjanggoofendurance) Then
+                '    new_item_name = """" & "item_ancient_janggo" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Dustofappearance) Then
+                '    new_item_name = """" & "item_dust" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Eaglehorn) Then
+                '    new_item_name = """" & "item_eagle" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Energybooster) Then
+                '    new_item_name = """" & "item_energy_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Etheral_Blade) Then
+                '    new_item_name = """" & "item_ethereal_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Eulsscepterofdivinity) Then
+                '    new_item_name = """" & "item_cyclone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Eyeofskadi) Then
+                '    new_item_name = """" & "item_skadi" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Flyingcourier) Then
+                '    new_item_name = """" & "item_flying_courier" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Forcestaff) Then
+                '    new_item_name = """" & "item_force_staff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Gauntletsofstrength) Then
+                '    new_item_name = """" & "item_gauntlets" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Gemoftruesight) Then
+                '    new_item_name = """" & "item_gem" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ghostscepter) Then
+                '    new_item_name = """" & "item_ghost" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Glovesofhaste) Then
+                '    new_item_name = """" & "item_gloves" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Handofmidas) Then
+                '    new_item_name = """" & "item_hand_of_midas" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Headdressofrejuvenation) Then
+                '    new_item_name = """" & "item_headdress" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Healingsalve) Then
+                '    new_item_name = """" & "item_flask" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Heartoftarrasque) Then
+                '    new_item_name = """" & "item_heart" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Helmofironwill) Then
+                '    new_item_name = """" & "item_helm_of_iron_will" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Helmofthedominator) Then
+                '    new_item_name = """" & "item_helm_of_the_dominator" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Hoodofdefiance) Then
+                '    new_item_name = """" & "item_hood_of_defiance" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Hyperstone) Then
+                '    new_item_name = """" & "item_hyperstone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ironwoodbranch) Then
+                '    new_item_name = """" & "item_branches" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Javelin) Then
+                '    new_item_name = """" & "item_javelin" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Linkenssphere) Then
+                '    new_item_name = """" & "item_sphere" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Maelstrom) Then
+                '    new_item_name = """" & "item_maelstrom" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Magicstick) Then
+                '    new_item_name = """" & "item_magic_stick" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Magicwand) Then
+                '    new_item_name = """" & "item_magic_wand" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Mantastyle) Then
+                '    new_item_name = """" & "item_manta" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Mantleofintelligence) Then
+                '    new_item_name = """" & "item_mantle" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Maskofmadness) Then
+                '    new_item_name = """" & "item_mask_of_madness" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Medallionofcourage) Then
+                '    new_item_name = """" & "item_medallion_of_courage" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Mekansm) Then
+                '    new_item_name = """" & "item_mekansm" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Mithrilhammer) Then
+                '    new_item_name = """" & "item_mithril_hammer" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Mjollnir) Then
+                '    new_item_name = """" & "item_mjollnir" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Monkeykingbar) Then
+                '    new_item_name = """" & "item_monkey_king_bar" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Maskofdeath) Then
+                '    new_item_name = """" & "item_lifesteal" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Mysticstaff) Then
+                '    new_item_name = """" & "item_mystic_staff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Necronomicon) Then
+                '    new_item_name = """" & "item_necronomicon" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Necronomicon2) Then
+                '    new_item_name = """" & "item_necronomicon_2" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Necronomicon3) Then
+                '    new_item_name = """" & "item_necronomicon_3" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Nulltalisman) Then
+                '    new_item_name = """" & "item_null_talisman" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Oblivionstaff) Then
+                '    new_item_name = """" & "item_oblivion_staff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Observerwards) Then
+                '    new_item_name = """" & "item_ward_observer" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ogreaxe) Then
+                '    new_item_name = """" & "item_ogre_axe" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, OrbOfVenom) Then
+                '    new_item_name = """" & "item_orb_of_venom" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Orchidmalevolence) Then
+                '    new_item_name = """" & "item_orchid" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Perseverance) Then
+                '    new_item_name = """" & "item_pers" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Phaseboots) Then
+                '    new_item_name = """" & "item_phase_boots" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Khadgarspipeofinsight) Then
+                '    new_item_name = """" & "item_pipe" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Platemail) Then
+                '    new_item_name = """" & "item_platemail" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Pointbooster) Then
+                '    new_item_name = """" & "item_point_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Poormansshield) Then
+                '    new_item_name = """" & "item_poor_mans_shield" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Powertreads) Then
+                '    new_item_name = """" & "item_power_treads" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Quarterstaff) Then
+                '    new_item_name = """" & "item_quarterstaff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Quellingblade) Then
+                '    new_item_name = """" & "item_quelling_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Radiance) Then
+                '    new_item_name = """" & "item_radiance" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Messerschmidtsreaver) Then
+                '    new_item_name = """" & "item_reaver" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Refresherorb) Then
+                '    new_item_name = """" & "item_refresher" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ringofbasilius) Then
+                '    new_item_name = """" & "item_ring_of_basilius" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ringofhealth) Then
+                '    new_item_name = """" & "item_ring_of_health" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ringofprotection) Then
+                '    new_item_name = """" & "item_ring_of_protection" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ringofregeneration) Then
+                '    new_item_name = """" & "item_ring_of_regen" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Robeofthemagi) Then
+                '    new_item_name = """" & "item_robe" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Sacredrelic) Then
+                '    new_item_name = """" & "item_relic" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Sobimask) Then
+                '    new_item_name = """" & "item_sobi_mask" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Sange) Then
+                '    new_item_name = """" & "item_sange" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Sangeandyasha) Then
+                '    new_item_name = """" & "item_sange_and_yasha" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Satanic) Then
+                '    new_item_name = """" & "item_satanic" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Guinsoosscytheofvyse) Then
+                '    new_item_name = """" & "item_sheepstick" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Sentrywards) Then
+                '    new_item_name = """" & "item_ward_sentry" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Lotharsedge) Then
+                '    new_item_name = """" & "item_invis_sword" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Shivasguard) Then
+                '    new_item_name = """" & "item_shivas_guard" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Craniumbasher) Then
+                '    new_item_name = """" & "item_basher" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Slippersofagility) Then
+                '    new_item_name = """" & "item_slippers" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, SmokeOfDeceit) Then
+                '    new_item_name = """" & "item_smoke_of_deceit" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Soulbooster) Then
+                '    new_item_name = """" & "item_soul_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Soul_Ring) Then
+                '    new_item_name = """" & "item_soul_ring" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Staffofwizardry) Then
+                '    new_item_name = """" & "item_staff_of_wizardry" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Stoutshield) Then
+                '    new_item_name = """" & "item_stout_shield" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Talismanofevasion) Then
+                '    new_item_name = """" & "item_talisman_of_evasion" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ancienttangoofessifation) Then
+                '    new_item_name = """" & "item_tango" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Townportal) Then
+                '    new_item_name = """" & "item_tpscroll" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Ultimateorb) Then
+                '    new_item_name = """" & "item_ultimate_orb" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Urnofshadows) Then
+                '    new_item_name = """" & "item_urn_of_shadows" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Vanguard) Then
+                '    new_item_name = """" & "item_vanguard" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Fatalbonds) Then
+                '    new_item_name = """" & "item_veil_of_discord" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Vitalitybooster) Then
+                '    new_item_name = """" & "item_vitality_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Vladimirsoffering) Then
+                '    new_item_name = """" & "item_vladmir" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Voidstone) Then
+                '    new_item_name = """" & "item_void_stone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Wraithband) Then
+                '    new_item_name = """" & "item_wraith_band" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Yasha) Then
+                '    new_item_name = """" & "item_yasha" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, AbyssalBlade) Then
+                '    new_item_name = """" & "item_abyssal_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, Halberd) Then
+                '    new_item_name = """" & "item_heavens_halberd" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, RingofAquila) Then
+                '    new_item_name = """" & "item_ring_of_aquila" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, RodofAtos) Then
+                '    new_item_name = """" & "item_rod_of_atos" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, TranquilBoots) Then
                 new_item_name = """" & "item_tranquil_boots" & """"
                 Return new_item_name
             Else
@@ -1045,406 +1147,406 @@ Public Class FormMain
                 Return new_item_name
             End If
         ElseIf ComboBoxItemIcons.Text = "HoN" Then
-            If doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Portal_Key) Then
-                new_item_name = """" & "item_blink" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Punchdagger) Then
-                new_item_name = """" & "item_blades_of_attack" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Staff_Of_The_Master) Then
-                new_item_name = """" & "item_ultimate_scepter" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Monkey_Courier) Then
-                new_item_name = """" & "item_courier" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Ring_Of_Sorcery) Then
-                new_item_name = """" & "item_arcane_boots" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Insanitarius) Then
-                new_item_name = """" & "item_armlet" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Daemonic_Breastplate) Then
-                new_item_name = """" & "item_assault" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Runed_Axe) Then
-                new_item_name = """" & "item_bfury" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Bolstering_Armband) Then
-                new_item_name = """" & "item_black_king_bar" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Shrunken_Head) Then
-                new_item_name = """" & "item_belt_of_strength" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Barbed_Armor) Then
-                new_item_name = """" & "item_blade_mail" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Quickblade) Then
-                new_item_name = """" & "item_blade_of_alacrity" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Sacrificial_Stone) Then
-                new_item_name = """" & "item_bloodstone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Fleet_Feet) Then
-                new_item_name = """" & "item_boots_of_elves" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Marchers) Then
-                new_item_name = """" & "item_boots" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Post_Haste) Then
-                new_item_name = """" & "item_travel_boots" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Bottle) Then
-                new_item_name = """" & "item_bottle" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Fortified_Bracelet) Then
-                new_item_name = """" & "item_bracer" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Broadsword) Then
-                new_item_name = """" & "item_broadsword" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Shield_Of_The_Five) Then
-                new_item_name = """" & "item_buckler" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Wingbow) Then
-                new_item_name = """" & "item_butterfly" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Ringmail) Then
-                new_item_name = """" & "item_chainmail" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Pretenders_Crown) Then
-                new_item_name = """" & "item_circlet" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Mana_Potion) Then
-                new_item_name = """" & "item_clarity" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Bastard_Sword) Then
-                new_item_name = """" & "item_claymore" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Mystic_Vestments) Then
-                new_item_name = """" & "item_cloak" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Riftshards) Then
-                new_item_name = """" & "item_lesser_crit" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Daedalus) Then
-                new_item_name = """" & "item_greater_crit" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Codex) Then
-                new_item_name = """" & "item_dagon" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Codex2) Then
-                new_item_name = """" & "item_dagon_2" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Codex3) Then
-                new_item_name = """" & "item_dagon_3" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Codex4) Then
-                new_item_name = """" & "item_dagon_4" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Codex5) Then
-                new_item_name = """" & "item_dagon_5" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Slayer) Then
-                new_item_name = """" & "item_demon_edge" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Shieldbreaker) Then
-                new_item_name = """" & "item_desolator" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Nullfire_Blade) Then
-                new_item_name = """" & "item_diffusal_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Nullfire_Blade2) Then
-                new_item_name = """" & "item_diffusal_blade_2" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Doombringer) Then
-                new_item_name = """" & "item_rapier" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
-                new_item_name = """" & "item_ancient_janggo" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Dust_Of_Revelation) Then
-                new_item_name = """" & "item_dust" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Dancing_Blade) Then
-                new_item_name = """" & "item_eagle" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Pickled_Brain) Then
-                new_item_name = """" & "item_energy_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
-                new_item_name = """" & "item_ethereal_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Stormspirit) Then
-                new_item_name = """" & "item_cyclone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Frostwolfs_Skull) Then
-                new_item_name = """" & "item_skadi" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Winged_Courier) Then
-                new_item_name = """" & "item_flying_courier" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Tablet_of_Command) Then
-                new_item_name = """" & "item_force_staff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Crushing_Claws) Then
-                new_item_name = """" & "item_gauntlets" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Bound_Eye) Then
-                new_item_name = """" & "item_gem" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Void_Talisman) Then
-                new_item_name = """" & "item_ghost" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Gloves_of_the_Swift) Then
-                new_item_name = """" & "item_gloves" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Alchemist_Bones) Then
-                new_item_name = """" & "item_hand_of_midas" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Refreshing_Ornament) Then
-                new_item_name = """" & "item_headdress" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Health_Potion) Then
-                new_item_name = """" & "item_flask" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Behemoths_Hearth) Then
-                new_item_name = """" & "item_heart" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Helm_Of_The_Victim) Then
-                new_item_name = """" & "item_helm_of_iron_will" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Whispering_Helm) Then
-                new_item_name = """" & "item_helm_of_the_dominator" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Shamans_Headress) Then
-                new_item_name = """" & "item_hood_of_defiance" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Warpcleft) Then
-                new_item_name = """" & "item_hyperstone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Minor_Totem) Then
-                new_item_name = """" & "item_branches" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Halberd) Then
-                new_item_name = """" & "item_javelin" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Null_Stone) Then
-                new_item_name = """" & "item_sphere" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Thunderclaw) Then
-                new_item_name = """" & "item_maelstrom" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Mana_Battery) Then
-                new_item_name = """" & "item_magic_stick" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Power_Supply) Then
-                new_item_name = """" & "item_magic_wand" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Geometers_Bane) Then
-                new_item_name = """" & "item_manta" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Mark_Of_The_Novice) Then
-                new_item_name = """" & "item_mantle" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Elder_Parasite) Then
-                new_item_name = """" & "item_mask_of_madness" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
-                new_item_name = """" & "item_medallion_of_courage" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Astrolabe) Then
-                new_item_name = """" & "item_mekansm" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Warhammer) Then
-                new_item_name = """" & "item_mithril_hammer" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Charged_Hammer) Then
-                new_item_name = """" & "item_mjollnir" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Savage_Mace) Then
-                new_item_name = """" & "item_monkey_king_bar" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Hungry_Spirit) Then
-                new_item_name = """" & "item_lifesteal" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Acolytes_Staff) Then
-                new_item_name = """" & "item_mystic_staff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Puzzlebox) Then
-                new_item_name = """" & "item_necronomicon" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Puzzlebox2) Then
-                new_item_name = """" & "item_necronomicon_2" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Puzzlebox3) Then
-                new_item_name = """" & "item_necronomicon_3" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Talisman_Of_Exile) Then
-                new_item_name = """" & "item_null_talisman" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Great_Arcana) Then
-                new_item_name = """" & "item_oblivion_staff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Wards_of_Sight) Then
-                new_item_name = """" & "item_ward_observer" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Mighty_Blade) Then
-                new_item_name = """" & "item_ogre_axe" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
-                new_item_name = """" & "item_orb_of_venom" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Hellflower) Then
-                new_item_name = """" & "item_orchid" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Sustainer) Then
-                new_item_name = """" & "item_pers" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Enhanced_Marchers) Then
-                new_item_name = """" & "item_phase_boots" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Barrier_Idol) Then
-                new_item_name = """" & "item_pipe" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Platemail) Then
-                new_item_name = """" & "item_platemail" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Glowstone) Then
-                new_item_name = """" & "item_point_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Iron_Shield) Then
-                new_item_name = """" & "item_poor_mans_shield" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Steamboots_Strength) Then
-                new_item_name = """" & "item_power_treads" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Steamstaff) Then
-                new_item_name = """" & "item_quarterstaff" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Loggers_Hatchet) Then
-                new_item_name = """" & "item_quelling_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Mock_of_Brilliance) Then
-                new_item_name = """" & "item_radiance" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Axe_Of_The_Malphai) Then
-                new_item_name = """" & "item_reaver" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Restoration_Stone) Then
-                new_item_name = """" & "item_refresher" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Ring_Of_The_Teacher) Then
-                new_item_name = """" & "item_ring_of_basilius" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Lifetube) Then
-                new_item_name = """" & "item_ring_of_health" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Guardian_Ring) Then
-                new_item_name = """" & "item_ring_of_protection" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Trinket_Of_Restoration) Then
-                new_item_name = """" & "item_ring_of_regen" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Apprentices_Robe) Then
-                new_item_name = """" & "item_robe" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Sword_Of_The_High) Then
-                new_item_name = """" & "item_relic" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Scarab) Then
-                new_item_name = """" & "item_sobi_mask" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Icebrand) Then
-                new_item_name = """" & "item_sange" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Frostburn) Then
-                new_item_name = """" & "item_sange_and_yasha" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Symbol_Of_Rage) Then
-                new_item_name = """" & "item_satanic" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Kuldras_Sheepstick) Then
-                new_item_name = """" & "item_sheepstick" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Wards_of_Revelation) Then
-                new_item_name = """" & "item_ward_sentry" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Shroud_Of_The_Assasin) Then
-                new_item_name = """" & "item_invis_sword" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Frostfield_Plate) Then
-                new_item_name = """" & "item_shivas_guard" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Brutalizer) Then
-                new_item_name = """" & "item_basher" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Duck_Boots) Then
-                new_item_name = """" & "item_slippers" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
-                new_item_name = """" & "item_smoke_of_deceit" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Icon_Of_The_Goddess) Then
-                new_item_name = """" & "item_soul_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Blood_Chalice) Then
-                new_item_name = """" & "item_soul_ring" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Neophytes_Book) Then
-                new_item_name = """" & "item_staff_of_wizardry" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Iron_Buckler) Then
-                new_item_name = """" & "item_stout_shield" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Snake_Bracelet) Then
-                new_item_name = """" & "item_talisman_of_evasion" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Runes_Of_The_Blight) Then
-                new_item_name = """" & "item_tango" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Homecoming_Stone) Then
-                new_item_name = """" & "item_tpscroll" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Blessed_Orb) Then
-                new_item_name = """" & "item_ultimate_orb" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
-                new_item_name = """" & "item_urn_of_shadows" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Helm_Of_The_Black_Legion) Then
-                new_item_name = """" & "item_vanguard" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
-                new_item_name = """" & "item_veil_of_discord" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Beastheart) Then
-                new_item_name = """" & "item_vitality_booster" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Abyssal_Skull) Then
-                new_item_name = """" & "item_vladmir" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Manatube) Then
-                new_item_name = """" & "item_void_stone" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Soulscream_Ring) Then
-                new_item_name = """" & "item_wraith_band" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Firebrand) Then
-                new_item_name = """" & "item_yasha" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
-                new_item_name = """" & "item_abyssal_blade" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
-                new_item_name = """" & "item_heavens_halberd" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
-                new_item_name = """" & "item_ring_of_aquila" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
-                new_item_name = """" & "item_rod_of_atos" & """"
-                Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources.HoN_Striders) Then
+            If doImagesMatch(item_name, ImageList1.Images(1)) Then
+                '    new_item_name = """" & "item_blink" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Punchdagger) Then
+                '    new_item_name = """" & "item_blades_of_attack" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Staff_Of_The_Master) Then
+                '    new_item_name = """" & "item_ultimate_scepter" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Monkey_Courier) Then
+                '    new_item_name = """" & "item_courier" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Ring_Of_Sorcery) Then
+                '    new_item_name = """" & "item_arcane_boots" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Insanitarius) Then
+                '    new_item_name = """" & "item_armlet" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Daemonic_Breastplate) Then
+                '    new_item_name = """" & "item_assault" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Runed_Axe) Then
+                '    new_item_name = """" & "item_bfury" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Bolstering_Armband) Then
+                '    new_item_name = """" & "item_black_king_bar" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Shrunken_Head) Then
+                '    new_item_name = """" & "item_belt_of_strength" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Barbed_Armor) Then
+                '    new_item_name = """" & "item_blade_mail" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Quickblade) Then
+                '    new_item_name = """" & "item_blade_of_alacrity" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Sacrificial_Stone) Then
+                '    new_item_name = """" & "item_bloodstone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Fleet_Feet) Then
+                '    new_item_name = """" & "item_boots_of_elves" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Marchers) Then
+                '    new_item_name = """" & "item_boots" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Post_Haste) Then
+                '    new_item_name = """" & "item_travel_boots" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Bottle) Then
+                '    new_item_name = """" & "item_bottle" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Fortified_Bracelet) Then
+                '    new_item_name = """" & "item_bracer" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Broadsword) Then
+                '    new_item_name = """" & "item_broadsword" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Shield_Of_The_Five) Then
+                '    new_item_name = """" & "item_buckler" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Wingbow) Then
+                '    new_item_name = """" & "item_butterfly" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Ringmail) Then
+                '    new_item_name = """" & "item_chainmail" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Pretenders_Crown) Then
+                '    new_item_name = """" & "item_circlet" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Mana_Potion) Then
+                '    new_item_name = """" & "item_clarity" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Bastard_Sword) Then
+                '    new_item_name = """" & "item_claymore" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Mystic_Vestments) Then
+                '    new_item_name = """" & "item_cloak" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Riftshards) Then
+                '    new_item_name = """" & "item_lesser_crit" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(28)) Then
+                '    new_item_name = """" & "item_greater_crit" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Codex) Then
+                '    new_item_name = """" & "item_dagon" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Codex2) Then
+                '    new_item_name = """" & "item_dagon_2" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Codex3) Then
+                '    new_item_name = """" & "item_dagon_3" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Codex4) Then
+                '    new_item_name = """" & "item_dagon_4" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Codex5) Then
+                '    new_item_name = """" & "item_dagon_5" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Slayer) Then
+                '    new_item_name = """" & "item_demon_edge" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Shieldbreaker) Then
+                '    new_item_name = """" & "item_desolator" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Nullfire_Blade) Then
+                '    new_item_name = """" & "item_diffusal_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Nullfire_Blade2) Then
+                '    new_item_name = """" & "item_diffusal_blade_2" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Doombringer) Then
+                '    new_item_name = """" & "item_rapier" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(39)) Then
+                '    new_item_name = """" & "item_ancient_janggo" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Dust_Of_Revelation) Then
+                '    new_item_name = """" & "item_dust" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Dancing_Blade) Then
+                '    new_item_name = """" & "item_eagle" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Pickled_Brain) Then
+                '    new_item_name = """" & "item_energy_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(43)) Then
+                '    new_item_name = """" & "item_ethereal_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Stormspirit) Then
+                '    new_item_name = """" & "item_cyclone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Frostwolfs_Skull) Then
+                '    new_item_name = """" & "item_skadi" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Winged_Courier) Then
+                '    new_item_name = """" & "item_flying_courier" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Tablet_of_Command) Then
+                '    new_item_name = """" & "item_force_staff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Crushing_Claws) Then
+                '    new_item_name = """" & "item_gauntlets" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Bound_Eye) Then
+                '    new_item_name = """" & "item_gem" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Void_Talisman) Then
+                '    new_item_name = """" & "item_ghost" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Gloves_of_the_Swift) Then
+                '    new_item_name = """" & "item_gloves" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Alchemist_Bones) Then
+                '    new_item_name = """" & "item_hand_of_midas" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Refreshing_Ornament) Then
+                '    new_item_name = """" & "item_headdress" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Health_Potion) Then
+                '    new_item_name = """" & "item_flask" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Behemoths_Hearth) Then
+                '    new_item_name = """" & "item_heart" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Helm_Of_The_Victim) Then
+                '    new_item_name = """" & "item_helm_of_iron_will" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Whispering_Helm) Then
+                '    new_item_name = """" & "item_helm_of_the_dominator" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Shamans_Headress) Then
+                '    new_item_name = """" & "item_hood_of_defiance" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Warpcleft) Then
+                '    new_item_name = """" & "item_hyperstone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Minor_Totem) Then
+                '    new_item_name = """" & "item_branches" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Halberd) Then
+                '    new_item_name = """" & "item_javelin" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Null_Stone) Then
+                '    new_item_name = """" & "item_sphere" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Thunderclaw) Then
+                '    new_item_name = """" & "item_maelstrom" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Mana_Battery) Then
+                '    new_item_name = """" & "item_magic_stick" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Power_Supply) Then
+                '    new_item_name = """" & "item_magic_wand" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Geometers_Bane) Then
+                '    new_item_name = """" & "item_manta" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Mark_Of_The_Novice) Then
+                '    new_item_name = """" & "item_mantle" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Elder_Parasite) Then
+                '    new_item_name = """" & "item_mask_of_madness" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(70)) Then
+                '    new_item_name = """" & "item_medallion_of_courage" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Astrolabe) Then
+                '    new_item_name = """" & "item_mekansm" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Warhammer) Then
+                '    new_item_name = """" & "item_mithril_hammer" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Charged_Hammer) Then
+                '    new_item_name = """" & "item_mjollnir" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Savage_Mace) Then
+                '    new_item_name = """" & "item_monkey_king_bar" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Hungry_Spirit) Then
+                '    new_item_name = """" & "item_lifesteal" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Acolytes_Staff) Then
+                '    new_item_name = """" & "item_mystic_staff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Puzzlebox) Then
+                '    new_item_name = """" & "item_necronomicon" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Puzzlebox2) Then
+                '    new_item_name = """" & "item_necronomicon_2" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Puzzlebox3) Then
+                '    new_item_name = """" & "item_necronomicon_3" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Talisman_Of_Exile) Then
+                '    new_item_name = """" & "item_null_talisman" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Great_Arcana) Then
+                '    new_item_name = """" & "item_oblivion_staff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Wards_of_Sight) Then
+                '    new_item_name = """" & "item_ward_observer" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Mighty_Blade) Then
+                '    new_item_name = """" & "item_ogre_axe" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(84)) Then
+                '    new_item_name = """" & "item_orb_of_venom" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Hellflower) Then
+                '    new_item_name = """" & "item_orchid" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Sustainer) Then
+                '    new_item_name = """" & "item_pers" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Enhanced_Marchers) Then
+                '    new_item_name = """" & "item_phase_boots" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Barrier_Idol) Then
+                '    new_item_name = """" & "item_pipe" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Platemail) Then
+                '    new_item_name = """" & "item_platemail" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Glowstone) Then
+                '    new_item_name = """" & "item_point_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Iron_Shield) Then
+                '    new_item_name = """" & "item_poor_mans_shield" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Steamboots_Strength) Then
+                '    new_item_name = """" & "item_power_treads" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Steamstaff) Then
+                '    new_item_name = """" & "item_quarterstaff" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Loggers_Hatchet) Then
+                '    new_item_name = """" & "item_quelling_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Mock_of_Brilliance) Then
+                '    new_item_name = """" & "item_radiance" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Axe_Of_The_Malphai) Then
+                '    new_item_name = """" & "item_reaver" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Restoration_Stone) Then
+                '    new_item_name = """" & "item_refresher" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Ring_Of_The_Teacher) Then
+                '    new_item_name = """" & "item_ring_of_basilius" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Lifetube) Then
+                '    new_item_name = """" & "item_ring_of_health" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Guardian_Ring) Then
+                '    new_item_name = """" & "item_ring_of_protection" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Trinket_Of_Restoration) Then
+                '    new_item_name = """" & "item_ring_of_regen" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Apprentices_Robe) Then
+                '    new_item_name = """" & "item_robe" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Sword_Of_The_High) Then
+                '    new_item_name = """" & "item_relic" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Scarab) Then
+                '    new_item_name = """" & "item_sobi_mask" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Icebrand) Then
+                '    new_item_name = """" & "item_sange" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Frostburn) Then
+                '    new_item_name = """" & "item_sange_and_yasha" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Symbol_Of_Rage) Then
+                '    new_item_name = """" & "item_satanic" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Kuldras_Sheepstick) Then
+                '    new_item_name = """" & "item_sheepstick" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Wards_of_Revelation) Then
+                '    new_item_name = """" & "item_ward_sentry" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Shroud_Of_The_Assasin) Then
+                '    new_item_name = """" & "item_invis_sword" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Frostfield_Plate) Then
+                '    new_item_name = """" & "item_shivas_guard" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Brutalizer) Then
+                '    new_item_name = """" & "item_basher" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Duck_Boots) Then
+                '    new_item_name = """" & "item_slippers" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(116)) Then
+                '    new_item_name = """" & "item_smoke_of_deceit" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Icon_Of_The_Goddess) Then
+                '    new_item_name = """" & "item_soul_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Blood_Chalice) Then
+                '    new_item_name = """" & "item_soul_ring" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Neophytes_Book) Then
+                '    new_item_name = """" & "item_staff_of_wizardry" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Iron_Buckler) Then
+                '    new_item_name = """" & "item_stout_shield" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Snake_Bracelet) Then
+                '    new_item_name = """" & "item_talisman_of_evasion" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Runes_Of_The_Blight) Then
+                '    new_item_name = """" & "item_tango" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Homecoming_Stone) Then
+                '    new_item_name = """" & "item_tpscroll" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Blessed_Orb) Then
+                '    new_item_name = """" & "item_ultimate_orb" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(126)) Then
+                '    new_item_name = """" & "item_urn_of_shadows" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Helm_Of_The_Black_Legion) Then
+                '    new_item_name = """" & "item_vanguard" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(128)) Then
+                '    new_item_name = """" & "item_veil_of_discord" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Beastheart) Then
+                '    new_item_name = """" & "item_vitality_booster" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Abyssal_Skull) Then
+                '    new_item_name = """" & "item_vladmir" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Manatube) Then
+                '    new_item_name = """" & "item_void_stone" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Soulscream_Ring) Then
+                '    new_item_name = """" & "item_wraith_band" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Firebrand) Then
+                '    new_item_name = """" & "item_yasha" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(0)) Then
+                '    new_item_name = """" & "item_abyssal_blade" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(56)) Then
+                '    new_item_name = """" & "item_heavens_halberd" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(98)) Then
+                '    new_item_name = """" & "item_ring_of_aquila" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, ImageList1.Images(104)) Then
+                '    new_item_name = """" & "item_rod_of_atos" & """"
+                '    Return new_item_name
+                'ElseIf doImagesMatch(item_name, HoN_Striders) Then
                 new_item_name = """" & "item_tranquil_boots" & """"
                 Return new_item_name
             Else
@@ -1452,406 +1554,406 @@ Public Class FormMain
                 Return new_item_name
             End If
         Else
-            If doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Blink_Dagger) Then
+            If doImagesMatch(item_name, ImageList1.Images(12)) Then
                 new_item_name = """" & "item_blink" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Blades_of_Attack) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(11)) Then
                 new_item_name = """" & "item_blades_of_attack" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(1)) Then
                 new_item_name = """" & "item_ultimate_scepter" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Animal_Courier) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(2)) Then
                 new_item_name = """" & "item_courier" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Arcane_Boots) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(3)) Then
                 new_item_name = """" & "item_arcane_boots" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Armlet) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(4)) Then
                 new_item_name = """" & "item_armlet" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Assault_Cuirass) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(5)) Then
                 new_item_name = """" & "item_assault" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Battle_Fury) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(6)) Then
                 new_item_name = """" & "item_bfury" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Black_King_Bar) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(7)) Then
                 new_item_name = """" & "item_black_king_bar" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Belt_of_Strength) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(8)) Then
                 new_item_name = """" & "item_belt_of_strength" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Blade_Mail) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(9)) Then
                 new_item_name = """" & "item_blade_mail" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(10)) Then
                 new_item_name = """" & "item_blade_of_alacrity" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Bloodstone) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(13)) Then
                 new_item_name = """" & "item_bloodstone" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(14)) Then
                 new_item_name = """" & "item_boots_of_elves" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Boots_of_Speed) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(15)) Then
                 new_item_name = """" & "item_boots" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Boots_of_Travel) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(16)) Then
                 new_item_name = """" & "item_travel_boots" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Bottle) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(17)) Then
                 new_item_name = """" & "item_bottle" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Bracer) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(18)) Then
                 new_item_name = """" & "item_bracer" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Broadsword) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(19)) Then
                 new_item_name = """" & "item_broadsword" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Buckler) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(20)) Then
                 new_item_name = """" & "item_buckler" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Butterfly) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(21)) Then
                 new_item_name = """" & "item_butterfly" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Chainmail) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(22)) Then
                 new_item_name = """" & "item_chainmail" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Circlet) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(23)) Then
                 new_item_name = """" & "item_circlet" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Clarity) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(24)) Then
                 new_item_name = """" & "item_clarity" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Claymore) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(25)) Then
                 new_item_name = """" & "item_claymore" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Cloak) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(26)) Then
                 new_item_name = """" & "item_cloak" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Crystalys) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(27)) Then
                 new_item_name = """" & "item_lesser_crit" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Daedalus) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(28)) Then
                 new_item_name = """" & "item_greater_crit" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Dagon) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(29)) Then
                 new_item_name = """" & "item_dagon" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Dagon2) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(30)) Then
                 new_item_name = """" & "item_dagon_2" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Dagon3) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(31)) Then
                 new_item_name = """" & "item_dagon_3" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Dagon4) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(32)) Then
                 new_item_name = """" & "item_dagon_4" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Dagon5) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(33)) Then
                 new_item_name = """" & "item_dagon_5" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Demon_Edge) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(34)) Then
                 new_item_name = """" & "item_demon_edge" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Desolator) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(35)) Then
                 new_item_name = """" & "item_desolator" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Diffusal_Blade) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(36)) Then
                 new_item_name = """" & "item_diffusal_blade" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Diffusal_Blade2) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(37)) Then
                 new_item_name = """" & "item_diffusal_blade_2" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Divine_Rapier) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(38)) Then
                 new_item_name = """" & "item_rapier" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(39)) Then
                 new_item_name = """" & "item_ancient_janggo" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Dust_of_Appearance) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(40)) Then
                 new_item_name = """" & "item_dust" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Eaglesong) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(41)) Then
                 new_item_name = """" & "item_eagle" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Energy_Booster) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(42)) Then
                 new_item_name = """" & "item_energy_booster" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(43)) Then
                 new_item_name = """" & "item_ethereal_blade" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(44)) Then
                 new_item_name = """" & "item_cyclone" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Eye_of_Skadi) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(45)) Then
                 new_item_name = """" & "item_skadi" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Flying_Courier) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(46)) Then
                 new_item_name = """" & "item_flying_courier" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Force_Staff) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(47)) Then
                 new_item_name = """" & "item_force_staff" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(48)) Then
                 new_item_name = """" & "item_gauntlets" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(49)) Then
                 new_item_name = """" & "item_gem" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ghost_Scepter) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(50)) Then
                 new_item_name = """" & "item_ghost" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Gloves_of_Haste) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(51)) Then
                 new_item_name = """" & "item_gloves" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Hand_of_Midas) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(52)) Then
                 new_item_name = """" & "item_hand_of_midas" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Headdress) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(53)) Then
                 new_item_name = """" & "item_headdress" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Healing_Salve) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(54)) Then
                 new_item_name = """" & "item_flask" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(55)) Then
                 new_item_name = """" & "item_heart" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(57)) Then
                 new_item_name = """" & "item_helm_of_iron_will" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(58)) Then
                 new_item_name = """" & "item_helm_of_the_dominator" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Hood_of_Defiance) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(59)) Then
                 new_item_name = """" & "item_hood_of_defiance" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Hyperstone) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(60)) Then
                 new_item_name = """" & "item_hyperstone" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Iron_Branch) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(61)) Then
                 new_item_name = """" & "item_branches" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Javelin) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(62)) Then
                 new_item_name = """" & "item_javelin" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Linken_s_Sphere) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(63)) Then
                 new_item_name = """" & "item_sphere" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Maelstrom) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(64)) Then
                 new_item_name = """" & "item_maelstrom" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Magic_Stick) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(65)) Then
                 new_item_name = """" & "item_magic_stick" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Magic_Wand) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(66)) Then
                 new_item_name = """" & "item_magic_wand" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Manta_Style) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(67)) Then
                 new_item_name = """" & "item_manta" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(68)) Then
                 new_item_name = """" & "item_mantle" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Mask_of_Madness) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(69)) Then
                 new_item_name = """" & "item_mask_of_madness" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(70)) Then
                 new_item_name = """" & "item_medallion_of_courage" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Mekansm) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(71)) Then
                 new_item_name = """" & "item_mekansm" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Mithril_Hammer) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(72)) Then
                 new_item_name = """" & "item_mithril_hammer" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Mjollnir) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(73)) Then
                 new_item_name = """" & "item_mjollnir" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Monkey_King_Bar) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(74)) Then
                 new_item_name = """" & "item_monkey_king_bar" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Morbid_Mask) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(75)) Then
                 new_item_name = """" & "item_lifesteal" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Mystic_Staff) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(76)) Then
                 new_item_name = """" & "item_mystic_staff" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Necronomicon) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(77)) Then
                 new_item_name = """" & "item_necronomicon" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Necronomicon2) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(78)) Then
                 new_item_name = """" & "item_necronomicon_2" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Necronomicon3) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(79)) Then
                 new_item_name = """" & "item_necronomicon_3" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Null_Talisman) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(80)) Then
                 new_item_name = """" & "item_null_talisman" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Oblivion_Staff) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(81)) Then
                 new_item_name = """" & "item_oblivion_staff" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Observer_Ward) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(82)) Then
                 new_item_name = """" & "item_ward_observer" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ogre_Club) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(83)) Then
                 new_item_name = """" & "item_ogre_axe" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(84)) Then
                 new_item_name = """" & "item_orb_of_venom" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Orchid_Malevolence) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(85)) Then
                 new_item_name = """" & "item_orchid" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Perseverance) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(86)) Then
                 new_item_name = """" & "item_pers" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Phase_Boots) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(87)) Then
                 new_item_name = """" & "item_phase_boots" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Pipe_of_Insight) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(88)) Then
                 new_item_name = """" & "item_pipe" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Platemail) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(89)) Then
                 new_item_name = """" & "item_platemail" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Point_Booster) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(90)) Then
                 new_item_name = """" & "item_point_booster" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(91)) Then
                 new_item_name = """" & "item_poor_mans_shield" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Power_Treads) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(92)) Then
                 new_item_name = """" & "item_power_treads" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Quarterstaff) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(93)) Then
                 new_item_name = """" & "item_quarterstaff" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Quelling_Blade) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(94)) Then
                 new_item_name = """" & "item_quelling_blade" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Radiance) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(95)) Then
                 new_item_name = """" & "item_radiance" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Reaver) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(96)) Then
                 new_item_name = """" & "item_reaver" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Refresher_Orb) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(97)) Then
                 new_item_name = """" & "item_refresher" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ring_of_Basilius) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(99)) Then
                 new_item_name = """" & "item_ring_of_basilius" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ring_of_Health) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(100)) Then
                 new_item_name = """" & "item_ring_of_health" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ring_of_Protection) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(101)) Then
                 new_item_name = """" & "item_ring_of_protection" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ring_of_Regen) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(102)) Then
                 new_item_name = """" & "item_ring_of_regen" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(103)) Then
                 new_item_name = """" & "item_robe" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Sacred_Relic) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(105)) Then
                 new_item_name = """" & "item_relic" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Sage_s_Mask) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(106)) Then
                 new_item_name = """" & "item_sobi_mask" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Sange) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(107)) Then
                 new_item_name = """" & "item_sange" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Sange_and_Yasha) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(108)) Then
                 new_item_name = """" & "item_sange_and_yasha" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Satanic) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(109)) Then
                 new_item_name = """" & "item_satanic" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(110)) Then
                 new_item_name = """" & "item_sheepstick" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Sentry_Ward) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(111)) Then
                 new_item_name = """" & "item_ward_sentry" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Shadow_Blade) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(112)) Then
                 new_item_name = """" & "item_invis_sword" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Shiva_s_Guard) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(113)) Then
                 new_item_name = """" & "item_shivas_guard" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Skull_Basher) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(114)) Then
                 new_item_name = """" & "item_basher" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Slippers_of_Agility) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(115)) Then
                 new_item_name = """" & "item_slippers" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(116)) Then
                 new_item_name = """" & "item_smoke_of_deceit" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Soul_Booster) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(117)) Then
                 new_item_name = """" & "item_soul_booster" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Soul_Ring) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(118)) Then
                 new_item_name = """" & "item_soul_ring" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(119)) Then
                 new_item_name = """" & "item_staff_of_wizardry" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Stout_Shield) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(120)) Then
                 new_item_name = """" & "item_stout_shield" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(121)) Then
                 new_item_name = """" & "item_talisman_of_evasion" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Tango) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(122)) Then
                 new_item_name = """" & "item_tango" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(123)) Then
                 new_item_name = """" & "item_tpscroll" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ultimate_Orb) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(125)) Then
                 new_item_name = """" & "item_ultimate_orb" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(126)) Then
                 new_item_name = """" & "item_urn_of_shadows" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Vanguard) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(127)) Then
                 new_item_name = """" & "item_vanguard" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(128)) Then
                 new_item_name = """" & "item_veil_of_discord" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Vitality_Booster) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(129)) Then
                 new_item_name = """" & "item_vitality_booster" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(130)) Then
                 new_item_name = """" & "item_vladmir" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Void_Stone) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(131)) Then
                 new_item_name = """" & "item_void_stone" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Wraith_Band) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(132)) Then
                 new_item_name = """" & "item_wraith_band" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Yasha) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(133)) Then
                 new_item_name = """" & "item_yasha" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(0)) Then
                 new_item_name = """" & "item_abyssal_blade" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(56)) Then
                 new_item_name = """" & "item_heavens_halberd" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(98)) Then
                 new_item_name = """" & "item_ring_of_aquila" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(104)) Then
                 new_item_name = """" & "item_rod_of_atos" & """"
                 Return new_item_name
-            ElseIf doImagesMatch(item_name, D2RIC.My.Resources.Resources._40px_Tranquil_Boots) Then
+            ElseIf doImagesMatch(item_name, ImageList1.Images(124)) Then
                 new_item_name = """" & "item_tranquil_boots" & """"
                 Return new_item_name
             Else
@@ -1867,406 +1969,406 @@ Public Class FormMain
         If ComboBoxItemIcons.Text = "DotA 1" Then
             Select Case item_name
                 Case "Blink Dagger"
-                    pic_res = D2RIC.My.Resources.Resources.Kelensdagger
+                    pic_res = ImageList1.Images(146)
                     Return pic_res
                 Case "Blades of Attack"
-                    pic_res = D2RIC.My.Resources.Resources.Bladesofattack
+                    pic_res = ImageList1.Images(145)
                     Return pic_res
                 Case "Aghanim's Scepter"
-                    pic_res = D2RIC.My.Resources.Resources.Aghanimsscepter
+                    pic_res = ImageList1.Images(135)
                     Return pic_res
                 Case "Animal Courier"
-                    pic_res = D2RIC.My.Resources.Resources.Animalcourier
+                    pic_res = ImageList1.Images(136)
                     Return pic_res
                 Case "Arcane Boots"
-                    pic_res = D2RIC.My.Resources.Resources.ArcaneBoots
+                    pic_res = ImageList1.Images(137)
                     Return pic_res
                 Case "Armlet"
-                    pic_res = D2RIC.My.Resources.Resources.Armletofmordiggian
+                    pic_res = ImageList1.Images(138)
                     Return pic_res
                 Case "Assault Cuirass"
-                    pic_res = D2RIC.My.Resources.Resources.Assaultcuirass
+                    pic_res = ImageList1.Images(139)
                     Return pic_res
                 Case "Battle Fury"
-                    pic_res = D2RIC.My.Resources.Resources.Battlefury
+                    pic_res = ImageList1.Images(140)
                     Return pic_res
                 Case "Belt of Strength"
-                    pic_res = D2RIC.My.Resources.Resources.Beltofgiantstrength
+                    pic_res = ImageList1.Images(141)
                     Return pic_res
                 Case "Black King Bar"
-                    pic_res = D2RIC.My.Resources.Resources.Blackkingbar
+                    pic_res = ImageList1.Images(142)
                     Return pic_res
                 Case "Blade Mail"
-                    pic_res = D2RIC.My.Resources.Resources.Blademail
+                    pic_res = ImageList1.Images(143)
                     Return pic_res
                 Case "Blade of Alacrity"
-                    pic_res = D2RIC.My.Resources.Resources.Bladesofalacrity
-                    Return pic_res
-                Case "Bloodstone"
-                    pic_res = D2RIC.My.Resources.Resources.Bloodstone
-                    Return pic_res
-                Case "Boots of Elvenskin"
-                    pic_res = D2RIC.My.Resources.Resources.Bootsofelvenskin
-                    Return pic_res
-                Case "Boots of Speed"
-                    pic_res = D2RIC.My.Resources.Resources.Bootsofspeed
-                    Return pic_res
-                Case "Boots of Travel"
-                    pic_res = D2RIC.My.Resources.Resources.Bootsoftravel
-                    Return pic_res
-                Case "Bottle"
-                    pic_res = D2RIC.My.Resources.Resources.Bottle
-                    Return pic_res
-                Case "Bracer"
-                    pic_res = D2RIC.My.Resources.Resources.Bracer
-                    Return pic_res
-                Case "Broadsword"
-                    pic_res = D2RIC.My.Resources.Resources.Broadsword
-                    Return pic_res
-                Case "Buckler"
-                    pic_res = D2RIC.My.Resources.Resources.Nathrezimbuckler
-                    Return pic_res
-                Case "Butterfly"
-                    pic_res = D2RIC.My.Resources.Resources.Butterfly
-                    Return pic_res
-                Case "Chainmail"
-                    pic_res = D2RIC.My.Resources.Resources.Chainmail
-                    Return pic_res
-                Case "Circlet"
-                    pic_res = D2RIC.My.Resources.Resources.Circletofnobility
-                    Return pic_res
-                Case "Clarity"
-                    pic_res = D2RIC.My.Resources.Resources.Claritypotion
-                    Return pic_res
-                Case "Claymore"
-                    pic_res = D2RIC.My.Resources.Resources.Claymore
-                    Return pic_res
-                Case "Cloak"
-                    pic_res = D2RIC.My.Resources.Resources.Planeswalkerscloak
-                    Return pic_res
-                Case "Crystalys"
-                    pic_res = D2RIC.My.Resources.Resources.Crystalys
-                    Return pic_res
-                Case "Daedalus"
-                    pic_res = D2RIC.My.Resources.Resources.Burizadokyanon
-                    Return pic_res
-                Case "Dagon 1"
-                    pic_res = D2RIC.My.Resources.Resources.Dagon
-                    Return pic_res
-                Case "Dagon 2"
-                    pic_res = D2RIC.My.Resources.Resources.Dagon2
-                    Return pic_res
-                Case "Dagon 3"
-                    pic_res = D2RIC.My.Resources.Resources.Dagon3
-                    Return pic_res
-                Case "Dagon 4"
-                    pic_res = D2RIC.My.Resources.Resources.Dagon4
-                    Return pic_res
-                Case "Dagon 5"
-                    pic_res = D2RIC.My.Resources.Resources.Dagon5
-                    Return pic_res
-                Case "Demon Edge"
-                    pic_res = D2RIC.My.Resources.Resources.Demonedge
-                    Return pic_res
-                Case "Desolator"
-                    pic_res = D2RIC.My.Resources.Resources.Stygiandesolator
-                    Return pic_res
-                Case "Diffusal Blade 1"
-                    pic_res = D2RIC.My.Resources.Resources.Diffusalblade
-                    Return pic_res
-                Case "Diffusal Blade 2"
-                    pic_res = D2RIC.My.Resources.Resources.Diffusalblade2
-                    Return pic_res
-                Case "Divine Rapier"
-                    pic_res = D2RIC.My.Resources.Resources.Divinerapier
-                    Return pic_res
-                Case "Drum of Endurance"
-                    pic_res = D2RIC.My.Resources.Resources.Ancientjanggoofendurance
-                    Return pic_res
-                Case "Dust of Appearance"
-                    pic_res = D2RIC.My.Resources.Resources.Dustofappearance
-                    Return pic_res
-                Case "Eaglesong"
-                    pic_res = D2RIC.My.Resources.Resources.Eaglehorn
-                    Return pic_res
-                Case "Energy Booster"
-                    pic_res = D2RIC.My.Resources.Resources.Energybooster
-                    Return pic_res
-                Case "Ethereal Blade"
-                    pic_res = D2RIC.My.Resources.Resources.Etheral_Blade
-                    Return pic_res
-                Case "Eul's Scepter of Divinity"
-                    pic_res = D2RIC.My.Resources.Resources.Eulsscepterofdivinity
-                    Return pic_res
-                Case "Eye of Skadi"
-                    pic_res = D2RIC.My.Resources.Resources.Eyeofskadi
-                    Return pic_res
-                Case "Flying Courier"
-                    pic_res = D2RIC.My.Resources.Resources.Flyingcourier
-                    Return pic_res
-                Case "Force Staff"
-                    pic_res = D2RIC.My.Resources.Resources.Forcestaff
-                    Return pic_res
-                Case "Gauntlets of Strength"
-                    pic_res = D2RIC.My.Resources.Resources.Gauntletsofstrength
-                    Return pic_res
-                Case "Gem of True Sight"
-                    pic_res = D2RIC.My.Resources.Resources.Gemoftruesight
-                    Return pic_res
-                Case "Ghost Scepter"
-                    pic_res = D2RIC.My.Resources.Resources.Ghostscepter
-                    Return pic_res
-                Case "Gloves of Haste"
-                    pic_res = D2RIC.My.Resources.Resources.Glovesofhaste
-                    Return pic_res
-                Case "Hand of Midas"
-                    pic_res = D2RIC.My.Resources.Resources.Handofmidas
-                    Return pic_res
-                Case "Headdress"
-                    pic_res = D2RIC.My.Resources.Resources.Headdressofrejuvenation
-                    Return pic_res
-                Case "Healing Salve"
-                    pic_res = D2RIC.My.Resources.Resources.Healingsalve
-                    Return pic_res
-                Case "Heart of Tarrasque"
-                    pic_res = D2RIC.My.Resources.Resources.Heartoftarrasque
-                    Return pic_res
-                Case "Helm of Iron Will"
-                    pic_res = D2RIC.My.Resources.Resources.Helmofironwill
-                    Return pic_res
-                Case "Helm of the Dominator"
-                    pic_res = D2RIC.My.Resources.Resources.Helmofthedominator
-                    Return pic_res
-                Case "Hood of Defiance"
-                    pic_res = D2RIC.My.Resources.Resources.Hoodofdefiance
-                    Return pic_res
-                Case "Hyperstone"
-                    pic_res = D2RIC.My.Resources.Resources.Hyperstone
-                    Return pic_res
-                Case "Iron Branch"
-                    pic_res = D2RIC.My.Resources.Resources.Ironwoodbranch
-                    Return pic_res
-                Case "Javelin"
-                    pic_res = D2RIC.My.Resources.Resources.Javelin
-                    Return pic_res
-                Case "Linken's Sphere"
-                    pic_res = D2RIC.My.Resources.Resources.Linkenssphere
-                    Return pic_res
-                Case "Maelstrom"
-                    pic_res = D2RIC.My.Resources.Resources.Maelstrom
-                    Return pic_res
-                Case "Magic Stick"
-                    pic_res = D2RIC.My.Resources.Resources.Magicstick
-                    Return pic_res
-                Case "Magic Wand"
-                    pic_res = D2RIC.My.Resources.Resources.Magicwand
-                    Return pic_res
-                Case "Manta Style"
-                    pic_res = D2RIC.My.Resources.Resources.Mantastyle
-                    Return pic_res
-                Case "Mantle of Intelligence"
-                    pic_res = D2RIC.My.Resources.Resources.Mantleofintelligence
-                    Return pic_res
-                Case "Mask of Madness"
-                    pic_res = D2RIC.My.Resources.Resources.Maskofmadness
-                    Return pic_res
-                Case "Medallion of Courage"
-                    pic_res = D2RIC.My.Resources.Resources.Medallionofcourage
-                    Return pic_res
-                Case "Mekansm"
-                    pic_res = D2RIC.My.Resources.Resources.Mekansm
-                    Return pic_res
-                Case "Mithril Hammer"
-                    pic_res = D2RIC.My.Resources.Resources.Mithrilhammer
-                    Return pic_res
-                Case "Mjollnir"
-                    pic_res = D2RIC.My.Resources.Resources.Mjollnir
-                    Return pic_res
-                Case "Monkey King Bar"
-                    pic_res = D2RIC.My.Resources.Resources.Monkeykingbar
-                    Return pic_res
-                Case "Morbid Mask"
-                    pic_res = D2RIC.My.Resources.Resources.Maskofdeath
-                    Return pic_res
-                Case "Mystic Staff"
-                    pic_res = D2RIC.My.Resources.Resources.Mysticstaff
-                    Return pic_res
-                Case "Necronomicon 1"
-                    pic_res = D2RIC.My.Resources.Resources.Necronomicon
-                    Return pic_res
-                Case "Necronomicon 2"
-                    pic_res = D2RIC.My.Resources.Resources.Necronomicon2
-                    Return pic_res
-                Case "Necronomicon 3"
-                    pic_res = D2RIC.My.Resources.Resources.Necronomicon3
-                    Return pic_res
-                Case "Null Talisman"
-                    pic_res = D2RIC.My.Resources.Resources.Nulltalisman
-                    Return pic_res
-                Case "Oblivion Staff"
-                    pic_res = D2RIC.My.Resources.Resources.Oblivionstaff
-                    Return pic_res
-                Case "Observer Ward"
-                    pic_res = D2RIC.My.Resources.Resources.Observerwards
-                    Return pic_res
-                Case "Ogre Club"
-                    pic_res = D2RIC.My.Resources.Resources.Ogreaxe
-                    Return pic_res
-                Case "Orb of Venom"
-                    pic_res = D2RIC.My.Resources.Resources.OrbOfVenom
-                    Return pic_res
-                Case "Orchid Malevolence"
-                    pic_res = D2RIC.My.Resources.Resources.Orchidmalevolence
-                    Return pic_res
-                Case "Perseverance"
-                    pic_res = D2RIC.My.Resources.Resources.Perseverance
-                    Return pic_res
-                Case "Phase Boots"
-                    pic_res = D2RIC.My.Resources.Resources.Phaseboots
-                    Return pic_res
-                Case "Pipe of Insight"
-                    pic_res = D2RIC.My.Resources.Resources.Khadgarspipeofinsight
-                    Return pic_res
-                Case "Platemail"
-                    pic_res = D2RIC.My.Resources.Resources.Platemail
-                    Return pic_res
-                Case "Point Booster"
-                    pic_res = D2RIC.My.Resources.Resources.Pointbooster
-                    Return pic_res
-                Case "Poor Man's Shield"
-                    pic_res = D2RIC.My.Resources.Resources.Poormansshield
-                    Return pic_res
-                Case "Power Treads"
-                    pic_res = D2RIC.My.Resources.Resources.Powertreads
-                    Return pic_res
-                Case "Quarterstaff"
-                    pic_res = D2RIC.My.Resources.Resources.Quarterstaff
-                    Return pic_res
-                Case "Quelling Blade"
-                    pic_res = D2RIC.My.Resources.Resources.Quellingblade
-                    Return pic_res
-                Case "Radiance"
-                    pic_res = D2RIC.My.Resources.Resources.Radiance
-                    Return pic_res
-                Case "Reaver"
-                    pic_res = D2RIC.My.Resources.Resources.Messerschmidtsreaver
-                    Return pic_res
-                Case "Refresher Orb"
-                    pic_res = D2RIC.My.Resources.Resources.Refresherorb
-                    Return pic_res
-                Case "Ring of Basilius"
-                    pic_res = D2RIC.My.Resources.Resources.Ringofbasilius
-                    Return pic_res
-                Case "Ring of Health"
-                    pic_res = D2RIC.My.Resources.Resources.Ringofhealth
-                    Return pic_res
-                Case "Ring of Protection"
-                    pic_res = D2RIC.My.Resources.Resources.Ringofprotection
-                    Return pic_res
-                Case "Ring of Regen"
-                    pic_res = D2RIC.My.Resources.Resources.Ringofregeneration
-                    Return pic_res
-                Case "Robe of the Magi"
-                    pic_res = D2RIC.My.Resources.Resources.Robeofthemagi
-                    Return pic_res
-                Case "Sacred Relic"
-                    pic_res = D2RIC.My.Resources.Resources.Sacredrelic
-                    Return pic_res
-                Case "Sage's Mask"
-                    pic_res = D2RIC.My.Resources.Resources.Sobimask
-                    Return pic_res
-                Case "Sange"
-                    pic_res = D2RIC.My.Resources.Resources.Sange
-                    Return pic_res
-                Case "Sange and Yasha"
-                    pic_res = D2RIC.My.Resources.Resources.Sangeandyasha
-                    Return pic_res
-                Case "Satanic"
-                    pic_res = D2RIC.My.Resources.Resources.Satanic
-                    Return pic_res
-                Case "Scythe of Vyse"
-                    pic_res = D2RIC.My.Resources.Resources.Guinsoosscytheofvyse
-                    Return pic_res
-                Case "Sentry Ward"
-                    pic_res = D2RIC.My.Resources.Resources.Sentrywards
-                    Return pic_res
-                Case "Shadow Blade"
-                    pic_res = D2RIC.My.Resources.Resources.Lotharsedge
-                    Return pic_res
-                Case "Shiva's Guard"
-                    pic_res = D2RIC.My.Resources.Resources.Shivasguard
-                    Return pic_res
-                Case "Skull Basher"
-                    pic_res = D2RIC.My.Resources.Resources.Craniumbasher
-                    Return pic_res
-                Case "Slippers of Agility"
-                    pic_res = D2RIC.My.Resources.Resources.Slippersofagility
-                    Return pic_res
-                Case "Smoke of Deceit"
-                    pic_res = D2RIC.My.Resources.Resources.SmokeOfDeceit
-                    Return pic_res
-                Case "Soul Booster"
-                    pic_res = D2RIC.My.Resources.Resources.Soulbooster
-                    Return pic_res
-                Case "Soul Ring"
-                    pic_res = D2RIC.My.Resources.Resources.Soul_Ring
-                    Return pic_res
-                Case "Staff of Wizardry"
-                    pic_res = D2RIC.My.Resources.Resources.Staffofwizardry
-                    Return pic_res
-                Case "Stout Shield"
-                    pic_res = D2RIC.My.Resources.Resources.Stoutshield
-                    Return pic_res
-                Case "Talisman of Evasion"
-                    pic_res = D2RIC.My.Resources.Resources.Talismanofevasion
-                    Return pic_res
-                Case "Tango"
-                    pic_res = D2RIC.My.Resources.Resources.Ancienttangoofessifation
-                    Return pic_res
-                Case "Town Portal Scroll"
-                    pic_res = D2RIC.My.Resources.Resources.Townportal
-                    Return pic_res
-                Case "Ultimate Orb"
-                    pic_res = D2RIC.My.Resources.Resources.Ultimateorb
-                    Return pic_res
-                Case "Urn of Shadows"
-                    pic_res = D2RIC.My.Resources.Resources.Urnofshadows
-                    Return pic_res
-                Case "Vanguard"
-                    pic_res = D2RIC.My.Resources.Resources.Vanguard
-                    Return pic_res
-                Case "Veil of Discord"
-                    pic_res = D2RIC.My.Resources.Resources.Fatalbonds
-                    Return pic_res
-                Case "Vitality Booster"
-                    pic_res = D2RIC.My.Resources.Resources.Vitalitybooster
-                    Return pic_res
-                Case "Vladmir's Offering"
-                    pic_res = D2RIC.My.Resources.Resources.Vladimirsoffering
-                    Return pic_res
-                Case "Void Stone"
-                    pic_res = D2RIC.My.Resources.Resources.Voidstone
-                    Return pic_res
-                Case "Wraith Band"
-                    pic_res = D2RIC.My.Resources.Resources.Wraithband
-                    Return pic_res
-                Case "Yasha"
-                    pic_res = D2RIC.My.Resources.Resources.Yasha
-                    Return pic_res
-                Case "Abyssal Blade"
-                    pic_res = D2RIC.My.Resources.Resources.AbyssalBlade
-                    Return pic_res
-                Case "Heaven's Halberd"
-                    pic_res = D2RIC.My.Resources.Resources.Halberd
-                    Return pic_res
-                Case "Ring of Aquila"
-                    pic_res = D2RIC.My.Resources.Resources.RingofAquila
-                    Return pic_res
-                Case "Rod of Atos"
-                    pic_res = D2RIC.My.Resources.Resources.RodofAtos
-                    Return pic_res
-                Case "Tranquil Boots"
-                    pic_res = D2RIC.My.Resources.Resources.TranquilBoots
+                    pic_res = ImageList1.Images(144)
+                    Return pic_res
+                    'Case "Bloodstone"
+                    '    pic_res = Bloodstone
+                    '    Return pic_res
+                    'Case "Boots of Elvenskin"
+                    '    pic_res = Bootsofelvenskin
+                    '    Return pic_res
+                    'Case "Boots of Speed"
+                    '    pic_res = Bootsofspeed
+                    '    Return pic_res
+                    'Case "Boots of Travel"
+                    '    pic_res = Bootsoftravel
+                    '    Return pic_res
+                    'Case "Bottle"
+                    '    pic_res = Bottle
+                    '    Return pic_res
+                    'Case "Bracer"
+                    '    pic_res = Bracer
+                    '    Return pic_res
+                    'Case "Broadsword"
+                    '    pic_res = Broadsword
+                    '    Return pic_res
+                    'Case "Buckler"
+                    '    pic_res = Nathrezimbuckler
+                    '    Return pic_res
+                    'Case "Butterfly"
+                    '    pic_res = Butterfly
+                    '    Return pic_res
+                    'Case "Chainmail"
+                    '    pic_res = Chainmail
+                    '    Return pic_res
+                    'Case "Circlet"
+                    '    pic_res = Circletofnobility
+                    '    Return pic_res
+                    'Case "Clarity"
+                    '    pic_res = Claritypotion
+                    '    Return pic_res
+                    'Case "Claymore"
+                    '    pic_res = Claymore
+                    '    Return pic_res
+                    'Case "Cloak"
+                    '    pic_res = Planeswalkerscloak
+                    '    Return pic_res
+                    'Case "Crystalys"
+                    '    pic_res = Crystalys
+                    '    Return pic_res
+                    'Case "Daedalus"
+                    '    pic_res = Burizadokyanon
+                    '    Return pic_res
+                    'Case "Dagon 1"
+                    '    pic_res = Dagon
+                    '    Return pic_res
+                    'Case "Dagon 2"
+                    '    pic_res = Dagon2
+                    '    Return pic_res
+                    'Case "Dagon 3"
+                    '    pic_res = Dagon3
+                    '    Return pic_res
+                    'Case "Dagon 4"
+                    '    pic_res = Dagon4
+                    '    Return pic_res
+                    'Case "Dagon 5"
+                    '    pic_res = Dagon5
+                    '    Return pic_res
+                    'Case "Demon Edge"
+                    '    pic_res = Demonedge
+                    '    Return pic_res
+                    'Case "Desolator"
+                    '    pic_res = Stygiandesolator
+                    '    Return pic_res
+                    'Case "Diffusal Blade 1"
+                    '    pic_res = Diffusalblade
+                    '    Return pic_res
+                    'Case "Diffusal Blade 2"
+                    '    pic_res = Diffusalblade2
+                    '    Return pic_res
+                    'Case "Divine Rapier"
+                    '    pic_res = Divinerapier
+                    '    Return pic_res
+                    'Case "Drum of Endurance"
+                    '    pic_res = Ancientjanggoofendurance
+                    '    Return pic_res
+                    'Case "Dust of Appearance"
+                    '    pic_res = Dustofappearance
+                    '    Return pic_res
+                    'Case "Eaglesong"
+                    '    pic_res = Eaglehorn
+                    '    Return pic_res
+                    'Case "Energy Booster"
+                    '    pic_res = Energybooster
+                    '    Return pic_res
+                    'Case "Ethereal Blade"
+                    '    pic_res = Etheral_Blade
+                    '    Return pic_res
+                    'Case "Eul's Scepter of Divinity"
+                    '    pic_res = Eulsscepterofdivinity
+                    '    Return pic_res
+                    'Case "Eye of Skadi"
+                    '    pic_res = Eyeofskadi
+                    '    Return pic_res
+                    'Case "Flying Courier"
+                    '    pic_res = Flyingcourier
+                    '    Return pic_res
+                    'Case "Force Staff"
+                    '    pic_res = Forcestaff
+                    '    Return pic_res
+                    'Case "Gauntlets of Strength"
+                    '    pic_res = Gauntletsofstrength
+                    '    Return pic_res
+                    'Case "Gem of True Sight"
+                    '    pic_res = Gemoftruesight
+                    '    Return pic_res
+                    'Case "Ghost Scepter"
+                    '    pic_res = Ghostscepter
+                    '    Return pic_res
+                    'Case "Gloves of Haste"
+                    '    pic_res = Glovesofhaste
+                    '    Return pic_res
+                    'Case "Hand of Midas"
+                    '    pic_res = Handofmidas
+                    '    Return pic_res
+                    'Case "Headdress"
+                    '    pic_res = Headdressofrejuvenation
+                    '    Return pic_res
+                    'Case "Healing Salve"
+                    '    pic_res = Healingsalve
+                    '    Return pic_res
+                    'Case "Heart of Tarrasque"
+                    '    pic_res = Heartoftarrasque
+                    '    Return pic_res
+                    'Case "Helm of Iron Will"
+                    '    pic_res = Helmofironwill
+                    '    Return pic_res
+                    'Case "Helm of the Dominator"
+                    '    pic_res = Helmofthedominator
+                    '    Return pic_res
+                    'Case "Hood of Defiance"
+                    '    pic_res = Hoodofdefiance
+                    '    Return pic_res
+                    'Case "Hyperstone"
+                    '    pic_res = Hyperstone
+                    '    Return pic_res
+                    'Case "Iron Branch"
+                    '    pic_res = Ironwoodbranch
+                    '    Return pic_res
+                    'Case "Javelin"
+                    '    pic_res = Javelin
+                    '    Return pic_res
+                    'Case "Linken's Sphere"
+                    '    pic_res = Linkenssphere
+                    '    Return pic_res
+                    'Case "Maelstrom"
+                    '    pic_res = Maelstrom
+                    '    Return pic_res
+                    'Case "Magic Stick"
+                    '    pic_res = Magicstick
+                    '    Return pic_res
+                    'Case "Magic Wand"
+                    '    pic_res = Magicwand
+                    '    Return pic_res
+                    'Case "Manta Style"
+                    '    pic_res = Mantastyle
+                    '    Return pic_res
+                    'Case "Mantle of Intelligence"
+                    '    pic_res = Mantleofintelligence
+                    '    Return pic_res
+                    'Case "Mask of Madness"
+                    '    pic_res = Maskofmadness
+                    '    Return pic_res
+                    'Case "Medallion of Courage"
+                    '    pic_res = Medallionofcourage
+                    '    Return pic_res
+                    'Case "Mekansm"
+                    '    pic_res = Mekansm
+                    '    Return pic_res
+                    'Case "Mithril Hammer"
+                    '    pic_res = Mithrilhammer
+                    '    Return pic_res
+                    'Case "Mjollnir"
+                    '    pic_res = Mjollnir
+                    '    Return pic_res
+                    'Case "Monkey King Bar"
+                    '    pic_res = Monkeykingbar
+                    '    Return pic_res
+                    'Case "Morbid Mask"
+                    '    pic_res = Maskofdeath
+                    '    Return pic_res
+                    'Case "Mystic Staff"
+                    '    pic_res = Mysticstaff
+                    '    Return pic_res
+                    'Case "Necronomicon 1"
+                    '    pic_res = Necronomicon
+                    '    Return pic_res
+                    'Case "Necronomicon 2"
+                    '    pic_res = Necronomicon2
+                    '    Return pic_res
+                    'Case "Necronomicon 3"
+                    '    pic_res = Necronomicon3
+                    '    Return pic_res
+                    'Case "Null Talisman"
+                    '    pic_res = Nulltalisman
+                    '    Return pic_res
+                    'Case "Oblivion Staff"
+                    '    pic_res = Oblivionstaff
+                    '    Return pic_res
+                    'Case "Observer Ward"
+                    '    pic_res = Observerwards
+                    '    Return pic_res
+                    'Case "Ogre Club"
+                    '    pic_res = Ogreaxe
+                    '    Return pic_res
+                    'Case "Orb of Venom"
+                    '    pic_res = OrbOfVenom
+                    '    Return pic_res
+                    'Case "Orchid Malevolence"
+                    '    pic_res = Orchidmalevolence
+                    '    Return pic_res
+                    'Case "Perseverance"
+                    '    pic_res = Perseverance
+                    '    Return pic_res
+                    'Case "Phase Boots"
+                    '    pic_res = Phaseboots
+                    '    Return pic_res
+                    'Case "Pipe of Insight"
+                    '    pic_res = Khadgarspipeofinsight
+                    '    Return pic_res
+                    'Case "Platemail"
+                    '    pic_res = Platemail
+                    '    Return pic_res
+                    'Case "Point Booster"
+                    '    pic_res = Pointbooster
+                    '    Return pic_res
+                    'Case "Poor Man's Shield"
+                    '    pic_res = Poormansshield
+                    '    Return pic_res
+                    'Case "Power Treads"
+                    '    pic_res = Powertreads
+                    '    Return pic_res
+                    'Case "Quarterstaff"
+                    '    pic_res = Quarterstaff
+                    '    Return pic_res
+                    'Case "Quelling Blade"
+                    '    pic_res = Quellingblade
+                    '    Return pic_res
+                    'Case "Radiance"
+                    '    pic_res = Radiance
+                    '    Return pic_res
+                    'Case "Reaver"
+                    '    pic_res = Messerschmidtsreaver
+                    '    Return pic_res
+                    'Case "Refresher Orb"
+                    '    pic_res = Refresherorb
+                    '    Return pic_res
+                    'Case "Ring of Basilius"
+                    '    pic_res = Ringofbasilius
+                    '    Return pic_res
+                    'Case "Ring of Health"
+                    '    pic_res = Ringofhealth
+                    '    Return pic_res
+                    'Case "Ring of Protection"
+                    '    pic_res = Ringofprotection
+                    '    Return pic_res
+                    'Case "Ring of Regen"
+                    '    pic_res = Ringofregeneration
+                    '    Return pic_res
+                    'Case "Robe of the Magi"
+                    '    pic_res = Robeofthemagi
+                    '    Return pic_res
+                    'Case "Sacred Relic"
+                    '    pic_res = Sacredrelic
+                    '    Return pic_res
+                    'Case "Sage's Mask"
+                    '    pic_res = Sobimask
+                    '    Return pic_res
+                    'Case "Sange"
+                    '    pic_res = Sange
+                    '    Return pic_res
+                    'Case "Sange and Yasha"
+                    '    pic_res = Sangeandyasha
+                    '    Return pic_res
+                    'Case "Satanic"
+                    '    pic_res = Satanic
+                    '    Return pic_res
+                    'Case "Scythe of Vyse"
+                    '    pic_res = Guinsoosscytheofvyse
+                    '    Return pic_res
+                    'Case "Sentry Ward"
+                    '    pic_res = Sentrywards
+                    '    Return pic_res
+                    'Case "Shadow Blade"
+                    '    pic_res = Lotharsedge
+                    '    Return pic_res
+                    'Case "Shiva's Guard"
+                    '    pic_res = Shivasguard
+                    '    Return pic_res
+                    'Case "Skull Basher"
+                    '    pic_res = Craniumbasher
+                    '    Return pic_res
+                    'Case "Slippers of Agility"
+                    '    pic_res = Slippersofagility
+                    '    Return pic_res
+                    'Case "Smoke of Deceit"
+                    '    pic_res = SmokeOfDeceit
+                    '    Return pic_res
+                    'Case "Soul Booster"
+                    '    pic_res = Soulbooster
+                    '    Return pic_res
+                    'Case "Soul Ring"
+                    '    pic_res = Soul_Ring
+                    '    Return pic_res
+                    'Case "Staff of Wizardry"
+                    '    pic_res = Staffofwizardry
+                    '    Return pic_res
+                    'Case "Stout Shield"
+                    '    pic_res = Stoutshield
+                    '    Return pic_res
+                    'Case "Talisman of Evasion"
+                    '    pic_res = Talismanofevasion
+                    '    Return pic_res
+                    'Case "Tango"
+                    '    pic_res = Ancienttangoofessifation
+                    '    Return pic_res
+                    'Case "Town Portal Scroll"
+                    '    pic_res = Townportal
+                    '    Return pic_res
+                    'Case "Ultimate Orb"
+                    '    pic_res = Ultimateorb
+                    '    Return pic_res
+                    'Case "Urn of Shadows"
+                    '    pic_res = Urnofshadows
+                    '    Return pic_res
+                    'Case "Vanguard"
+                    '    pic_res = Vanguard
+                    '    Return pic_res
+                    'Case "Veil of Discord"
+                    '    pic_res = Fatalbonds
+                    '    Return pic_res
+                    'Case "Vitality Booster"
+                    '    pic_res = Vitalitybooster
+                    '    Return pic_res
+                    'Case "Vladmir's Offering"
+                    '    pic_res = Vladimirsoffering
+                    '    Return pic_res
+                    'Case "Void Stone"
+                    '    pic_res = Voidstone
+                    '    Return pic_res
+                    'Case "Wraith Band"
+                    '    pic_res = Wraithband
+                    '    Return pic_res
+                    'Case "Yasha"
+                    '    pic_res = Yasha
+                    '    Return pic_res
+                    'Case "Abyssal Blade"
+                    '    pic_res = AbyssalBlade
+                    '    Return pic_res
+                    'Case "Heaven's Halberd"
+                    '    pic_res = Halberd
+                    '    Return pic_res
+                    'Case "Ring of Aquila"
+                    '    pic_res = RingofAquila
+                    '    Return pic_res
+                    'Case "Rod of Atos"
+                    '    pic_res = RodofAtos
+                    '    Return pic_res
+                    'Case "Tranquil Boots"
+                    '    pic_res = TranquilBoots
                     Return pic_res
                 Case Else
                     pic_res = D2RIC.My.Resources.Resources.none
@@ -2275,406 +2377,406 @@ Public Class FormMain
         ElseIf ComboBoxItemIcons.Text = "HoN" Then
             Select Case item_name
                 Case "Blink Dagger"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Portal_Key
-                    Return pic_res
-                Case "Blades of Attack"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Punchdagger
-                    Return pic_res
-                Case "Aghanim's Scepter"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Staff_Of_The_Master
-                    Return pic_res
-                Case "Animal Courier"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Monkey_Courier
-                    Return pic_res
-                Case "Arcane Boots"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Ring_Of_Sorcery
-                    Return pic_res
-                Case "Armlet"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Insanitarius
-                    Return pic_res
-                Case "Assault Cuirass"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Daemonic_Breastplate
-                    Return pic_res
-                Case "Battle Fury"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Runed_Axe
-                    Return pic_res
-                Case "Belt of Strength"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Bolstering_Armband
-                    Return pic_res
-                Case "Black King Bar"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Shrunken_Head
-                    Return pic_res
-                Case "Blade Mail"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Barbed_Armor
-                    Return pic_res
-                Case "Blade of Alacrity"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Quickblade
-                    Return pic_res
-                Case "Bloodstone"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Sacrificial_Stone
-                    Return pic_res
-                Case "Boots of Elvenskin"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Fleet_Feet
-                    Return pic_res
-                Case "Boots of Speed"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Marchers
-                    Return pic_res
-                Case "Boots of Travel"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Post_Haste
-                    Return pic_res
-                Case "Bottle"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Bottle
-                    Return pic_res
-                Case "Bracer"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Fortified_Bracelet
-                    Return pic_res
-                Case "Broadsword"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Broadsword
-                    Return pic_res
-                Case "Buckler"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Shield_Of_The_Five
-                    Return pic_res
-                Case "Butterfly"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Wingbow
-                    Return pic_res
-                Case "Chainmail"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Ringmail
-                    Return pic_res
-                Case "Circlet"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Pretenders_Crown
-                    Return pic_res
-                Case "Clarity"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Mana_Potion
-                    Return pic_res
-                Case "Claymore"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Bastard_Sword
-                    Return pic_res
-                Case "Cloak"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Mystic_Vestments
-                    Return pic_res
-                Case "Crystalys"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Riftshards
-                    Return pic_res
-                Case "Daedalus"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Daedalus
-                    Return pic_res
-                Case "Dagon 1"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Codex
-                    Return pic_res
-                Case "Dagon 2"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Codex2
-                    Return pic_res
-                Case "Dagon 3"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Codex3
-                    Return pic_res
-                Case "Dagon 4"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Codex4
-                    Return pic_res
-                Case "Dagon 5"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Codex5
-                    Return pic_res
-                Case "Demon Edge"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Slayer
-                    Return pic_res
-                Case "Desolator"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Shieldbreaker
-                    Return pic_res
-                Case "Diffusal Blade 1"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Nullfire_Blade
-                    Return pic_res
-                Case "Diffusal Blade 2"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Nullfire_Blade2
-                    Return pic_res
-                Case "Divine Rapier"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Doombringer
-                    Return pic_res
-                Case "Drum of Endurance"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Drum_of_Endurance
-                    Return pic_res
-                Case "Dust of Appearance"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Dust_Of_Revelation
-                    Return pic_res
-                Case "Eaglesong"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Dancing_Blade
-                    Return pic_res
-                Case "Energy Booster"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Pickled_Brain
-                    Return pic_res
-                Case "Ethereal Blade"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ethereal_Blade
-                    Return pic_res
-                Case "Eul's Scepter of Divinity"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Stormspirit
-                    Return pic_res
-                Case "Eye of Skadi"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Frostwolfs_Skull
-                    Return pic_res
-                Case "Flying Courier"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Winged_Courier
-                    Return pic_res
-                Case "Force Staff"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Tablet_of_Command
-                    Return pic_res
-                Case "Gauntlets of Strength"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Crushing_Claws
-                    Return pic_res
-                Case "Gem of True Sight"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Bound_Eye
-                    Return pic_res
-                Case "Ghost Scepter"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Void_Talisman
-                    Return pic_res
-                Case "Gloves of Haste"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Gloves_of_the_Swift
-                    Return pic_res
-                Case "Hand of Midas"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Alchemist_Bones
-                    Return pic_res
-                Case "Headdress"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Refreshing_Ornament
-                    Return pic_res
-                Case "Healing Salve"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Health_Potion
-                    Return pic_res
-                Case "Heart of Tarrasque"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Behemoths_Hearth
-                    Return pic_res
-                Case "Helm of Iron Will"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Helm_Of_The_Victim
-                    Return pic_res
-                Case "Helm of the Dominator"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Whispering_Helm
-                    Return pic_res
-                Case "Hood of Defiance"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Shamans_Headress
-                    Return pic_res
-                Case "Hyperstone"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Warpcleft
-                    Return pic_res
-                Case "Iron Branch"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Minor_Totem
-                    Return pic_res
-                Case "Javelin"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Halberd
-                    Return pic_res
-                Case "Linken's Sphere"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Null_Stone
-                    Return pic_res
-                Case "Maelstrom"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Thunderclaw
-                    Return pic_res
-                Case "Magic Stick"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Mana_Battery
-                    Return pic_res
-                Case "Magic Wand"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Power_Supply
-                    Return pic_res
-                Case "Manta Style"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Geometers_Bane
-                    Return pic_res
-                Case "Mantle of Intelligence"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Mark_Of_The_Novice
-                    Return pic_res
-                Case "Mask of Madness"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Elder_Parasite
-                    Return pic_res
-                Case "Medallion of Courage"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Medallion_of_Courage
-                    Return pic_res
-                Case "Mekansm"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Astrolabe
-                    Return pic_res
-                Case "Mithril Hammer"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Warhammer
-                    Return pic_res
-                Case "Mjollnir"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Charged_Hammer
-                    Return pic_res
-                Case "Monkey King Bar"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Savage_Mace
-                    Return pic_res
-                Case "Morbid Mask"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Hungry_Spirit
-                    Return pic_res
-                Case "Mystic Staff"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Acolytes_Staff
-                    Return pic_res
-                Case "Necronomicon 1"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Puzzlebox
-                    Return pic_res
-                Case "Necronomicon 2"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Puzzlebox2
-                    Return pic_res
-                Case "Necronomicon 3"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Puzzlebox3
-                    Return pic_res
-                Case "Null Talisman"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Talisman_Of_Exile
-                    Return pic_res
-                Case "Oblivion Staff"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Great_Arcana
-                    Return pic_res
-                Case "Observer Ward"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Wards_of_Sight
-                    Return pic_res
-                Case "Ogre Club"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Mighty_Blade
-                    Return pic_res
-                Case "Orb of Venom"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Orb_of_Venom
-                    Return pic_res
-                Case "Orchid Malevolence"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Hellflower
-                    Return pic_res
-                Case "Perseverance"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Sustainer
-                    Return pic_res
-                Case "Phase Boots"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Enhanced_Marchers
-                    Return pic_res
-                Case "Pipe of Insight"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Barrier_Idol
-                    Return pic_res
-                Case "Platemail"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Platemail
-                    Return pic_res
-                Case "Point Booster"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Glowstone
-                    Return pic_res
-                Case "Poor Man's Shield"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Iron_Shield
-                    Return pic_res
-                Case "Power Treads"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Steamboots_Strength
-                    Return pic_res
-                Case "Quarterstaff"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Steamstaff
-                    Return pic_res
-                Case "Quelling Blade"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Loggers_Hatchet
-                    Return pic_res
-                Case "Radiance"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Mock_of_Brilliance
-                    Return pic_res
-                Case "Reaver"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Axe_Of_The_Malphai
-                    Return pic_res
-                Case "Refresher Orb"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Restoration_Stone
-                    Return pic_res
-                Case "Ring of Basilius"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Ring_Of_The_Teacher
-                    Return pic_res
-                Case "Ring of Health"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Lifetube
-                    Return pic_res
-                Case "Ring of Protection"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Guardian_Ring
-                    Return pic_res
-                Case "Ring of Regen"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Trinket_Of_Restoration
-                    Return pic_res
-                Case "Robe of the Magi"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Apprentices_Robe
-                    Return pic_res
-                Case "Sacred Relic"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Sword_Of_The_High
-                    Return pic_res
-                Case "Sage's Mask"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Scarab
-                    Return pic_res
-                Case "Sange"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Icebrand
-                    Return pic_res
-                Case "Sange and Yasha"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Frostburn
-                    Return pic_res
-                Case "Satanic"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Symbol_Of_Rage
-                    Return pic_res
-                Case "Scythe of Vyse"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Kuldras_Sheepstick
-                    Return pic_res
-                Case "Sentry Ward"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Wards_of_Revelation
-                    Return pic_res
-                Case "Shadow Blade"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Shroud_Of_The_Assasin
-                    Return pic_res
-                Case "Shiva's Guard"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Frostfield_Plate
-                    Return pic_res
-                Case "Skull Basher"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Brutalizer
-                    Return pic_res
-                Case "Slippers of Agility"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Duck_Boots
-                    Return pic_res
-                Case "Smoke of Deceit"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit
-                    Return pic_res
-                Case "Soul Booster"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Icon_Of_The_Goddess
-                    Return pic_res
-                Case "Soul Ring"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Blood_Chalice
-                    Return pic_res
-                Case "Staff of Wizardry"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Neophytes_Book
-                    Return pic_res
-                Case "Stout Shield"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Iron_Buckler
-                    Return pic_res
-                Case "Talisman of Evasion"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Snake_Bracelet
-                    Return pic_res
-                Case "Tango"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Runes_Of_The_Blight
-                    Return pic_res
-                Case "Town Portal Scroll"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Homecoming_Stone
-                    Return pic_res
-                Case "Ultimate Orb"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Blessed_Orb
-                    Return pic_res
-                Case "Urn of Shadows"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Urn_of_Shadows
-                    Return pic_res
-                Case "Vanguard"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Helm_Of_The_Black_Legion
-                    Return pic_res
-                Case "Veil of Discord"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Veil_of_Discord
-                    Return pic_res
-                Case "Vitality Booster"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Beastheart
-                    Return pic_res
-                Case "Vladmir's Offering"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Abyssal_Skull
-                    Return pic_res
-                Case "Void Stone"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Manatube
-                    Return pic_res
-                Case "Wraith Band"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Soulscream_Ring
-                    Return pic_res
-                Case "Yasha"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Firebrand
-                    Return pic_res
-                Case "Abyssal Blade"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Abyssal_Blade
-                    Return pic_res
-                Case "Heaven's Halberd"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd
-                    Return pic_res
-                Case "Ring of Aquila"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Aquila
-                    Return pic_res
-                Case "Rod of Atos"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Rod_of_Atos
-                    Return pic_res
-                Case "Tranquil Boots"
-                    pic_res = D2RIC.My.Resources.Resources.HoN_Striders
+                    '    pic_res = HoN_Portal_Key
+                    '    Return pic_res
+                    'Case "Blades of Attack"
+                    '    pic_res = HoN_Punchdagger
+                    '    Return pic_res
+                    'Case "Aghanim's Scepter"
+                    '    pic_res = HoN_Staff_Of_The_Master
+                    '    Return pic_res
+                    'Case "Animal Courier"
+                    '    pic_res = HoN_Monkey_Courier
+                    '    Return pic_res
+                    'Case "Arcane Boots"
+                    '    pic_res = HoN_Ring_Of_Sorcery
+                    '    Return pic_res
+                    'Case "Armlet"
+                    '    pic_res = HoN_Insanitarius
+                    '    Return pic_res
+                    'Case "Assault Cuirass"
+                    '    pic_res = HoN_Daemonic_Breastplate
+                    '    Return pic_res
+                    'Case "Battle Fury"
+                    '    pic_res = HoN_Runed_Axe
+                    '    Return pic_res
+                    'Case "Belt of Strength"
+                    '    pic_res = HoN_Bolstering_Armband
+                    '    Return pic_res
+                    'Case "Black King Bar"
+                    '    pic_res = HoN_Shrunken_Head
+                    '    Return pic_res
+                    'Case "Blade Mail"
+                    '    pic_res = HoN_Barbed_Armor
+                    '    Return pic_res
+                    'Case "Blade of Alacrity"
+                    '    pic_res = HoN_Quickblade
+                    '    Return pic_res
+                    'Case "Bloodstone"
+                    '    pic_res = HoN_Sacrificial_Stone
+                    '    Return pic_res
+                    'Case "Boots of Elvenskin"
+                    '    pic_res = HoN_Fleet_Feet
+                    '    Return pic_res
+                    'Case "Boots of Speed"
+                    '    pic_res = HoN_Marchers
+                    '    Return pic_res
+                    'Case "Boots of Travel"
+                    '    pic_res = HoN_Post_Haste
+                    '    Return pic_res
+                    'Case "Bottle"
+                    '    pic_res = HoN_Bottle
+                    '    Return pic_res
+                    'Case "Bracer"
+                    '    pic_res = HoN_Fortified_Bracelet
+                    '    Return pic_res
+                    'Case "Broadsword"
+                    '    pic_res = HoN_Broadsword
+                    '    Return pic_res
+                    'Case "Buckler"
+                    '    pic_res = HoN_Shield_Of_The_Five
+                    '    Return pic_res
+                    'Case "Butterfly"
+                    '    pic_res = HoN_Wingbow
+                    '    Return pic_res
+                    'Case "Chainmail"
+                    '    pic_res = HoN_Ringmail
+                    '    Return pic_res
+                    'Case "Circlet"
+                    '    pic_res = HoN_Pretenders_Crown
+                    '    Return pic_res
+                    'Case "Clarity"
+                    '    pic_res = HoN_Mana_Potion
+                    '    Return pic_res
+                    'Case "Claymore"
+                    '    pic_res = HoN_Bastard_Sword
+                    '    Return pic_res
+                    'Case "Cloak"
+                    '    pic_res = HoN_Mystic_Vestments
+                    '    Return pic_res
+                    'Case "Crystalys"
+                    '    pic_res = HoN_Riftshards
+                    '    Return pic_res
+                    'Case "Daedalus"
+                    '    pic_res = ImageList1.Images(28)
+                    '    Return pic_res
+                    'Case "Dagon 1"
+                    '    pic_res = HoN_Codex
+                    '    Return pic_res
+                    'Case "Dagon 2"
+                    '    pic_res = HoN_Codex2
+                    '    Return pic_res
+                    'Case "Dagon 3"
+                    '    pic_res = HoN_Codex3
+                    '    Return pic_res
+                    'Case "Dagon 4"
+                    '    pic_res = HoN_Codex4
+                    '    Return pic_res
+                    'Case "Dagon 5"
+                    '    pic_res = HoN_Codex5
+                    '    Return pic_res
+                    'Case "Demon Edge"
+                    '    pic_res = HoN_Slayer
+                    '    Return pic_res
+                    'Case "Desolator"
+                    '    pic_res = HoN_Shieldbreaker
+                    '    Return pic_res
+                    'Case "Diffusal Blade 1"
+                    '    pic_res = HoN_Nullfire_Blade
+                    '    Return pic_res
+                    'Case "Diffusal Blade 2"
+                    '    pic_res = HoN_Nullfire_Blade2
+                    '    Return pic_res
+                    'Case "Divine Rapier"
+                    '    pic_res = HoN_Doombringer
+                    '    Return pic_res
+                    'Case "Drum of Endurance"
+                    '    pic_res = ImageList1.Images(39)
+                    '    Return pic_res
+                    'Case "Dust of Appearance"
+                    '    pic_res = HoN_Dust_Of_Revelation
+                    '    Return pic_res
+                    'Case "Eaglesong"
+                    '    pic_res = HoN_Dancing_Blade
+                    '    Return pic_res
+                    'Case "Energy Booster"
+                    '    pic_res = HoN_Pickled_Brain
+                    '    Return pic_res
+                    'Case "Ethereal Blade"
+                    '    pic_res = ImageList1.Images(43)
+                    '    Return pic_res
+                    'Case "Eul's Scepter of Divinity"
+                    '    pic_res = HoN_Stormspirit
+                    '    Return pic_res
+                    'Case "Eye of Skadi"
+                    '    pic_res = HoN_Frostwolfs_Skull
+                    '    Return pic_res
+                    'Case "Flying Courier"
+                    '    pic_res = HoN_Winged_Courier
+                    '    Return pic_res
+                    'Case "Force Staff"
+                    '    pic_res = HoN_Tablet_of_Command
+                    '    Return pic_res
+                    'Case "Gauntlets of Strength"
+                    '    pic_res = HoN_Crushing_Claws
+                    '    Return pic_res
+                    'Case "Gem of True Sight"
+                    '    pic_res = HoN_Bound_Eye
+                    '    Return pic_res
+                    'Case "Ghost Scepter"
+                    '    pic_res = HoN_Void_Talisman
+                    '    Return pic_res
+                    'Case "Gloves of Haste"
+                    '    pic_res = HoN_Gloves_of_the_Swift
+                    '    Return pic_res
+                    'Case "Hand of Midas"
+                    '    pic_res = HoN_Alchemist_Bones
+                    '    Return pic_res
+                    'Case "Headdress"
+                    '    pic_res = HoN_Refreshing_Ornament
+                    '    Return pic_res
+                    'Case "Healing Salve"
+                    '    pic_res = HoN_Health_Potion
+                    '    Return pic_res
+                    'Case "Heart of Tarrasque"
+                    '    pic_res = HoN_Behemoths_Hearth
+                    '    Return pic_res
+                    'Case "Helm of Iron Will"
+                    '    pic_res = HoN_Helm_Of_The_Victim
+                    '    Return pic_res
+                    'Case "Helm of the Dominator"
+                    '    pic_res = HoN_Whispering_Helm
+                    '    Return pic_res
+                    'Case "Hood of Defiance"
+                    '    pic_res = HoN_Shamans_Headress
+                    '    Return pic_res
+                    'Case "Hyperstone"
+                    '    pic_res = HoN_Warpcleft
+                    '    Return pic_res
+                    'Case "Iron Branch"
+                    '    pic_res = HoN_Minor_Totem
+                    '    Return pic_res
+                    'Case "Javelin"
+                    '    pic_res = HoN_Halberd
+                    '    Return pic_res
+                    'Case "Linken's Sphere"
+                    '    pic_res = HoN_Null_Stone
+                    '    Return pic_res
+                    'Case "Maelstrom"
+                    '    pic_res = HoN_Thunderclaw
+                    '    Return pic_res
+                    'Case "Magic Stick"
+                    '    pic_res = HoN_Mana_Battery
+                    '    Return pic_res
+                    'Case "Magic Wand"
+                    '    pic_res = HoN_Power_Supply
+                    '    Return pic_res
+                    'Case "Manta Style"
+                    '    pic_res = HoN_Geometers_Bane
+                    '    Return pic_res
+                    'Case "Mantle of Intelligence"
+                    '    pic_res = HoN_Mark_Of_The_Novice
+                    '    Return pic_res
+                    'Case "Mask of Madness"
+                    '    pic_res = HoN_Elder_Parasite
+                    '    Return pic_res
+                    'Case "Medallion of Courage"
+                    '    pic_res = ImageList1.Images(70)
+                    '    Return pic_res
+                    'Case "Mekansm"
+                    '    pic_res = HoN_Astrolabe
+                    '    Return pic_res
+                    'Case "Mithril Hammer"
+                    '    pic_res = HoN_Warhammer
+                    '    Return pic_res
+                    'Case "Mjollnir"
+                    '    pic_res = HoN_Charged_Hammer
+                    '    Return pic_res
+                    'Case "Monkey King Bar"
+                    '    pic_res = HoN_Savage_Mace
+                    '    Return pic_res
+                    'Case "Morbid Mask"
+                    '    pic_res = HoN_Hungry_Spirit
+                    '    Return pic_res
+                    'Case "Mystic Staff"
+                    '    pic_res = HoN_Acolytes_Staff
+                    '    Return pic_res
+                    'Case "Necronomicon 1"
+                    '    pic_res = HoN_Puzzlebox
+                    '    Return pic_res
+                    'Case "Necronomicon 2"
+                    '    pic_res = HoN_Puzzlebox2
+                    '    Return pic_res
+                    'Case "Necronomicon 3"
+                    '    pic_res = HoN_Puzzlebox3
+                    '    Return pic_res
+                    'Case "Null Talisman"
+                    '    pic_res = HoN_Talisman_Of_Exile
+                    '    Return pic_res
+                    'Case "Oblivion Staff"
+                    '    pic_res = HoN_Great_Arcana
+                    '    Return pic_res
+                    'Case "Observer Ward"
+                    '    pic_res = HoN_Wards_of_Sight
+                    '    Return pic_res
+                    'Case "Ogre Club"
+                    '    pic_res = HoN_Mighty_Blade
+                    '    Return pic_res
+                    'Case "Orb of Venom"
+                    '    pic_res = ImageList1.Images(84)
+                    '    Return pic_res
+                    'Case "Orchid Malevolence"
+                    '    pic_res = HoN_Hellflower
+                    '    Return pic_res
+                    'Case "Perseverance"
+                    '    pic_res = HoN_Sustainer
+                    '    Return pic_res
+                    'Case "Phase Boots"
+                    '    pic_res = HoN_Enhanced_Marchers
+                    '    Return pic_res
+                    'Case "Pipe of Insight"
+                    '    pic_res = HoN_Barrier_Idol
+                    '    Return pic_res
+                    'Case "Platemail"
+                    '    pic_res = HoN_Platemail
+                    '    Return pic_res
+                    'Case "Point Booster"
+                    '    pic_res = HoN_Glowstone
+                    '    Return pic_res
+                    'Case "Poor Man's Shield"
+                    '    pic_res = HoN_Iron_Shield
+                    '    Return pic_res
+                    'Case "Power Treads"
+                    '    pic_res = HoN_Steamboots_Strength
+                    '    Return pic_res
+                    'Case "Quarterstaff"
+                    '    pic_res = HoN_Steamstaff
+                    '    Return pic_res
+                    'Case "Quelling Blade"
+                    '    pic_res = HoN_Loggers_Hatchet
+                    '    Return pic_res
+                    'Case "Radiance"
+                    '    pic_res = HoN_Mock_of_Brilliance
+                    '    Return pic_res
+                    'Case "Reaver"
+                    '    pic_res = HoN_Axe_Of_The_Malphai
+                    '    Return pic_res
+                    'Case "Refresher Orb"
+                    '    pic_res = HoN_Restoration_Stone
+                    '    Return pic_res
+                    'Case "Ring of Basilius"
+                    '    pic_res = HoN_Ring_Of_The_Teacher
+                    '    Return pic_res
+                    'Case "Ring of Health"
+                    '    pic_res = HoN_Lifetube
+                    '    Return pic_res
+                    'Case "Ring of Protection"
+                    '    pic_res = HoN_Guardian_Ring
+                    '    Return pic_res
+                    'Case "Ring of Regen"
+                    '    pic_res = HoN_Trinket_Of_Restoration
+                    '    Return pic_res
+                    'Case "Robe of the Magi"
+                    '    pic_res = HoN_Apprentices_Robe
+                    '    Return pic_res
+                    'Case "Sacred Relic"
+                    '    pic_res = HoN_Sword_Of_The_High
+                    '    Return pic_res
+                    'Case "Sage's Mask"
+                    '    pic_res = HoN_Scarab
+                    '    Return pic_res
+                    'Case "Sange"
+                    '    pic_res = HoN_Icebrand
+                    '    Return pic_res
+                    'Case "Sange and Yasha"
+                    '    pic_res = HoN_Frostburn
+                    '    Return pic_res
+                    'Case "Satanic"
+                    '    pic_res = HoN_Symbol_Of_Rage
+                    '    Return pic_res
+                    'Case "Scythe of Vyse"
+                    '    pic_res = HoN_Kuldras_Sheepstick
+                    '    Return pic_res
+                    'Case "Sentry Ward"
+                    '    pic_res = HoN_Wards_of_Revelation
+                    '    Return pic_res
+                    'Case "Shadow Blade"
+                    '    pic_res = HoN_Shroud_Of_The_Assasin
+                    '    Return pic_res
+                    'Case "Shiva's Guard"
+                    '    pic_res = HoN_Frostfield_Plate
+                    '    Return pic_res
+                    'Case "Skull Basher"
+                    '    pic_res = HoN_Brutalizer
+                    '    Return pic_res
+                    'Case "Slippers of Agility"
+                    '    pic_res = HoN_Duck_Boots
+                    '    Return pic_res
+                    'Case "Smoke of Deceit"
+                    '    pic_res = ImageList1.Images(116)
+                    '    Return pic_res
+                    'Case "Soul Booster"
+                    '    pic_res = HoN_Icon_Of_The_Goddess
+                    '    Return pic_res
+                    'Case "Soul Ring"
+                    '    pic_res = HoN_Blood_Chalice
+                    '    Return pic_res
+                    'Case "Staff of Wizardry"
+                    '    pic_res = HoN_Neophytes_Book
+                    '    Return pic_res
+                    'Case "Stout Shield"
+                    '    pic_res = HoN_Iron_Buckler
+                    '    Return pic_res
+                    'Case "Talisman of Evasion"
+                    '    pic_res = HoN_Snake_Bracelet
+                    '    Return pic_res
+                    'Case "Tango"
+                    '    pic_res = HoN_Runes_Of_The_Blight
+                    '    Return pic_res
+                    'Case "Town Portal Scroll"
+                    '    pic_res = HoN_Homecoming_Stone
+                    '    Return pic_res
+                    'Case "Ultimate Orb"
+                    '    pic_res = HoN_Blessed_Orb
+                    '    Return pic_res
+                    'Case "Urn of Shadows"
+                    '    pic_res = ImageList1.Images(126)
+                    '    Return pic_res
+                    'Case "Vanguard"
+                    '    pic_res = HoN_Helm_Of_The_Black_Legion
+                    '    Return pic_res
+                    'Case "Veil of Discord"
+                    '    pic_res = ImageList1.Images(128)
+                    '    Return pic_res
+                    'Case "Vitality Booster"
+                    '    pic_res = HoN_Beastheart
+                    '    Return pic_res
+                    'Case "Vladmir's Offering"
+                    '    pic_res = HoN_Abyssal_Skull
+                    '    Return pic_res
+                    'Case "Void Stone"
+                    '    pic_res = HoN_Manatube
+                    '    Return pic_res
+                    'Case "Wraith Band"
+                    '    pic_res = HoN_Soulscream_Ring
+                    '    Return pic_res
+                    'Case "Yasha"
+                    '    pic_res = HoN_Firebrand
+                    '    Return pic_res
+                    'Case "Abyssal Blade"
+                    '    pic_res = ImageList1.Images(0)
+                    '    Return pic_res
+                    'Case "Heaven's Halberd"
+                    '    pic_res = ImageList1.Images(56)
+                    '    Return pic_res
+                    'Case "Ring of Aquila"
+                    '    pic_res = ImageList1.Images(98)
+                    '    Return pic_res
+                    'Case "Rod of Atos"
+                    pic_res = ImageList1.Images(104)
+                    '    Return pic_res
+                    'Case "Tranquil Boots"
+                    'pic_res = HoN_Striders
                     Return pic_res
                 Case Else
                     pic_res = D2RIC.My.Resources.Resources.none
@@ -2683,406 +2785,406 @@ Public Class FormMain
         Else
             Select Case item_name
                 Case "Blink Dagger"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Blink_Dagger
+                    pic_res = ImageList1.Images(12)
                     Return pic_res
                 Case "Blades of Attack"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Blades_of_Attack
+                    pic_res = ImageList1.Images(11)
                     Return pic_res
                 Case "Aghanim's Scepter"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter
+                    pic_res = ImageList1.Images(1)
                     Return pic_res
                 Case "Animal Courier"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Animal_Courier
+                    pic_res = ImageList1.Images(2)
                     Return pic_res
                 Case "Arcane Boots"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Arcane_Boots
+                    pic_res = ImageList1.Images(3)
                     Return pic_res
                 Case "Armlet"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Armlet
+                    pic_res = ImageList1.Images(4)
                     Return pic_res
                 Case "Assault Cuirass"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Assault_Cuirass
+                    pic_res = ImageList1.Images(5)
                     Return pic_res
                 Case "Battle Fury"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Battle_Fury
+                    pic_res = ImageList1.Images(6)
                     Return pic_res
                 Case "Belt of Strength"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Belt_of_Strength
+                    pic_res = ImageList1.Images(8)
                     Return pic_res
                 Case "Black King Bar"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Black_King_Bar
+                    pic_res = ImageList1.Images(7)
                     Return pic_res
                 Case "Blade Mail"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Blade_Mail
+                    pic_res = ImageList1.Images(9)
                     Return pic_res
                 Case "Blade of Alacrity"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity
+                    pic_res = ImageList1.Images(10)
                     Return pic_res
                 Case "Bloodstone"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Bloodstone
+                    pic_res = ImageList1.Images(13)
                     Return pic_res
                 Case "Boots of Elvenskin"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin
+                    pic_res = ImageList1.Images(14)
                     Return pic_res
                 Case "Boots of Speed"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Boots_of_Speed
+                    pic_res = ImageList1.Images(15)
                     Return pic_res
                 Case "Boots of Travel"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Boots_of_Travel
+                    pic_res = ImageList1.Images(16)
                     Return pic_res
                 Case "Bottle"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Bottle
+                    pic_res = ImageList1.Images(17)
                     Return pic_res
                 Case "Bracer"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Bracer
+                    pic_res = ImageList1.Images(18)
                     Return pic_res
                 Case "Broadsword"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Broadsword
+                    pic_res = ImageList1.Images(19)
                     Return pic_res
                 Case "Buckler"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Buckler
+                    pic_res = ImageList1.Images(20)
                     Return pic_res
                 Case "Butterfly"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Butterfly
+                    pic_res = ImageList1.Images(21)
                     Return pic_res
                 Case "Chainmail"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Chainmail
+                    pic_res = ImageList1.Images(22)
                     Return pic_res
                 Case "Circlet"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Circlet
+                    pic_res = ImageList1.Images(23)
                     Return pic_res
                 Case "Clarity"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Clarity
+                    pic_res = ImageList1.Images(24)
                     Return pic_res
                 Case "Claymore"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Claymore
+                    pic_res = ImageList1.Images(25)
                     Return pic_res
                 Case "Cloak"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Cloak
+                    pic_res = ImageList1.Images(26)
                     Return pic_res
                 Case "Crystalys"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Crystalys
+                    pic_res = ImageList1.Images(27)
                     Return pic_res
                 Case "Daedalus"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Daedalus
+                    pic_res = ImageList1.Images(28)
                     Return pic_res
                 Case "Dagon 1"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Dagon
+                    pic_res = ImageList1.Images(29)
                     Return pic_res
                 Case "Dagon 2"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Dagon2
+                    pic_res = ImageList1.Images(30)
                     Return pic_res
                 Case "Dagon 3"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Dagon3
+                    pic_res = ImageList1.Images(31)
                     Return pic_res
                 Case "Dagon 4"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Dagon4
+                    pic_res = ImageList1.Images(32)
                     Return pic_res
                 Case "Dagon 5"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Dagon5
+                    pic_res = ImageList1.Images(33)
                     Return pic_res
                 Case "Demon Edge"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Demon_Edge
+                    pic_res = ImageList1.Images(34)
                     Return pic_res
                 Case "Desolator"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Desolator
+                    pic_res = ImageList1.Images(35)
                     Return pic_res
                 Case "Diffusal Blade 1"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Diffusal_Blade
+                    pic_res = ImageList1.Images(36)
                     Return pic_res
                 Case "Diffusal Blade 2"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Diffusal_Blade2
+                    pic_res = ImageList1.Images(37)
                     Return pic_res
                 Case "Divine Rapier"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Divine_Rapier
+                    pic_res = ImageList1.Images(38)
                     Return pic_res
                 Case "Drum of Endurance"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Drum_of_Endurance
+                    pic_res = ImageList1.Images(39)
                     Return pic_res
                 Case "Dust of Appearance"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Dust_of_Appearance
+                    pic_res = ImageList1.Images(40)
                     Return pic_res
-                Case "Eaglesong"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Eaglesong
+                    'Case "Eaglesong"
+                    pic_res = ImageList1.Images(41)
                     Return pic_res
                 Case "Energy Booster"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Energy_Booster
+                    pic_res = ImageList1.Images(42)
                     Return pic_res
                 Case "Ethereal Blade"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ethereal_Blade
+                    pic_res = ImageList1.Images(43)
                     Return pic_res
                 Case "Eul's Scepter of Divinity"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity
+                    pic_res = ImageList1.Images(44)
                     Return pic_res
                 Case "Eye of Skadi"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Eye_of_Skadi
+                    pic_res = ImageList1.Images(45)
                     Return pic_res
                 Case "Flying Courier"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Flying_Courier
+                    pic_res = ImageList1.Images(46)
                     Return pic_res
                 Case "Force Staff"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Force_Staff
+                    pic_res = ImageList1.Images(47)
                     Return pic_res
                 Case "Gauntlets of Strength"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength
+                    pic_res = ImageList1.Images(48)
                     Return pic_res
                 Case "Gem of True Sight"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight
+                    pic_res = ImageList1.Images(49)
                     Return pic_res
                 Case "Ghost Scepter"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ghost_Scepter
+                    pic_res = ImageList1.Images(50)
                     Return pic_res
                 Case "Gloves of Haste"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Gloves_of_Haste
+                    pic_res = ImageList1.Images(51)
                     Return pic_res
                 Case "Hand of Midas"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Hand_of_Midas
+                    pic_res = ImageList1.Images(52)
                     Return pic_res
                 Case "Headdress"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Headdress
+                    pic_res = ImageList1.Images(53)
                     Return pic_res
                 Case "Healing Salve"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Healing_Salve
+                    pic_res = ImageList1.Images(54)
                     Return pic_res
                 Case "Heart of Tarrasque"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque
+                    pic_res = ImageList1.Images(55)
                     Return pic_res
                 Case "Helm of Iron Will"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will
+                    pic_res = ImageList1.Images(57)
                     Return pic_res
                 Case "Helm of the Dominator"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator
+                    pic_res = ImageList1.Images(58)
                     Return pic_res
                 Case "Hood of Defiance"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Hood_of_Defiance
+                    pic_res = ImageList1.Images(59)
                     Return pic_res
                 Case "Hyperstone"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Hyperstone
+                    pic_res = ImageList1.Images(60)
                     Return pic_res
                 Case "Iron Branch"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Iron_Branch
+                    pic_res = ImageList1.Images(61)
                     Return pic_res
                 Case "Javelin"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Javelin
+                    pic_res = ImageList1.Images(62)
                     Return pic_res
                 Case "Linken's Sphere"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Linken_s_Sphere
+                    pic_res = ImageList1.Images(63)
                     Return pic_res
                 Case "Maelstrom"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Maelstrom
+                    pic_res = ImageList1.Images(64)
                     Return pic_res
                 Case "Magic Stick"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Magic_Stick
+                    pic_res = ImageList1.Images(65)
                     Return pic_res
                 Case "Magic Wand"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Magic_Wand
+                    pic_res = ImageList1.Images(66)
                     Return pic_res
                 Case "Manta Style"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Manta_Style
+                    pic_res = ImageList1.Images(67)
                     Return pic_res
                 Case "Mantle of Intelligence"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence
+                    pic_res = ImageList1.Images(68)
                     Return pic_res
                 Case "Mask of Madness"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Mask_of_Madness
+                    pic_res = ImageList1.Images(69)
                     Return pic_res
                 Case "Medallion of Courage"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Medallion_of_Courage
+                    pic_res = ImageList1.Images(70)
                     Return pic_res
                 Case "Mekansm"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Mekansm
+                    pic_res = ImageList1.Images(71)
                     Return pic_res
                 Case "Mithril Hammer"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Mithril_Hammer
+                    pic_res = ImageList1.Images(72)
                     Return pic_res
                 Case "Mjollnir"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Mjollnir
+                    pic_res = ImageList1.Images(73)
                     Return pic_res
                 Case "Monkey King Bar"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Monkey_King_Bar
+                    pic_res = ImageList1.Images(74)
                     Return pic_res
                 Case "Morbid Mask"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Morbid_Mask
+                    pic_res = ImageList1.Images(75)
                     Return pic_res
                 Case "Mystic Staff"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Mystic_Staff
+                    pic_res = ImageList1.Images(76)
                     Return pic_res
                 Case "Necronomicon 1"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Necronomicon
+                    pic_res = ImageList1.Images(77)
                     Return pic_res
                 Case "Necronomicon 2"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Necronomicon2
+                    pic_res = ImageList1.Images(78)
                     Return pic_res
                 Case "Necronomicon 3"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Necronomicon3
+                    pic_res = ImageList1.Images(79)
                     Return pic_res
                 Case "Null Talisman"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Null_Talisman
+                    pic_res = ImageList1.Images(80)
                     Return pic_res
                 Case "Oblivion Staff"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Oblivion_Staff
+                    pic_res = ImageList1.Images(81)
                     Return pic_res
                 Case "Observer Ward"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Observer_Ward
+                    pic_res = ImageList1.Images(82)
                     Return pic_res
                 Case "Ogre Club"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ogre_Club
+                    pic_res = ImageList1.Images(83)
                     Return pic_res
                 Case "Orb of Venom"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Orb_of_Venom
+                    pic_res = ImageList1.Images(84)
                     Return pic_res
                 Case "Orchid Malevolence"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Orchid_Malevolence
+                    pic_res = ImageList1.Images(85)
                     Return pic_res
                 Case "Perseverance"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Perseverance
+                    pic_res = ImageList1.Images(86)
                     Return pic_res
                 Case "Phase Boots"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Phase_Boots
+                    pic_res = ImageList1.Images(87)
                     Return pic_res
                 Case "Pipe of Insight"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Pipe_of_Insight
+                    pic_res = ImageList1.Images(88)
                     Return pic_res
                 Case "Platemail"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Platemail
+                    pic_res = ImageList1.Images(89)
                     Return pic_res
                 Case "Point Booster"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Point_Booster
+                    pic_res = ImageList1.Images(90)
                     Return pic_res
                 Case "Poor Man's Shield"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield
+                    pic_res = ImageList1.Images(91)
                     Return pic_res
                 Case "Power Treads"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Power_Treads
+                    pic_res = ImageList1.Images(92)
                     Return pic_res
                 Case "Quarterstaff"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Quarterstaff
+                    pic_res = ImageList1.Images(93)
                     Return pic_res
                 Case "Quelling Blade"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Quelling_Blade
+                    pic_res = ImageList1.Images(94)
                     Return pic_res
                 Case "Radiance"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Radiance
+                    pic_res = ImageList1.Images(95)
                     Return pic_res
                 Case "Reaver"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Reaver
+                    pic_res = ImageList1.Images(96)
                     Return pic_res
                 Case "Refresher Orb"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Refresher_Orb
+                    pic_res = ImageList1.Images(97)
                     Return pic_res
                 Case "Ring of Basilius"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Basilius
+                    pic_res = ImageList1.Images(99)
                     Return pic_res
                 Case "Ring of Health"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Health
+                    pic_res = ImageList1.Images(100)
                     Return pic_res
                 Case "Ring of Protection"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Protection
+                    pic_res = ImageList1.Images(101)
                     Return pic_res
                 Case "Ring of Regen"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Regen
+                    pic_res = ImageList1.Images(102)
                     Return pic_res
                 Case "Robe of the Magi"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi
+                    pic_res = ImageList1.Images(103)
                     Return pic_res
                 Case "Sacred Relic"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Sacred_Relic
+                    pic_res = ImageList1.Images(105)
                     Return pic_res
                 Case "Sage's Mask"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Sage_s_Mask
+                    pic_res = ImageList1.Images(106)
                     Return pic_res
                 Case "Sange"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Sange
+                    pic_res = ImageList1.Images(107)
                     Return pic_res
                 Case "Sange and Yasha"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Sange_and_Yasha
+                    pic_res = ImageList1.Images(108)
                     Return pic_res
                 Case "Satanic"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Satanic
+                    pic_res = ImageList1.Images(109)
                     Return pic_res
                 Case "Scythe of Vyse"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse
+                    pic_res = ImageList1.Images(110)
                     Return pic_res
                 Case "Sentry Ward"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Sentry_Ward
+                    pic_res = ImageList1.Images(111)
                     Return pic_res
                 Case "Shadow Blade"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Shadow_Blade
+                    pic_res = ImageList1.Images(112)
                     Return pic_res
                 Case "Shiva's Guard"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Shiva_s_Guard
+                    pic_res = ImageList1.Images(113)
                     Return pic_res
                 Case "Skull Basher"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Skull_Basher
+                    pic_res = ImageList1.Images(114)
                     Return pic_res
                 Case "Slippers of Agility"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Slippers_of_Agility
+                    pic_res = ImageList1.Images(115)
                     Return pic_res
                 Case "Smoke of Deceit"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit
+                    pic_res = ImageList1.Images(116)
                     Return pic_res
                 Case "Soul Booster"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Soul_Booster
+                    pic_res = ImageList1.Images(117)
                     Return pic_res
                 Case "Soul Ring"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Soul_Ring
+                    pic_res = ImageList1.Images(118)
                     Return pic_res
                 Case "Staff of Wizardry"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry
+                    pic_res = ImageList1.Images(119)
                     Return pic_res
                 Case "Stout Shield"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Stout_Shield
+                    pic_res = ImageList1.Images(120)
                     Return pic_res
                 Case "Talisman of Evasion"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion
+                    pic_res = ImageList1.Images(121)
                     Return pic_res
                 Case "Tango"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Tango
+                    pic_res = ImageList1.Images(122)
                     Return pic_res
                 Case "Town Portal Scroll"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll
+                    pic_res = ImageList1.Images(123)
                     Return pic_res
                 Case "Ultimate Orb"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ultimate_Orb
+                    pic_res = ImageList1.Images(125)
                     Return pic_res
                 Case "Urn of Shadows"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Urn_of_Shadows
+                    pic_res = ImageList1.Images(126)
                     Return pic_res
                 Case "Vanguard"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Vanguard
+                    pic_res = ImageList1.Images(127)
                     Return pic_res
                 Case "Veil of Discord"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Veil_of_Discord
+                    pic_res = ImageList1.Images(128)
                     Return pic_res
                 Case "Vitality Booster"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Vitality_Booster
+                    pic_res = ImageList1.Images(129)
                     Return pic_res
                 Case "Vladmir's Offering"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering
+                    pic_res = ImageList1.Images(130)
                     Return pic_res
                 Case "Void Stone"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Void_Stone
+                    pic_res = ImageList1.Images(131)
                     Return pic_res
                 Case "Wraith Band"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Wraith_Band
+                    pic_res = ImageList1.Images(132)
                     Return pic_res
                 Case "Yasha"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Yasha
+                    pic_res = ImageList1.Images(133)
                     Return pic_res
                 Case "Abyssal Blade"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Abyssal_Blade
+                    pic_res = ImageList1.Images(0)
                     Return pic_res
                 Case "Heaven's Halberd"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd
+                    pic_res = ImageList1.Images(56)
                     Return pic_res
                 Case "Ring of Aquila"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Ring_of_Aquila
+                    pic_res = ImageList1.Images(98)
                     Return pic_res
                 Case "Rod of Atos"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Rod_of_Atos
+                    pic_res = ImageList1.Images(104)
                     Return pic_res
                 Case "Tranquil Boots"
-                    pic_res = D2RIC.My.Resources.Resources._40px_Tranquil_Boots
+                    pic_res = ImageList1.Images(124)
                     Return pic_res
                 Case Else
                     pic_res = D2RIC.My.Resources.Resources.none
@@ -3094,406 +3196,406 @@ Public Class FormMain
     Public Function PicRes2Name(ByVal img_res As System.Drawing.Bitmap) As String
         Dim pic_res As String
         If ComboBoxItemIcons.Text = "DotA 1" Then
-            If doImagesMatch(img_res, D2RIC.My.Resources.Resources.Kelensdagger) Then
+            If doImagesMatch(img_res, ImageList1.Images(146)) Then
                 pic_res = "Blink Dagger"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bladesofattack) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(145)) Then
                 pic_res = "Blades of Attack"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Aghanimsscepter) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(135)) Then
                 pic_res = "Aghanim's Scepter"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Animalcourier) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(136)) Then
                 pic_res = "Animal Courier"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.ArcaneBoots) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(137)) Then
                 pic_res = "Arcane Boots"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Armletofmordiggian) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(138)) Then
                 pic_res = "Armlet"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Assaultcuirass) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(139)) Then
                 pic_res = "Assault Cuirass"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Battlefury) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(140)) Then
                 pic_res = "Battle Fury"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Beltofgiantstrength) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(141)) Then
                 pic_res = "Belt of Strength"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Blackkingbar) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(142)) Then
                 pic_res = "Black King Bar"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Blademail) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(143)) Then
                 pic_res = "Blade Mail"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bladesofalacrity) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(144)) Then
                 pic_res = "Blade of Alacrity"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bloodstone) Then
-                pic_res = "Bloodstone"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bootsofelvenskin) Then
-                pic_res = "Boots of Elvenskin"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bootsofspeed) Then
-                pic_res = "Boots of Speed"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bootsoftravel) Then
-                pic_res = "Boots of Travel"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bottle) Then
-                pic_res = "Bottle"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Bracer) Then
-                pic_res = "Bracer"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Broadsword) Then
-                pic_res = "Broadsword"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Nathrezimbuckler) Then
-                pic_res = "Buckler"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Butterfly) Then
-                pic_res = "Butterfly"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Chainmail) Then
-                pic_res = "Chainmail"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Circletofnobility) Then
-                pic_res = "Circlet"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Claritypotion) Then
-                pic_res = "Clarity"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Claymore) Then
-                pic_res = "Claymore"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Planeswalkerscloak) Then
-                pic_res = "Cloak"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Crystalys) Then
-                pic_res = "Crystalys"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Burizadokyanon) Then
-                pic_res = "Daedalus"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Dagon) Then
-                pic_res = "Dagon 1"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Dagon2) Then
-                pic_res = "Dagon 2"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Dagon3) Then
-                pic_res = "Dagon 3"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Dagon4) Then
-                pic_res = "Dagon 4"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Dagon5) Then
-                pic_res = "Dagon 5"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Demonedge) Then
-                pic_res = "Demon Edge"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Stygiandesolator) Then
-                pic_res = "Desolator"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Diffusalblade) Then
-                pic_res = "Diffusal Blade 1"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Diffusalblade2) Then
-                pic_res = "Diffusal Blade 2"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Divinerapier) Then
-                pic_res = "Divine Rapier"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ancientjanggoofendurance) Then
-                pic_res = "Drum of Endurance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Dustofappearance) Then
-                pic_res = "Dust of Appearance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Eaglehorn) Then
-                pic_res = "Eaglesong"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Energybooster) Then
-                pic_res = "Energy Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Etheral_Blade) Then
-                pic_res = "Ethereal Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Eulsscepterofdivinity) Then
-                pic_res = "Eul's Scepter of Divinity"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Eyeofskadi) Then
-                pic_res = "Eye of Skadi"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Flyingcourier) Then
-                pic_res = "Flying Courier"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Forcestaff) Then
-                pic_res = "Force Staff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Gauntletsofstrength) Then
-                pic_res = "Gauntlets of Strength"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Gemoftruesight) Then
-                pic_res = "Gem of True Sight"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ghostscepter) Then
-                pic_res = "Ghost Scepter"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Glovesofhaste) Then
-                pic_res = "Gloves of Haste"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Handofmidas) Then
-                pic_res = "Hand of Midas"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Headdressofrejuvenation) Then
-                pic_res = "Headdress"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Healingsalve) Then
-                pic_res = "Healing Salve"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Heartoftarrasque) Then
-                pic_res = "Heart of Tarrasque"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Helmofironwill) Then
-                pic_res = "Helm of Iron Will"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Helmofthedominator) Then
-                pic_res = "Helm of the Dominator"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Hoodofdefiance) Then
-                pic_res = "Hood of Defiance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Hyperstone) Then
-                pic_res = "Hyperstone"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ironwoodbranch) Then
-                pic_res = "Iron Branch"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Javelin) Then
-                pic_res = "Javelin"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Linkenssphere) Then
-                pic_res = "Linken's Sphere"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Maelstrom) Then
-                pic_res = "Maelstrom"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Magicstick) Then
-                pic_res = "Magic Stick"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Magicwand) Then
-                pic_res = "Magic Wand"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Mantastyle) Then
-                pic_res = "Manta Style"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Mantleofintelligence) Then
-                pic_res = "Mantle of Intelligence"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Maskofmadness) Then
-                pic_res = "Mask of Madness"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Medallionofcourage) Then
-                pic_res = "Medallion of Courage"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Mekansm) Then
-                pic_res = "Mekansm"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Mithrilhammer) Then
-                pic_res = "Mithril Hammer"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Mjollnir) Then
-                pic_res = "Mjollnir"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Monkeykingbar) Then
-                pic_res = "Monkey King Bar"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Maskofdeath) Then
-                pic_res = "Morbid Mask"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Mysticstaff) Then
-                pic_res = "Mystic Staff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Necronomicon) Then
-                pic_res = "Necronomicon 1"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Necronomicon2) Then
-                pic_res = "Necronomicon 2"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Necronomicon3) Then
-                pic_res = "Necronomicon 3"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Nulltalisman) Then
-                pic_res = "Null Talisman"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Oblivionstaff) Then
-                pic_res = "Oblivion Staff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Observerwards) Then
-                pic_res = "Observer Ward"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ogreaxe) Then
-                pic_res = "Ogre Club"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.OrbOfVenom) Then
-                pic_res = "Orb of Venom"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Orchidmalevolence) Then
-                pic_res = "Orchid Malevolence"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Perseverance) Then
-                pic_res = "Perseverance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Phaseboots) Then
-                pic_res = "Phase Boots"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Khadgarspipeofinsight) Then
-                pic_res = "Pipe of Insight"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Platemail) Then
-                pic_res = "Platemail"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Pointbooster) Then
-                pic_res = "Point Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Poormansshield) Then
-                pic_res = "Poor Man's Shield"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Powertreads) Then
-                pic_res = "Power Treads"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Quarterstaff) Then
-                pic_res = "Quarterstaff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Quellingblade) Then
-                pic_res = "Quelling Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Radiance) Then
-                pic_res = "Radiance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Messerschmidtsreaver) Then
-                pic_res = "Reaver"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Refresherorb) Then
-                pic_res = "Refresher Orb"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ringofbasilius) Then
-                pic_res = "Ring of Basilius"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ringofhealth) Then
-                pic_res = "Ring of Health"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ringofprotection) Then
-                pic_res = "Ring of Protection"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ringofregeneration) Then
-                pic_res = "Ring of Regen"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Robeofthemagi) Then
-                pic_res = "Robe of the Magi"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Sacredrelic) Then
-                pic_res = "Sacred Relic"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Sobimask) Then
-                pic_res = "Sage's Mask"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Sange) Then
-                pic_res = "Sange"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Sangeandyasha) Then
-                pic_res = "Sange and Yasha"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Satanic) Then
-                pic_res = "Satanic"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Guinsoosscytheofvyse) Then
-                pic_res = "Scythe of Vyse"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Sentrywards) Then
-                pic_res = "Sentry Ward"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Lotharsedge) Then
-                pic_res = "Shadow Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Shivasguard) Then
-                pic_res = "Shiva's Guard"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Craniumbasher) Then
-                pic_res = "Skull Basher"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Slippersofagility) Then
-                pic_res = "Slippers of Agility"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.SmokeOfDeceit) Then
-                pic_res = "Smoke of Deceit"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Soulbooster) Then
-                pic_res = "Soul Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Soul_Ring) Then
-                pic_res = "Soul Ring"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Staffofwizardry) Then
-                pic_res = "Staff of Wizardry"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Stoutshield) Then
-                pic_res = "Stout Shield"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Talismanofevasion) Then
-                pic_res = "Talisman of Evasion"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tango) Then
-                pic_res = "Tango"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Townportal) Then
-                pic_res = "Town Portal Scroll"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Ultimateorb) Then
-                pic_res = "Ultimate Orb"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Urnofshadows) Then
-                pic_res = "Urn of Shadows"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Vanguard) Then
-                pic_res = "Vanguard"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Fatalbonds) Then
-                pic_res = "Veil of Discord"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Vitalitybooster) Then
-                pic_res = "Vitality Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Vladimirsoffering) Then
-                pic_res = "Vladmir's Offering"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Voidstone) Then
-                pic_res = "Void Stone"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Wraithband) Then
-                pic_res = "Wraith Band"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Yasha) Then
-                pic_res = "Yasha"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.AbyssalBlade) Then
-                pic_res = "Abyssal Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.Halberd) Then
-                pic_res = "Heaven's Halberd"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.RingofAquila) Then
-                pic_res = "Ring of Aquila"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.RodofAtos) Then
-                pic_res = "Rod of Atos"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.TranquilBoots) Then
+                'ElseIf doImagesMatch(img_res, Bloodstone) Then
+                '    pic_res = "Bloodstone"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Bootsofelvenskin) Then
+                '    pic_res = "Boots of Elvenskin"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Bootsofspeed) Then
+                '    pic_res = "Boots of Speed"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Bootsoftravel) Then
+                '    pic_res = "Boots of Travel"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Bottle) Then
+                '    pic_res = "Bottle"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Bracer) Then
+                '    pic_res = "Bracer"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Broadsword) Then
+                '    pic_res = "Broadsword"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Nathrezimbuckler) Then
+                '    pic_res = "Buckler"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Butterfly) Then
+                '    pic_res = "Butterfly"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Chainmail) Then
+                '    pic_res = "Chainmail"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Circletofnobility) Then
+                '    pic_res = "Circlet"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Claritypotion) Then
+                '    pic_res = "Clarity"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Claymore) Then
+                '    pic_res = "Claymore"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Planeswalkerscloak) Then
+                '    pic_res = "Cloak"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Crystalys) Then
+                '    pic_res = "Crystalys"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Burizadokyanon) Then
+                '    pic_res = "Daedalus"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Dagon) Then
+                '    pic_res = "Dagon 1"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Dagon2) Then
+                '    pic_res = "Dagon 2"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Dagon3) Then
+                '    pic_res = "Dagon 3"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Dagon4) Then
+                '    pic_res = "Dagon 4"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Dagon5) Then
+                '    pic_res = "Dagon 5"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Demonedge) Then
+                '    pic_res = "Demon Edge"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Stygiandesolator) Then
+                '    pic_res = "Desolator"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Diffusalblade) Then
+                '    pic_res = "Diffusal Blade 1"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Diffusalblade2) Then
+                '    pic_res = "Diffusal Blade 2"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Divinerapier) Then
+                '    pic_res = "Divine Rapier"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ancientjanggoofendurance) Then
+                '    pic_res = "Drum of Endurance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Dustofappearance) Then
+                '    pic_res = "Dust of Appearance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Eaglehorn) Then
+                '    pic_res = "Eaglesong"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Energybooster) Then
+                '    pic_res = "Energy Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Etheral_Blade) Then
+                '    pic_res = "Ethereal Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Eulsscepterofdivinity) Then
+                '    pic_res = "Eul's Scepter of Divinity"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Eyeofskadi) Then
+                '    pic_res = "Eye of Skadi"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Flyingcourier) Then
+                '    pic_res = "Flying Courier"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Forcestaff) Then
+                '    pic_res = "Force Staff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Gauntletsofstrength) Then
+                '    pic_res = "Gauntlets of Strength"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Gemoftruesight) Then
+                '    pic_res = "Gem of True Sight"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ghostscepter) Then
+                '    pic_res = "Ghost Scepter"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Glovesofhaste) Then
+                '    pic_res = "Gloves of Haste"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Handofmidas) Then
+                '    pic_res = "Hand of Midas"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Headdressofrejuvenation) Then
+                '    pic_res = "Headdress"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Healingsalve) Then
+                '    pic_res = "Healing Salve"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Heartoftarrasque) Then
+                '    pic_res = "Heart of Tarrasque"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Helmofironwill) Then
+                '    pic_res = "Helm of Iron Will"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Helmofthedominator) Then
+                '    pic_res = "Helm of the Dominator"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Hoodofdefiance) Then
+                '    pic_res = "Hood of Defiance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Hyperstone) Then
+                '    pic_res = "Hyperstone"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ironwoodbranch) Then
+                '    pic_res = "Iron Branch"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Javelin) Then
+                '    pic_res = "Javelin"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Linkenssphere) Then
+                '    pic_res = "Linken's Sphere"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Maelstrom) Then
+                '    pic_res = "Maelstrom"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Magicstick) Then
+                '    pic_res = "Magic Stick"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Magicwand) Then
+                '    pic_res = "Magic Wand"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Mantastyle) Then
+                '    pic_res = "Manta Style"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Mantleofintelligence) Then
+                '    pic_res = "Mantle of Intelligence"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Maskofmadness) Then
+                '    pic_res = "Mask of Madness"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Medallionofcourage) Then
+                '    pic_res = "Medallion of Courage"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Mekansm) Then
+                '    pic_res = "Mekansm"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Mithrilhammer) Then
+                '    pic_res = "Mithril Hammer"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Mjollnir) Then
+                '    pic_res = "Mjollnir"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Monkeykingbar) Then
+                '    pic_res = "Monkey King Bar"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Maskofdeath) Then
+                '    pic_res = "Morbid Mask"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Mysticstaff) Then
+                '    pic_res = "Mystic Staff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Necronomicon) Then
+                '    pic_res = "Necronomicon 1"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Necronomicon2) Then
+                '    pic_res = "Necronomicon 2"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Necronomicon3) Then
+                '    pic_res = "Necronomicon 3"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Nulltalisman) Then
+                '    pic_res = "Null Talisman"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Oblivionstaff) Then
+                '    pic_res = "Oblivion Staff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Observerwards) Then
+                '    pic_res = "Observer Ward"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ogreaxe) Then
+                '    pic_res = "Ogre Club"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, OrbOfVenom) Then
+                '    pic_res = "Orb of Venom"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Orchidmalevolence) Then
+                '    pic_res = "Orchid Malevolence"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Perseverance) Then
+                '    pic_res = "Perseverance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Phaseboots) Then
+                '    pic_res = "Phase Boots"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Khadgarspipeofinsight) Then
+                '    pic_res = "Pipe of Insight"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Platemail) Then
+                '    pic_res = "Platemail"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Pointbooster) Then
+                '    pic_res = "Point Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Poormansshield) Then
+                '    pic_res = "Poor Man's Shield"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Powertreads) Then
+                '    pic_res = "Power Treads"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Quarterstaff) Then
+                '    pic_res = "Quarterstaff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Quellingblade) Then
+                '    pic_res = "Quelling Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Radiance) Then
+                '    pic_res = "Radiance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Messerschmidtsreaver) Then
+                '    pic_res = "Reaver"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Refresherorb) Then
+                '    pic_res = "Refresher Orb"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ringofbasilius) Then
+                '    pic_res = "Ring of Basilius"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ringofhealth) Then
+                '    pic_res = "Ring of Health"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ringofprotection) Then
+                '    pic_res = "Ring of Protection"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ringofregeneration) Then
+                '    pic_res = "Ring of Regen"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Robeofthemagi) Then
+                '    pic_res = "Robe of the Magi"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Sacredrelic) Then
+                '    pic_res = "Sacred Relic"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Sobimask) Then
+                '    pic_res = "Sage's Mask"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Sange) Then
+                '    pic_res = "Sange"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Sangeandyasha) Then
+                '    pic_res = "Sange and Yasha"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Satanic) Then
+                '    pic_res = "Satanic"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Guinsoosscytheofvyse) Then
+                '    pic_res = "Scythe of Vyse"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Sentrywards) Then
+                '    pic_res = "Sentry Ward"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Lotharsedge) Then
+                '    pic_res = "Shadow Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Shivasguard) Then
+                '    pic_res = "Shiva's Guard"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Craniumbasher) Then
+                '    pic_res = "Skull Basher"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Slippersofagility) Then
+                '    pic_res = "Slippers of Agility"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, SmokeOfDeceit) Then
+                '    pic_res = "Smoke of Deceit"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Soulbooster) Then
+                '    pic_res = "Soul Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Soul_Ring) Then
+                '    pic_res = "Soul Ring"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Staffofwizardry) Then
+                '    pic_res = "Staff of Wizardry"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Stoutshield) Then
+                '    pic_res = "Stout Shield"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Talismanofevasion) Then
+                '    pic_res = "Talisman of Evasion"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(122)) Then
+                '    pic_res = "Tango"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Townportal) Then
+                '    pic_res = "Town Portal Scroll"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Ultimateorb) Then
+                '    pic_res = "Ultimate Orb"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Urnofshadows) Then
+                '    pic_res = "Urn of Shadows"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Vanguard) Then
+                '    pic_res = "Vanguard"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Fatalbonds) Then
+                '    pic_res = "Veil of Discord"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Vitalitybooster) Then
+                '    pic_res = "Vitality Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Vladimirsoffering) Then
+                '    pic_res = "Vladmir's Offering"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Voidstone) Then
+                '    pic_res = "Void Stone"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Wraithband) Then
+                '    pic_res = "Wraith Band"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Yasha) Then
+                '    pic_res = "Yasha"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, AbyssalBlade) Then
+                '    pic_res = "Abyssal Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, Halberd) Then
+                '    pic_res = "Heaven's Halberd"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, RingofAquila) Then
+                '    pic_res = "Ring of Aquila"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, RodofAtos) Then
+                '    pic_res = "Rod of Atos"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, TranquilBoots) Then
                 pic_res = "Tranquil Boots"
                 Return pic_res
             Else
@@ -3501,813 +3603,813 @@ Public Class FormMain
                 Return pic_res
             End If
         ElseIf ComboBoxItemIcons.Text = "HoN" Then
-            If doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Portal_Key) Then
+            If doImagesMatch(img_res, ImageList1.Images(1)) Then
                 pic_res = "Blink Dagger"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Punchdagger) Then
-                pic_res = "Blades of Attack"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Staff_Of_The_Master) Then
-                pic_res = "Aghanim's Scepter"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Monkey_Courier) Then
-                pic_res = "Animal Courier"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Ring_Of_Sorcery) Then
-                pic_res = "Arcane Boots"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Insanitarius) Then
-                pic_res = "Armlet"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Daemonic_Breastplate) Then
-                pic_res = "Assault Cuirass"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Runed_Axe) Then
-                pic_res = "Battle Fury"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Bolstering_Armband) Then
-                pic_res = "Belt of Strength"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Shrunken_Head) Then
-                pic_res = "Black King Bar"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Barbed_Armor) Then
-                pic_res = "Blade Mail"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Quickblade) Then
-                pic_res = "Blade of Alacrity"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Sacrificial_Stone) Then
-                pic_res = "Bloodstone"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Fleet_Feet) Then
-                pic_res = "Boots of Elvenskin"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Marchers) Then
-                pic_res = "Boots of Speed"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Post_Haste) Then
-                pic_res = "Boots of Travel"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Bottle) Then
-                pic_res = "Bottle"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Fortified_Bracelet) Then
-                pic_res = "Bracer"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Broadsword) Then
-                pic_res = "Broadsword"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Shield_Of_The_Five) Then
-                pic_res = "Buckler"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Wingbow) Then
-                pic_res = "Butterfly"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Ringmail) Then
-                pic_res = "Chainmail"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Pretenders_Crown) Then
-                pic_res = "Circlet"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Mana_Potion) Then
-                pic_res = "Clarity"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Bastard_Sword) Then
-                pic_res = "Claymore"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Mystic_Vestments) Then
-                pic_res = "Cloak"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Riftshards) Then
-                pic_res = "Crystalys"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Daedalus) Then
-                pic_res = "Daedalus"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Codex) Then
-                pic_res = "Dagon 1"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Codex2) Then
-                pic_res = "Dagon 2"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Codex3) Then
-                pic_res = "Dagon 3"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Codex4) Then
-                pic_res = "Dagon 4"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Codex5) Then
-                pic_res = "Dagon 5"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Slayer) Then
-                pic_res = "Demon Edge"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Shieldbreaker) Then
-                pic_res = "Desolator"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Nullfire_Blade) Then
-                pic_res = "Diffusal Blade 1"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Nullfire_Blade2) Then
-                pic_res = "Diffusal Blade 2"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Doombringer) Then
-                pic_res = "Divine Rapier"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
-                pic_res = "Drum of Endurance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Dust_Of_Revelation) Then
-                pic_res = "Dust of Appearance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Dancing_Blade) Then
-                pic_res = "Eaglesong"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Pickled_Brain) Then
-                pic_res = "Energy Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
-                pic_res = "Ethereal Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Stormspirit) Then
-                pic_res = "Eul's Scepter of Divinity"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Frostwolfs_Skull) Then
-                pic_res = "Eye of Skadi"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Winged_Courier) Then
-                pic_res = "Flying Courier"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Tablet_of_Command) Then
-                pic_res = "Force Staff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Crushing_Claws) Then
-                pic_res = "Gauntlets of Strength"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Bound_Eye) Then
-                pic_res = "Gem of True Sight"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Void_Talisman) Then
-                pic_res = "Ghost Scepter"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Gloves_of_the_Swift) Then
-                pic_res = "Gloves of Haste"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Alchemist_Bones) Then
-                pic_res = "Hand of Midas"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Refreshing_Ornament) Then
-                pic_res = "Headdress"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Health_Potion) Then
-                pic_res = "Healing Salve"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Behemoths_Hearth) Then
-                pic_res = "Heart of Tarrasque"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Helm_Of_The_Victim) Then
-                pic_res = "Helm of Iron Will"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Whispering_Helm) Then
-                pic_res = "Helm of the Dominator"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Shamans_Headress) Then
-                pic_res = "Hood of Defiance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Warpcleft) Then
-                pic_res = "Hyperstone"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Minor_Totem) Then
-                pic_res = "Iron Branch"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Halberd) Then
-                pic_res = "Javelin"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Null_Stone) Then
-                pic_res = "Linken's Sphere"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Thunderclaw) Then
-                pic_res = "Maelstrom"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Mana_Battery) Then
-                pic_res = "Magic Stick"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Power_Supply) Then
-                pic_res = "Magic Wand"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Geometers_Bane) Then
-                pic_res = "Manta Style"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Mark_Of_The_Novice) Then
-                pic_res = "Mantle of Intelligence"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Elder_Parasite) Then
-                pic_res = "Mask of Madness"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
-                pic_res = "Medallion of Courage"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Astrolabe) Then
-                pic_res = "Mekansm"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Warhammer) Then
-                pic_res = "Mithril Hammer"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Charged_Hammer) Then
-                pic_res = "Mjollnir"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Savage_Mace) Then
-                pic_res = "Monkey King Bar"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Hungry_Spirit) Then
-                pic_res = "Morbid Mask"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Acolytes_Staff) Then
-                pic_res = "Mystic Staff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Puzzlebox) Then
-                pic_res = "Necronomicon 1"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Puzzlebox2) Then
-                pic_res = "Necronomicon 2"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Puzzlebox3) Then
-                pic_res = "Necronomicon 3"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Talisman_Of_Exile) Then
-                pic_res = "Null Talisman"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Great_Arcana) Then
-                pic_res = "Oblivion Staff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Wards_of_Sight) Then
-                pic_res = "Observer Ward"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Mighty_Blade) Then
-                pic_res = "Ogre Club"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
-                pic_res = "Orb of Venom"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Hellflower) Then
-                pic_res = "Orchid Malevolence"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Sustainer) Then
-                pic_res = "Perseverance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Enhanced_Marchers) Then
-                pic_res = "Phase Boots"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Barrier_Idol) Then
-                pic_res = "Pipe of Insight"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Platemail) Then
-                pic_res = "Platemail"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Glowstone) Then
-                pic_res = "Point Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Iron_Shield) Then
-                pic_res = "Poor Man's Shield"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Steamboots_Strength) Then
-                pic_res = "Power Treads"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Steamstaff) Then
-                pic_res = "Quarterstaff"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Loggers_Hatchet) Then
-                pic_res = "Quelling Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Mock_of_Brilliance) Then
-                pic_res = "Radiance"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Axe_Of_The_Malphai) Then
-                pic_res = "Reaver"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Restoration_Stone) Then
-                pic_res = "Refresher Orb"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Ring_Of_The_Teacher) Then
-                pic_res = "Ring of Basilius"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Lifetube) Then
-                pic_res = "Ring of Health"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Guardian_Ring) Then
-                pic_res = "Ring of Protection"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Trinket_Of_Restoration) Then
-                pic_res = "Ring of Regen"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Apprentices_Robe) Then
-                pic_res = "Robe of the Magi"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Sword_Of_The_High) Then
-                pic_res = "Sacred Relic"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Scarab) Then
-                pic_res = "Sage's Mask"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Icebrand) Then
-                pic_res = "Sange"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Frostburn) Then
-                pic_res = "Sange and Yasha"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Symbol_Of_Rage) Then
-                pic_res = "Satanic"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Kuldras_Sheepstick) Then
-                pic_res = "Scythe of Vyse"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Wards_of_Revelation) Then
-                pic_res = "Sentry Ward"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Shroud_Of_The_Assasin) Then
-                pic_res = "Shadow Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Frostfield_Plate) Then
-                pic_res = "Shiva's Guard"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Brutalizer) Then
-                pic_res = "Skull Basher"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Duck_Boots) Then
-                pic_res = "Slippers of Agility"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
-                pic_res = "Smoke of Deceit"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Icon_Of_The_Goddess) Then
-                pic_res = "Soul Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Blood_Chalice) Then
-                pic_res = "Soul Ring"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Neophytes_Book) Then
-                pic_res = "Staff of Wizardry"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Iron_Buckler) Then
-                pic_res = "Stout Shield"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Snake_Bracelet) Then
-                pic_res = "Talisman of Evasion"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Runes_Of_The_Blight) Then
-                pic_res = "Tango"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Homecoming_Stone) Then
-                pic_res = "Town Portal Scroll"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Blessed_Orb) Then
-                pic_res = "Ultimate Orb"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
-                pic_res = "Urn of Shadows"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Helm_Of_The_Black_Legion) Then
-                pic_res = "Vanguard"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
-                pic_res = "Veil of Discord"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Beastheart) Then
-                pic_res = "Vitality Booster"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Abyssal_Skull) Then
-                pic_res = "Vladmir's Offering"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Manatube) Then
-                pic_res = "Void Stone"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Soulscream_Ring) Then
-                pic_res = "Wraith Band"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Firebrand) Then
-                pic_res = "Yasha"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
-                pic_res = "Abyssal Blade"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
-                pic_res = "Heaven's Halberd"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
-                pic_res = "Ring of Aquila"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
-                pic_res = "Rod of Atos"
-                Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources.HoN_Striders) Then
-                pic_res = "Tranquil Boots"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Punchdagger) Then
+                '    pic_res = "Blades of Attack"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Staff_Of_The_Master) Then
+                '    pic_res = "Aghanim's Scepter"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Monkey_Courier) Then
+                '    pic_res = "Animal Courier"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Ring_Of_Sorcery) Then
+                '    pic_res = "Arcane Boots"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Insanitarius) Then
+                '    pic_res = "Armlet"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Daemonic_Breastplate) Then
+                '    pic_res = "Assault Cuirass"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Runed_Axe) Then
+                '    pic_res = "Battle Fury"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Bolstering_Armband) Then
+                '    pic_res = "Belt of Strength"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Shrunken_Head) Then
+                '    pic_res = "Black King Bar"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Barbed_Armor) Then
+                '    pic_res = "Blade Mail"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Quickblade) Then
+                '    pic_res = "Blade of Alacrity"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Sacrificial_Stone) Then
+                '    pic_res = "Bloodstone"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Fleet_Feet) Then
+                '    pic_res = "Boots of Elvenskin"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Marchers) Then
+                '    pic_res = "Boots of Speed"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Post_Haste) Then
+                '    pic_res = "Boots of Travel"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Bottle) Then
+                '    pic_res = "Bottle"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Fortified_Bracelet) Then
+                '    pic_res = "Bracer"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Broadsword) Then
+                '    pic_res = "Broadsword"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Shield_Of_The_Five) Then
+                '    pic_res = "Buckler"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Wingbow) Then
+                '    pic_res = "Butterfly"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Ringmail) Then
+                '    pic_res = "Chainmail"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Pretenders_Crown) Then
+                '    pic_res = "Circlet"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Mana_Potion) Then
+                '    pic_res = "Clarity"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Bastard_Sword) Then
+                '    pic_res = "Claymore"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Mystic_Vestments) Then
+                '    pic_res = "Cloak"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Riftshards) Then
+                '    pic_res = "Crystalys"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(28)) Then
+                '    pic_res = "Daedalus"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Codex) Then
+                '    pic_res = "Dagon 1"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Codex2) Then
+                '    pic_res = "Dagon 2"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Codex3) Then
+                '    pic_res = "Dagon 3"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Codex4) Then
+                '    pic_res = "Dagon 4"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Codex5) Then
+                '    pic_res = "Dagon 5"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Slayer) Then
+                '    pic_res = "Demon Edge"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Shieldbreaker) Then
+                '    pic_res = "Desolator"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Nullfire_Blade) Then
+                '    pic_res = "Diffusal Blade 1"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Nullfire_Blade2) Then
+                '    pic_res = "Diffusal Blade 2"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Doombringer) Then
+                '    pic_res = "Divine Rapier"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(39)) Then
+                '    pic_res = "Drum of Endurance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Dust_Of_Revelation) Then
+                '    pic_res = "Dust of Appearance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Dancing_Blade) Then
+                '    pic_res = "Eaglesong"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Pickled_Brain) Then
+                '    pic_res = "Energy Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(43)) Then
+                '    pic_res = "Ethereal Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Stormspirit) Then
+                '    pic_res = "Eul's Scepter of Divinity"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Frostwolfs_Skull) Then
+                '    pic_res = "Eye of Skadi"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Winged_Courier) Then
+                '    pic_res = "Flying Courier"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Tablet_of_Command) Then
+                '    pic_res = "Force Staff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Crushing_Claws) Then
+                '    pic_res = "Gauntlets of Strength"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Bound_Eye) Then
+                '    pic_res = "Gem of True Sight"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Void_Talisman) Then
+                '    pic_res = "Ghost Scepter"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Gloves_of_the_Swift) Then
+                '    pic_res = "Gloves of Haste"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Alchemist_Bones) Then
+                '    pic_res = "Hand of Midas"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Refreshing_Ornament) Then
+                '    pic_res = "Headdress"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Health_Potion) Then
+                '    pic_res = "Healing Salve"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Behemoths_Hearth) Then
+                '    pic_res = "Heart of Tarrasque"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Helm_Of_The_Victim) Then
+                '    pic_res = "Helm of Iron Will"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Whispering_Helm) Then
+                '    pic_res = "Helm of the Dominator"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Shamans_Headress) Then
+                '    pic_res = "Hood of Defiance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Warpcleft) Then
+                '    pic_res = "Hyperstone"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Minor_Totem) Then
+                '    pic_res = "Iron Branch"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Halberd) Then
+                '    pic_res = "Javelin"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Null_Stone) Then
+                '    pic_res = "Linken's Sphere"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Thunderclaw) Then
+                '    pic_res = "Maelstrom"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Mana_Battery) Then
+                '    pic_res = "Magic Stick"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Power_Supply) Then
+                '    pic_res = "Magic Wand"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Geometers_Bane) Then
+                '    pic_res = "Manta Style"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Mark_Of_The_Novice) Then
+                '    pic_res = "Mantle of Intelligence"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Elder_Parasite) Then
+                '    pic_res = "Mask of Madness"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(70)) Then
+                '    pic_res = "Medallion of Courage"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Astrolabe) Then
+                '    pic_res = "Mekansm"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Warhammer) Then
+                '    pic_res = "Mithril Hammer"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Charged_Hammer) Then
+                '    pic_res = "Mjollnir"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Savage_Mace) Then
+                '    pic_res = "Monkey King Bar"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Hungry_Spirit) Then
+                '    pic_res = "Morbid Mask"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Acolytes_Staff) Then
+                '    pic_res = "Mystic Staff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Puzzlebox) Then
+                '    pic_res = "Necronomicon 1"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Puzzlebox2) Then
+                '    pic_res = "Necronomicon 2"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Puzzlebox3) Then
+                '    pic_res = "Necronomicon 3"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Talisman_Of_Exile) Then
+                '    pic_res = "Null Talisman"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Great_Arcana) Then
+                '    pic_res = "Oblivion Staff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Wards_of_Sight) Then
+                '    pic_res = "Observer Ward"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Mighty_Blade) Then
+                '    pic_res = "Ogre Club"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(84)) Then
+                '    pic_res = "Orb of Venom"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Hellflower) Then
+                '    pic_res = "Orchid Malevolence"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Sustainer) Then
+                '    pic_res = "Perseverance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Enhanced_Marchers) Then
+                '    pic_res = "Phase Boots"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Barrier_Idol) Then
+                '    pic_res = "Pipe of Insight"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Platemail) Then
+                '    pic_res = "Platemail"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Glowstone) Then
+                '    pic_res = "Point Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Iron_Shield) Then
+                '    pic_res = "Poor Man's Shield"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Steamboots_Strength) Then
+                '    pic_res = "Power Treads"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Steamstaff) Then
+                '    pic_res = "Quarterstaff"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Loggers_Hatchet) Then
+                '    pic_res = "Quelling Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Mock_of_Brilliance) Then
+                '    pic_res = "Radiance"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Axe_Of_The_Malphai) Then
+                '    pic_res = "Reaver"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Restoration_Stone) Then
+                '    pic_res = "Refresher Orb"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Ring_Of_The_Teacher) Then
+                '    pic_res = "Ring of Basilius"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Lifetube) Then
+                '    pic_res = "Ring of Health"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Guardian_Ring) Then
+                '    pic_res = "Ring of Protection"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Trinket_Of_Restoration) Then
+                '    pic_res = "Ring of Regen"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Apprentices_Robe) Then
+                '    pic_res = "Robe of the Magi"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Sword_Of_The_High) Then
+                '    pic_res = "Sacred Relic"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Scarab) Then
+                '    pic_res = "Sage's Mask"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Icebrand) Then
+                '    pic_res = "Sange"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Frostburn) Then
+                '    pic_res = "Sange and Yasha"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Symbol_Of_Rage) Then
+                '    pic_res = "Satanic"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Kuldras_Sheepstick) Then
+                '    pic_res = "Scythe of Vyse"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Wards_of_Revelation) Then
+                '    pic_res = "Sentry Ward"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Shroud_Of_The_Assasin) Then
+                '    pic_res = "Shadow Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Frostfield_Plate) Then
+                '    pic_res = "Shiva's Guard"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Brutalizer) Then
+                '    pic_res = "Skull Basher"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Duck_Boots) Then
+                '    pic_res = "Slippers of Agility"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(116)) Then
+                '    pic_res = "Smoke of Deceit"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Icon_Of_The_Goddess) Then
+                '    pic_res = "Soul Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Blood_Chalice) Then
+                '    pic_res = "Soul Ring"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Neophytes_Book) Then
+                '    pic_res = "Staff of Wizardry"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Iron_Buckler) Then
+                '    pic_res = "Stout Shield"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Snake_Bracelet) Then
+                '    pic_res = "Talisman of Evasion"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Runes_Of_The_Blight) Then
+                '    pic_res = "Tango"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Homecoming_Stone) Then
+                '    pic_res = "Town Portal Scroll"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Blessed_Orb) Then
+                '    pic_res = "Ultimate Orb"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(126)) Then
+                '    pic_res = "Urn of Shadows"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Helm_Of_The_Black_Legion) Then
+                '    pic_res = "Vanguard"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(128)) Then
+                '    pic_res = "Veil of Discord"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Beastheart) Then
+                '    pic_res = "Vitality Booster"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Abyssal_Skull) Then
+                '    pic_res = "Vladmir's Offering"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Manatube) Then
+                '    pic_res = "Void Stone"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Soulscream_Ring) Then
+                '    pic_res = "Wraith Band"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Firebrand) Then
+                '    pic_res = "Yasha"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(0)) Then
+                '    pic_res = "Abyssal Blade"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(56)) Then
+                '    pic_res = "Heaven's Halberd"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(98)) Then
+                '    pic_res = "Ring of Aquila"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, ImageList1.Images(104)) Then
+                '    pic_res = "Rod of Atos"
+                '    Return pic_res
+                'ElseIf doImagesMatch(img_res, HoN_Striders) Then
+                '    pic_res = "Tranquil Boots"
                 Return pic_res
             Else
                 pic_res = "Error!"
                 Return pic_res
             End If
         Else
-            If doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blink_Dagger) Then
+            If doImagesMatch(img_res, ImageList1.Images(12)) Then
                 pic_res = "Blink Dagger"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blades_of_Attack) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(11)) Then
                 pic_res = "Blades of Attack"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Aghanim_s_Scepter) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(1)) Then
                 pic_res = "Aghanim's Scepter"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Animal_Courier) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(2)) Then
                 pic_res = "Animal Courier"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Arcane_Boots) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(3)) Then
                 pic_res = "Arcane Boots"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Armlet) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(4)) Then
                 pic_res = "Armlet"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Assault_Cuirass) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(5)) Then
                 pic_res = "Assault Cuirass"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Battle_Fury) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(6)) Then
                 pic_res = "Battle Fury"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Belt_of_Strength) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(7)) Then
                 pic_res = "Belt of Strength"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Black_King_Bar) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(8)) Then
                 pic_res = "Black King Bar"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_Mail) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(9)) Then
                 pic_res = "Blade Mail"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Blade_of_Alacrity) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(10)) Then
                 pic_res = "Blade of Alacrity"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bloodstone) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(13)) Then
                 pic_res = "Bloodstone"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Elvenskin) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(14)) Then
                 pic_res = "Boots of Elvenskin"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Speed) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(15)) Then
                 pic_res = "Boots of Speed"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Boots_of_Travel) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(16)) Then
                 pic_res = "Boots of Travel"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bottle) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(17)) Then
                 pic_res = "Bottle"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Bracer) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(18)) Then
                 pic_res = "Bracer"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Broadsword) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(19)) Then
                 pic_res = "Broadsword"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Buckler) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(20)) Then
                 pic_res = "Buckler"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Butterfly) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(21)) Then
                 pic_res = "Butterfly"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Chainmail) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(22)) Then
                 pic_res = "Chainmail"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Circlet) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(23)) Then
                 pic_res = "Circlet"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Clarity) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(24)) Then
                 pic_res = "Clarity"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Claymore) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(25)) Then
                 pic_res = "Claymore"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Cloak) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(26)) Then
                 pic_res = "Cloak"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Crystalys) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(27)) Then
                 pic_res = "Crystalys"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Daedalus) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(28)) Then
                 pic_res = "Daedalus"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(29)) Then
                 pic_res = "Dagon 1"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon2) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(30)) Then
                 pic_res = "Dagon 2"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon3) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(31)) Then
                 pic_res = "Dagon 3"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon4) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(32)) Then
                 pic_res = "Dagon 4"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dagon5) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(33)) Then
                 pic_res = "Dagon 5"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Demon_Edge) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(34)) Then
                 pic_res = "Demon Edge"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Desolator) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(35)) Then
                 pic_res = "Desolator"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(36)) Then
                 pic_res = "Diffusal Blade 1"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Diffusal_Blade2) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(37)) Then
                 pic_res = "Diffusal Blade 2"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Divine_Rapier) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(38)) Then
                 pic_res = "Divine Rapier"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Drum_of_Endurance) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(39)) Then
                 pic_res = "Drum of Endurance"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Dust_of_Appearance) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(40)) Then
                 pic_res = "Dust of Appearance"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eaglesong) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(41)) Then
                 pic_res = "Eaglesong"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Energy_Booster) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(42)) Then
                 pic_res = "Energy Booster"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ethereal_Blade) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(43)) Then
                 pic_res = "Ethereal Blade"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eul_s_Scepter_of_Divinity) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(44)) Then
                 pic_res = "Eul's Scepter of Divinity"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Eye_of_Skadi) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(45)) Then
                 pic_res = "Eye of Skadi"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Flying_Courier) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(46)) Then
                 pic_res = "Flying Courier"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Force_Staff) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(47)) Then
                 pic_res = "Force Staff"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gauntlets_of_Strength) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(48)) Then
                 pic_res = "Gauntlets of Strength"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gem_of_True_Sight) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(49)) Then
                 pic_res = "Gem of True Sight"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ghost_Scepter) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(50)) Then
                 pic_res = "Ghost Scepter"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Gloves_of_Haste) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(51)) Then
                 pic_res = "Gloves of Haste"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hand_of_Midas) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(52)) Then
                 pic_res = "Hand of Midas"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Headdress) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(53)) Then
                 pic_res = "Headdress"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Healing_Salve) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(54)) Then
                 pic_res = "Healing Salve"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heart_of_Tarrasque) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(55)) Then
                 pic_res = "Heart of Tarrasque"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_Iron_Will) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(57)) Then
                 pic_res = "Helm of Iron Will"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Helm_of_the_Dominator) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(58)) Then
                 pic_res = "Helm of the Dominator"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hood_of_Defiance) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(59)) Then
                 pic_res = "Hood of Defiance"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Hyperstone) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(60)) Then
                 pic_res = "Hyperstone"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Iron_Branch) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(61)) Then
                 pic_res = "Iron Branch"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Javelin) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(62)) Then
                 pic_res = "Javelin"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Linken_s_Sphere) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(63)) Then
                 pic_res = "Linken's Sphere"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Maelstrom) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(64)) Then
                 pic_res = "Maelstrom"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Stick) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(65)) Then
                 pic_res = "Magic Stick"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Magic_Wand) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(66)) Then
                 pic_res = "Magic Wand"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Manta_Style) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(67)) Then
                 pic_res = "Manta Style"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mantle_of_Intelligence) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(68)) Then
                 pic_res = "Mantle of Intelligence"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mask_of_Madness) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(69)) Then
                 pic_res = "Mask of Madness"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Medallion_of_Courage) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(70)) Then
                 pic_res = "Medallion of Courage"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mekansm) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(71)) Then
                 pic_res = "Mekansm"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mithril_Hammer) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(72)) Then
                 pic_res = "Mithril Hammer"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mjollnir) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(73)) Then
                 pic_res = "Mjollnir"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Monkey_King_Bar) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(74)) Then
                 pic_res = "Monkey King Bar"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Morbid_Mask) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(75)) Then
                 pic_res = "Morbid Mask"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Mystic_Staff) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(76)) Then
                 pic_res = "Mystic Staff"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(77)) Then
                 pic_res = "Necronomicon 1"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon2) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(78)) Then
                 pic_res = "Necronomicon 2"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Necronomicon3) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(79)) Then
                 pic_res = "Necronomicon 3"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Null_Talisman) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(80)) Then
                 pic_res = "Null Talisman"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Oblivion_Staff) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(81)) Then
                 pic_res = "Oblivion Staff"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Observer_Ward) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(82)) Then
                 pic_res = "Observer Ward"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ogre_Club) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(83)) Then
                 pic_res = "Ogre Club"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orb_of_Venom) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(84)) Then
                 pic_res = "Orb of Venom"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Orchid_Malevolence) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(85)) Then
                 pic_res = "Orchid Malevolence"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Perseverance) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(86)) Then
                 pic_res = "Perseverance"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Phase_Boots) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(87)) Then
                 pic_res = "Phase Boots"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Pipe_of_Insight) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(88)) Then
                 pic_res = "Pipe of Insight"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Platemail) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(89)) Then
                 pic_res = "Platemail"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Point_Booster) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(90)) Then
                 pic_res = "Point Booster"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Poor_Man_s_Shield) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(91)) Then
                 pic_res = "Poor Man's Shield"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Power_Treads) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(92)) Then
                 pic_res = "Power Treads"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quarterstaff) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(93)) Then
                 pic_res = "Quarterstaff"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Quelling_Blade) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(94)) Then
                 pic_res = "Quelling Blade"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Radiance) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(95)) Then
                 pic_res = "Radiance"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Reaver) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(96)) Then
                 pic_res = "Reaver"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Refresher_Orb) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(97)) Then
                 pic_res = "Refresher Orb"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Basilius) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(99)) Then
                 pic_res = "Ring of Basilius"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Health) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(100)) Then
                 pic_res = "Ring of Health"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Protection) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(101)) Then
                 pic_res = "Ring of Protection"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Regen) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(102)) Then
                 pic_res = "Ring of Regen"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Robe_of_the_Magi) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(103)) Then
                 pic_res = "Robe of the Magi"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sacred_Relic) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(105)) Then
                 pic_res = "Sacred Relic"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sage_s_Mask) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(106)) Then
                 pic_res = "Sage's Mask"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(107)) Then
                 pic_res = "Sange"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sange_and_Yasha) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(108)) Then
                 pic_res = "Sange and Yasha"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Satanic) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(109)) Then
                 pic_res = "Satanic"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Scythe_of_Vyse) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(110)) Then
                 pic_res = "Scythe of Vyse"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Sentry_Ward) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(111)) Then
                 pic_res = "Sentry Ward"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shadow_Blade) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(112)) Then
                 pic_res = "Shadow Blade"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Shiva_s_Guard) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(113)) Then
                 pic_res = "Shiva's Guard"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Skull_Basher) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(114)) Then
                 pic_res = "Skull Basher"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Slippers_of_Agility) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(115)) Then
                 pic_res = "Slippers of Agility"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Smoke_of_Deceit) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(116)) Then
                 pic_res = "Smoke of Deceit"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Booster) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(117)) Then
                 pic_res = "Soul Booster"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Soul_Ring) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(118)) Then
                 pic_res = "Soul Ring"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Staff_of_Wizardry) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(119)) Then
                 pic_res = "Staff of Wizardry"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Stout_Shield) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(120)) Then
                 pic_res = "Stout Shield"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Talisman_of_Evasion) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(121)) Then
                 pic_res = "Talisman of Evasion"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tango) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(122)) Then
                 pic_res = "Tango"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Town_Portal_Scroll) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(123)) Then
                 pic_res = "Town Portal Scroll"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ultimate_Orb) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(125)) Then
                 pic_res = "Ultimate Orb"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Urn_of_Shadows) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(126)) Then
                 pic_res = "Urn of Shadows"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vanguard) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(127)) Then
                 pic_res = "Vanguard"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Veil_of_Discord) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(128)) Then
                 pic_res = "Veil of Discord"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vitality_Booster) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(129)) Then
                 pic_res = "Vitality Booster"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Vladmir_s_Offering) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(130)) Then
                 pic_res = "Vladmir's Offering"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Void_Stone) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(131)) Then
                 pic_res = "Void Stone"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Wraith_Band) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(132)) Then
                 pic_res = "Wraith Band"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Yasha) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(133)) Then
                 pic_res = "Yasha"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Abyssal_Blade) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(0)) Then
                 pic_res = "Abyssal Blade"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Heaven_s_Halberd) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(56)) Then
                 pic_res = "Heaven's Halberd"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Ring_of_Aquila) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(98)) Then
                 pic_res = "Ring of Aquila"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Rod_of_Atos) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(104)) Then
                 pic_res = "Rod of Atos"
                 Return pic_res
-            ElseIf doImagesMatch(img_res, D2RIC.My.Resources.Resources._40px_Tranquil_Boots) Then
+            ElseIf doImagesMatch(img_res, ImageList1.Images(124)) Then
                 pic_res = "Tranquil Boots"
                 Return pic_res
             Else
@@ -4316,7 +4418,6 @@ Public Class FormMain
             End If
         End If
     End Function
-
 
 
     'TARGET PICTUREBOXES
@@ -4328,14 +4429,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item1.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item1.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item1.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item1.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item1, Itembuild.GetToolTip(PicRes2Name(Item1.Image)))
-        Else
-            ToolTip1.SetToolTip(Item1, "none")
-        End If
+        ToolTip1.SetToolTip(Item1, Itembuild.GetToolTip(PicRes2Name(Item1.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item1.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item2_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item2.DragEnter
@@ -4346,14 +4447,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item2_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item2.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item2.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item2.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item2.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item2, Itembuild.GetToolTip(PicRes2Name(Item2.Image)))
-        Else
-            ToolTip1.SetToolTip(Item2, "none")
-        End If
+        ToolTip1.SetToolTip(Item2, Itembuild.GetToolTip(PicRes2Name(Item2.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item2.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item3_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item3.DragEnter
@@ -4364,14 +4465,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item3_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item3.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item3.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item3.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item3.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item3, Itembuild.GetToolTip(PicRes2Name(Item3.Image)))
-        Else
-            ToolTip1.SetToolTip(Item3, "none")
-        End If
+        ToolTip1.SetToolTip(Item3, Itembuild.GetToolTip(PicRes2Name(Item3.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item3.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item4_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item4.DragEnter
@@ -4382,14 +4483,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item4_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item4.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item4.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item4.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item4.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item4, Itembuild.GetToolTip(PicRes2Name(Item4.Image)))
-        Else
-            ToolTip1.SetToolTip(Item4, "none")
-        End If
+        ToolTip1.SetToolTip(Item4, Itembuild.GetToolTip(PicRes2Name(Item4.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item4.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item5_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item5.DragEnter
@@ -4400,14 +4501,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item5_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item5.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item5.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item5.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item5.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item5, Itembuild.GetToolTip(PicRes2Name(Item5.Image)))
-        Else
-            ToolTip1.SetToolTip(Item5, "none")
-        End If
+        ToolTip1.SetToolTip(Item5, Itembuild.GetToolTip(PicRes2Name(Item5.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item5.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item6_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item6.DragEnter
@@ -4418,14 +4519,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item6_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item6.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item6.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item6.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item6.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item6, Itembuild.GetToolTip(PicRes2Name(Item6.Image)))
-        Else
-            ToolTip1.SetToolTip(Item6, "none")
-        End If
+        ToolTip1.SetToolTip(Item6, Itembuild.GetToolTip(PicRes2Name(Item6.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item6.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item7_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item7.DragEnter
@@ -4436,14 +4537,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item7_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item7.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item7.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item7.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item7.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item7, Itembuild.GetToolTip(PicRes2Name(Item7.Image)))
-        Else
-            ToolTip1.SetToolTip(Item7, "none")
-        End If
+        ToolTip1.SetToolTip(Item7, Itembuild.GetToolTip(PicRes2Name(Item7.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item7.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item8_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item8.DragEnter
@@ -4454,14 +4555,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item8_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item8.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item8.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item8.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item8.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item8, Itembuild.GetToolTip(PicRes2Name(Item8.Image)))
-        Else
-            ToolTip1.SetToolTip(Item8, "none")
-        End If
+        ToolTip1.SetToolTip(Item8, Itembuild.GetToolTip(PicRes2Name(Item8.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item8.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item9_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item9.DragEnter
@@ -4472,14 +4573,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item9_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item9.DragDrop
+        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item9.Image)))
+        Label15.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item9.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item9.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item9, Itembuild.GetToolTip(PicRes2Name(Item9.Image)))
-        Else
-            ToolTip1.SetToolTip(Item9, "none")
-        End If
+        ToolTip1.SetToolTip(Item9, Itembuild.GetToolTip(PicRes2Name(Item9.Image)))
+        IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item9.Image)))
+        Label15.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item10_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item10.DragEnter
@@ -4490,14 +4591,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item10_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item10.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item10.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item10.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item10.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item10, Itembuild.GetToolTip(PicRes2Name(Item10.Image)))
-        Else
-            ToolTip1.SetToolTip(Item10, "none")
-        End If
+        ToolTip1.SetToolTip(Item10, Itembuild.GetToolTip(PicRes2Name(Item10.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item10.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item11_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item11.DragEnter
@@ -4508,14 +4609,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item11_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item11.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item11.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item11.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item11.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item11, Itembuild.GetToolTip(PicRes2Name(Item11.Image)))
-        Else
-            ToolTip1.SetToolTip(Item11, "none")
-        End If
+        ToolTip1.SetToolTip(Item11, Itembuild.GetToolTip(PicRes2Name(Item11.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item11.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item12_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item12.DragEnter
@@ -4526,14 +4627,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item12_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item12.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item12.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item12.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item12.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item12, Itembuild.GetToolTip(PicRes2Name(Item12.Image)))
-        Else
-            ToolTip1.SetToolTip(Item12, "none")
-        End If
+        ToolTip1.SetToolTip(Item12, Itembuild.GetToolTip(PicRes2Name(Item12.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item12.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item13_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item13.DragEnter
@@ -4544,14 +4645,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item13_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item13.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item13.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item13.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item13.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item13, Itembuild.GetToolTip(PicRes2Name(Item13.Image)))
-        Else
-            ToolTip1.SetToolTip(Item13, "none")
-        End If
+        ToolTip1.SetToolTip(Item13, Itembuild.GetToolTip(PicRes2Name(Item13.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item13.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item14_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item14.DragEnter
@@ -4562,14 +4663,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item14_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item14.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item14.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item14.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item14.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item14, Itembuild.GetToolTip(PicRes2Name(Item14.Image)))
-        Else
-            ToolTip1.SetToolTip(Item14, "none")
-        End If
+        ToolTip1.SetToolTip(Item14, Itembuild.GetToolTip(PicRes2Name(Item14.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item14.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item15_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item15.DragEnter
@@ -4580,14 +4681,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item15_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item15.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item15.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item15.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item15.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item15, Itembuild.GetToolTip(PicRes2Name(Item15.Image)))
-        Else
-            ToolTip1.SetToolTip(Item15, "none")
-        End If
+        ToolTip1.SetToolTip(Item15, Itembuild.GetToolTip(PicRes2Name(Item15.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item15.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item16_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item16.DragEnter
@@ -4598,14 +4699,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item16_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item16.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item16.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item16.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item16.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item16, Itembuild.GetToolTip(PicRes2Name(Item16.Image)))
-        Else
-            ToolTip1.SetToolTip(Item16, "none")
-        End If
+        ToolTip1.SetToolTip(Item16, Itembuild.GetToolTip(PicRes2Name(Item16.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item16.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item17_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item17.DragEnter
@@ -4616,14 +4717,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item17_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item17.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item17.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item17.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item17.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item17, Itembuild.GetToolTip(PicRes2Name(Item17.Image)))
-        Else
-            ToolTip1.SetToolTip(Item17, "none")
-        End If
+        ToolTip1.SetToolTip(Item17, Itembuild.GetToolTip(PicRes2Name(Item17.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item17.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item18_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item18.DragEnter
@@ -4634,14 +4735,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item18_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item18.DragDrop
+        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item18.Image)))
+        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item18.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item18.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item18, Itembuild.GetToolTip(PicRes2Name(Item18.Image)))
-        Else
-            ToolTip1.SetToolTip(Item18, "none")
-        End If
+        ToolTip1.SetToolTip(Item18, Itembuild.GetToolTip(PicRes2Name(Item18.Image)))
+        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item18.Image)))
+        Label16.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item19_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item19.DragEnter
@@ -4652,14 +4753,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item19_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item19.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item19.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item19.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item19.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item19, Itembuild.GetToolTip(PicRes2Name(Item19.Image)))
-        Else
-            ToolTip1.SetToolTip(Item19, "none")
-        End If
+        ToolTip1.SetToolTip(Item19, Itembuild.GetToolTip(PicRes2Name(Item19.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item19.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item20_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item20.DragEnter
@@ -4670,14 +4771,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item20_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item20.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item20.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item20.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item20.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item20, Itembuild.GetToolTip(PicRes2Name(Item20.Image)))
-        Else
-            ToolTip1.SetToolTip(Item20, "none")
-        End If
+        ToolTip1.SetToolTip(Item20, Itembuild.GetToolTip(PicRes2Name(Item20.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item20.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item21_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item21.DragEnter
@@ -4688,14 +4789,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item21_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item21.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item21.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item21.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item21.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item21, Itembuild.GetToolTip(PicRes2Name(Item21.Image)))
-        Else
-            ToolTip1.SetToolTip(Item21, "none")
-        End If
+        ToolTip1.SetToolTip(Item21, Itembuild.GetToolTip(PicRes2Name(Item21.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item21.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item22_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item22.DragEnter
@@ -4706,14 +4807,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item22_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item22.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item22.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item22.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item22.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item22, Itembuild.GetToolTip(PicRes2Name(Item22.Image)))
-        Else
-            ToolTip1.SetToolTip(Item22, "none")
-        End If
+        ToolTip1.SetToolTip(Item22, Itembuild.GetToolTip(PicRes2Name(Item22.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item22.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item23_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item23.DragEnter
@@ -4724,14 +4825,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item23_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item23.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item23.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item23.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item23.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item23, Itembuild.GetToolTip(PicRes2Name(Item23.Image)))
-        Else
-            ToolTip1.SetToolTip(Item23, "none")
-        End If
+        ToolTip1.SetToolTip(Item23, Itembuild.GetToolTip(PicRes2Name(Item23.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item23.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item24_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item24.DragEnter
@@ -4742,14 +4843,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item24_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item24.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item24.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item24.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item24.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item24, Itembuild.GetToolTip(PicRes2Name(Item24.Image)))
-        Else
-            ToolTip1.SetToolTip(Item24, "none")
-        End If
+        ToolTip1.SetToolTip(Item24, Itembuild.GetToolTip(PicRes2Name(Item24.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item24.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item25_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item25.DragEnter
@@ -4760,14 +4861,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item25_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item25.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item25.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item25.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item25.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item25, Itembuild.GetToolTip(PicRes2Name(Item25.Image)))
-        Else
-            ToolTip1.SetToolTip(Item25, "none")
-        End If
+        ToolTip1.SetToolTip(Item25, Itembuild.GetToolTip(PicRes2Name(Item25.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item25.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item26_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item26.DragEnter
@@ -4778,14 +4879,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item26_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item26.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item26.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item26.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item26.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item26, Itembuild.GetToolTip(PicRes2Name(Item26.Image)))
-        Else
-            ToolTip1.SetToolTip(Item26, "none")
-        End If
+        ToolTip1.SetToolTip(Item26, Itembuild.GetToolTip(PicRes2Name(Item26.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item26.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item27_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item27.DragEnter
@@ -4796,14 +4897,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item27_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item27.DragDrop
+        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item27.Image)))
+        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item27.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item27.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item27, Itembuild.GetToolTip(PicRes2Name(Item27.Image)))
-        Else
-            ToolTip1.SetToolTip(Item27, "none")
-        End If
+        ToolTip1.SetToolTip(Item27, Itembuild.GetToolTip(PicRes2Name(Item27.Image)))
+        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item27.Image)))
+        Label18.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item28_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item28.DragEnter
@@ -4814,14 +4915,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item28_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item28.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item28.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item28.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item28.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item28, Itembuild.GetToolTip(PicRes2Name(Item28.Image)))
-        Else
-            ToolTip1.SetToolTip(Item28, "none")
-        End If
+        ToolTip1.SetToolTip(Item28, Itembuild.GetToolTip(PicRes2Name(Item28.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item28.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item29_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item29.DragEnter
@@ -4832,14 +4933,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item29_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item29.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item29.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item29.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item29.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item29, Itembuild.GetToolTip(PicRes2Name(Item29.Image)))
-        Else
-            ToolTip1.SetToolTip(Item29, "none")
-        End If
+        ToolTip1.SetToolTip(Item29, Itembuild.GetToolTip(PicRes2Name(Item29.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item29.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item30_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item30.DragEnter
@@ -4850,14 +4951,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item30_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item30.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item30.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item30.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item30.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item30, Itembuild.GetToolTip(PicRes2Name(Item30.Image)))
-        Else
-            ToolTip1.SetToolTip(Item30, "none")
-        End If
+        ToolTip1.SetToolTip(Item30, Itembuild.GetToolTip(PicRes2Name(Item30.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item30.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item31_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item31.DragEnter
@@ -4868,14 +4969,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item31_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item31.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item31.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item31.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item31.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item31, Itembuild.GetToolTip(PicRes2Name(Item31.Image)))
-        Else
-            ToolTip1.SetToolTip(Item31, "none")
-        End If
+        ToolTip1.SetToolTip(Item31, Itembuild.GetToolTip(PicRes2Name(Item31.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item31.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item32_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item32.DragEnter
@@ -4886,14 +4987,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item32_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item32.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item32.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item32.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item32.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item32, Itembuild.GetToolTip(PicRes2Name(Item32.Image)))
-        Else
-            ToolTip1.SetToolTip(Item32, "none")
-        End If
+        ToolTip1.SetToolTip(Item32, Itembuild.GetToolTip(PicRes2Name(Item32.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item32.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item33_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item33.DragEnter
@@ -4904,14 +5005,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item33_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item33.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item33.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item33.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item33.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item33, Itembuild.GetToolTip(PicRes2Name(Item33.Image)))
-        Else
-            ToolTip1.SetToolTip(Item33, "none")
-        End If
+        ToolTip1.SetToolTip(Item33, Itembuild.GetToolTip(PicRes2Name(Item33.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item33.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item34_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item34.DragEnter
@@ -4922,14 +5023,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item34_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item34.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item34.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item34.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item34.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item34, Itembuild.GetToolTip(PicRes2Name(Item34.Image)))
-        Else
-            ToolTip1.SetToolTip(Item34, "none")
-        End If
+        ToolTip1.SetToolTip(Item34, Itembuild.GetToolTip(PicRes2Name(Item34.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item34.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item35_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item35.DragEnter
@@ -4940,14 +5041,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item35_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item35.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item35.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item35.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item35.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item35, Itembuild.GetToolTip(PicRes2Name(Item35.Image)))
-        Else
-            ToolTip1.SetToolTip(Item35, "none")
-        End If
+        ToolTip1.SetToolTip(Item35, Itembuild.GetToolTip(PicRes2Name(Item35.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item35.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item36_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item36.DragEnter
@@ -4958,14 +5059,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item36_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item36.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item36.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item36.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item36.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item36, Itembuild.GetToolTip(PicRes2Name(Item36.Image)))
-        Else
-            ToolTip1.SetToolTip(Item36, "none")
-        End If
+        ToolTip1.SetToolTip(Item36, Itembuild.GetToolTip(PicRes2Name(Item36.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item36.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item37_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item37.DragEnter
@@ -4976,14 +5077,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item37_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item37.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item37.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item37.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item37.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item37, Itembuild.GetToolTip(PicRes2Name(Item37.Image)))
-        Else
-            ToolTip1.SetToolTip(Item37, "none")
-        End If
+        ToolTip1.SetToolTip(Item37, Itembuild.GetToolTip(PicRes2Name(Item37.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item37.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item38_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item38.DragEnter
@@ -4994,14 +5095,14 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item38_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item38.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item38.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item38.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item38.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item38, Itembuild.GetToolTip(PicRes2Name(Item38.Image)))
-        Else
-            ToolTip1.SetToolTip(Item38, "none")
-        End If
+        ToolTip1.SetToolTip(Item38, Itembuild.GetToolTip(PicRes2Name(Item38.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item38.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     Private Sub Item39_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item39.DragEnter
@@ -5012,2315 +5113,25 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item39_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item39.DragDrop
+        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item39.Image)))
+        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item39.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
-        If Not doImagesMatch(Item39.Image, D2RIC.My.Resources.Resources.none) Then
-            ToolTip1.SetToolTip(Item39, Itembuild.GetToolTip(PicRes2Name(Item39.Image)))
-        Else
-            ToolTip1.SetToolTip(Item39, "none")
-        End If
-    End Sub
-
-    'SOURCE PICTUREBOXES
-    Private Sub PictureBox31_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox31.MouseDown
-        If Not PictureBox31.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox31.Image, 75)
-            pic31 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox31_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox31.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox31.DoDragDrop(PictureBox31.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox32_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox32.MouseDown
-        If Not PictureBox32.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox32.Image, 75)
-            pic32 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox32_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox32.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox32.DoDragDrop(PictureBox32.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox33_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox33.MouseDown
-        If Not PictureBox33.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox33.Image, 75)
-            pic33 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox33_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox33.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox33.DoDragDrop(PictureBox33.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox34_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox34.MouseDown
-        If Not PictureBox34.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox34.Image, 75)
-            pic34 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox34_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox34.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox34.DoDragDrop(PictureBox34.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox35_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox35.MouseDown
-        If Not PictureBox35.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox35.Image, 75)
-            pic35 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox35_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox35.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox35.DoDragDrop(PictureBox35.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox36_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox36.MouseDown
-        If Not PictureBox36.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox36.Image, 75)
-            pic36 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox36_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox36.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox36.DoDragDrop(PictureBox36.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox37_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox37.MouseDown
-        If Not PictureBox37.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox37.Image, 75)
-            pic37 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox37_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox37.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox37.DoDragDrop(PictureBox37.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox38_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox38.MouseDown
-        If Not PictureBox38.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox38.Image, 75)
-            pic38 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox38_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox38.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox38.DoDragDrop(PictureBox38.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox39_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox39.MouseDown
-        If Not PictureBox39.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox39.Image, 75)
-            pic39 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox39_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox39.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox39.DoDragDrop(PictureBox39.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox40_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox40.MouseDown
-        If Not PictureBox40.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox40.Image, 75)
-            pic40 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox40_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox40.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox40.DoDragDrop(PictureBox40.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox41_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox41.MouseDown
-        If Not PictureBox41.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox41.Image, 75)
-            pic41 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox41_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox41.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox41.DoDragDrop(PictureBox41.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox42_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox42.MouseDown
-        If Not PictureBox42.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox42.Image, 75)
-            pic42 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox42_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox42.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox42.DoDragDrop(PictureBox42.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox43_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox43.MouseDown
-        If Not PictureBox43.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox43.Image, 75)
-            pic43 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox43_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox43.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox43.DoDragDrop(PictureBox43.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox44_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox44.MouseDown
-        If Not PictureBox44.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox44.Image, 75)
-            pic44 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox44_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox44.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox44.DoDragDrop(PictureBox44.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox45_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox45.MouseDown
-        If Not PictureBox45.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox45.Image, 75)
-            pic45 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox45_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox45.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox45.DoDragDrop(PictureBox45.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox46_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox46.MouseDown
-        If Not PictureBox46.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox46.Image, 75)
-            pic46 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox46_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox46.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox46.DoDragDrop(PictureBox46.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox47_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox47.MouseDown
-        If Not PictureBox47.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox47.Image, 75)
-            pic47 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox47_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox47.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox47.DoDragDrop(PictureBox47.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox48_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox48.MouseDown
-        If Not PictureBox48.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox48.Image, 75)
-            pic48 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox48_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox48.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox48.DoDragDrop(PictureBox48.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox49_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox49.MouseDown
-        If Not PictureBox49.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox49.Image, 75)
-            pic49 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox49_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox49.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox49.DoDragDrop(PictureBox49.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox50_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox50.MouseDown
-        If Not PictureBox50.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox50.Image, 75)
-            pic50 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox50_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox50.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox50.DoDragDrop(PictureBox50.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox51_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox51.MouseDown
-        If Not PictureBox51.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox51.Image, 75)
-            pic51 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox51_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox51.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox51.DoDragDrop(PictureBox51.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox52_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox52.MouseDown
-        If Not PictureBox52.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox52.Image, 75)
-            pic52 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox52_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox52.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox52.DoDragDrop(PictureBox52.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox53_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox53.MouseDown
-        If Not PictureBox53.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox53.Image, 75)
-            pic53 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox53_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox53.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox53.DoDragDrop(PictureBox53.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox54_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox54.MouseDown
-        If Not PictureBox54.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox54.Image, 75)
-            pic54 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox54_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox54.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox54.DoDragDrop(PictureBox54.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox55_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox55.MouseDown
-        If Not PictureBox55.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox55.Image, 75)
-            pic55 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox55_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox55.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox55.DoDragDrop(PictureBox55.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox56_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox56.MouseDown
-        If Not PictureBox56.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox56.Image, 75)
-            pic56 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox56_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox56.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox56.DoDragDrop(PictureBox56.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox57_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox57.MouseDown
-        If Not PictureBox57.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox57.Image, 75)
-            pic57 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox57_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox57.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox57.DoDragDrop(PictureBox57.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox58_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox58.MouseDown
-        If Not PictureBox58.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox58.Image, 75)
-            pic58 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox58_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox58.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox58.DoDragDrop(PictureBox58.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox59_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox59.MouseDown
-        If Not PictureBox59.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox59.Image, 75)
-            pic59 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox59_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox59.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox59.DoDragDrop(PictureBox59.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox60_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox60.MouseDown
-        If Not PictureBox60.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox60.Image, 75)
-            pic60 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox60_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox60.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox60.DoDragDrop(PictureBox60.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox61_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox61.MouseDown
-        If Not PictureBox61.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox61.Image, 75)
-            pic61 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox61_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox61.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox61.DoDragDrop(PictureBox61.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox62_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox62.MouseDown
-        If Not PictureBox62.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox62.Image, 75)
-            pic62 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox62_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox62.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox62.DoDragDrop(PictureBox62.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox63_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox63.MouseDown
-        If Not PictureBox63.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox63.Image, 75)
-            pic63 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox63_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox63.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox63.DoDragDrop(PictureBox63.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox64_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox64.MouseDown
-        If Not PictureBox64.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox64.Image, 75)
-            pic64 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox64_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox64.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox64.DoDragDrop(PictureBox64.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox65_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox65.MouseDown
-        If Not PictureBox65.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox65.Image, 75)
-            pic65 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox65_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox65.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox65.DoDragDrop(PictureBox65.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox66_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox66.MouseDown
-        If Not PictureBox66.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox66.Image, 75)
-            pic66 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox66_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox66.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox66.DoDragDrop(PictureBox66.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox67_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox67.MouseDown
-        If Not PictureBox67.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox67.Image, 75)
-            pic67 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox67_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox67.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox67.DoDragDrop(PictureBox67.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox68_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox68.MouseDown
-        If Not PictureBox68.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox68.Image, 75)
-            pic68 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox68_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox68.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox68.DoDragDrop(PictureBox68.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox69_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox69.MouseDown
-        If Not PictureBox69.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox69.Image, 75)
-            pic69 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox69_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox69.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox69.DoDragDrop(PictureBox69.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox70_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox70.MouseDown
-        If Not PictureBox70.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox70.Image, 75)
-            pic70 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox70_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox70.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox70.DoDragDrop(PictureBox70.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox71_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox71.MouseDown
-        If Not PictureBox71.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox71.Image, 75)
-            pic71 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox71_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox71.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox71.DoDragDrop(PictureBox71.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox72_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox72.MouseDown
-        If Not PictureBox72.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox72.Image, 75)
-            pic72 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox72_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox72.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox72.DoDragDrop(PictureBox72.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox73_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox73.MouseDown
-        If Not PictureBox73.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox73.Image, 75)
-            pic73 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox73_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox73.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox73.DoDragDrop(PictureBox73.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox74_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox74.MouseDown
-        If Not PictureBox74.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox74.Image, 75)
-            pic74 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox74_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox74.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox74.DoDragDrop(PictureBox74.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox75_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox75.MouseDown
-        If Not PictureBox75.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox75.Image, 75)
-            pic75 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox75_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox75.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox75.DoDragDrop(PictureBox75.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox76_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox76.MouseDown
-        If Not PictureBox76.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox76.Image, 75)
-            pic76 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox76_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox76.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox76.DoDragDrop(PictureBox76.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox77_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox77.MouseDown
-        If Not PictureBox77.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox77.Image, 75)
-            pic77 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox77_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox77.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox77.DoDragDrop(PictureBox77.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox78_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox78.MouseDown
-        If Not PictureBox78.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox78.Image, 75)
-            pic78 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox78_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox78.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox78.DoDragDrop(PictureBox78.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox79_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox79.MouseDown
-        If Not PictureBox79.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox79.Image, 75)
-            pic79 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox79_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox79.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox79.DoDragDrop(PictureBox79.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox80_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox80.MouseDown
-        If Not PictureBox80.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox80.Image, 75)
-            pic80 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox80_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox80.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox80.DoDragDrop(PictureBox80.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox81_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox81.MouseDown
-        If Not PictureBox81.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox81.Image, 75)
-            pic81 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox81_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox81.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox81.DoDragDrop(PictureBox81.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox82_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox82.MouseDown
-        If Not PictureBox82.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox82.Image, 75)
-            pic82 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox82_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox82.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox82.DoDragDrop(PictureBox82.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox83_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox83.MouseDown
-        If Not PictureBox83.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox83.Image, 75)
-            pic83 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox83_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox83.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox83.DoDragDrop(PictureBox83.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox84_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox84.MouseDown
-        If Not PictureBox84.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox84.Image, 75)
-            pic84 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox84_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox84.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox84.DoDragDrop(PictureBox84.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox85_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox85.MouseDown
-        If Not PictureBox85.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox85.Image, 75)
-            pic85 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox85_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox85.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox85.DoDragDrop(PictureBox85.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox86_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox86.MouseDown
-        If Not PictureBox86.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox86.Image, 75)
-            pic86 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox86_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox86.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox86.DoDragDrop(PictureBox86.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox87_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox87.MouseDown
-        If Not PictureBox87.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox87.Image, 75)
-            pic87 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox87_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox87.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox87.DoDragDrop(PictureBox87.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox88_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox88.MouseDown
-        If Not PictureBox88.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox88.Image, 75)
-            pic88 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox88_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox88.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox88.DoDragDrop(PictureBox88.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox89_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox89.MouseDown
-        If Not PictureBox89.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox89.Image, 75)
-            pic89 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox89_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox89.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox89.DoDragDrop(PictureBox89.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox90_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox90.MouseDown
-        If Not PictureBox90.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox90.Image, 75)
-            pic90 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox90_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox90.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox90.DoDragDrop(PictureBox90.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox91_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox91.MouseDown
-        If Not PictureBox91.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox91.Image, 75)
-            pic91 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox91_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox91.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox91.DoDragDrop(PictureBox91.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox92_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox92.MouseDown
-        If Not PictureBox92.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox92.Image, 75)
-            pic92 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox92_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox92.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox92.DoDragDrop(PictureBox92.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox93_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox93.MouseDown
-        If Not PictureBox93.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox93.Image, 75)
-            pic93 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox93_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox93.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox93.DoDragDrop(PictureBox93.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox94_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox94.MouseDown
-        If Not PictureBox94.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox94.Image, 75)
-            pic94 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox94_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox94.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox94.DoDragDrop(PictureBox94.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox95_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox95.MouseDown
-        If Not PictureBox95.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox95.Image, 75)
-            pic95 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox95_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox95.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox95.DoDragDrop(PictureBox95.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox96_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox96.MouseDown
-        If Not PictureBox96.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox96.Image, 75)
-            pic96 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox96_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox96.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox96.DoDragDrop(PictureBox96.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox97_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox97.MouseDown
-        If Not PictureBox97.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox97.Image, 75)
-            pic97 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox97_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox97.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox97.DoDragDrop(PictureBox97.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox98_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox98.MouseDown
-        If Not PictureBox98.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox98.Image, 75)
-            pic98 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox98_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox98.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox98.DoDragDrop(PictureBox98.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox99_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox99.MouseDown
-        If Not PictureBox99.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox99.Image, 75)
-            pic99 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox99_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox99.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox99.DoDragDrop(PictureBox99.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox100_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox100.MouseDown
-        If Not PictureBox100.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox100.Image, 75)
-            pic100 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox100_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox100.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox100.DoDragDrop(PictureBox100.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox101_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox101.MouseDown
-        If Not PictureBox101.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox101.Image, 75)
-            pic101 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox101_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox101.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox101.DoDragDrop(PictureBox101.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox102_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox102.MouseDown
-        If Not PictureBox102.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox102.Image, 75)
-            pic102 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox102_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox102.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox102.DoDragDrop(PictureBox102.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox103_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox103.MouseDown
-        If Not PictureBox103.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox103.Image, 75)
-            pic103 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox103_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox103.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox103.DoDragDrop(PictureBox103.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox104_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox104.MouseDown
-        If Not PictureBox104.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox104.Image, 75)
-            pic104 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox104_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox104.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox104.DoDragDrop(PictureBox104.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox105_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox105.MouseDown
-        If Not PictureBox105.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox105.Image, 75)
-            pic105 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox105_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox105.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox105.DoDragDrop(PictureBox105.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox106_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox106.MouseDown
-        If Not PictureBox106.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox106.Image, 75)
-            pic106 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox106_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox106.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox106.DoDragDrop(PictureBox106.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox107_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox107.MouseDown
-        If Not PictureBox107.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox107.Image, 75)
-            pic107 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox107_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox107.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox107.DoDragDrop(PictureBox107.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox108_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox108.MouseDown
-        If Not PictureBox108.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox108.Image, 75)
-            pic108 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox108_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox108.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox108.DoDragDrop(PictureBox108.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox109_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox109.MouseDown
-        If Not PictureBox109.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox109.Image, 75)
-            pic109 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox109_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox109.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox109.DoDragDrop(PictureBox109.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox110_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox110.MouseDown
-        If Not PictureBox110.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox110.Image, 75)
-            pic110 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox110_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox110.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox110.DoDragDrop(PictureBox110.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox111_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox111.MouseDown
-        If Not PictureBox111.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox111.Image, 75)
-            pic111 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox111_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox111.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox111.DoDragDrop(PictureBox111.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox112_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox112.MouseDown
-        If Not PictureBox112.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox112.Image, 75)
-            pic112 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox112_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox112.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox112.DoDragDrop(PictureBox112.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox113_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox113.MouseDown
-        If Not PictureBox113.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox113.Image, 75)
-            pic113 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox113_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox113.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox113.DoDragDrop(PictureBox113.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox114_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox114.MouseDown
-        If Not PictureBox114.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox114.Image, 75)
-            pic114 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox114_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox114.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox114.DoDragDrop(PictureBox114.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox115_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox115.MouseDown
-        If Not PictureBox115.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox115.Image, 75)
-            pic115 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox115_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox115.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox115.DoDragDrop(PictureBox115.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox116_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox116.MouseDown
-        If Not PictureBox116.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox116.Image, 75)
-            pic116 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox116_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox116.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox116.DoDragDrop(PictureBox116.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox117_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox117.MouseDown
-        If Not PictureBox117.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox117.Image, 75)
-            pic117 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox117_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox117.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox117.DoDragDrop(PictureBox117.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox118_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox118.MouseDown
-        If Not PictureBox118.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox118.Image, 75)
-            pic118 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox118_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox118.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox118.DoDragDrop(PictureBox118.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox119_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox119.MouseDown
-        If Not PictureBox119.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox119.Image, 75)
-            pic119 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox119_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox119.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox119.DoDragDrop(PictureBox119.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox120_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox120.MouseDown
-        If Not PictureBox120.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox120.Image, 75)
-            pic120 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox120_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox120.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox120.DoDragDrop(PictureBox120.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox121_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox121.MouseDown
-        If Not PictureBox121.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox121.Image, 75)
-            pic121 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox121_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox121.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox121.DoDragDrop(PictureBox121.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox122_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox122.MouseDown
-        If Not PictureBox122.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox122.Image, 75)
-            pic122 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox122_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox122.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox122.DoDragDrop(PictureBox122.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox123_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox123.MouseDown
-        If Not PictureBox123.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox123.Image, 75)
-            pic123 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox123_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox123.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox123.DoDragDrop(PictureBox123.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox124_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox124.MouseDown
-        If Not PictureBox124.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox124.Image, 75)
-            pic124 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox124_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox124.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox124.DoDragDrop(PictureBox124.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox125_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox125.MouseDown
-        If Not PictureBox125.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox125.Image, 75)
-            pic125 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox125_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox125.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox125.DoDragDrop(PictureBox125.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox126_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox126.MouseDown
-        If Not PictureBox126.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox126.Image, 75)
-            pic126 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox126_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox126.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox126.DoDragDrop(PictureBox126.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox127_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox127.MouseDown
-        If Not PictureBox127.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox127.Image, 75)
-            pic127 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox127_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox127.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox127.DoDragDrop(PictureBox127.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox128_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox128.MouseDown
-        If Not PictureBox128.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox128.Image, 75)
-            pic128 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox128_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox128.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox128.DoDragDrop(PictureBox128.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox129_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox129.MouseDown
-        If Not PictureBox129.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox129.Image, 75)
-            pic129 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox129_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox129.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox129.DoDragDrop(PictureBox129.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox130_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox130.MouseDown
-        If Not PictureBox130.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox130.Image, 75)
-            pic130 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox130_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox130.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox130.DoDragDrop(PictureBox130.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox131_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox131.MouseDown
-        If Not PictureBox131.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox131.Image, 75)
-            pic131 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox131_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox131.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox131.DoDragDrop(PictureBox131.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox132_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox132.MouseDown
-        If Not PictureBox132.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox132.Image, 75)
-            pic132 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox132_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox132.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox132.DoDragDrop(PictureBox132.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox133_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox133.MouseDown
-        If Not PictureBox133.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox133.Image, 75)
-            pic133 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox133_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox133.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox133.DoDragDrop(PictureBox133.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox134_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox134.MouseDown
-        If Not PictureBox134.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox134.Image, 75)
-            pic134 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox134_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox134.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox134.DoDragDrop(PictureBox134.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox135_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox135.MouseDown
-        If Not PictureBox135.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox135.Image, 75)
-            pic135 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox135_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox135.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox135.DoDragDrop(PictureBox135.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox136_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox136.MouseDown
-        If Not PictureBox136.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox136.Image, 75)
-            pic136 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox136_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox136.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox136.DoDragDrop(PictureBox136.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox137_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox137.MouseDown
-        If Not PictureBox137.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox137.Image, 75)
-            pic137 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox137_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox137.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox137.DoDragDrop(PictureBox137.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox138_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox138.MouseDown
-        If Not PictureBox138.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox138.Image, 75)
-            pic138 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox138_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox138.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox138.DoDragDrop(PictureBox138.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox139_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox139.MouseDown
-        If Not PictureBox139.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox139.Image, 75)
-            pic139 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox139_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox139.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox139.DoDragDrop(PictureBox139.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox140_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox140.MouseDown
-        If Not PictureBox140.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox140.Image, 75)
-            pic140 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox140_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox140.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox140.DoDragDrop(PictureBox140.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox141_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox141.MouseDown
-        If Not PictureBox141.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox141.Image, 75)
-            pic141 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox141_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox141.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox141.DoDragDrop(PictureBox141.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox142_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox142.MouseDown
-        If Not PictureBox142.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox142.Image, 75)
-            pic142 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox142_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox142.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox142.DoDragDrop(PictureBox142.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox143_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox143.MouseDown
-        If Not PictureBox143.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox143.Image, 75)
-            pic143 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox143_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox143.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox143.DoDragDrop(PictureBox143.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox144_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox144.MouseDown
-        If Not PictureBox144.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox144.Image, 75)
-            pic144 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox144_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox144.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox144.DoDragDrop(PictureBox144.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox145_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox145.MouseDown
-        If Not PictureBox145.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox145.Image, 75)
-            pic145 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox145_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox145.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox145.DoDragDrop(PictureBox145.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox146_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox146.MouseDown
-        If Not PictureBox146.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox146.Image, 75)
-            pic146 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox146_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox146.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox146.DoDragDrop(PictureBox146.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox147_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox147.MouseDown
-        If Not PictureBox147.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox147.Image, 75)
-            pic147 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox147_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox147.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox147.DoDragDrop(PictureBox147.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox148_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox148.MouseDown
-        If Not PictureBox148.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox148.Image, 75)
-            pic148 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox148_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox148.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox148.DoDragDrop(PictureBox148.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox149_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox149.MouseDown
-        If Not PictureBox149.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox149.Image, 75)
-            pic149 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox149_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox149.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox149.DoDragDrop(PictureBox149.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox150_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox150.MouseDown
-        If Not PictureBox150.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox150.Image, 75)
-            pic150 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox150_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox150.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox150.DoDragDrop(PictureBox150.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox151_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox151.MouseDown
-        If Not PictureBox151.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox151.Image, 75)
-            pic151 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox151_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox151.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox151.DoDragDrop(PictureBox151.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox152_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox152.MouseDown
-        If Not PictureBox152.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox152.Image, 75)
-            pic152 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox152_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox152.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox152.DoDragDrop(PictureBox152.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox153_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox153.MouseDown
-        If Not PictureBox153.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox153.Image, 75)
-            pic153 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox153_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox153.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox153.DoDragDrop(PictureBox153.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox154_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox154.MouseDown
-        If Not PictureBox154.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox154.Image, 75)
-            pic154 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox154_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox154.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox154.DoDragDrop(PictureBox154.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox155_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox155.MouseDown
-        If Not PictureBox155.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox155.Image, 75)
-            pic155 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox155_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox155.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox155.DoDragDrop(PictureBox155.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox156_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox156.MouseDown
-        If Not PictureBox156.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox156.Image, 75)
-            pic156 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox156_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox156.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox156.DoDragDrop(PictureBox156.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox157_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox157.MouseDown
-        If Not PictureBox157.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox157.Image, 75)
-            pic157 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox157_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox157.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox157.DoDragDrop(PictureBox157.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox158_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox158.MouseDown
-        If Not PictureBox158.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox158.Image, 75)
-            pic158 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox158_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox158.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox158.DoDragDrop(PictureBox158.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox159_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox159.MouseDown
-        If Not PictureBox159.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox159.Image, 75)
-            pic159 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox159_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox159.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox159.DoDragDrop(PictureBox159.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox160_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox160.MouseDown
-        If Not PictureBox160.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox160.Image, 75)
-            pic160 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox160_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox160.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox160.DoDragDrop(PictureBox160.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox161_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox161.MouseDown
-        If Not PictureBox161.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox161.Image, 75)
-            pic161 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox161_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox161.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox161.DoDragDrop(PictureBox161.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox162_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox162.MouseDown
-        If Not PictureBox162.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox162.Image, 75)
-            pic162 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox162_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox162.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox162.DoDragDrop(PictureBox162.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox163_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox163.MouseDown
-        If Not PictureBox163.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox163.Image, 75)
-            pic163 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox163_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox163.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox163.DoDragDrop(PictureBox163.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox164_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox164.MouseDown
-        If Not PictureBox164.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox164.Image, 75)
-            pic164 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox164_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox164.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox164.DoDragDrop(PictureBox164.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
-    End Sub
-
-    Private Sub PictureBox165_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox165.MouseDown
-        If Not PictureBox165.Image Is Nothing Then
-            ' Set a flag to show that the mouse is down. 
-            m_MouseIsDown = True
-            Dim blubb As Bitmap = SetImageAlpha(PictureBox165.Image, 75)
-            pic165 = Icon.FromHandle(blubb.GetHicon())
-
-        End If
-    End Sub
-    Private Sub PictureBox165_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles PictureBox165.MouseMove
-        If m_MouseIsDown Then
-            ' Initiate dragging and allow either copy. 
-            PictureBox165.DoDragDrop(PictureBox165.Image, DragDropEffects.Copy)
-        End If
-        m_MouseIsDown = False
+        ToolTip1.SetToolTip(Item39, Itembuild.GetToolTip(PicRes2Name(Item39.Image)))
+        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item39.Image)))
+        Label20.Text = IntPrice.ToString
     End Sub
 
     ' RIGHTCLICK DELTE
     Private Sub Item1_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item1.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item1.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item1.Image = My.Resources.none
             ToolTip1.SetToolTip(Item1, "none")
         End If
@@ -7328,6 +5139,12 @@ Public Class FormMain
 
     Private Sub Item2_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item2.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item2.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item2.Image = My.Resources.none
             ToolTip1.SetToolTip(Item2, "none")
         End If
@@ -7335,6 +5152,12 @@ Public Class FormMain
 
     Private Sub Item3_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item3.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item3.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item3.Image = My.Resources.none
             ToolTip1.SetToolTip(Item3, "none")
         End If
@@ -7342,6 +5165,12 @@ Public Class FormMain
 
     Private Sub Item4_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item4.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item4.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item4.Image = My.Resources.none
             ToolTip1.SetToolTip(Item4, "none")
         End If
@@ -7349,6 +5178,12 @@ Public Class FormMain
 
     Private Sub Item5_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item5.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item5.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item5.Image = My.Resources.none
             ToolTip1.SetToolTip(Item5, "none")
         End If
@@ -7356,6 +5191,12 @@ Public Class FormMain
 
     Private Sub Item6_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item6.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item6.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item6.Image = My.Resources.none
             ToolTip1.SetToolTip(Item6, "none")
         End If
@@ -7363,6 +5204,12 @@ Public Class FormMain
 
     Private Sub Item7_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item7.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item7.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item7.Image = My.Resources.none
             ToolTip1.SetToolTip(Item7, "none")
         End If
@@ -7370,6 +5217,12 @@ Public Class FormMain
 
     Private Sub Item8_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item8.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item8.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item8.Image = My.Resources.none
             ToolTip1.SetToolTip(Item8, "none")
         End If
@@ -7377,6 +5230,12 @@ Public Class FormMain
 
     Private Sub Item9_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item9.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(PicRes2Name(Item9.Image)))
+            If IntPrice >= 0 Then
+                Label15.Text = IntPrice.ToString
+            Else
+                Label15.Text = "0"
+            End If
             Item9.Image = My.Resources.none
             ToolTip1.SetToolTip(Item9, "none")
         End If
@@ -7384,6 +5243,12 @@ Public Class FormMain
 
     Private Sub Item10_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item10.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item10.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item10.Image = My.Resources.none
             ToolTip1.SetToolTip(Item10, "none")
         End If
@@ -7391,6 +5256,12 @@ Public Class FormMain
 
     Private Sub Item11_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item11.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item11.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item11.Image = My.Resources.none
             ToolTip1.SetToolTip(Item11, "none")
         End If
@@ -7398,6 +5269,12 @@ Public Class FormMain
 
     Private Sub Item12_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item12.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item12.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item12.Image = My.Resources.none
             ToolTip1.SetToolTip(Item12, "none")
         End If
@@ -7405,6 +5282,12 @@ Public Class FormMain
 
     Private Sub Item13_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item13.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item13.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item13.Image = My.Resources.none
             ToolTip1.SetToolTip(Item13, "none")
         End If
@@ -7412,6 +5295,12 @@ Public Class FormMain
 
     Private Sub Item14_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item14.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item14.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item14.Image = My.Resources.none
             ToolTip1.SetToolTip(Item14, "none")
         End If
@@ -7419,6 +5308,12 @@ Public Class FormMain
 
     Private Sub Item15_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item15.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item15.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item15.Image = My.Resources.none
             ToolTip1.SetToolTip(Item15, "none")
         End If
@@ -7426,6 +5321,12 @@ Public Class FormMain
 
     Private Sub Item16_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item16.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item16.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item16.Image = My.Resources.none
             ToolTip1.SetToolTip(Item16, "none")
         End If
@@ -7433,6 +5334,12 @@ Public Class FormMain
 
     Private Sub Item17_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item17.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item17.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item17.Image = My.Resources.none
             ToolTip1.SetToolTip(Item17, "none")
         End If
@@ -7440,6 +5347,12 @@ Public Class FormMain
 
     Private Sub Item18_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item18.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item18.Image)))
+            If IntPrice >= 0 Then
+                Label16.Text = IntPrice.ToString
+            Else
+                Label16.Text = "0"
+            End If
             Item18.Image = My.Resources.none
             ToolTip1.SetToolTip(Item18, "none")
         End If
@@ -7447,6 +5360,12 @@ Public Class FormMain
 
     Private Sub Item19_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item19.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item19.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item19.Image = My.Resources.none
             ToolTip1.SetToolTip(Item19, "none")
         End If
@@ -7454,6 +5373,12 @@ Public Class FormMain
 
     Private Sub Item20_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item20.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item20.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item20.Image = My.Resources.none
             ToolTip1.SetToolTip(Item20, "none")
         End If
@@ -7461,6 +5386,12 @@ Public Class FormMain
 
     Private Sub Item21_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item21.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item21.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item21.Image = My.Resources.none
             ToolTip1.SetToolTip(Item21, "none")
         End If
@@ -7468,6 +5399,12 @@ Public Class FormMain
 
     Private Sub Item22_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item22.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item22.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item22.Image = My.Resources.none
             ToolTip1.SetToolTip(Item22, "none")
         End If
@@ -7475,6 +5412,12 @@ Public Class FormMain
 
     Private Sub Item23_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item23.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item23.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item23.Image = My.Resources.none
             ToolTip1.SetToolTip(Item23, "none")
         End If
@@ -7482,6 +5425,12 @@ Public Class FormMain
 
     Private Sub Item24_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item24.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item24.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item24.Image = My.Resources.none
             ToolTip1.SetToolTip(Item24, "none")
         End If
@@ -7489,6 +5438,12 @@ Public Class FormMain
 
     Private Sub Item25_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item25.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item25.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item25.Image = My.Resources.none
             ToolTip1.SetToolTip(Item25, "none")
         End If
@@ -7496,6 +5451,12 @@ Public Class FormMain
 
     Private Sub Item26_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item26.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item26.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item26.Image = My.Resources.none
             ToolTip1.SetToolTip(Item26, "none")
         End If
@@ -7503,6 +5464,12 @@ Public Class FormMain
 
     Private Sub Item27_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item27.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item27.Image)))
+            If IntPrice >= 0 Then
+                Label18.Text = IntPrice.ToString
+            Else
+                Label18.Text = "0"
+            End If
             Item27.Image = My.Resources.none
             ToolTip1.SetToolTip(Item27, "none")
         End If
@@ -7510,6 +5477,12 @@ Public Class FormMain
 
     Private Sub Item28_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item28.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item28.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item28.Image = My.Resources.none
             ToolTip1.SetToolTip(Item28, "none")
         End If
@@ -7517,6 +5490,12 @@ Public Class FormMain
 
     Private Sub Item29_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item29.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item29.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item29.Image = My.Resources.none
             ToolTip1.SetToolTip(Item29, "none")
         End If
@@ -7524,6 +5503,12 @@ Public Class FormMain
 
     Private Sub Item30_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item30.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item30.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item30.Image = My.Resources.none
             ToolTip1.SetToolTip(Item30, "none")
         End If
@@ -7531,6 +5516,12 @@ Public Class FormMain
 
     Private Sub Item31_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item31.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item31.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item31.Image = My.Resources.none
             ToolTip1.SetToolTip(Item31, "none")
         End If
@@ -7538,6 +5529,12 @@ Public Class FormMain
 
     Private Sub Item32_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item32.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item32.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item32.Image = My.Resources.none
             ToolTip1.SetToolTip(Item32, "none")
         End If
@@ -7545,6 +5542,12 @@ Public Class FormMain
 
     Private Sub Item33_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item33.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item33.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item33.Image = My.Resources.none
             ToolTip1.SetToolTip(Item33, "none")
         End If
@@ -7552,6 +5555,12 @@ Public Class FormMain
 
     Private Sub Item34_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item34.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item34.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item34.Image = My.Resources.none
             ToolTip1.SetToolTip(Item34, "none")
         End If
@@ -7559,6 +5568,12 @@ Public Class FormMain
 
     Private Sub Item35_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item35.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item35.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item35.Image = My.Resources.none
             ToolTip1.SetToolTip(Item35, "none")
         End If
@@ -7566,6 +5581,12 @@ Public Class FormMain
 
     Private Sub Item36_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item36.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item36.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item36.Image = My.Resources.none
             ToolTip1.SetToolTip(Item36, "none")
         End If
@@ -7573,6 +5594,12 @@ Public Class FormMain
 
     Private Sub Item37_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item37.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item37.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item37.Image = My.Resources.none
             ToolTip1.SetToolTip(Item37, "none")
         End If
@@ -7580,6 +5607,12 @@ Public Class FormMain
 
     Private Sub Item38_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item38.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item38.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item38.Image = My.Resources.none
             ToolTip1.SetToolTip(Item38, "none")
         End If
@@ -7587,1258 +5620,14 @@ Public Class FormMain
 
     Private Sub Item39_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item39.MouseDown
         If e.Button = MouseButtons.Right Then
+            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item39.Image)))
+            If IntPrice >= 0 Then
+                Label20.Text = IntPrice.ToString
+            Else
+                Label20.Text = "0"
+            End If
             Item39.Image = My.Resources.none
             ToolTip1.SetToolTip(Item39, "none")
-        End If
-    End Sub
-
-    Private Function Bitmap2Icon(ByVal Picture) As Icon
-        Dim bitmap As Bitmap = Picture
-        Dim ico As Icon = Icon.FromHandle(bitmap.GetHicon())
-
-        Return ico
-    End Function
-
-    'Source: http://dotnet-snippets.de/dns/bild-transparent-machen-mit-colormatrix-SID168.aspx
-    Public Function SetImageAlpha(ByVal Image As Image, ByVal Alpha As Single) As Image
-        Dim ImgAttr As New Imaging.ImageAttributes()
-
-        'Standard-ColorMatrix für Transparenz
-        Dim ColorMatrix As New Imaging.ColorMatrix(New Single()() {New Single() {1, 0, 0, 0, 0}, New Single() {0, 1, 0, 0, 0}, New Single() {0, 0, 1, 0, 0}, New Single() {0, 0, 0, CSng(Alpha / 100), 0}, New Single() {0, 0, 0, 0, 1}})
-
-        'ColorMatrix an ImageAttribute-Objekt übergeben
-        ImgAttr.SetColorMatrix(ColorMatrix)
-
-        'Neue 32bit Bitmap erstellen
-        Dim NewBitmap = New Bitmap(Image.Width, Image.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb)
-
-        'Resolution (DPI) vom Quellbitmap auf Zielbitmap übertragen
-        NewBitmap.SetResolution(Image.HorizontalResolution, Image.VerticalResolution)
-
-        'Graphicsobjekt von NewBitmap erstellen
-        Dim NewGraphics As Graphics = Graphics.FromImage(NewBitmap)
-
-        'NewBitmap auf NewGraphics zeichnen
-        NewGraphics.DrawImage(Image, New Rectangle(0, 0, NewBitmap.Width, NewBitmap.Height), 0, 0, Image.Width, Image.Height, GraphicsUnit.Pixel, ImgAttr)
-
-        'Ressource freigeben
-        NewGraphics.Dispose()
-        ImgAttr.Dispose()
-        Return NewBitmap
-    End Function
-
-    Private Sub PictureBox31_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox31.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic31.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox32_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox32.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic32.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox33_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox33.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic33.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox34_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox34.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic34.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox35_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox35.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic35.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox36_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox36.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic36.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox37_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox37.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic37.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox38_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox38.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic38.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox39_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox39.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic39.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox40_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox40.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic40.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox41_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox41.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic41.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox42_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox42.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic42.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox43_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox43.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic43.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox44_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox44.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic44.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox45_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox45.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic45.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox46_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox46.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic46.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox47_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox47.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic47.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox48_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox48.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic48.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox49_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox49.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic49.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox50_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox50.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic50.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox51_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox51.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic51.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox52_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox52.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic52.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox53_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox53.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic53.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox54_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox54.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic54.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox55_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox55.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic55.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox56_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox56.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic56.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox57_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox57.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic57.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox58_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox58.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic58.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox59_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox59.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic59.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox60_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox60.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic60.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox61_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox61.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic61.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox62_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox62.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic62.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox63_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox63.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic63.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox64_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox64.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic64.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox65_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox65.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic65.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox66_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox66.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic66.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox67_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox67.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic67.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox68_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox68.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic68.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox69_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox69.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic69.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox70_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox70.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic70.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox71_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox71.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic71.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox72_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox72.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic72.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox73_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox73.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic73.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox74_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox74.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic74.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox75_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox75.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic75.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox76_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox76.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic76.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox77_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox77.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic77.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox78_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox78.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic78.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox79_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox79.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic79.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox80_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox80.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic80.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox81_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox81.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic81.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox82_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox82.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic82.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox83_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox83.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic83.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox84_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox84.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic84.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox85_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox85.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic85.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox86_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox86.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic86.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox87_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox87.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic87.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox88_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox88.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic88.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox89_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox89.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic89.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox90_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox90.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic90.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox91_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox91.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic91.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox92_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox92.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic92.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox93_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox93.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic93.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox94_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox94.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic94.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox95_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox95.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic95.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox96_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox96.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic96.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox97_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox97.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic97.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox98_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox98.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic98.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox99_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox99.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic99.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox100_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox100.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic100.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox101_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox101.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic101.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox102_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox102.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic102.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox103_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox103.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic103.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox104_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox104.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic104.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox105_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox105.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic105.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox106_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox106.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic106.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox107_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox107.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic107.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox108_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox108.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic108.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox109_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox109.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic109.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox110_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox110.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic110.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox111_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox111.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic111.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox112_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox112.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic112.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox113_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox113.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic113.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox114_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox114.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic114.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox115_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox115.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic115.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox116_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox116.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic116.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox117_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox117.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic117.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox118_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox118.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic118.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox119_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox119.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic119.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox120_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox120.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic120.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox121_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox121.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic121.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox122_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox122.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic122.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox123_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox123.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic123.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox124_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox124.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic124.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox125_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox125.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic125.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox126_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox126.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic126.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox127_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox127.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic127.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox128_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox128.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic128.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox129_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox129.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic129.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox130_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox130.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic130.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox131_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox131.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic131.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox132_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox132.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic132.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox133_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox133.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic133.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox134_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox134.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic134.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox135_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox135.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic135.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox136_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox136.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic136.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox137_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox137.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic137.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox138_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox138.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic138.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox139_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox139.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic139.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox140_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox140.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic140.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox141_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox141.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic141.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox142_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox142.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic142.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox143_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox143.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic143.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox144_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox144.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic144.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox145_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox145.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic145.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox146_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox146.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic146.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox147_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox147.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic147.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox148_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox148.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic148.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox149_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox149.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic149.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox150_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox150.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic150.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox151_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox151.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic151.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox152_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox152.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic152.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox153_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox153.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic153.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox154_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox154.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic154.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox155_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox155.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic155.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox156_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox156.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic156.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox157_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox157.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic157.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox158_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox158.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic158.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox159_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox159.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic159.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox160_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox160.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic160.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox161_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox161.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic161.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox162_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox162.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic162.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox163_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox163.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic163.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox164_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox164.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic164.Handle)
-        End If
-    End Sub
-
-    Private Sub PictureBox165_GiveFeedback(sender As System.Object, e As System.Windows.Forms.GiveFeedbackEventArgs) Handles PictureBox165.GiveFeedback
-        e.UseDefaultCursors = False
-        If ((e.Effect And DragDropEffects.Copy) = DragDropEffects.Copy) Then
-            Cursor.Current = Cursors.Hand
-        Else
-            Cursor.Current = New Cursor(pic165.Handle)
         End If
     End Sub
 

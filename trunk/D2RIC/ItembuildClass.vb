@@ -86,153 +86,574 @@
             .SetToolTip(FormMain.Item37, "none")
             .SetToolTip(FormMain.Item38, "none")
             .SetToolTip(FormMain.Item39, "none")
-            .SetToolTip(FormMain.PictureBox31, "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)")
-            .SetToolTip(FormMain.PictureBox32, "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier")
-            .SetToolTip(FormMain.PictureBox33, "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)")
-            .SetToolTip(FormMain.PictureBox34, "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)")
-            .SetToolTip(FormMain.PictureBox35, "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)")
-            .SetToolTip(FormMain.PictureBox36, "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave")
-            .SetToolTip(FormMain.PictureBox37, "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength")
-            .SetToolTip(FormMain.PictureBox38, "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)")
-            .SetToolTip(FormMain.PictureBox39, "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)")
-            .SetToolTip(FormMain.PictureBox40, "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility")
-            .SetToolTip(FormMain.PictureBox41, "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage")
-            .SetToolTip(FormMain.PictureBox42, "Blink Dagger" + vbNewLine + vbNewLine + "Blink")
-            .SetToolTip(FormMain.PictureBox43, "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges")
-            .SetToolTip(FormMain.PictureBox44, "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility")
-            .SetToolTip(FormMain.PictureBox45, "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed")
-            .SetToolTip(FormMain.PictureBox46, "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)")
-            .SetToolTip(FormMain.PictureBox47, "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture")
-            .SetToolTip(FormMain.PictureBox48, "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence")
-            .SetToolTip(FormMain.PictureBox49, "Broadsword" + vbNewLine + vbNewLine + "+18 Damage")
-            .SetToolTip(FormMain.PictureBox50, "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)")
-            .SetToolTip(FormMain.PictureBox51, "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed")
-            .SetToolTip(FormMain.PictureBox52, "Chainmail" + vbNewLine + vbNewLine + "+5 Armor")
-            .SetToolTip(FormMain.PictureBox53, "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes")
-            .SetToolTip(FormMain.PictureBox54, "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges")
-            .SetToolTip(FormMain.PictureBox55, "Claymore" + vbNewLine + vbNewLine + "+21 Damage")
-            .SetToolTip(FormMain.PictureBox56, "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance")
-            .SetToolTip(FormMain.PictureBox57, "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike")
-            .SetToolTip(FormMain.PictureBox58, "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike")
-            .SetToolTip(FormMain.PictureBox59, "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
-            .SetToolTip(FormMain.PictureBox60, "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
-            .SetToolTip(FormMain.PictureBox61, "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
-            .SetToolTip(FormMain.PictureBox62, "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
-            .SetToolTip(FormMain.PictureBox63, "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)")
-            .SetToolTip(FormMain.PictureBox64, "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage")
-            .SetToolTip(FormMain.PictureBox65, "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption")
-            .SetToolTip(FormMain.PictureBox66, "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges")
-            .SetToolTip(FormMain.PictureBox67, "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges")
-            .SetToolTip(FormMain.PictureBox68, "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage")
-            .SetToolTip(FormMain.PictureBox69, "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges")
-            .SetToolTip(FormMain.PictureBox70, "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges")
-            .SetToolTip(FormMain.PictureBox71, "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility")
-            .SetToolTip(FormMain.PictureBox72, "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana")
-            .SetToolTip(FormMain.PictureBox73, "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)")
-            .SetToolTip(FormMain.PictureBox74, "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)")
-            .SetToolTip(FormMain.PictureBox75, "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack")
-            .SetToolTip(FormMain.PictureBox76, "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier")
-            .SetToolTip(FormMain.PictureBox77, "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)")
-            .SetToolTip(FormMain.PictureBox78, "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength")
-            .SetToolTip(FormMain.PictureBox79, "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight")
-            .SetToolTip(FormMain.PictureBox80, "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)")
-            .SetToolTip(FormMain.PictureBox81, "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed")
-            .SetToolTip(FormMain.PictureBox82, "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)")
-            .SetToolTip(FormMain.PictureBox83, "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura")
-            .SetToolTip(FormMain.PictureBox84, "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges")
-            .SetToolTip(FormMain.PictureBox85, "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration")
-            .SetToolTip(FormMain.PictureBox86, "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration")
-            .SetToolTip(FormMain.PictureBox87, "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)")
-            .SetToolTip(FormMain.PictureBox88, "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration")
-            .SetToolTip(FormMain.PictureBox89, "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed")
-            .SetToolTip(FormMain.PictureBox90, "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes")
-            .SetToolTip(FormMain.PictureBox91, "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage")
-            .SetToolTip(FormMain.PictureBox92, "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block")
-            .SetToolTip(FormMain.PictureBox93, "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning")
-            .SetToolTip(FormMain.PictureBox94, "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)")
-            .SetToolTip(FormMain.PictureBox95, "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)")
-            .SetToolTip(FormMain.PictureBox96, "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)")
-            .SetToolTip(FormMain.PictureBox97, "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence")
-            .SetToolTip(FormMain.PictureBox98, "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)")
-            .SetToolTip(FormMain.PictureBox99, "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)")
-            .SetToolTip(FormMain.PictureBox100, "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)")
-            .SetToolTip(FormMain.PictureBox101, "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage")
-            .SetToolTip(FormMain.PictureBox102, "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)")
-            .SetToolTip(FormMain.PictureBox103, "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash")
-            .SetToolTip(FormMain.PictureBox104, "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal")
-            .SetToolTip(FormMain.PictureBox105, "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence")
-            .SetToolTip(FormMain.PictureBox121, "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)")
-            .SetToolTip(FormMain.PictureBox106, "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)")
-            .SetToolTip(FormMain.PictureBox107, "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)")
-            .SetToolTip(FormMain.PictureBox108, "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility")
-            .SetToolTip(FormMain.PictureBox109, "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration")
-            .SetToolTip(FormMain.PictureBox110, "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges")
-            .SetToolTip(FormMain.PictureBox111, "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength")
-            .SetToolTip(FormMain.PictureBox112, "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack")
-            .SetToolTip(FormMain.PictureBox113, "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)")
-            .SetToolTip(FormMain.PictureBox114, "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration")
-            .SetToolTip(FormMain.PictureBox115, "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)")
-            .SetToolTip(FormMain.PictureBox116, "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)")
-            .SetToolTip(FormMain.PictureBox117, "Platemail" + vbNewLine + vbNewLine + "+10 Armor")
-            .SetToolTip(FormMain.PictureBox118, "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana")
-            .SetToolTip(FormMain.PictureBox119, "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block")
-            .SetToolTip(FormMain.PictureBox120, "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)")
-            .SetToolTip(FormMain.PictureBox122, "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed")
-            .SetToolTip(FormMain.PictureBox123, "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)")
-            .SetToolTip(FormMain.PictureBox124, "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage")
-            .SetToolTip(FormMain.PictureBox125, "Reaver" + vbNewLine + vbNewLine + "+25 Strength")
-            .SetToolTip(FormMain.PictureBox126, "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)")
-            .SetToolTip(FormMain.PictureBox127, "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura")
-            .SetToolTip(FormMain.PictureBox128, "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration")
-            .SetToolTip(FormMain.PictureBox129, "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor")
-            .SetToolTip(FormMain.PictureBox130, "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration")
-            .SetToolTip(FormMain.PictureBox131, "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence")
-            .SetToolTip(FormMain.PictureBox132, "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage")
-            .SetToolTip(FormMain.PictureBox133, "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration")
-            .SetToolTip(FormMain.PictureBox134, "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim")
-            .SetToolTip(FormMain.PictureBox135, "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim")
-            .SetToolTip(FormMain.PictureBox136, "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "Lifesteal" + vbNewLine + "Unholy Rage (active)")
-            .SetToolTip(FormMain.PictureBox137, "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)")
-            .SetToolTip(FormMain.PictureBox138, "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight" + vbNewLine + "2 Charges")
-            .SetToolTip(FormMain.PictureBox139, "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)")
-            .SetToolTip(FormMain.PictureBox140, "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)")
-            .SetToolTip(FormMain.PictureBox141, "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash")
-            .SetToolTip(FormMain.PictureBox142, "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility")
-            .SetToolTip(FormMain.PictureBox143, "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges")
-            .SetToolTip(FormMain.PictureBox144, "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration")
-            .SetToolTip(FormMain.PictureBox145, "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)")
-            .SetToolTip(FormMain.PictureBox146, "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence")
-            .SetToolTip(FormMain.PictureBox147, "Stout Shield" + vbNewLine + vbNewLine + "Damage Block")
-            .SetToolTip(FormMain.PictureBox148, "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion")
-            .SetToolTip(FormMain.PictureBox149, "Tango" + vbNewLine + vbNewLine + "Eat Tree (active)" + vbNewLine + "3 Charges")
-            .SetToolTip(FormMain.PictureBox150, "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport (active)" + vbNewLine + "1 Charges")
-            .SetToolTip(FormMain.PictureBox151, "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes")
-            .SetToolTip(FormMain.PictureBox152, "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)")
-            .SetToolTip(FormMain.PictureBox153, "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+250 HP" + vbNewLine + "Damage Block")
-            .SetToolTip(FormMain.PictureBox154, "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)")
-            .SetToolTip(FormMain.PictureBox155, "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP")
-            .SetToolTip(FormMain.PictureBox156, "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura")
-            .SetToolTip(FormMain.PictureBox157, "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration")
-            .SetToolTip(FormMain.PictureBox158, "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence")
-            .SetToolTip(FormMain.PictureBox159, "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed")
-            .SetToolTip(FormMain.PictureBox160, "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)")
-            .SetToolTip(FormMain.PictureBox161, "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)")
-            .SetToolTip(FormMain.PictureBox162, "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura")
-            .SetToolTip(FormMain.PictureBox163, "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)")
-            .SetToolTip(FormMain.PictureBox164, "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)")
-            .SetToolTip(FormMain.PictureBox165, "Delete FormMain.Item")
         End With
+
         'PRESELECT THE BOX
         FormMain.ComboBox3.SelectedItem = "All"
-        FormMain.ComboBox5.SelectedItem = "DotA Like"
 
         FormMain.CheckBox2.Checked = True
         ClearNotImplemented()
     End Sub
 
+    Public Sub InitializeListbox()
+        'Listview füllen
+        With FormMain.ListView1
+            .Clear()
+            .Items.Add("Abyssal Blade", 0)
+            .Items.Add("Aghanim's Scepter", 1)
+            .Items.Add("Animal Courier", 2)
+            .Items.Add("Arcane Boots", 3)
+            .Items.Add("Armlet", 4)
+            .Items.Add("Assault Cuirass", 5)
+            .Items.Add("Battle Fury", 6)
+            .Items.Add("Belt of Strength", 7)
+            .Items.Add("Black King Bar", 8)
+            .Items.Add("Blade Mail", 9)
+            .Items.Add("Blade of Alacrity", 10)
+            .Items.Add("Blades of Attack", 11)
+            .Items.Add("Blink Dagger", 12)
+            .Items.Add("Bloodstone", 13)
+            .Items.Add("Boots of Elvenskin", 14)
+            .Items.Add("Boots of Speed", 15)
+            .Items.Add("Boots of Travel", 16)
+            .Items.Add("Bottle", 17)
+            .Items.Add("Bracer", 18)
+            .Items.Add("Broadsword", 19)
+            .Items.Add("Buckler", 20)
+            .Items.Add("Butterfly", 21)
+            .Items.Add("Chainmail", 22)
+            .Items.Add("Circlet", 23)
+            .Items.Add("Clarity", 24)
+            .Items.Add("Claymore", 25)
+            .Items.Add("Cloak", 26)
+            .Items.Add("Crystalys", 27)
+            .Items.Add("Daedalus", 28)
+            .Items.Add("Dagon 1", 29)
+            .Items.Add("Dagon 2", 30)
+            .Items.Add("Dagon 3", 31)
+            .Items.Add("Dagon 4", 32)
+            .Items.Add("Dagon 5", 33)
+            .Items.Add("Demon Edge", 34)
+            .Items.Add("Desolator", 35)
+            .Items.Add("Diffusal Blade 1", 36)
+            .Items.Add("Diffusal Blade 2", 37)
+            .Items.Add("Divine Rapier", 38)
+            .Items.Add("Drum of Endurance", 39)
+            .Items.Add("Dust of Appearance", 40)
+            .Items.Add("Eaglesong", 41)
+            .Items.Add("Energy Booster", 42)
+            .Items.Add("Ethereal Blade", 43)
+            .Items.Add("Eul's Scepter of Divinity", 44)
+            .Items.Add("Eye of Skadi", 45)
+            .Items.Add("Flying Courier", 46)
+            .Items.Add("Force Staff", 47)
+            .Items.Add("Gauntlets of Strength", 48)
+            .Items.Add("Gem of True Sight", 49)
+            .Items.Add("Ghost Scepter", 50)
+            .Items.Add("Gloves of Haste", 51)
+            .Items.Add("Hand of Midas", 52)
+            .Items.Add("Headdress", 53)
+            .Items.Add("Healing Salve", 54)
+            .Items.Add("Heart of Tarrasque", 55)
+            .Items.Add("Heaven's Halberd", 56)
+            .Items.Add("Helm of Iron Will", 57)
+            .Items.Add("Helm of the Dominator", 58)
+            .Items.Add("Hood of Defiance", 59)
+            .Items.Add("Hyperstone", 60)
+            .Items.Add("Iron Branch", 61)
+            .Items.Add("Javelin", 62)
+            .Items.Add("Linken's Sphere", 63)
+            .Items.Add("Maelstrom", 64)
+            .Items.Add("Magic Stick", 65)
+            .Items.Add("Magic Wand", 66)
+            .Items.Add("Manta Style", 67)
+            .Items.Add("Mantle of Intelligence", 68)
+            .Items.Add("Mask of Madness", 69)
+            .Items.Add("Medallion of Courage", 70)
+            .Items.Add("Mekansm", 71)
+            .Items.Add("Mithril Hammer", 72)
+            .Items.Add("Mjollnir", 73)
+            .Items.Add("Monkey King Bar", 74)
+            .Items.Add("Morbid Mask", 75)
+            .Items.Add("Mystic Staff", 76)
+            .Items.Add("Necronomicon 1", 77)
+            .Items.Add("Necronomicon 2", 78)
+            .Items.Add("Necronomicon 3", 79)
+            .Items.Add("Null Talisman", 80)
+            .Items.Add("Oblivion Staff", 81)
+            .Items.Add("Observer Ward", 82)
+            .Items.Add("Ogre Club", 83)
+            .Items.Add("Orb of Venom", 84)
+            .Items.Add("Orchid Malevolence", 85)
+            .Items.Add("Perseverance", 86)
+            .Items.Add("Phase Boots", 87)
+            .Items.Add("Pipe of Insight", 88)
+            .Items.Add("Platemail", 89)
+            .Items.Add("Point Booster", 90)
+            .Items.Add("Poor Man's Shield", 91)
+            .Items.Add("Power Treads", 92)
+            .Items.Add("Quarterstaff", 93)
+            .Items.Add("Quelling Blade", 94)
+            .Items.Add("Radiance", 95)
+            .Items.Add("Reaver", 96)
+            .Items.Add("Refresher Orb", 97)
+            .Items.Add("Ring of Aquila", 98)
+            .Items.Add("Ring of Basilius", 99)
+            .Items.Add("Ring of Health", 100)
+            .Items.Add("Ring of Protection", 101)
+            .Items.Add("Ring of Regen", 102)
+            .Items.Add("Robe of the Magi", 103)
+            .Items.Add("Rod of Atos", 104)
+            .Items.Add("Sacred Relic", 105)
+            .Items.Add("Sage's Mask", 106)
+            .Items.Add("Sange", 107)
+            .Items.Add("Sange and Yasha", 108)
+            .Items.Add("Satanic", 109)
+            .Items.Add("Scythe of Vyse", 110)
+            .Items.Add("Sentry Ward", 111)
+            .Items.Add("Shadow Blade", 112)
+            .Items.Add("Shiva's Guard", 113)
+            .Items.Add("Skull Basher", 114)
+            .Items.Add("Slippers of Agility", 115)
+            .Items.Add("Smoke of Deceit", 116)
+            .Items.Add("Soul Booster", 117)
+            .Items.Add("Soul Ring", 118)
+            .Items.Add("Staff of Wizardry", 119)
+            .Items.Add("Stout Shield", 120)
+            .Items.Add("Talisman of Evasion", 121)
+            .Items.Add("Tango", 122)
+            .Items.Add("Town Portal Scroll", 123)
+            .Items.Add("Tranquil Boots", 124)
+            .Items.Add("Ultimate Orb", 125)
+            .Items.Add("Urn of Shadows", 126)
+            .Items.Add("Vanguard", 127)
+            .Items.Add("Veil of Discord", 128)
+            .Items.Add("Vitality Booster", 129)
+            .Items.Add("Vladmir's Offering", 130)
+            .Items.Add("Void Stone", 131)
+            .Items.Add("Wraith Band", 132)
+            .Items.Add("Yasha", 133)
+            'Bilder ändern
+            If FormMain.ComboBoxItemIcons.SelectedItem = "DotA 1" Then
+                'Change Items Icons to DotA 1
+                FormMain.ListView1.Items(0).ImageIndex = 134
+                FormMain.ListView1.Items(1).ImageIndex = 135
+                FormMain.ListView1.Items(2).ImageIndex = 136
+                FormMain.ListView1.Items(3).ImageIndex = 137
+                FormMain.ListView1.Items(4).ImageIndex = 138
+                FormMain.ListView1.Items(5).ImageIndex = 139
+                FormMain.ListView1.Items(6).ImageIndex = 140
+                FormMain.ListView1.Items(7).ImageIndex = 141
+                FormMain.ListView1.Items(8).ImageIndex = 142
+                FormMain.ListView1.Items(9).ImageIndex = 143
+                FormMain.ListView1.Items(10).ImageIndex = 144
+                FormMain.ListView1.Items(11).ImageIndex = 145
+                FormMain.ListView1.Items(12).ImageIndex = 146
+                FormMain.ListView1.Items(13).ImageIndex = 147
+                FormMain.ListView1.Items(14).ImageIndex = 148
+                FormMain.ListView1.Items(15).ImageIndex = 149
+                FormMain.ListView1.Items(16).ImageIndex = 150
+                FormMain.ListView1.Items(17).ImageIndex = 151
+                FormMain.ListView1.Items(18).ImageIndex = 152
+                FormMain.ListView1.Items(19).ImageIndex = 153
+                FormMain.ListView1.Items(20).ImageIndex = 154
+                FormMain.ListView1.Items(21).ImageIndex = 155
+                FormMain.ListView1.Items(22).ImageIndex = 156
+                FormMain.ListView1.Items(23).ImageIndex = 157
+                FormMain.ListView1.Items(24).ImageIndex = 158
+                FormMain.ListView1.Items(25).ImageIndex = 159
+                FormMain.ListView1.Items(26).ImageIndex = 160
+                FormMain.ListView1.Items(27).ImageIndex = 161
+                FormMain.ListView1.Items(28).ImageIndex = 162
+                FormMain.ListView1.Items(29).ImageIndex = 163
+                FormMain.ListView1.Items(30).ImageIndex = 164
+                FormMain.ListView1.Items(31).ImageIndex = 165
+                FormMain.ListView1.Items(32).ImageIndex = 166
+                FormMain.ListView1.Items(33).ImageIndex = 167
+                FormMain.ListView1.Items(34).ImageIndex = 168
+                FormMain.ListView1.Items(35).ImageIndex = 169
+                FormMain.ListView1.Items(36).ImageIndex = 170
+                FormMain.ListView1.Items(37).ImageIndex = 171
+                FormMain.ListView1.Items(38).ImageIndex = 172
+                FormMain.ListView1.Items(39).ImageIndex = 173
+                FormMain.ListView1.Items(40).ImageIndex = 174
+                FormMain.ListView1.Items(41).ImageIndex = 175
+                FormMain.ListView1.Items(42).ImageIndex = 176
+                FormMain.ListView1.Items(43).ImageIndex = 177
+                FormMain.ListView1.Items(44).ImageIndex = 178
+                FormMain.ListView1.Items(45).ImageIndex = 179
+                FormMain.ListView1.Items(46).ImageIndex = 180
+                FormMain.ListView1.Items(47).ImageIndex = 181
+                FormMain.ListView1.Items(48).ImageIndex = 182
+                FormMain.ListView1.Items(49).ImageIndex = 183
+                FormMain.ListView1.Items(50).ImageIndex = 184
+                FormMain.ListView1.Items(51).ImageIndex = 185
+                FormMain.ListView1.Items(52).ImageIndex = 186
+                FormMain.ListView1.Items(53).ImageIndex = 187
+                FormMain.ListView1.Items(54).ImageIndex = 188
+                FormMain.ListView1.Items(55).ImageIndex = 189
+                FormMain.ListView1.Items(56).ImageIndex = 190
+                FormMain.ListView1.Items(57).ImageIndex = 191
+                FormMain.ListView1.Items(58).ImageIndex = 192
+                FormMain.ListView1.Items(59).ImageIndex = 193
+                FormMain.ListView1.Items(60).ImageIndex = 194
+                FormMain.ListView1.Items(61).ImageIndex = 195
+                FormMain.ListView1.Items(62).ImageIndex = 196
+                FormMain.ListView1.Items(63).ImageIndex = 197
+                FormMain.ListView1.Items(64).ImageIndex = 198
+                FormMain.ListView1.Items(65).ImageIndex = 199
+                FormMain.ListView1.Items(66).ImageIndex = 200
+                FormMain.ListView1.Items(67).ImageIndex = 201
+                FormMain.ListView1.Items(68).ImageIndex = 202
+                FormMain.ListView1.Items(69).ImageIndex = 203
+                FormMain.ListView1.Items(70).ImageIndex = 204
+                FormMain.ListView1.Items(71).ImageIndex = 205
+                FormMain.ListView1.Items(72).ImageIndex = 206
+                FormMain.ListView1.Items(73).ImageIndex = 207
+                FormMain.ListView1.Items(74).ImageIndex = 208
+                FormMain.ListView1.Items(75).ImageIndex = 209
+                FormMain.ListView1.Items(76).ImageIndex = 210
+                FormMain.ListView1.Items(77).ImageIndex = 211
+                FormMain.ListView1.Items(78).ImageIndex = 212
+                FormMain.ListView1.Items(79).ImageIndex = 213
+                FormMain.ListView1.Items(80).ImageIndex = 214
+                FormMain.ListView1.Items(81).ImageIndex = 215
+                FormMain.ListView1.Items(82).ImageIndex = 216
+                FormMain.ListView1.Items(83).ImageIndex = 217
+                FormMain.ListView1.Items(84).ImageIndex = 218
+                FormMain.ListView1.Items(85).ImageIndex = 219
+                FormMain.ListView1.Items(86).ImageIndex = 220
+                FormMain.ListView1.Items(87).ImageIndex = 221
+                FormMain.ListView1.Items(88).ImageIndex = 222
+                FormMain.ListView1.Items(89).ImageIndex = 223
+                FormMain.ListView1.Items(90).ImageIndex = 224
+                FormMain.ListView1.Items(91).ImageIndex = 225
+                FormMain.ListView1.Items(92).ImageIndex = 226
+                FormMain.ListView1.Items(93).ImageIndex = 227
+                FormMain.ListView1.Items(94).ImageIndex = 228
+                FormMain.ListView1.Items(95).ImageIndex = 229
+                FormMain.ListView1.Items(96).ImageIndex = 230
+                FormMain.ListView1.Items(97).ImageIndex = 231
+                FormMain.ListView1.Items(98).ImageIndex = 232
+                FormMain.ListView1.Items(99).ImageIndex = 233
+                FormMain.ListView1.Items(100).ImageIndex = 234
+                FormMain.ListView1.Items(101).ImageIndex = 235
+                FormMain.ListView1.Items(102).ImageIndex = 236
+                FormMain.ListView1.Items(103).ImageIndex = 237
+                FormMain.ListView1.Items(104).ImageIndex = 238
+                FormMain.ListView1.Items(105).ImageIndex = 239
+                FormMain.ListView1.Items(106).ImageIndex = 240
+                FormMain.ListView1.Items(107).ImageIndex = 241
+                FormMain.ListView1.Items(108).ImageIndex = 242
+                FormMain.ListView1.Items(109).ImageIndex = 243
+                FormMain.ListView1.Items(110).ImageIndex = 244
+                FormMain.ListView1.Items(111).ImageIndex = 245
+                FormMain.ListView1.Items(112).ImageIndex = 246
+                FormMain.ListView1.Items(113).ImageIndex = 247
+                FormMain.ListView1.Items(114).ImageIndex = 248
+                FormMain.ListView1.Items(115).ImageIndex = 249
+                FormMain.ListView1.Items(116).ImageIndex = 250
+                FormMain.ListView1.Items(117).ImageIndex = 251
+                FormMain.ListView1.Items(118).ImageIndex = 252
+                FormMain.ListView1.Items(119).ImageIndex = 253
+                FormMain.ListView1.Items(120).ImageIndex = 254
+                FormMain.ListView1.Items(121).ImageIndex = 255
+                FormMain.ListView1.Items(122).ImageIndex = 256
+                FormMain.ListView1.Items(123).ImageIndex = 257
+                FormMain.ListView1.Items(124).ImageIndex = 258
+                FormMain.ListView1.Items(125).ImageIndex = 259
+                FormMain.ListView1.Items(126).ImageIndex = 260
+                FormMain.ListView1.Items(127).ImageIndex = 261
+                FormMain.ListView1.Items(128).ImageIndex = 262
+                FormMain.ListView1.Items(129).ImageIndex = 263
+                FormMain.ListView1.Items(130).ImageIndex = 264
+                FormMain.ListView1.Items(131).ImageIndex = 265
+                FormMain.ListView1.Items(132).ImageIndex = 266
+                FormMain.ListView1.Items(133).ImageIndex = 267
+            ElseIf FormMain.ComboBoxItemIcons.SelectedItem = "HoN" Then
+                'Change Items Icons to HoN
+                FormMain.ListView1.Items(0).ImageIndex = 0
+                FormMain.ListView1.Items(1).ImageIndex = 268
+                FormMain.ListView1.Items(2).ImageIndex = 269
+                FormMain.ListView1.Items(3).ImageIndex = 270
+                FormMain.ListView1.Items(4).ImageIndex = 271
+                FormMain.ListView1.Items(5).ImageIndex = 272
+                FormMain.ListView1.Items(6).ImageIndex = 273
+                FormMain.ListView1.Items(7).ImageIndex = 274
+                FormMain.ListView1.Items(8).ImageIndex = 275
+                FormMain.ListView1.Items(9).ImageIndex = 276
+                FormMain.ListView1.Items(10).ImageIndex = 277
+                FormMain.ListView1.Items(11).ImageIndex = 278
+                FormMain.ListView1.Items(12).ImageIndex = 279
+                FormMain.ListView1.Items(13).ImageIndex = 280
+                FormMain.ListView1.Items(14).ImageIndex = 281
+                FormMain.ListView1.Items(15).ImageIndex = 282
+                FormMain.ListView1.Items(16).ImageIndex = 283
+                FormMain.ListView1.Items(17).ImageIndex = 284
+                FormMain.ListView1.Items(18).ImageIndex = 285
+                FormMain.ListView1.Items(19).ImageIndex = 286
+                FormMain.ListView1.Items(20).ImageIndex = 287
+                FormMain.ListView1.Items(21).ImageIndex = 288
+                FormMain.ListView1.Items(22).ImageIndex = 289
+                FormMain.ListView1.Items(23).ImageIndex = 290
+                FormMain.ListView1.Items(24).ImageIndex = 291
+                FormMain.ListView1.Items(25).ImageIndex = 292
+                FormMain.ListView1.Items(26).ImageIndex = 293
+                FormMain.ListView1.Items(27).ImageIndex = 294
+                FormMain.ListView1.Items(28).ImageIndex = 28
+                FormMain.ListView1.Items(29).ImageIndex = 295
+                FormMain.ListView1.Items(30).ImageIndex = 296
+                FormMain.ListView1.Items(31).ImageIndex = 297
+                FormMain.ListView1.Items(32).ImageIndex = 298
+                FormMain.ListView1.Items(33).ImageIndex = 299
+                FormMain.ListView1.Items(34).ImageIndex = 300
+                FormMain.ListView1.Items(35).ImageIndex = 301
+                FormMain.ListView1.Items(36).ImageIndex = 302
+                FormMain.ListView1.Items(37).ImageIndex = 303
+                FormMain.ListView1.Items(38).ImageIndex = 304
+                FormMain.ListView1.Items(39).ImageIndex = 39
+                FormMain.ListView1.Items(40).ImageIndex = 305
+                FormMain.ListView1.Items(41).ImageIndex = 306
+                FormMain.ListView1.Items(42).ImageIndex = 307
+                FormMain.ListView1.Items(43).ImageIndex = 43
+                FormMain.ListView1.Items(44).ImageIndex = 308
+                FormMain.ListView1.Items(45).ImageIndex = 309
+                FormMain.ListView1.Items(46).ImageIndex = 310
+                FormMain.ListView1.Items(47).ImageIndex = 311
+                FormMain.ListView1.Items(48).ImageIndex = 312
+                FormMain.ListView1.Items(49).ImageIndex = 313
+                FormMain.ListView1.Items(50).ImageIndex = 314
+                FormMain.ListView1.Items(51).ImageIndex = 315
+                FormMain.ListView1.Items(52).ImageIndex = 316
+                FormMain.ListView1.Items(53).ImageIndex = 317
+                FormMain.ListView1.Items(54).ImageIndex = 318
+                FormMain.ListView1.Items(55).ImageIndex = 319
+                FormMain.ListView1.Items(56).ImageIndex = 56
+                FormMain.ListView1.Items(57).ImageIndex = 320
+                FormMain.ListView1.Items(58).ImageIndex = 321
+                FormMain.ListView1.Items(59).ImageIndex = 322
+                FormMain.ListView1.Items(60).ImageIndex = 323
+                FormMain.ListView1.Items(61).ImageIndex = 324
+                FormMain.ListView1.Items(62).ImageIndex = 325
+                FormMain.ListView1.Items(63).ImageIndex = 326
+                FormMain.ListView1.Items(64).ImageIndex = 327
+                FormMain.ListView1.Items(65).ImageIndex = 328
+                FormMain.ListView1.Items(66).ImageIndex = 329
+                FormMain.ListView1.Items(67).ImageIndex = 330
+                FormMain.ListView1.Items(68).ImageIndex = 331
+                FormMain.ListView1.Items(69).ImageIndex = 332
+                FormMain.ListView1.Items(70).ImageIndex = 70
+                FormMain.ListView1.Items(71).ImageIndex = 333
+                FormMain.ListView1.Items(72).ImageIndex = 334
+                FormMain.ListView1.Items(73).ImageIndex = 335
+                FormMain.ListView1.Items(74).ImageIndex = 336
+                FormMain.ListView1.Items(75).ImageIndex = 337
+                FormMain.ListView1.Items(76).ImageIndex = 338
+                FormMain.ListView1.Items(77).ImageIndex = 339
+                FormMain.ListView1.Items(78).ImageIndex = 340
+                FormMain.ListView1.Items(79).ImageIndex = 341
+                FormMain.ListView1.Items(80).ImageIndex = 342
+                FormMain.ListView1.Items(81).ImageIndex = 343
+                FormMain.ListView1.Items(82).ImageIndex = 344
+                FormMain.ListView1.Items(83).ImageIndex = 345
+                FormMain.ListView1.Items(84).ImageIndex = 84
+                FormMain.ListView1.Items(85).ImageIndex = 346
+                FormMain.ListView1.Items(86).ImageIndex = 347
+                FormMain.ListView1.Items(87).ImageIndex = 348
+                FormMain.ListView1.Items(88).ImageIndex = 349
+                FormMain.ListView1.Items(89).ImageIndex = 350
+                FormMain.ListView1.Items(90).ImageIndex = 351
+                FormMain.ListView1.Items(91).ImageIndex = 352
+                FormMain.ListView1.Items(92).ImageIndex = 353
+                FormMain.ListView1.Items(93).ImageIndex = 354
+                FormMain.ListView1.Items(94).ImageIndex = 355
+                FormMain.ListView1.Items(95).ImageIndex = 356
+                FormMain.ListView1.Items(96).ImageIndex = 357
+                FormMain.ListView1.Items(97).ImageIndex = 358
+                FormMain.ListView1.Items(98).ImageIndex = 98
+                FormMain.ListView1.Items(99).ImageIndex = 359
+                FormMain.ListView1.Items(100).ImageIndex = 360
+                FormMain.ListView1.Items(101).ImageIndex = 361
+                FormMain.ListView1.Items(102).ImageIndex = 362
+                FormMain.ListView1.Items(103).ImageIndex = 363
+                FormMain.ListView1.Items(104).ImageIndex = 104
+                FormMain.ListView1.Items(105).ImageIndex = 364
+                FormMain.ListView1.Items(106).ImageIndex = 365
+                FormMain.ListView1.Items(107).ImageIndex = 366
+                FormMain.ListView1.Items(108).ImageIndex = 367
+                FormMain.ListView1.Items(109).ImageIndex = 368
+                FormMain.ListView1.Items(110).ImageIndex = 369
+                FormMain.ListView1.Items(111).ImageIndex = 370
+                FormMain.ListView1.Items(112).ImageIndex = 371
+                FormMain.ListView1.Items(113).ImageIndex = 372
+                FormMain.ListView1.Items(114).ImageIndex = 373
+                FormMain.ListView1.Items(115).ImageIndex = 374
+                FormMain.ListView1.Items(116).ImageIndex = 116
+                FormMain.ListView1.Items(117).ImageIndex = 375
+                FormMain.ListView1.Items(118).ImageIndex = 376
+                FormMain.ListView1.Items(119).ImageIndex = 377
+                FormMain.ListView1.Items(120).ImageIndex = 378
+                FormMain.ListView1.Items(121).ImageIndex = 379
+                FormMain.ListView1.Items(122).ImageIndex = 380
+                FormMain.ListView1.Items(123).ImageIndex = 381
+                FormMain.ListView1.Items(124).ImageIndex = 382
+                FormMain.ListView1.Items(125).ImageIndex = 383
+                FormMain.ListView1.Items(126).ImageIndex = 126
+                FormMain.ListView1.Items(127).ImageIndex = 384
+                FormMain.ListView1.Items(128).ImageIndex = 128
+                FormMain.ListView1.Items(129).ImageIndex = 385
+                FormMain.ListView1.Items(130).ImageIndex = 386
+                FormMain.ListView1.Items(131).ImageIndex = 387
+                FormMain.ListView1.Items(132).ImageIndex = 388
+                FormMain.ListView1.Items(133).ImageIndex = 389
+            Else
+                'Nothing because the Items are set to DotA 2
+            End If
+            'Listview Tooltips hinzufügen
+            .Items(0).ToolTipText = "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)"
+            .Items(1).ToolTipText = "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)"
+            .Items(2).ToolTipText = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
+            .Items(3).ToolTipText = "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
+            .Items(4).ToolTipText = "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)"
+            .Items(5).ToolTipText = "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)"
+            .Items(6).ToolTipText = "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave"
+            .Items(7).ToolTipText = "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength"
+            .Items(8).ToolTipText = "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)"
+            .Items(9).ToolTipText = "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)"
+            .Items(10).ToolTipText = "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility"
+            .Items(11).ToolTipText = "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage"
+            .Items(12).ToolTipText = "Blink Dagger" + vbNewLine + vbNewLine + "Blink"
+            .Items(13).ToolTipText = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
+            .Items(14).ToolTipText = "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility"
+            .Items(15).ToolTipText = "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed"
+            .Items(16).ToolTipText = "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)"
+            .Items(17).ToolTipText = "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture"
+            .Items(18).ToolTipText = "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence"
+            .Items(19).ToolTipText = "Broadsword" + vbNewLine + vbNewLine + "+18 Damage"
+            .Items(20).ToolTipText = "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)"
+            .Items(21).ToolTipText = "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed"
+            .Items(22).ToolTipText = "Chainmail" + vbNewLine + vbNewLine + "+5 Armor"
+            .Items(23).ToolTipText = "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes"
+            .Items(24).ToolTipText = "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges"
+            .Items(25).ToolTipText = "Claymore" + vbNewLine + vbNewLine + "+21 Damage"
+            .Items(26).ToolTipText = "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance"
+            .Items(27).ToolTipText = "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike"
+            .Items(28).ToolTipText = "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike"
+            .Items(29).ToolTipText = "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            .Items(30).ToolTipText = "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            .Items(31).ToolTipText = "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            .Items(32).ToolTipText = "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            .Items(33).ToolTipText = "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
+            .Items(34).ToolTipText = "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage"
+            .Items(35).ToolTipText = "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption"
+            .Items(36).ToolTipText = "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
+            .Items(37).ToolTipText = "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
+            .Items(38).ToolTipText = "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage"
+            .Items(39).ToolTipText = "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges"
+            .Items(40).ToolTipText = "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges"
+            .Items(41).ToolTipText = "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility"
+            .Items(42).ToolTipText = "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana"
+            .Items(43).ToolTipText = "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)"
+            .Items(44).ToolTipText = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)"
+            .Items(45).ToolTipText = "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack"
+            .Items(46).ToolTipText = "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier"
+            .Items(47).ToolTipText = "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)"
+            .Items(48).ToolTipText = "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength"
+            .Items(49).ToolTipText = "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight"
+            .Items(50).ToolTipText = "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)"
+            .Items(51).ToolTipText = "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed"
+            .Items(52).ToolTipText = "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)"
+            .Items(53).ToolTipText = "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura"
+            .Items(54).ToolTipText = "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges"
+            .Items(55).ToolTipText = "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration"
+            .Items(56).ToolTipText = "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)"
+            .Items(57).ToolTipText = "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration"
+            .Items(58).ToolTipText = "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)"
+            .Items(59).ToolTipText = "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration"
+            .Items(60).ToolTipText = "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed"
+            .Items(61).ToolTipText = "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes"
+            .Items(62).ToolTipText = "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage"
+            .Items(63).ToolTipText = "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block"
+            .Items(64).ToolTipText = "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning"
+            .Items(65).ToolTipText = "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)"
+            .Items(66).ToolTipText = "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)"
+            .Items(67).ToolTipText = "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)"
+            .Items(68).ToolTipText = "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence"
+            .Items(69).ToolTipText = "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)"
+            .Items(70).ToolTipText = "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)"
+            .Items(71).ToolTipText = "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)"
+            .Items(72).ToolTipText = "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage"
+            .Items(73).ToolTipText = "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)"
+            .Items(74).ToolTipText = "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash"
+            .Items(75).ToolTipText = "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal"
+            .Items(76).ToolTipText = "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence"
+            .Items(77).ToolTipText = "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)"
+            .Items(78).ToolTipText = "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)"
+            .Items(79).ToolTipText = "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)"
+            .Items(80).ToolTipText = "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility"
+            .Items(81).ToolTipText = "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration"
+            .Items(82).ToolTipText = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges"
+            .Items(83).ToolTipText = "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength"
+            .Items(84).ToolTipText = "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack"
+            .Items(85).ToolTipText = "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)"
+            .Items(86).ToolTipText = "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration"
+            .Items(87).ToolTipText = "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
+            .Items(88).ToolTipText = "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)"
+            .Items(89).ToolTipText = "Platemail" + vbNewLine + vbNewLine + "+10 Armor"
+            .Items(90).ToolTipText = "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana"
+            .Items(91).ToolTipText = "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block"
+            .Items(92).ToolTipText = "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
+            .Items(93).ToolTipText = "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed"
+            .Items(94).ToolTipText = "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)"
+            .Items(95).ToolTipText = "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage"
+            .Items(96).ToolTipText = "Reaver" + vbNewLine + vbNewLine + "+25 Strength"
+            .Items(97).ToolTipText = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
+            .Items(98).ToolTipText = "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura"
+            .Items(99).ToolTipText = "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura"
+            .Items(100).ToolTipText = "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration"
+            .Items(101).ToolTipText = "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor"
+            .Items(102).ToolTipText = "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration"
+            .Items(103).ToolTipText = "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence"
+            .Items(104).ToolTipText = "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)"
+            .Items(105).ToolTipText = "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage"
+            .Items(106).ToolTipText = "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration"
+            .Items(107).ToolTipText = "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim"
+            .Items(108).ToolTipText = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim"
+            .Items(109).ToolTipText = "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "Lifesteal" + vbNewLine + "Unholy Rage (active)"
+            .Items(110).ToolTipText = "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)"
+            .Items(111).ToolTipText = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight" + vbNewLine + "2 Charges"
+            .Items(112).ToolTipText = "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)"
+            .Items(113).ToolTipText = "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)"
+            .Items(114).ToolTipText = "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash"
+            .Items(115).ToolTipText = "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility"
+            .Items(116).ToolTipText = "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges"
+            .Items(117).ToolTipText = "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration"
+            .Items(118).ToolTipText = "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)"
+            .Items(119).ToolTipText = "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence"
+            .Items(120).ToolTipText = "Stout Shield" + vbNewLine + vbNewLine + "Damage Block"
+            .Items(121).ToolTipText = "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion"
+            .Items(122).ToolTipText = "Tango" + vbNewLine + vbNewLine + "Eat Tree (active)" + vbNewLine + "3 Charges"
+            .Items(123).ToolTipText = "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport (active)" + vbNewLine + "1 Charges"
+            .Items(124).ToolTipText = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
+            .Items(125).ToolTipText = "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes"
+            .Items(126).ToolTipText = "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)"
+            .Items(127).ToolTipText = "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+250 HP" + vbNewLine + "Damage Block"
+            .Items(128).ToolTipText = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)"
+            .Items(129).ToolTipText = "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP"
+            .Items(130).ToolTipText = "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura"
+            .Items(131).ToolTipText = "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration"
+            .Items(132).ToolTipText = "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence"
+            .Items(133).ToolTipText = "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed"
+        End With
+    End Sub
+
     Public Sub ClearSingle()
         FormMain.TextBox1.Text = ""
         FormMain.Label1.Text = ""
+        FormMain.Label15.Text = "0"
+        FormMain.Label16.Text = "0"
+        FormMain.Label18.Text = "0"
+        FormMain.Label20.Text = "0"
         NeuerText = ""
         Dim pb As Object
         Dim picbox As Integer = 1
@@ -261,23 +682,30 @@
             Dim ItemPlace As String = "Starting Items"
             Dim i As Integer = 1
             Dim pb As Object
+            Dim price As Object = FormMain.Label15
+            Dim int As Integer
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                 If Zeile.Contains("item_") And i <= 39 Then
                     pb = FormMain.TabPage1.Controls.Item("Item" & i)
                     pb.image = FormMain.ChangePicture(FormMain.RenameItem(Zeile))
                     FormMain.ToolTip1.SetToolTip(pb, GetToolTip(FormMain.RenameItem(Zeile)))
+                    int = (CInt(price.Text) + GetPrice(FormMain.RenameItem(Zeile)))
+                    price.Text = int.ToString
                     i = i + 1
                 ElseIf Zeile.Contains("Early_Game") Then
                     ItemPlace = "Early Game"
                     i = 10
+                    price = FormMain.Label16
                     NeuerText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Core_Items") Then
                     ItemPlace = "Core Items"
                     i = 19
+                    price = FormMain.Label18
                     NeuerText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Luxury") Then
                     ItemPlace = "Luxury"
                     i = 28
+                    price = FormMain.Label20
                     NeuerText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
@@ -1248,7 +1676,6 @@
             .Items.Remove("Phoenix")
             .Items.Remove("Pit Lord")
             .Items.Remove("Rubick")
-            .Items.Remove("Shadow Demon")
             .Items.Remove("Skywrath Mage")
             .Items.Remove("Slark")
             .Items.Remove("Soul Keeper")
@@ -1671,314 +2098,281 @@
         End Select
     End Function
 
-    Public Sub ChangeItemPosition()
-        If FormMain.ComboBox5.SelectedItem = "DotA Like" Then
-            FormMain.Label13.Visible = True
-            FormMain.Label14.Visible = True
-            FormMain.Label15.Visible = True
-            FormMain.Label16.Visible = True
-            FormMain.Label17.Visible = True
-            FormMain.Label18.Visible = True
-            FormMain.Label19.Visible = True
-            FormMain.Label20.Visible = True
-            FormMain.Label21.Visible = True
-            FormMain.Label22.Visible = True
-            FormMain.Label23.Visible = True
-            'Consumables
-            FormMain.PictureBox54.Location = New Point(159, 238)
-            FormMain.PictureBox149.Location = New Point(205, 238)
-            FormMain.PictureBox84.Location = New Point(251, 238)
-            FormMain.PictureBox143.Location = New Point(297, 238)
-            FormMain.PictureBox150.Location = New Point(159, 274)
-            FormMain.PictureBox70.Location = New Point(205, 274)
-            FormMain.PictureBox32.Location = New Point(251, 274)
-            FormMain.PictureBox76.Location = New Point(297, 274)
-            FormMain.PictureBox110.Location = New Point(159, 310)
-            FormMain.PictureBox138.Location = New Point(205, 310)
-            FormMain.PictureBox47.Location = New Point(251, 310)
-            'Attributes
-            FormMain.PictureBox90.Location = New Point(350, 238)
-            FormMain.PictureBox78.Location = New Point(396, 238)
-            FormMain.PictureBox142.Location = New Point(442, 238)
-            FormMain.PictureBox97.Location = New Point(488, 238)
-            FormMain.PictureBox53.Location = New Point(350, 274)
-            FormMain.PictureBox37.Location = New Point(396, 274)
-            FormMain.PictureBox44.Location = New Point(442, 274)
-            FormMain.PictureBox131.Location = New Point(488, 274)
-            FormMain.PictureBox111.Location = New Point(350, 310)
-            FormMain.PictureBox40.Location = New Point(396, 310)
-            FormMain.PictureBox146.Location = New Point(442, 310)
-            FormMain.PictureBox151.Location = New Point(488, 310)
-            'Armaments
-            FormMain.PictureBox129.Location = New Point(543, 238)
-            FormMain.PictureBox123.Location = New Point(589, 238)
-            FormMain.PictureBox147.Location = New Point(635, 238)
-            FormMain.PictureBox41.Location = New Point(681, 238)
-            FormMain.PictureBox52.Location = New Point(543, 274)
-            FormMain.PictureBox86.Location = New Point(589, 274)
-            FormMain.PictureBox49.Location = New Point(635, 274)
-            FormMain.PictureBox122.Location = New Point(681, 274)
-            FormMain.PictureBox55.Location = New Point(543, 310)
-            FormMain.PictureBox91.Location = New Point(589, 310)
-            FormMain.PictureBox117.Location = New Point(635, 310)
-            FormMain.PictureBox101.Location = New Point(681, 310)
-            'Arcane
-            FormMain.PictureBox94.Location = New Point(736, 238)
-            FormMain.PictureBox133.Location = New Point(782, 238)
-            FormMain.PictureBox130.Location = New Point(828, 238)
-            FormMain.PictureBox45.Location = New Point(874, 238)
-            FormMain.PictureBox81.Location = New Point(736, 274)
-            FormMain.PictureBox56.Location = New Point(782, 274)
-            FormMain.PictureBox79.Location = New Point(828, 274)
-            FormMain.PictureBox104.Location = New Point(874, 274)
-            FormMain.PictureBox80.Location = New Point(736, 310)
-            FormMain.PictureBox148.Location = New Point(782, 310)
-            FormMain.PictureBox42.Location = New Point(828, 310)
-            'Common
-            FormMain.PictureBox158.Location = New Point(159, 380)
-            FormMain.PictureBox108.Location = New Point(205, 380)
-            FormMain.PictureBox95.Location = New Point(251, 380)
-            FormMain.PictureBox48.Location = New Point(297, 380)
-            FormMain.PictureBox119.Location = New Point(159, 416)
-            FormMain.PictureBox145.Location = New Point(205, 416)
-            FormMain.PictureBox115.Location = New Point(251, 416)
-            FormMain.PictureBox120.Location = New Point(297, 416)
-            FormMain.PictureBox109.Location = New Point(159, 452)
-            FormMain.PictureBox114.Location = New Point(205, 452)
-            FormMain.PictureBox82.Location = New Point(251, 452)
-            FormMain.PictureBox46.Location = New Point(297, 452)
-            'Weapons
-            FormMain.PictureBox57.Location = New Point(350, 380)
-            FormMain.PictureBox34.Location = New Point(396, 380)
-            FormMain.PictureBox141.Location = New Point(442, 380)
-            FormMain.PictureBox139.Location = New Point(488, 380)
-            FormMain.PictureBox36.Location = New Point(350, 416)
-            FormMain.PictureBox73.Location = New Point(396, 416)
-            FormMain.PictureBox124.Location = New Point(442, 416)
-            FormMain.PictureBox103.Location = New Point(488, 416)
-            FormMain.PictureBox58.Location = New Point(350, 452)
-            FormMain.PictureBox51.Location = New Point(396, 452)
-            FormMain.PictureBox68.Location = New Point(442, 452)
-            FormMain.PictureBox160.Location = New Point(488, 452)
-            'Support
-            FormMain.PictureBox127.Location = New Point(543, 380)
-            FormMain.PictureBox83.Location = New Point(589, 380)
-            FormMain.PictureBox50.Location = New Point(635, 380)
-            FormMain.PictureBox152.Location = New Point(681, 380)
-            FormMain.PictureBox99.Location = New Point(543, 416)
-            FormMain.PictureBox33.Location = New Point(589, 416)
-            FormMain.PictureBox69.Location = New Point(635, 416)
-            FormMain.PictureBox156.Location = New Point(681, 416)
-            FormMain.PictureBox100.Location = New Point(543, 452)
-            FormMain.PictureBox116.Location = New Point(589, 452)
-            FormMain.PictureBox162.Location = New Point(635, 452)
-            FormMain.PictureBox164.Location = New Point(681, 452)
-            'Caster
-            FormMain.PictureBox77.Location = New Point(736, 380)
-            FormMain.PictureBox121.Location = New Point(782, 380)
-            FormMain.PictureBox106.Location = New Point(828, 380)
-            FormMain.PictureBox107.Location = New Point(874, 380)
-            FormMain.PictureBox74.Location = New Point(736, 416)
-            FormMain.PictureBox59.Location = New Point(782, 416)
-            FormMain.PictureBox60.Location = New Point(828, 416)
-            FormMain.PictureBox61.Location = New Point(874, 416)
-            FormMain.PictureBox62.Location = New Point(736, 452)
-            FormMain.PictureBox63.Location = New Point(782, 452)
-            FormMain.PictureBox154.Location = New Point(828, 452)
-            FormMain.PictureBox31.Location = New Point(874, 452)
-            FormMain.PictureBox113.Location = New Point(736, 488)
-            FormMain.PictureBox126.Location = New Point(782, 488)
-            FormMain.PictureBox137.Location = New Point(828, 488)
-            FormMain.PictureBox163.Location = New Point(874, 488)
-            'Armor
-            FormMain.PictureBox88.Location = New Point(159, 526)
-            FormMain.PictureBox39.Location = New Point(205, 526)
-            FormMain.PictureBox153.Location = New Point(251, 526)
-            FormMain.PictureBox144.Location = New Point(297, 526)
-            FormMain.PictureBox38.Location = New Point(159, 562)
-            FormMain.PictureBox140.Location = New Point(205, 562)
-            FormMain.PictureBox96.Location = New Point(251, 562)
-            FormMain.PictureBox43.Location = New Point(297, 562)
-            FormMain.PictureBox92.Location = New Point(159, 598)
-            FormMain.PictureBox35.Location = New Point(205, 598)
-            FormMain.PictureBox85.Location = New Point(251, 598)
-            'Artifacts
-            FormMain.PictureBox87.Location = New Point(350, 526)
-            FormMain.PictureBox98.Location = New Point(396, 526)
-            FormMain.PictureBox134.Location = New Point(442, 526)
-            FormMain.PictureBox159.Location = New Point(488, 526)
-            FormMain.PictureBox93.Location = New Point(350, 562)
-            FormMain.PictureBox66.Location = New Point(396, 562)
-            FormMain.PictureBox67.Location = New Point(442, 562)
-            FormMain.PictureBox65.Location = New Point(488, 562)
-            FormMain.PictureBox135.Location = New Point(350, 598)
-            FormMain.PictureBox102.Location = New Point(396, 598)
-            FormMain.PictureBox75.Location = New Point(442, 598)
-            FormMain.PictureBox136.Location = New Point(488, 598)
-            FormMain.PictureBox161.Location = New Point(350, 634)
-            'Secret Shop
-            FormMain.PictureBox112.Location = New Point(543, 526)
-            FormMain.PictureBox128.Location = New Point(589, 526)
-            FormMain.PictureBox157.Location = New Point(635, 526)
-            FormMain.PictureBox72.Location = New Point(681, 526)
-            FormMain.PictureBox155.Location = New Point(543, 562)
-            FormMain.PictureBox118.Location = New Point(589, 562)
-            FormMain.PictureBox89.Location = New Point(635, 562)
-            FormMain.PictureBox64.Location = New Point(681, 562)
-            FormMain.PictureBox105.Location = New Point(543, 598)
-            FormMain.PictureBox125.Location = New Point(589, 598)
-            FormMain.PictureBox71.Location = New Point(635, 598)
-            FormMain.PictureBox132.Location = New Point(681, 598)
-            'Delete
-            FormMain.PictureBox165.Location = New Point(782, 562)
-        Else
-            FormMain.Label13.Visible = False
-            FormMain.Label14.Visible = False
-            FormMain.Label15.Visible = False
-            FormMain.Label16.Visible = False
-            FormMain.Label17.Visible = False
-            FormMain.Label18.Visible = False
-            FormMain.Label19.Visible = False
-            FormMain.Label20.Visible = False
-            FormMain.Label21.Visible = False
-            FormMain.Label22.Visible = False
-            FormMain.Label23.Visible = False
-            FormMain.PictureBox160.Location = New Point(201, 276)
-            FormMain.PictureBox31.Location = New Point(247, 276)
-            FormMain.PictureBox32.Location = New Point(293, 276)
-            FormMain.PictureBox33.Location = New Point(339, 276)
-            FormMain.PictureBox34.Location = New Point(385, 276)
-            FormMain.PictureBox35.Location = New Point(431, 276)
-            FormMain.PictureBox36.Location = New Point(477, 276)
-            FormMain.PictureBox37.Location = New Point(523, 276)
-            FormMain.PictureBox38.Location = New Point(569, 276)
-            FormMain.PictureBox39.Location = New Point(615, 276)
-            FormMain.PictureBox40.Location = New Point(661, 276)
-            FormMain.PictureBox41.Location = New Point(707, 276)
-            FormMain.PictureBox42.Location = New Point(753, 276)
-            FormMain.PictureBox43.Location = New Point(799, 276)
-            FormMain.PictureBox44.Location = New Point(845, 276)
-            FormMain.PictureBox45.Location = New Point(201, 312)
-            FormMain.PictureBox46.Location = New Point(247, 312)
-            FormMain.PictureBox47.Location = New Point(293, 312)
-            FormMain.PictureBox48.Location = New Point(339, 312)
-            FormMain.PictureBox49.Location = New Point(385, 312)
-            FormMain.PictureBox50.Location = New Point(431, 312)
-            FormMain.PictureBox51.Location = New Point(477, 312)
-            FormMain.PictureBox52.Location = New Point(523, 312)
-            FormMain.PictureBox53.Location = New Point(569, 312)
-            FormMain.PictureBox54.Location = New Point(615, 312)
-            FormMain.PictureBox55.Location = New Point(661, 312)
-            FormMain.PictureBox56.Location = New Point(707, 312)
-            FormMain.PictureBox57.Location = New Point(753, 312)
-            FormMain.PictureBox58.Location = New Point(799, 312)
-            FormMain.PictureBox59.Location = New Point(845, 312)
-            FormMain.PictureBox60.Location = New Point(201, 348)
-            FormMain.PictureBox61.Location = New Point(247, 348)
-            FormMain.PictureBox62.Location = New Point(293, 348)
-            FormMain.PictureBox63.Location = New Point(339, 348)
-            FormMain.PictureBox64.Location = New Point(385, 348)
-            FormMain.PictureBox65.Location = New Point(431, 348)
-            FormMain.PictureBox66.Location = New Point(477, 348)
-            FormMain.PictureBox67.Location = New Point(523, 348)
-            FormMain.PictureBox68.Location = New Point(569, 348)
-            FormMain.PictureBox69.Location = New Point(615, 348)
-            FormMain.PictureBox70.Location = New Point(661, 348)
-            FormMain.PictureBox71.Location = New Point(707, 348)
-            FormMain.PictureBox72.Location = New Point(753, 348)
-            FormMain.PictureBox73.Location = New Point(799, 348)
-            FormMain.PictureBox74.Location = New Point(845, 348)
-            FormMain.PictureBox75.Location = New Point(201, 384)
-            FormMain.PictureBox76.Location = New Point(247, 384)
-            FormMain.PictureBox77.Location = New Point(293, 384)
-            FormMain.PictureBox78.Location = New Point(339, 384)
-            FormMain.PictureBox79.Location = New Point(385, 384)
-            FormMain.PictureBox80.Location = New Point(431, 384)
-            FormMain.PictureBox81.Location = New Point(477, 384)
-            FormMain.PictureBox82.Location = New Point(523, 384)
-            FormMain.PictureBox83.Location = New Point(569, 384)
-            FormMain.PictureBox84.Location = New Point(615, 384)
-            FormMain.PictureBox85.Location = New Point(661, 384)
-            FormMain.PictureBox161.Location = New Point(707, 384)
-            FormMain.PictureBox86.Location = New Point(753, 384)
-            FormMain.PictureBox87.Location = New Point(799, 384)
-            FormMain.PictureBox88.Location = New Point(845, 384)
-            FormMain.PictureBox89.Location = New Point(201, 420)
-            FormMain.PictureBox90.Location = New Point(247, 420)
-            FormMain.PictureBox91.Location = New Point(293, 420)
-            FormMain.PictureBox92.Location = New Point(339, 420)
-            FormMain.PictureBox93.Location = New Point(385, 420)
-            FormMain.PictureBox94.Location = New Point(431, 420)
-            FormMain.PictureBox95.Location = New Point(477, 420)
-            FormMain.PictureBox96.Location = New Point(523, 420)
-            FormMain.PictureBox97.Location = New Point(569, 420)
-            FormMain.PictureBox98.Location = New Point(615, 420)
-            FormMain.PictureBox99.Location = New Point(661, 420)
-            FormMain.PictureBox100.Location = New Point(707, 420)
-            FormMain.PictureBox101.Location = New Point(753, 420)
-            FormMain.PictureBox102.Location = New Point(799, 420)
-            FormMain.PictureBox103.Location = New Point(845, 420)
-            FormMain.PictureBox104.Location = New Point(201, 456)
-            FormMain.PictureBox105.Location = New Point(247, 456)
-            FormMain.PictureBox121.Location = New Point(293, 456)
-            FormMain.PictureBox106.Location = New Point(339, 456)
-            FormMain.PictureBox107.Location = New Point(385, 456)
-            FormMain.PictureBox108.Location = New Point(431, 456)
-            FormMain.PictureBox109.Location = New Point(477, 456)
-            FormMain.PictureBox110.Location = New Point(523, 456)
-            FormMain.PictureBox111.Location = New Point(569, 456)
-            FormMain.PictureBox112.Location = New Point(615, 456)
-            FormMain.PictureBox113.Location = New Point(661, 456)
-            FormMain.PictureBox114.Location = New Point(707, 456)
-            FormMain.PictureBox115.Location = New Point(753, 456)
-            FormMain.PictureBox116.Location = New Point(799, 456)
-            FormMain.PictureBox117.Location = New Point(845, 456)
-            FormMain.PictureBox118.Location = New Point(201, 492)
-            FormMain.PictureBox119.Location = New Point(247, 492)
-            FormMain.PictureBox120.Location = New Point(293, 492)
-            FormMain.PictureBox122.Location = New Point(339, 492)
-            FormMain.PictureBox123.Location = New Point(385, 492)
-            FormMain.PictureBox124.Location = New Point(431, 492)
-            FormMain.PictureBox125.Location = New Point(477, 492)
-            FormMain.PictureBox126.Location = New Point(523, 492)
-            FormMain.PictureBox127.Location = New Point(569, 492)
-            FormMain.PictureBox162.Location = New Point(615, 492)
-            FormMain.PictureBox128.Location = New Point(661, 492)
-            FormMain.PictureBox129.Location = New Point(707, 492)
-            FormMain.PictureBox130.Location = New Point(753, 492)
-            FormMain.PictureBox131.Location = New Point(799, 492)
-            FormMain.PictureBox132.Location = New Point(845, 492)
-            FormMain.PictureBox163.Location = New Point(201, 528)
-            FormMain.PictureBox133.Location = New Point(247, 528)
-            FormMain.PictureBox134.Location = New Point(293, 528)
-            FormMain.PictureBox135.Location = New Point(339, 528)
-            FormMain.PictureBox136.Location = New Point(385, 528)
-            FormMain.PictureBox137.Location = New Point(431, 528)
-            FormMain.PictureBox138.Location = New Point(477, 528)
-            FormMain.PictureBox139.Location = New Point(523, 528)
-            FormMain.PictureBox140.Location = New Point(569, 528)
-            FormMain.PictureBox141.Location = New Point(615, 528)
-            FormMain.PictureBox142.Location = New Point(661, 528)
-            FormMain.PictureBox143.Location = New Point(707, 528)
-            FormMain.PictureBox144.Location = New Point(753, 528)
-            FormMain.PictureBox145.Location = New Point(799, 528)
-            FormMain.PictureBox146.Location = New Point(845, 528)
-            FormMain.PictureBox147.Location = New Point(201, 564)
-            FormMain.PictureBox148.Location = New Point(247, 564)
-            FormMain.PictureBox149.Location = New Point(293, 564)
-            FormMain.PictureBox150.Location = New Point(339, 564)
-            FormMain.PictureBox164.Location = New Point(385, 564)
-            FormMain.PictureBox151.Location = New Point(431, 564)
-            FormMain.PictureBox152.Location = New Point(477, 564)
-            FormMain.PictureBox153.Location = New Point(523, 564)
-            FormMain.PictureBox154.Location = New Point(569, 564)
-            FormMain.PictureBox155.Location = New Point(615, 564)
-            FormMain.PictureBox156.Location = New Point(661, 564)
-            FormMain.PictureBox157.Location = New Point(707, 564)
-            FormMain.PictureBox158.Location = New Point(753, 564)
-            FormMain.PictureBox159.Location = New Point(799, 564)
-            FormMain.PictureBox165.Location = New Point(845, 564)
-        End If
-    End Sub
+    Public Function GetPrice(ByVal itemname As String) As Integer
+        Select Case itemname
+            Case "Abyssal Blade"
+                Return 6750
+            Case "Aghanim's Scepter"
+                Return 4200
+            Case "Animal Courier"
+                Return 150
+            Case "Arcane Boots"
+                Return 1500
+            Case "Armlet of Mordiggian"
+                Return 2600
+            Case "Assault Cuirass"
+                Return 5350
+            Case "Battle Fury"
+                Return 4350
+            Case "Belt of Strength"
+                Return 450
+            Case "Black King Bar"
+                Return 3900
+            Case "Blade Mail"
+                Return 2200
+            Case "Blade of Alacrity"
+                Return 1000
+            Case "Blades of Attack"
+                Return 450
+            Case "Blink Dagger"
+                Return 2150
+            Case "Bloodstone"
+                Return 5050
+            Case "Boots of Elvenskin"
+                Return 450
+            Case "Boots of Speed"
+                Return 500
+            Case "Boots of Travel"
+                Return 2500
+            Case "Bottle"
+                Return 600
+            Case "Bracer"
+                Return 525
+            Case "Broadsword"
+                Return 1200
+            Case "Buckler"
+                Return 803
+            Case "Butterfly"
+                Return 6000
+            Case "Chainmail"
+                Return 550
+            Case "Circlet"
+                Return 185
+            Case "Clarity"
+                Return 50
+            Case "Claymore"
+                Return 1400
+            Case "Cloak"
+                Return 550
+            Case "Crystalys"
+                Return 2150
+            Case "Daedalus"
+                Return 5750
+            Case "Dagon 1"
+                Return 2805
+            Case "Dagon 2"
+                Return 2805 + 1300
+            Case "Dagon 3"
+                Return 2805 + 1300 + 1300
+            Case "Dagon 4"
+                Return 2805 + 1300 + 1300 + 1300
+            Case "Dagon 5"
+                Return 2805 + 1300 + 1300 + 1300 + 1300
+            Case "Demon Edge"
+                Return 2400
+            Case "Desolator"
+                Return 4100
+            Case "Diffusal Blade 1"
+                Return 3300
+            Case "Diffusal Blade 2"
+                Return 3300 + 850
+            Case "Divine Rapier"
+                Return 6200
+            Case "Drum of Endurance"
+                Return 1725
+            Case "Dust of Appearance"
+                Return 180
+            Case "Eaglesong"
+                Return 3300
+            Case "Energy Booster"
+                Return 1000
+            Case "Ethereal Blade"
+                Return 4900
+            Case "Eul's Scepter of Divinity"
+                Return 2800
+            Case "Eye of Skadi"
+                Return 5750
+            Case "Flying Courier"
+                Return 390
+            Case "Force Staff"
+                Return 2200
+            Case "Gauntlets of Strength"
+                Return 150
+            Case "Gem of True Sight"
+                Return 700
+            Case "Ghost Scepter"
+                Return 1600
+            Case "Gloves of Haste"
+                Return 500
+            Case "Hand of Midas"
+                Return 1900
+            Case "Headdress"
+                Return 603
+            Case "Healing Salve"
+                Return 100
+            Case "Heart of Tarrasque"
+                Return 5500
+            Case "Heaven's Halberd"
+                Return 3950
+            Case "Helm of Iron Will"
+                Return 950
+            Case "Helm of the Dominator"
+                Return 1850
+            Case "Hood of Defiance"
+                Return 2125
+            Case "Hyperstone"
+                Return 2100
+            Case "Iron Branch"
+                Return 53
+            Case "Javelin"
+                Return 1500
+            Case "Linken's Sphere"
+                Return 5175
+            Case "Maelstrom"
+                Return 2700
+            Case "Magic Stick"
+                Return 200
+            Case "Magic Wand"
+                Return 509
+            Case "Manta Style"
+                Return 4900
+            Case "Mantle of Intelligence"
+                Return 150
+            Case "Mask of Madness"
+                Return 1900
+            Case "Medallion of Courage"
+                Return 1075
+            Case "Mekansm"
+                Return 2306
+            Case "Mithril Hammer"
+                Return 1600
+            Case "Mjollnir"
+                Return 5400
+            Case "Monkey King Bar"
+                Return 5400
+            Case "Morbid Mask"
+                Return 900
+            Case "Mystic Staff"
+                Return 2700
+            Case "Necronomicon 1"
+                Return 2700
+            Case "Necronomicon 2"
+                Return 2700 + 1250
+            Case "Necronomicon 3"
+                Return 2700 + 1250 + 1250
+            Case "Null Talisman"
+                Return 505
+            Case "Oblivion Staff"
+                Return 1675
+            Case "Observer Ward"
+                Return 200
+            Case "Ogre Club"
+                Return 1000
+            Case "Orb of Venom"
+                Return 350
+            Case "Orchid Malevolence"
+                Return 4125
+            Case "Perseverance"
+                Return 1750
+            Case "Phase Boots"
+                Return 1400
+            Case "Pipe of Insight"
+                Return 3628
+            Case "Platemail"
+                Return 1400
+            Case "Point Booster"
+                Return 1200
+            Case "Poor Man's Shield"
+                Return 550
+            Case "Power Treads"
+                Return 1450
+            Case "Quarterstaff"
+                Return 900
+            Case "Quelling Blade"
+                Return 225
+            Case "Radiance"
+                Return 5150
+            Case "Reaver"
+                Return 3200
+            Case "Refresher Orb"
+                Return 5300
+            Case "Ring of Aquila"
+                Return 985
+            Case "Ring of Basilius"
+                Return 500
+            Case "Ring of Health"
+                Return 875
+            Case "Ring of Protection"
+                Return 175
+            Case "Ring of Regen"
+                Return 350
+            Case "Robe of the Magi"
+                Return 450
+            Case "Rod of Atos"
+                Return 3100
+            Case "Sacred Relic"
+                Return 3800
+            Case "Sage's Mask"
+                Return 325
+            Case "Sange"
+                Return 2150
+            Case "Sange and Yasha"
+                Return 4300
+            Case "Satanic"
+                Return 6150
+            Case "Scythe of Vyse"
+                Return 5675
+            Case "Sentry Ward"
+                Return 200
+            Case "Shadow Blade"
+                Return 3300
+            Case "Shiva's Guard"
+                Return 4700
+            Case "Skull Basher"
+                Return 2950
+            Case "Slippers of Agility"
+                Return 150
+            Case "Smoke of Deceit"
+                Return 100
+            Case "Soul Booster"
+                Return 3300
+            Case "Soul Ring"
+                Return 800
+            Case "Staff of Wizardry"
+                Return 1000
+            Case "Stout Shield"
+                Return 250
+            Case "Talisman of Evasion"
+                Return 1800
+            Case "Tango"
+                Return 90
+            Case "Town Portal Scroll"
+                Return 135
+            Case "Tranquil Boots"
+                Return 1025
+            Case "Ultimate Orb"
+                Return 2100
+            Case "Urn of Shadows"
+                Return 875
+            Case "Vanguard"
+                Return 2225
+            Case "Veil of Discord"
+                Return 5000
+            Case "2650"
+                Return 5000
+            Case "Vitality Booster"
+                Return 1100
+            Case "Vladmir's Offering"
+                Return 2050
+            Case "Void Stone"
+                Return 875
+            Case "Wraith Band"
+                Return 485
+            Case "Yasha"
+                Return 2150
+            Case Else
+                Return 0
+        End Select
+    End Function
 
 End Class
