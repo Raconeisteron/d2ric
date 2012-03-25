@@ -612,7 +612,7 @@
                 hero = "Lone Druid"
             Case hero Like "npc_dota_hero_?una"
                 hero = "Luna"
-            Case hero Like "npc_dota_hero_?ycanthrope"
+            Case hero Like "npc_dota_hero_?ycan"
                 hero = "Lycanthrope"
             Case hero Like "npc_dota_hero_?agnataur"
                 hero = "Magnataur"
@@ -710,6 +710,8 @@
                 Selected_Hero = "phantom_assassin"
             Case "Outworld Destroyer"
                 Selected_Hero = "obsidian_destroyer"
+            Case "Lycanthrope"
+                Selected_Hero = "lycan"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Centaur Warchief"
                 Selected_Hero = "centaur_warchief"
@@ -1236,7 +1238,6 @@
             .Items.Remove("Legion Commander")
             .Items.Remove("Lone Druid")
             .Items.Remove("Luna")
-            .Items.Remove("Lycanthrope")
             .Items.Remove("Magnataur")
             .Items.Remove("Medusa")
             .Items.Remove("Meepo")
@@ -1248,7 +1249,6 @@
             .Items.Remove("Phoenix")
             .Items.Remove("Pit Lord")
             .Items.Remove("Rubick")
-            .Items.Remove("Shadow Demon")
             .Items.Remove("Skywrath Mage")
             .Items.Remove("Slark")
             .Items.Remove("Soul Keeper")
