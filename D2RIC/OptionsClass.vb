@@ -100,11 +100,4 @@
         End If
     End Sub
 
-    Public Sub ChangeItemIcons()
-        Itembuild.InitializeListbox()
-        Itembuild.ClearSingle()
-        FormMain.ListBox1.ClearSelected()
-        My.Settings.item_icons = FormMain.ComboBoxItemIcons.Text
-        My.Settings.Save()
-    End Sub
 End Class
