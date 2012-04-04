@@ -26,6 +26,8 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -106,8 +108,6 @@ Partial Class FormMain
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBoxClient = New System.Windows.Forms.ComboBox()
-        Me.ComboBoxItemIcons = New System.Windows.Forms.ComboBox()
-        Me.Label49 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.ButtonOpenBackupFolder = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -123,6 +123,7 @@ Partial Class FormMain
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.Item39, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -187,6 +188,8 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.AllowDrop = True
+        Me.TabPage1.Controls.Add(Me.Label22)
+        Me.TabPage1.Controls.Add(Me.ComboBox2)
         Me.TabPage1.Controls.Add(Me.Label20)
         Me.TabPage1.Controls.Add(Me.Label21)
         Me.TabPage1.Controls.Add(Me.Label18)
@@ -262,6 +265,25 @@ Partial Class FormMain
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Change Itembuild"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(546, 231)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(54, 13)
+        Me.Label22.TabIndex = 551
+        Me.Label22.Text = "Shopfilter:"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"All", "Arcane", "Armaments", "Armor", "Artifacts", "Attributes", "Caster", "Common", "Consumables", "Secret Shop", "Side Lane Shop", "Support", "Weapons"})
+        Me.ComboBox2.Location = New System.Drawing.Point(606, 228)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 550
         '
         'Label20
         '
@@ -342,18 +364,18 @@ Partial Class FormMain
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(546, 205)
+        Me.Label13.Location = New System.Drawing.Point(362, 231)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(32, 13)
+        Me.Label13.Size = New System.Drawing.Size(49, 13)
         Me.Label13.TabIndex = 541
-        Me.Label13.Text = "Filter:"
+        Me.Label13.Text = "Itemfilter:"
         '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"", "Agility", "All Attributes", "Armor", "Attack Speed", "Aura", "Damage", "Evasion", "HP", "HP/sec Regeneration", "Intelligence", "Lifesteal", "Magic Resistance", "Mana", "Mana Regeneration", "Movement Speed", "Strength"})
-        Me.ComboBox1.Location = New System.Drawing.Point(584, 202)
+        Me.ComboBox1.Location = New System.Drawing.Point(417, 228)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 540
@@ -361,7 +383,7 @@ Partial Class FormMain
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(353, 205)
+        Me.Label11.Location = New System.Drawing.Point(178, 231)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(62, 13)
         Me.Label11.TabIndex = 539
@@ -369,27 +391,23 @@ Partial Class FormMain
         '
         'TextBoxItemsearch
         '
-        Me.TextBoxItemsearch.Location = New System.Drawing.Point(421, 202)
+        Me.TextBoxItemsearch.Location = New System.Drawing.Point(246, 228)
         Me.TextBoxItemsearch.Name = "TextBoxItemsearch"
-        Me.TextBoxItemsearch.Size = New System.Drawing.Size(113, 20)
+        Me.TextBoxItemsearch.Size = New System.Drawing.Size(101, 20)
         Me.TextBoxItemsearch.TabIndex = 538
         '
         'ListView1
         '
-        Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListView1.FullRowSelect = True
         Me.ListView1.LargeImageList = Me.ImageList1
-        Me.ListView1.Location = New System.Drawing.Point(158, 229)
+        Me.ListView1.Location = New System.Drawing.Point(158, 255)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.ShowGroups = False
         Me.ListView1.ShowItemToolTips = True
-        Me.ListView1.Size = New System.Drawing.Size(733, 418)
+        Me.ListView1.Size = New System.Drawing.Size(733, 392)
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.TabIndex = 537
-        Me.ListView1.TileSize = New System.Drawing.Size(140, 34)
+        Me.ListView1.TileSize = New System.Drawing.Size(175, 34)
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Tile
         '
@@ -531,262 +549,6 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(131, "40px-Void_Stone.png")
         Me.ImageList1.Images.SetKeyName(132, "40px-Wraith_Band.png")
         Me.ImageList1.Images.SetKeyName(133, "40px-Yasha.png")
-        Me.ImageList1.Images.SetKeyName(134, "AbyssalBlade.jpg")
-        Me.ImageList1.Images.SetKeyName(135, "Aghanimsscepter.jpg")
-        Me.ImageList1.Images.SetKeyName(136, "Animalcourier.jpg")
-        Me.ImageList1.Images.SetKeyName(137, "ArcaneBoots.jpg")
-        Me.ImageList1.Images.SetKeyName(138, "Armletofmordiggian.jpg")
-        Me.ImageList1.Images.SetKeyName(139, "Assaultcuirass.jpg")
-        Me.ImageList1.Images.SetKeyName(140, "Battlefury.jpg")
-        Me.ImageList1.Images.SetKeyName(141, "Beltofgiantstrength.jpg")
-        Me.ImageList1.Images.SetKeyName(142, "Blackkingbar.jpg")
-        Me.ImageList1.Images.SetKeyName(143, "Blademail.jpg")
-        Me.ImageList1.Images.SetKeyName(144, "Bladesofalacrity.jpg")
-        Me.ImageList1.Images.SetKeyName(145, "Bladesofattack.jpg")
-        Me.ImageList1.Images.SetKeyName(146, "Kelensdagger.jpg")
-        Me.ImageList1.Images.SetKeyName(147, "Bloodstone.jpg")
-        Me.ImageList1.Images.SetKeyName(148, "Bootsofelvenskin.jpg")
-        Me.ImageList1.Images.SetKeyName(149, "Bootsofspeed.jpg")
-        Me.ImageList1.Images.SetKeyName(150, "Bootsoftravel.jpg")
-        Me.ImageList1.Images.SetKeyName(151, "Bottle.jpeg")
-        Me.ImageList1.Images.SetKeyName(152, "Bracer.jpg")
-        Me.ImageList1.Images.SetKeyName(153, "Broadsword.jpg")
-        Me.ImageList1.Images.SetKeyName(154, "Nathrezimbuckler.jpg")
-        Me.ImageList1.Images.SetKeyName(155, "Butterfly.jpg")
-        Me.ImageList1.Images.SetKeyName(156, "Chainmail.jpg")
-        Me.ImageList1.Images.SetKeyName(157, "Circletofnobility.jpg")
-        Me.ImageList1.Images.SetKeyName(158, "Claritypotion.jpg")
-        Me.ImageList1.Images.SetKeyName(159, "Claymore.jpg")
-        Me.ImageList1.Images.SetKeyName(160, "Planeswalkerscloak.jpg")
-        Me.ImageList1.Images.SetKeyName(161, "Crystalys.jpg")
-        Me.ImageList1.Images.SetKeyName(162, "Burizadokyanon.jpg")
-        Me.ImageList1.Images.SetKeyName(163, "Dagon.jpg")
-        Me.ImageList1.Images.SetKeyName(164, "Dagon2.jpg")
-        Me.ImageList1.Images.SetKeyName(165, "Dagon3.jpg")
-        Me.ImageList1.Images.SetKeyName(166, "Dagon4.jpg")
-        Me.ImageList1.Images.SetKeyName(167, "Dagon5.jpg")
-        Me.ImageList1.Images.SetKeyName(168, "Demonedge.jpg")
-        Me.ImageList1.Images.SetKeyName(169, "Stygiandesolator.jpg")
-        Me.ImageList1.Images.SetKeyName(170, "Diffusalblade.jpg")
-        Me.ImageList1.Images.SetKeyName(171, "Diffusalblade2.jpg")
-        Me.ImageList1.Images.SetKeyName(172, "Divinerapier.jpg")
-        Me.ImageList1.Images.SetKeyName(173, "Ancientjanggoofendurance.jpg")
-        Me.ImageList1.Images.SetKeyName(174, "Dustofappearance.jpg")
-        Me.ImageList1.Images.SetKeyName(175, "Eaglehorn.jpg")
-        Me.ImageList1.Images.SetKeyName(176, "Energybooster.jpg")
-        Me.ImageList1.Images.SetKeyName(177, "Etheral_Blade.jpg")
-        Me.ImageList1.Images.SetKeyName(178, "Eulsscepterofdivinity.jpg")
-        Me.ImageList1.Images.SetKeyName(179, "Eyeofskadi.jpg")
-        Me.ImageList1.Images.SetKeyName(180, "Flyingcourier.jpg")
-        Me.ImageList1.Images.SetKeyName(181, "Forcestaff.jpg")
-        Me.ImageList1.Images.SetKeyName(182, "Gauntletsofstrength.jpg")
-        Me.ImageList1.Images.SetKeyName(183, "Gemoftruesight.jpg")
-        Me.ImageList1.Images.SetKeyName(184, "Ghostscepter.jpg")
-        Me.ImageList1.Images.SetKeyName(185, "Glovesofhaste.jpg")
-        Me.ImageList1.Images.SetKeyName(186, "Handofmidas.jpg")
-        Me.ImageList1.Images.SetKeyName(187, "Headdressofrejuvenation.jpg")
-        Me.ImageList1.Images.SetKeyName(188, "Healingsalve.jpg")
-        Me.ImageList1.Images.SetKeyName(189, "Heartoftarrasque.jpg")
-        Me.ImageList1.Images.SetKeyName(190, "Halberd.jpg")
-        Me.ImageList1.Images.SetKeyName(191, "Helmofironwill.jpg")
-        Me.ImageList1.Images.SetKeyName(192, "Helmofthedominator.jpg")
-        Me.ImageList1.Images.SetKeyName(193, "Hoodofdefiance.jpg")
-        Me.ImageList1.Images.SetKeyName(194, "Hyperstone.jpg")
-        Me.ImageList1.Images.SetKeyName(195, "Ironwoodbranch.jpg")
-        Me.ImageList1.Images.SetKeyName(196, "Javelin.jpg")
-        Me.ImageList1.Images.SetKeyName(197, "Linkenssphere.jpg")
-        Me.ImageList1.Images.SetKeyName(198, "Maelstrom.jpg")
-        Me.ImageList1.Images.SetKeyName(199, "Magicstick.jpeg")
-        Me.ImageList1.Images.SetKeyName(200, "Magicwand.jpg")
-        Me.ImageList1.Images.SetKeyName(201, "Mantastyle.jpg")
-        Me.ImageList1.Images.SetKeyName(202, "Mantleofintelligence.jpg")
-        Me.ImageList1.Images.SetKeyName(203, "Maskofmadness.jpg")
-        Me.ImageList1.Images.SetKeyName(204, "Medallionofcourage.jpg")
-        Me.ImageList1.Images.SetKeyName(205, "Mekansm.jpg")
-        Me.ImageList1.Images.SetKeyName(206, "Mithrilhammer.jpg")
-        Me.ImageList1.Images.SetKeyName(207, "Mjollnir.jpg")
-        Me.ImageList1.Images.SetKeyName(208, "Monkeykingbar.jpg")
-        Me.ImageList1.Images.SetKeyName(209, "Maskofdeath.jpg")
-        Me.ImageList1.Images.SetKeyName(210, "Mysticstaff.jpg")
-        Me.ImageList1.Images.SetKeyName(211, "Necronomicon.jpg")
-        Me.ImageList1.Images.SetKeyName(212, "Necronomicon2.jpg")
-        Me.ImageList1.Images.SetKeyName(213, "Necronomicon3.jpg")
-        Me.ImageList1.Images.SetKeyName(214, "Nulltalisman.jpg")
-        Me.ImageList1.Images.SetKeyName(215, "Oblivionstaff.jpg")
-        Me.ImageList1.Images.SetKeyName(216, "Observerwards.jpg")
-        Me.ImageList1.Images.SetKeyName(217, "Ogreaxe.jpg")
-        Me.ImageList1.Images.SetKeyName(218, "OrbOfVenom.jpg")
-        Me.ImageList1.Images.SetKeyName(219, "Orchidmalevolence.jpg")
-        Me.ImageList1.Images.SetKeyName(220, "Perseverance.jpg")
-        Me.ImageList1.Images.SetKeyName(221, "Phaseboots.jpg")
-        Me.ImageList1.Images.SetKeyName(222, "Khadgarspipeofinsight.jpg")
-        Me.ImageList1.Images.SetKeyName(223, "Platemail.jpg")
-        Me.ImageList1.Images.SetKeyName(224, "Pointbooster.jpg")
-        Me.ImageList1.Images.SetKeyName(225, "Poormansshield.jpeg")
-        Me.ImageList1.Images.SetKeyName(226, "Powertreads.jpg")
-        Me.ImageList1.Images.SetKeyName(227, "Quarterstaff.jpg")
-        Me.ImageList1.Images.SetKeyName(228, "Quellingblade.jpg")
-        Me.ImageList1.Images.SetKeyName(229, "Radiance.jpg")
-        Me.ImageList1.Images.SetKeyName(230, "Messerschmidtsreaver.jpg")
-        Me.ImageList1.Images.SetKeyName(231, "Refresherorb.jpg")
-        Me.ImageList1.Images.SetKeyName(232, "RingofAquila.jpg")
-        Me.ImageList1.Images.SetKeyName(233, "Ringofbasilius.jpg")
-        Me.ImageList1.Images.SetKeyName(234, "Ringofhealth.jpg")
-        Me.ImageList1.Images.SetKeyName(235, "Ringofprotection.jpeg")
-        Me.ImageList1.Images.SetKeyName(236, "Ringofregeneration.jpg")
-        Me.ImageList1.Images.SetKeyName(237, "Robeofthemagi.jpg")
-        Me.ImageList1.Images.SetKeyName(238, "RodofAtos.jpg")
-        Me.ImageList1.Images.SetKeyName(239, "Sacredrelic.jpg")
-        Me.ImageList1.Images.SetKeyName(240, "Sobimask.jpg")
-        Me.ImageList1.Images.SetKeyName(241, "Sange.jpg")
-        Me.ImageList1.Images.SetKeyName(242, "Sangeandyasha.jpg")
-        Me.ImageList1.Images.SetKeyName(243, "Satanic.jpg")
-        Me.ImageList1.Images.SetKeyName(244, "Guinsoosscytheofvyse.jpg")
-        Me.ImageList1.Images.SetKeyName(245, "Sentrywards.jpg")
-        Me.ImageList1.Images.SetKeyName(246, "Lotharsedge.jpg")
-        Me.ImageList1.Images.SetKeyName(247, "Shivasguard.jpg")
-        Me.ImageList1.Images.SetKeyName(248, "Craniumbasher.jpg")
-        Me.ImageList1.Images.SetKeyName(249, "Slippersofagility.jpg")
-        Me.ImageList1.Images.SetKeyName(250, "SmokeOfDeceit.jpg")
-        Me.ImageList1.Images.SetKeyName(251, "Soulbooster.jpg")
-        Me.ImageList1.Images.SetKeyName(252, "Soul_Ring.jpg")
-        Me.ImageList1.Images.SetKeyName(253, "Staffofwizardry.jpg")
-        Me.ImageList1.Images.SetKeyName(254, "Stoutshield.jpeg")
-        Me.ImageList1.Images.SetKeyName(255, "Talismanofevasion.jpg")
-        Me.ImageList1.Images.SetKeyName(256, "Ancienttangoofessifation.jpg")
-        Me.ImageList1.Images.SetKeyName(257, "Townportal.jpg")
-        Me.ImageList1.Images.SetKeyName(258, "TranquilBoots.jpg")
-        Me.ImageList1.Images.SetKeyName(259, "Ultimateorb.jpg")
-        Me.ImageList1.Images.SetKeyName(260, "Urnofshadows.jpg")
-        Me.ImageList1.Images.SetKeyName(261, "Vanguard.jpg")
-        Me.ImageList1.Images.SetKeyName(262, "Fatalbonds.jpg")
-        Me.ImageList1.Images.SetKeyName(263, "Vitalitybooster.jpg")
-        Me.ImageList1.Images.SetKeyName(264, "Vladimirsoffering.jpg")
-        Me.ImageList1.Images.SetKeyName(265, "Voidstone.jpg")
-        Me.ImageList1.Images.SetKeyName(266, "Wraithband.jpg")
-        Me.ImageList1.Images.SetKeyName(267, "Yasha.jpg")
-        Me.ImageList1.Images.SetKeyName(268, "HoN-Staff-Of-The-Master.jpg")
-        Me.ImageList1.Images.SetKeyName(269, "HoN-Monkey-Courier.jpg")
-        Me.ImageList1.Images.SetKeyName(270, "HoN-Ring-Of-Sorcery.jpg")
-        Me.ImageList1.Images.SetKeyName(271, "HoN-Insanitarius.jpg")
-        Me.ImageList1.Images.SetKeyName(272, "HoN-Daemonic-Breastplate.jpg")
-        Me.ImageList1.Images.SetKeyName(273, "HoN-Runed-Axe.jpg")
-        Me.ImageList1.Images.SetKeyName(274, "HoN-Bolstering-Armband.jpg")
-        Me.ImageList1.Images.SetKeyName(275, "HoN-Shrunken-Head.jpg")
-        Me.ImageList1.Images.SetKeyName(276, "HoN-Barbed-Armor.jpg")
-        Me.ImageList1.Images.SetKeyName(277, "HoN-Quickblade.jpg")
-        Me.ImageList1.Images.SetKeyName(278, "HoN-Punchdagger.jpg")
-        Me.ImageList1.Images.SetKeyName(279, "HoN-Portal-Key.jpg")
-        Me.ImageList1.Images.SetKeyName(280, "HoN-Sacrificial-Stone.jpg")
-        Me.ImageList1.Images.SetKeyName(281, "HoN-Fleet-Feet.jpg")
-        Me.ImageList1.Images.SetKeyName(282, "HoN-Marchers.jpg")
-        Me.ImageList1.Images.SetKeyName(283, "HoN-Post-Haste.jpg")
-        Me.ImageList1.Images.SetKeyName(284, "HoN-Bottle.jpg")
-        Me.ImageList1.Images.SetKeyName(285, "HoN-Fortified-Bracelet.jpg")
-        Me.ImageList1.Images.SetKeyName(286, "HoN-Broadsword.jpg")
-        Me.ImageList1.Images.SetKeyName(287, "HoN-Shield-Of-The-Five.jpg")
-        Me.ImageList1.Images.SetKeyName(288, "HoN-Wingbow.jpg")
-        Me.ImageList1.Images.SetKeyName(289, "HoN-Ringmail.jpg")
-        Me.ImageList1.Images.SetKeyName(290, "HoN-Pretenders-Crown.jpg")
-        Me.ImageList1.Images.SetKeyName(291, "HoN-Mana-Potion.jpg")
-        Me.ImageList1.Images.SetKeyName(292, "HoN-Bastard-Sword.jpg")
-        Me.ImageList1.Images.SetKeyName(293, "HoN-Mystic-Vestments.jpg")
-        Me.ImageList1.Images.SetKeyName(294, "HoN-Riftshards.jpg")
-        Me.ImageList1.Images.SetKeyName(295, "HoN-Codex.jpg")
-        Me.ImageList1.Images.SetKeyName(296, "HoN-Codex2.jpg")
-        Me.ImageList1.Images.SetKeyName(297, "HoN-Codex3.jpg")
-        Me.ImageList1.Images.SetKeyName(298, "HoN-Codex4.jpg")
-        Me.ImageList1.Images.SetKeyName(299, "HoN-Codex5.jpg")
-        Me.ImageList1.Images.SetKeyName(300, "HoN-Slayer.jpg")
-        Me.ImageList1.Images.SetKeyName(301, "HoN-Shieldbreaker.jpg")
-        Me.ImageList1.Images.SetKeyName(302, "HoN-Nullfire-Blade.jpg")
-        Me.ImageList1.Images.SetKeyName(303, "HoN-Nullfire-Blade2.jpg")
-        Me.ImageList1.Images.SetKeyName(304, "HoN-Doombringer.jpg")
-        Me.ImageList1.Images.SetKeyName(305, "HoN-Dust-Of-Revelation.jpg")
-        Me.ImageList1.Images.SetKeyName(306, "HoN-Dancing_Blade.jpg")
-        Me.ImageList1.Images.SetKeyName(307, "HoN-Pickled-Brain.jpg")
-        Me.ImageList1.Images.SetKeyName(308, "HoN-Stormspirit.jpg")
-        Me.ImageList1.Images.SetKeyName(309, "HoN-Frostwolfs-Skull.jpg")
-        Me.ImageList1.Images.SetKeyName(310, "HoN-Winged-Courier.jpg")
-        Me.ImageList1.Images.SetKeyName(311, "HoN-Tablet-of-Command.jpg")
-        Me.ImageList1.Images.SetKeyName(312, "HoN-Crushing-Claws.jpg")
-        Me.ImageList1.Images.SetKeyName(313, "HoN-Bound-Eye.jpg")
-        Me.ImageList1.Images.SetKeyName(314, "HoN-Void-Talisman.jpg")
-        Me.ImageList1.Images.SetKeyName(315, "HoN-Gloves-of-the-Swift.jpg")
-        Me.ImageList1.Images.SetKeyName(316, "HoN-Alchemist-Bones.jpg")
-        Me.ImageList1.Images.SetKeyName(317, "HoN-Refreshing-Ornament.jpg")
-        Me.ImageList1.Images.SetKeyName(318, "HoN-Health-Potion.jpg")
-        Me.ImageList1.Images.SetKeyName(319, "HoN-Behemoths-Hearth.jpg")
-        Me.ImageList1.Images.SetKeyName(320, "HoN-Helm-Of-The-Victim.jpg")
-        Me.ImageList1.Images.SetKeyName(321, "HoN-Whispering-Helm.jpg")
-        Me.ImageList1.Images.SetKeyName(322, "HoN-Shamans-Headress.jpg")
-        Me.ImageList1.Images.SetKeyName(323, "HoN-Warpcleft.jpg")
-        Me.ImageList1.Images.SetKeyName(324, "HoN-Minor-Totem.jpg")
-        Me.ImageList1.Images.SetKeyName(325, "HoN-Halberd.jpg")
-        Me.ImageList1.Images.SetKeyName(326, "HoN-Null-Stone.jpg")
-        Me.ImageList1.Images.SetKeyName(327, "HoN-Thunderclaw.jpg")
-        Me.ImageList1.Images.SetKeyName(328, "HoN-Mana-Battery.jpg")
-        Me.ImageList1.Images.SetKeyName(329, "HoN-Power-Supply.jpg")
-        Me.ImageList1.Images.SetKeyName(330, "HoN-Geometers-Bane.jpg")
-        Me.ImageList1.Images.SetKeyName(331, "HoN-Mark-Of-The-Novice.jpg")
-        Me.ImageList1.Images.SetKeyName(332, "HoN-Elder-Parasite.jpg")
-        Me.ImageList1.Images.SetKeyName(333, "HoN-Astrolabe.jpg")
-        Me.ImageList1.Images.SetKeyName(334, "HoN-Warhammer.jpg")
-        Me.ImageList1.Images.SetKeyName(335, "HoN-Charged-Hammer.jpg")
-        Me.ImageList1.Images.SetKeyName(336, "HoN-Savage-Mace.jpg")
-        Me.ImageList1.Images.SetKeyName(337, "HoN-Hungry-Spirit.jpg")
-        Me.ImageList1.Images.SetKeyName(338, "HoN-Acolytes-Staff.jpg")
-        Me.ImageList1.Images.SetKeyName(339, "HoN-Puzzlebox.jpg")
-        Me.ImageList1.Images.SetKeyName(340, "HoN-Puzzlebox2.jpg")
-        Me.ImageList1.Images.SetKeyName(341, "HoN-Puzzlebox3.jpg")
-        Me.ImageList1.Images.SetKeyName(342, "HoN-Talisman-Of-Exile.jpg")
-        Me.ImageList1.Images.SetKeyName(343, "HoN-Great-Arcana.jpg")
-        Me.ImageList1.Images.SetKeyName(344, "HoN-Wards-of-Sight.jpg")
-        Me.ImageList1.Images.SetKeyName(345, "HoN-Mighty-Blade.jpg")
-        Me.ImageList1.Images.SetKeyName(346, "HoN-Hellflower.jpg")
-        Me.ImageList1.Images.SetKeyName(347, "HoN-Sustainer.jpg")
-        Me.ImageList1.Images.SetKeyName(348, "HoN-Enhanced-Marchers.jpg")
-        Me.ImageList1.Images.SetKeyName(349, "HoN-Barrier-Idol.jpg")
-        Me.ImageList1.Images.SetKeyName(350, "HoN-Platemail.jpg")
-        Me.ImageList1.Images.SetKeyName(351, "HoN-Glowstone.jpg")
-        Me.ImageList1.Images.SetKeyName(352, "HoN-Iron-Shield.jpg")
-        Me.ImageList1.Images.SetKeyName(353, "HoN-Steamboots-Strength.jpg")
-        Me.ImageList1.Images.SetKeyName(354, "HoN-Steamstaff.jpg")
-        Me.ImageList1.Images.SetKeyName(355, "HoN-Loggers-Hatchet.jpg")
-        Me.ImageList1.Images.SetKeyName(356, "HoN-Mock-of-Brilliance.jpg")
-        Me.ImageList1.Images.SetKeyName(357, "HoN-Axe-Of-The-Malphai.jpg")
-        Me.ImageList1.Images.SetKeyName(358, "HoN-Restoration-Stone.jpg")
-        Me.ImageList1.Images.SetKeyName(359, "HoN-Ring-Of-The-Teacher.jpg")
-        Me.ImageList1.Images.SetKeyName(360, "HoN-Lifetube.jpg")
-        Me.ImageList1.Images.SetKeyName(361, "HoN-Guardian-Ring.jpg")
-        Me.ImageList1.Images.SetKeyName(362, "HoN-Trinket-Of-Restoration.jpg")
-        Me.ImageList1.Images.SetKeyName(363, "HoN-Apprentices-Robe.jpg")
-        Me.ImageList1.Images.SetKeyName(364, "HoN-Sword-Of-The-High.jpg")
-        Me.ImageList1.Images.SetKeyName(365, "HoN-Scarab.jpg")
-        Me.ImageList1.Images.SetKeyName(366, "HoN-Icebrand.jpg")
-        Me.ImageList1.Images.SetKeyName(367, "HoN-Frostburn.jpg")
-        Me.ImageList1.Images.SetKeyName(368, "HoN-Symbol-Of-Rage.jpg")
-        Me.ImageList1.Images.SetKeyName(369, "HoN-Kuldras-Sheepstick.jpg")
-        Me.ImageList1.Images.SetKeyName(370, "HoN-Wards-of-Revelation.jpg")
-        Me.ImageList1.Images.SetKeyName(371, "HoN-Shroud-Of-The-Assasin.jpg")
-        Me.ImageList1.Images.SetKeyName(372, "HoN-Frostfield-Plate.jpg")
-        Me.ImageList1.Images.SetKeyName(373, "HoN-Brutalizer.jpg")
-        Me.ImageList1.Images.SetKeyName(374, "HoN-Duck-Boots.jpg")
-        Me.ImageList1.Images.SetKeyName(375, "HoN-Icon-Of-The-Goddess.jpg")
-        Me.ImageList1.Images.SetKeyName(376, "HoN-Blood-Chalice.jpg")
-        Me.ImageList1.Images.SetKeyName(377, "HoN-Neophytes-Book.jpg")
-        Me.ImageList1.Images.SetKeyName(378, "HoN-Iron-Buckler.jpg")
-        Me.ImageList1.Images.SetKeyName(379, "HoN-Snake-Bracelet.jpg")
-        Me.ImageList1.Images.SetKeyName(380, "HoN-Runes-Of-The-Blight.jpg")
-        Me.ImageList1.Images.SetKeyName(381, "HoN-Homecoming-Stone.jpg")
-        Me.ImageList1.Images.SetKeyName(382, "HoN-Striders.jpg")
-        Me.ImageList1.Images.SetKeyName(383, "HoN-Blessed-Orb.jpg")
-        Me.ImageList1.Images.SetKeyName(384, "HoN-Helm-Of-The-Black-Legion.jpg")
-        Me.ImageList1.Images.SetKeyName(385, "HoN-Beastheart.jpg")
-        Me.ImageList1.Images.SetKeyName(386, "HoN-Abyssal-Skull.jpg")
-        Me.ImageList1.Images.SetKeyName(387, "HoN-Manatube.jpg")
-        Me.ImageList1.Images.SetKeyName(388, "HoN-Soulscream-Ring.jpg")
-        Me.ImageList1.Images.SetKeyName(389, "HoN-Firebrand.jpg")
         '
         'ButtonDefaultItembuild
         '
@@ -1387,8 +1149,6 @@ Partial Class FormMain
         '
         Me.TabPage5.Controls.Add(Me.Label10)
         Me.TabPage5.Controls.Add(Me.ComboBoxClient)
-        Me.TabPage5.Controls.Add(Me.ComboBoxItemIcons)
-        Me.TabPage5.Controls.Add(Me.Label49)
         Me.TabPage5.Controls.Add(Me.CheckBox1)
         Me.TabPage5.Controls.Add(Me.ButtonOpenBackupFolder)
         Me.TabPage5.Controls.Add(Me.Label9)
@@ -1424,26 +1184,6 @@ Partial Class FormMain
         Me.ComboBoxClient.Name = "ComboBoxClient"
         Me.ComboBoxClient.Size = New System.Drawing.Size(121, 21)
         Me.ComboBoxClient.TabIndex = 349
-        '
-        'ComboBoxItemIcons
-        '
-        Me.ComboBoxItemIcons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBoxItemIcons.FormattingEnabled = True
-        Me.ComboBoxItemIcons.Items.AddRange(New Object() {"DotA 2", "DotA 1", "HoN"})
-        Me.ComboBoxItemIcons.Location = New System.Drawing.Point(24, 441)
-        Me.ComboBoxItemIcons.Name = "ComboBoxItemIcons"
-        Me.ComboBoxItemIcons.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBoxItemIcons.TabIndex = 348
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(21, 423)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(73, 15)
-        Me.Label49.TabIndex = 347
-        Me.Label49.Text = "Item Icons"
         '
         'CheckBox1
         '
@@ -1563,6 +1303,10 @@ Partial Class FormMain
         'Timer2
         '
         Me.Timer2.Interval = 50
+        '
+        'Timer3
+        '
+        Me.Timer3.Interval = 50
         '
         'FormMain
         '
@@ -1708,8 +1452,6 @@ Partial Class FormMain
     Friend WithEvents Item38 As System.Windows.Forms.PictureBox
     Friend WithEvents Item37 As System.Windows.Forms.PictureBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents ComboBoxItemIcons As System.Windows.Forms.ComboBox
-    Friend WithEvents Label49 As System.Windows.Forms.Label
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents ButtonDefaultItembuild As System.Windows.Forms.Button
     Friend WithEvents Label10 As System.Windows.Forms.Label
@@ -1730,4 +1472,7 @@ Partial Class FormMain
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Timer3 As System.Windows.Forms.Timer
 End Class
