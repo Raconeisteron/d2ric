@@ -1831,7 +1831,7 @@
                 Return 150
             Case "Arcane Boots"
                 Return 1500
-            Case "Armlet of Mordiggian"
+            Case "Armlet"
                 Return 2600
             Case "Assault Cuirass"
                 Return 5350
