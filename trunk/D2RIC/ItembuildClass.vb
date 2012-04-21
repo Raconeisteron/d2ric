@@ -784,8 +784,6 @@
                 hero = "Nerubian Assassin"
             Case hero Like "npc_dota_hero_?gre_?agi"
                 hero = "Ogre Magi"
-            Case hero Like "npc_dota_hero_?andaren_?rewmaster"
-                hero = "Pandaren Brewmaster"
             Case hero Like "npc_dota_hero_?hantom_?ancer"
                 hero = "Phantom Lancer"
             Case hero Like "npc_dota_hero_?hoenix"
@@ -891,8 +889,6 @@
                 Selected_Hero = "nerubian_assassin"
             Case "Ogre Magi"
                 Selected_Hero = "ogre_magi"
-            Case "Pandaren Brewmaster"
-                Selected_Hero = "pandaren_brewmaster"
             Case "Phantom Lancer"
                 Selected_Hero = "phantom_lancer"
             Case "Pit Lord"
@@ -932,6 +928,7 @@
             lb.Items.Add("Beastmaster")
             lb.Items.Add("Bloodseeker")
             lb.Items.Add("Bounty Hunter")
+            lb.Items.Add("Brewmaster")
             lb.Items.Add("Bristleback")
             lb.Items.Add("Broodmother")
             lb.Items.Add("Centaur Warchief")
@@ -987,7 +984,6 @@
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Omniknight")
             lb.Items.Add("Outworld Destroyer")
-            lb.Items.Add("Pandaren Brewmaster")
             lb.Items.Add("Phantom Lancer")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Pit Lord")
@@ -1182,12 +1178,12 @@
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
             lb.Items.Add("Axe")
+            lb.Items.Add("Brewmaster")
             lb.Items.Add("Clockwerk")
             lb.Items.Add("Earthshaker")
             lb.Items.Add("Enigma")
             lb.Items.Add("Magnataur")
             lb.Items.Add("Naga Siren")
-            lb.Items.Add("Pandaren Brewmaster")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Puck")
             lb.Items.Add("Pudge")
@@ -1237,13 +1233,13 @@
             For i = lb.Items.Count - 1 To 0 Step -1
                 lb.Items.Remove(lb.Items(i).ToString)
             Next
+            lb.Items.Add("Brewmaster")
             lb.Items.Add("Centaur Warchief")
             lb.Items.Add("Death Prophet")
             lb.Items.Add("Dirge")
             lb.Items.Add("Goblin Shredder")
             lb.Items.Add("Guardian Wisp")
             lb.Items.Add("Legion Commander")
-            lb.Items.Add("Pandaren Brewmaster")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Skeleton King")
             lb.Items.Add("Visage")
@@ -1256,6 +1252,7 @@
             lb.Items.Add("Alchemist")
             lb.Items.Add("Axe")
             lb.Items.Add("Beastmaster")
+            lb.Items.Add("Brewmaster")
             lb.Items.Add("Bristleback")
             lb.Items.Add("Centaur Warchief")
             lb.Items.Add("Chaos Knight")
@@ -1274,7 +1271,6 @@
             lb.Items.Add("Magnataur")
             lb.Items.Add("Night Stalker")
             lb.Items.Add("Omniknight")
-            lb.Items.Add("Pandaren Brewmaster")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Pit Lord")
             lb.Items.Add("Pudge")
@@ -1394,7 +1390,6 @@
             .Items.Remove("Naga Siren")
             .Items.Remove("Nerubian Assassin")
             .Items.Remove("Ogre Magi")
-            .Items.Remove("Pandaren Brewmaster")
             .Items.Remove("Phantom Lancer")
             .Items.Remove("Phoenix")
             .Items.Remove("Pit Lord")
