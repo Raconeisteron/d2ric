@@ -422,7 +422,7 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(1, "40px-Aghanim's_Scepter.png")
         Me.ImageList1.Images.SetKeyName(2, "40px-Animal_Courier.png")
         Me.ImageList1.Images.SetKeyName(3, "40px-Arcane_Boots.png")
-        Me.ImageList1.Images.SetKeyName(4, "40px-Armlet.png")
+        Me.ImageList1.Images.SetKeyName(4, "40px-Armlet_of_Mordiggian.png")
         Me.ImageList1.Images.SetKeyName(5, "40px-Assault_Cuirass.png")
         Me.ImageList1.Images.SetKeyName(6, "40px-Battle_Fury.png")
         Me.ImageList1.Images.SetKeyName(7, "40px-Belt_of_Strength.png")

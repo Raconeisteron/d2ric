@@ -778,10 +778,10 @@ Public Class FormMain
         ElseIf doImagesMatch(item_name, ImageList1.Images(6)) Then
             new_item_name = """" & "item_bfury" & """"
             Return new_item_name
-        ElseIf doImagesMatch(item_name, ImageList1.Images(7)) Then
+        ElseIf doImagesMatch(item_name, ImageList1.Images(8)) Then
             new_item_name = """" & "item_black_king_bar" & """"
             Return new_item_name
-        ElseIf doImagesMatch(item_name, ImageList1.Images(8)) Then
+        ElseIf doImagesMatch(item_name, ImageList1.Images(7)) Then
             new_item_name = """" & "item_belt_of_strength" & """"
             Return new_item_name
         ElseIf doImagesMatch(item_name, ImageList1.Images(9)) Then
