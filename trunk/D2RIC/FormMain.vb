@@ -80,7 +80,7 @@ Public Class FormMain
         End If
     End Sub
 
-    Public Sub Check4Update()
+    Private Sub Check4Update()
         Dim pgversion As String = Application.ProductVersion
         If pgversion.Substring(pgversion.Length - 1) = "0" Then
             pgversion = pgversion.Substring(0, pgversion.Length - 2)
@@ -186,7 +186,7 @@ Public Class FormMain
     End Sub
 
     'Source: http://dotnet-snippets.de/dns/bild-transparent-machen-mit-colormatrix-SID168.aspx
-    Public Function SetImageAlpha(ByVal Image As Image, ByVal Alpha As Single) As Image
+    Private Function SetImageAlpha(ByVal Image As Image, ByVal Alpha As Single) As Image
         Dim ImgAttr As New Imaging.ImageAttributes()
 
         'Standard-ColorMatrix für Transparenz
