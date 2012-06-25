@@ -77,6 +77,9 @@ Public Class FormMain
             Else
                 ComboBoxClient.Text = "Beta Client"
             End If
+        ElseIf TabControl1.SelectedTab Is TabPage3 Then
+            'Focus on TextBox2
+            TextBox2.Select()
         End If
     End Sub
 
@@ -3275,4 +3278,11 @@ Public Class FormMain
         End If
     End Sub
 
+    'Allow ctrl+a to select all text in this textbox
+    Private Sub TextBox2_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
+        If (e.KeyChar = vb.Chr(1)) Then
+            TextBox2.SelectAll()
+            e.Handled = True
+        End If
+    End Sub
 End Class
