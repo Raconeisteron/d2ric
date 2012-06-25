@@ -1,4 +1,4 @@
-﻿Imports System.Security.Cryptography, System.Net
+﻿Imports System.Security.Cryptography, System.Net, vb = Microsoft.VisualBasic
 
 Public Class FormMain
     Dim FirstChange As Boolean = True
