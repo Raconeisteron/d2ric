@@ -1,7 +1,9 @@
-﻿Public Class ItembuildClass
+﻿'This class contains all methods you need on the itembuild page
+Public Class ItembuildClass
     Public NeuerText As String
     Public Shared Selected_Hero As String
 
+    'Initialize the Itembuild tab
     Public Sub Initialize()
         'ALLOW TO DROP SOMETHING IN THE PICTUREBOX
         FormMain.Item1.AllowDrop = True
@@ -96,13 +98,14 @@
         ClearNotImplemented()
     End Sub
 
+    'Intitialize the Listbox with all items
     Public Sub InitializeListbox()
         'Listview füllen
         With FormMain.ListView1
             .Clear()
             ' Add column headers so the subitems will appear.
             .Columns.AddRange(New ColumnHeader() {New ColumnHeader(), New ColumnHeader()})
-            ' Create items and add them to myListView.
+            ' Create items and add them to ListView.
             Dim item0 As New ListViewItem(New String() {"Abyssal Blade", "Weapons", "PLACEHOLDER"}, 0)
             Dim item1 As New ListViewItem(New String() {"Aghanim's Scepter", "Caster", "PLACEHOLDER"}, 1)
             Dim item2 As New ListViewItem(New String() {"Animal Courier", "Consumables", "PLACEHOLDER"}, 2)
@@ -239,7 +242,7 @@
             Dim item133 As New ListViewItem(New String() {"Yasha", "Artifacts", "PLACEHOLDER"}, 133)
             .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133})
 
-            'Listview Tooltips hinzufügen
+            'Add Tooltips to Listview
             .Items(0).ToolTipText = "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)"
             .Items(1).ToolTipText = "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)"
             .Items(2).ToolTipText = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
@@ -377,7 +380,8 @@
         End With
     End Sub
 
-    Public Sub ClearSingle()
+    'Reset the Itembuild tab
+    Public Sub Clear()
         FormMain.TextBox1.Text = ""
         FormMain.Label1.Text = ""
         FormMain.Label15.Text = "0"
@@ -394,6 +398,7 @@
         Next
     End Sub
 
+    'Save the itembuild and change the author
     Public Sub Save()
         If (Selected_Hero <> "") Then
             SaveChanges()
@@ -406,6 +411,7 @@
         End If
     End Sub
 
+    'Load an itembuild out of an itembuild file
     Public Sub CheckFile(ByVal hero As String)
         If IO.File.Exists(My.Settings.path + "\default_" + hero + ".txt") Then
             Dim DeinPfad As String = My.Settings.path + "\default_" + hero + ".txt"
@@ -448,12 +454,13 @@
             Next
             FormMain.ButtonSave.Enabled = True
         Else
-            ClearSingle()
+            Clear()
             FormMain.ButtonSave.Enabled = False
             MessageBox.Show("Error! Hero maybe not implemented yet.")
         End If
     End Sub
 
+    'Load the default itembuild, if it exists
     Public Sub LoadDefault()
         If IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
             Dim DeinPfad As String = My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt"
@@ -499,6 +506,7 @@
         End If
     End Sub
 
+    'Change the author of the itembuild file
     Public Sub ChangeAuthor(ByVal author As String, ByVal hero As String)
         IO.File.WriteAllText(My.Settings.path + "\temp.txt", NeuerText)
         If IO.File.Exists(My.Settings.path + "\temp.txt") Then
@@ -520,6 +528,7 @@
         End If
     End Sub
 
+    'Save the itembuild of the selected hero in the variable 'NeuerText' and create a backup if it doesn't exists
     Public Sub SaveChanges()
         If Not IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
             If Not IO.Directory.Exists(My.Settings.path & "\Backup") Then
@@ -599,6 +608,7 @@
         End If
     End Sub
 
+    'Return the real hero name as string out of the name in the itembuild file
     Public Function renameHero(ByVal hero) As String
         hero = hero.ToLower
         Select Case True
@@ -815,6 +825,7 @@
         Return hero
     End Function
 
+    'Return the hero name as string which is written in the itembuild file
     Public Function CheckHero(ByVal hero As String) As String
         Select Case hero
             Case "Ancient Apparition"
@@ -914,6 +925,7 @@
         Return Selected_Hero
     End Function
 
+    'Change the list of heros to a selection like all carrys or all agi heros
     Public Sub ChangeHeroList(ByVal cb As Object, ByVal lb As Object)
         Dim i As Integer
         If cb.SelectedItem = "All" Then
@@ -1372,6 +1384,7 @@
         End If
     End Sub
 
+    'Delete all heros which are without an itembuild by valve
     Public Sub ClearNotImplemented()
         With FormMain.ListBox1
             .Items.Remove("Abaddon")
@@ -1397,6 +1410,7 @@
         End With
     End Sub
 
+    'Return the tooltip of each item
     Public Function GetToolTip(ByVal item_name As String) As String
         Dim tooltip As String
         Select Case item_name
@@ -1808,6 +1822,7 @@
         End Select
     End Function
 
+    'Return the price of each item
     Public Function GetPrice(ByVal itemname As String) As Integer
         Select Case itemname
             Case "Abyssal Blade"

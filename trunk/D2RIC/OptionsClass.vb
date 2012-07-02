@@ -1,6 +1,8 @@
-﻿Public Class OptionsClass
+﻿'This class contains all methods you need on the options page
+Public Class OptionsClass
     Friend WithEvents Itembuild As New ItembuildClass
 
+    'Change the path where steam is installed on
     Public Sub ChangeSteamPath()
         Using FolderBrowserDialog1 As FolderBrowserDialog = New FolderBrowserDialog
             If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
@@ -28,6 +30,7 @@
         End Using
     End Sub
 
+    'Change the client (ex. beta client or text client)
     Public Sub ChangeClient()
         Dim steam_path, path As String
         steam_path = FormMain.TextBox4.Text
@@ -44,7 +47,7 @@
             My.Settings.client = FormMain.ComboBoxClient.Text
             My.Settings.path = path
             My.Settings.Save()
-            Itembuild.ClearSingle()
+            Itembuild.Clear()
             FormMain.ListBox1.ClearSelected()
         Else
             ' existiert nicht
@@ -53,13 +56,15 @@
         End If
     End Sub
 
-    Private Function cut_file(ByVal file As String) As String ' Funktion zum Entfernen der Backslashs / Ordner
+    'Delete the backslash of a file path
+    Private Function cut_file(ByVal file As String) As String
         While file.Contains("\")
             file = file.Remove(0, 1)
         End While
         Return file
     End Function
 
+    'Create new backups with a timestring in name
     Public Sub Backup()
         If Not IO.Directory.Exists(My.Settings.path & "\Backup") Then
             ' Nein! Jetzt erstellen...
@@ -72,26 +77,26 @@
             End Try
         End If
         If IO.Directory.Exists(My.Settings.path & "\Backup") Then
-            For Each file As String In IO.Directory.GetFiles(My.Settings.path) ' Ermittelt alle Dateien des Ordners
-                IO.File.Copy(file, My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "_" & Replace(cut_file(file), "default_", ""), True)  ' Kopiert die Dateien
+            For Each file As String In IO.Directory.GetFiles(My.Settings.path) ' Get all files in the folder
+                IO.File.Copy(file, My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "_" & Replace(cut_file(file), "default_", ""), True)  ' Copy the files
             Next
         End If
     End Sub
 
+    'Delete all backups
     Public Sub DeleteBackup()
         If MessageBox.Show("Delete backups?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             If IO.Directory.Exists(My.Settings.path & "\Backup") Then
-                For Each file As String In IO.Directory.GetFiles(My.Settings.path & "\Backup") ' Ermittelt alle Dateien des Ordners
+                For Each file As String In IO.Directory.GetFiles(My.Settings.path & "\Backup") ' Get all files in the folder
                     If Not file.Contains("default") Then
-                        IO.File.Delete(file)  ' Löscht die Dateien
+                        IO.File.Delete(file)  ' Delete the files
                     End If
                 Next
             End If
-        Else
-            'code wenn man auf nein drückt
         End If
     End Sub
 
+    'Open the backup folder, if it exists
     Public Sub OpenBackup()
         If IO.Directory.Exists(My.Settings.path & "\Backup") Then
             System.Diagnostics.Process.Start("explorer", My.Settings.path + "\Backup")

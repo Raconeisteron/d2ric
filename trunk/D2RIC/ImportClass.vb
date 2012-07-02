@@ -1,6 +1,8 @@
-﻿Public Class ImportClass
+﻿'This class contains all methods you need on the import page
+Public Class ImportClass
     Friend WithEvents Itembuild As New ItembuildClass
 
+    'Import the itembuild out of textbox2 and switch to the itembuild tab
     Public Sub Import()
         If FormMain.TextBox2.Text <> "" Then
             IO.File.WriteAllText(My.Settings.path + "\temp.txt", FormMain.TextBox2.Text)
@@ -9,7 +11,7 @@
                 Dim ItemPlace As String = "Starting Items"
                 Dim i As Integer = 1
                 Dim pb As Object
-                Itembuild.ClearSingle()
+                Itembuild.Clear()
                 FormMain.ListBox1.SelectedItems.Clear()
                 ItembuildClass.Selected_Hero = ""
                 For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
@@ -52,6 +54,7 @@
         End If
     End Sub
 
+    'Open a textfile and write to textbox2
     Public Sub OpenFile()
         Using OpenFileDialog1 As OpenFileDialog = New OpenFileDialog
             OpenFileDialog1.Filter = "txt(*.txt)| *.txt"

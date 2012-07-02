@@ -1,5 +1,7 @@
-﻿Public Class ExportClass
+﻿'This class contains all methods you need on the export page
+Public Class ExportClass
 
+    'Save the text to the clipboard
     Public Sub CopyToClipboard()
         Clipboard.Clear()
         If FormMain.TextBox3.Text <> "" Then
@@ -7,6 +9,7 @@
         End If
     End Sub
 
+    'Save the text to an textfile
     Public Sub SavingToTextfile()
         Using SaveFileDialog1 As SaveFileDialog = New SaveFileDialog
             SaveFileDialog1.Filter = "txt(*.txt)| *.txt"
