@@ -37,7 +37,7 @@ Public Class FormMain
             If MessageBox.Show("You have unsaved changes!" + vbNewLine + "Do you want to continue?", "Unsaved changes", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 If ListBox1.SelectedItem <> "" Then
                     Itembuild.CheckHero(ListBox1.SelectedItem.ToString)
-                    Itembuild.ClearSingle()
+                    Itembuild.Clear()
                     Label1.Text = ListBox1.SelectedItem.ToString
                     Itembuild.CheckFile(ItembuildClass.Selected_Hero)
                     Unsaved = False
@@ -46,7 +46,7 @@ Public Class FormMain
         Else
             If ListBox1.SelectedItem <> "" Then
                 Itembuild.CheckHero(ListBox1.SelectedItem.ToString)
-                Itembuild.ClearSingle()
+                Itembuild.Clear()
                 Label1.Text = ListBox1.SelectedItem.ToString
                 Itembuild.CheckFile(ItembuildClass.Selected_Hero)
             End If
