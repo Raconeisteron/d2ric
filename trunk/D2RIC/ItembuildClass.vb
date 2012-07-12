@@ -1,6 +1,6 @@
 ﻿'This class contains all methods you need on the itembuild page
 Public Class ItembuildClass
-    Public NeuerText As String
+    Public NewText As String
     Public Shared Selected_Hero As String
 
     'Initialize the Itembuild tab
@@ -388,7 +388,7 @@ Public Class ItembuildClass
         FormMain.Label16.Text = "0"
         FormMain.Label18.Text = "0"
         FormMain.Label20.Text = "0"
-        NeuerText = ""
+        NewText = ""
         Dim pb As Object
         Dim picbox As Integer = 1
         For picbox = 1 To 39
@@ -405,7 +405,7 @@ Public Class ItembuildClass
             If FormMain.TextBox1.Text <> "" Then
                 ChangeAuthor(FormMain.TextBox1.Text, Selected_Hero)
             End If
-            IO.File.WriteAllText(My.Settings.path + "\default_" + Selected_Hero + ".txt", NeuerText)
+            IO.File.WriteAllText(My.Settings.path + "\default_" + Selected_Hero + ".txt", NewText)
         Else
             MessageBox.Show("Please choose a hero first.")
         End If
@@ -432,24 +432,24 @@ Public Class ItembuildClass
                     ItemPlace = "Early Game"
                     i = 10
                     price = FormMain.Label16
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Core_Items") Then
                     ItemPlace = "Core Items"
                     i = 19
                     price = FormMain.Label18
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Luxury") Then
                     ItemPlace = "Luxury"
                     i = 28
                     price = FormMain.Label20
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 Else
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 End If
             Next
             FormMain.ButtonSave.Enabled = True
@@ -482,22 +482,22 @@ Public Class ItembuildClass
                 ElseIf Zeile.Contains("Early_Game") Then
                     ItemPlace = "Early Game"
                     i = 10
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Core_Items") Then
                     ItemPlace = "Core Items"
                     i = 19
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Luxury") Then
                     ItemPlace = "Luxury"
                     i = 28
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 Else
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 End If
             Next
             FormMain.ButtonSave.Enabled = True
@@ -508,18 +508,18 @@ Public Class ItembuildClass
 
     'Change the author of the itembuild file
     Public Sub ChangeAuthor(ByVal author As String, ByVal hero As String)
-        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NeuerText)
+        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NewText)
         If IO.File.Exists(My.Settings.path + "\temp.txt") Then
-            NeuerText = ""
+            NewText = ""
             Dim DeinPfad As String = My.Settings.path + "\temp.txt"
             Dim i As Integer = 1
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                 If Zeile.Contains("author") Then
-                    NeuerText &= vbTab & """author""" & vbTab & vbTab & """" & author & """" & vbNewLine
+                    NewText &= vbTab & """author""" & vbTab & vbTab & """" & author & """" & vbNewLine
                 ElseIf Zeile.Contains("hero") Then
-                    NeuerText &= vbTab & """hero""" & vbTab & vbTab & vbTab & """npc_dota_hero_" & hero & """" & vbNewLine
+                    NewText &= vbTab & """hero""" & vbTab & vbTab & vbTab & """npc_dota_hero_" & hero & """" & vbNewLine
                 Else
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 End If
             Next
             IO.File.Delete(My.Settings.path + "\temp.txt")
@@ -528,7 +528,7 @@ Public Class ItembuildClass
         End If
     End Sub
 
-    'Save the itembuild of the selected hero in the variable 'NeuerText' and create a backup if it doesn't exists
+    'Save the itembuild of the selected hero in the variable 'NewText' and create a backup if it doesn't exists
     Public Sub SaveChanges()
         If Not IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
             If Not IO.Directory.Exists(My.Settings.path & "\Backup") Then
@@ -550,16 +550,16 @@ Public Class ItembuildClass
             End Try
         End If
 
-        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NeuerText)
+        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NewText)
         If IO.File.Exists(My.Settings.path + "\temp.txt") Then
-            NeuerText = ""
+            NewText = ""
             Dim DeinPfad As String = My.Settings.path + "\temp.txt"
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                 If Zeile.Contains("DOTA_Item_Build_Starting_Items") Then
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                     Exit For
                 Else
-                    NeuerText &= Zeile & vbNewLine
+                    NewText &= Zeile & vbNewLine
                 End If
             Next
             IO.File.Delete(My.Settings.path + "\temp.txt")
@@ -586,22 +586,22 @@ Public Class ItembuildClass
                 End If
             Next
 
-            NeuerText &= vbTab & vbTab & "{"
+            NewText &= vbTab & vbTab & "{"
             ' Start Items hinzufügen
-            NeuerText &= StartingItems & vbNewLine
-            NeuerText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
-            NeuerText &= vbTab & vbTab & """#DOTA_Item_Build_Early_Game""" & vbNewLine & vbTab & vbTab & "{"
+            NewText &= StartingItems & vbNewLine
+            NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            NewText &= vbTab & vbTab & """#DOTA_Item_Build_Early_Game""" & vbNewLine & vbTab & vbTab & "{"
             ' Early Items hinzufügen
-            NeuerText &= vbTab & vbTab & Earlygame & vbNewLine
-            NeuerText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
-            NeuerText &= vbTab & vbTab & """#DOTA_Item_Build_Core_Items""" & vbNewLine & vbTab & vbTab & "{"
+            NewText &= vbTab & vbTab & Earlygame & vbNewLine
+            NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            NewText &= vbTab & vbTab & """#DOTA_Item_Build_Core_Items""" & vbNewLine & vbTab & vbTab & "{"
             ' Core Items hinzufügen
-            NeuerText &= vbTab & vbTab & CoreItems & vbNewLine
-            NeuerText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
-            NeuerText &= vbTab & vbTab & """#DOTA_Item_Build_Luxury""" & vbNewLine & vbTab & vbTab & "{"
+            NewText &= vbTab & vbTab & CoreItems & vbNewLine
+            NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            NewText &= vbTab & vbTab & """#DOTA_Item_Build_Luxury""" & vbNewLine & vbTab & vbTab & "{"
             ' Luxury Items hinzufügen
-            NeuerText &= vbTab & vbTab & Luxury & vbNewLine
-            NeuerText &= vbTab & vbTab & "}" & vbNewLine & vbTab & "}" & vbNewLine & "}"
+            NewText &= vbTab & vbTab & Luxury & vbNewLine
+            NewText &= vbTab & vbTab & "}" & vbNewLine & vbTab & "}" & vbNewLine & "}"
 
         Else
             MessageBox.Show("Error!")
@@ -782,6 +782,12 @@ Public Class ItembuildClass
                 hero = "Zeus"
             Case hero Like "npc_dota_hero_wisp"
                 hero = "Guardian Wisp"
+            Case hero Like "npc_dota_hero_disruptor"
+                hero = "Disruptor"
+            Case hero Like "npc_dota_hero_luna"
+                hero = "Luna"
+            Case hero Like "npc_dota_hero_rubick"
+                hero = "Rubick"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case hero Like "npc_dota_hero_abaddon"
                 hero = "Abaddon"
@@ -789,12 +795,8 @@ Public Class ItembuildClass
                 hero = "Bristleback"
             Case hero Like "npc_dota_hero_centaur_warchief"
                 hero = "Centaur Warchief"
-            Case hero Like "npc_dota_hero_disruptor"
-                hero = "Disruptor"
             Case hero Like "npc_dota_hero_goblin_techies"
                 hero = "Goblin Techies"
-            Case hero Like "npc_dota_hero_luna"
-                hero = "Luna"
             Case hero Like "npc_dota_hero_magnataur"
                 hero = "Magnataur"
             Case hero Like "npc_dota_hero_medusa"
@@ -805,8 +807,6 @@ Public Class ItembuildClass
                 hero = "Phoenix"
             Case hero Like "npc_dota_hero_pit_lord"
                 hero = "Pit Lord"
-            Case hero Like "npc_dota_hero_rubick"
-                hero = "Rubick"
             Case hero Like "npc_dota_hero_slark"
                 hero = "Slark"
             Case hero Like "npc_dota_hero_soul_keeper"
@@ -1390,7 +1390,6 @@ Public Class ItembuildClass
             .Items.Remove("Abaddon")
             .Items.Remove("Bristleback")
             .Items.Remove("Centaur Warchief")
-            .Items.Remove("Disruptor")
             .Items.Remove("Ember Spirit")
             .Items.Remove("Goblin Shredder")
             .Items.Remove("Goblin Techies")
