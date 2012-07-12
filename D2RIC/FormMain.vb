@@ -59,7 +59,7 @@ Public Class FormMain
             If (ItembuildClass.Selected_Hero <> "") Then
                 Itembuild.SaveChanges()
                 Itembuild.ChangeAuthor(TextBox1.Text, ItembuildClass.Selected_Hero)
-                My.Settings.clipboard = Itembuild.NeuerText
+                My.Settings.clipboard = Itembuild.NewText
                 If (My.Settings.clipboard <> "") Then
                     TextBox3.Text = My.Settings.clipboard
                 Else

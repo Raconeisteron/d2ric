@@ -9,7 +9,7 @@ Public Class ExportClass
         End If
     End Sub
 
-    'Save the text to an textfile
+    'Save the text to a textfile
     Public Sub SavingToTextfile()
         Using SaveFileDialog1 As SaveFileDialog = New SaveFileDialog
             SaveFileDialog1.Filter = "txt(*.txt)| *.txt"
