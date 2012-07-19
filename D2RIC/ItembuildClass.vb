@@ -98,7 +98,7 @@ Public Class ItembuildClass
         ClearNotImplemented()
     End Sub
 
-    'Intitialize the Listbox with all items
+    'Intitialize the ListView with all items
     Public Sub InitializeListbox()
         'Listview füllen
         With FormMain.ListView1
@@ -385,9 +385,7 @@ Public Class ItembuildClass
         FormMain.TextBox1.Text = ""
         FormMain.Label1.Text = ""
         FormMain.Label15.Text = "0"
-        FormMain.Label16.Text = "0"
-        FormMain.Label18.Text = "0"
-        FormMain.Label20.Text = "0"
+        FormMain.IntPrice = 0
         NewText = ""
         Dim pb As Object
         Dim picbox As Integer = 1
@@ -419,29 +417,33 @@ Public Class ItembuildClass
             Dim i As Integer = 1
             Dim pb As Object
             Dim price As Object = FormMain.Label15
+            Dim savePrice As Boolean = True
             Dim int As Integer
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                 If Zeile.Contains("item_") And i <= 39 Then
                     pb = FormMain.TabPage1.Controls.Item("Item" & i)
                     pb.image = FormMain.ChangePicture(FormMain.RenameItem(Zeile))
                     FormMain.ToolTip1.SetToolTip(pb, GetToolTip(FormMain.RenameItem(Zeile)))
-                    int = (CInt(price.Text) + GetPrice(FormMain.RenameItem(Zeile)))
-                    price.Text = int.ToString
+                    If savePrice Then
+                        int = (CInt(price.Text) + GetPrice(FormMain.RenameItem(Zeile)))
+                        price.Text = int.ToString
+                        FormMain.CheckCosts(int)
+                    End If
                     i = i + 1
                 ElseIf Zeile.Contains("Early_Game") Then
                     ItemPlace = "Early Game"
                     i = 10
-                    price = FormMain.Label16
+                    savePrice = False
                     NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Core_Items") Then
                     ItemPlace = "Core Items"
                     i = 19
-                    price = FormMain.Label18
+                    savePrice = False
                     NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Luxury") Then
                     ItemPlace = "Luxury"
                     i = 28
-                    price = FormMain.Label20
+                    savePrice = False
                     NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
@@ -649,7 +651,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_death_prophet"
                 hero = "Death Prophet"
             Case hero Like "npc_dota_hero_undying"
-                hero = "Dirge"
+                hero = "Undying"
             Case hero Like "npc_dota_hero_doom_bringer"
                 hero = "Doom Bringer"
             Case hero Like "npc_dota_hero_dragon_knight"
@@ -679,7 +681,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_kunkka"
                 hero = "Kunkka"
             Case hero Like "npc_dota_hero_templar_assassin"
-                hero = "Lanaya"
+                hero = "Templar Assassin"
             Case hero Like "npc_dota_hero_leshrac"
                 hero = "Leshrac"
             Case hero Like "npc_dota_hero_lich"
@@ -701,13 +703,13 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_morphling"
                 hero = "Morphling"
             Case hero Like "npc_dota_hero_phantom_assassin"
-                hero = "Mortred"
+                hero = "Phantom Assassin"
             Case hero Like "npc_dota_hero_furion"
                 hero = "Nature's Prophet"
             Case hero Like "npc_dota_hero_necrolyte"
                 hero = "Necrolyte"
             Case hero Like "npc_dota_hero_nyx_assassin"
-                hero = "Nerubian Assassin"
+                hero = "Nyx Assassin"
             Case hero Like "npc_dota_hero_night_stalker"
                 hero = "Night Stalker"
             Case hero Like "npc_dota_hero_ogre_magi"
@@ -781,7 +783,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_zuus"
                 hero = "Zeus"
             Case hero Like "npc_dota_hero_wisp"
-                hero = "Guardian Wisp"
+                hero = "Wisp"
             Case hero Like "npc_dota_hero_disruptor"
                 hero = "Disruptor"
             Case hero Like "npc_dota_hero_luna"
@@ -844,8 +846,6 @@ Public Class ItembuildClass
                 Selected_Hero = "dark_seer"
             Case "Death Prophet"
                 Selected_Hero = "death_prophet"
-            Case "Dirge"
-                Selected_Hero = "undying"
             Case "Doom Bringer"
                 Selected_Hero = "doom_bringer"
             Case "Dragon Knight"
@@ -856,7 +856,7 @@ Public Class ItembuildClass
                 Selected_Hero = "faceless_void"
             Case "Keeper of the Light"
                 Selected_Hero = "keeper_of_the_light"
-            Case "Lanaya"
+            Case "Templar Assassin"
                 Selected_Hero = "templar_assassin"
             Case "Lifestealer"
                 Selected_Hero = "life_stealer"
@@ -864,9 +864,9 @@ Public Class ItembuildClass
                 Selected_Hero = "lone_druid"
             Case "Lycanthrope"
                 Selected_Hero = "lycan"
-            Case "Mortred"
+            Case "Phantom Assassin"
                 Selected_Hero = "phantom_assassin"
-            Case "Nerubian Assassin"
+            Case "Nyx Assassin"
                 Selected_Hero = "nyx_assassin"
             Case "Nature's Prophet"
                 Selected_Hero = "furion"
@@ -902,8 +902,6 @@ Public Class ItembuildClass
                 Selected_Hero = "witch_doctor"
             Case "Zeus"
                 Selected_Hero = "zuus"
-            Case "Guardian Wisp"
-                Selected_Hero = "wisp"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Centaur Warchief"
                 Selected_Hero = "centaur_warchief"
@@ -955,7 +953,7 @@ Public Class ItembuildClass
             lb.Items.Add("Dark Seer")
             lb.Items.Add("Dazzle")
             lb.Items.Add("Death Prophet")
-            lb.Items.Add("Dirge")
+            lb.Items.Add("Undying")
             lb.Items.Add("Disruptor")
             lb.Items.Add("Doom Bringer")
             lb.Items.Add("Dragon Knight")
@@ -967,7 +965,7 @@ Public Class ItembuildClass
             lb.Items.Add("Faceless Void")
             lb.Items.Add("Goblin Shredder")
             lb.Items.Add("Goblin Techies")
-            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Wisp")
             lb.Items.Add("Gyrocopter")
             lb.Items.Add("Huskar")
             lb.Items.Add("Invoker")
@@ -975,7 +973,7 @@ Public Class ItembuildClass
             lb.Items.Add("Juggernaut")
             lb.Items.Add("Keeper of the Light")
             lb.Items.Add("Kunkka")
-            lb.Items.Add("Lanaya")
+            lb.Items.Add("Templar Assassin")
             lb.Items.Add("Legion Commander")
             lb.Items.Add("Leshrac")
             lb.Items.Add("Lich")
@@ -990,11 +988,11 @@ Public Class ItembuildClass
             lb.Items.Add("Meepo")
             lb.Items.Add("Mirana")
             lb.Items.Add("Morphling")
-            lb.Items.Add("Mortred")
+            lb.Items.Add("Phantom Assassin")
             lb.Items.Add("Naga Siren")
             lb.Items.Add("Nature's Prophet")
             lb.Items.Add("Necrolyte")
-            lb.Items.Add("Nerubian Assassin")
+            lb.Items.Add("Nyx Assassin")
             lb.Items.Add("Night Stalker")
             lb.Items.Add("Ogre Magi")
             lb.Items.Add("Omniknight")
@@ -1058,13 +1056,13 @@ Public Class ItembuildClass
             lb.Items.Add("Ember Spirit")
             lb.Items.Add("Faceless Void")
             lb.Items.Add("Goblin Techies")
-            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Wisp")
             lb.Items.Add("Gyrocopter")
             lb.Items.Add("Huskar")
             lb.Items.Add("Invoker")
             lb.Items.Add("Juggernaut")
             lb.Items.Add("Kunkka")
-            lb.Items.Add("Lanaya")
+            lb.Items.Add("Templar Assassin")
             lb.Items.Add("Legion Commander")
             lb.Items.Add("Leshrac")
             lb.Items.Add("Lone Druid")
@@ -1074,7 +1072,7 @@ Public Class ItembuildClass
             lb.Items.Add("Meepo")
             lb.Items.Add("Mirana")
             lb.Items.Add("Morphling")
-            lb.Items.Add("Mortred")
+            lb.Items.Add("Phantom Assassin")
             lb.Items.Add("Necrolyte")
             lb.Items.Add("Night Stalker")
             lb.Items.Add("Outworld Destroyer")
@@ -1115,7 +1113,7 @@ Public Class ItembuildClass
             lb.Items.Add("Dazzle")
             lb.Items.Add("Disruptor")
             lb.Items.Add("Goblin Techies")
-            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Wisp")
             lb.Items.Add("Invoker")
             lb.Items.Add("Keeper of the Light")
             lb.Items.Add("Lich")
@@ -1143,18 +1141,18 @@ Public Class ItembuildClass
             lb.Items.Add("Bristleback")
             lb.Items.Add("Chaos Knight")
             lb.Items.Add("Clockwerk")
-            lb.Items.Add("Dirge")
+            lb.Items.Add("Undying")
             lb.Items.Add("Disruptor")
             lb.Items.Add("Doom Bringer")
             lb.Items.Add("Earthshaker")
             lb.Items.Add("Ember Spirit")
             lb.Items.Add("Goblin Shredder")
             lb.Items.Add("Goblin Techies")
-            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Wisp")
             lb.Items.Add("Invoker")
             lb.Items.Add("Jakiro")
             lb.Items.Add("Kunkka")
-            lb.Items.Add("Lanaya")
+            lb.Items.Add("Templar Assassin")
             lb.Items.Add("Legion Commander")
             lb.Items.Add("Lich")
             lb.Items.Add("Lifestealer")
@@ -1164,7 +1162,7 @@ Public Class ItembuildClass
             lb.Items.Add("Morphling")
             lb.Items.Add("Naga Siren")
             lb.Items.Add("Nature's Prophet")
-            lb.Items.Add("Nerubian Assassin")
+            lb.Items.Add("Nyx Assassin")
             lb.Items.Add("Night Stalker")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Pudge")
@@ -1251,9 +1249,9 @@ Public Class ItembuildClass
             lb.Items.Add("Brewmaster")
             lb.Items.Add("Centaur Warchief")
             lb.Items.Add("Death Prophet")
-            lb.Items.Add("Dirge")
+            lb.Items.Add("Undying")
             lb.Items.Add("Goblin Shredder")
-            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Wisp")
             lb.Items.Add("Legion Commander")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Skeleton King")
@@ -1272,12 +1270,12 @@ Public Class ItembuildClass
             lb.Items.Add("Centaur Warchief")
             lb.Items.Add("Chaos Knight")
             lb.Items.Add("Clockwerk")
-            lb.Items.Add("Dirge")
+            lb.Items.Add("Undying")
             lb.Items.Add("Doom Bringer")
             lb.Items.Add("Dragon Knight")
             lb.Items.Add("Earthshaker")
             lb.Items.Add("Goblin Shredder")
-            lb.Items.Add("Guardian Wisp")
+            lb.Items.Add("Wisp")
             lb.Items.Add("Huskar")
             lb.Items.Add("Kunkka")
             lb.Items.Add("Legion Commander")
@@ -1314,16 +1312,16 @@ Public Class ItembuildClass
             lb.Items.Add("Faceless Void")
             lb.Items.Add("Gyrocopter")
             lb.Items.Add("Juggernaut")
-            lb.Items.Add("Lanaya")
+            lb.Items.Add("Templar Assassin")
             lb.Items.Add("Lone Druid")
             lb.Items.Add("Luna")
             lb.Items.Add("Medusa")
             lb.Items.Add("Meepo")
             lb.Items.Add("Mirana")
             lb.Items.Add("Morphling")
-            lb.Items.Add("Mortred")
+            lb.Items.Add("Phantom Assassin")
             lb.Items.Add("Naga Siren")
-            lb.Items.Add("Nerubian Assassin")
+            lb.Items.Add("Nyx Assassin")
             lb.Items.Add("Phantom Lancer")
             lb.Items.Add("Razor")
             lb.Items.Add("Riki")
@@ -1396,7 +1394,6 @@ Public Class ItembuildClass
             .Items.Remove("Legion Commander")
             .Items.Remove("Magnataur")
             .Items.Remove("Medusa")
-            .Items.Remove("Naga Siren")
             .Items.Remove("Phoenix")
             .Items.Remove("Pit Lord")
             .Items.Remove("Skywrath Mage")

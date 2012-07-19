@@ -10,8 +10,9 @@ Public Class FormMain
     Private WithEvents WebClient1 As New WebClient
     Dim cursor_image As Icon
     Dim Selected_Item As Bitmap
-    Dim IntPrice As Integer
+    Public IntPrice As Integer
     Dim Unsaved As Boolean = False
+    Public ImportHero As Boolean = False
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         My.Settings.Save()
@@ -36,19 +37,27 @@ Public Class FormMain
         If Unsaved = True Then
             If MessageBox.Show("You have unsaved changes!" + vbNewLine + "Do you want to continue?", "Unsaved changes", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 If ListBox1.SelectedItem <> "" Then
-                    Itembuild.CheckHero(ListBox1.SelectedItem.ToString)
-                    Itembuild.Clear()
-                    Label1.Text = ListBox1.SelectedItem.ToString
-                    Itembuild.CheckFile(ItembuildClass.Selected_Hero)
-                    Unsaved = False
+                    If ImportHero Then
+                        ImportHero = False
+                    Else
+                        Itembuild.CheckHero(ListBox1.SelectedItem.ToString)
+                        Itembuild.Clear()
+                        Label1.Text = ListBox1.SelectedItem.ToString
+                        Itembuild.CheckFile(ItembuildClass.Selected_Hero)
+                        Unsaved = False
+                    End If
                 End If
             End If
         Else
             If ListBox1.SelectedItem <> "" Then
+                If ImportHero Then
+                    ImportHero = False
+                Else
                 Itembuild.CheckHero(ListBox1.SelectedItem.ToString)
-                Itembuild.Clear()
-                Label1.Text = ListBox1.SelectedItem.ToString
-                Itembuild.CheckFile(ItembuildClass.Selected_Hero)
+                    Itembuild.Clear()
+                    Label1.Text = ListBox1.SelectedItem.ToString
+                    Itembuild.CheckFile(ItembuildClass.Selected_Hero)
+                End If
             End If
         End If
     End Sub
@@ -1988,6 +1997,13 @@ Public Class FormMain
         End If
     End Function
 
+    Public Sub CheckCosts(ByVal price As Integer)
+        If (price > 603) Then
+            Label15.ForeColor = Color.Red
+        Else
+            Label15.ForeColor = Color.Black
+        End If
+    End Sub
 
     'TARGET PICTUREBOXES
     Private Sub Item1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item1.DragEnter
@@ -2006,6 +2022,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item1, Itembuild.GetToolTip(PicRes2Name(Item1.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item1.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2025,6 +2042,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item2, Itembuild.GetToolTip(PicRes2Name(Item2.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item2.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2044,6 +2062,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item3, Itembuild.GetToolTip(PicRes2Name(Item3.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item3.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2063,6 +2082,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item4, Itembuild.GetToolTip(PicRes2Name(Item4.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item4.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2082,6 +2102,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item5, Itembuild.GetToolTip(PicRes2Name(Item5.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item5.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2101,6 +2122,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item6, Itembuild.GetToolTip(PicRes2Name(Item6.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item6.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2120,6 +2142,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item7, Itembuild.GetToolTip(PicRes2Name(Item7.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item7.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2139,6 +2162,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item8, Itembuild.GetToolTip(PicRes2Name(Item8.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item8.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2158,6 +2182,7 @@ Public Class FormMain
         ToolTip1.SetToolTip(Item9, Itembuild.GetToolTip(PicRes2Name(Item9.Image)))
         IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(PicRes2Name(Item9.Image)))
         Label15.Text = IntPrice.ToString
+        CheckCosts(IntPrice.ToString)
         Unsaved = True
     End Sub
 
@@ -2169,14 +2194,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item10_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item10.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item10.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item10.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item10, Itembuild.GetToolTip(PicRes2Name(Item10.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item10.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2188,14 +2209,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item11_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item11.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item11.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item11.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item11, Itembuild.GetToolTip(PicRes2Name(Item11.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item11.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2207,14 +2224,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item12_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item12.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item12.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item12.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item12, Itembuild.GetToolTip(PicRes2Name(Item12.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item12.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2226,14 +2239,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item13_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item13.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item13.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item13.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item13, Itembuild.GetToolTip(PicRes2Name(Item13.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item13.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2245,14 +2254,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item14_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item14.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item14.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item14.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item14, Itembuild.GetToolTip(PicRes2Name(Item14.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item14.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2264,14 +2269,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item15_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item15.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item15.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item15.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item15, Itembuild.GetToolTip(PicRes2Name(Item15.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item15.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2283,14 +2284,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item16_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item16.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item16.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item16.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item16, Itembuild.GetToolTip(PicRes2Name(Item16.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item16.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2302,14 +2299,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item17_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item17.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item17.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item17.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item17, Itembuild.GetToolTip(PicRes2Name(Item17.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item17.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2321,14 +2314,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item18_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item18.DragDrop
-        IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item18.Image)))
-        Label16.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item18.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item18, Itembuild.GetToolTip(PicRes2Name(Item18.Image)))
-        IntPrice = (CInt(Label16.Text) + Itembuild.GetPrice(PicRes2Name(Item18.Image)))
-        Label16.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2340,14 +2329,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item19_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item19.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item19.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item19.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item19, Itembuild.GetToolTip(PicRes2Name(Item19.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item19.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2359,14 +2344,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item20_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item20.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item20.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item20.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item20, Itembuild.GetToolTip(PicRes2Name(Item20.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item20.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2378,14 +2359,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item21_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item21.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item21.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item21.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item21, Itembuild.GetToolTip(PicRes2Name(Item21.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item21.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2397,14 +2374,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item22_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item22.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item22.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item22.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item22, Itembuild.GetToolTip(PicRes2Name(Item22.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item22.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2416,14 +2389,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item23_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item23.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item23.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item23.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item23, Itembuild.GetToolTip(PicRes2Name(Item23.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item23.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2435,14 +2404,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item24_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item24.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item24.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item24.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item24, Itembuild.GetToolTip(PicRes2Name(Item24.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item24.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2454,14 +2419,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item25_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item25.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item25.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item25.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item25, Itembuild.GetToolTip(PicRes2Name(Item25.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item25.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2473,14 +2434,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item26_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item26.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item26.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item26.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item26, Itembuild.GetToolTip(PicRes2Name(Item26.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item26.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2492,14 +2449,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item27_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item27.DragDrop
-        IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item27.Image)))
-        Label18.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item27.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item27, Itembuild.GetToolTip(PicRes2Name(Item27.Image)))
-        IntPrice = (CInt(Label18.Text) + Itembuild.GetPrice(PicRes2Name(Item27.Image)))
-        Label18.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2511,14 +2464,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item28_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item28.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item28.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item28.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item28, Itembuild.GetToolTip(PicRes2Name(Item28.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item28.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2530,14 +2479,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item29_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item29.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item29.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item29.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item29, Itembuild.GetToolTip(PicRes2Name(Item29.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item29.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2549,14 +2494,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item30_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item30.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item30.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item30.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item30, Itembuild.GetToolTip(PicRes2Name(Item30.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item30.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2568,14 +2509,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item31_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item31.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item31.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item31.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item31, Itembuild.GetToolTip(PicRes2Name(Item31.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item31.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2587,14 +2524,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item32_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item32.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item32.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item32.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item32, Itembuild.GetToolTip(PicRes2Name(Item32.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item32.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2606,14 +2539,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item33_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item33.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item33.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item33.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item33, Itembuild.GetToolTip(PicRes2Name(Item33.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item33.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2625,14 +2554,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item34_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item34.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item34.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item34.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item34, Itembuild.GetToolTip(PicRes2Name(Item34.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item34.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2644,14 +2569,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item35_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item35.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item35.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item35.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item35, Itembuild.GetToolTip(PicRes2Name(Item35.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item35.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2663,14 +2584,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item36_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item36.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item36.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item36.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item36, Itembuild.GetToolTip(PicRes2Name(Item36.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item36.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2682,14 +2599,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item37_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item37.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item37.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item37.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item37, Itembuild.GetToolTip(PicRes2Name(Item37.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item37.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2701,14 +2614,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item38_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item38.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item38.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item38.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item38, Itembuild.GetToolTip(PicRes2Name(Item38.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item38.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2720,14 +2629,10 @@ Public Class FormMain
         End If
     End Sub
     Private Sub Item39_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Item39.DragDrop
-        IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item39.Image)))
-        Label20.Text = IntPrice.ToString
         ' Assign the image to the PictureBox. 
         Item39.Image = e.Data.GetData(DataFormats.Bitmap)
         ' aktuellen Inhalt der PictureBox als ToolTipText anzeigen
         ToolTip1.SetToolTip(Item39, Itembuild.GetToolTip(PicRes2Name(Item39.Image)))
-        IntPrice = (CInt(Label20.Text) + Itembuild.GetPrice(PicRes2Name(Item39.Image)))
-        Label20.Text = IntPrice.ToString
         Unsaved = True
     End Sub
 
@@ -2740,6 +2645,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item1.Image = My.Resources.none
             ToolTip1.SetToolTip(Item1, "none")
             Unsaved = True
@@ -2754,6 +2660,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item2.Image = My.Resources.none
             ToolTip1.SetToolTip(Item2, "none")
             Unsaved = True
@@ -2768,6 +2675,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item3.Image = My.Resources.none
             ToolTip1.SetToolTip(Item3, "none")
             Unsaved = True
@@ -2782,6 +2690,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item4.Image = My.Resources.none
             ToolTip1.SetToolTip(Item4, "none")
             Unsaved = True
@@ -2796,6 +2705,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item5.Image = My.Resources.none
             ToolTip1.SetToolTip(Item5, "none")
             Unsaved = True
@@ -2810,6 +2720,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item6.Image = My.Resources.none
             ToolTip1.SetToolTip(Item6, "none")
             Unsaved = True
@@ -2824,6 +2735,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item7.Image = My.Resources.none
             ToolTip1.SetToolTip(Item7, "none")
             Unsaved = True
@@ -2838,6 +2750,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item8.Image = My.Resources.none
             ToolTip1.SetToolTip(Item8, "none")
             Unsaved = True
@@ -2852,6 +2765,7 @@ Public Class FormMain
             Else
                 Label15.Text = "0"
             End If
+            CheckCosts(IntPrice.ToString)
             Item9.Image = My.Resources.none
             ToolTip1.SetToolTip(Item9, "none")
             Unsaved = True
@@ -2860,12 +2774,6 @@ Public Class FormMain
 
     Private Sub Item10_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item10.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item10.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item10.Image = My.Resources.none
             ToolTip1.SetToolTip(Item10, "none")
             Unsaved = True
@@ -2874,12 +2782,6 @@ Public Class FormMain
 
     Private Sub Item11_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item11.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item11.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item11.Image = My.Resources.none
             ToolTip1.SetToolTip(Item11, "none")
             Unsaved = True
@@ -2888,12 +2790,6 @@ Public Class FormMain
 
     Private Sub Item12_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item12.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item12.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item12.Image = My.Resources.none
             ToolTip1.SetToolTip(Item12, "none")
             Unsaved = True
@@ -2902,12 +2798,6 @@ Public Class FormMain
 
     Private Sub Item13_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item13.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item13.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item13.Image = My.Resources.none
             ToolTip1.SetToolTip(Item13, "none")
             Unsaved = True
@@ -2916,12 +2806,6 @@ Public Class FormMain
 
     Private Sub Item14_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item14.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item14.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item14.Image = My.Resources.none
             ToolTip1.SetToolTip(Item14, "none")
             Unsaved = True
@@ -2930,12 +2814,6 @@ Public Class FormMain
 
     Private Sub Item15_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item15.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item15.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item15.Image = My.Resources.none
             ToolTip1.SetToolTip(Item15, "none")
             Unsaved = True
@@ -2944,12 +2822,6 @@ Public Class FormMain
 
     Private Sub Item16_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item16.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item16.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item16.Image = My.Resources.none
             ToolTip1.SetToolTip(Item16, "none")
             Unsaved = True
@@ -2958,12 +2830,6 @@ Public Class FormMain
 
     Private Sub Item17_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item17.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item17.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item17.Image = My.Resources.none
             ToolTip1.SetToolTip(Item17, "none")
             Unsaved = True
@@ -2972,12 +2838,6 @@ Public Class FormMain
 
     Private Sub Item18_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item18.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label16.Text) - Itembuild.GetPrice(PicRes2Name(Item18.Image)))
-            If IntPrice >= 0 Then
-                Label16.Text = IntPrice.ToString
-            Else
-                Label16.Text = "0"
-            End If
             Item18.Image = My.Resources.none
             ToolTip1.SetToolTip(Item18, "none")
             Unsaved = True
@@ -2986,12 +2846,6 @@ Public Class FormMain
 
     Private Sub Item19_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item19.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item19.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item19.Image = My.Resources.none
             ToolTip1.SetToolTip(Item19, "none")
             Unsaved = True
@@ -3000,12 +2854,6 @@ Public Class FormMain
 
     Private Sub Item20_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item20.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item20.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item20.Image = My.Resources.none
             ToolTip1.SetToolTip(Item20, "none")
             Unsaved = True
@@ -3014,12 +2862,6 @@ Public Class FormMain
 
     Private Sub Item21_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item21.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item21.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item21.Image = My.Resources.none
             ToolTip1.SetToolTip(Item21, "none")
             Unsaved = True
@@ -3028,12 +2870,6 @@ Public Class FormMain
 
     Private Sub Item22_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item22.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item22.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item22.Image = My.Resources.none
             ToolTip1.SetToolTip(Item22, "none")
             Unsaved = True
@@ -3042,12 +2878,6 @@ Public Class FormMain
 
     Private Sub Item23_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item23.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item23.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item23.Image = My.Resources.none
             ToolTip1.SetToolTip(Item23, "none")
             Unsaved = True
@@ -3056,12 +2886,6 @@ Public Class FormMain
 
     Private Sub Item24_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item24.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item24.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item24.Image = My.Resources.none
             ToolTip1.SetToolTip(Item24, "none")
             Unsaved = True
@@ -3070,12 +2894,6 @@ Public Class FormMain
 
     Private Sub Item25_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item25.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item25.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item25.Image = My.Resources.none
             ToolTip1.SetToolTip(Item25, "none")
             Unsaved = True
@@ -3084,12 +2902,6 @@ Public Class FormMain
 
     Private Sub Item26_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item26.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item26.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item26.Image = My.Resources.none
             ToolTip1.SetToolTip(Item26, "none")
             Unsaved = True
@@ -3098,12 +2910,6 @@ Public Class FormMain
 
     Private Sub Item27_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item27.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label18.Text) - Itembuild.GetPrice(PicRes2Name(Item27.Image)))
-            If IntPrice >= 0 Then
-                Label18.Text = IntPrice.ToString
-            Else
-                Label18.Text = "0"
-            End If
             Item27.Image = My.Resources.none
             ToolTip1.SetToolTip(Item27, "none")
             Unsaved = True
@@ -3112,12 +2918,6 @@ Public Class FormMain
 
     Private Sub Item28_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item28.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item28.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item28.Image = My.Resources.none
             ToolTip1.SetToolTip(Item28, "none")
             Unsaved = True
@@ -3126,12 +2926,6 @@ Public Class FormMain
 
     Private Sub Item29_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item29.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item29.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item29.Image = My.Resources.none
             ToolTip1.SetToolTip(Item29, "none")
             Unsaved = True
@@ -3140,12 +2934,6 @@ Public Class FormMain
 
     Private Sub Item30_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item30.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item30.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item30.Image = My.Resources.none
             ToolTip1.SetToolTip(Item30, "none")
             Unsaved = True
@@ -3154,12 +2942,6 @@ Public Class FormMain
 
     Private Sub Item31_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item31.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item31.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item31.Image = My.Resources.none
             ToolTip1.SetToolTip(Item31, "none")
             Unsaved = True
@@ -3168,12 +2950,6 @@ Public Class FormMain
 
     Private Sub Item32_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item32.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item32.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item32.Image = My.Resources.none
             ToolTip1.SetToolTip(Item32, "none")
             Unsaved = True
@@ -3182,12 +2958,6 @@ Public Class FormMain
 
     Private Sub Item33_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item33.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item33.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item33.Image = My.Resources.none
             ToolTip1.SetToolTip(Item33, "none")
             Unsaved = True
@@ -3196,12 +2966,6 @@ Public Class FormMain
 
     Private Sub Item34_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item34.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item34.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item34.Image = My.Resources.none
             ToolTip1.SetToolTip(Item34, "none")
             Unsaved = True
@@ -3210,12 +2974,6 @@ Public Class FormMain
 
     Private Sub Item35_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item35.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item35.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item35.Image = My.Resources.none
             ToolTip1.SetToolTip(Item35, "none")
             Unsaved = True
@@ -3224,12 +2982,6 @@ Public Class FormMain
 
     Private Sub Item36_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item36.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item36.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item36.Image = My.Resources.none
             ToolTip1.SetToolTip(Item36, "none")
             Unsaved = True
@@ -3238,12 +2990,6 @@ Public Class FormMain
 
     Private Sub Item37_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item37.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item37.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item37.Image = My.Resources.none
             ToolTip1.SetToolTip(Item37, "none")
             Unsaved = True
@@ -3252,12 +2998,6 @@ Public Class FormMain
 
     Private Sub Item38_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item38.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item38.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item38.Image = My.Resources.none
             ToolTip1.SetToolTip(Item38, "none")
             Unsaved = True
@@ -3266,12 +3006,6 @@ Public Class FormMain
 
     Private Sub Item39_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles Item39.MouseDown
         If e.Button = MouseButtons.Right Then
-            IntPrice = (CInt(Label20.Text) - Itembuild.GetPrice(PicRes2Name(Item39.Image)))
-            If IntPrice >= 0 Then
-                Label20.Text = IntPrice.ToString
-            Else
-                Label20.Text = "0"
-            End If
             Item39.Image = My.Resources.none
             ToolTip1.SetToolTip(Item39, "none")
             Unsaved = True
