@@ -11,6 +11,9 @@ Public Class ImportClass
                 Dim ItemPlace As String = "Starting Items"
                 Dim i As Integer = 1
                 Dim pb As Object
+                Dim price As Object = FormMain.Label15
+                Dim savePrice As Boolean = True
+                Dim int As Integer
                 Itembuild.Clear()
                 FormMain.ListBox1.SelectedItems.Clear()
                 ItembuildClass.Selected_Hero = ""
@@ -18,16 +21,25 @@ Public Class ImportClass
                     If Zeile.Contains("item_") And i <= 39 Then
                         pb = FormMain.TabPage1.Controls.Item("Item" & i)
                         pb.image = FormMain.ChangePicture(FormMain.RenameItem(Zeile))
+                        FormMain.ToolTip1.SetToolTip(pb, Itembuild.GetToolTip(FormMain.RenameItem(Zeile)))
+                        If savePrice Then
+                            int = (CInt(price.Text) + Itembuild.GetPrice(FormMain.RenameItem(Zeile)))
+                            price.Text = int.ToString
+                            FormMain.CheckCosts(int)
+                        End If
                         i = i + 1
                     ElseIf Zeile.Contains("Early_Game") Then
                         ItemPlace = "Early Game"
                         i = 10
+                        savePrice = False
                     ElseIf Zeile.Contains("Core_Items") Then
                         ItemPlace = "Core Items"
                         i = 19
+                        savePrice = False
                     ElseIf Zeile.Contains("Luxury") Then
                         ItemPlace = "Luxury"
                         i = 28
+                        savePrice = False
                     ElseIf Zeile.Contains("author") Then
                         FormMain.TextBox1.Text = Replace(Zeile, """", "")
                         FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
@@ -39,9 +51,10 @@ Public Class ImportClass
                         ItembuildClass.Selected_Hero = Itembuild.renameHero(ItembuildClass.Selected_Hero)
                         FormMain.Label1.Text = ItembuildClass.Selected_Hero
                         If ItembuildClass.Selected_Hero <> "Unknown hero!" Then
+                            FormMain.ImportHero = True
                             FormMain.ListBox1.SelectedItem = ItembuildClass.Selected_Hero
+                            FormMain.ButtonSave.Enabled = True
                         End If
-                        FormMain.ButtonSave.Enabled = True
                     Else
 
                     End If
@@ -49,7 +62,7 @@ Public Class ImportClass
                 IO.File.Delete(My.Settings.path + "\temp.txt")
                 FormMain.TabControl1.SelectedTab = FormMain.TabPage1
             Else
-                MessageBox.Show("Error! Hero maybe not implemented yet.")
+                MessageBox.Show("Error! Couldn't load this itembuild.")
             End If
         End If
     End Sub
