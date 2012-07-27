@@ -1402,7 +1402,6 @@ Public Class ItembuildClass
             .Items.Remove("Tauren Chieftain")
             .Items.Remove("Troll Warlord")
             .Items.Remove("Tuskarr")
-            .Items.Remove("Visage")
         End With
     End Sub
 
