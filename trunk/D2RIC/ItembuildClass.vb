@@ -5,90 +5,8 @@ Public Class ItembuildClass
 
     'Initialize the Itembuild tab
     Public Sub Initialize()
-        'ALLOW TO DROP SOMETHING IN THE PICTUREBOX
-        FormMain.Item1.AllowDrop = True
-        FormMain.Item2.AllowDrop = True
-        FormMain.Item3.AllowDrop = True
-        FormMain.Item4.AllowDrop = True
-        FormMain.Item5.AllowDrop = True
-        FormMain.Item6.AllowDrop = True
-        FormMain.Item7.AllowDrop = True
-        FormMain.Item8.AllowDrop = True
-        FormMain.Item9.AllowDrop = True
-        FormMain.Item10.AllowDrop = True
-        FormMain.Item11.AllowDrop = True
-        FormMain.Item12.AllowDrop = True
-        FormMain.Item13.AllowDrop = True
-        FormMain.Item14.AllowDrop = True
-        FormMain.Item15.AllowDrop = True
-        FormMain.Item16.AllowDrop = True
-        FormMain.Item17.AllowDrop = True
-        FormMain.Item18.AllowDrop = True
-        FormMain.Item19.AllowDrop = True
-        FormMain.Item20.AllowDrop = True
-        FormMain.Item21.AllowDrop = True
-        FormMain.Item22.AllowDrop = True
-        FormMain.Item23.AllowDrop = True
-        FormMain.Item24.AllowDrop = True
-        FormMain.Item25.AllowDrop = True
-        FormMain.Item26.AllowDrop = True
-        FormMain.Item27.AllowDrop = True
-        FormMain.Item28.AllowDrop = True
-        FormMain.Item29.AllowDrop = True
-        FormMain.Item30.AllowDrop = True
-        FormMain.Item31.AllowDrop = True
-        FormMain.Item32.AllowDrop = True
-        FormMain.Item33.AllowDrop = True
-        FormMain.Item34.AllowDrop = True
-        FormMain.Item35.AllowDrop = True
-        FormMain.Item36.AllowDrop = True
-        FormMain.Item37.AllowDrop = True
-        FormMain.Item38.AllowDrop = True
-        FormMain.Item39.AllowDrop = True
         'DISABLE THE SAVE BUTTON BECAUSE NO HERO IS CHOOSEN IF THE PROGRAM STARTS
         FormMain.ButtonSave.Enabled = False
-        'SET TOOLTIPS
-        With FormMain.ToolTip1
-            .SetToolTip(FormMain.Item1, "none")
-            .SetToolTip(FormMain.Item2, "none")
-            .SetToolTip(FormMain.Item3, "none")
-            .SetToolTip(FormMain.Item4, "none")
-            .SetToolTip(FormMain.Item5, "none")
-            .SetToolTip(FormMain.Item6, "none")
-            .SetToolTip(FormMain.Item7, "none")
-            .SetToolTip(FormMain.Item8, "none")
-            .SetToolTip(FormMain.Item9, "none")
-            .SetToolTip(FormMain.Item10, "none")
-            .SetToolTip(FormMain.Item11, "none")
-            .SetToolTip(FormMain.Item12, "none")
-            .SetToolTip(FormMain.Item13, "none")
-            .SetToolTip(FormMain.Item14, "none")
-            .SetToolTip(FormMain.Item15, "none")
-            .SetToolTip(FormMain.Item16, "none")
-            .SetToolTip(FormMain.Item17, "none")
-            .SetToolTip(FormMain.Item18, "none")
-            .SetToolTip(FormMain.Item19, "none")
-            .SetToolTip(FormMain.Item20, "none")
-            .SetToolTip(FormMain.Item21, "none")
-            .SetToolTip(FormMain.Item22, "none")
-            .SetToolTip(FormMain.Item23, "none")
-            .SetToolTip(FormMain.Item24, "none")
-            .SetToolTip(FormMain.Item25, "none")
-            .SetToolTip(FormMain.Item26, "none")
-            .SetToolTip(FormMain.Item27, "none")
-            .SetToolTip(FormMain.Item28, "none")
-            .SetToolTip(FormMain.Item29, "none")
-            .SetToolTip(FormMain.Item30, "none")
-            .SetToolTip(FormMain.Item31, "none")
-            .SetToolTip(FormMain.Item32, "none")
-            .SetToolTip(FormMain.Item33, "none")
-            .SetToolTip(FormMain.Item34, "none")
-            .SetToolTip(FormMain.Item35, "none")
-            .SetToolTip(FormMain.Item36, "none")
-            .SetToolTip(FormMain.Item37, "none")
-            .SetToolTip(FormMain.Item38, "none")
-            .SetToolTip(FormMain.Item39, "none")
-        End With
 
         'PRESELECT THE BOX
         FormMain.ComboBox2.SelectedItem = "All"
@@ -387,13 +305,10 @@ Public Class ItembuildClass
         FormMain.Label15.Text = "0"
         FormMain.IntPrice = 0
         NewText = ""
-        Dim pb As Object
-        Dim picbox As Integer = 1
-        For picbox = 1 To 39
-            pb = FormMain.TabPage1.Controls.Item("Item" & picbox)
-            pb.image = D2RIC.My.Resources.Resources.none
-            FormMain.ToolTip1.SetToolTip(pb, "none")
-        Next
+        FormMain.ListView2.Clear()
+        FormMain.ListView3.Clear()
+        FormMain.ListView4.Clear()
+        FormMain.ListView5.Clear()
     End Sub
 
     'Save the itembuild and change the author
@@ -412,39 +327,39 @@ Public Class ItembuildClass
     'Load an itembuild out of an itembuild file
     Public Sub CheckFile(ByVal hero As String)
         If IO.File.Exists(My.Settings.path + "\default_" + hero + ".txt") Then
-            Dim DeinPfad As String = My.Settings.path + "\default_" + hero + ".txt"
-            Dim ItemPlace As String = "Starting Items"
-            Dim i As Integer = 1
-            Dim pb As Object
+            Dim Path As String = My.Settings.path + "\default_" + hero + ".txt"
+            Dim ItemName As String
+            Dim ItemList As Object = FormMain.ListView2
+            Dim Index As Integer = 0
             Dim price As Object = FormMain.Label15
             Dim savePrice As Boolean = True
             Dim int As Integer
-            For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                If Zeile.Contains("item_") And i <= 39 Then
-                    pb = FormMain.TabPage1.Controls.Item("Item" & i)
-                    pb.image = FormMain.ChangePicture(FormMain.RenameItem(Zeile))
-                    FormMain.ToolTip1.SetToolTip(pb, GetToolTip(FormMain.RenameItem(Zeile)))
+            For Each Zeile As String In IO.File.ReadAllLines(Path)
+                If Zeile.Contains("item_") Then
+                    ItemName = FormMain.RenameItem(Zeile)
                     If savePrice Then
-                        int = (CInt(price.Text) + GetPrice(FormMain.RenameItem(Zeile)))
+                        int = (CInt(price.Text) + GetPrice(ItemName))
                         price.Text = int.ToString
                         FormMain.CheckCosts(int)
                     End If
-                    i = i + 1
+                    With ItemList
+                        Dim item As New ListViewItem(New String() {"", ItemName}, FormMain.GetPicture(ItemName))
+                        .Items.AddRange(New ListViewItem() {item})
+                        .Items(Index).ToolTipText = GetToolTip(ItemName)
+                    End With
+                    Index = Index + 1
                 ElseIf Zeile.Contains("Early_Game") Then
-                    ItemPlace = "Early Game"
-                    i = 10
+                    ItemList = FormMain.ListView3
+                    Index = 0
                     savePrice = False
-                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Core_Items") Then
-                    ItemPlace = "Core Items"
-                    i = 19
+                    ItemList = FormMain.ListView4
+                    Index = 0
                     savePrice = False
-                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("Luxury") Then
-                    ItemPlace = "Luxury"
-                    i = 28
+                    ItemList = FormMain.ListView5
+                    Index = 0
                     savePrice = False
-                    NewText &= Zeile & vbNewLine
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
@@ -466,40 +381,48 @@ Public Class ItembuildClass
     Public Sub LoadDefault()
         If IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
             Dim DeinPfad As String = My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt"
-            Dim ItemPlace As String = "Starting Items"
-            Dim i As Integer = 1
-            Dim pb As Object
-            Dim picbox As Integer = 1
-            For picbox = 1 To 39
-                pb = FormMain.TabPage1.Controls.Item("Item" & picbox)
-                pb.image = D2RIC.My.Resources.Resources.none
-                FormMain.ToolTip1.SetToolTip(pb, "none")
-            Next
+            Dim ItemName As String
+            Dim ItemList As Object = FormMain.ListView2
+            Dim Index As Integer = 0
+            Dim price As Object = FormMain.Label15
+            Dim savePrice As Boolean = True
+            Dim int As Integer
+            FormMain.Label15.Text = "0"
+            FormMain.IntPrice = 0
+            FormMain.ListView2.Clear()
+            FormMain.ListView3.Clear()
+            FormMain.ListView4.Clear()
+            FormMain.ListView5.Clear()
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                If Zeile.Contains("item_") And i <= 39 Then
-                    pb = FormMain.TabPage1.Controls.Item("Item" & i)
-                    pb.image = FormMain.ChangePicture(FormMain.RenameItem(Zeile))
-                    FormMain.ToolTip1.SetToolTip(pb, GetToolTip(FormMain.RenameItem(Zeile)))
-                    i = i + 1
+                If Zeile.Contains("item_") Then
+                    ItemName = FormMain.RenameItem(Zeile)
+                    If savePrice Then
+                        int = (CInt(price.Text) + GetPrice(ItemName))
+                        price.Text = int.ToString
+                        FormMain.CheckCosts(int)
+                    End If
+                    With ItemList
+                        Dim item As New ListViewItem(New String() {"", ItemName}, FormMain.GetPicture(ItemName))
+                        .Items.AddRange(New ListViewItem() {item})
+                        .Items(Index).ToolTipText = GetToolTip(ItemName)
+                    End With
+                    Index = Index + 1
                 ElseIf Zeile.Contains("Early_Game") Then
-                    ItemPlace = "Early Game"
-                    i = 10
-                    NewText &= Zeile & vbNewLine
+                    ItemList = FormMain.ListView3
+                    Index = 0
+                    savePrice = False
                 ElseIf Zeile.Contains("Core_Items") Then
-                    ItemPlace = "Core Items"
-                    i = 19
-                    NewText &= Zeile & vbNewLine
+                    ItemList = FormMain.ListView4
+                    Index = 0
+                    savePrice = False
                 ElseIf Zeile.Contains("Luxury") Then
-                    ItemPlace = "Luxury"
-                    i = 28
-                    NewText &= Zeile & vbNewLine
+                    ItemList = FormMain.ListView5
+                    Index = 0
+                    savePrice = False
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
-                    NewText &= Zeile & vbNewLine
-                Else
-                    NewText &= Zeile & vbNewLine
                 End If
             Next
             FormMain.ButtonSave.Enabled = True
@@ -540,7 +463,7 @@ Public Class ItembuildClass
                     ' Ordner wurde korrekt erstellt!
                 Catch ex As Exception
                     ' Ordner wurde nich erstellt
-                    MessageBox.Show("Error while backup creating folder")
+                    MessageBox.Show("Error while creating backup folder")
                 End Try
             End If
             'Create Backup
@@ -571,21 +494,18 @@ Public Class ItembuildClass
             Dim CoreItems As String = ""
             Dim Luxury As String = ""
             Dim a As Integer = 1
-            Dim pb As Object
 
-            For a = 1 To 39
-                pb = FormMain.TabPage1.Controls.Item("Item" & a)
-                If a < 10 And Not FormMain.doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    StartingItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.CheckItem(pb.Image)
-                ElseIf 9 < a And a < 19 And Not FormMain.doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    Earlygame &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.CheckItem(pb.Image)
-                ElseIf 18 < a And a < 27 And Not FormMain.doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    CoreItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.CheckItem(pb.Image)
-                ElseIf 26 < a And Not FormMain.doImagesMatch(pb.Image, D2RIC.My.Resources.Resources.none) Then
-                    Luxury &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.CheckItem(pb.Image)
-                Else
-                    'nichts
-                End If
+            For i = 0 To (FormMain.ListView2.Items.Count - 1)
+                StartingItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView2.Items(i).SubItems(1).Text)
+            Next
+            For i = 0 To (FormMain.ListView3.Items.Count - 1)
+                Earlygame &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView3.Items(i).SubItems(1).Text)
+            Next
+            For i = 0 To (FormMain.ListView4.Items.Count - 1)
+                CoreItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView4.Items(i).SubItems(1).Text)
+            Next
+            For i = 0 To (FormMain.ListView5.Items.Count - 1)
+                Luxury &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView5.Items(i).SubItems(1).Text)
             Next
 
             NewText &= vbTab & vbTab & "{"

@@ -26,6 +26,11 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ListView5 = New System.Windows.Forms.ListView()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ListView4 = New System.Windows.Forms.ListView()
+        Me.ListView3 = New System.Windows.Forms.ListView()
+        Me.ListView2 = New System.Windows.Forms.ListView()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -35,19 +40,9 @@ Partial Class FormMain
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBoxItemsearch = New System.Windows.Forms.TextBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ButtonDefaultItembuild = New System.Windows.Forms.Button()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.Item39 = New System.Windows.Forms.PictureBox()
-        Me.Item38 = New System.Windows.Forms.PictureBox()
-        Me.Item37 = New System.Windows.Forms.PictureBox()
-        Me.Item36 = New System.Windows.Forms.PictureBox()
-        Me.Item35 = New System.Windows.Forms.PictureBox()
-        Me.Item34 = New System.Windows.Forms.PictureBox()
-        Me.Item33 = New System.Windows.Forms.PictureBox()
-        Me.Item32 = New System.Windows.Forms.PictureBox()
-        Me.Item31 = New System.Windows.Forms.PictureBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label0 = New System.Windows.Forms.Label()
@@ -57,36 +52,6 @@ Partial Class FormMain
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Item1 = New System.Windows.Forms.PictureBox()
-        Me.Item2 = New System.Windows.Forms.PictureBox()
-        Me.Item3 = New System.Windows.Forms.PictureBox()
-        Me.Item4 = New System.Windows.Forms.PictureBox()
-        Me.Item5 = New System.Windows.Forms.PictureBox()
-        Me.Item6 = New System.Windows.Forms.PictureBox()
-        Me.Item7 = New System.Windows.Forms.PictureBox()
-        Me.Item8 = New System.Windows.Forms.PictureBox()
-        Me.Item9 = New System.Windows.Forms.PictureBox()
-        Me.Item10 = New System.Windows.Forms.PictureBox()
-        Me.Item11 = New System.Windows.Forms.PictureBox()
-        Me.Item12 = New System.Windows.Forms.PictureBox()
-        Me.Item13 = New System.Windows.Forms.PictureBox()
-        Me.Item14 = New System.Windows.Forms.PictureBox()
-        Me.Item15 = New System.Windows.Forms.PictureBox()
-        Me.Item16 = New System.Windows.Forms.PictureBox()
-        Me.Item17 = New System.Windows.Forms.PictureBox()
-        Me.Item18 = New System.Windows.Forms.PictureBox()
-        Me.Item19 = New System.Windows.Forms.PictureBox()
-        Me.Item20 = New System.Windows.Forms.PictureBox()
-        Me.Item21 = New System.Windows.Forms.PictureBox()
-        Me.Item22 = New System.Windows.Forms.PictureBox()
-        Me.Item23 = New System.Windows.Forms.PictureBox()
-        Me.Item24 = New System.Windows.Forms.PictureBox()
-        Me.Item25 = New System.Windows.Forms.PictureBox()
-        Me.Item26 = New System.Windows.Forms.PictureBox()
-        Me.Item27 = New System.Windows.Forms.PictureBox()
-        Me.Item28 = New System.Windows.Forms.PictureBox()
-        Me.Item29 = New System.Windows.Forms.PictureBox()
-        Me.Item30 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -120,45 +85,6 @@ Partial Class FormMain
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.Item39, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item38, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item37, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item36, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item20, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item21, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item24, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item25, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item26, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item28, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item29, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Item30, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
@@ -167,8 +93,8 @@ Partial Class FormMain
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
@@ -182,6 +108,10 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.AllowDrop = True
+        Me.TabPage1.Controls.Add(Me.ListView5)
+        Me.TabPage1.Controls.Add(Me.ListView4)
+        Me.TabPage1.Controls.Add(Me.ListView3)
+        Me.TabPage1.Controls.Add(Me.ListView2)
         Me.TabPage1.Controls.Add(Me.Label22)
         Me.TabPage1.Controls.Add(Me.ComboBox2)
         Me.TabPage1.Controls.Add(Me.Label15)
@@ -194,15 +124,6 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.ButtonDefaultItembuild)
         Me.TabPage1.Controls.Add(Me.CheckBox2)
         Me.TabPage1.Controls.Add(Me.Label24)
-        Me.TabPage1.Controls.Add(Me.Item39)
-        Me.TabPage1.Controls.Add(Me.Item38)
-        Me.TabPage1.Controls.Add(Me.Item37)
-        Me.TabPage1.Controls.Add(Me.Item36)
-        Me.TabPage1.Controls.Add(Me.Item35)
-        Me.TabPage1.Controls.Add(Me.Item34)
-        Me.TabPage1.Controls.Add(Me.Item33)
-        Me.TabPage1.Controls.Add(Me.Item32)
-        Me.TabPage1.Controls.Add(Me.Item31)
         Me.TabPage1.Controls.Add(Me.ComboBox3)
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label0)
@@ -212,36 +133,6 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.Item1)
-        Me.TabPage1.Controls.Add(Me.Item2)
-        Me.TabPage1.Controls.Add(Me.Item3)
-        Me.TabPage1.Controls.Add(Me.Item4)
-        Me.TabPage1.Controls.Add(Me.Item5)
-        Me.TabPage1.Controls.Add(Me.Item6)
-        Me.TabPage1.Controls.Add(Me.Item7)
-        Me.TabPage1.Controls.Add(Me.Item8)
-        Me.TabPage1.Controls.Add(Me.Item9)
-        Me.TabPage1.Controls.Add(Me.Item10)
-        Me.TabPage1.Controls.Add(Me.Item11)
-        Me.TabPage1.Controls.Add(Me.Item12)
-        Me.TabPage1.Controls.Add(Me.Item13)
-        Me.TabPage1.Controls.Add(Me.Item14)
-        Me.TabPage1.Controls.Add(Me.Item15)
-        Me.TabPage1.Controls.Add(Me.Item16)
-        Me.TabPage1.Controls.Add(Me.Item17)
-        Me.TabPage1.Controls.Add(Me.Item18)
-        Me.TabPage1.Controls.Add(Me.Item19)
-        Me.TabPage1.Controls.Add(Me.Item20)
-        Me.TabPage1.Controls.Add(Me.Item21)
-        Me.TabPage1.Controls.Add(Me.Item22)
-        Me.TabPage1.Controls.Add(Me.Item23)
-        Me.TabPage1.Controls.Add(Me.Item24)
-        Me.TabPage1.Controls.Add(Me.Item25)
-        Me.TabPage1.Controls.Add(Me.Item26)
-        Me.TabPage1.Controls.Add(Me.Item27)
-        Me.TabPage1.Controls.Add(Me.Item28)
-        Me.TabPage1.Controls.Add(Me.Item29)
-        Me.TabPage1.Controls.Add(Me.Item30)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.Label5)
@@ -254,96 +145,20 @@ Partial Class FormMain
         Me.TabPage1.Text = "Change Itembuild"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Label22
+        'ListView5
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(546, 231)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(54, 13)
-        Me.Label22.TabIndex = 551
-        Me.Label22.Text = "Shopfilter:"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"All", "Arcane", "Armaments", "Armor", "Artifacts", "Attributes", "Caster", "Common", "Consumables", "Secret Shop", "Side Lane Shop", "Support", "Weapons"})
-        Me.ComboBox2.Location = New System.Drawing.Point(606, 228)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 550
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(227, 52)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(14, 13)
-        Me.Label15.TabIndex = 543
-        Me.Label15.Text = "0"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(190, 52)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(31, 13)
-        Me.Label14.TabIndex = 542
-        Me.Label14.Text = "Cost:"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(362, 231)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(49, 13)
-        Me.Label13.TabIndex = 541
-        Me.Label13.Text = "Itemfilter:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"", "Agility", "All Attributes", "Armor", "Attack Speed", "Aura", "Damage", "Evasion", "HP", "HP/sec Regeneration", "Intelligence", "Lifesteal", "Magic Resistance", "Mana", "Mana Regeneration", "Movement Speed", "Strength"})
-        Me.ComboBox1.Location = New System.Drawing.Point(417, 228)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 540
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(178, 231)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(62, 13)
-        Me.Label11.TabIndex = 539
-        Me.Label11.Text = "Itemsearch:"
-        '
-        'TextBoxItemsearch
-        '
-        Me.TextBoxItemsearch.Location = New System.Drawing.Point(246, 228)
-        Me.TextBoxItemsearch.Name = "TextBoxItemsearch"
-        Me.TextBoxItemsearch.Size = New System.Drawing.Size(101, 20)
-        Me.TextBoxItemsearch.TabIndex = 538
-        '
-        'ListView1
-        '
-        Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListView1.LargeImageList = Me.ImageList1
-        Me.ListView1.Location = New System.Drawing.Point(158, 255)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.ShowGroups = False
-        Me.ListView1.ShowItemToolTips = True
-        Me.ListView1.Size = New System.Drawing.Size(733, 392)
-        Me.ListView1.SmallImageList = Me.ImageList1
-        Me.ListView1.TabIndex = 537
-        Me.ListView1.TileSize = New System.Drawing.Size(175, 34)
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Tile
+        Me.ListView5.LargeImageList = Me.ImageList1
+        Me.ListView5.Location = New System.Drawing.Point(731, 66)
+        Me.ListView5.MultiSelect = False
+        Me.ListView5.Name = "ListView5"
+        Me.ListView5.ShowGroups = False
+        Me.ListView5.ShowItemToolTips = True
+        Me.ListView5.Size = New System.Drawing.Size(160, 110)
+        Me.ListView5.SmallImageList = Me.ImageList1
+        Me.ListView5.TabIndex = 555
+        Me.ListView5.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListView5.UseCompatibleStateImageBehavior = False
+        Me.ListView5.View = System.Windows.Forms.View.Tile
         '
         'ImageList1
         '
@@ -484,6 +299,142 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(132, "40px-Wraith_Band.png")
         Me.ImageList1.Images.SetKeyName(133, "40px-Yasha.png")
         '
+        'ListView4
+        '
+        Me.ListView4.LargeImageList = Me.ImageList1
+        Me.ListView4.Location = New System.Drawing.Point(549, 66)
+        Me.ListView4.MultiSelect = False
+        Me.ListView4.Name = "ListView4"
+        Me.ListView4.ShowGroups = False
+        Me.ListView4.ShowItemToolTips = True
+        Me.ListView4.Size = New System.Drawing.Size(160, 110)
+        Me.ListView4.SmallImageList = Me.ImageList1
+        Me.ListView4.TabIndex = 554
+        Me.ListView4.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListView4.UseCompatibleStateImageBehavior = False
+        Me.ListView4.View = System.Windows.Forms.View.Tile
+        '
+        'ListView3
+        '
+        Me.ListView3.LargeImageList = Me.ImageList1
+        Me.ListView3.Location = New System.Drawing.Point(365, 66)
+        Me.ListView3.MultiSelect = False
+        Me.ListView3.Name = "ListView3"
+        Me.ListView3.ShowGroups = False
+        Me.ListView3.ShowItemToolTips = True
+        Me.ListView3.Size = New System.Drawing.Size(160, 110)
+        Me.ListView3.SmallImageList = Me.ImageList1
+        Me.ListView3.TabIndex = 553
+        Me.ListView3.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListView3.UseCompatibleStateImageBehavior = False
+        Me.ListView3.View = System.Windows.Forms.View.Tile
+        '
+        'ListView2
+        '
+        Me.ListView2.LargeImageList = Me.ImageList1
+        Me.ListView2.Location = New System.Drawing.Point(181, 66)
+        Me.ListView2.MultiSelect = False
+        Me.ListView2.Name = "ListView2"
+        Me.ListView2.ShowGroups = False
+        Me.ListView2.ShowItemToolTips = True
+        Me.ListView2.Size = New System.Drawing.Size(160, 110)
+        Me.ListView2.SmallImageList = Me.ImageList1
+        Me.ListView2.TabIndex = 552
+        Me.ListView2.TileSize = New System.Drawing.Size(44, 34)
+        Me.ListView2.UseCompatibleStateImageBehavior = False
+        Me.ListView2.View = System.Windows.Forms.View.Tile
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(546, 231)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(54, 13)
+        Me.Label22.TabIndex = 551
+        Me.Label22.Text = "Shopfilter:"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"All", "Arcane", "Armaments", "Armor", "Artifacts", "Attributes", "Caster", "Common", "Consumables", "Secret Shop", "Side Lane Shop", "Support", "Weapons"})
+        Me.ComboBox2.Location = New System.Drawing.Point(606, 228)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 550
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(227, 52)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(14, 13)
+        Me.Label15.TabIndex = 543
+        Me.Label15.Text = "0"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(190, 52)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(31, 13)
+        Me.Label14.TabIndex = 542
+        Me.Label14.Text = "Cost:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(362, 231)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(49, 13)
+        Me.Label13.TabIndex = 541
+        Me.Label13.Text = "Itemfilter:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"", "Agility", "All Attributes", "Armor", "Attack Speed", "Aura", "Damage", "Evasion", "HP", "HP/sec Regeneration", "Intelligence", "Lifesteal", "Magic Resistance", "Mana", "Mana Regeneration", "Movement Speed", "Strength"})
+        Me.ComboBox1.Location = New System.Drawing.Point(417, 228)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 540
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(178, 231)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(62, 13)
+        Me.Label11.TabIndex = 539
+        Me.Label11.Text = "Itemsearch:"
+        '
+        'TextBoxItemsearch
+        '
+        Me.TextBoxItemsearch.Location = New System.Drawing.Point(246, 228)
+        Me.TextBoxItemsearch.Name = "TextBoxItemsearch"
+        Me.TextBoxItemsearch.Size = New System.Drawing.Size(101, 20)
+        Me.TextBoxItemsearch.TabIndex = 538
+        '
+        'ListView1
+        '
+        Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ListView1.LargeImageList = Me.ImageList1
+        Me.ListView1.Location = New System.Drawing.Point(158, 255)
+        Me.ListView1.MultiSelect = False
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.ShowGroups = False
+        Me.ListView1.ShowItemToolTips = True
+        Me.ListView1.Size = New System.Drawing.Size(733, 392)
+        Me.ListView1.SmallImageList = Me.ImageList1
+        Me.ListView1.TabIndex = 537
+        Me.ListView1.TileSize = New System.Drawing.Size(175, 34)
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Tile
+        '
         'ButtonDefaultItembuild
         '
         Me.ButtonDefaultItembuild.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -507,92 +458,11 @@ Partial Class FormMain
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(178, 175)
+        Me.Label24.Location = New System.Drawing.Point(178, 179)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(231, 13)
+        Me.Label24.Size = New System.Drawing.Size(254, 13)
         Me.Label24.TabIndex = 534
-        Me.Label24.Text = "You can delete items with right clicking the box."
-        '
-        'Item39
-        '
-        Me.Item39.Image = CType(resources.GetObject("Item39.Image"), System.Drawing.Image)
-        Me.Item39.Location = New System.Drawing.Point(825, 176)
-        Me.Item39.Name = "Item39"
-        Me.Item39.Size = New System.Drawing.Size(40, 30)
-        Me.Item39.TabIndex = 533
-        Me.Item39.TabStop = False
-        '
-        'Item38
-        '
-        Me.Item38.Image = CType(resources.GetObject("Item38.Image"), System.Drawing.Image)
-        Me.Item38.Location = New System.Drawing.Point(779, 176)
-        Me.Item38.Name = "Item38"
-        Me.Item38.Size = New System.Drawing.Size(40, 30)
-        Me.Item38.TabIndex = 532
-        Me.Item38.TabStop = False
-        '
-        'Item37
-        '
-        Me.Item37.Image = CType(resources.GetObject("Item37.Image"), System.Drawing.Image)
-        Me.Item37.Location = New System.Drawing.Point(733, 176)
-        Me.Item37.Name = "Item37"
-        Me.Item37.Size = New System.Drawing.Size(40, 30)
-        Me.Item37.TabIndex = 531
-        Me.Item37.TabStop = False
-        '
-        'Item36
-        '
-        Me.Item36.Image = CType(resources.GetObject("Item36.Image"), System.Drawing.Image)
-        Me.Item36.Location = New System.Drawing.Point(824, 140)
-        Me.Item36.Name = "Item36"
-        Me.Item36.Size = New System.Drawing.Size(40, 30)
-        Me.Item36.TabIndex = 518
-        Me.Item36.TabStop = False
-        '
-        'Item35
-        '
-        Me.Item35.Image = CType(resources.GetObject("Item35.Image"), System.Drawing.Image)
-        Me.Item35.Location = New System.Drawing.Point(778, 140)
-        Me.Item35.Name = "Item35"
-        Me.Item35.Size = New System.Drawing.Size(40, 30)
-        Me.Item35.TabIndex = 517
-        Me.Item35.TabStop = False
-        '
-        'Item34
-        '
-        Me.Item34.Image = CType(resources.GetObject("Item34.Image"), System.Drawing.Image)
-        Me.Item34.Location = New System.Drawing.Point(733, 140)
-        Me.Item34.Name = "Item34"
-        Me.Item34.Size = New System.Drawing.Size(40, 30)
-        Me.Item34.TabIndex = 516
-        Me.Item34.TabStop = False
-        '
-        'Item33
-        '
-        Me.Item33.Image = CType(resources.GetObject("Item33.Image"), System.Drawing.Image)
-        Me.Item33.Location = New System.Drawing.Point(825, 104)
-        Me.Item33.Name = "Item33"
-        Me.Item33.Size = New System.Drawing.Size(40, 30)
-        Me.Item33.TabIndex = 515
-        Me.Item33.TabStop = False
-        '
-        'Item32
-        '
-        Me.Item32.Image = CType(resources.GetObject("Item32.Image"), System.Drawing.Image)
-        Me.Item32.Location = New System.Drawing.Point(779, 104)
-        Me.Item32.Name = "Item32"
-        Me.Item32.Size = New System.Drawing.Size(40, 30)
-        Me.Item32.TabIndex = 514
-        Me.Item32.TabStop = False
-        '
-        'Item31
-        '
-        Me.Item31.Image = CType(resources.GetObject("Item31.Image"), System.Drawing.Image)
-        Me.Item31.Location = New System.Drawing.Point(733, 104)
-        Me.Item31.Name = "Item31"
-        Me.Item31.Size = New System.Drawing.Size(40, 30)
-        Me.Item31.TabIndex = 513
-        Me.Item31.TabStop = False
+        Me.Label24.Text = "You can delete items with right clicking at the image."
         '
         'ComboBox3
         '
@@ -626,7 +496,7 @@ Partial Class FormMain
         'ListBox1
         '
         Me.ListBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Items.AddRange(New Object() {" "})
         Me.ListBox1.Location = New System.Drawing.Point(5, 50)
@@ -680,276 +550,6 @@ Partial Class FormMain
         Me.Label1.Size = New System.Drawing.Size(150, 20)
         Me.Label1.TabIndex = 332
         Me.Label1.Text = "No hero selected!"
-        '
-        'Item1
-        '
-        Me.Item1.Image = CType(resources.GetObject("Item1.Image"), System.Drawing.Image)
-        Me.Item1.Location = New System.Drawing.Point(181, 68)
-        Me.Item1.Name = "Item1"
-        Me.Item1.Size = New System.Drawing.Size(40, 30)
-        Me.Item1.TabIndex = 337
-        Me.Item1.TabStop = False
-        '
-        'Item2
-        '
-        Me.Item2.Image = CType(resources.GetObject("Item2.Image"), System.Drawing.Image)
-        Me.Item2.Location = New System.Drawing.Point(227, 68)
-        Me.Item2.Name = "Item2"
-        Me.Item2.Size = New System.Drawing.Size(40, 30)
-        Me.Item2.TabIndex = 338
-        Me.Item2.TabStop = False
-        '
-        'Item3
-        '
-        Me.Item3.Image = CType(resources.GetObject("Item3.Image"), System.Drawing.Image)
-        Me.Item3.Location = New System.Drawing.Point(273, 68)
-        Me.Item3.Name = "Item3"
-        Me.Item3.Size = New System.Drawing.Size(40, 30)
-        Me.Item3.TabIndex = 339
-        Me.Item3.TabStop = False
-        '
-        'Item4
-        '
-        Me.Item4.Image = CType(resources.GetObject("Item4.Image"), System.Drawing.Image)
-        Me.Item4.Location = New System.Drawing.Point(181, 104)
-        Me.Item4.Name = "Item4"
-        Me.Item4.Size = New System.Drawing.Size(40, 30)
-        Me.Item4.TabIndex = 340
-        Me.Item4.TabStop = False
-        '
-        'Item5
-        '
-        Me.Item5.Image = CType(resources.GetObject("Item5.Image"), System.Drawing.Image)
-        Me.Item5.Location = New System.Drawing.Point(227, 104)
-        Me.Item5.Name = "Item5"
-        Me.Item5.Size = New System.Drawing.Size(40, 30)
-        Me.Item5.TabIndex = 341
-        Me.Item5.TabStop = False
-        '
-        'Item6
-        '
-        Me.Item6.Image = CType(resources.GetObject("Item6.Image"), System.Drawing.Image)
-        Me.Item6.Location = New System.Drawing.Point(273, 104)
-        Me.Item6.Name = "Item6"
-        Me.Item6.Size = New System.Drawing.Size(40, 30)
-        Me.Item6.TabIndex = 342
-        Me.Item6.TabStop = False
-        '
-        'Item7
-        '
-        Me.Item7.Image = CType(resources.GetObject("Item7.Image"), System.Drawing.Image)
-        Me.Item7.Location = New System.Drawing.Point(181, 140)
-        Me.Item7.Name = "Item7"
-        Me.Item7.Size = New System.Drawing.Size(40, 30)
-        Me.Item7.TabIndex = 343
-        Me.Item7.TabStop = False
-        '
-        'Item8
-        '
-        Me.Item8.Image = CType(resources.GetObject("Item8.Image"), System.Drawing.Image)
-        Me.Item8.Location = New System.Drawing.Point(227, 140)
-        Me.Item8.Name = "Item8"
-        Me.Item8.Size = New System.Drawing.Size(40, 30)
-        Me.Item8.TabIndex = 344
-        Me.Item8.TabStop = False
-        '
-        'Item9
-        '
-        Me.Item9.Image = CType(resources.GetObject("Item9.Image"), System.Drawing.Image)
-        Me.Item9.Location = New System.Drawing.Point(273, 140)
-        Me.Item9.Name = "Item9"
-        Me.Item9.Size = New System.Drawing.Size(40, 30)
-        Me.Item9.TabIndex = 345
-        Me.Item9.TabStop = False
-        '
-        'Item10
-        '
-        Me.Item10.Image = CType(resources.GetObject("Item10.Image"), System.Drawing.Image)
-        Me.Item10.Location = New System.Drawing.Point(365, 68)
-        Me.Item10.Name = "Item10"
-        Me.Item10.Size = New System.Drawing.Size(40, 30)
-        Me.Item10.TabIndex = 346
-        Me.Item10.TabStop = False
-        '
-        'Item11
-        '
-        Me.Item11.Image = CType(resources.GetObject("Item11.Image"), System.Drawing.Image)
-        Me.Item11.Location = New System.Drawing.Point(411, 68)
-        Me.Item11.Name = "Item11"
-        Me.Item11.Size = New System.Drawing.Size(40, 30)
-        Me.Item11.TabIndex = 347
-        Me.Item11.TabStop = False
-        '
-        'Item12
-        '
-        Me.Item12.Image = CType(resources.GetObject("Item12.Image"), System.Drawing.Image)
-        Me.Item12.Location = New System.Drawing.Point(457, 68)
-        Me.Item12.Name = "Item12"
-        Me.Item12.Size = New System.Drawing.Size(40, 30)
-        Me.Item12.TabIndex = 348
-        Me.Item12.TabStop = False
-        '
-        'Item13
-        '
-        Me.Item13.Image = CType(resources.GetObject("Item13.Image"), System.Drawing.Image)
-        Me.Item13.Location = New System.Drawing.Point(365, 104)
-        Me.Item13.Name = "Item13"
-        Me.Item13.Size = New System.Drawing.Size(40, 30)
-        Me.Item13.TabIndex = 349
-        Me.Item13.TabStop = False
-        '
-        'Item14
-        '
-        Me.Item14.Image = CType(resources.GetObject("Item14.Image"), System.Drawing.Image)
-        Me.Item14.Location = New System.Drawing.Point(411, 104)
-        Me.Item14.Name = "Item14"
-        Me.Item14.Size = New System.Drawing.Size(40, 30)
-        Me.Item14.TabIndex = 350
-        Me.Item14.TabStop = False
-        '
-        'Item15
-        '
-        Me.Item15.Image = CType(resources.GetObject("Item15.Image"), System.Drawing.Image)
-        Me.Item15.Location = New System.Drawing.Point(457, 104)
-        Me.Item15.Name = "Item15"
-        Me.Item15.Size = New System.Drawing.Size(40, 30)
-        Me.Item15.TabIndex = 351
-        Me.Item15.TabStop = False
-        '
-        'Item16
-        '
-        Me.Item16.Image = CType(resources.GetObject("Item16.Image"), System.Drawing.Image)
-        Me.Item16.Location = New System.Drawing.Point(365, 140)
-        Me.Item16.Name = "Item16"
-        Me.Item16.Size = New System.Drawing.Size(40, 30)
-        Me.Item16.TabIndex = 352
-        Me.Item16.TabStop = False
-        '
-        'Item17
-        '
-        Me.Item17.Image = CType(resources.GetObject("Item17.Image"), System.Drawing.Image)
-        Me.Item17.Location = New System.Drawing.Point(411, 140)
-        Me.Item17.Name = "Item17"
-        Me.Item17.Size = New System.Drawing.Size(40, 30)
-        Me.Item17.TabIndex = 353
-        Me.Item17.TabStop = False
-        '
-        'Item18
-        '
-        Me.Item18.Image = CType(resources.GetObject("Item18.Image"), System.Drawing.Image)
-        Me.Item18.Location = New System.Drawing.Point(457, 140)
-        Me.Item18.Name = "Item18"
-        Me.Item18.Size = New System.Drawing.Size(40, 30)
-        Me.Item18.TabIndex = 354
-        Me.Item18.TabStop = False
-        '
-        'Item19
-        '
-        Me.Item19.Image = CType(resources.GetObject("Item19.Image"), System.Drawing.Image)
-        Me.Item19.Location = New System.Drawing.Point(549, 68)
-        Me.Item19.Name = "Item19"
-        Me.Item19.Size = New System.Drawing.Size(40, 30)
-        Me.Item19.TabIndex = 355
-        Me.Item19.TabStop = False
-        '
-        'Item20
-        '
-        Me.Item20.Image = CType(resources.GetObject("Item20.Image"), System.Drawing.Image)
-        Me.Item20.Location = New System.Drawing.Point(595, 68)
-        Me.Item20.Name = "Item20"
-        Me.Item20.Size = New System.Drawing.Size(40, 30)
-        Me.Item20.TabIndex = 356
-        Me.Item20.TabStop = False
-        '
-        'Item21
-        '
-        Me.Item21.Image = CType(resources.GetObject("Item21.Image"), System.Drawing.Image)
-        Me.Item21.Location = New System.Drawing.Point(641, 68)
-        Me.Item21.Name = "Item21"
-        Me.Item21.Size = New System.Drawing.Size(40, 30)
-        Me.Item21.TabIndex = 357
-        Me.Item21.TabStop = False
-        '
-        'Item22
-        '
-        Me.Item22.Image = CType(resources.GetObject("Item22.Image"), System.Drawing.Image)
-        Me.Item22.Location = New System.Drawing.Point(549, 104)
-        Me.Item22.Name = "Item22"
-        Me.Item22.Size = New System.Drawing.Size(40, 30)
-        Me.Item22.TabIndex = 358
-        Me.Item22.TabStop = False
-        '
-        'Item23
-        '
-        Me.Item23.Image = CType(resources.GetObject("Item23.Image"), System.Drawing.Image)
-        Me.Item23.Location = New System.Drawing.Point(595, 104)
-        Me.Item23.Name = "Item23"
-        Me.Item23.Size = New System.Drawing.Size(40, 30)
-        Me.Item23.TabIndex = 359
-        Me.Item23.TabStop = False
-        '
-        'Item24
-        '
-        Me.Item24.Image = CType(resources.GetObject("Item24.Image"), System.Drawing.Image)
-        Me.Item24.Location = New System.Drawing.Point(641, 104)
-        Me.Item24.Name = "Item24"
-        Me.Item24.Size = New System.Drawing.Size(40, 30)
-        Me.Item24.TabIndex = 360
-        Me.Item24.TabStop = False
-        '
-        'Item25
-        '
-        Me.Item25.Image = CType(resources.GetObject("Item25.Image"), System.Drawing.Image)
-        Me.Item25.Location = New System.Drawing.Point(549, 140)
-        Me.Item25.Name = "Item25"
-        Me.Item25.Size = New System.Drawing.Size(40, 30)
-        Me.Item25.TabIndex = 361
-        Me.Item25.TabStop = False
-        '
-        'Item26
-        '
-        Me.Item26.Image = CType(resources.GetObject("Item26.Image"), System.Drawing.Image)
-        Me.Item26.Location = New System.Drawing.Point(595, 140)
-        Me.Item26.Name = "Item26"
-        Me.Item26.Size = New System.Drawing.Size(40, 30)
-        Me.Item26.TabIndex = 362
-        Me.Item26.TabStop = False
-        '
-        'Item27
-        '
-        Me.Item27.Image = CType(resources.GetObject("Item27.Image"), System.Drawing.Image)
-        Me.Item27.Location = New System.Drawing.Point(641, 140)
-        Me.Item27.Name = "Item27"
-        Me.Item27.Size = New System.Drawing.Size(40, 30)
-        Me.Item27.TabIndex = 363
-        Me.Item27.TabStop = False
-        '
-        'Item28
-        '
-        Me.Item28.Image = CType(resources.GetObject("Item28.Image"), System.Drawing.Image)
-        Me.Item28.Location = New System.Drawing.Point(733, 68)
-        Me.Item28.Name = "Item28"
-        Me.Item28.Size = New System.Drawing.Size(40, 30)
-        Me.Item28.TabIndex = 364
-        Me.Item28.TabStop = False
-        '
-        'Item29
-        '
-        Me.Item29.Image = CType(resources.GetObject("Item29.Image"), System.Drawing.Image)
-        Me.Item29.Location = New System.Drawing.Point(779, 68)
-        Me.Item29.Name = "Item29"
-        Me.Item29.Size = New System.Drawing.Size(40, 30)
-        Me.Item29.TabIndex = 365
-        Me.Item29.TabStop = False
-        '
-        'Item30
-        '
-        Me.Item30.Image = CType(resources.GetObject("Item30.Image"), System.Drawing.Image)
-        Me.Item30.Location = New System.Drawing.Point(825, 68)
-        Me.Item30.Name = "Item30"
-        Me.Item30.Size = New System.Drawing.Size(40, 30)
-        Me.Item30.TabIndex = 366
-        Me.Item30.TabStop = False
         '
         'Label3
         '
@@ -1026,8 +626,8 @@ Partial Class FormMain
         'TextBox2
         '
         Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Location = New System.Drawing.Point(6, 3)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
@@ -1070,8 +670,8 @@ Partial Class FormMain
         'TextBox3
         '
         Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Location = New System.Drawing.Point(3, 3)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
@@ -1261,45 +861,6 @@ Partial Class FormMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.Item39, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item38, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item37, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item36, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item32, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item20, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item21, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item25, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item26, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item28, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item29, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Item30, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
@@ -1321,36 +882,6 @@ Partial Class FormMain
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Item1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item3 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item4 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item5 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item6 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item7 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item8 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item9 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item10 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item11 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item12 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item13 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item14 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item15 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item16 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item17 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item18 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item19 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item20 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item21 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item22 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item23 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item24 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item25 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item26 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item27 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item28 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item29 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item30 As System.Windows.Forms.PictureBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -1377,15 +908,6 @@ Partial Class FormMain
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Item36 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item35 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item34 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item33 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item32 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item31 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item39 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item38 As System.Windows.Forms.PictureBox
-    Friend WithEvents Item37 As System.Windows.Forms.PictureBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents ButtonDefaultItembuild As System.Windows.Forms.Button
@@ -1404,4 +926,8 @@ Partial Class FormMain
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Timer3 As System.Windows.Forms.Timer
+    Friend WithEvents ListView2 As System.Windows.Forms.ListView
+    Friend WithEvents ListView3 As System.Windows.Forms.ListView
+    Friend WithEvents ListView5 As System.Windows.Forms.ListView
+    Friend WithEvents ListView4 As System.Windows.Forms.ListView
 End Class

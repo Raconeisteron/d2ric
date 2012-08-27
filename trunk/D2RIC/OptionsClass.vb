@@ -77,8 +77,17 @@ Public Class OptionsClass
             End Try
         End If
         If IO.Directory.Exists(My.Settings.path & "\Backup") Then
+            Try
+                IO.Directory.CreateDirectory(My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString)
+                ' Ordner wurde korrekt erstellt!
+            Catch ex As Exception
+                ' Ordner wurde nich erstellt
+                MessageBox.Show("Error while creating folder")
+            End Try
+        End If
+        If IO.Directory.Exists(My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString) Then
             For Each file As String In IO.Directory.GetFiles(My.Settings.path) ' Get all files in the folder
-                IO.File.Copy(file, My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "_" & Replace(cut_file(file), "default_", ""), True)  ' Copy the files
+                IO.File.Copy(file, My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "\" & cut_file(file), True)  ' Copy the files
             Next
         End If
     End Sub
@@ -87,6 +96,9 @@ Public Class OptionsClass
     Public Sub DeleteBackup()
         If MessageBox.Show("Delete backups?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             If IO.Directory.Exists(My.Settings.path & "\Backup") Then
+                For Each folder As String In IO.Directory.GetDirectories(My.Settings.path & "\Backup") ' Get all folder
+                    IO.Directory.Delete(folder, True) ' Delete the folder
+                Next
                 For Each file As String In IO.Directory.GetFiles(My.Settings.path & "\Backup") ' Get all files in the folder
                     If Not file.Contains("default") Then
                         IO.File.Delete(file)  ' Delete the files
