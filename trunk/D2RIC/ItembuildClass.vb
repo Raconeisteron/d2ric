@@ -158,143 +158,54 @@ Public Class ItembuildClass
             Dim item131 As New ListViewItem(New String() {"Void Stone", "Secret Shop", "PLACEHOLDER"}, 131)
             Dim item132 As New ListViewItem(New String() {"Wraith Band", "Common", "PLACEHOLDER"}, 132)
             Dim item133 As New ListViewItem(New String() {"Yasha", "Artifacts", "PLACEHOLDER"}, 133)
-            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133})
+            Dim item134 As New ListViewItem(New String() {"Wraith Band (Recipe)", "Common", "PLACEHOLDER"}, 134)
+            Dim item135 As New ListViewItem(New String() {"Bracer (Recipe)", "Common", "PLACEHOLDER"}, 134)
+            Dim item136 As New ListViewItem(New String() {"Null Talisman (Recipe)", "Common", "PLACEHOLDER"}, 134)
+            Dim item137 As New ListViewItem(New String() {"Magic Wand (Recipe)", "Common", "PLACEHOLDER"}, 134)
+            Dim item138 As New ListViewItem(New String() {"Hand of Midas (Recipe)", "Common", "PLACEHOLDER"}, 134)
+            Dim item139 As New ListViewItem(New String() {"Soul Ring (Recipe)", "Common", "PLACEHOLDER"}, 134)
+            Dim item140 As New ListViewItem(New String() {"Boots of Travel (Recipe)", "Common", "PLACEHOLDER"}, 134)
+            Dim item141 As New ListViewItem(New String() {"Headdress (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item142 As New ListViewItem(New String() {"Buckler (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item143 As New ListViewItem(New String() {"Urn of Shadows (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item144 As New ListViewItem(New String() {"Mekansm (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item145 As New ListViewItem(New String() {"Medallion of Courage (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item146 As New ListViewItem(New String() {"Vladmir's Offering (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item147 As New ListViewItem(New String() {"Pipe of Insight (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item148 As New ListViewItem(New String() {"Drum of Endurance (Recipe)", "Support", "PLACEHOLDER"}, 134)
+            Dim item149 As New ListViewItem(New String() {"Necronomicon (Recipe)", "Caster", "PLACEHOLDER"}, 134)
+            Dim item150 As New ListViewItem(New String() {"Eul's Scepter of Divinity (Recipe)", "Caster", "PLACEHOLDER"}, 134)
+            Dim item151 As New ListViewItem(New String() {"Dagon (Recipe)", "Caster", "PLACEHOLDER"}, 134)
+            Dim item152 As New ListViewItem(New String() {"Veil of Discord (Recipe)", "Caster", "PLACEHOLDER"}, 134)
+            Dim item153 As New ListViewItem(New String() {"Orchid Malevolence (Recipe)", "Caster", "PLACEHOLDER"}, 134)
+            Dim item154 As New ListViewItem(New String() {"Refresher Orb (Recipe)", "Caster", "PLACEHOLDER"}, 134)
+            Dim item155 As New ListViewItem(New String() {"Force Staff (Recipe)", "Caster", "PLACEHOLDER"}, 134)
+            Dim item156 As New ListViewItem(New String() {"Armlet (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
+            Dim item157 As New ListViewItem(New String() {"Crystalys (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
+            Dim item158 As New ListViewItem(New String() {"Daedalus (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
+            Dim item159 As New ListViewItem(New String() {"Skull Basher (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
+            Dim item160 As New ListViewItem(New String() {"Shadow Blade (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
+            Dim item161 As New ListViewItem(New String() {"Radiance (Recipe)", "Weapons", "PLACEHOLDER"}, 134)
+            Dim item162 As New ListViewItem(New String() {"Black King Bar (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item163 As New ListViewItem(New String() {"Assault Cuirass (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item164 As New ListViewItem(New String() {"Manta Style (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item165 As New ListViewItem(New String() {"Shiva's Guard (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item166 As New ListViewItem(New String() {"Linken's Sphere (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item167 As New ListViewItem(New String() {"Heart of Tarrasque (Recipe)", "Armor", "PLACEHOLDER"}, 134)
+            Dim item168 As New ListViewItem(New String() {"Desolator (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item169 As New ListViewItem(New String() {"Mjollnir (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item170 As New ListViewItem(New String() {"Satanic (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item171 As New ListViewItem(New String() {"Yasha (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item172 As New ListViewItem(New String() {"Diffusal Blade (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item173 As New ListViewItem(New String() {"Sange (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item174 As New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            Dim item175 As New ListViewItem(New String() {"Maelstrom (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133, item134, item135, item136, item137, item138, item139, item140, item141, item142, item143, item144, item145, item146, item147, item148, item149, item150, item151, item152, item153, item154, item155, item156, item157, item158, item159, item160, item161, item162, item163, item164, item165, item166, item167, item168, item169, item170, item171, item172, item173, item174, item175})
 
             'Add Tooltips to Listview
-            .Items(0).ToolTipText = "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)"
-            .Items(1).ToolTipText = "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)"
-            .Items(2).ToolTipText = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
-            .Items(3).ToolTipText = "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
-            .Items(4).ToolTipText = "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)"
-            .Items(5).ToolTipText = "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)"
-            .Items(6).ToolTipText = "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave"
-            .Items(7).ToolTipText = "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength"
-            .Items(8).ToolTipText = "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)"
-            .Items(9).ToolTipText = "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)"
-            .Items(10).ToolTipText = "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility"
-            .Items(11).ToolTipText = "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage"
-            .Items(12).ToolTipText = "Blink Dagger" + vbNewLine + vbNewLine + "Blink"
-            .Items(13).ToolTipText = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
-            .Items(14).ToolTipText = "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility"
-            .Items(15).ToolTipText = "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed"
-            .Items(16).ToolTipText = "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)"
-            .Items(17).ToolTipText = "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture"
-            .Items(18).ToolTipText = "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence"
-            .Items(19).ToolTipText = "Broadsword" + vbNewLine + vbNewLine + "+18 Damage"
-            .Items(20).ToolTipText = "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)"
-            .Items(21).ToolTipText = "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed"
-            .Items(22).ToolTipText = "Chainmail" + vbNewLine + vbNewLine + "+5 Armor"
-            .Items(23).ToolTipText = "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes"
-            .Items(24).ToolTipText = "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges"
-            .Items(25).ToolTipText = "Claymore" + vbNewLine + vbNewLine + "+21 Damage"
-            .Items(26).ToolTipText = "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance"
-            .Items(27).ToolTipText = "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike"
-            .Items(28).ToolTipText = "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike"
-            .Items(29).ToolTipText = "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-            .Items(30).ToolTipText = "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-            .Items(31).ToolTipText = "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-            .Items(32).ToolTipText = "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-            .Items(33).ToolTipText = "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-            .Items(34).ToolTipText = "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage"
-            .Items(35).ToolTipText = "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption"
-            .Items(36).ToolTipText = "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
-            .Items(37).ToolTipText = "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
-            .Items(38).ToolTipText = "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage"
-            .Items(39).ToolTipText = "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges"
-            .Items(40).ToolTipText = "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges"
-            .Items(41).ToolTipText = "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility"
-            .Items(42).ToolTipText = "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana"
-            .Items(43).ToolTipText = "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)"
-            .Items(44).ToolTipText = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)"
-            .Items(45).ToolTipText = "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack"
-            .Items(46).ToolTipText = "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier"
-            .Items(47).ToolTipText = "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)"
-            .Items(48).ToolTipText = "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength"
-            .Items(49).ToolTipText = "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight"
-            .Items(50).ToolTipText = "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)"
-            .Items(51).ToolTipText = "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed"
-            .Items(52).ToolTipText = "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)"
-            .Items(53).ToolTipText = "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura"
-            .Items(54).ToolTipText = "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges"
-            .Items(55).ToolTipText = "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration"
-            .Items(56).ToolTipText = "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)"
-            .Items(57).ToolTipText = "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration"
-            .Items(58).ToolTipText = "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)"
-            .Items(59).ToolTipText = "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration"
-            .Items(60).ToolTipText = "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed"
-            .Items(61).ToolTipText = "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes"
-            .Items(62).ToolTipText = "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage"
-            .Items(63).ToolTipText = "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block"
-            .Items(64).ToolTipText = "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning"
-            .Items(65).ToolTipText = "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)"
-            .Items(66).ToolTipText = "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)"
-            .Items(67).ToolTipText = "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)"
-            .Items(68).ToolTipText = "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence"
-            .Items(69).ToolTipText = "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)"
-            .Items(70).ToolTipText = "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)"
-            .Items(71).ToolTipText = "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)"
-            .Items(72).ToolTipText = "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage"
-            .Items(73).ToolTipText = "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)"
-            .Items(74).ToolTipText = "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash"
-            .Items(75).ToolTipText = "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal"
-            .Items(76).ToolTipText = "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence"
-            .Items(77).ToolTipText = "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)"
-            .Items(78).ToolTipText = "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)"
-            .Items(79).ToolTipText = "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)"
-            .Items(80).ToolTipText = "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility"
-            .Items(81).ToolTipText = "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration"
-            .Items(82).ToolTipText = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges"
-            .Items(83).ToolTipText = "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength"
-            .Items(84).ToolTipText = "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack"
-            .Items(85).ToolTipText = "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)"
-            .Items(86).ToolTipText = "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration"
-            .Items(87).ToolTipText = "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
-            .Items(88).ToolTipText = "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)"
-            .Items(89).ToolTipText = "Platemail" + vbNewLine + vbNewLine + "+10 Armor"
-            .Items(90).ToolTipText = "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana"
-            .Items(91).ToolTipText = "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block"
-            .Items(92).ToolTipText = "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
-            .Items(93).ToolTipText = "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed"
-            .Items(94).ToolTipText = "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)"
-            .Items(95).ToolTipText = "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage"
-            .Items(96).ToolTipText = "Reaver" + vbNewLine + vbNewLine + "+25 Strength"
-            .Items(97).ToolTipText = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
-            .Items(98).ToolTipText = "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura"
-            .Items(99).ToolTipText = "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura"
-            .Items(100).ToolTipText = "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration"
-            .Items(101).ToolTipText = "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor"
-            .Items(102).ToolTipText = "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration"
-            .Items(103).ToolTipText = "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence"
-            .Items(104).ToolTipText = "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)"
-            .Items(105).ToolTipText = "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage"
-            .Items(106).ToolTipText = "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration"
-            .Items(107).ToolTipText = "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim"
-            .Items(108).ToolTipText = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim"
-            .Items(109).ToolTipText = "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "Lifesteal" + vbNewLine + "Unholy Rage (active)"
-            .Items(110).ToolTipText = "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)"
-            .Items(111).ToolTipText = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight" + vbNewLine + "2 Charges"
-            .Items(112).ToolTipText = "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)"
-            .Items(113).ToolTipText = "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)"
-            .Items(114).ToolTipText = "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash"
-            .Items(115).ToolTipText = "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility"
-            .Items(116).ToolTipText = "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges"
-            .Items(117).ToolTipText = "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration"
-            .Items(118).ToolTipText = "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)"
-            .Items(119).ToolTipText = "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence"
-            .Items(120).ToolTipText = "Stout Shield" + vbNewLine + vbNewLine + "Damage Block"
-            .Items(121).ToolTipText = "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion"
-            .Items(122).ToolTipText = "Tango" + vbNewLine + vbNewLine + "Eat Tree (active)" + vbNewLine + "3 Charges"
-            .Items(123).ToolTipText = "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport (active)" + vbNewLine + "1 Charges"
-            .Items(124).ToolTipText = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
-            .Items(125).ToolTipText = "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes"
-            .Items(126).ToolTipText = "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)"
-            .Items(127).ToolTipText = "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+250 HP" + vbNewLine + "Damage Block"
-            .Items(128).ToolTipText = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)"
-            .Items(129).ToolTipText = "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP"
-            .Items(130).ToolTipText = "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura"
-            .Items(131).ToolTipText = "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration"
-            .Items(132).ToolTipText = "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence"
-            .Items(133).ToolTipText = "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed"
+            For i = 0 To .Items.Count - 1
+                .Items(i).ToolTipText = GetToolTip(.Items(i).Text)
+            Next
         End With
     End Sub
 
@@ -496,16 +407,16 @@ Public Class ItembuildClass
             Dim a As Integer = 1
 
             For i = 0 To (FormMain.ListView2.Items.Count - 1)
-                StartingItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView2.Items(i).SubItems(1).Text)
+                StartingItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView2.Items(i).SubItems(1).Text) & """"
             Next
             For i = 0 To (FormMain.ListView3.Items.Count - 1)
-                Earlygame &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView3.Items(i).SubItems(1).Text)
+                Earlygame &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView3.Items(i).SubItems(1).Text) & """"
             Next
             For i = 0 To (FormMain.ListView4.Items.Count - 1)
-                CoreItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView4.Items(i).SubItems(1).Text)
+                CoreItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView4.Items(i).SubItems(1).Text) & """"
             Next
             For i = 0 To (FormMain.ListView5.Items.Count - 1)
-                Luxury &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & FormMain.GetItem(FormMain.ListView5.Items(i).SubItems(1).Text)
+                Luxury &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView5.Items(i).SubItems(1).Text) & """"
             Next
 
             NewText &= vbTab & vbTab & "{"
@@ -1331,409 +1242,408 @@ Public Class ItembuildClass
         Select Case item_name
             Case "Blink Dagger"
                 tooltip = "Blink Dagger" + vbNewLine + vbNewLine + "Blink"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Blades of Attack"
                 tooltip = "Blades of Attack" + vbNewLine + vbNewLine + "+9 Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Aghanim's Scepter"
                 tooltip = "Aghanim's Scepter" + vbNewLine + vbNewLine + "+10 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Ultimate Upgrade (passive)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Animal Courier"
                 tooltip = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Arcane Boots"
                 tooltip = "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Armlet"
                 tooltip = "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Assault Cuirass"
                 tooltip = "Assault Cuirass" + vbNewLine + vbNewLine + "+10 Armor" + vbNewLine + "+35 Attack Speed" + vbNewLine + "Positive Armor (Aura)" + vbNewLine + "Negative Armor (Aura)" + vbNewLine + "Attack Speed (Aura)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Battle Fury"
                 tooltip = "Battle Fury" + vbNewLine + vbNewLine + "+65 Damage" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Cleave"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Belt of Strength"
                 tooltip = "Belt of Strength" + vbNewLine + vbNewLine + "+6 Strength"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Black King Bar"
                 tooltip = "Black King Bar" + vbNewLine + vbNewLine + "+10 Strength" + vbNewLine + "+24 Damage" + vbNewLine + "Avatar (active)"""
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Blade Mail"
                 tooltip = "Blade Mail" + vbNewLine + vbNewLine + "+22 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+10 Intelligence" + vbNewLine + "Damage Return (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Blade of Alacrity"
                 tooltip = "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Bloodstone"
                 tooltip = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Boots of Elvenskin"
                 tooltip = "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Boots of Speed"
                 tooltip = "Boots of Speed" + vbNewLine + vbNewLine + "+55 Movement Speed"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Boots of Travel"
                 tooltip = "Boots of Travel" + vbNewLine + vbNewLine + "+95 Movement Speed" + vbNewLine + "Teleport (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Bottle"
                 tooltip = "Bottle" + vbNewLine + vbNewLine + "Regenerate" + vbNewLine + "Rune Capture"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Bracer"
                 tooltip = "Bracer" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Intelligence"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Broadsword"
                 tooltip = "Broadsword" + vbNewLine + vbNewLine + "+18 Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Buckler"
                 tooltip = "Buckler" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+2 All Attributes" + vbNewLine + "Armor Bonus (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Butterfly"
                 tooltip = "Butterfly" + vbNewLine + vbNewLine + "+30 Agility" + vbNewLine + "+30 Damage" + vbNewLine + "30% Evasion" + vbNewLine + "+30 Attack Speed"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Chainmail"
                 tooltip = "Chainmail" + vbNewLine + vbNewLine + "+5 Armor"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Circlet"
                 tooltip = "Circlet" + vbNewLine + vbNewLine + "+2 All Attributes"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Clarity"
                 tooltip = "Clarity" + vbNewLine + vbNewLine + "Regenerate Mana" + vbNewLine + "1 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Claymore"
                 tooltip = "Claymore" + vbNewLine + vbNewLine + "+21 Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Cloak"
                 tooltip = "Cloak" + vbNewLine + vbNewLine + "+15% Magic Resistance"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Crystalys"
                 tooltip = "Crystalys" + vbNewLine + vbNewLine + "+35 Damage" + vbNewLine + "Critical Strike"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Daedalus"
                 tooltip = "Daedalus" + vbNewLine + vbNewLine + "+81 Damage" + vbNewLine + "Critical Strike"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Dagon 1"
                 tooltip = "Dagon 1" + vbNewLine + vbNewLine + "+13 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Dagon 2"
                 tooltip = "Dagon 2" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Dagon 3"
                 tooltip = "Dagon 3" + vbNewLine + vbNewLine + "+17 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Dagon 4"
                 tooltip = "Dagon 4" + vbNewLine + vbNewLine + "+19 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Dagon 5"
                 tooltip = "Dagon 5" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+3 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Energy Burst (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Demon Edge"
                 tooltip = "Demon Edge" + vbNewLine + vbNewLine + "+46 Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Desolator"
                 tooltip = "Desolator" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Corruption"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Diffusal Blade 1"
                 tooltip = "Diffusal Blade 1" + vbNewLine + vbNewLine + "+22 Agility" + vbNewLine + "+6 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Diffusal Blade 2"
                 tooltip = "Diffusal Blade 2" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Intelligence" + vbNewLine + "Feedback" + vbNewLine + "Purge (active)" + vbNewLine + "8 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Divine Rapier"
                 tooltip = "Divine Rapier" + vbNewLine + vbNewLine + "+250 Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Drum of Endurance"
                 tooltip = "Drum of Endurance" + vbNewLine + vbNewLine + "+9 All Attributes" + vbNewLine + "+9 Damage" + vbNewLine + "Endurance Aura" + vbNewLine + "Endurance (active)" + vbNewLine + "4 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Dust of Appearance"
                 tooltip = "Dust of Appearance" + vbNewLine + vbNewLine + "Reveal" + vbNewLine + "2 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Eaglesong"
                 tooltip = "Eaglesong" + vbNewLine + vbNewLine + "+25 Agility"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Energy Booster"
                 tooltip = "Energy Booster" + vbNewLine + vbNewLine + "+250 Mana"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ethereal Blade"
                 tooltip = "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Eul's Scepter of Divinity"
                 tooltip = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Eye of Skadi"
                 tooltip = "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Flying Courier"
                 tooltip = "Flying Courier" + vbNewLine + vbNewLine + "Summon Flying Courier"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Force Staff"
                 tooltip = "Force Staff" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Force (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Gauntlets of Strength"
                 tooltip = "Gauntlets of Strength" + vbNewLine + vbNewLine + "+3 Strength"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Gem of True Sight"
                 tooltip = "Gem of True Sight" + vbNewLine + vbNewLine + "True Sight"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ghost Scepter"
                 tooltip = "Ghost Scepter" + vbNewLine + vbNewLine + "+7 All Attributes" + vbNewLine + "Ghost Form (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Gloves of Haste"
                 tooltip = "Gloves of Haste" + vbNewLine + vbNewLine + "+15 Attack Speed"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Hand of Midas"
                 tooltip = "Hand of Midas" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Transmute (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Headdress"
                 tooltip = "Headdress" + vbNewLine + vbNewLine + "+2 All Attributes" + vbNewLine + "Regeneration Aura"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Healing Salve"
                 tooltip = "Healing Salve" + vbNewLine + vbNewLine + "Regenerate Health" + vbNewLine + "1 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Heart of Tarrasque"
                 tooltip = "Heart of Tarrasque" + vbNewLine + vbNewLine + "+40 Strength" + vbNewLine + "+300 HP" + vbNewLine + "Health Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Helm of Iron Will"
                 tooltip = "Helm of Iron Will" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+3 HP/sec Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Helm of the Dominator"
                 tooltip = "Helm of the Dominator" + vbNewLine + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+15% Lifesteal" + vbNewLine + "Dominate (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Hood of Defiance"
                 tooltip = "Hood of Defiance" + vbNewLine + vbNewLine + "+30% Magic Resistance" + vbNewLine + "+8 HP/sec Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Hyperstone"
                 tooltip = "Hyperstone" + vbNewLine + vbNewLine + "+55 Attack Speed"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Iron Branch"
                 tooltip = "Iron Branch" + vbNewLine + vbNewLine + "+1 All Attributes"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Javelin"
                 tooltip = "Javelin" + vbNewLine + vbNewLine + "+21 Damage" + vbNewLine + "20% chance to deal 40 bonus damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Linken's Sphere"
                 tooltip = "Linken's Sphere" + vbNewLine + vbNewLine + "+15 All Attributes" + vbNewLine + "+6 HP/sec Regeneration" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Spell Block"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Maelstrom"
                 tooltip = "Maelstrom" + vbNewLine + vbNewLine + "+24 Damage" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Chain Lightning"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Magic Stick"
                 tooltip = "Magic Stick" + vbNewLine + vbNewLine + "Energy Charge (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Magic Wand"
                 tooltip = "Magic Wand" + vbNewLine + vbNewLine + "+3 All Attributes" + vbNewLine + "Energy Charge (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Manta Style"
                 tooltip = "Manta Style" + vbNewLine + vbNewLine + "+26 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed" + vbNewLine + "Mirror Image (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Mantle of Intelligence"
                 tooltip = "Mantle of Intelligence" + vbNewLine + vbNewLine + "+3 Intelligence"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Mask of Madness"
                 tooltip = "Mask of Madness" + vbNewLine + vbNewLine + "+17% Lifesteal" + vbNewLine + "Berserk (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Medallion of Courage"
                 tooltip = "Medallion of Courage" + vbNewLine + vbNewLine + "+6 Armor" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Valor (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Mekansm"
                 tooltip = "Mekansm" + vbNewLine + vbNewLine + "+5 All Attributes" + vbNewLine + "+5 Armor" + vbNewLine + "Mekansm Aura" + vbNewLine + "Restore (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Mithril Hammer"
                 tooltip = "Mithril Hammer" + vbNewLine + vbNewLine + "+24 Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Mjollnir"
                 tooltip = "Mjollnir" + vbNewLine + vbNewLine + "+80 Attack Speed" + vbNewLine + "+24 Damage" + vbNewLine + "Chain Lightning" + vbNewLine + "Static Charge (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Monkey King Bar"
                 tooltip = "Monkey King Bar" + vbNewLine + vbNewLine + "+88 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "True Strike" + vbNewLine + "Mini-Bash"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Morbid Mask"
                 tooltip = "Morbid Mask" + vbNewLine + vbNewLine + "+15% Lifesteal"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Mystic Staff"
                 tooltip = "Mystic Staff" + vbNewLine + vbNewLine + "+25 Intelligence"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Necronomicon 1"
                 tooltip = "Necronomicon 1" + vbNewLine + vbNewLine + "+15 Intelligence" + vbNewLine + "+8 Strength" + vbNewLine + "Demonic Summoning (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Necronomicon 2"
                 tooltip = "Necronomicon 2" + vbNewLine + vbNewLine + "+21 Intelligence" + vbNewLine + "+12 Strength" + vbNewLine + "Demonic Summoning (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Necronomicon 3"
                 tooltip = "Necronomicon 3" + vbNewLine + vbNewLine + "+24 Intelligence" + vbNewLine + "+16 Strength" + vbNewLine + "Demonic Summoning (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Null Talisman"
                 tooltip = "Null Talisman" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Oblivion Staff"
                 tooltip = "Oblivion Staff" + vbNewLine + vbNewLine + "+6 Intelligence" + vbNewLine + "+10 Attack Speed" + vbNewLine + "+15 Damage" + vbNewLine + "+75% Mana Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Observer Ward"
                 tooltip = "Observer Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "2 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ogre Club"
                 tooltip = "Ogre Club" + vbNewLine + vbNewLine + "+10 Strength"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Orb of Venom"
                 tooltip = "Orb of Venom" + vbNewLine + vbNewLine + "Poison Attack"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Orchid Malevolence"
                 tooltip = "Orchid Malevolence" + vbNewLine + vbNewLine + "+20 Intelligence" + vbNewLine + "+30 Attack Speed" + vbNewLine + "+45 Damage" + vbNewLine + "+225% Mana Regeneration" + vbNewLine + "Soul Burn (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Perseverance"
                 tooltip = "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Phase Boots"
                 tooltip = "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Pipe of Insight"
                 tooltip = "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Platemail"
                 tooltip = "Platemail" + vbNewLine + vbNewLine + "+10 Armor"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Point Booster"
                 tooltip = "Point Booster" + vbNewLine + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Poor Man's Shield"
                 tooltip = "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Power Treads"
                 tooltip = "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Quarterstaff"
                 tooltip = "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Quelling Blade"
                 tooltip = "Quelling Blade" + vbNewLine + vbNewLine + "Demolish" + vbNewLine + "Tree Chop (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Radiance"
                 tooltip = "Radiance" + vbNewLine + vbNewLine + "+60 Damage" + vbNewLine + "Burn Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Reaver"
                 tooltip = "Reaver" + vbNewLine + vbNewLine + "+25 Strength"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Refresher Orb"
                 tooltip = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Basilius"
                 tooltip = "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Health"
                 tooltip = "Ring of Health" + vbNewLine + vbNewLine + "+5 HP/sec Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Protection"
                 tooltip = "Ring of Protection" + vbNewLine + vbNewLine + "+2 Armor"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Regen"
                 tooltip = "Ring of Regen" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Robe of the Magi"
                 tooltip = "Robe of the Magi" + vbNewLine + vbNewLine + "+6 Intelligence"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Sacred Relic"
                 tooltip = "Sacred Relic" + vbNewLine + vbNewLine + "+60 Damage"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Sage's Mask"
                 tooltip = "Sage's Mask" + vbNewLine + vbNewLine + "+50% Mana Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Sange"
                 tooltip = "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Sange and Yasha"
                 tooltip = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Satanic"
                 tooltip = "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+25% Lifesteal" + vbNewLine + "Unholy Rage (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Scythe of Vyse"
                 tooltip = "Scythe of Vyse" + vbNewLine + vbNewLine + "+35 Intelligence" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Agility" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "Hex (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Sentry Ward"
                 tooltip = "Sentry Ward" + vbNewLine + vbNewLine + "Place Ward" + vbNewLine + "950 Radius True Sight " + vbNewLine + "2 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Shadow Blade"
                 tooltip = "Shadow Blade" + vbNewLine + vbNewLine + "+38 Damage" + vbNewLine + "+10 Attack Speed" + vbNewLine + "Shadow Walk (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Shiva's Guard"
                 tooltip = "Shiva's Guard" + vbNewLine + vbNewLine + "+30 Intelligence" + vbNewLine + "+15 Armor" + vbNewLine + "Freezing Aura" + vbNewLine + "Arctic Blast (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Skull Basher"
                 tooltip = "Skull Basher" + vbNewLine + vbNewLine + "+40 Damage" + vbNewLine + "+6 Strength" + vbNewLine + "Bash"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Slippers of Agility"
                 tooltip = "Slippers of Agility" + vbNewLine + vbNewLine + "+3 Agility"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Smoke of Deceit"
                 tooltip = "Smoke of Deceit" + vbNewLine + vbNewLine + "Smoke of Deceit (active)" + vbNewLine + "1 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Soul Booster"
                 tooltip = "Soul Booster" + vbNewLine + vbNewLine + "+450 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+4 HP/sec Regeneration" + vbNewLine + "+100% Mana Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Soul Ring"
                 tooltip = "Soul Ring" + vbNewLine + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "Sacrifice (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Staff of Wizardry"
                 tooltip = "Staff of Wizardry" + vbNewLine + vbNewLine + "+10 Intelligence"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Stout Shield"
                 tooltip = "Stout Shield" + vbNewLine + vbNewLine + "Damage Block"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Talisman of Evasion"
                 tooltip = "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Tango"
                 tooltip = "Tango" + vbNewLine + vbNewLine + "Eat Tree" + vbNewLine + "3 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Town Portal Scroll"
                 tooltip = "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport" + vbNewLine + "1 Charges"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ultimate Orb"
                 tooltip = "Ultimate Orb" + vbNewLine + vbNewLine + "+10 All Attributes"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Urn of Shadows"
                 tooltip = "Urn of Shadows" + vbNewLine + vbNewLine + "+50% Mana Regeneration" + vbNewLine + "+6 Strength" + vbNewLine + "Soul Release (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Vanguard"
                 tooltip = "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+275 HP" + vbNewLine + "Damage Block"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Veil of Discord"
                 tooltip = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Vitality Booster"
                 tooltip = "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Vladmir's Offering"
                 tooltip = "Vladmir's Offering" + vbNewLine + vbNewLine + "+2 HP/sec Regeneration" + vbNewLine + "Vampiric Aura" + vbNewLine + "Damage Aura" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Regeneration Aura"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Void Stone"
                 tooltip = "Void Stone" + vbNewLine + vbNewLine + "+100% Mana Regeneration"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Wraith Band"
                 tooltip = "Wraith Band" + vbNewLine + vbNewLine + "+3 Damage" + vbNewLine + "+6 Agility" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Intelligence"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Yasha"
                 tooltip = "Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+10% Movement Speed"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Abyssal Blade"
                 tooltip = "Abyssal Blade" + vbNewLine + vbNewLine + "+100 Damage" + vbNewLine + "+10 Strength" + vbNewLine + "Bash" + vbNewLine + "Overwhelm (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Heaven's Halberd"
                 tooltip = "Heaven's Halberd" + vbNewLine + vbNewLine + "+25 Damage" + vbNewLine + "+20 Strength" + vbNewLine + "+25 Evasion" + vbNewLine + "Lesser Maim" + vbNewLine + "Disarm (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Aquila"
                 tooltip = "Ring of Aquila" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+3 All Stats" + vbNewLine + "+3 Agility" + vbNewLine + "+1 Armor" + vbNewLine + "Armor Aura" + vbNewLine + "Mana Aura"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Rod of Atos"
                 tooltip = "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Tranquil Boots"
                 tooltip = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
-                Return tooltip
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case Else
-                tooltip = "Error!"
-                Return tooltip
+                Return item_name + vbNewLine + vbNewLine + "Price: " + GetPrice(item_name).ToString
         End Select
     End Function
 
@@ -2010,6 +1920,90 @@ Public Class ItembuildClass
                 Return 485
             Case "Yasha"
                 Return 2150
+            Case "Wraith Band (Recipe)"
+                Return 150
+            Case "Bracer (Recipe)"
+                Return 190
+            Case "Null Talisman (Recipe)"
+                Return 170
+            Case "Magic Wand (Recipe)"
+                Return 150
+            Case "Hand of Midas (Recipe)"
+                Return 1400
+            Case "Soul Ring (Recipe)"
+                Return 125
+            Case "Boots of Travel (Recipe)"
+                Return 2000
+            Case "Headdress (Recipe)"
+                Return 200
+            Case "Buckler (Recipe)"
+                Return 200
+            Case "Urn of Shadows (Recipe)"
+                Return 250
+            Case "Mekansm (Recipe)"
+                Return 900
+            Case "Medallion of Courage (Recipe)"
+                Return 200
+            Case "Vladmir's Offering (Recipe)"
+                Return 300
+            Case "Pipe of Insight (Recipe)"
+                Return 900
+            Case "Drum of Endurance (Recipe)"
+                Return 750
+            Case "Necronomicon (Recipe)"
+                Return 1250
+            Case "Eul's Scepter of Divinity (Recipe)"
+                Return 600
+            Case "Dagon (Recipe)"
+                Return 1300
+            Case "Veil of Discord (Recipe)"
+                Return 1250
+            Case "Orchid Malevolence (Recipe)"
+                Return 775
+            Case "Refresher Orb (Recipe)"
+                Return 1875
+            Case "Force Staff (Recipe)"
+                Return 300
+            Case "Armlet (Recipe)"
+                Return 700
+            Case "Crystalys (Recipe)"
+                Return 500
+            Case "Daedalus (Recipe)"
+                Return 1200
+            Case "Skull Basher (Recipe)"
+                Return 1000
+            Case "Shadow Blade (Recipe)"
+                Return 1000
+            Case "Radiance (Recipe)"
+                Return 1350
+            Case "Black King Bar (Recipe)"
+                Return 1300
+            Case "Assault Cuirass (Recipe)"
+                Return 1300
+            Case "Manta Style (Recipe)"
+                Return 650
+            Case "Shiva's Guard (Recipe)"
+                Return 600
+            Case "Linken's Sphere (Recipe)"
+                Return 1325
+            Case "Heart of Tarrasque (Recipe)"
+                Return 1200
+            Case "Desolator (Recipe)"
+                Return 900
+            Case "Mjollnir (Recipe)"
+                Return 600
+            Case "Satanic (Recipe)"
+                Return 1100
+            Case "Yasha (Recipe)"
+                Return 700
+            Case "Diffusal Blade (Recipe)"
+                Return 850
+            Case "Sange (Recipe)"
+                Return 700
+            Case "Mask of Madness (Recipe)"
+                Return 1000
+            Case "Maelstrom (Recipe)"
+                Return 600
             Case Else
                 Return 0
         End Select

@@ -93,8 +93,8 @@ Partial Class FormMain
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
@@ -166,7 +166,7 @@ Partial Class FormMain
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList1.Images.SetKeyName(0, "40px-Abyssal_Blade.png")
         Me.ImageList1.Images.SetKeyName(1, "40px-Aghanim's_Scepter.png")
-        Me.ImageList1.Images.SetKeyName(2, "40px-Animal_Courier.png")
+        Me.ImageList1.Images.SetKeyName(2, "40px-Animal_Courier_(Radiant).png")
         Me.ImageList1.Images.SetKeyName(3, "40px-Arcane_Boots.png")
         Me.ImageList1.Images.SetKeyName(4, "40px-Armlet_of_Mordiggian.png")
         Me.ImageList1.Images.SetKeyName(5, "40px-Assault_Cuirass.png")
@@ -178,7 +178,7 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(11, "40px-Blades_of_Attack.png")
         Me.ImageList1.Images.SetKeyName(12, "40px-Blink_Dagger.png")
         Me.ImageList1.Images.SetKeyName(13, "40px-Bloodstone.png")
-        Me.ImageList1.Images.SetKeyName(14, "40px-Boots_of_Elvenskin.png")
+        Me.ImageList1.Images.SetKeyName(14, "40px-Band_of_Elvenskin.png")
         Me.ImageList1.Images.SetKeyName(15, "40px-Boots_of_Speed.png")
         Me.ImageList1.Images.SetKeyName(16, "40px-Boots_of_Travel.png")
         Me.ImageList1.Images.SetKeyName(17, "40px-Bottle.png")
@@ -210,7 +210,7 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(43, "40px-Ethereal_Blade.png")
         Me.ImageList1.Images.SetKeyName(44, "40px-Eul's_Scepter_of_Divinity.png")
         Me.ImageList1.Images.SetKeyName(45, "40px-Eye_of_Skadi.png")
-        Me.ImageList1.Images.SetKeyName(46, "40px-Flying_Courier.png")
+        Me.ImageList1.Images.SetKeyName(46, "40px-Flying_Courier_(Radiant).png")
         Me.ImageList1.Images.SetKeyName(47, "40px-Force_Staff.png")
         Me.ImageList1.Images.SetKeyName(48, "40px-Gauntlets_of_Strength.png")
         Me.ImageList1.Images.SetKeyName(49, "40px-Gem_of_True_Sight.png")
@@ -298,6 +298,7 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(131, "40px-Void_Stone.png")
         Me.ImageList1.Images.SetKeyName(132, "40px-Wraith_Band.png")
         Me.ImageList1.Images.SetKeyName(133, "40px-Yasha.png")
+        Me.ImageList1.Images.SetKeyName(134, "Recipe_Scroll.png")
         '
         'ListView4
         '
@@ -395,7 +396,7 @@ Partial Class FormMain
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"", "Agility", "All Attributes", "Armor", "Attack Speed", "Aura", "Damage", "Evasion", "HP", "HP/sec Regeneration", "Intelligence", "Lifesteal", "Magic Resistance", "Mana", "Mana Regeneration", "Movement Speed", "Strength"})
+        Me.ComboBox1.Items.AddRange(New Object() {"", "Agility", "All Attributes", "Armor", "Attack Speed", "Aura", "Damage", "Evasion", "HP", "HP/sec Regeneration", "Intelligence", "Lifesteal", "Magic Resistance", "Mana", "Mana Regeneration", "Movement Speed", "Recipe", "Strength"})
         Me.ComboBox1.Location = New System.Drawing.Point(417, 228)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -420,8 +421,8 @@ Partial Class FormMain
         'ListView1
         '
         Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.LargeImageList = Me.ImageList1
         Me.ListView1.Location = New System.Drawing.Point(158, 255)
         Me.ListView1.MultiSelect = False
@@ -430,6 +431,7 @@ Partial Class FormMain
         Me.ListView1.ShowItemToolTips = True
         Me.ListView1.Size = New System.Drawing.Size(733, 392)
         Me.ListView1.SmallImageList = Me.ImageList1
+        Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListView1.TabIndex = 537
         Me.ListView1.TileSize = New System.Drawing.Size(175, 34)
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -496,7 +498,7 @@ Partial Class FormMain
         'ListBox1
         '
         Me.ListBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Items.AddRange(New Object() {" "})
         Me.ListBox1.Location = New System.Drawing.Point(5, 50)
@@ -626,8 +628,8 @@ Partial Class FormMain
         'TextBox2
         '
         Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Location = New System.Drawing.Point(6, 3)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
@@ -670,8 +672,8 @@ Partial Class FormMain
         'TextBox3
         '
         Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Location = New System.Drawing.Point(3, 3)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
