@@ -1739,4 +1739,10 @@ Public Class FormMain
         End If
     End Sub
 
+    'Reset the itemfilter on click
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        TextBoxItemsearch.Text = ""
+        ComboBox1.Text = ""
+        ComboBox2.Text = "All"
+    End Sub
 End Class

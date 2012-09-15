@@ -83,6 +83,7 @@ Partial Class FormMain
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -108,6 +109,7 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.AllowDrop = True
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.ListView5)
         Me.TabPage1.Controls.Add(Me.ListView4)
         Me.TabPage1.Controls.Add(Me.ListView3)
@@ -845,6 +847,15 @@ Partial Class FormMain
         '
         Me.Timer3.Interval = 50
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(816, 226)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 556
+        Me.Button1.Text = "Reset filter"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -932,4 +943,5 @@ Partial Class FormMain
     Friend WithEvents ListView3 As System.Windows.Forms.ListView
     Friend WithEvents ListView5 As System.Windows.Forms.ListView
     Friend WithEvents ListView4 As System.Windows.Forms.ListView
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
