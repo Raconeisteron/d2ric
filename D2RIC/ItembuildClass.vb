@@ -621,21 +621,25 @@ Public Class ItembuildClass
                 hero = "Luna"
             Case hero Like "npc_dota_hero_rubick"
                 hero = "Rubick"
+            Case hero Like "npc_dota_hero_naga_siren"
+                hero = "Naga Siren"
+            Case hero Like "npc_dota_hero_visage"
+                hero = "Visage"
+            Case hero Like "npc_dota_hero_centaur"
+                hero = "Centaur Warchief"
+            Case hero Like "npc_dota_hero_troll_warlord"
+                hero = "Troll Warlord"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case hero Like "npc_dota_hero_abaddon"
                 hero = "Abaddon"
             Case hero Like "npc_dota_hero_bristleback"
                 hero = "Bristleback"
-            Case hero Like "npc_dota_hero_centaur_warchief"
-                hero = "Centaur Warchief"
             Case hero Like "npc_dota_hero_goblin_techies"
                 hero = "Goblin Techies"
             Case hero Like "npc_dota_hero_magnataur"
                 hero = "Magnataur"
             Case hero Like "npc_dota_hero_medusa"
                 hero = "Medusa"
-            Case hero Like "npc_dota_hero_naga_siren"
-                hero = "Naga Siren"
             Case hero Like "npc_dota_hero_phoenix"
                 hero = "Phoenix"
             Case hero Like "npc_dota_hero_pit_lord"
@@ -646,12 +650,8 @@ Public Class ItembuildClass
                 hero = "Soul Keeper"
             Case hero Like "npc_dota_hero_tauren_chieftain"
                 hero = "Tauren Chieftain"
-            Case hero Like "npc_dota_hero_troll_warlord"
-                hero = "Troll Warlord"
             Case hero Like "npc_dota_hero_tuskarr"
                 hero = "Tuskarr"
-            Case hero Like "npc_dota_hero_visage"
-                hero = "Visage"
             Case Else
                 hero = "Unknown hero!"
         End Select
@@ -733,9 +733,11 @@ Public Class ItembuildClass
                 Selected_Hero = "witch_doctor"
             Case "Zeus"
                 Selected_Hero = "zuus"
-                ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Centaur Warchief"
-                Selected_Hero = "centaur_warchief"
+                Selected_Hero = "centaur"
+            Case "Troll Warlord"
+                Selected_Hero = "troll_warlord"
+                ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Goblin Techies"
                 Selected_Hero = "goblin_techies"
             Case "Naga Siren"
@@ -746,8 +748,6 @@ Public Class ItembuildClass
                 Selected_Hero = "soul_keeper"
             Case "Tauren Chieftain"
                 Selected_Hero = "tauren_chieftain"
-            Case "Troll Warlord"
-                Selected_Hero = "troll_warlord"
             Case Else
                 Selected_Hero = hero
         End Select
@@ -1218,7 +1218,6 @@ Public Class ItembuildClass
         With FormMain.ListBox1
             .Items.Remove("Abaddon")
             .Items.Remove("Bristleback")
-            .Items.Remove("Centaur Warchief")
             .Items.Remove("Ember Spirit")
             .Items.Remove("Goblin Shredder")
             .Items.Remove("Goblin Techies")
@@ -1231,7 +1230,6 @@ Public Class ItembuildClass
             .Items.Remove("Slark")
             .Items.Remove("Soul Keeper")
             .Items.Remove("Tauren Chieftain")
-            .Items.Remove("Troll Warlord")
             .Items.Remove("Tuskarr")
         End With
     End Sub
