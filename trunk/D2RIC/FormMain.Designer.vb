@@ -26,6 +26,7 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView5 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListView4 = New System.Windows.Forms.ListView()
@@ -83,7 +84,6 @@ Partial Class FormMain
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -146,6 +146,15 @@ Partial Class FormMain
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Change Itembuild"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(816, 226)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 556
+        Me.Button1.Text = "Reset filter"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'ListView5
         '
@@ -301,6 +310,7 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(132, "40px-Wraith_Band.png")
         Me.ImageList1.Images.SetKeyName(133, "40px-Yasha.png")
         Me.ImageList1.Images.SetKeyName(134, "Recipe_Scroll.png")
+        Me.ImageList1.Images.SetKeyName(135, "40px-Shadow_Amulet.png")
         '
         'ListView4
         '
@@ -846,15 +856,6 @@ Partial Class FormMain
         'Timer3
         '
         Me.Timer3.Interval = 50
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(816, 226)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 556
-        Me.Button1.Text = "Reset filter"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'FormMain
         '
