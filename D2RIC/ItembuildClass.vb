@@ -200,7 +200,8 @@ Public Class ItembuildClass
             Dim item173 As New ListViewItem(New String() {"Sange (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
             Dim item174 As New ListViewItem(New String() {"Mask of Madness (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
             Dim item175 As New ListViewItem(New String() {"Maelstrom (Recipe)", "Artifact", "PLACEHOLDER"}, 134)
-            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133, item134, item135, item136, item137, item138, item139, item140, item141, item142, item143, item144, item145, item146, item147, item148, item149, item150, item151, item152, item153, item154, item155, item156, item157, item158, item159, item160, item161, item162, item163, item164, item165, item166, item167, item168, item169, item170, item171, item172, item173, item174, item175})
+            Dim item176 As New ListViewItem(New String() {"Shadow Amulet", "Arcane", "PLACEHOLDER"}, 135)
+            .Items.AddRange(New ListViewItem() {item0, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34, item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45, item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56, item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67, item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78, item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89, item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100, item101, item102, item103, item104, item105, item106, item107, item108, item109, item110, item111, item112, item113, item114, item115, item116, item117, item118, item119, item120, item121, item122, item123, item124, item125, item126, item127, item128, item129, item130, item131, item132, item133, item134, item135, item136, item137, item138, item139, item140, item141, item142, item143, item144, item145, item146, item147, item148, item149, item150, item151, item152, item153, item154, item155, item156, item157, item158, item159, item160, item161, item162, item163, item164, item165, item166, item167, item168, item169, item170, item171, item172, item173, item174, item175, item176})
 
             'Add Tooltips to Listview
             For i = 0 To .Items.Count - 1
@@ -629,6 +630,10 @@ Public Class ItembuildClass
                 hero = "Centaur Warchief"
             Case hero Like "npc_dota_hero_troll_warlord"
                 hero = "Troll Warlord"
+            Case hero Like "npc_dota_hero_magnataur"
+                hero = "Magnus"
+            Case hero Like "npc_dota_hero_slark"
+                hero = "Slark"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case hero Like "npc_dota_hero_abaddon"
                 hero = "Abaddon"
@@ -636,16 +641,12 @@ Public Class ItembuildClass
                 hero = "Bristleback"
             Case hero Like "npc_dota_hero_goblin_techies"
                 hero = "Goblin Techies"
-            Case hero Like "npc_dota_hero_magnataur"
-                hero = "Magnataur"
             Case hero Like "npc_dota_hero_medusa"
                 hero = "Medusa"
             Case hero Like "npc_dota_hero_phoenix"
                 hero = "Phoenix"
             Case hero Like "npc_dota_hero_pit_lord"
                 hero = "Pit Lord"
-            Case hero Like "npc_dota_hero_slark"
-                hero = "Slark"
             Case hero Like "npc_dota_hero_soul_keeper"
                 hero = "Soul Keeper"
             Case hero Like "npc_dota_hero_tauren_chieftain"
@@ -737,11 +738,13 @@ Public Class ItembuildClass
                 Selected_Hero = "centaur"
             Case "Troll Warlord"
                 Selected_Hero = "troll_warlord"
+            Case "Naga Siren"
+                Selected_Hero = "naga_siren"
+            Case "Magnus"
+                Selected_Hero = "magnataur"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Goblin Techies"
                 Selected_Hero = "goblin_techies"
-            Case "Naga Siren"
-                Selected_Hero = "naga_siren"
             Case "Pit Lord"
                 Selected_Hero = "pit_lord"
             Case "Soul Keeper"
@@ -814,7 +817,7 @@ Public Class ItembuildClass
             lb.Items.Add("Lone Druid")
             lb.Items.Add("Luna")
             lb.Items.Add("Lycanthrope")
-            lb.Items.Add("Magnataur")
+            lb.Items.Add("Magnus")
             lb.Items.Add("Medusa")
             lb.Items.Add("Meepo")
             lb.Items.Add("Mirana")
@@ -1026,7 +1029,7 @@ Public Class ItembuildClass
             lb.Items.Add("Clockwerk")
             lb.Items.Add("Earthshaker")
             lb.Items.Add("Enigma")
-            lb.Items.Add("Magnataur")
+            lb.Items.Add("Magnus")
             lb.Items.Add("Naga Siren")
             lb.Items.Add("Phoenix")
             lb.Items.Add("Puck")
@@ -1112,7 +1115,7 @@ Public Class ItembuildClass
             lb.Items.Add("Legion Commander")
             lb.Items.Add("Lifestealer")
             lb.Items.Add("Lycanthrope")
-            lb.Items.Add("Magnataur")
+            lb.Items.Add("Magnus")
             lb.Items.Add("Night Stalker")
             lb.Items.Add("Omniknight")
             lb.Items.Add("Phoenix")
@@ -1222,12 +1225,10 @@ Public Class ItembuildClass
             .Items.Remove("Goblin Shredder")
             .Items.Remove("Goblin Techies")
             .Items.Remove("Legion Commander")
-            .Items.Remove("Magnataur")
             .Items.Remove("Medusa")
             .Items.Remove("Phoenix")
             .Items.Remove("Pit Lord")
             .Items.Remove("Skywrath Mage")
-            .Items.Remove("Slark")
             .Items.Remove("Soul Keeper")
             .Items.Remove("Tauren Chieftain")
             .Items.Remove("Tuskarr")
@@ -1640,6 +1641,9 @@ Public Class ItembuildClass
             Case "Tranquil Boots"
                 tooltip = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
+            Case "Shadow Amulet"
+                tooltip = "Shadow Amulet" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Fade (active)"
+                Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case Else
                 Return item_name + vbNewLine + vbNewLine + "Price: " + GetPrice(item_name).ToString
         End Select
@@ -1813,11 +1817,11 @@ Public Class ItembuildClass
             Case "Oblivion Staff"
                 Return 1675
             Case "Observer Ward"
-                Return 200
+                Return 150
             Case "Ogre Club"
                 Return 1000
             Case "Orb of Venom"
-                Return 350
+                Return 275
             Case "Orchid Malevolence"
                 Return 4125
             Case "Perseverance"
@@ -1873,7 +1877,7 @@ Public Class ItembuildClass
             Case "Sentry Ward"
                 Return 200
             Case "Shadow Blade"
-                Return 3300
+                Return 3000
             Case "Shiva's Guard"
                 Return 4700
             Case "Skull Basher"
@@ -1923,7 +1927,7 @@ Public Class ItembuildClass
             Case "Bracer (Recipe)"
                 Return 190
             Case "Null Talisman (Recipe)"
-                Return 170
+                Return 155
             Case "Magic Wand (Recipe)"
                 Return 150
             Case "Hand of Midas (Recipe)"
@@ -1951,7 +1955,7 @@ Public Class ItembuildClass
             Case "Necronomicon (Recipe)"
                 Return 1250
             Case "Eul's Scepter of Divinity (Recipe)"
-                Return 600
+                Return 500
             Case "Dagon (Recipe)"
                 Return 1300
             Case "Veil of Discord (Recipe)"
@@ -1961,7 +1965,7 @@ Public Class ItembuildClass
             Case "Refresher Orb (Recipe)"
                 Return 1875
             Case "Force Staff (Recipe)"
-                Return 300
+                Return 500
             Case "Armlet (Recipe)"
                 Return 700
             Case "Crystalys (Recipe)"
@@ -1979,7 +1983,7 @@ Public Class ItembuildClass
             Case "Assault Cuirass (Recipe)"
                 Return 1300
             Case "Manta Style (Recipe)"
-                Return 650
+                Return 900
             Case "Shiva's Guard (Recipe)"
                 Return 600
             Case "Linken's Sphere (Recipe)"
@@ -1993,15 +1997,17 @@ Public Class ItembuildClass
             Case "Satanic (Recipe)"
                 Return 1100
             Case "Yasha (Recipe)"
-                Return 700
+                Return 600
             Case "Diffusal Blade (Recipe)"
                 Return 850
             Case "Sange (Recipe)"
-                Return 700
+                Return 600
             Case "Mask of Madness (Recipe)"
                 Return 1000
             Case "Maelstrom (Recipe)"
                 Return 600
+            Case "Shadow Amulet"
+                Return 1600
             Case Else
                 Return 0
         End Select

@@ -244,411 +244,277 @@ Public Class FormMain
 
     'Return the pictureID (ImageList1) for each Item
     Public Function GetPicture(ByVal item_name As String) As Integer
-        Dim picID As Integer
-
         Select Case item_name
             Case "Abyssal Blade"
-                picID = 0
-                Return picID
+                Return 0
             Case "Aghanim's Scepter"
-                picID = 1
-                Return picID
+                Return 1
             Case "Animal Courier"
-                picID = 2
-                Return picID
+                Return 2
             Case "Arcane Boots"
-                picID = 3
-                Return picID
+                Return 3
             Case "Armlet"
-                picID = 4
-                Return picID
+                Return 4
             Case "Assault Cuirass"
-                picID = 5
-                Return picID
+                Return 5
             Case "Battle Fury"
-                picID = 6
-                Return picID
+                Return 6
             Case "Belt of Strength"
-                picID = 7
-                Return picID
+                Return 7
             Case "Black King Bar"
-                picID = 8
-                Return picID
+                Return 8
             Case "Blade Mail"
-                picID = 9
-                Return picID
+                Return 9
             Case "Blade of Alacrity"
-                picID = 10
-                Return picID
+                Return 10
             Case "Blades of Attack"
-                picID = 11
-                Return picID
+                Return 11
             Case "Blink Dagger"
-                picID = 12
-                Return picID
+                Return 12
             Case "Bloodstone"
-                picID = 13
-                Return picID
+                Return 13
             Case "Boots of Elvenskin"
-                picID = 14
-                Return picID
+                Return 14
             Case "Boots of Speed"
-                picID = 15
-                Return picID
+                Return 15
             Case "Boots of Travel"
-                picID = 16
-                Return picID
+                Return 16
             Case "Bottle"
-                picID = 17
-                Return picID
+                Return 17
             Case "Bracer"
-                picID = 18
-                Return picID
+                Return 18
             Case "Broadsword"
-                picID = 19
-                Return picID
+                Return 19
             Case "Buckler"
-                picID = 20
-                Return picID
+                Return 20
             Case "Butterfly"
-                picID = 21
-                Return picID
+                Return 21
             Case "Chainmail"
-                picID = 22
-                Return picID
+                Return 22
             Case "Circlet"
-                picID = 23
-                Return picID
+                Return 23
             Case "Clarity"
-                picID = 24
-                Return picID
+                Return 24
             Case "Claymore"
-                picID = 25
-                Return picID
+                Return 25
             Case "Cloak"
-                picID = 26
-                Return picID
+                Return 26
             Case "Crystalys"
-                picID = 27
-                Return picID
+                Return 27
             Case "Daedalus"
-                picID = 28
-                Return picID
+                Return 28
             Case "Dagon 1"
-                picID = 29
-                Return picID
+                Return 29
             Case "Dagon 2"
-                picID = 30
-                Return picID
+                Return 30
             Case "Dagon 3"
-                picID = 31
-                Return picID
+                Return 31
             Case "Dagon 4"
-                picID = 32
-                Return picID
+                Return 32
             Case "Dagon 5"
-                picID = 33
-                Return picID
+                Return 33
             Case "Demon Edge"
-                picID = 34
-                Return picID
+                Return 34
             Case "Desolator"
-                picID = 35
-                Return picID
+                Return 35
             Case "Diffusal Blade 1"
-                picID = 36
-                Return picID
+                Return 36
             Case "Diffusal Blade 2"
-                picID = 37
-                Return picID
+                Return 37
             Case "Divine Rapier"
-                picID = 38
-                Return picID
+                Return 38
             Case "Drum of Endurance"
-                picID = 39
-                Return picID
+                Return 39
             Case "Dust of Appearance"
-                picID = 40
-                Return picID
+                Return 40
             Case "Eaglesong"
-                picID = 41
-                Return picID
+                Return 41
             Case "Energy Booster"
-                picID = 42
-                Return picID
+                Return 42
             Case "Ethereal Blade"
-                picID = 43
-                Return picID
+                Return 43
             Case "Eul's Scepter of Divinity"
-                picID = 44
-                Return picID
+                Return 44
             Case "Eye of Skadi"
-                picID = 45
-                Return picID
+                Return 45
             Case "Flying Courier"
-                picID = 46
-                Return picID
+                Return 46
             Case "Force Staff"
-                picID = 47
-                Return picID
+                Return 47
             Case "Gauntlets of Strength"
-                picID = 48
-                Return picID
+                Return 48
             Case "Gem of True Sight"
-                picID = 49
-                Return picID
+                Return 49
             Case "Ghost Scepter"
-                picID = 50
-                Return picID
+                Return 50
             Case "Gloves of Haste"
-                picID = 51
-                Return picID
+                Return 51
             Case "Hand of Midas"
-                picID = 52
-                Return picID
+                Return 52
             Case "Headdress"
-                picID = 53
-                Return picID
+                Return 53
             Case "Healing Salve"
-                picID = 54
-                Return picID
+                Return 54
             Case "Heart of Tarrasque"
-                picID = 55
-                Return picID
+                Return 55
             Case "Heaven's Halberd"
-                picID = 56
-                Return picID
+                Return 56
             Case "Helm of Iron Will"
-                picID = 57
-                Return picID
+                Return 57
             Case "Helm of the Dominator"
-                picID = 58
-                Return picID
+                Return 58
             Case "Hood of Defiance"
-                picID = 59
-                Return picID
+                Return 59
             Case "Hyperstone"
-                picID = 60
-                Return picID
+                Return 60
             Case "Iron Branch"
-                picID = 61
-                Return picID
+                Return 61
             Case "Javelin"
-                picID = 62
-                Return picID
+                Return 62
             Case "Linken's Sphere"
-                picID = 63
-                Return picID
+                Return 63
             Case "Maelstrom"
-                picID = 64
-                Return picID
+                Return 64
             Case "Magic Stick"
-                picID = 65
-                Return picID
+                Return 65
             Case "Magic Wand"
-                picID = 66
-                Return picID
+                Return 66
             Case "Manta Style"
-                picID = 67
-                Return picID
+                Return 67
             Case "Mantle of Intelligence"
-                picID = 68
-                Return picID
+                Return 68
             Case "Mask of Madness"
-                picID = 69
-                Return picID
+                Return 69
             Case "Medallion of Courage"
-                picID = 70
-                Return picID
+                Return 70
             Case "Mekansm"
-                picID = 71
-                Return picID
+                Return 71
             Case "Mithril Hammer"
-                picID = 72
-                Return picID
+                Return 72
             Case "Mjollnir"
-                picID = 73
-                Return picID
+                Return 73
             Case "Monkey King Bar"
-                picID = 74
-                Return picID
+                Return 74
             Case "Morbid Mask"
-                picID = 75
-                Return picID
+                Return 75
             Case "Mystic Staff"
-                picID = 76
-                Return picID
+                Return 76
             Case "Necronomicon 1"
-                picID = 77
-                Return picID
+                Return 77
             Case "Necronomicon 2"
-                picID = 78
-                Return picID
+                Return 78
             Case "Necronomicon 3"
-                picID = 79
-                Return picID
+                Return 79
             Case "Null Talisman"
-                picID = 80
-                Return picID
+                Return 80
             Case "Oblivion Staff"
-                picID = 81
-                Return picID
+                Return 81
             Case "Observer Ward"
-                picID = 82
-                Return picID
+                Return 82
             Case "Ogre Club"
-                picID = 83
-                Return picID
+                Return 83
             Case "Orb of Venom"
-                picID = 84
-                Return picID
+                Return 84
             Case "Orchid Malevolence"
-                picID = 85
-                Return picID
+                Return 85
             Case "Perseverance"
-                picID = 86
-                Return picID
+                Return 86
             Case "Phase Boots"
-                picID = 87
-                Return picID
+                Return 87
             Case "Pipe of Insight"
-                picID = 88
-                Return picID
+                Return 88
             Case "Platemail"
-                picID = 89
-                Return picID
+                Return 89
             Case "Point Booster"
-                picID = 90
-                Return picID
+                Return 90
             Case "Poor Man's Shield"
-                picID = 91
-                Return picID
+                Return 91
             Case "Power Treads"
-                picID = 92
-                Return picID
+                Return 92
             Case "Quarterstaff"
-                picID = 93
-                Return picID
+                Return 93
             Case "Quelling Blade"
-                picID = 94
-                Return picID
+                Return 94
             Case "Radiance"
-                picID = 95
-                Return picID
+                Return 95
             Case "Reaver"
-                picID = 96
-                Return picID
+                Return 96
             Case "Refresher Orb"
-                picID = 97
-                Return picID
+                Return 97
             Case "Ring of Aquila"
-                picID = 98
-                Return picID
+                Return 98
             Case "Ring of Basilius"
-                picID = 99
-                Return picID
+                Return 99
             Case "Ring of Health"
-                picID = 100
-                Return picID
+                Return 100
             Case "Ring of Protection"
-                picID = 101
-                Return picID
+                Return 101
             Case "Ring of Regen"
-                picID = 102
-                Return picID
+                Return 102
             Case "Robe of the Magi"
-                picID = 103
-                Return picID
+                Return 103
             Case "Rod of Atos"
-                picID = 104
-                Return picID
+                Return 104
             Case "Sacred Relic"
-                picID = 105
-                Return picID
+                Return 105
             Case "Sage's Mask"
-                picID = 106
-                Return picID
+                Return 106
             Case "Sange"
-                picID = 107
-                Return picID
+                Return 107
             Case "Sange and Yasha"
-                picID = 108
-                Return picID
+                Return 108
             Case "Satanic"
-                picID = 109
-                Return picID
+                Return 109
             Case "Scythe of Vyse"
-                picID = 110
-                Return picID
+                Return 110
             Case "Sentry Ward"
-                picID = 111
-                Return picID
+                Return 111
             Case "Shadow Blade"
-                picID = 112
-                Return picID
+                Return 112
             Case "Shiva's Guard"
-                picID = 113
-                Return picID
+                Return 113
             Case "Skull Basher"
-                picID = 114
-                Return picID
+                Return 114
             Case "Slippers of Agility"
-                picID = 115
-                Return picID
+                Return 115
             Case "Smoke of Deceit"
-                picID = 116
-                Return picID
+                Return 116
             Case "Soul Booster"
-                picID = 117
-                Return picID
+                Return 117
             Case "Soul Ring"
-                picID = 118
-                Return picID
+                Return 118
             Case "Staff of Wizardry"
-                picID = 119
-                Return picID
+                Return 119
             Case "Stout Shield"
-                picID = 120
-                Return picID
+                Return 120
             Case "Talisman of Evasion"
-                picID = 121
-                Return picID
+                Return 121
             Case "Tango"
-                picID = 122
-                Return picID
+                Return 122
             Case "Town Portal Scroll"
-                picID = 123
-                Return picID
+                Return 123
             Case "Tranquil Boots"
-                picID = 124
-                Return picID
+                Return 124
             Case "Ultimate Orb"
-                picID = 125
-                Return picID
+                Return 125
             Case "Urn of Shadows"
-                picID = 126
-                Return picID
+                Return 126
             Case "Vanguard"
-                picID = 127
-                Return picID
+                Return 127
             Case "Veil of Discord"
-                picID = 128
-                Return picID
+                Return 128
             Case "Vitality Booster"
-                picID = 129
-                Return picID
+                Return 129
             Case "Vladmir's Offering"
-                picID = 130
-                Return picID
+                Return 130
             Case "Void Stone"
-                picID = 131
-                Return picID
+                Return 131
             Case "Wraith Band"
-                picID = 132
-                Return picID
+                Return 132
             Case "Yasha"
-                picID = 133
-                Return picID
+                Return 133
+            Case "Shadow Amulet"
+                Return 135
             Case Else
                 Return 134
         End Select
@@ -1155,6 +1021,8 @@ Public Class FormMain
                 Return "Mask of Madness (Recipe)"
             Case item_name2 Like "*item_recipe_maelstrom"
                 Return "Maelstrom (Recipe)"
+            Case item_name2 Like "*item_shadow_amulet"
+                Return "Shadow Amulet"
             Case Else
                 rename_item_name = "Error!"
                 Return rename_item_name
@@ -1516,6 +1384,8 @@ Public Class FormMain
                 Return "item_recipe_mask_of_madness"
             Case "Maelstrom (Recipe)"
                 Return "item_recipe_maelstrom"
+            Case "Shadow Amulet"
+                Return "item_shadow_amulet"
             Case Else
                 Return "Error! Itemname: " + item_name
         End Select
