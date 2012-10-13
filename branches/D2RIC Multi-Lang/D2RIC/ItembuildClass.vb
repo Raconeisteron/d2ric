@@ -1,7 +1,10 @@
-﻿'This class contains all methods you need on the itembuild page
+﻿Imports System.Resources
+
+'This class contains all methods you need on the itembuild page
 Public Class ItembuildClass
     Public NewText As String
     Public Shared Selected_Hero As String
+    Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
 
     'Initialize the Itembuild tab
     Public Sub Initialize()
@@ -232,7 +235,7 @@ Public Class ItembuildClass
             End If
             IO.File.WriteAllText(My.Settings.path + "\default_" + Selected_Hero + ".txt", NewText)
         Else
-            MessageBox.Show("Please choose a hero first.")
+            MessageBox.Show(LocRM.GetString("chooseAHero"))
         End If
     End Sub
 
@@ -285,7 +288,7 @@ Public Class ItembuildClass
         Else
             Clear()
             FormMain.ButtonSave.Enabled = False
-            MessageBox.Show("Error! Hero maybe not implemented yet.")
+            MessageBox.Show(LocRM.GetString("notImplemented"))
         End If
     End Sub
 
@@ -339,7 +342,7 @@ Public Class ItembuildClass
             Next
             FormMain.ButtonSave.Enabled = True
         Else
-            MessageBox.Show("Backup not found.")
+            MessageBox.Show(LocRM.GetString("noBackup"))
         End If
     End Sub
 
@@ -375,7 +378,7 @@ Public Class ItembuildClass
                     ' Ordner wurde korrekt erstellt!
                 Catch ex As Exception
                     ' Ordner wurde nich erstellt
-                    MessageBox.Show("Error while creating backup folder")
+                    MessageBox.Show(LocRM.GetString("cantCreateBackupFolder"))
                 End Try
             End If
             'Create Backup
@@ -383,7 +386,7 @@ Public Class ItembuildClass
                 IO.File.Copy(My.Settings.path + "\default_" + Selected_Hero + ".txt", My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt", True)  ' Kopiert die Dateien
             Catch ex As Exception
                 ' Ordner wurde nich erstellt
-                MessageBox.Show("Error while creating backup")
+                MessageBox.Show(LocRM.GetString("cantCreateBackup"))
             End Try
         End If
 
@@ -438,7 +441,7 @@ Public Class ItembuildClass
             NewText &= vbTab & vbTab & "}" & vbNewLine & vbTab & "}" & vbNewLine & "}"
 
         Else
-            MessageBox.Show("Error!")
+            MessageBox.Show(LocRM.GetString("errorText"))
         End If
     End Sub
 

@@ -1,7 +1,8 @@
-﻿Imports System.Security.Cryptography, System.Net, vb = Microsoft.VisualBasic
+﻿Imports System.Security.Cryptography, System.Net, vb = Microsoft.VisualBasic, System.Resources, System.Globalization, System.Threading
 
 Public Class FormMain
     Dim FirstChange As Boolean = True
+    Dim FirstLangChange As Boolean = True
     Friend WithEvents Import As New ImportClass
     Friend WithEvents Export As New ExportClass
     Friend WithEvents Options As New OptionsClass
@@ -12,6 +13,21 @@ Public Class FormMain
     Public IntPrice As Integer
     Dim Unsaved As Boolean = False
     Public ImportHero As Boolean = False
+    ' Declare a Resource Manager instance.
+    Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
+
+    Public Sub New()
+        ' Sets the UI culture to the choosen language
+        If My.Settings.lang <> "" Then
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.lang)
+        Else
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo("en")
+        End If
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        InitializeComponent()
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+    End Sub
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         'Save all Settings
@@ -23,6 +39,8 @@ Public Class FormMain
     Private Sub FormMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Itembuild.Initialize()
         Itembuild.InitializeListbox()
+
+        Options.InitializeLang()
 
         Me.ListView2.AllowDrop = True
         Me.ListView3.AllowDrop = True
@@ -41,7 +59,7 @@ Public Class FormMain
 
     Private Sub ListBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         If Unsaved = True Then
-            If MessageBox.Show("You have unsaved changes!" + vbNewLine + "Do you want to continue?", "Unsaved changes", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(LocRM.GetString("unsavedChanges_Pt1") + vbNewLine + LocRM.GetString("unsavedChanges_Pt2"), LocRM.GetString("unsavedChanges_Title"), MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 If ListBox1.SelectedItem <> "" Then
                     If ImportHero Then
                         ImportHero = False
@@ -70,7 +88,7 @@ Public Class FormMain
 
     Private Sub TabControl1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
         If TabControl1.SelectedTab Is TabPage4 Then
-            TextBox3.Text = "Please choose a hero first."
+            TextBox3.Text = LocRM.GetString("chooseAHero")
             If (ItembuildClass.Selected_Hero <> "") Then
                 Itembuild.SaveChanges()
                 Itembuild.ChangeAuthor(TextBox1.Text, ItembuildClass.Selected_Hero)
@@ -106,7 +124,7 @@ Public Class FormMain
         Dim aktversion As String = WebClient1.DownloadString("http://holyzone.bplaced.net/maddy/d2ric_version.txt")
 
         If pgversion < aktversion Then 'Wenn die Programmversion kleiner als die Aktuelle Version ist:
-            If MessageBox.Show("New Update available!!" + vbNewLine + vbNewLine + "Your Version: " + pgversion + vbNewLine + "New Version: " + aktversion + vbNewLine + vbNewLine + "Open the Download page?", "Update", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(LocRM.GetString("update_Pt1") + vbNewLine + vbNewLine + LocRM.GetString("update_Pt2") + pgversion + vbNewLine + LocRM.GetString("update_Pt3") + aktversion + vbNewLine + vbNewLine + LocRM.GetString("update_Pt4"), LocRM.GetString("update_Title"), MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 Process.Start("http://code.google.com/p/d2ric/downloads/list")
             End If
         Else
@@ -170,6 +188,15 @@ Public Class FormMain
 
     Private Sub ComboBoxClient_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxClient.SelectedIndexChanged
         Options.ChangeClient()
+    End Sub
+
+    Private Sub ComboBoxLang_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxLang.SelectedIndexChanged
+        Options.ChangeLang()
+        If Not FirstLangChange Then
+            MessageBox.Show(LocRM.GetString("restartNeeded"))
+        Else
+            FirstLangChange = False
+        End If
     End Sub
 
     Private Sub ButtonOpenBackupFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenBackupFolder.Click
@@ -1229,17 +1256,17 @@ Public Class FormMain
                 Return "item_lesser_crit"
             Case "Morbid Mask"
                 Return "item_lifesteal"
-            Case = "Maelstrom"
+            Case Is = "Maelstrom"
                 Return "item_maelstrom"
-            Case = "Magic Stick"
+            Case Is = "Magic Stick"
                 Return "item_magic_stick"
-            Case = "Magic Wand"
+            Case Is = "Magic Wand"
                 Return "item_magic_wand"
-            Case = "Manta Style"
+            Case Is = "Manta Style"
                 Return "item_manta"
             Case "Mantle of Intelligence"
                 Return "item_mantle"
-            Case = "Mask of Madness"
+            Case Is = "Mask of Madness"
                 Return "item_mask_of_madness"
             Case "Medallion of Courage"
                 Return "item_medallion_of_courage"
@@ -1690,4 +1717,5 @@ Public Class FormMain
         ComboBox1.Text = ""
         ComboBox2.Text = "All"
     End Sub
+
 End Class

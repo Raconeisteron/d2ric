@@ -66,6 +66,8 @@ Partial Class FormMain
         Me.ButtonCopy = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.ComboBoxLang = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBoxClient = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -583,6 +585,8 @@ Partial Class FormMain
         'TabPage5
         '
         resources.ApplyResources(Me.TabPage5, "TabPage5")
+        Me.TabPage5.Controls.Add(Me.ComboBoxLang)
+        Me.TabPage5.Controls.Add(Me.Label16)
         Me.TabPage5.Controls.Add(Me.Label10)
         Me.TabPage5.Controls.Add(Me.ComboBoxClient)
         Me.TabPage5.Controls.Add(Me.CheckBox1)
@@ -597,6 +601,21 @@ Partial Class FormMain
         Me.TabPage5.Name = "TabPage5"
         Me.ToolTip1.SetToolTip(Me.TabPage5, resources.GetString("TabPage5.ToolTip"))
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'ComboBoxLang
+        '
+        resources.ApplyResources(Me.ComboBoxLang, "ComboBoxLang")
+        Me.ComboBoxLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxLang.FormattingEnabled = True
+        Me.ComboBoxLang.Items.AddRange(New Object() {resources.GetString("ComboBoxLang.Items"), resources.GetString("ComboBoxLang.Items1")})
+        Me.ComboBoxLang.Name = "ComboBoxLang"
+        Me.ToolTip1.SetToolTip(Me.ComboBoxLang, resources.GetString("ComboBoxLang.ToolTip"))
+        '
+        'Label16
+        '
+        resources.ApplyResources(Me.Label16, "Label16")
+        Me.Label16.Name = "Label16"
+        Me.ToolTip1.SetToolTip(Me.Label16, resources.GetString("Label16.ToolTip"))
         '
         'Label10
         '
@@ -786,4 +805,6 @@ Partial Class FormMain
     Friend WithEvents ListView5 As System.Windows.Forms.ListView
     Friend WithEvents ListView4 As System.Windows.Forms.ListView
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ComboBoxLang As System.Windows.Forms.ComboBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class

@@ -1,5 +1,8 @@
-﻿'This class contains all methods you need on the export page
+﻿Imports System.Resources
+
+'This class contains all methods you need on the export page
 Public Class ExportClass
+    Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
 
     'Save the text to the clipboard
     Public Sub CopyToClipboard()
@@ -18,7 +21,7 @@ Public Class ExportClass
                 FileOpen(1, SaveFileDialog1.FileName, OpenMode.Output)
                 PrintLine(1, FormMain.TextBox3.Text)
                 FileClose(1)
-                MessageBox.Show("File saved.")
+                MessageBox.Show(LocRM.GetString("fileSaved"))
             End If
         End Using
     End Sub

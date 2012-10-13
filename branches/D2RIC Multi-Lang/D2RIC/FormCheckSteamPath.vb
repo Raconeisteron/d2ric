@@ -1,4 +1,21 @@
-﻿Public Class FormCheckSteamPath
+﻿Imports System.Globalization, System.Threading, System.Resources
+
+Public Class FormCheckSteamPath
+    ' Declare a Resource Manager instance.
+    Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormCheckSteamPath).Assembly)
+
+    Public Sub New()
+        ' Sets the UI culture to the choosen language
+        If My.Settings.lang <> "" Then
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.lang)
+        Else
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo("en")
+        End If
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        InitializeComponent()
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+    End Sub
 
     Private Sub FormCheckSteamPath_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If (My.Settings.path <> "") Then
@@ -7,7 +24,7 @@
                 FormMain.Visible = True
                 Me.Close()
             Else
-                MessageBox.Show("Please check your Steam path!!!")
+                MessageBox.Show(LocRM.GetString("checkPath"))
             End If
         End If
     End Sub
@@ -38,7 +55,7 @@
             Me.Close()
         Else
             ' existiert nicht
-            MessageBox.Show("Please check your Steam path!!!")
+            MessageBox.Show(LocRM.GetString("checkPath"))
         End If
     End Sub
 
@@ -49,4 +66,5 @@
             End If
         End Using
     End Sub
+
 End Class

@@ -118,73 +118,73 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cantCreateBackup" xml:space="preserve">
-    <value>Error while creating backup</value>
+    <value>Fehler beim Erstellen des Backups</value>
   </data>
   <data name="cantCreateBackupFolder" xml:space="preserve">
-    <value>Error while creating backup folder</value>
+    <value>Fehler beim Erstellen des Backup Ordners</value>
   </data>
   <data name="cantCreateFolder" xml:space="preserve">
-    <value>Error while creating folder!</value>
+    <value>Fehler beim Erstellen des Ordners!</value>
   </data>
   <data name="cantLoadItembuild" xml:space="preserve">
-    <value>Error! Couldn't load this itembuild.</value>
+    <value>Fehler! Dieses Itembuild konnte nicht geladne werden.</value>
   </data>
   <data name="cantRead" xml:space="preserve">
-    <value>Error while reading.</value>
+    <value>Fehler beim Lesen.</value>
   </data>
   <data name="checkPath" xml:space="preserve">
-    <value>Please check your Steam path!!!</value>
+    <value>Bitte überprüfe den Pfad zu deinem Steam Verzeichnis!!!</value>
   </data>
   <data name="chooseAHero" xml:space="preserve">
-    <value>Please choose a hero first.</value>
+    <value>Bitte wähle zuerst einen Helden.</value>
   </data>
   <data name="clientNotFound" xml:space="preserve">
-    <value>Client not found.</value>
+    <value>Client nicht gefunden.</value>
   </data>
   <data name="deleteBackupsQuestion" xml:space="preserve">
-    <value>Delete backups?</value>
+    <value>Backups löschen?</value>
   </data>
   <data name="errorText" xml:space="preserve">
-    <value>Error!</value>
+    <value>Fehler!</value>
   </data>
   <data name="fileSaved" xml:space="preserve">
-    <value>File saved.</value>
+    <value>Datei gespeichert.</value>
   </data>
   <data name="noBackup" xml:space="preserve">
-    <value>Backup not found.</value>
+    <value>Backup nicht gefunden.</value>
   </data>
   <data name="noBackupFolder" xml:space="preserve">
-    <value>Backup folder doesn't exist.</value>
+    <value>Backup Ordner existiert nicht.</value>
   </data>
   <data name="notImplemented" xml:space="preserve">
-    <value>Error! Hero maybe not implemented yet.</value>
+    <value>Fehler! Held ist möglicherweise noch nicht implementiert.</value>
   </data>
   <data name="pathChanged" xml:space="preserve">
-    <value>Path changed successfully.</value>
+    <value>Pfad erfolgreich geändert.</value>
   </data>
   <data name="restartNeeded" xml:space="preserve">
-    <value>This change requires a restart of this application.</value>
+    <value>Diese Änderung wird erst nach einem Neustart dieser Anwendung wirksam.</value>
   </data>
   <data name="unsavedChangesTitle" xml:space="preserve">
-    <value>Unsaved changes</value>
+    <value>Ungespeicherte Änderungen</value>
   </data>
   <data name="unsavedChanges_Pt1" xml:space="preserve">
-    <value>You have unsaved changes!</value>
+    <value>Du hast ungespeicherte Änderungen!</value>
   </data>
   <data name="unsavedChanges_Pt2" xml:space="preserve">
-    <value>Do you want to continue?</value>
+    <value>Möchtest du fortfahren?</value>
   </data>
   <data name="update_Pt1" xml:space="preserve">
-    <value>New Update available!!</value>
+    <value>Eine neuere Version ist verfügbar!</value>
   </data>
   <data name="update_Pt2" xml:space="preserve">
-    <value>Your Version: </value>
+    <value>Deine Version: </value>
   </data>
   <data name="update_Pt3" xml:space="preserve">
-    <value>New Version: </value>
+    <value>Neue Version: </value>
   </data>
   <data name="update_Pt4" xml:space="preserve">
-    <value>Open the Download page?</value>
+    <value>Download Seite öffnen?</value>
   </data>
   <data name="update_Title" xml:space="preserve">
     <value>Update</value>
