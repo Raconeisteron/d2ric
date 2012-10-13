@@ -143,9 +143,6 @@
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>775, 32</value>
   </data>
-  <data name="LabelWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 1</value>
-  </data>
   <data name="ComboBox1.Items" xml:space="preserve">
     <value />
   </data>
@@ -164,9 +161,6 @@
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;ButtonCopy.Parent" xml:space="preserve">
-    <value>TabPage4</value>
-  </data>
   <data name="ButtonUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -181,6 +175,9 @@
   </data>
   <data name="ComboBox2.Items7" xml:space="preserve">
     <value>Common</value>
+  </data>
+  <data name="&gt;&gt;BackgroundWorker1.Name" xml:space="preserve">
+    <value>BackgroundWorker1</value>
   </data>
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>343</value>
@@ -214,6 +211,9 @@
   </data>
   <data name="ComboBox3.Items9" xml:space="preserve">
     <value>Jungler</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 5</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
     <value>28</value>
@@ -282,9 +282,6 @@
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>332</value>
   </data>
-  <data name="Button2.Text" xml:space="preserve">
-    <value>Button2</value>
-  </data>
   <data name="&gt;&gt;Label22.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
@@ -315,8 +312,8 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>Starting Items</value>
   </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
+  <data name="TextBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>348, 20</value>
   </data>
   <data name="&gt;&gt;Timer2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -369,8 +366,8 @@
   <data name="&gt;&gt;ComboBox3.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>Change Itembuild</value>
   </data>
   <data name="ComboBoxClient.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -411,17 +408,14 @@
   <data name="ListView3.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 66</value>
   </data>
-  <data name="CheckBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 2</value>
-  </data>
   <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="ComboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
   </data>
   <data name="ButtonDeleteBackup.ToolTip" xml:space="preserve">
     <value />
@@ -431,9 +425,6 @@
   </data>
   <data name="&gt;&gt;Label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Timer3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -459,9 +450,6 @@
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;Label0.Name" xml:space="preserve">
-    <value>Label0</value>
-  </data>
   <data name="Label12.TabIndex" type="System.Int32, mscorlib">
     <value>504</value>
   </data>
@@ -470,9 +458,6 @@
   </data>
   <data name="Label22.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
-  </data>
-  <data name="&gt;&gt;TextBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ButtonBackup.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -524,6 +509,12 @@
   </data>
   <data name="TextBox3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="CheckBox2.Text" xml:space="preserve">
+    <value>Show only implemented</value>
+  </data>
+  <data name="&gt;&gt;ButtonUpdate.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;ListBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -606,14 +597,8 @@
   <data name="TabPage5.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
-    <value>TabPage1</value>
-  </data>
-  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>14, 13</value>
-  </data>
-  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
-    <value>Button2</value>
+  <data name="Label4.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="ButtonSaveTextfile.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -623,6 +608,9 @@
   </data>
   <data name="Label11.TabIndex" type="System.Int32, mscorlib">
     <value>539</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>350</value>
   </data>
   <data name="&gt;&gt;ButtonSave.Name" xml:space="preserve">
     <value>ButtonSave</value>
@@ -693,8 +681,8 @@
   <data name="ComboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>540</value>
   </data>
-  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
-    <value>Label6</value>
+  <data name="TextBox3.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>581, 32</value>
@@ -704,6 +692,9 @@
   </data>
   <data name="&gt;&gt;ListView3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonChangeSteam.Name" xml:space="preserve">
+    <value>ButtonChangeSteam</value>
   </data>
   <data name="&gt;&gt;ListView4.Name" xml:space="preserve">
     <value>ListView4</value>
@@ -725,9 +716,6 @@
   </data>
   <data name="ButtonUpdate.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label24.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 13</value>
@@ -761,9 +749,6 @@
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>204, 32</value>
-  </data>
-  <data name="ButtonCopy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 653</value>
   </data>
   <data name="&gt;&gt;ButtonSave.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -825,14 +810,11 @@
   <data name="Label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 24</value>
-  </data>
-  <data name="Label11.Text" xml:space="preserve">
-    <value>Itemsearch:</value>
-  </data>
   <data name="Label15.TabIndex" type="System.Int32, mscorlib">
     <value>543</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label0.Text" xml:space="preserve">
     <value>Heroes</value>
@@ -846,14 +828,17 @@
   <data name="ListBox1.Items" xml:space="preserve">
     <value> </value>
   </data>
+  <data name="LabelWait.Text" xml:space="preserve">
+    <value>Checking for Updates ...</value>
+  </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
   </data>
   <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ComboBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 22</value>
+  <data name="&gt;&gt;BackgroundWorker1.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label0.TabIndex" type="System.Int32, mscorlib">
     <value>326</value>
@@ -870,6 +855,9 @@
   <data name="LabelWait.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
   <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -882,9 +870,6 @@
   <data name="&gt;&gt;TabPage3.Parent" xml:space="preserve">
     <value>TabControl1</value>
   </data>
-  <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="&gt;&gt;CheckBox2.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
@@ -894,8 +879,8 @@
   <data name="ComboBox1.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="ButtonSave.Text" xml:space="preserve">
-    <value>Save</value>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>Itemsearch:</value>
   </data>
   <data name="CheckBox1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -912,11 +897,14 @@
   <data name="ComboBox2.Items3" xml:space="preserve">
     <value>Armor</value>
   </data>
+  <data name="Label22.Text" xml:space="preserve">
+    <value>Shopfilter:</value>
+  </data>
   <data name="&gt;&gt;ListView2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BackgroundWorker1.Name" xml:space="preserve">
-    <value>BackgroundWorker1</value>
+  <data name="&gt;&gt;Timer3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ComboBox1.Items10" xml:space="preserve">
     <value>Intelligence</value>
@@ -1007,9 +995,6 @@
   </data>
   <data name="ButtonChangeSteam.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 1</value>
   </data>
   <data name="&gt;&gt;ButtonSaveTextfile.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4294,11 +4279,11 @@
   <data name="&gt;&gt;ButtonUpdate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;BackgroundWorker1.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;Label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4306,8 +4291,8 @@
   <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="Label22.Text" xml:space="preserve">
-    <value>Shopfilter:</value>
+  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
+    <value>TabControl1</value>
   </data>
   <data name="&gt;&gt;ButtonDefaultItembuild.Parent" xml:space="preserve">
     <value>TabPage1</value>
@@ -4318,8 +4303,8 @@
   <data name="ComboBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
-  <data name="&gt;&gt;TextBoxItemsearch.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;ButtonCopy.Name" xml:space="preserve">
+    <value>ButtonCopy</value>
   </data>
   <data name="&gt;&gt;ComboBox3.Name" xml:space="preserve">
     <value>ComboBox3</value>
@@ -4336,17 +4321,14 @@
   <data name="ListBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  <data name="ButtonCopy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 653</value>
   </data>
   <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
     <value>362, 231</value>
   </data>
   <data name="Label24.Text" xml:space="preserve">
     <value>You can delete items with right clicking at the image.</value>
-  </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>Change Itembuild</value>
   </data>
   <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
     <value>ToolTip1</value>
@@ -4426,14 +4408,17 @@
   <data name="ListView5.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>909, 722</value>
+  </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 246</value>
   </data>
   <data name="ComboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>417, 228</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TextBoxItemsearch.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="ComboBox2.Items" xml:space="preserve">
     <value>All</value>
@@ -4450,8 +4435,8 @@
   <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
     <value>898, 682</value>
   </data>
-  <data name="Label12.Text" xml:space="preserve">
-    <value>Sort Heros:</value>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;TextBox2.Name" xml:space="preserve">
     <value>TextBox2</value>
@@ -4498,17 +4483,11 @@
   <data name="ComboBox1.Items3" xml:space="preserve">
     <value>Armor</value>
   </data>
-  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="ComboBox3.Items" xml:space="preserve">
     <value>All</value>
   </data>
   <data name="ComboBoxClient.Items" xml:space="preserve">
     <value>Test Client</value>
-  </data>
-  <data name="&gt;&gt;ComboBox3.Parent" xml:space="preserve">
-    <value>TabPage1</value>
   </data>
   <data name="&gt;&gt;Label24.Name" xml:space="preserve">
     <value>Label24</value>
@@ -4519,12 +4498,15 @@
   <data name="&gt;&gt;ButtonOpenFolder.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 15</value>
+  </data>
   <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABO
-        JQ4AAk1TRnQBSQFMAgEBiAEAAcQBAAHsAQABKAEAAR4BAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGg
+        JQ4AAk1TRnQBSQFMAgEBiAEAAfgBAAEIAQEBKAEAAR4BAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGg
         AwABGgEEAgABAQEAARgFAAHAAbABB/8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wCJAAEFAQcBBAEFAQcBBAEGAQcBBAEGAQgBBAEGAQcBBAEFAQYBBAEGAQcBAwIG
@@ -19992,8 +19974,11 @@
   <data name="TextBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 183</value>
   </data>
-  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 12</value>
+  <data name="ButtonDeleteBackup.Text" xml:space="preserve">
+    <value>Delete backups</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Author:</value>
   </data>
   <data name="TextBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -20037,8 +20022,8 @@
   <data name="TextBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="ButtonDefaultItembuild.ToolTip" xml:space="preserve">
-    <value />
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 12</value>
   </data>
   <data name="&gt;&gt;Label22.Name" xml:space="preserve">
     <value>Label22</value>
@@ -20051,9 +20036,6 @@
   </data>
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="ComboBoxClient.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="LabelWait.ToolTip" xml:space="preserve">
     <value />
@@ -20070,8 +20052,8 @@
   <data name="TextBoxItemsearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 20</value>
   </data>
-  <data name="TextBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 20</value>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 24</value>
   </data>
   <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
     <value>TabPage1</value>
@@ -20112,8 +20094,8 @@
   <data name="ButtonDefaultItembuild.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="Label4.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;Label0.Name" xml:space="preserve">
+    <value>Label0</value>
   </data>
   <data name="ButtonOpenTextfile.Location" type="System.Drawing.Point, System.Drawing">
     <value>451, 653</value>
@@ -20124,8 +20106,8 @@
   <data name="ComboBox1.Items4" xml:space="preserve">
     <value>Attack Speed</value>
   </data>
-  <data name="&gt;&gt;ButtonCopy.Name" xml:space="preserve">
-    <value>ButtonCopy</value>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="TabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -20136,8 +20118,8 @@
   <data name="LabelWait.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;ButtonChangeSteam.Name" xml:space="preserve">
-    <value>ButtonChangeSteam</value>
+  <data name="&gt;&gt;ComboBox3.Parent" xml:space="preserve">
+    <value>TabPage1</value>
   </data>
   <data name="&gt;&gt;Label22.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -20169,14 +20151,11 @@
   <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>Options</value>
   </data>
-  <data name="ComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>TabPage5</value>
   </data>
   <data name="&gt;&gt;ButtonBackup.Name" xml:space="preserve">
     <value>ButtonBackup</value>
@@ -20208,8 +20187,11 @@
   <data name="ComboBox3.Items1" xml:space="preserve">
     <value>Strength</value>
   </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 15</value>
+  <data name="ButtonDefaultItembuild.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
   </data>
   <data name="ButtonOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 23</value>
@@ -20226,14 +20208,17 @@
   <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>906, 708</value>
   </data>
+  <data name="&gt;&gt;ButtonOpenTextfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
     <value>TabPage1</value>
   </data>
-  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
-    <value>350</value>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
   </data>
-  <data name="TextBox3.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
   </data>
   <data name="Label24.TabIndex" type="System.Int32, mscorlib">
     <value>534</value>
@@ -20244,8 +20229,8 @@
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 15</value>
   </data>
-  <data name="ListView5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 110</value>
+  <data name="ComboBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 22</value>
   </data>
   <data name="TextBox3.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Both</value>
@@ -20292,11 +20277,8 @@
   <data name="ComboBoxClient.Items1" xml:space="preserve">
     <value>Beta Client</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Author:</value>
-  </data>
-  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
-    <value>TabControl1</value>
+  <data name="ListView5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>731, 66</value>
   </data>
   <data name="TabPage3.ToolTip" xml:space="preserve">
     <value />
@@ -20313,9 +20295,6 @@
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
   </data>
-  <data name="Button2.TabIndex" type="System.Int32, mscorlib">
-    <value>557</value>
-  </data>
   <data name="&gt;&gt;Label11.Name" xml:space="preserve">
     <value>Label11</value>
   </data>
@@ -20331,14 +20310,14 @@
   <data name="ComboBox2.Items2" xml:space="preserve">
     <value>Armaments</value>
   </data>
-  <data name="&gt;&gt;ButtonUpdate.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;TextBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label14.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="ButtonDeleteBackup.Text" xml:space="preserve">
-    <value>Delete backups</value>
+  <data name="&gt;&gt;ComboBoxClient.Name" xml:space="preserve">
+    <value>ComboBoxClient</value>
   </data>
   <data name="&gt;&gt;TextBox4.Parent" xml:space="preserve">
     <value>TabPage5</value>
@@ -20382,8 +20361,8 @@
   <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>213, 19</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>909, 722</value>
+  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
+    <value>TabPage3</value>
   </data>
   <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 628</value>
@@ -20391,14 +20370,14 @@
   <data name="&gt;&gt;Label10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
+  <data name="&gt;&gt;ButtonCopy.Parent" xml:space="preserve">
+    <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;ButtonOpenTextfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ComboBox3.Items2" xml:space="preserve">
+    <value>Agility</value>
   </data>
   <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
     <value>24</value>
@@ -20409,11 +20388,11 @@
   <data name="ButtonCopy.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="Label3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;LabelWait.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="ComboBox3.Items2" xml:space="preserve">
-    <value>Agility</value>
   </data>
   <data name="ButtonOpenTextfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 23</value>
@@ -20421,8 +20400,8 @@
   <data name="ButtonSaveTextfile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="CheckBox2.Text" xml:space="preserve">
-    <value>Show only implemented</value>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 13</value>
   </data>
   <data name="ListView3.ToolTip" xml:space="preserve">
     <value />
@@ -20460,8 +20439,8 @@
   <data name="ButtonDeleteBackup.TabIndex" type="System.Int32, mscorlib">
     <value>338</value>
   </data>
-  <data name="Label3.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Sort Heros:</value>
   </data>
   <data name="ComboBox3.Items5" xml:space="preserve">
     <value>Support</value>
@@ -20472,8 +20451,8 @@
   <data name="Label7.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
-    <value>Label8</value>
+  <data name="CheckBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 2</value>
   </data>
   <data name="ButtonSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>615, 653</value>
@@ -20490,20 +20469,23 @@
   <data name="ButtonBackup.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
-    <value>TabPage3</value>
+  <data name="LabelWait.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 1</value>
   </data>
-  <data name="LabelWait.Text" xml:space="preserve">
-    <value>Checking for Updates ...</value>
+  <data name="&gt;&gt;ButtonOpenBackupFolder.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;Label5.Name" xml:space="preserve">
     <value>Label5</value>
   </data>
+  <data name="ButtonSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="TabPage5.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ListView5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 110</value>
   </data>
   <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
     <value>TabPage1</value>
@@ -20514,8 +20496,8 @@
   <data name="&gt;&gt;Label0.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ButtonOpenBackupFolder.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
   </data>
   <data name="ListView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>733, 392</value>
@@ -20541,8 +20523,8 @@
   <data name="Label0.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;ComboBoxClient.Name" xml:space="preserve">
-    <value>ComboBoxClient</value>
+  <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;CheckBox2.Name" xml:space="preserve">
     <value>CheckBox2</value>
@@ -20553,20 +20535,14 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>Core Items</value>
   </data>
-  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
-    <value>TabPage5</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 5</value>
+  <data name="ComboBoxClient.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;ButtonDeleteBackup.Name" xml:space="preserve">
     <value>ButtonDeleteBackup</value>
-  </data>
-  <data name="ListView5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>731, 66</value>
   </data>
   <data name="&gt;&gt;ButtonImport.Name" xml:space="preserve">
     <value>ButtonImport</value>

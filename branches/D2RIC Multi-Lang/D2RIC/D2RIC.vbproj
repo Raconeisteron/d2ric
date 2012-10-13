@@ -147,6 +147,7 @@
   <ItemGroup>
     <EmbeddedResource Include="FormCheckSteamPath.de.resx">
       <DependentUpon>FormCheckSteamPath.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.de.resx">
       <DependentUpon>FormMain.vb</DependentUpon>
@@ -157,6 +158,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCheckSteamPath.resx">
       <DependentUpon>FormCheckSteamPath.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

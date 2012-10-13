@@ -30,7 +30,7 @@ Public Class OptionsClass
         End Using
     End Sub
 
-    'Change the client (ex. beta client or text client)
+    'Change the client (ex. beta client or test client)
     Public Sub ChangeClient()
         Dim steam_path, path As String
         steam_path = FormMain.TextBox4.Text

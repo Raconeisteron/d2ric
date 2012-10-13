@@ -122,10 +122,10 @@
     <value>40, 23</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>409, 26</value>
+    <value>434, 26</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Bitte wähle deinen Steam Ordner aus</value>
+    <value>Bitte wähle dein Steam Verzeichnis aus</value>
   </data>
   <data name="Button2.Text" xml:space="preserve">
     <value>Abbrechen</value>

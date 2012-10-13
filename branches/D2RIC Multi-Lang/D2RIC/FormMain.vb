@@ -14,7 +14,9 @@ Public Class FormMain
     Public ImportHero As Boolean = False
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        'Save all Settings
         My.Settings.Save()
+        'Exit the programm
         End
     End Sub
 
@@ -226,16 +228,89 @@ Public Class FormMain
                 item.Remove()
             End If
         Next
-        If ComboBox1.Text <> "" Then
+        Dim cb1 As String = ""
+        Select Case ComboBox1.SelectedIndex
+            Case 1
+                cb1 = "Agility"
+            Case 2
+                cb1 = "All Attributes"
+            Case 3
+                cb1 = "Armor"
+            Case 4
+                cb1 = "Attack Speed"
+            Case 5
+                cb1 = "Aura"
+            Case 6
+                cb1 = "Damage"
+            Case 7
+                cb1 = "Evasion"
+            Case 8
+                cb1 = "HP"
+            Case 9
+                cb1 = "HP/sec Regeneration"
+            Case 10
+                cb1 = "Intelligence"
+            Case 11
+                cb1 = "Lifesteal"
+            Case 12
+                cb1 = " Magic Resistance"
+            Case 13
+                cb1 = "Mana"
+            Case 14
+                cb1 = "Mana Regeneration"
+            Case 15
+                cb1 = "Movement Speed"
+            Case 16
+                cb1 = "Recipe"
+            Case 17
+                cb1 = "Strength"
+            Case Else
+                cb1 = ""
+        End Select
+
+        If cb1 <> "" Then
             For Each item As ListViewItem In ListView1.Items
-                If Not item.ToolTipText.ToLower.Contains(ComboBox1.Text.ToLower) Then
+                If Not item.ToolTipText.ToLower.Contains(cb1.ToLower) Then
                     item.Remove()
                 End If
             Next
         End If
-        If ComboBox2.Text <> "All" Then
+
+        Dim cb2 As String = ""
+        Select Case ComboBox1.SelectedIndex
+            Case 0
+                cb2 = "All"
+            Case 1
+                cb2 = "Arcane"
+            Case 2
+                cb2 = "Armaments"
+            Case 3
+                cb2 = "Armor"
+            Case 4
+                cb2 = "Artifacts"
+            Case 5
+                cb2 = "Attributes"
+            Case 6
+                cb2 = "Caster"
+            Case 7
+                cb2 = "Common"
+            Case 8
+                cb2 = "Consumables"
+            Case 9
+                cb2 = "Secret Shop"
+            Case 10
+                cb2 = "Side Lane Shop"
+            Case 11
+                cb2 = "Support"
+            Case 12
+                cb2 = "Weapons"
+            Case Else
+                cb2 = "All"
+        End Select
+
+        If cb2 <> "All" Then
             For Each item As ListViewItem In ListView1.Items
-                If Not item.SubItems(1).Text.ToLower.Contains(ComboBox2.Text.ToLower) Then
+                If Not item.SubItems(1).Text.ToLower.Contains(cb2.ToLower) Then
                     item.Remove()
                 End If
             Next
