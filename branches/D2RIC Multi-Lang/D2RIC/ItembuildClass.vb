@@ -1830,13 +1830,13 @@ Public Class ItembuildClass
             Case "Ethereal Blade"
                 Return 4900
             Case "Eul's Scepter of Divinity"
-                Return 2800
+                Return 2700
             Case "Eye of Skadi"
-                Return 5750
+                Return 5675
             Case "Flying Courier"
                 Return 390
             Case "Force Staff"
-                Return 2200
+                Return 2350
             Case "Gauntlets of Strength"
                 Return 150
             Case "Gem of True Sight"
@@ -1876,7 +1876,7 @@ Public Class ItembuildClass
             Case "Magic Wand"
                 Return 509
             Case "Manta Style"
-                Return 4900
+                Return 5050
             Case "Mantle of Intelligence"
                 Return 150
             Case "Mask of Madness"
@@ -1902,7 +1902,7 @@ Public Class ItembuildClass
             Case "Necronomicon 3"
                 Return 2700 + 1250 + 1250
             Case "Null Talisman"
-                Return 505
+                Return 490
             Case "Oblivion Staff"
                 Return 1675
             Case "Observer Ward"
@@ -1956,9 +1956,9 @@ Public Class ItembuildClass
             Case "Sage's Mask"
                 Return 325
             Case "Sange"
-                Return 2150
+                Return 2050
             Case "Sange and Yasha"
-                Return 4300
+                Return 4100
             Case "Satanic"
                 Return 6150
             Case "Scythe of Vyse"
@@ -1998,9 +1998,7 @@ Public Class ItembuildClass
             Case "Vanguard"
                 Return 2225
             Case "Veil of Discord"
-                Return 5000
-            Case "2650"
-                Return 5000
+                Return 2650
             Case "Vitality Booster"
                 Return 1100
             Case "Vladmir's Offering"
@@ -2010,13 +2008,13 @@ Public Class ItembuildClass
             Case "Wraith Band"
                 Return 485
             Case "Yasha"
-                Return 2150
+                Return 2050
             Case "Wraith Band (Recipe)"
                 Return 150
             Case "Bracer (Recipe)"
                 Return 190
             Case "Null Talisman (Recipe)"
-                Return 155
+                Return 145
             Case "Magic Wand (Recipe)"
                 Return 150
             Case "Hand of Midas (Recipe)"
@@ -2054,7 +2052,7 @@ Public Class ItembuildClass
             Case "Refresher Orb (Recipe)"
                 Return 1875
             Case "Force Staff (Recipe)"
-                Return 500
+                Return 1000
             Case "Armlet (Recipe)"
                 Return 700
             Case "Crystalys (Recipe)"
