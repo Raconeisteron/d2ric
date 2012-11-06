@@ -66,6 +66,8 @@ Partial Class FormMain
         Me.ButtonCopy = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.ComboBoxLang = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBoxClient = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -93,21 +95,18 @@ Partial Class FormMain
         '
         'TabControl1
         '
-        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Location = New System.Drawing.Point(2, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(906, 708)
-        Me.TabControl1.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.TabControl1, resources.GetString("TabControl1.ToolTip"))
         '
         'TabPage1
         '
+        resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.AllowDrop = True
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.ListView5)
@@ -139,35 +138,28 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(898, 682)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Change Itembuild"
+        Me.ToolTip1.SetToolTip(Me.TabPage1, resources.GetString("TabPage1.ToolTip"))
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(816, 226)
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 556
-        Me.Button1.Text = "Reset filter"
+        Me.ToolTip1.SetToolTip(Me.Button1, resources.GetString("Button1.ToolTip"))
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ListView5
         '
+        resources.ApplyResources(Me.ListView5, "ListView5")
         Me.ListView5.LargeImageList = Me.ImageList1
-        Me.ListView5.Location = New System.Drawing.Point(731, 66)
         Me.ListView5.MultiSelect = False
         Me.ListView5.Name = "ListView5"
         Me.ListView5.ShowGroups = False
         Me.ListView5.ShowItemToolTips = True
-        Me.ListView5.Size = New System.Drawing.Size(160, 110)
         Me.ListView5.SmallImageList = Me.ImageList1
-        Me.ListView5.TabIndex = 555
         Me.ListView5.TileSize = New System.Drawing.Size(44, 34)
+        Me.ToolTip1.SetToolTip(Me.ListView5, resources.GetString("ListView5.ToolTip"))
         Me.ListView5.UseCompatibleStateImageBehavior = False
         Me.ListView5.View = System.Windows.Forms.View.Tile
         '
@@ -314,388 +306,287 @@ Partial Class FormMain
         '
         'ListView4
         '
+        resources.ApplyResources(Me.ListView4, "ListView4")
         Me.ListView4.LargeImageList = Me.ImageList1
-        Me.ListView4.Location = New System.Drawing.Point(549, 66)
         Me.ListView4.MultiSelect = False
         Me.ListView4.Name = "ListView4"
         Me.ListView4.ShowGroups = False
         Me.ListView4.ShowItemToolTips = True
-        Me.ListView4.Size = New System.Drawing.Size(160, 110)
         Me.ListView4.SmallImageList = Me.ImageList1
-        Me.ListView4.TabIndex = 554
         Me.ListView4.TileSize = New System.Drawing.Size(44, 34)
+        Me.ToolTip1.SetToolTip(Me.ListView4, resources.GetString("ListView4.ToolTip"))
         Me.ListView4.UseCompatibleStateImageBehavior = False
         Me.ListView4.View = System.Windows.Forms.View.Tile
         '
         'ListView3
         '
+        resources.ApplyResources(Me.ListView3, "ListView3")
         Me.ListView3.LargeImageList = Me.ImageList1
-        Me.ListView3.Location = New System.Drawing.Point(365, 66)
         Me.ListView3.MultiSelect = False
         Me.ListView3.Name = "ListView3"
         Me.ListView3.ShowGroups = False
         Me.ListView3.ShowItemToolTips = True
-        Me.ListView3.Size = New System.Drawing.Size(160, 110)
         Me.ListView3.SmallImageList = Me.ImageList1
-        Me.ListView3.TabIndex = 553
         Me.ListView3.TileSize = New System.Drawing.Size(44, 34)
+        Me.ToolTip1.SetToolTip(Me.ListView3, resources.GetString("ListView3.ToolTip"))
         Me.ListView3.UseCompatibleStateImageBehavior = False
         Me.ListView3.View = System.Windows.Forms.View.Tile
         '
         'ListView2
         '
+        resources.ApplyResources(Me.ListView2, "ListView2")
         Me.ListView2.LargeImageList = Me.ImageList1
-        Me.ListView2.Location = New System.Drawing.Point(181, 66)
         Me.ListView2.MultiSelect = False
         Me.ListView2.Name = "ListView2"
         Me.ListView2.ShowGroups = False
         Me.ListView2.ShowItemToolTips = True
-        Me.ListView2.Size = New System.Drawing.Size(160, 110)
         Me.ListView2.SmallImageList = Me.ImageList1
-        Me.ListView2.TabIndex = 552
         Me.ListView2.TileSize = New System.Drawing.Size(44, 34)
+        Me.ToolTip1.SetToolTip(Me.ListView2, resources.GetString("ListView2.ToolTip"))
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Tile
         '
         'Label22
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(546, 231)
+        resources.ApplyResources(Me.Label22, "Label22")
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(54, 13)
-        Me.Label22.TabIndex = 551
-        Me.Label22.Text = "Shopfilter:"
+        Me.ToolTip1.SetToolTip(Me.Label22, resources.GetString("Label22.ToolTip"))
         '
         'ComboBox2
         '
+        resources.ApplyResources(Me.ComboBox2, "ComboBox2")
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"All", "Arcane", "Armaments", "Armor", "Artifacts", "Attributes", "Caster", "Common", "Consumables", "Secret Shop", "Side Lane Shop", "Support", "Weapons"})
-        Me.ComboBox2.Location = New System.Drawing.Point(606, 228)
+        Me.ComboBox2.Items.AddRange(New Object() {resources.GetString("ComboBox2.Items"), resources.GetString("ComboBox2.Items1"), resources.GetString("ComboBox2.Items2"), resources.GetString("ComboBox2.Items3"), resources.GetString("ComboBox2.Items4"), resources.GetString("ComboBox2.Items5"), resources.GetString("ComboBox2.Items6"), resources.GetString("ComboBox2.Items7"), resources.GetString("ComboBox2.Items8"), resources.GetString("ComboBox2.Items9"), resources.GetString("ComboBox2.Items10"), resources.GetString("ComboBox2.Items11"), resources.GetString("ComboBox2.Items12")})
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 550
+        Me.ToolTip1.SetToolTip(Me.ComboBox2, resources.GetString("ComboBox2.ToolTip"))
         '
         'Label15
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(227, 52)
+        resources.ApplyResources(Me.Label15, "Label15")
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(14, 13)
-        Me.Label15.TabIndex = 543
-        Me.Label15.Text = "0"
+        Me.ToolTip1.SetToolTip(Me.Label15, resources.GetString("Label15.ToolTip"))
         '
         'Label14
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(190, 52)
+        resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(31, 13)
-        Me.Label14.TabIndex = 542
-        Me.Label14.Text = "Cost:"
+        Me.ToolTip1.SetToolTip(Me.Label14, resources.GetString("Label14.ToolTip"))
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(362, 231)
+        resources.ApplyResources(Me.Label13, "Label13")
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(49, 13)
-        Me.Label13.TabIndex = 541
-        Me.Label13.Text = "Itemfilter:"
+        Me.ToolTip1.SetToolTip(Me.Label13, resources.GetString("Label13.ToolTip"))
         '
         'ComboBox1
         '
+        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"", "Agility", "All Attributes", "Armor", "Attack Speed", "Aura", "Damage", "Evasion", "HP", "HP/sec Regeneration", "Intelligence", "Lifesteal", "Magic Resistance", "Mana", "Mana Regeneration", "Movement Speed", "Recipe", "Strength"})
-        Me.ComboBox1.Location = New System.Drawing.Point(417, 228)
+        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1"), resources.GetString("ComboBox1.Items2"), resources.GetString("ComboBox1.Items3"), resources.GetString("ComboBox1.Items4"), resources.GetString("ComboBox1.Items5"), resources.GetString("ComboBox1.Items6"), resources.GetString("ComboBox1.Items7"), resources.GetString("ComboBox1.Items8"), resources.GetString("ComboBox1.Items9"), resources.GetString("ComboBox1.Items10"), resources.GetString("ComboBox1.Items11"), resources.GetString("ComboBox1.Items12"), resources.GetString("ComboBox1.Items13"), resources.GetString("ComboBox1.Items14"), resources.GetString("ComboBox1.Items15"), resources.GetString("ComboBox1.Items16"), resources.GetString("ComboBox1.Items17")})
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 540
+        Me.ToolTip1.SetToolTip(Me.ComboBox1, resources.GetString("ComboBox1.ToolTip"))
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(178, 231)
+        resources.ApplyResources(Me.Label11, "Label11")
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(62, 13)
-        Me.Label11.TabIndex = 539
-        Me.Label11.Text = "Itemsearch:"
+        Me.ToolTip1.SetToolTip(Me.Label11, resources.GetString("Label11.ToolTip"))
         '
         'TextBoxItemsearch
         '
-        Me.TextBoxItemsearch.Location = New System.Drawing.Point(246, 228)
+        resources.ApplyResources(Me.TextBoxItemsearch, "TextBoxItemsearch")
         Me.TextBoxItemsearch.Name = "TextBoxItemsearch"
-        Me.TextBoxItemsearch.Size = New System.Drawing.Size(101, 20)
-        Me.TextBoxItemsearch.TabIndex = 538
+        Me.ToolTip1.SetToolTip(Me.TextBoxItemsearch, resources.GetString("TextBoxItemsearch.ToolTip"))
         '
         'ListView1
         '
-        Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.LargeImageList = Me.ImageList1
-        Me.ListView1.Location = New System.Drawing.Point(158, 255)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.ShowGroups = False
         Me.ListView1.ShowItemToolTips = True
-        Me.ListView1.Size = New System.Drawing.Size(733, 392)
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
-        Me.ListView1.TabIndex = 537
         Me.ListView1.TileSize = New System.Drawing.Size(175, 34)
+        Me.ToolTip1.SetToolTip(Me.ListView1, resources.GetString("ListView1.ToolTip"))
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Tile
         '
         'ButtonDefaultItembuild
         '
-        Me.ButtonDefaultItembuild.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonDefaultItembuild.Location = New System.Drawing.Point(444, 653)
+        resources.ApplyResources(Me.ButtonDefaultItembuild, "ButtonDefaultItembuild")
         Me.ButtonDefaultItembuild.Name = "ButtonDefaultItembuild"
-        Me.ButtonDefaultItembuild.Size = New System.Drawing.Size(95, 23)
-        Me.ButtonDefaultItembuild.TabIndex = 536
-        Me.ButtonDefaultItembuild.Text = "Default Itembuild"
+        Me.ToolTip1.SetToolTip(Me.ButtonDefaultItembuild, resources.GetString("ButtonDefaultItembuild.ToolTip"))
         Me.ButtonDefaultItembuild.UseVisualStyleBackColor = True
         '
         'CheckBox2
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(71, 2)
+        resources.ApplyResources(Me.CheckBox2, "CheckBox2")
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(137, 17)
-        Me.CheckBox2.TabIndex = 535
-        Me.CheckBox2.Text = "Show only implemented"
+        Me.ToolTip1.SetToolTip(Me.CheckBox2, resources.GetString("CheckBox2.ToolTip"))
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'Label24
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(178, 179)
+        resources.ApplyResources(Me.Label24, "Label24")
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(254, 13)
-        Me.Label24.TabIndex = 534
-        Me.Label24.Text = "You can delete items with right clicking at the image."
+        Me.ToolTip1.SetToolTip(Me.Label24, resources.GetString("Label24.ToolTip"))
         '
         'ComboBox3
         '
+        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
         Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"All", "Strength", "Agility", "Intelligence", "Carry", "Support", "Ganker", "Initiator", "Pusher", "Jungler", "Tank"})
-        Me.ComboBox3.Location = New System.Drawing.Point(72, 22)
+        Me.ComboBox3.Items.AddRange(New Object() {resources.GetString("ComboBox3.Items"), resources.GetString("ComboBox3.Items1"), resources.GetString("ComboBox3.Items2"), resources.GetString("ComboBox3.Items3"), resources.GetString("ComboBox3.Items4"), resources.GetString("ComboBox3.Items5"), resources.GetString("ComboBox3.Items6"), resources.GetString("ComboBox3.Items7"), resources.GetString("ComboBox3.Items8"), resources.GetString("ComboBox3.Items9"), resources.GetString("ComboBox3.Items10")})
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(80, 21)
-        Me.ComboBox3.TabIndex = 505
+        Me.ToolTip1.SetToolTip(Me.ComboBox3, resources.GetString("ComboBox3.ToolTip"))
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 25)
+        resources.ApplyResources(Me.Label12, "Label12")
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(60, 13)
-        Me.Label12.TabIndex = 504
-        Me.Label12.Text = "Sort Heros:"
+        Me.ToolTip1.SetToolTip(Me.Label12, resources.GetString("Label12.ToolTip"))
         '
         'Label0
         '
-        Me.Label0.AutoSize = True
-        Me.Label0.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label0.Location = New System.Drawing.Point(6, 3)
+        resources.ApplyResources(Me.Label0, "Label0")
         Me.Label0.Name = "Label0"
-        Me.Label0.Size = New System.Drawing.Size(47, 13)
-        Me.Label0.TabIndex = 326
-        Me.Label0.Text = "Heroes"
+        Me.ToolTip1.SetToolTip(Me.Label0, resources.GetString("Label0.ToolTip"))
         '
         'ListBox1
         '
-        Me.ListBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.ListBox1, "ListBox1")
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Items.AddRange(New Object() {" "})
-        Me.ListBox1.Location = New System.Drawing.Point(5, 50)
+        Me.ListBox1.Items.AddRange(New Object() {resources.GetString("ListBox1.Items")})
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(147, 628)
         Me.ListBox1.Sorted = True
-        Me.ListBox1.TabIndex = 325
+        Me.ToolTip1.SetToolTip(Me.ListBox1, resources.GetString("ListBox1.ToolTip"))
         '
         'ButtonOpenFolder
         '
-        Me.ButtonOpenFolder.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonOpenFolder.Location = New System.Drawing.Point(201, 653)
+        resources.ApplyResources(Me.ButtonOpenFolder, "ButtonOpenFolder")
         Me.ButtonOpenFolder.Name = "ButtonOpenFolder"
-        Me.ButtonOpenFolder.Size = New System.Drawing.Size(132, 23)
-        Me.ButtonOpenFolder.TabIndex = 327
-        Me.ButtonOpenFolder.Text = "Open Itembuilds Folder"
+        Me.ToolTip1.SetToolTip(Me.ButtonOpenFolder, resources.GetString("ButtonOpenFolder.ToolTip"))
         Me.ButtonOpenFolder.UseVisualStyleBackColor = True
         '
         'ButtonSave
         '
-        Me.ButtonSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonSave.Location = New System.Drawing.Point(615, 653)
+        resources.ApplyResources(Me.ButtonSave, "ButtonSave")
         Me.ButtonSave.Name = "ButtonSave"
-        Me.ButtonSave.Size = New System.Drawing.Size(59, 23)
-        Me.ButtonSave.TabIndex = 328
-        Me.ButtonSave.Text = "Save"
+        Me.ToolTip1.SetToolTip(Me.ButtonSave, resources.GetString("ButtonSave.ToolTip"))
         Me.ButtonSave.UseVisualStyleBackColor = True
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(178, 205)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
-        Me.Label2.TabIndex = 330
-        Me.Label2.Text = "Author:"
+        Me.ToolTip1.SetToolTip(Me.Label2, resources.GetString("Label2.ToolTip"))
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(225, 202)
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox1.TabIndex = 331
+        Me.ToolTip1.SetToolTip(Me.TextBox1, resources.GetString("TextBox1.ToolTip"))
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(453, 5)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 20)
-        Me.Label1.TabIndex = 332
-        Me.Label1.Text = "No hero selected!"
+        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(204, 32)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 15)
-        Me.Label3.TabIndex = 367
-        Me.Label3.Text = "Starting Items"
+        Me.ToolTip1.SetToolTip(Me.Label3, resources.GetString("Label3.ToolTip"))
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(398, 32)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 15)
-        Me.Label4.TabIndex = 368
-        Me.Label4.Text = "Early Game"
+        Me.ToolTip1.SetToolTip(Me.Label4, resources.GetString("Label4.ToolTip"))
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(581, 32)
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(76, 15)
-        Me.Label5.TabIndex = 369
-        Me.Label5.Text = "Core Items"
+        Me.ToolTip1.SetToolTip(Me.Label5, resources.GetString("Label5.ToolTip"))
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(775, 32)
+        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 15)
-        Me.Label6.TabIndex = 370
-        Me.Label6.Text = "Luxury"
+        Me.ToolTip1.SetToolTip(Me.Label6, resources.GetString("Label6.ToolTip"))
         '
         'TabPage3
         '
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Controls.Add(Me.ButtonOpenTextfile)
         Me.TabPage3.Controls.Add(Me.ButtonImport)
         Me.TabPage3.Controls.Add(Me.TextBox2)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(898, 682)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Import Itembuild"
+        Me.ToolTip1.SetToolTip(Me.TabPage3, resources.GetString("TabPage3.ToolTip"))
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'ButtonOpenTextfile
         '
-        Me.ButtonOpenTextfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonOpenTextfile.Location = New System.Drawing.Point(451, 653)
+        resources.ApplyResources(Me.ButtonOpenTextfile, "ButtonOpenTextfile")
         Me.ButtonOpenTextfile.Name = "ButtonOpenTextfile"
-        Me.ButtonOpenTextfile.Size = New System.Drawing.Size(106, 23)
-        Me.ButtonOpenTextfile.TabIndex = 7
-        Me.ButtonOpenTextfile.Text = "Open from textfile"
+        Me.ToolTip1.SetToolTip(Me.ButtonOpenTextfile, resources.GetString("ButtonOpenTextfile.ToolTip"))
         Me.ButtonOpenTextfile.UseVisualStyleBackColor = True
         '
         'ButtonImport
         '
-        Me.ButtonImport.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonImport.Location = New System.Drawing.Point(370, 653)
+        resources.ApplyResources(Me.ButtonImport, "ButtonImport")
         Me.ButtonImport.Name = "ButtonImport"
-        Me.ButtonImport.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonImport.TabIndex = 5
-        Me.ButtonImport.Text = "Import"
+        Me.ToolTip1.SetToolTip(Me.ButtonImport, resources.GetString("ButtonImport.ToolTip"))
         Me.ButtonImport.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
-        Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(6, 3)
-        Me.TextBox2.Multiline = True
+        resources.ApplyResources(Me.TextBox2, "TextBox2")
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox2.Size = New System.Drawing.Size(885, 644)
-        Me.TextBox2.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.TextBox2, resources.GetString("TextBox2.ToolTip"))
         '
         'TabPage4
         '
+        resources.ApplyResources(Me.TabPage4, "TabPage4")
         Me.TabPage4.Controls.Add(Me.ButtonSaveTextfile)
         Me.TabPage4.Controls.Add(Me.ButtonCopy)
         Me.TabPage4.Controls.Add(Me.TextBox3)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(898, 682)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Export Itembuild"
+        Me.ToolTip1.SetToolTip(Me.TabPage4, resources.GetString("TabPage4.ToolTip"))
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'ButtonSaveTextfile
         '
-        Me.ButtonSaveTextfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonSaveTextfile.Location = New System.Drawing.Point(451, 653)
+        resources.ApplyResources(Me.ButtonSaveTextfile, "ButtonSaveTextfile")
         Me.ButtonSaveTextfile.Name = "ButtonSaveTextfile"
-        Me.ButtonSaveTextfile.Size = New System.Drawing.Size(88, 23)
-        Me.ButtonSaveTextfile.TabIndex = 7
-        Me.ButtonSaveTextfile.Text = "Save as textfile"
+        Me.ToolTip1.SetToolTip(Me.ButtonSaveTextfile, resources.GetString("ButtonSaveTextfile.ToolTip"))
         Me.ButtonSaveTextfile.UseVisualStyleBackColor = True
         '
         'ButtonCopy
         '
-        Me.ButtonCopy.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonCopy.Location = New System.Drawing.Point(370, 653)
+        resources.ApplyResources(Me.ButtonCopy, "ButtonCopy")
         Me.ButtonCopy.Name = "ButtonCopy"
-        Me.ButtonCopy.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonCopy.TabIndex = 5
-        Me.ButtonCopy.Text = "Copy"
+        Me.ToolTip1.SetToolTip(Me.ButtonCopy, resources.GetString("ButtonCopy.ToolTip"))
         Me.ButtonCopy.UseVisualStyleBackColor = True
         '
         'TextBox3
         '
-        Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox3.Multiline = True
+        resources.ApplyResources(Me.TextBox3, "TextBox3")
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox3.Size = New System.Drawing.Size(888, 644)
-        Me.TextBox3.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.TextBox3, resources.GetString("TextBox3.ToolTip"))
         '
         'TabPage5
         '
+        resources.ApplyResources(Me.TabPage5, "TabPage5")
+        Me.TabPage5.Controls.Add(Me.ComboBoxLang)
+        Me.TabPage5.Controls.Add(Me.Label16)
         Me.TabPage5.Controls.Add(Me.Label10)
         Me.TabPage5.Controls.Add(Me.ComboBoxClient)
         Me.TabPage5.Controls.Add(Me.CheckBox1)
@@ -707,140 +598,114 @@ Partial Class FormMain
         Me.TabPage5.Controls.Add(Me.TextBox4)
         Me.TabPage5.Controls.Add(Me.ButtonBackup)
         Me.TabPage5.Controls.Add(Me.ButtonDeleteBackup)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(898, 682)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "D2RIC Options"
+        Me.ToolTip1.SetToolTip(Me.TabPage5, resources.GetString("TabPage5.ToolTip"))
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'ComboBoxLang
+        '
+        resources.ApplyResources(Me.ComboBoxLang, "ComboBoxLang")
+        Me.ComboBoxLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxLang.FormattingEnabled = True
+        Me.ComboBoxLang.Items.AddRange(New Object() {resources.GetString("ComboBoxLang.Items"), resources.GetString("ComboBoxLang.Items1")})
+        Me.ComboBoxLang.Name = "ComboBoxLang"
+        Me.ToolTip1.SetToolTip(Me.ComboBoxLang, resources.GetString("ComboBoxLang.ToolTip"))
+        '
+        'Label16
+        '
+        resources.ApplyResources(Me.Label16, "Label16")
+        Me.Label16.Name = "Label16"
+        Me.ToolTip1.SetToolTip(Me.Label16, resources.GetString("Label16.ToolTip"))
         '
         'Label10
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(21, 69)
+        resources.ApplyResources(Me.Label10, "Label10")
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(44, 15)
-        Me.Label10.TabIndex = 350
-        Me.Label10.Text = "Client"
+        Me.ToolTip1.SetToolTip(Me.Label10, resources.GetString("Label10.ToolTip"))
         '
         'ComboBoxClient
         '
+        resources.ApplyResources(Me.ComboBoxClient, "ComboBoxClient")
         Me.ComboBoxClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxClient.FormattingEnabled = True
-        Me.ComboBoxClient.Items.AddRange(New Object() {"Test Client", "Beta Client"})
-        Me.ComboBoxClient.Location = New System.Drawing.Point(19, 99)
+        Me.ComboBoxClient.Items.AddRange(New Object() {resources.GetString("ComboBoxClient.Items"), resources.GetString("ComboBoxClient.Items1")})
         Me.ComboBoxClient.Name = "ComboBoxClient"
-        Me.ComboBoxClient.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBoxClient.TabIndex = 349
+        Me.ToolTip1.SetToolTip(Me.ComboBoxClient, resources.GetString("ComboBoxClient.ToolTip"))
         '
         'CheckBox1
         '
-        Me.CheckBox1.AutoSize = True
+        resources.ApplyResources(Me.CheckBox1, "CheckBox1")
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox1.Location = New System.Drawing.Point(24, 368)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(213, 19)
-        Me.CheckBox1.TabIndex = 346
-        Me.CheckBox1.Text = "Check for Updates on Startup"
+        Me.ToolTip1.SetToolTip(Me.CheckBox1, resources.GetString("CheckBox1.ToolTip"))
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'ButtonOpenBackupFolder
         '
-        Me.ButtonOpenBackupFolder.Location = New System.Drawing.Point(24, 303)
+        resources.ApplyResources(Me.ButtonOpenBackupFolder, "ButtonOpenBackupFolder")
         Me.ButtonOpenBackupFolder.Name = "ButtonOpenBackupFolder"
-        Me.ButtonOpenBackupFolder.Size = New System.Drawing.Size(116, 23)
-        Me.ButtonOpenBackupFolder.TabIndex = 344
-        Me.ButtonOpenBackupFolder.Text = "Open Backup Folder"
+        Me.ToolTip1.SetToolTip(Me.ButtonOpenBackupFolder, resources.GetString("ButtonOpenBackupFolder.ToolTip"))
         Me.ButtonOpenBackupFolder.UseVisualStyleBackColor = True
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(21, 246)
+        resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(54, 15)
-        Me.Label9.TabIndex = 343
-        Me.Label9.Text = "Backup"
+        Me.ToolTip1.SetToolTip(Me.Label9, resources.GetString("Label9.ToolTip"))
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(21, 154)
+        resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 15)
-        Me.Label8.TabIndex = 342
-        Me.Label8.Text = "Steampath"
+        Me.ToolTip1.SetToolTip(Me.Label8, resources.GetString("Label8.ToolTip"))
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(395, 24)
+        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(82, 24)
-        Me.Label7.TabIndex = 341
-        Me.Label7.Text = "Options"
+        Me.ToolTip1.SetToolTip(Me.Label7, resources.GetString("Label7.ToolTip"))
         '
         'ButtonChangeSteam
         '
-        Me.ButtonChangeSteam.Location = New System.Drawing.Point(378, 181)
+        resources.ApplyResources(Me.ButtonChangeSteam, "ButtonChangeSteam")
         Me.ButtonChangeSteam.Name = "ButtonChangeSteam"
-        Me.ButtonChangeSteam.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonChangeSteam.TabIndex = 340
-        Me.ButtonChangeSteam.Text = "Search"
+        Me.ToolTip1.SetToolTip(Me.ButtonChangeSteam, resources.GetString("ButtonChangeSteam.ToolTip"))
         Me.ButtonChangeSteam.UseVisualStyleBackColor = True
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(24, 183)
+        resources.ApplyResources(Me.TextBox4, "TextBox4")
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(348, 20)
-        Me.TextBox4.TabIndex = 339
+        Me.ToolTip1.SetToolTip(Me.TextBox4, resources.GetString("TextBox4.ToolTip"))
         '
         'ButtonBackup
         '
-        Me.ButtonBackup.Location = New System.Drawing.Point(24, 274)
+        resources.ApplyResources(Me.ButtonBackup, "ButtonBackup")
         Me.ButtonBackup.Name = "ButtonBackup"
-        Me.ButtonBackup.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonBackup.TabIndex = 337
-        Me.ButtonBackup.Text = "Backup"
+        Me.ToolTip1.SetToolTip(Me.ButtonBackup, resources.GetString("ButtonBackup.ToolTip"))
         Me.ButtonBackup.UseVisualStyleBackColor = True
         '
         'ButtonDeleteBackup
         '
-        Me.ButtonDeleteBackup.Location = New System.Drawing.Point(105, 274)
+        resources.ApplyResources(Me.ButtonDeleteBackup, "ButtonDeleteBackup")
         Me.ButtonDeleteBackup.Name = "ButtonDeleteBackup"
-        Me.ButtonDeleteBackup.Size = New System.Drawing.Size(111, 23)
-        Me.ButtonDeleteBackup.TabIndex = 338
-        Me.ButtonDeleteBackup.Text = "Delete backups"
+        Me.ToolTip1.SetToolTip(Me.ButtonDeleteBackup, resources.GetString("ButtonDeleteBackup.ToolTip"))
         Me.ButtonDeleteBackup.UseVisualStyleBackColor = True
         '
         'ButtonUpdate
         '
-        Me.ButtonUpdate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonUpdate.Location = New System.Drawing.Point(795, 4)
+        resources.ApplyResources(Me.ButtonUpdate, "ButtonUpdate")
         Me.ButtonUpdate.Name = "ButtonUpdate"
-        Me.ButtonUpdate.Size = New System.Drawing.Size(109, 23)
-        Me.ButtonUpdate.TabIndex = 1
-        Me.ButtonUpdate.Text = "Check for Updates"
+        Me.ToolTip1.SetToolTip(Me.ButtonUpdate, resources.GetString("ButtonUpdate.ToolTip"))
         Me.ButtonUpdate.UseVisualStyleBackColor = True
         '
         'LabelWait
         '
-        Me.LabelWait.AutoSize = True
-        Me.LabelWait.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        resources.ApplyResources(Me.LabelWait, "LabelWait")
         Me.LabelWait.ForeColor = System.Drawing.Color.Red
-        Me.LabelWait.Location = New System.Drawing.Point(458, 1)
         Me.LabelWait.Name = "LabelWait"
-        Me.LabelWait.Size = New System.Drawing.Size(269, 26)
-        Me.LabelWait.TabIndex = 2
-        Me.LabelWait.Text = "Checking for Updates ..."
-        Me.LabelWait.Visible = False
+        Me.ToolTip1.SetToolTip(Me.LabelWait, resources.GetString("LabelWait.ToolTip"))
         '
         'BackgroundWorker1
         '
@@ -859,19 +724,14 @@ Partial Class FormMain
         '
         'FormMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(909, 722)
         Me.Controls.Add(Me.LabelWait)
         Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.TabControl1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(925, 500)
         Me.Name = "FormMain"
         Me.ShowIcon = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "DotA 2 Recommended Items Customizer"
+        Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -945,4 +805,6 @@ Partial Class FormMain
     Friend WithEvents ListView5 As System.Windows.Forms.ListView
     Friend WithEvents ListView4 As System.Windows.Forms.ListView
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ComboBoxLang As System.Windows.Forms.ComboBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class

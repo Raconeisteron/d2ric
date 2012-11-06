@@ -1,7 +1,8 @@
-﻿Imports System.Security.Cryptography, System.Net, vb = Microsoft.VisualBasic
+﻿Imports System.Security.Cryptography, System.Net, vb = Microsoft.VisualBasic, System.Resources, System.Globalization, System.Threading
 
 Public Class FormMain
     Dim FirstChange As Boolean = True
+    Dim FirstLangChange As Boolean = True
     Friend WithEvents Import As New ImportClass
     Friend WithEvents Export As New ExportClass
     Friend WithEvents Options As New OptionsClass
@@ -12,15 +13,34 @@ Public Class FormMain
     Public IntPrice As Integer
     Dim Unsaved As Boolean = False
     Public ImportHero As Boolean = False
+    ' Declare a Resource Manager instance.
+    Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
+
+    Public Sub New()
+        ' Sets the UI culture to the choosen language
+        If My.Settings.lang <> "" Then
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.lang)
+        Else
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo("en")
+        End If
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        InitializeComponent()
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+    End Sub
 
     Private Sub FormMain_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        'Save all Settings
         My.Settings.Save()
+        'Exit the programm
         End
     End Sub
 
     Private Sub FormMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Itembuild.Initialize()
         Itembuild.InitializeListbox()
+
+        Options.InitializeLang()
 
         Me.ListView2.AllowDrop = True
         Me.ListView3.AllowDrop = True
@@ -39,7 +59,7 @@ Public Class FormMain
 
     Private Sub ListBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         If Unsaved = True Then
-            If MessageBox.Show("You have unsaved changes!" + vbNewLine + "Do you want to continue?", "Unsaved changes", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(LocRM.GetString("unsavedChanges_Pt1") + vbNewLine + LocRM.GetString("unsavedChanges_Pt2"), LocRM.GetString("unsavedChanges_Title"), MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 If ListBox1.SelectedItem <> "" Then
                     If ImportHero Then
                         ImportHero = False
@@ -68,7 +88,7 @@ Public Class FormMain
 
     Private Sub TabControl1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
         If TabControl1.SelectedTab Is TabPage4 Then
-            TextBox3.Text = "Please choose a hero first."
+            TextBox3.Text = LocRM.GetString("chooseAHero")
             If (ItembuildClass.Selected_Hero <> "") Then
                 Itembuild.SaveChanges()
                 Itembuild.ChangeAuthor(TextBox1.Text, ItembuildClass.Selected_Hero)
@@ -104,7 +124,7 @@ Public Class FormMain
         Dim aktversion As String = WebClient1.DownloadString("http://holyzone.bplaced.net/maddy/d2ric_version.txt")
 
         If pgversion < aktversion Then 'Wenn die Programmversion kleiner als die Aktuelle Version ist:
-            If MessageBox.Show("New Update available!!" + vbNewLine + vbNewLine + "Your Version: " + pgversion + vbNewLine + "New Version: " + aktversion + vbNewLine + vbNewLine + "Open the Download page?", "Update", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(LocRM.GetString("update_Pt1") + vbNewLine + vbNewLine + LocRM.GetString("update_Pt2") + pgversion + vbNewLine + LocRM.GetString("update_Pt3") + aktversion + vbNewLine + vbNewLine + LocRM.GetString("update_Pt4"), LocRM.GetString("update_Title"), MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 Process.Start("http://code.google.com/p/d2ric/downloads/list")
             End If
         Else
@@ -170,6 +190,15 @@ Public Class FormMain
         Options.ChangeClient()
     End Sub
 
+    Private Sub ComboBoxLang_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxLang.SelectedIndexChanged
+        Options.ChangeLang()
+        If Not FirstLangChange Then
+            MessageBox.Show(LocRM.GetString("restartNeeded"))
+        Else
+            FirstLangChange = False
+        End If
+    End Sub
+
     Private Sub ButtonOpenBackupFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenBackupFolder.Click
         Options.OpenBackup()
     End Sub
@@ -226,16 +255,89 @@ Public Class FormMain
                 item.Remove()
             End If
         Next
-        If ComboBox1.Text <> "" Then
+        Dim cb1 As String = ""
+        Select Case ComboBox1.SelectedIndex
+            Case 1
+                cb1 = "Agility"
+            Case 2
+                cb1 = "All Attributes"
+            Case 3
+                cb1 = "Armor"
+            Case 4
+                cb1 = "Attack Speed"
+            Case 5
+                cb1 = "Aura"
+            Case 6
+                cb1 = "Damage"
+            Case 7
+                cb1 = "Evasion"
+            Case 8
+                cb1 = "HP"
+            Case 9
+                cb1 = "HP/sec Regeneration"
+            Case 10
+                cb1 = "Intelligence"
+            Case 11
+                cb1 = "Lifesteal"
+            Case 12
+                cb1 = " Magic Resistance"
+            Case 13
+                cb1 = "Mana"
+            Case 14
+                cb1 = "Mana Regeneration"
+            Case 15
+                cb1 = "Movement Speed"
+            Case 16
+                cb1 = "Recipe"
+            Case 17
+                cb1 = "Strength"
+            Case Else
+                cb1 = ""
+        End Select
+
+        If cb1 <> "" Then
             For Each item As ListViewItem In ListView1.Items
-                If Not item.ToolTipText.ToLower.Contains(ComboBox1.Text.ToLower) Then
+                If Not item.ToolTipText.ToLower.Contains(cb1.ToLower) Then
                     item.Remove()
                 End If
             Next
         End If
-        If ComboBox2.Text <> "All" Then
+
+        Dim cb2 As String = ""
+        Select Case ComboBox1.SelectedIndex
+            Case 0
+                cb2 = "All"
+            Case 1
+                cb2 = "Arcane"
+            Case 2
+                cb2 = "Armaments"
+            Case 3
+                cb2 = "Armor"
+            Case 4
+                cb2 = "Artifacts"
+            Case 5
+                cb2 = "Attributes"
+            Case 6
+                cb2 = "Caster"
+            Case 7
+                cb2 = "Common"
+            Case 8
+                cb2 = "Consumables"
+            Case 9
+                cb2 = "Secret Shop"
+            Case 10
+                cb2 = "Side Lane Shop"
+            Case 11
+                cb2 = "Support"
+            Case 12
+                cb2 = "Weapons"
+            Case Else
+                cb2 = "All"
+        End Select
+
+        If cb2 <> "All" Then
             For Each item As ListViewItem In ListView1.Items
-                If Not item.SubItems(1).Text.ToLower.Contains(ComboBox2.Text.ToLower) Then
+                If Not item.SubItems(1).Text.ToLower.Contains(cb2.ToLower) Then
                     item.Remove()
                 End If
             Next
@@ -1154,17 +1256,17 @@ Public Class FormMain
                 Return "item_lesser_crit"
             Case "Morbid Mask"
                 Return "item_lifesteal"
-            Case = "Maelstrom"
+            Case Is = "Maelstrom"
                 Return "item_maelstrom"
-            Case = "Magic Stick"
+            Case Is = "Magic Stick"
                 Return "item_magic_stick"
-            Case = "Magic Wand"
+            Case Is = "Magic Wand"
                 Return "item_magic_wand"
-            Case = "Manta Style"
+            Case Is = "Manta Style"
                 Return "item_manta"
             Case "Mantle of Intelligence"
                 Return "item_mantle"
-            Case = "Mask of Madness"
+            Case Is = "Mask of Madness"
                 Return "item_mask_of_madness"
             Case "Medallion of Courage"
                 Return "item_medallion_of_courage"
@@ -1615,4 +1717,5 @@ Public Class FormMain
         ComboBox1.Text = ""
         ComboBox2.Text = "All"
     End Sub
+
 End Class

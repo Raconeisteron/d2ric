@@ -1,6 +1,9 @@
-﻿'This class contains all methods you need on the import page
+﻿Imports System.Resources
+
+'This class contains all methods you need on the import page
 Public Class ImportClass
     Friend WithEvents Itembuild As New ItembuildClass
+    Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
 
     'Import the itembuild out of textbox2 and switch to the itembuild tab
     Public Sub Import()
@@ -63,7 +66,7 @@ Public Class ImportClass
                 IO.File.Delete(My.Settings.path + "\temp.txt")
                 FormMain.TabControl1.SelectedTab = FormMain.TabPage1
             Else
-                MessageBox.Show("Error! Couldn't load this itembuild.")
+                MessageBox.Show(LocRM.GetString("cantLoadItembuild"))
             End If
         End If
     End Sub
@@ -77,7 +80,7 @@ Public Class ImportClass
                 If IO.File.Exists(OpenFileDialog1.FileName) Then
                     FormMain.TextBox2.Text = IO.File.ReadAllText(OpenFileDialog1.FileName)
                 Else
-                    MessageBox.Show("Error while reading.")
+                    MessageBox.Show(LocRM.GetString("cantRead"))
                 End If
             Else
                 FormMain.TextBox2.Text = "Error!"
