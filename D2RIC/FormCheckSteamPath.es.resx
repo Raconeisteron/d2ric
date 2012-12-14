@@ -117,15 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;Button3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 22</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 26</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Porfavor seleciona tu Ruta de Steam</value>
   </data>
   <data name="Button1.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>Confirmar</value>
+  </data>
+  <data name="Button2.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Button3.Text" xml:space="preserve">
+    <value>Buscar</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -155,147 +164,4 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 22</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>523, 189</value>
-  </data>
-  <data name="&gt;&gt;Button2.Name" xml:space="preserve">
-    <value>Button2</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 26</value>
-  </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 135</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 70</value>
-  </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;Button3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Button2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Button3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 135</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Please choose your Steam Path</value>
-  </data>
-  <data name="Button3.Text" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="TextBox1.Text" xml:space="preserve">
-    <value>C:\Program Files (x86)\Steam</value>
-  </data>
-  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 20</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Button2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Button3.Name" xml:space="preserve">
-    <value>Button3</value>
-  </data>
-  <data name="&gt;&gt;Button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="Button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 68</value>
-  </data>
-  <data name="Button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>DotA 2 Recommended Items Customizer</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormCheckSteamPath</value>
-  </data>
-  <data name="Button2.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
-  </metadata>
 </root>

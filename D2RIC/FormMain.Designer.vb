@@ -607,7 +607,7 @@ Partial Class FormMain
         resources.ApplyResources(Me.ComboBoxLang, "ComboBoxLang")
         Me.ComboBoxLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxLang.FormattingEnabled = True
-        Me.ComboBoxLang.Items.AddRange(New Object() {resources.GetString("ComboBoxLang.Items"), resources.GetString("ComboBoxLang.Items1")})
+        Me.ComboBoxLang.Items.AddRange(New Object() {resources.GetString("ComboBoxLang.Items"), resources.GetString("ComboBoxLang.Items1"), resources.GetString("ComboBoxLang.Items2"), resources.GetString("ComboBoxLang.Items3")})
         Me.ComboBoxLang.Name = "ComboBoxLang"
         Me.ToolTip1.SetToolTip(Me.ComboBoxLang, resources.GetString("ComboBoxLang.ToolTip"))
         '
