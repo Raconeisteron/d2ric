@@ -119,23 +119,20 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>778, 226</value>
+    <value>793, 226</value>
   </data>
   <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 23</value>
+    <value>98, 23</value>
   </data>
   <data name="Button1.Text" xml:space="preserve">
-    <value>Filter zurücksetzen</value>
-  </data>
-  <data name="Button1.ToolTip" xml:space="preserve">
-    <value />
+    <value>Annuler les filtres</value>
   </data>
   <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABO
-        JQ4AAk1TRnQBSQFMAgEBiAEAAfABAAHwAQABKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
+        JQ4AAk1TRnQBSQFMAgEBiAEAAVABAQFQAQEBKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
         AwABGgEEAgABAQEAARgFAAHAAbABB/8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wCJAAEFAQcBBAEFAQcBBAEGAQcBBAEGAQgBBAEGAQcBBAEFAQYBBAEGAQcBAwIG
@@ -15588,407 +15585,285 @@
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBbAAs=
 </value>
   </data>
-  <data name="ListView5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ListView4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ListView3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ListView2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>566, 231</value>
+    <value>542, 231</value>
   </data>
-  <data name="Label22.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
-  <data name="ComboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>626, 228</value>
+  <data name="Label22.Text" xml:space="preserve">
+    <value>Filtrer shop:</value>
   </data>
-  <data name="ComboBox2.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ComboBox2.Items" xml:space="preserve">
+    <value>Tout</value>
   </data>
-  <data name="Label15.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ComboBox2.Items2" xml:space="preserve">
+    <value>Armements</value>
   </data>
-  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 52</value>
+  <data name="ComboBox2.Items3" xml:space="preserve">
+    <value>Armure</value>
+  </data>
+  <data name="ComboBox2.Items4" xml:space="preserve">
+    <value>Artefacts</value>
+  </data>
+  <data name="ComboBox2.Items5" xml:space="preserve">
+    <value>Attributs</value>
+  </data>
+  <data name="ComboBox2.Items7" xml:space="preserve">
+    <value>Commun</value>
+  </data>
+  <data name="ComboBox2.Items8" xml:space="preserve">
+    <value>Consommables</value>
+  </data>
+  <data name="ComboBox2.Items9" xml:space="preserve">
+    <value>Shop Secret</value>
+  </data>
+  <data name="ComboBox2.Items10" xml:space="preserve">
+    <value>Shop latéral</value>
+  </data>
+  <data name="ComboBox2.Items12" xml:space="preserve">
+    <value>Armes</value>
   </data>
   <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 13</value>
+    <value>32, 13</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
-    <value>Kosten:</value>
+    <value>Coût:</value>
   </data>
-  <data name="Label14.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 231</value>
   </data>
-  <data name="Label13.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>Filtrer Items:</value>
   </data>
   <data name="ComboBox1.Items1" xml:space="preserve">
-    <value>Agilität</value>
+    <value>Agilité</value>
   </data>
   <data name="ComboBox1.Items2" xml:space="preserve">
-    <value>Alle Attribute</value>
+    <value>Tout les attributs</value>
   </data>
   <data name="ComboBox1.Items3" xml:space="preserve">
-    <value>Rüstung</value>
+    <value>Armure</value>
   </data>
   <data name="ComboBox1.Items4" xml:space="preserve">
-    <value>Angriffstempo</value>
-  </data>
-  <data name="ComboBox1.Items6" xml:space="preserve">
-    <value>Schaden</value>
-  </data>
-  <data name="ComboBox1.Items7" xml:space="preserve">
-    <value>Ausweichen</value>
+    <value>Vitesse d'attaque</value>
   </data>
   <data name="ComboBox1.Items9" xml:space="preserve">
-    <value>HP/Sek Regeneration</value>
-  </data>
-  <data name="ComboBox1.Items10" xml:space="preserve">
-    <value>Intelligenz</value>
+    <value>Régen HP/sec</value>
   </data>
   <data name="ComboBox1.Items11" xml:space="preserve">
-    <value>Lebensraub</value>
+    <value>Vol de vie</value>
   </data>
   <data name="ComboBox1.Items12" xml:space="preserve">
-    <value>Magieresistenz</value>
+    <value>Résistance magique</value>
   </data>
   <data name="ComboBox1.Items14" xml:space="preserve">
-    <value>Manaregeneration</value>
+    <value>Régen mana</value>
   </data>
   <data name="ComboBox1.Items15" xml:space="preserve">
-    <value>Laufgeschwindigkeit</value>
+    <value>Vitesse de déplacement</value>
   </data>
   <data name="ComboBox1.Items16" xml:space="preserve">
-    <value>Rezept</value>
+    <value>Recette</value>
   </data>
   <data name="ComboBox1.Items17" xml:space="preserve">
-    <value>Stärke</value>
+    <value>Force</value>
   </data>
-  <data name="ComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 21</value>
-  </data>
-  <data name="ComboBox1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 231</value>
   </data>
   <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 13</value>
+    <value>93, 13</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
-    <value>Itemsuche:</value>
+    <value>Recherche d'item:</value>
   </data>
-  <data name="Label11.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxItemsearch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ListView1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ButtonDefaultItembuild.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 653</value>
-  </data>
-  <data name="ButtonDefaultItembuild.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 23</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ButtonDefaultItembuild.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="ButtonDefaultItembuild.Text" xml:space="preserve">
-    <value>Standard Itembuild</value>
-  </data>
-  <data name="ButtonDefaultItembuild.ToolTip" xml:space="preserve">
-    <value />
+    <value>Par défaut</value>
   </data>
   <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 17</value>
+    <value>266, 17</value>
   </data>
   <data name="CheckBox2.Text" xml:space="preserve">
-    <value>Nur implementierte anzeigen</value>
-  </data>
-  <data name="CheckBox2.ToolTip" xml:space="preserve">
-    <value />
+    <value>Cacher les héros qui ne sont pas encore disponible</value>
   </data>
   <data name="Label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 13</value>
+    <value>185, 13</value>
   </data>
   <data name="Label24.Text" xml:space="preserve">
-    <value>Du kannst Items durch einen Rechtsklick auf das Bild löschen.</value>
-  </data>
-  <data name="Label24.ToolTip" xml:space="preserve">
-    <value />
+    <value>Clic droit sur l'image pour le supprimer.</value>
   </data>
   <data name="ComboBox3.Items" xml:space="preserve">
-    <value>Alle</value>
+    <value>Tout</value>
   </data>
   <data name="ComboBox3.Items1" xml:space="preserve">
-    <value>Kraft</value>
+    <value>Force</value>
   </data>
   <data name="ComboBox3.Items2" xml:space="preserve">
-    <value>Beweglichkeit</value>
+    <value>Agilité</value>
   </data>
-  <data name="ComboBox3.Items3" xml:space="preserve">
-    <value>Intelligenz</value>
+  <data name="ComboBox3.Items7" xml:space="preserve">
+    <value>initiateur</value>
+  </data>
+  <data name="ComboBox3.Items9" xml:space="preserve">
+    <value>Jungleur</value>
   </data>
   <data name="ComboBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 22</value>
-  </data>
-  <data name="ComboBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 21</value>
-  </data>
-  <data name="ComboBox3.ToolTip" xml:space="preserve">
-    <value />
+    <value>90, 22</value>
   </data>
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 13</value>
+    <value>78, 13</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
-    <value>Helden sortieren:</value>
+    <value>Type de héros:</value>
   </data>
-  <data name="Label12.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
   </data>
   <data name="Label0.Text" xml:space="preserve">
-    <value>Helden</value>
+    <value>Héros</value>
   </data>
-  <data name="Label0.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ListBox1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ButtonOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
   </data>
   <data name="ButtonOpenFolder.Text" xml:space="preserve">
-    <value>Itembuild Ordner öffnen</value>
-  </data>
-  <data name="ButtonOpenFolder.ToolTip" xml:space="preserve">
-    <value />
+    <value>Ouvrir le dossier Itembuilds</value>
   </data>
   <data name="ButtonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 23</value>
+    <value>80, 23</value>
   </data>
   <data name="ButtonSave.Text" xml:space="preserve">
-    <value>Speichern</value>
-  </data>
-  <data name="ButtonSave.ToolTip" xml:space="preserve">
-    <value />
+    <value>Sauvegarder</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
+    <value>47, 13</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Autor:</value>
-  </data>
-  <data name="Label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox1.ToolTip" xml:space="preserve">
-    <value />
+    <value>Autheur:</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 20</value>
+    <value>193, 20</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Kein Held ausgewählt!</value>
-  </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
+    <value>Sélectionner un Héros!</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 15</value>
+    <value>107, 15</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>Start Items</value>
-  </data>
-  <data name="Label3.ToolTip" xml:space="preserve">
-    <value />
+    <value>Items de départ</value>
   </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 15</value>
+    <value>89, 15</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>Anfangs Items</value>
-  </data>
-  <data name="Label4.ToolTip" xml:space="preserve">
-    <value />
+    <value>Début de jeu</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 15</value>
+    <value>97, 15</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
-    <value>Haupt Items</value>
-  </data>
-  <data name="Label5.ToolTip" xml:space="preserve">
-    <value />
+    <value>Items de base</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 15</value>
+    <value>86, 15</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
-    <value>Luxus Items</value>
-  </data>
-  <data name="Label6.ToolTip" xml:space="preserve">
-    <value />
+    <value>Item de luxe</value>
   </data>
   <data name="TabPage1.Text" xml:space="preserve">
-    <value>Itembuild ändern</value>
-  </data>
-  <data name="TabPage1.ToolTip" xml:space="preserve">
-    <value />
+    <value>Changer l' itembuild</value>
   </data>
   <data name="ButtonOpenTextfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 23</value>
+    <value>123, 23</value>
   </data>
   <data name="ButtonOpenTextfile.Text" xml:space="preserve">
-    <value>Aus Textdatei laden</value>
-  </data>
-  <data name="ButtonOpenTextfile.ToolTip" xml:space="preserve">
-    <value />
+    <value>Recherche manuelle</value>
   </data>
   <data name="ButtonImport.Text" xml:space="preserve">
-    <value>Importieren</value>
-  </data>
-  <data name="ButtonImport.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox2.ToolTip" xml:space="preserve">
-    <value />
+    <value>Importer</value>
   </data>
   <data name="TabPage3.Text" xml:space="preserve">
-    <value>Itembuild importieren</value>
-  </data>
-  <data name="TabPage3.ToolTip" xml:space="preserve">
-    <value />
+    <value>Importer itembuild</value>
   </data>
   <data name="ButtonSaveTextfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 23</value>
+    <value>125, 23</value>
   </data>
   <data name="ButtonSaveTextfile.Text" xml:space="preserve">
-    <value>Als Textdatei speichern</value>
-  </data>
-  <data name="ButtonSaveTextfile.ToolTip" xml:space="preserve">
-    <value />
+    <value>Enregister fichier texte</value>
   </data>
   <data name="ButtonCopy.Text" xml:space="preserve">
-    <value>Kopieren</value>
-  </data>
-  <data name="ButtonCopy.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox3.ToolTip" xml:space="preserve">
-    <value />
+    <value>Copier</value>
   </data>
   <data name="TabPage4.Text" xml:space="preserve">
-    <value>Itembuild exportieren</value>
-  </data>
-  <data name="TabPage4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxLang.ToolTip" xml:space="preserve">
-    <value />
+    <value>Exporter Itembuild</value>
   </data>
   <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 15</value>
+    <value>55, 15</value>
   </data>
   <data name="Label16.Text" xml:space="preserve">
-    <value>Sprache</value>
-  </data>
-  <data name="Label16.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label10.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxClient.ToolTip" xml:space="preserve">
-    <value />
+    <value>Langue</value>
   </data>
   <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 19</value>
+    <value>282, 19</value>
   </data>
   <data name="CheckBox1.Text" xml:space="preserve">
-    <value>Beim Start auf Updates überprüfen</value>
-  </data>
-  <data name="CheckBox1.ToolTip" xml:space="preserve">
-    <value />
+    <value>Recherche de mise à jour au lancement</value>
   </data>
   <data name="ButtonOpenBackupFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 23</value>
+    <value>169, 23</value>
   </data>
   <data name="ButtonOpenBackupFolder.Text" xml:space="preserve">
-    <value>Backup Ordner öffnen</value>
+    <value>Ouvrir le dossier de sauvegarde</value>
   </data>
-  <data name="ButtonOpenBackupFolder.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label9.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 15</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
-    <value>Steampfad</value>
-  </data>
-  <data name="Label8.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 24</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Optionen</value>
-  </data>
-  <data name="Label7.ToolTip" xml:space="preserve">
-    <value />
+    <value>Chemin du dossier Steam</value>
   </data>
   <data name="ButtonChangeSteam.Text" xml:space="preserve">
-    <value>Suchen</value>
+    <value>Recherche</value>
   </data>
-  <data name="ButtonChangeSteam.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ButtonBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
   </data>
-  <data name="TextBox4.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ButtonBackup.Text" xml:space="preserve">
+    <value>Sauvergarder</value>
   </data>
-  <data name="ButtonBackup.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ButtonDeleteBackup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 274</value>
+  </data>
+  <data name="ButtonDeleteBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
   </data>
   <data name="ButtonDeleteBackup.Text" xml:space="preserve">
-    <value>Backups löschen</value>
-  </data>
-  <data name="ButtonDeleteBackup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TabPage5.Text" xml:space="preserve">
-    <value>D2RIC Optionen</value>
-  </data>
-  <data name="TabPage5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TabControl1.ToolTip" xml:space="preserve">
-    <value />
+    <value>Supprimer sauvegarde</value>
   </data>
   <data name="ButtonUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>773, 4</value>
+    <value>759, 4</value>
   </data>
   <data name="ButtonUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 23</value>
+    <value>145, 23</value>
   </data>
   <data name="ButtonUpdate.Text" xml:space="preserve">
-    <value>Nach Updates suchen</value>
+    <value>rechercher une mise à jour</value>
   </data>
-  <data name="ButtonUpdate.ToolTip" xml:space="preserve">
-    <value />
+  <data name="LabelWait.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 1</value>
   </data>
   <data name="LabelWait.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
+    <value>373, 26</value>
   </data>
   <data name="LabelWait.Text" xml:space="preserve">
-    <value>Suche nach Updates ...</value>
-  </data>
-  <data name="LabelWait.ToolTip" xml:space="preserve">
-    <value />
+    <value>recherche de mise à jour en cours</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -19242,8 +19117,5 @@
         EgAAAAwAAAAUAAAABQAAAAGenp4MAAAAAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA==
 </value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

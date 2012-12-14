@@ -637,6 +637,8 @@ Public Class ItembuildClass
                 hero = "Magnus"
             Case hero Like "npc_dota_hero_slark"
                 hero = "Slark"
+            Case hero Like "npc_dota_hero_shredder"
+                hero = "Timbersaw"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case hero Like "npc_dota_hero_abaddon"
                 hero = "Abaddon"
@@ -745,6 +747,8 @@ Public Class ItembuildClass
                 Selected_Hero = "naga_siren"
             Case "Magnus"
                 Selected_Hero = "magnataur"
+            Case "Timbersaw"
+                Selected_Hero = "shredder"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Goblin Techies"
                 Selected_Hero = "goblin_techies"
@@ -806,7 +810,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Enchantress")
                 lb.Items.Add("Enigma")
                 lb.Items.Add("Faceless Void")
-                lb.Items.Add("Goblin Shredder")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Goblin Techies")
                 lb.Items.Add("Wisp")
                 lb.Items.Add("Gyrocopter")
@@ -897,7 +901,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Doom Bringer")
                 lb.Items.Add("Dragon Knight")
                 lb.Items.Add("Earthshaker")
-                lb.Items.Add("Goblin Shredder")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Wisp")
                 lb.Items.Add("Huskar")
                 lb.Items.Add("Kunkka")
@@ -1094,7 +1098,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Doom Bringer")
                 lb.Items.Add("Earthshaker")
                 lb.Items.Add("Ember Spirit")
-                lb.Items.Add("Goblin Shredder")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Goblin Techies")
                 lb.Items.Add("Wisp")
                 lb.Items.Add("Invoker")
@@ -1186,7 +1190,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Centaur Warchief")
                 lb.Items.Add("Death Prophet")
                 lb.Items.Add("Undying")
-                lb.Items.Add("Goblin Shredder")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Wisp")
                 lb.Items.Add("Legion Commander")
                 lb.Items.Add("Phoenix")
@@ -1226,7 +1230,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Enchantress")
                 lb.Items.Add("Enigma")
                 lb.Items.Add("Faceless Void")
-                lb.Items.Add("Goblin Shredder")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Goblin Techies")
                 lb.Items.Add("Wisp")
                 lb.Items.Add("Gyrocopter")
@@ -1311,10 +1315,8 @@ Public Class ItembuildClass
             .Items.Remove("Abaddon")
             .Items.Remove("Bristleback")
             .Items.Remove("Ember Spirit")
-            .Items.Remove("Goblin Shredder")
             .Items.Remove("Goblin Techies")
             .Items.Remove("Legion Commander")
-            .Items.Remove("Medusa")
             .Items.Remove("Phoenix")
             .Items.Remove("Pit Lord")
             .Items.Remove("Skywrath Mage")
