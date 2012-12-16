@@ -67,6 +67,10 @@ Public Class OptionsClass
                 lang = "en"
             Case 1
                 lang = "de"
+            Case 2
+                lang = "fr"
+            Case 3
+                lang = "es"
             Case Else
                 lang = "en"
         End Select
@@ -81,6 +85,10 @@ Public Class OptionsClass
                 FormMain.ComboBoxLang.SelectedIndex = 0
             Case "de"
                 FormMain.ComboBoxLang.SelectedIndex = 1
+            Case "fr"
+                FormMain.ComboBoxLang.SelectedIndex = 2
+            Case "es"
+                FormMain.ComboBoxLang.SelectedIndex = 3
             Case Else
                 FormMain.ComboBoxLang.SelectedIndex = 0
         End Select
