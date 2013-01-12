@@ -218,12 +218,27 @@ Public Class ItembuildClass
         FormMain.TextBox1.Text = ""
         FormMain.Label1.Text = ""
         FormMain.Label15.Text = "0"
+        FormMain.Label3.Text = "unused"
+        FormMain.Label4.Text = "unused"
+        FormMain.Label5.Text = "unused"
+        FormMain.Label6.Text = "unused"
+        FormMain.Label17.Text = "unused"
+        FormMain.Label18.Text = "unused"
         FormMain.IntPrice = 0
         NewText = ""
         FormMain.ListView2.Clear()
         FormMain.ListView3.Clear()
         FormMain.ListView4.Clear()
         FormMain.ListView5.Clear()
+        FormMain.ListView6.Clear()
+        FormMain.ListView7.Clear()
+        FormMain.ListView2.Enabled = False
+        FormMain.ListView3.Enabled = False
+        FormMain.ListView4.Enabled = False
+        FormMain.ListView5.Enabled = False
+        FormMain.ListView6.Enabled = False
+        FormMain.ListView7.Enabled = False
+
     End Sub
 
     'Save the itembuild and change the author
@@ -239,17 +254,66 @@ Public Class ItembuildClass
         End If
     End Sub
 
+    'Return the Standard Valve label if found
+    Public Function GetLabel(ByVal Label) As String
+        Label = Replace(Label, """", "")
+        Label = Replace(Label, " ", "")
+        Label = Replace(Label, vbTab, "")
+        If (Label.Contains("#")) Then
+            Select Case Label
+                Case "#DOTA_Item_Build_Starting_Items"
+                    Label = "Starting Items"
+                Case "#DOTA_Item_Build_Early_Game"
+                    Label = "Early Game"
+                Case "#DOTA_Item_Build_Early_Game_Secondary"
+                    Label = "Early Game (Secondary)"
+                Case "#DOTA_Item_Build_Core_Items"
+                    Label = "Core Items"
+                Case "#DOTA_Item_Build_Core_Items_Secondary"
+                    Label = "Core Items (Secondary)"
+                Case "#DOTA_Item_Build_Luxury"
+                    Label = "Luxury"
+                Case Else
+                    Label = Replace(Label, "_", " ")
+            End Select
+        End If
+        Return Label
+    End Function
+
+    'Return the Standard Valve item slot if found
+    Public Function GetItemSlot(ByVal Slot) As String
+            Select Case Slot
+            Case "Starting Items"
+                Slot = "#DOTA_Item_Build_Starting_Items"
+            Case "Early Game"
+                Slot = "#DOTA_Item_Build_Early_Game"
+            Case "Early Game (Secondary)"
+                Slot = "#DOTA_Item_Build_Early_Game_Secondary"
+            Case "Core Items"
+                Slot = "#DOTA_Item_Build_Core_Items"
+            Case "Core Items (Secondary)"
+                Slot = "#DOTA_Item_Build_Core_Items_Secondary"
+            Case "Luxury"
+                Slot = "#DOTA_Item_Build_Luxury"
+            Case Else
+                Slot = Slot
+        End Select
+        Return """" + Slot + """"
+    End Function
+
     'Load an itembuild out of an itembuild file
     Public Sub CheckFile(ByVal hero As String)
-        If IO.File.Exists(My.Settings.path + "\default_" + hero + ".txt") Then
-            Dim Path As String = My.Settings.path + "\default_" + hero + ".txt"
+        Dim File As String = My.Settings.path + "\default_" + hero + ".txt"
+        If IO.File.Exists(File) Then
             Dim ItemName As String
             Dim ItemList As Object = FormMain.ListView2
             Dim Index As Integer = 0
             Dim price As Object = FormMain.Label15
             Dim savePrice As Boolean = True
             Dim int As Integer
-            For Each Zeile As String In IO.File.ReadAllLines(Path)
+            Dim LV_Index As Integer = -1
+            Dim OldLine As String = ""
+            For Each Zeile As String In IO.File.ReadAllLines(File)
                 If Zeile.Contains("item_") Then
                     ItemName = FormMain.RenameItem(Zeile)
                     If savePrice Then
@@ -263,24 +327,52 @@ Public Class ItembuildClass
                         .Items(Index).ToolTipText = GetToolTip(ItemName)
                     End With
                     Index = Index + 1
-                ElseIf Zeile.Contains("Early_Game") Then
-                    ItemList = FormMain.ListView3
-                    Index = 0
-                    savePrice = False
-                ElseIf Zeile.Contains("Core_Items") Then
-                    ItemList = FormMain.ListView4
-                    Index = 0
-                    savePrice = False
-                ElseIf Zeile.Contains("Luxury") Then
-                    ItemList = FormMain.ListView5
-                    Index = 0
-                    savePrice = False
+                ElseIf Zeile.Contains("{") Then
+                    NewText &= Zeile & vbNewLine
+                    LV_Index += 1
+                    Select Case LV_Index
+                        Case 2
+                            FormMain.Label3.Text = GetLabel(OldLine)
+                            FormMain.ListView2.Enabled = True
+                        Case 3
+                            FormMain.Label4.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView3
+                            FormMain.ListView3.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 4
+                            FormMain.Label5.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView4
+                            FormMain.ListView4.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 5
+                            FormMain.Label6.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView5
+                            FormMain.ListView5.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 6
+                            FormMain.Label17.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView6
+                            FormMain.ListView6.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 7
+                            FormMain.Label18.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView7
+                            FormMain.ListView7.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case Else
+                    End Select
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
                     NewText &= Zeile & vbNewLine
                 Else
+                    OldLine = Zeile
                     NewText &= Zeile & vbNewLine
                 End If
             Next
@@ -294,21 +386,18 @@ Public Class ItembuildClass
 
     'Load the default itembuild, if it exists
     Public Sub LoadDefault()
-        If IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
-            Dim DeinPfad As String = My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt"
+        Dim File As String = My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt"
+        If IO.File.Exists(File) Then
             Dim ItemName As String
             Dim ItemList As Object = FormMain.ListView2
             Dim Index As Integer = 0
             Dim price As Object = FormMain.Label15
             Dim savePrice As Boolean = True
             Dim int As Integer
-            FormMain.Label15.Text = "0"
-            FormMain.IntPrice = 0
-            FormMain.ListView2.Clear()
-            FormMain.ListView3.Clear()
-            FormMain.ListView4.Clear()
-            FormMain.ListView5.Clear()
-            For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
+            Dim LV_Index As Integer = -1
+            Dim OldLine As String = ""
+            Clear()
+            For Each Zeile As String In IO.File.ReadAllLines(File)
                 If Zeile.Contains("item_") Then
                     ItemName = FormMain.RenameItem(Zeile)
                     If savePrice Then
@@ -322,22 +411,58 @@ Public Class ItembuildClass
                         .Items(Index).ToolTipText = GetToolTip(ItemName)
                     End With
                     Index = Index + 1
-                ElseIf Zeile.Contains("Early_Game") Then
-                    ItemList = FormMain.ListView3
-                    Index = 0
-                    savePrice = False
-                ElseIf Zeile.Contains("Core_Items") Then
-                    ItemList = FormMain.ListView4
-                    Index = 0
-                    savePrice = False
-                ElseIf Zeile.Contains("Luxury") Then
-                    ItemList = FormMain.ListView5
-                    Index = 0
-                    savePrice = False
+                ElseIf Zeile.Contains("{") Then
+                    NewText &= Zeile & vbNewLine
+                    LV_Index += 1
+                    Select Case LV_Index
+                        Case 2
+                            FormMain.Label3.Text = GetLabel(OldLine)
+                            FormMain.ListView2.Enabled = True
+                        Case 3
+                            FormMain.Label4.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView3
+                            FormMain.ListView3.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 4
+                            FormMain.Label5.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView4
+                            FormMain.ListView4.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 5
+                            FormMain.Label6.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView5
+                            FormMain.ListView5.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 6
+                            FormMain.Label17.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView6
+                            FormMain.ListView6.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case 7
+                            FormMain.Label18.Text = GetLabel(OldLine)
+                            ItemList = FormMain.ListView7
+                            FormMain.ListView7.Enabled = True
+                            Index = 0
+                            savePrice = False
+                        Case Else
+                    End Select
                 ElseIf Zeile.Contains("author") Then
                     FormMain.TextBox1.Text = Replace(Zeile, """", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
                     FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
+                    NewText &= Zeile & vbNewLine
+                ElseIf Zeile.Contains("hero") Then
+                    Dim temp As String = Replace(Zeile, """hero""", "")
+                    temp = Replace(temp, """", "")
+                    temp = Replace(temp, vbTab, "")
+                    FormMain.Label1.Text = renameHero(temp)
+                Else
+                    OldLine = Zeile
+                    NewText &= Zeile & vbNewLine
                 End If
             Next
             FormMain.ButtonSave.Enabled = True
@@ -395,7 +520,7 @@ Public Class ItembuildClass
             NewText = ""
             Dim DeinPfad As String = My.Settings.path + "\temp.txt"
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
-                If Zeile.Contains("DOTA_Item_Build_Starting_Items") Then
+                If Zeile.Contains("""Items""") Then
                     NewText &= Zeile & vbNewLine
                     Exit For
                 Else
@@ -404,41 +529,72 @@ Public Class ItembuildClass
             Next
             IO.File.Delete(My.Settings.path + "\temp.txt")
 
-            Dim StartingItems As String = ""
-            Dim Earlygame As String = ""
-            Dim CoreItems As String = ""
-            Dim Luxury As String = ""
+            Dim Box1 As String = ""
+            Dim Box2 As String = ""
+            Dim Box3 As String = ""
+            Dim Box4 As String = ""
+            Dim Box5 As String = ""
+            Dim Box6 As String = ""
             Dim a As Integer = 1
 
             For i = 0 To (FormMain.ListView2.Items.Count - 1)
-                StartingItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView2.Items(i).SubItems(1).Text) & """"
+                Box1 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView2.Items(i).SubItems(1).Text) & """"
             Next
             For i = 0 To (FormMain.ListView3.Items.Count - 1)
-                Earlygame &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView3.Items(i).SubItems(1).Text) & """"
+                Box2 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView3.Items(i).SubItems(1).Text) & """"
             Next
             For i = 0 To (FormMain.ListView4.Items.Count - 1)
-                CoreItems &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView4.Items(i).SubItems(1).Text) & """"
+                Box3 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView4.Items(i).SubItems(1).Text) & """"
             Next
             For i = 0 To (FormMain.ListView5.Items.Count - 1)
-                Luxury &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView5.Items(i).SubItems(1).Text) & """"
+                Box4 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView5.Items(i).SubItems(1).Text) & """"
+            Next
+            For i = 0 To (FormMain.ListView6.Items.Count - 1)
+                Box5 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView6.Items(i).SubItems(1).Text) & """"
+            Next
+            For i = 0 To (FormMain.ListView7.Items.Count - 1)
+                Box6 &= vbNewLine & vbTab & vbTab & vbTab & """Item""" & vbTab & vbTab & """" & FormMain.GetItem(FormMain.ListView7.Items(i).SubItems(1).Text) & """"
             Next
 
-            NewText &= vbTab & vbTab & "{"
-            ' Start Items hinzufügen
-            NewText &= StartingItems & vbNewLine
-            NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
-            NewText &= vbTab & vbTab & """#DOTA_Item_Build_Early_Game""" & vbNewLine & vbTab & vbTab & "{"
-            ' Early Items hinzufügen
-            NewText &= vbTab & vbTab & Earlygame & vbNewLine
-            NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
-            NewText &= vbTab & vbTab & """#DOTA_Item_Build_Core_Items""" & vbNewLine & vbTab & vbTab & "{"
-            ' Core Items hinzufügen
-            NewText &= vbTab & vbTab & CoreItems & vbNewLine
-            NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
-            NewText &= vbTab & vbTab & """#DOTA_Item_Build_Luxury""" & vbNewLine & vbTab & vbTab & "{"
-            ' Luxury Items hinzufügen
-            NewText &= vbTab & vbTab & Luxury & vbNewLine
-            NewText &= vbTab & vbTab & "}" & vbNewLine & vbTab & "}" & vbNewLine & "}"
+            NewText &= vbTab & "{" & vbNewLine
+            If Box1.Length > 0 Then
+                'Add Box1 Items
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label3.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= Box1 & vbNewLine
+                NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            End If
+            If Box2.Length > 0 Then
+                'Add Box2 Items
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label4.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= Box2 & vbNewLine
+                NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            End If
+            If Box3.Length > 0 Then
+                'Add Box3 Items
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label5.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= Box3 & vbNewLine
+                NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            End If
+            If Box4.Length > 0 Then
+                'Add Box4 Items
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label6.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= Box4 & vbNewLine
+                NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            End If
+            If Box5.Length > 0 Then
+                'Add Box5 Items
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label17.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= Box5 & vbNewLine
+                NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            End If
+            If Box6.Length > 0 Then
+                'Add Box6 Items
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label18.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= Box6 & vbNewLine
+                NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
+            End If
+
+            NewText &= vbTab & "}" & vbNewLine & "}"
 
         Else
             MessageBox.Show(LocRM.GetString("errorText"))
@@ -488,7 +644,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_undying"
                 hero = "Undying"
             Case hero Like "npc_dota_hero_doom_bringer"
-                hero = "Doom Bringer"
+                hero = "Doom"
             Case hero Like "npc_dota_hero_dragon_knight"
                 hero = "Dragon Knight"
             Case hero Like "npc_dota_hero_drow_ranger"
@@ -639,6 +795,10 @@ Public Class ItembuildClass
                 hero = "Slark"
             Case hero Like "npc_dota_hero_shredder"
                 hero = "Timbersaw"
+            Case hero Like "npc_dota_hero_medusa"
+                hero = "Medusa"
+            Case hero Like "npc_dota_hero_tuskarr"
+                hero = "Tuskarr"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case hero Like "npc_dota_hero_abaddon"
                 hero = "Abaddon"
@@ -646,8 +806,6 @@ Public Class ItembuildClass
                 hero = "Bristleback"
             Case hero Like "npc_dota_hero_goblin_techies"
                 hero = "Goblin Techies"
-            Case hero Like "npc_dota_hero_medusa"
-                hero = "Medusa"
             Case hero Like "npc_dota_hero_phoenix"
                 hero = "Phoenix"
             Case hero Like "npc_dota_hero_pit_lord"
@@ -656,8 +814,6 @@ Public Class ItembuildClass
                 hero = "Soul Keeper"
             Case hero Like "npc_dota_hero_tauren_chieftain"
                 hero = "Tauren Chieftain"
-            Case hero Like "npc_dota_hero_tuskarr"
-                hero = "Tuskarr"
             Case Else
                 hero = "Unknown hero!"
         End Select
@@ -683,7 +839,7 @@ Public Class ItembuildClass
                 Selected_Hero = "dark_seer"
             Case "Death Prophet"
                 Selected_Hero = "death_prophet"
-            Case "Doom Bringer"
+            Case "Doom"
                 Selected_Hero = "doom_bringer"
             Case "Dragon Knight"
                 Selected_Hero = "dragon_knight"
@@ -802,7 +958,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Death Prophet")
                 lb.Items.Add("Undying")
                 lb.Items.Add("Disruptor")
-                lb.Items.Add("Doom Bringer")
+                lb.Items.Add("Doom")
                 lb.Items.Add("Dragon Knight")
                 lb.Items.Add("Drow Ranger")
                 lb.Items.Add("Earthshaker")
@@ -898,7 +1054,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Chaos Knight")
                 lb.Items.Add("Clockwerk")
                 lb.Items.Add("Undying")
-                lb.Items.Add("Doom Bringer")
+                lb.Items.Add("Doom")
                 lb.Items.Add("Dragon Knight")
                 lb.Items.Add("Earthshaker")
                 lb.Items.Add("Timbersaw")
@@ -1008,7 +1164,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Bounty Hunter")
                 lb.Items.Add("Broodmother")
                 lb.Items.Add("Clinkz")
-                lb.Items.Add("Doom Bringer")
+                lb.Items.Add("Doom")
                 lb.Items.Add("Dragon Knight")
                 lb.Items.Add("Drow Ranger")
                 lb.Items.Add("Ember Spirit")
@@ -1095,7 +1251,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Clockwerk")
                 lb.Items.Add("Undying")
                 lb.Items.Add("Disruptor")
-                lb.Items.Add("Doom Bringer")
+                lb.Items.Add("Doom")
                 lb.Items.Add("Earthshaker")
                 lb.Items.Add("Ember Spirit")
                 lb.Items.Add("Timbersaw")
@@ -1222,7 +1378,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Death Prophet")
                 lb.Items.Add("Undying")
                 lb.Items.Add("Disruptor")
-                lb.Items.Add("Doom Bringer")
+                lb.Items.Add("Doom")
                 lb.Items.Add("Dragon Knight")
                 lb.Items.Add("Drow Ranger")
                 lb.Items.Add("Earthshaker")

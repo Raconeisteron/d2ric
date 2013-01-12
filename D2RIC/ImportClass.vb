@@ -8,19 +8,21 @@ Public Class ImportClass
     'Import the itembuild out of textbox2 and switch to the itembuild tab
     Public Sub Import()
         If FormMain.TextBox2.Text <> "" Then
-            IO.File.WriteAllText(My.Settings.path + "\temp.txt", FormMain.TextBox2.Text)
-            If IO.File.Exists(My.Settings.path + "\temp.txt") Then
-                Dim Path As String = My.Settings.path + "\temp.txt"
+            Dim File As String = My.Settings.path + "\temp.txt"
+            IO.File.WriteAllText(File, FormMain.TextBox2.Text)
+            If IO.File.Exists(File) Then
                 Dim ItemName As String
                 Dim ItemList As Object = FormMain.ListView2
                 Dim Index As Integer = 0
                 Dim price As Object = FormMain.Label15
                 Dim savePrice As Boolean = True
                 Dim int As Integer
+                Dim LV_Index As Integer = -1
+                Dim OldLine As String = ""
                 Itembuild.Clear()
                 FormMain.ListBox1.SelectedItems.Clear()
                 ItembuildClass.Selected_Hero = ""
-                For Each Zeile As String In IO.File.ReadAllLines(Path)
+                For Each Zeile As String In IO.File.ReadAllLines(File)
                     If Zeile.Contains("item_") Then
                         ItemName = FormMain.RenameItem(Zeile)
                         If savePrice Then
@@ -34,33 +36,64 @@ Public Class ImportClass
                             .Items(Index).ToolTipText = Itembuild.GetToolTip(ItemName)
                         End With
                         Index = Index + 1
-                    ElseIf Zeile.Contains("Early_Game") Then
-                        ItemList = FormMain.ListView3
-                        Index = 0
-                        savePrice = False
-                    ElseIf Zeile.Contains("Core_Items") Then
-                        ItemList = FormMain.ListView4
-                        Index = 0
-                        savePrice = False
-                    ElseIf Zeile.Contains("Luxury") Then
-                        ItemList = FormMain.ListView5
-                        Index = 0
-                        savePrice = False
+                    ElseIf Zeile.Contains("{") Then
+                        Itembuild.NewText &= Zeile & vbNewLine
+                        LV_Index += 1
+                        Select Case LV_Index
+                            Case 2
+                                FormMain.Label3.Text = Itembuild.GetLabel(OldLine)
+                                FormMain.ListView2.Enabled = True
+                            Case 3
+                                FormMain.Label4.Text = Itembuild.GetLabel(OldLine)
+                                ItemList = FormMain.ListView3
+                                FormMain.ListView3.Enabled = True
+                                Index = 0
+                                savePrice = False
+                            Case 4
+                                FormMain.Label5.Text = Itembuild.GetLabel(OldLine)
+                                ItemList = FormMain.ListView4
+                                FormMain.ListView4.Enabled = True
+                                Index = 0
+                                savePrice = False
+                            Case 5
+                                FormMain.Label6.Text = Itembuild.GetLabel(OldLine)
+                                ItemList = FormMain.ListView5
+                                FormMain.ListView5.Enabled = True
+                                Index = 0
+                                savePrice = False
+                            Case 6
+                                FormMain.Label17.Text = Itembuild.GetLabel(OldLine)
+                                ItemList = FormMain.ListView6
+                                FormMain.ListView6.Enabled = True
+                                Index = 0
+                                savePrice = False
+                            Case 7
+                                FormMain.Label18.Text = Itembuild.GetLabel(OldLine)
+                                ItemList = FormMain.ListView7
+                                FormMain.ListView7.Enabled = True
+                                Index = 0
+                                savePrice = False
+                            Case Else
+                        End Select
                     ElseIf Zeile.Contains("author") Then
                         FormMain.TextBox1.Text = Replace(Zeile, """", "")
                         FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, "author", "")
                         FormMain.TextBox1.Text = Replace(FormMain.TextBox1.Text, vbTab, "")
+                        Itembuild.NewText &= Zeile & vbNewLine
                     ElseIf Zeile.Contains("hero") Then
-                        ItembuildClass.Selected_Hero = Replace(Zeile, """hero""", "")
-                        ItembuildClass.Selected_Hero = Replace(ItembuildClass.Selected_Hero, """", "")
-                        ItembuildClass.Selected_Hero = Replace(ItembuildClass.Selected_Hero, vbTab, "")
-                        ItembuildClass.Selected_Hero = Itembuild.renameHero(ItembuildClass.Selected_Hero)
+                        Dim temp As String = Replace(Zeile, """hero""", "")
+                        temp = Replace(temp, """", "")
+                        temp = Replace(temp, vbTab, "")
+                        ItembuildClass.Selected_Hero = Itembuild.renameHero(temp)
                         FormMain.Label1.Text = ItembuildClass.Selected_Hero
                         If ItembuildClass.Selected_Hero <> "Unknown hero!" Then
                             FormMain.ImportHero = True
                             FormMain.ListBox1.SelectedItem = ItembuildClass.Selected_Hero
                             FormMain.ButtonSave.Enabled = True
                         End If
+                    Else
+                        OldLine = Zeile
+                        Itembuild.NewText &= Zeile & vbNewLine
                     End If
                 Next
                 IO.File.Delete(My.Settings.path + "\temp.txt")
