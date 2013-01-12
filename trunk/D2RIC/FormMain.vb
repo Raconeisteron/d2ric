@@ -1591,6 +1591,11 @@ Public Class FormMain
         Label15.Text = IntPrice.ToString
         CheckCosts(IntPrice.ToString)
         DoDragDrop(e.Item, DragDropEffects.Copy)
+        Try
+            ListView2.SelectedItems(0).Remove()
+        Catch ex As Exception
+            'Ignore Exception
+        End Try
     End Sub
 
     Private Sub ListView3_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView3.DragDrop
@@ -1671,6 +1676,58 @@ Public Class FormMain
         DoDragDrop(e.Item, DragDropEffects.Copy)
     End Sub
 
+    Private Sub ListView6_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView6.DragDrop
+        Dim lvi As ListViewItem = Nothing
+        Dim lv As ListView = CType(sender, ListView)
+        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
+            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
+            With lvi
+                .ListView.Items.Remove(lvi)
+                With lv
+                    .Items.Add(lvi)
+                End With
+            End With
+        Else
+            With ListView6
+                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
+                .Items.AddRange(New ListViewItem() {item})
+                .Items(ListView6.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
+            End With
+        End If
+    End Sub
+    Private Sub ListView6_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView6.DragEnter
+        e.Effect = DragDropEffects.Copy
+    End Sub
+    Private Sub ListView6_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView6.ItemDrag
+        DoDragDrop(e.Item, DragDropEffects.Copy)
+    End Sub
+
+    Private Sub ListView7_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView7.DragDrop
+        Dim lvi As ListViewItem = Nothing
+        Dim lv As ListView = CType(sender, ListView)
+        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem", False) Then
+            lvi = CType(e.Data.GetData("System.Windows.Forms.ListViewItem"), ListViewItem)
+            With lvi
+                .ListView.Items.Remove(lvi)
+                With lv
+                    .Items.Add(lvi)
+                End With
+            End With
+        Else
+            With ListView7
+                Dim item As New ListViewItem(New String() {"", Selected_Item}, GetPicture(Selected_Item))
+                .Items.AddRange(New ListViewItem() {item})
+                .Items(ListView7.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
+            End With
+        End If
+    End Sub
+    Private Sub ListView7_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView7.DragEnter
+        e.Effect = DragDropEffects.Copy
+    End Sub
+    Private Sub ListView7_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView7.ItemDrag
+        DoDragDrop(e.Item, DragDropEffects.Copy)
+    End Sub
+
     ' RIGHTCLICK DELTE
     Private Sub ListView2_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView2.MouseClick
         If e.Button = MouseButtons.Right Then
@@ -1699,6 +1756,20 @@ Public Class FormMain
     Private Sub ListView5_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView5.MouseClick
         If e.Button = MouseButtons.Right Then
             ListView5.SelectedItems.Item(0).Remove()
+            Unsaved = True
+        End If
+    End Sub
+
+    Private Sub ListView6_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView6.MouseClick
+        If e.Button = MouseButtons.Right Then
+            ListView6.SelectedItems.Item(0).Remove()
+            Unsaved = True
+        End If
+    End Sub
+
+    Private Sub ListView7_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView7.MouseClick
+        If e.Button = MouseButtons.Right Then
+            ListView7.SelectedItems.Item(0).Remove()
             Unsaved = True
         End If
     End Sub
