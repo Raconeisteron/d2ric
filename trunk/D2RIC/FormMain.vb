@@ -46,6 +46,8 @@ Public Class FormMain
         Me.ListView3.AllowDrop = True
         Me.ListView4.AllowDrop = True
         Me.ListView5.AllowDrop = True
+        Me.ListView6.AllowDrop = True
+        Me.ListView7.AllowDrop = True
 
         If Not My.Settings.autoupdate Then
             CheckBox1.Checked = False
