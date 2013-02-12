@@ -218,12 +218,12 @@ Public Class ItembuildClass
         FormMain.TextBox1.Text = ""
         FormMain.Label1.Text = ""
         FormMain.Label15.Text = "0"
-        FormMain.Label3.Text = "unused"
-        FormMain.Label4.Text = "unused"
-        FormMain.Label5.Text = "unused"
-        FormMain.Label6.Text = "unused"
-        FormMain.Label17.Text = "unused"
-        FormMain.Label18.Text = "unused"
+        FormMain.Itemslot1.Text = "unused"
+        FormMain.Itemslot2.Text = "unused"
+        FormMain.Itemslot3.Text = "unused"
+        FormMain.Itemslot4.Text = "unused"
+        FormMain.Itemslot5.Text = "unused"
+        FormMain.Itemslot6.Text = "unused"
         FormMain.IntPrice = 0
         NewText = ""
         FormMain.ListView2.Clear()
@@ -232,12 +232,6 @@ Public Class ItembuildClass
         FormMain.ListView5.Clear()
         FormMain.ListView6.Clear()
         FormMain.ListView7.Clear()
-        FormMain.ListView2.Enabled = False
-        FormMain.ListView3.Enabled = False
-        FormMain.ListView4.Enabled = False
-        FormMain.ListView5.Enabled = False
-        FormMain.ListView6.Enabled = False
-        FormMain.ListView7.Enabled = False
 
     End Sub
 
@@ -332,36 +326,30 @@ Public Class ItembuildClass
                     LV_Index += 1
                     Select Case LV_Index
                         Case 2
-                            FormMain.Label3.Text = GetLabel(OldLine)
-                            FormMain.ListView2.Enabled = True
+                            FormMain.Itemslot1.Text = GetLabel(OldLine)
                         Case 3
-                            FormMain.Label4.Text = GetLabel(OldLine)
+                            FormMain.Itemslot2.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView3
-                            FormMain.ListView3.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 4
-                            FormMain.Label5.Text = GetLabel(OldLine)
+                            FormMain.Itemslot3.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView4
-                            FormMain.ListView4.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 5
-                            FormMain.Label6.Text = GetLabel(OldLine)
+                            FormMain.Itemslot4.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView5
-                            FormMain.ListView5.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 6
-                            FormMain.Label17.Text = GetLabel(OldLine)
+                            FormMain.Itemslot5.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView6
-                            FormMain.ListView6.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 7
-                            FormMain.Label18.Text = GetLabel(OldLine)
+                            FormMain.Itemslot6.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView7
-                            FormMain.ListView7.Enabled = True
                             Index = 0
                             savePrice = False
                         Case Else
@@ -416,36 +404,30 @@ Public Class ItembuildClass
                     LV_Index += 1
                     Select Case LV_Index
                         Case 2
-                            FormMain.Label3.Text = GetLabel(OldLine)
-                            FormMain.ListView2.Enabled = True
+                            FormMain.Itemslot1.Text = GetLabel(OldLine)
                         Case 3
-                            FormMain.Label4.Text = GetLabel(OldLine)
+                            FormMain.Itemslot2.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView3
-                            FormMain.ListView3.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 4
-                            FormMain.Label5.Text = GetLabel(OldLine)
+                            FormMain.Itemslot3.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView4
-                            FormMain.ListView4.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 5
-                            FormMain.Label6.Text = GetLabel(OldLine)
+                            FormMain.Itemslot4.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView5
-                            FormMain.ListView5.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 6
-                            FormMain.Label17.Text = GetLabel(OldLine)
+                            FormMain.Itemslot5.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView6
-                            FormMain.ListView6.Enabled = True
                             Index = 0
                             savePrice = False
                         Case 7
-                            FormMain.Label18.Text = GetLabel(OldLine)
+                            FormMain.Itemslot6.Text = GetLabel(OldLine)
                             ItemList = FormMain.ListView7
-                            FormMain.ListView7.Enabled = True
                             Index = 0
                             savePrice = False
                         Case Else
@@ -559,37 +541,37 @@ Public Class ItembuildClass
             NewText &= vbTab & "{" & vbNewLine
             If Box1.Length > 0 Then
                 'Add Box1 Items
-                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label3.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Itemslot1.Text) & vbNewLine & vbTab & vbTab & "{"
                 NewText &= Box1 & vbNewLine
                 NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
             End If
             If Box2.Length > 0 Then
                 'Add Box2 Items
-                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label4.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Itemslot2.Text) & vbNewLine & vbTab & vbTab & "{"
                 NewText &= Box2 & vbNewLine
                 NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
             End If
             If Box3.Length > 0 Then
                 'Add Box3 Items
-                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label5.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Itemslot3.Text) & vbNewLine & vbTab & vbTab & "{"
                 NewText &= Box3 & vbNewLine
                 NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
             End If
             If Box4.Length > 0 Then
                 'Add Box4 Items
-                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label6.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Itemslot4.Text) & vbNewLine & vbTab & vbTab & "{"
                 NewText &= Box4 & vbNewLine
                 NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
             End If
             If Box5.Length > 0 Then
                 'Add Box5 Items
-                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label17.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Itemslot5.Text) & vbNewLine & vbTab & vbTab & "{"
                 NewText &= Box5 & vbNewLine
                 NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
             End If
             If Box6.Length > 0 Then
                 'Add Box6 Items
-                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Label18.Text) & vbNewLine & vbTab & vbTab & "{"
+                NewText &= vbTab & vbTab & GetItemSlot(FormMain.Itemslot6.Text) & vbNewLine & vbTab & vbTab & "{"
                 NewText &= Box6 & vbNewLine
                 NewText &= vbTab & vbTab & "}" & vbNewLine & vbNewLine
             End If
@@ -708,7 +690,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_omniknight"
                 hero = "Omniknight"
             Case hero Like "npc_dota_hero_obsidian_destroyer"
-                hero = "Outworld Destroyer"
+                hero = "Outworld Devourer"
             Case hero Like "npc_dota_hero_phantom_lancer"
                 hero = "Phantom Lancer"
             Case hero Like "npc_dota_hero_puck"
@@ -867,7 +849,7 @@ Public Class ItembuildClass
                 Selected_Hero = "night_stalker"
             Case "Ogre Magi"
                 Selected_Hero = "ogre_magi"
-            Case "Outworld Destroyer"
+            Case "Outworld Devourer"
                 Selected_Hero = "obsidian_destroyer"
             Case "Phantom Lancer"
                 Selected_Hero = "phantom_lancer"
@@ -999,7 +981,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Night Stalker")
                 lb.Items.Add("Ogre Magi")
                 lb.Items.Add("Omniknight")
-                lb.Items.Add("Outworld Destroyer")
+                lb.Items.Add("Outworld Devourer")
                 lb.Items.Add("Phantom Lancer")
                 lb.Items.Add("Phoenix")
                 lb.Items.Add("Pit Lord")
@@ -1139,7 +1121,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Lion")
                 lb.Items.Add("Nature's Prophet")
                 lb.Items.Add("Necrolyte")
-                lb.Items.Add("Outworld Destroyer")
+                lb.Items.Add("Outworld Devourer")
                 lb.Items.Add("Ogre Magi")
                 lb.Items.Add("Puck")
                 lb.Items.Add("Pugna")
@@ -1189,7 +1171,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Phantom Assassin")
                 lb.Items.Add("Necrolyte")
                 lb.Items.Add("Night Stalker")
-                lb.Items.Add("Outworld Destroyer")
+                lb.Items.Add("Outworld Devourer")
                 lb.Items.Add("Phantom Lancer")
                 lb.Items.Add("Phoenix")
                 lb.Items.Add("Queen of Pain")
@@ -1419,7 +1401,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Night Stalker")
                 lb.Items.Add("Ogre Magi")
                 lb.Items.Add("Omniknight")
-                lb.Items.Add("Outworld Destroyer")
+                lb.Items.Add("Outworld Devourer")
                 lb.Items.Add("Phantom Lancer")
                 lb.Items.Add("Phoenix")
                 lb.Items.Add("Pit Lord")

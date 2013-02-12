@@ -41,36 +41,30 @@ Public Class ImportClass
                         LV_Index += 1
                         Select Case LV_Index
                             Case 2
-                                FormMain.Label3.Text = Itembuild.GetLabel(OldLine)
-                                FormMain.ListView2.Enabled = True
+                                FormMain.Itemslot1.Text = Itembuild.GetLabel(OldLine)
                             Case 3
-                                FormMain.Label4.Text = Itembuild.GetLabel(OldLine)
+                                FormMain.Itemslot2.Text = Itembuild.GetLabel(OldLine)
                                 ItemList = FormMain.ListView3
-                                FormMain.ListView3.Enabled = True
                                 Index = 0
                                 savePrice = False
                             Case 4
-                                FormMain.Label5.Text = Itembuild.GetLabel(OldLine)
+                                FormMain.Itemslot3.Text = Itembuild.GetLabel(OldLine)
                                 ItemList = FormMain.ListView4
-                                FormMain.ListView4.Enabled = True
                                 Index = 0
                                 savePrice = False
                             Case 5
-                                FormMain.Label6.Text = Itembuild.GetLabel(OldLine)
+                                FormMain.Itemslot4.Text = Itembuild.GetLabel(OldLine)
                                 ItemList = FormMain.ListView5
-                                FormMain.ListView5.Enabled = True
                                 Index = 0
                                 savePrice = False
                             Case 6
-                                FormMain.Label17.Text = Itembuild.GetLabel(OldLine)
+                                FormMain.Itemslot5.Text = Itembuild.GetLabel(OldLine)
                                 ItemList = FormMain.ListView6
-                                FormMain.ListView6.Enabled = True
                                 Index = 0
                                 savePrice = False
                             Case 7
-                                FormMain.Label18.Text = Itembuild.GetLabel(OldLine)
+                                FormMain.Itemslot6.Text = Itembuild.GetLabel(OldLine)
                                 ItemList = FormMain.ListView7
-                                FormMain.ListView7.Enabled = True
                                 Index = 0
                                 savePrice = False
                             Case Else

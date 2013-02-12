@@ -28,9 +28,7 @@ Partial Class FormMain
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ListView7 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.ListView6 = New System.Windows.Forms.ListView()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView5 = New System.Windows.Forms.ListView()
         Me.ListView4 = New System.Windows.Forms.ListView()
@@ -57,10 +55,6 @@ Partial Class FormMain
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.ButtonOpenTextfile = New System.Windows.Forms.Button()
         Me.ButtonImport = New System.Windows.Forms.Button()
@@ -90,6 +84,12 @@ Partial Class FormMain
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Itemslot1 = New System.Windows.Forms.TextBox()
+        Me.Itemslot2 = New System.Windows.Forms.TextBox()
+        Me.Itemslot3 = New System.Windows.Forms.TextBox()
+        Me.Itemslot4 = New System.Windows.Forms.TextBox()
+        Me.Itemslot5 = New System.Windows.Forms.TextBox()
+        Me.Itemslot6 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -110,10 +110,14 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.AllowDrop = True
+        Me.TabPage1.Controls.Add(Me.Itemslot6)
+        Me.TabPage1.Controls.Add(Me.Itemslot5)
+        Me.TabPage1.Controls.Add(Me.Itemslot4)
+        Me.TabPage1.Controls.Add(Me.Itemslot3)
+        Me.TabPage1.Controls.Add(Me.Itemslot2)
+        Me.TabPage1.Controls.Add(Me.Itemslot1)
         Me.TabPage1.Controls.Add(Me.ListView7)
-        Me.TabPage1.Controls.Add(Me.Label18)
         Me.TabPage1.Controls.Add(Me.ListView6)
-        Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.ListView5)
         Me.TabPage1.Controls.Add(Me.ListView4)
@@ -140,18 +144,14 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.Label6)
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'ListView7
         '
-        resources.ApplyResources(Me.ListView7, "ListView7")
         Me.ListView7.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListView7, "ListView7")
         Me.ListView7.MultiSelect = False
         Me.ListView7.Name = "ListView7"
         Me.ListView7.ShowGroups = False
@@ -302,15 +302,10 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(134, "Recipe_Scroll.png")
         Me.ImageList1.Images.SetKeyName(135, "40px-Shadow_Amulet.png")
         '
-        'Label18
-        '
-        resources.ApplyResources(Me.Label18, "Label18")
-        Me.Label18.Name = "Label18"
-        '
         'ListView6
         '
-        resources.ApplyResources(Me.ListView6, "ListView6")
         Me.ListView6.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListView6, "ListView6")
         Me.ListView6.MultiSelect = False
         Me.ListView6.Name = "ListView6"
         Me.ListView6.ShowGroups = False
@@ -320,11 +315,6 @@ Partial Class FormMain
         Me.ListView6.UseCompatibleStateImageBehavior = False
         Me.ListView6.View = System.Windows.Forms.View.Tile
         '
-        'Label17
-        '
-        resources.ApplyResources(Me.Label17, "Label17")
-        Me.Label17.Name = "Label17"
-        '
         'Button1
         '
         resources.ApplyResources(Me.Button1, "Button1")
@@ -333,8 +323,8 @@ Partial Class FormMain
         '
         'ListView5
         '
-        resources.ApplyResources(Me.ListView5, "ListView5")
         Me.ListView5.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListView5, "ListView5")
         Me.ListView5.MultiSelect = False
         Me.ListView5.Name = "ListView5"
         Me.ListView5.ShowGroups = False
@@ -346,8 +336,8 @@ Partial Class FormMain
         '
         'ListView4
         '
-        resources.ApplyResources(Me.ListView4, "ListView4")
         Me.ListView4.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListView4, "ListView4")
         Me.ListView4.MultiSelect = False
         Me.ListView4.Name = "ListView4"
         Me.ListView4.ShowGroups = False
@@ -359,8 +349,8 @@ Partial Class FormMain
         '
         'ListView3
         '
-        resources.ApplyResources(Me.ListView3, "ListView3")
         Me.ListView3.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListView3, "ListView3")
         Me.ListView3.MultiSelect = False
         Me.ListView3.Name = "ListView3"
         Me.ListView3.ShowGroups = False
@@ -372,8 +362,8 @@ Partial Class FormMain
         '
         'ListView2
         '
-        resources.ApplyResources(Me.ListView2, "ListView2")
         Me.ListView2.LargeImageList = Me.ImageList1
+        resources.ApplyResources(Me.ListView2, "ListView2")
         Me.ListView2.MultiSelect = False
         Me.ListView2.Name = "ListView2"
         Me.ListView2.ShowGroups = False
@@ -512,26 +502,6 @@ Partial Class FormMain
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.Name = "Label3"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.Name = "Label4"
-        '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.Name = "Label5"
-        '
-        'Label6
-        '
-        resources.ApplyResources(Me.Label6, "Label6")
-        Me.Label6.Name = "Label6"
         '
         'TabPage3
         '
@@ -710,6 +680,36 @@ Partial Class FormMain
         '
         Me.Timer3.Interval = 50
         '
+        'Itemslot1
+        '
+        resources.ApplyResources(Me.Itemslot1, "Itemslot1")
+        Me.Itemslot1.Name = "Itemslot1"
+        '
+        'Itemslot2
+        '
+        resources.ApplyResources(Me.Itemslot2, "Itemslot2")
+        Me.Itemslot2.Name = "Itemslot2"
+        '
+        'Itemslot3
+        '
+        resources.ApplyResources(Me.Itemslot3, "Itemslot3")
+        Me.Itemslot3.Name = "Itemslot3"
+        '
+        'Itemslot4
+        '
+        resources.ApplyResources(Me.Itemslot4, "Itemslot4")
+        Me.Itemslot4.Name = "Itemslot4"
+        '
+        'Itemslot5
+        '
+        resources.ApplyResources(Me.Itemslot5, "Itemslot5")
+        Me.Itemslot5.Name = "Itemslot5"
+        '
+        'Itemslot6
+        '
+        resources.ApplyResources(Me.Itemslot6, "Itemslot6")
+        Me.Itemslot6.Name = "Itemslot6"
+        '
         'FormMain
         '
         resources.ApplyResources(Me, "$this")
@@ -743,10 +743,6 @@ Partial Class FormMain
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents ButtonOpenTextfile As System.Windows.Forms.Button
     Friend WithEvents ButtonImport As System.Windows.Forms.Button
@@ -793,9 +789,13 @@ Partial Class FormMain
     Friend WithEvents ListView4 As System.Windows.Forms.ListView
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents ListView7 As System.Windows.Forms.ListView
-    Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents ListView6 As System.Windows.Forms.ListView
-    Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents ComboBoxLang As System.Windows.Forms.ComboBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Itemslot6 As System.Windows.Forms.TextBox
+    Friend WithEvents Itemslot5 As System.Windows.Forms.TextBox
+    Friend WithEvents Itemslot4 As System.Windows.Forms.TextBox
+    Friend WithEvents Itemslot3 As System.Windows.Forms.TextBox
+    Friend WithEvents Itemslot2 As System.Windows.Forms.TextBox
+    Friend WithEvents Itemslot1 As System.Windows.Forms.TextBox
 End Class
