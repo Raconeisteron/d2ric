@@ -26,6 +26,13 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.CheckBoxRecipes = New System.Windows.Forms.CheckBox()
+        Me.Itemslot6 = New System.Windows.Forms.TextBox()
+        Me.Itemslot5 = New System.Windows.Forms.TextBox()
+        Me.Itemslot4 = New System.Windows.Forms.TextBox()
+        Me.Itemslot3 = New System.Windows.Forms.TextBox()
+        Me.Itemslot2 = New System.Windows.Forms.TextBox()
+        Me.Itemslot1 = New System.Windows.Forms.TextBox()
         Me.ListView7 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListView6 = New System.Windows.Forms.ListView()
@@ -83,13 +90,6 @@ Partial Class FormMain
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.Itemslot1 = New System.Windows.Forms.TextBox()
-        Me.Itemslot2 = New System.Windows.Forms.TextBox()
-        Me.Itemslot3 = New System.Windows.Forms.TextBox()
-        Me.Itemslot4 = New System.Windows.Forms.TextBox()
-        Me.Itemslot5 = New System.Windows.Forms.TextBox()
-        Me.Itemslot6 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -110,6 +110,7 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.AllowDrop = True
+        Me.TabPage1.Controls.Add(Me.CheckBoxRecipes)
         Me.TabPage1.Controls.Add(Me.Itemslot6)
         Me.TabPage1.Controls.Add(Me.Itemslot5)
         Me.TabPage1.Controls.Add(Me.Itemslot4)
@@ -147,6 +148,42 @@ Partial Class FormMain
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'CheckBoxRecipes
+        '
+        resources.ApplyResources(Me.CheckBoxRecipes, "CheckBoxRecipes")
+        Me.CheckBoxRecipes.Name = "CheckBoxRecipes"
+        Me.CheckBoxRecipes.UseVisualStyleBackColor = True
+        '
+        'Itemslot6
+        '
+        resources.ApplyResources(Me.Itemslot6, "Itemslot6")
+        Me.Itemslot6.Name = "Itemslot6"
+        '
+        'Itemslot5
+        '
+        resources.ApplyResources(Me.Itemslot5, "Itemslot5")
+        Me.Itemslot5.Name = "Itemslot5"
+        '
+        'Itemslot4
+        '
+        resources.ApplyResources(Me.Itemslot4, "Itemslot4")
+        Me.Itemslot4.Name = "Itemslot4"
+        '
+        'Itemslot3
+        '
+        resources.ApplyResources(Me.Itemslot3, "Itemslot3")
+        Me.Itemslot3.Name = "Itemslot3"
+        '
+        'Itemslot2
+        '
+        resources.ApplyResources(Me.Itemslot2, "Itemslot2")
+        Me.Itemslot2.Name = "Itemslot2"
+        '
+        'Itemslot1
+        '
+        resources.ApplyResources(Me.Itemslot1, "Itemslot1")
+        Me.Itemslot1.Name = "Itemslot1"
         '
         'ListView7
         '
@@ -674,41 +711,7 @@ Partial Class FormMain
         '
         'Timer2
         '
-        Me.Timer2.Interval = 50
-        '
-        'Timer3
-        '
-        Me.Timer3.Interval = 50
-        '
-        'Itemslot1
-        '
-        resources.ApplyResources(Me.Itemslot1, "Itemslot1")
-        Me.Itemslot1.Name = "Itemslot1"
-        '
-        'Itemslot2
-        '
-        resources.ApplyResources(Me.Itemslot2, "Itemslot2")
-        Me.Itemslot2.Name = "Itemslot2"
-        '
-        'Itemslot3
-        '
-        resources.ApplyResources(Me.Itemslot3, "Itemslot3")
-        Me.Itemslot3.Name = "Itemslot3"
-        '
-        'Itemslot4
-        '
-        resources.ApplyResources(Me.Itemslot4, "Itemslot4")
-        Me.Itemslot4.Name = "Itemslot4"
-        '
-        'Itemslot5
-        '
-        resources.ApplyResources(Me.Itemslot5, "Itemslot5")
-        Me.Itemslot5.Name = "Itemslot5"
-        '
-        'Itemslot6
-        '
-        resources.ApplyResources(Me.Itemslot6, "Itemslot6")
-        Me.Itemslot6.Name = "Itemslot6"
+        Me.Timer2.Interval = 5
         '
         'FormMain
         '
@@ -782,7 +785,6 @@ Partial Class FormMain
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents Timer3 As System.Windows.Forms.Timer
     Friend WithEvents ListView2 As System.Windows.Forms.ListView
     Friend WithEvents ListView3 As System.Windows.Forms.ListView
     Friend WithEvents ListView5 As System.Windows.Forms.ListView
@@ -798,4 +800,5 @@ Partial Class FormMain
     Friend WithEvents Itemslot3 As System.Windows.Forms.TextBox
     Friend WithEvents Itemslot2 As System.Windows.Forms.TextBox
     Friend WithEvents Itemslot1 As System.Windows.Forms.TextBox
+    Friend WithEvents CheckBoxRecipes As System.Windows.Forms.CheckBox
 End Class

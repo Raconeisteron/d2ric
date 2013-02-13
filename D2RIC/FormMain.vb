@@ -243,15 +243,29 @@ Public Class FormMain
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
-        Timer3.Stop()
-        Timer3.Start()
+        Timer2.Stop()
+        Timer2.Start()
     End Sub
 
-    Private Sub Searchitem(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick, Timer2.Tick, Timer3.Tick
+    Private Sub CheckBoxRecipes_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxRecipes.CheckedChanged
+        Timer2.Stop()
+        Timer2.Start()
+    End Sub
+
+    Private Sub Searchitem(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick, Timer2.Tick
         Timer1.Stop()
         Timer2.Stop()
-        Timer3.Stop()
         Itembuild.InitializeListbox()
+
+
+        If CheckBoxRecipes.Checked Then
+            For Each item As ListViewItem In ListView1.Items
+                If item.Text.ToLower.Contains("recipe") Then
+                    item.Remove()
+                End If
+            Next
+        End If
+
         For Each item As ListViewItem In ListView1.Items
             If Not item.Text.ToLower.Contains(TextBoxItemsearch.Text.ToLower) Then
                 item.Remove()
@@ -306,7 +320,7 @@ Public Class FormMain
         End If
 
         Dim cb2 As String = ""
-        Select Case ComboBox1.SelectedIndex
+        Select Case ComboBox2.SelectedIndex
             Case 0
                 cb2 = "All"
             Case 1
@@ -1789,6 +1803,7 @@ Public Class FormMain
         TextBoxItemsearch.Text = ""
         ComboBox1.Text = ""
         ComboBox2.Text = "All"
+        CheckBoxRecipes.Checked = True
     End Sub
 
 End Class
