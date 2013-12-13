@@ -15,7 +15,6 @@ Public Class ItembuildClass
         FormMain.ComboBox2.SelectedIndex = 0
         FormMain.ComboBox3.SelectedIndex = 0
 
-        FormMain.CheckBox2.Checked = True
         ClearNotImplemented()
     End Sub
 
@@ -242,7 +241,7 @@ Public Class ItembuildClass
             If FormMain.TextBox1.Text <> "" Then
                 ChangeAuthor(FormMain.TextBox1.Text, Selected_Hero)
             End If
-            IO.File.WriteAllText(My.Settings.path + "\default_" + Selected_Hero + ".txt", NewText)
+            IO.File.WriteAllText(My.Settings.dota2path + "\default_" + Selected_Hero + ".txt", NewText)
         Else
             MessageBox.Show(LocRM.GetString("chooseAHero"))
         End If
@@ -257,6 +256,8 @@ Public Class ItembuildClass
             Select Case Label
                 Case "#DOTA_Item_Build_Starting_Items"
                     Label = "Starting Items"
+                Case "#DOTA_Item_Build_Starting_Items_Secondary"
+                    Label = "Starting Items (Secondary)"
                 Case "#DOTA_Item_Build_Early_Game"
                     Label = "Early Game"
                 Case "#DOTA_Item_Build_Early_Game_Secondary"
@@ -276,9 +277,11 @@ Public Class ItembuildClass
 
     'Return the Standard Valve item slot if found
     Public Function GetItemSlot(ByVal Slot) As String
-            Select Case Slot
+        Select Case Slot
             Case "Starting Items"
                 Slot = "#DOTA_Item_Build_Starting_Items"
+            Case "Starting Items (Secondary)"
+                Slot = "#DOTA_Item_Build_Starting_Items_Secondary"
             Case "Early Game"
                 Slot = "#DOTA_Item_Build_Early_Game"
             Case "Early Game (Secondary)"
@@ -297,7 +300,7 @@ Public Class ItembuildClass
 
     'Load an itembuild out of an itembuild file
     Public Sub CheckFile(ByVal hero As String)
-        Dim File As String = My.Settings.path + "\default_" + hero + ".txt"
+        Dim File As String = My.Settings.dota2path + "\default_" + hero + ".txt"
         If IO.File.Exists(File) Then
             Dim ItemName As String
             Dim ItemList As Object = FormMain.ListView2
@@ -374,7 +377,7 @@ Public Class ItembuildClass
 
     'Load the default itembuild, if it exists
     Public Sub LoadDefault()
-        Dim File As String = My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt"
+        Dim File As String = My.Settings.dota2path + "\Backup\default_" + Selected_Hero + ".txt"
         If IO.File.Exists(File) Then
             Dim ItemName As String
             Dim ItemList As Object = FormMain.ListView2
@@ -455,10 +458,10 @@ Public Class ItembuildClass
 
     'Change the author of the itembuild file
     Public Sub ChangeAuthor(ByVal author As String, ByVal hero As String)
-        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NewText)
-        If IO.File.Exists(My.Settings.path + "\temp.txt") Then
+        IO.File.WriteAllText(My.Settings.dota2path + "\temp.txt", NewText)
+        If IO.File.Exists(My.Settings.dota2path + "\temp.txt") Then
             NewText = ""
-            Dim DeinPfad As String = My.Settings.path + "\temp.txt"
+            Dim DeinPfad As String = My.Settings.dota2path + "\temp.txt"
             Dim i As Integer = 1
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                 If Zeile.Contains("author") Then
@@ -469,7 +472,7 @@ Public Class ItembuildClass
                     NewText &= Zeile & vbNewLine
                 End If
             Next
-            IO.File.Delete(My.Settings.path + "\temp.txt")
+            IO.File.Delete(My.Settings.dota2path + "\temp.txt")
         Else
 
         End If
@@ -477,11 +480,11 @@ Public Class ItembuildClass
 
     'Save the itembuild of the selected hero in the variable 'NewText' and create a backup if it doesn't exists
     Public Sub SaveChanges()
-        If Not IO.File.Exists(My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt") Then
-            If Not IO.Directory.Exists(My.Settings.path & "\Backup") Then
+        If Not IO.File.Exists(My.Settings.dota2path + "\Backup\default_" + Selected_Hero + ".txt") Then
+            If Not IO.Directory.Exists(My.Settings.dota2path & "\Backup") Then
                 ' Nein! Jetzt erstellen...
                 Try
-                    IO.Directory.CreateDirectory(My.Settings.path & "\Backup")
+                    IO.Directory.CreateDirectory(My.Settings.dota2path & "\Backup")
                     ' Ordner wurde korrekt erstellt!
                 Catch ex As Exception
                     ' Ordner wurde nich erstellt
@@ -490,17 +493,17 @@ Public Class ItembuildClass
             End If
             'Create Backup
             Try
-                IO.File.Copy(My.Settings.path + "\default_" + Selected_Hero + ".txt", My.Settings.path + "\Backup\default_" + Selected_Hero + ".txt", True)  ' Kopiert die Dateien
+                IO.File.Copy(My.Settings.dota2path + "\default_" + Selected_Hero + ".txt", My.Settings.dota2path + "\Backup\default_" + Selected_Hero + ".txt", True)  ' Kopiert die Dateien
             Catch ex As Exception
                 ' Ordner wurde nich erstellt
                 MessageBox.Show(LocRM.GetString("cantCreateBackup"))
             End Try
         End If
 
-        IO.File.WriteAllText(My.Settings.path + "\temp.txt", NewText)
-        If IO.File.Exists(My.Settings.path + "\temp.txt") Then
+        IO.File.WriteAllText(My.Settings.dota2path + "\temp.txt", NewText)
+        If IO.File.Exists(My.Settings.dota2path + "\temp.txt") Then
             NewText = ""
-            Dim DeinPfad As String = My.Settings.path + "\temp.txt"
+            Dim DeinPfad As String = My.Settings.dota2path + "\temp.txt"
             For Each Zeile As String In IO.File.ReadAllLines(DeinPfad)
                 If Zeile.Contains("""Items""") Then
                     NewText &= Zeile & vbNewLine
@@ -509,7 +512,7 @@ Public Class ItembuildClass
                     NewText &= Zeile & vbNewLine
                 End If
             Next
-            IO.File.Delete(My.Settings.path + "\temp.txt")
+            IO.File.Delete(My.Settings.dota2path + "\temp.txt")
 
             Dim Box1 As String = ""
             Dim Box2 As String = ""
@@ -668,7 +671,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_lone_druid"
                 hero = "Lone Druid"
             Case hero Like "npc_dota_hero_lycan"
-                hero = "Lycanthrope"
+                hero = "Lycan"
             Case hero Like "npc_dota_hero_leepo"
                 hero = "Meepo"
             Case hero Like "npc_dota_hero_mirana"
@@ -680,7 +683,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_furion"
                 hero = "Nature's Prophet"
             Case hero Like "npc_dota_hero_necrolyte"
-                hero = "Necrolyte"
+                hero = "Necrophos"
             Case hero Like "npc_dota_hero_nyx_assassin"
                 hero = "Nyx Assassin"
             Case hero Like "npc_dota_hero_night_stalker"
@@ -750,13 +753,13 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_weaver"
                 hero = "Weaver"
             Case hero Like "npc_dota_hero_windrunner"
-                hero = "Windrunner"
+                hero = "Windranger"
             Case hero Like "npc_dota_hero_witch_doctor"
                 hero = "Witch Doctor"
             Case hero Like "npc_dota_hero_zuus"
                 hero = "Zeus"
             Case hero Like "npc_dota_hero_wisp"
-                hero = "Wisp"
+                hero = "Io"
             Case hero Like "npc_dota_hero_disruptor"
                 hero = "Disruptor"
             Case hero Like "npc_dota_hero_luna"
@@ -768,7 +771,7 @@ Public Class ItembuildClass
             Case hero Like "npc_dota_hero_visage"
                 hero = "Visage"
             Case hero Like "npc_dota_hero_centaur"
-                hero = "Centaur Warchief"
+                hero = "Centaur Warrunner"
             Case hero Like "npc_dota_hero_troll_warlord"
                 hero = "Troll Warlord"
             Case hero Like "npc_dota_hero_magnataur"
@@ -779,23 +782,31 @@ Public Class ItembuildClass
                 hero = "Timbersaw"
             Case hero Like "npc_dota_hero_medusa"
                 hero = "Medusa"
-            Case hero Like "npc_dota_hero_tuskarr"
-                hero = "Tuskarr"
-                ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
+            Case hero Like "npc_dota_hero_tusk"
+                hero = "Tusk"
             Case hero Like "npc_dota_hero_abaddon"
                 hero = "Abaddon"
             Case hero Like "npc_dota_hero_bristleback"
                 hero = "Bristleback"
+            Case hero Like "npc_dota_hero_elder_titan"
+                hero = "Elder Titan"
+            Case hero Like "npc_dota_hero_ember_spirit"
+                hero = "Ember Spirit"
+            Case hero Like "npc_dota_hero_earth_spirit"
+                hero = "Earth Spirit"
+            Case hero Like "npc_dota_hero_legion_commander"
+                hero = "Legion Commander"
+            Case hero Like "npc_dota_hero_skywrath_mage"
+                hero = "Skywrath Mage"
+                ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case hero Like "npc_dota_hero_goblin_techies"
                 hero = "Goblin Techies"
             Case hero Like "npc_dota_hero_phoenix"
                 hero = "Phoenix"
-            Case hero Like "npc_dota_hero_pit_lord"
-                hero = "Pit Lord"
+            Case hero Like "npc_dota_hero_abyssal_underlord"
+                hero = "Abyssal Underlord"
             Case hero Like "npc_dota_hero_soul_keeper"
                 hero = "Soul Keeper"
-            Case hero Like "npc_dota_hero_tauren_chieftain"
-                hero = "Tauren Chieftain"
             Case Else
                 hero = "Unknown hero!"
         End Select
@@ -837,8 +848,6 @@ Public Class ItembuildClass
                 Selected_Hero = "life_stealer"
             Case "Lone Druid"
                 Selected_Hero = "lone_druid"
-            Case "Lycanthrope"
-                Selected_Hero = "lycan"
             Case "Phantom Assassin"
                 Selected_Hero = "phantom_assassin"
             Case "Nyx Assassin"
@@ -877,7 +886,7 @@ Public Class ItembuildClass
                 Selected_Hero = "witch_doctor"
             Case "Zeus"
                 Selected_Hero = "zuus"
-            Case "Centaur Warchief"
+            Case "Centaur Warrunner"
                 Selected_Hero = "centaur"
             Case "Troll Warlord"
                 Selected_Hero = "troll_warlord"
@@ -887,11 +896,27 @@ Public Class ItembuildClass
                 Selected_Hero = "magnataur"
             Case "Timbersaw"
                 Selected_Hero = "shredder"
+            Case "Earth Spirit"
+                Selected_Hero = "earth_spirit"
+            Case "Elder Titan"
+                Selected_Hero = "elder_titan"
+            Case "Ember Spirit"
+                Selected_Hero = "ember_spirit"
+            Case "Legion Commander"
+                Selected_Hero = "legion_commander"
+            Case "Skywrath Mage"
+                Selected_Hero = "skywrath_mage"
+            Case "Io"
+                Selected_Hero = "wisp"
+            Case "Necrophos"
+                Selected_Hero = "necrolyte"
+            Case "Windranger"
+                Selected_Hero = "windrunner"
                 ' FEHLENDE HEROS BTW. FEHLENDE ITEMDATEIEN
             Case "Goblin Techies"
                 Selected_Hero = "goblin_techies"
-            Case "Pit Lord"
-                Selected_Hero = "pit_lord"
+            Case "Abyssal Underlord"
+                Selected_Hero = "abyssal_underlord"
             Case "Soul Keeper"
                 Selected_Hero = "soul_keeper"
             Case "Tauren Chieftain"
@@ -917,9 +942,11 @@ Public Class ItembuildClass
             Case 0
                 'All
                 lb.Items.Add("Abaddon")
+                lb.Items.Add("Abyssal Underlord")
                 lb.Items.Add("Alchemist")
                 lb.Items.Add("Ancient Apparition")
                 lb.Items.Add("Anti-Mage")
+                lb.Items.Add("Arc Warden")
                 lb.Items.Add("Axe")
                 lb.Items.Add("Bane")
                 lb.Items.Add("Batrider")
@@ -929,7 +956,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Brewmaster")
                 lb.Items.Add("Bristleback")
                 lb.Items.Add("Broodmother")
-                lb.Items.Add("Centaur Warchief")
+                lb.Items.Add("Centaur Warrunner")
                 lb.Items.Add("Chaos Knight")
                 lb.Items.Add("Chen")
                 lb.Items.Add("Clinkz")
@@ -938,27 +965,26 @@ Public Class ItembuildClass
                 lb.Items.Add("Dark Seer")
                 lb.Items.Add("Dazzle")
                 lb.Items.Add("Death Prophet")
-                lb.Items.Add("Undying")
                 lb.Items.Add("Disruptor")
                 lb.Items.Add("Doom")
                 lb.Items.Add("Dragon Knight")
                 lb.Items.Add("Drow Ranger")
+                lb.Items.Add("Earth Spirit")
                 lb.Items.Add("Earthshaker")
+                lb.Items.Add("Elder Titan")
                 lb.Items.Add("Ember Spirit")
                 lb.Items.Add("Enchantress")
                 lb.Items.Add("Enigma")
                 lb.Items.Add("Faceless Void")
-                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Wisp")
                 lb.Items.Add("Gyrocopter")
                 lb.Items.Add("Huskar")
                 lb.Items.Add("Invoker")
+                lb.Items.Add("Io")
                 lb.Items.Add("Jakiro")
                 lb.Items.Add("Juggernaut")
                 lb.Items.Add("Keeper of the Light")
                 lb.Items.Add("Kunkka")
-                lb.Items.Add("Templar Assassin")
                 lb.Items.Add("Legion Commander")
                 lb.Items.Add("Leshrac")
                 lb.Items.Add("Lich")
@@ -967,24 +993,24 @@ Public Class ItembuildClass
                 lb.Items.Add("Lion")
                 lb.Items.Add("Lone Druid")
                 lb.Items.Add("Luna")
-                lb.Items.Add("Lycanthrope")
+                lb.Items.Add("Lycan")
                 lb.Items.Add("Magnus")
                 lb.Items.Add("Medusa")
                 lb.Items.Add("Meepo")
                 lb.Items.Add("Mirana")
                 lb.Items.Add("Morphling")
-                lb.Items.Add("Phantom Assassin")
                 lb.Items.Add("Naga Siren")
                 lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrolyte")
-                lb.Items.Add("Nyx Assassin")
+                lb.Items.Add("Necrophos")
                 lb.Items.Add("Night Stalker")
+                lb.Items.Add("Nyx Assassin")
                 lb.Items.Add("Ogre Magi")
                 lb.Items.Add("Omniknight")
+                lb.Items.Add("Oracle")
                 lb.Items.Add("Outworld Devourer")
+                lb.Items.Add("Phantom Assassin")
                 lb.Items.Add("Phantom Lancer")
                 lb.Items.Add("Phoenix")
-                lb.Items.Add("Pit Lord")
                 lb.Items.Add("Puck")
                 lb.Items.Add("Pudge")
                 lb.Items.Add("Pugna")
@@ -1007,13 +1033,15 @@ Public Class ItembuildClass
                 lb.Items.Add("Spirit Breaker")
                 lb.Items.Add("Storm Spirit")
                 lb.Items.Add("Sven")
-                lb.Items.Add("Tauren Chieftain")
+                lb.Items.Add("Templar Assassin")
                 lb.Items.Add("Tidehunter")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Tinker")
                 lb.Items.Add("Tiny")
                 lb.Items.Add("Treant Protector")
                 lb.Items.Add("Troll Warlord")
-                lb.Items.Add("Tuskarr")
+                lb.Items.Add("Tusk")
+                lb.Items.Add("Undying")
                 lb.Items.Add("Ursa")
                 lb.Items.Add("Vengeful Spirit")
                 lb.Items.Add("Venomancer")
@@ -1021,50 +1049,53 @@ Public Class ItembuildClass
                 lb.Items.Add("Visage")
                 lb.Items.Add("Warlock")
                 lb.Items.Add("Weaver")
-                lb.Items.Add("Windrunner")
+                lb.Items.Add("Windranger")
+                lb.Items.Add("Winter Wyvern")
                 lb.Items.Add("Witch Doctor")
                 lb.Items.Add("Zeus")
             Case 1
                 'Strenght
                 lb.Items.Add("Abaddon")
+                lb.Items.Add("Abyssal Underlord")
                 lb.Items.Add("Alchemist")
                 lb.Items.Add("Axe")
                 lb.Items.Add("Beastmaster")
                 lb.Items.Add("Brewmaster")
                 lb.Items.Add("Bristleback")
-                lb.Items.Add("Centaur Warchief")
+                lb.Items.Add("Centaur Warrunner")
                 lb.Items.Add("Chaos Knight")
                 lb.Items.Add("Clockwerk")
-                lb.Items.Add("Undying")
                 lb.Items.Add("Doom")
                 lb.Items.Add("Dragon Knight")
+                lb.Items.Add("Earth Spirit")
                 lb.Items.Add("Earthshaker")
-                lb.Items.Add("Timbersaw")
-                lb.Items.Add("Wisp")
+                lb.Items.Add("Elder Titan")
                 lb.Items.Add("Huskar")
+                lb.Items.Add("Io")
                 lb.Items.Add("Kunkka")
                 lb.Items.Add("Legion Commander")
                 lb.Items.Add("Lifestealer")
-                lb.Items.Add("Lycanthrope")
+                lb.Items.Add("Lycan")
                 lb.Items.Add("Magnus")
                 lb.Items.Add("Night Stalker")
                 lb.Items.Add("Omniknight")
                 lb.Items.Add("Phoenix")
-                lb.Items.Add("Pit Lord")
                 lb.Items.Add("Pudge")
                 lb.Items.Add("Sand King")
                 lb.Items.Add("Skeleton King")
                 lb.Items.Add("Slardar")
                 lb.Items.Add("Spirit Breaker")
                 lb.Items.Add("Sven")
-                lb.Items.Add("Tauren Chieftain")
                 lb.Items.Add("Tidehunter")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Tiny")
                 lb.Items.Add("Treant Protector")
-                lb.Items.Add("Tuskarr")
+                lb.Items.Add("Tusk")
+                lb.Items.Add("Undying")
             Case 2
                 'Agility
                 lb.Items.Add("Anti-Mage")
+                lb.Items.Add("Arc Warden")
                 lb.Items.Add("Bloodseeker")
                 lb.Items.Add("Bounty Hunter")
                 lb.Items.Add("Broodmother")
@@ -1074,16 +1105,15 @@ Public Class ItembuildClass
                 lb.Items.Add("Faceless Void")
                 lb.Items.Add("Gyrocopter")
                 lb.Items.Add("Juggernaut")
-                lb.Items.Add("Templar Assassin")
                 lb.Items.Add("Lone Druid")
                 lb.Items.Add("Luna")
                 lb.Items.Add("Medusa")
                 lb.Items.Add("Meepo")
                 lb.Items.Add("Mirana")
                 lb.Items.Add("Morphling")
-                lb.Items.Add("Phantom Assassin")
                 lb.Items.Add("Naga Siren")
                 lb.Items.Add("Nyx Assassin")
+                lb.Items.Add("Phantom Assassin")
                 lb.Items.Add("Phantom Lancer")
                 lb.Items.Add("Razor")
                 lb.Items.Add("Riki")
@@ -1092,6 +1122,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Sniper")
                 lb.Items.Add("Soul Keeper")
                 lb.Items.Add("Spectre")
+                lb.Items.Add("Templar Assassin")
                 lb.Items.Add("Troll Warlord")
                 lb.Items.Add("Ursa")
                 lb.Items.Add("Vengeful Spirit")
@@ -1120,9 +1151,10 @@ Public Class ItembuildClass
                 lb.Items.Add("Lina")
                 lb.Items.Add("Lion")
                 lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrolyte")
-                lb.Items.Add("Outworld Devourer")
+                lb.Items.Add("Necrophos")
                 lb.Items.Add("Ogre Magi")
+                lb.Items.Add("Oracle")
+                lb.Items.Add("Outworld Devourer")
                 lb.Items.Add("Puck")
                 lb.Items.Add("Pugna")
                 lb.Items.Add("Queen of Pain")
@@ -1135,7 +1167,8 @@ Public Class ItembuildClass
                 lb.Items.Add("Tinker")
                 lb.Items.Add("Visage")
                 lb.Items.Add("Warlock")
-                lb.Items.Add("Windrunner")
+                lb.Items.Add("Windranger")
+                lb.Items.Add("Winter Wyvern")
                 lb.Items.Add("Witch Doctor")
                 lb.Items.Add("Zeus")
             Case 4
@@ -1152,7 +1185,6 @@ Public Class ItembuildClass
                 lb.Items.Add("Ember Spirit")
                 lb.Items.Add("Faceless Void")
                 lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Wisp")
                 lb.Items.Add("Gyrocopter")
                 lb.Items.Add("Huskar")
                 lb.Items.Add("Invoker")
@@ -1163,13 +1195,13 @@ Public Class ItembuildClass
                 lb.Items.Add("Leshrac")
                 lb.Items.Add("Lone Druid")
                 lb.Items.Add("Luna")
-                lb.Items.Add("Lycanthrope")
+                lb.Items.Add("Lycan")
                 lb.Items.Add("Medusa")
                 lb.Items.Add("Meepo")
                 lb.Items.Add("Mirana")
                 lb.Items.Add("Morphling")
                 lb.Items.Add("Phantom Assassin")
-                lb.Items.Add("Necrolyte")
+                lb.Items.Add("Necrophos")
                 lb.Items.Add("Night Stalker")
                 lb.Items.Add("Outworld Devourer")
                 lb.Items.Add("Phantom Lancer")
@@ -1192,9 +1224,8 @@ Public Class ItembuildClass
                 lb.Items.Add("Ursa")
                 lb.Items.Add("Venomancer")
                 lb.Items.Add("Viper")
-                lb.Items.Add("Visage")
                 lb.Items.Add("Weaver")
-                lb.Items.Add("Windrunner")
+                lb.Items.Add("Windranger")
             Case 5
                 'Support
                 lb.Items.Add("Abaddon")
@@ -1206,12 +1237,12 @@ Public Class ItembuildClass
                 lb.Items.Add("Dazzle")
                 lb.Items.Add("Disruptor")
                 lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Wisp")
+                lb.Items.Add("Io")
                 lb.Items.Add("Invoker")
                 lb.Items.Add("Keeper of the Light")
                 lb.Items.Add("Lich")
                 lb.Items.Add("Lion")
-                lb.Items.Add("Necrolyte")
+                lb.Items.Add("Necrophos")
                 lb.Items.Add("Ogre Magi")
                 lb.Items.Add("Omniknight")
                 lb.Items.Add("Rubick")
@@ -1235,10 +1266,8 @@ Public Class ItembuildClass
                 lb.Items.Add("Disruptor")
                 lb.Items.Add("Doom")
                 lb.Items.Add("Earthshaker")
-                lb.Items.Add("Ember Spirit")
                 lb.Items.Add("Timbersaw")
                 lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Wisp")
                 lb.Items.Add("Invoker")
                 lb.Items.Add("Jakiro")
                 lb.Items.Add("Kunkka")
@@ -1265,13 +1294,12 @@ Public Class ItembuildClass
                 lb.Items.Add("Spirit Breaker")
                 lb.Items.Add("Storm Spirit")
                 lb.Items.Add("Sven")
-                lb.Items.Add("Tauren Chieftain")
+                lb.Items.Add("Elder Titan")
                 lb.Items.Add("Tidehunter")
                 lb.Items.Add("Tinker")
                 lb.Items.Add("Tiny")
-                lb.Items.Add("Tuskarr")
+                lb.Items.Add("Tusk")
                 lb.Items.Add("Vengeful Spirit")
-                lb.Items.Add("Visage")
                 lb.Items.Add("Weaver")
                 lb.Items.Add("Witch Doctor")
                 lb.Items.Add("Zeus")
@@ -1281,6 +1309,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Brewmaster")
                 lb.Items.Add("Clockwerk")
                 lb.Items.Add("Earthshaker")
+                lb.Items.Add("Earth Spirit")
                 lb.Items.Add("Enigma")
                 lb.Items.Add("Magnus")
                 lb.Items.Add("Naga Siren")
@@ -1304,10 +1333,10 @@ Public Class ItembuildClass
                 lb.Items.Add("Kunkka")
                 lb.Items.Add("Leshrac")
                 lb.Items.Add("Lone Druid")
-                lb.Items.Add("Lycanthrope")
+                lb.Items.Add("Lycan")
                 lb.Items.Add("Meepo")
                 lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrolyte")
+                lb.Items.Add("Necrophos")
                 lb.Items.Add("Phantom Lancer")
                 lb.Items.Add("Pit Lord")
                 lb.Items.Add("Pugna")
@@ -1319,27 +1348,27 @@ Public Class ItembuildClass
                 lb.Items.Add("Axe")
                 lb.Items.Add("Chen")
                 lb.Items.Add("Enigma")
-                lb.Items.Add("Lycanthrope")
+                lb.Items.Add("Lycan")
                 lb.Items.Add("Nature's Prophet")
                 lb.Items.Add("Ursa")
             Case 10
                 'Tank
                 lb.Items.Add("Brewmaster")
-                lb.Items.Add("Centaur Warchief")
+                lb.Items.Add("Centaur Warrunner")
                 lb.Items.Add("Death Prophet")
                 lb.Items.Add("Undying")
                 lb.Items.Add("Timbersaw")
-                lb.Items.Add("Wisp")
                 lb.Items.Add("Legion Commander")
                 lb.Items.Add("Phoenix")
                 lb.Items.Add("Skeleton King")
-                lb.Items.Add("Visage")
             Case Else
                 'All
                 lb.Items.Add("Abaddon")
+                lb.Items.Add("Abyssal Underlord")
                 lb.Items.Add("Alchemist")
                 lb.Items.Add("Ancient Apparition")
                 lb.Items.Add("Anti-Mage")
+                lb.Items.Add("Arc Warden")
                 lb.Items.Add("Axe")
                 lb.Items.Add("Bane")
                 lb.Items.Add("Batrider")
@@ -1349,7 +1378,7 @@ Public Class ItembuildClass
                 lb.Items.Add("Brewmaster")
                 lb.Items.Add("Bristleback")
                 lb.Items.Add("Broodmother")
-                lb.Items.Add("Centaur Warchief")
+                lb.Items.Add("Centaur Warrunner")
                 lb.Items.Add("Chaos Knight")
                 lb.Items.Add("Chen")
                 lb.Items.Add("Clinkz")
@@ -1358,27 +1387,26 @@ Public Class ItembuildClass
                 lb.Items.Add("Dark Seer")
                 lb.Items.Add("Dazzle")
                 lb.Items.Add("Death Prophet")
-                lb.Items.Add("Undying")
                 lb.Items.Add("Disruptor")
                 lb.Items.Add("Doom")
                 lb.Items.Add("Dragon Knight")
                 lb.Items.Add("Drow Ranger")
+                lb.Items.Add("Earth Spirit")
                 lb.Items.Add("Earthshaker")
+                lb.Items.Add("Elder Titan")
                 lb.Items.Add("Ember Spirit")
                 lb.Items.Add("Enchantress")
                 lb.Items.Add("Enigma")
                 lb.Items.Add("Faceless Void")
-                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Goblin Techies")
-                lb.Items.Add("Wisp")
                 lb.Items.Add("Gyrocopter")
                 lb.Items.Add("Huskar")
                 lb.Items.Add("Invoker")
+                lb.Items.Add("Io")
                 lb.Items.Add("Jakiro")
                 lb.Items.Add("Juggernaut")
                 lb.Items.Add("Keeper of the Light")
                 lb.Items.Add("Kunkka")
-                lb.Items.Add("Templar Assassin")
                 lb.Items.Add("Legion Commander")
                 lb.Items.Add("Leshrac")
                 lb.Items.Add("Lich")
@@ -1387,24 +1415,24 @@ Public Class ItembuildClass
                 lb.Items.Add("Lion")
                 lb.Items.Add("Lone Druid")
                 lb.Items.Add("Luna")
-                lb.Items.Add("Lycanthrope")
+                lb.Items.Add("Lycan")
                 lb.Items.Add("Magnus")
                 lb.Items.Add("Medusa")
                 lb.Items.Add("Meepo")
                 lb.Items.Add("Mirana")
                 lb.Items.Add("Morphling")
-                lb.Items.Add("Phantom Assassin")
                 lb.Items.Add("Naga Siren")
                 lb.Items.Add("Nature's Prophet")
-                lb.Items.Add("Necrolyte")
-                lb.Items.Add("Nyx Assassin")
+                lb.Items.Add("Necrophos")
                 lb.Items.Add("Night Stalker")
+                lb.Items.Add("Nyx Assassin")
                 lb.Items.Add("Ogre Magi")
                 lb.Items.Add("Omniknight")
+                lb.Items.Add("Oracle")
                 lb.Items.Add("Outworld Devourer")
+                lb.Items.Add("Phantom Assassin")
                 lb.Items.Add("Phantom Lancer")
                 lb.Items.Add("Phoenix")
-                lb.Items.Add("Pit Lord")
                 lb.Items.Add("Puck")
                 lb.Items.Add("Pudge")
                 lb.Items.Add("Pugna")
@@ -1427,13 +1455,15 @@ Public Class ItembuildClass
                 lb.Items.Add("Spirit Breaker")
                 lb.Items.Add("Storm Spirit")
                 lb.Items.Add("Sven")
-                lb.Items.Add("Tauren Chieftain")
+                lb.Items.Add("Templar Assassin")
                 lb.Items.Add("Tidehunter")
+                lb.Items.Add("Timbersaw")
                 lb.Items.Add("Tinker")
                 lb.Items.Add("Tiny")
                 lb.Items.Add("Treant Protector")
                 lb.Items.Add("Troll Warlord")
-                lb.Items.Add("Tuskarr")
+                lb.Items.Add("Tusk")
+                lb.Items.Add("Undying")
                 lb.Items.Add("Ursa")
                 lb.Items.Add("Vengeful Spirit")
                 lb.Items.Add("Venomancer")
@@ -1441,7 +1471,8 @@ Public Class ItembuildClass
                 lb.Items.Add("Visage")
                 lb.Items.Add("Warlock")
                 lb.Items.Add("Weaver")
-                lb.Items.Add("Windrunner")
+                lb.Items.Add("Windranger")
+                lb.Items.Add("Winter Wyvern")
                 lb.Items.Add("Witch Doctor")
                 lb.Items.Add("Zeus")
         End Select
@@ -1450,17 +1481,13 @@ Public Class ItembuildClass
     'Delete all heros which are without an itembuild by valve
     Public Sub ClearNotImplemented()
         With FormMain.ListBox1
-            .Items.Remove("Abaddon")
-            .Items.Remove("Bristleback")
-            .Items.Remove("Ember Spirit")
+            .Items.Remove("Abyssal Underlord")
+            .Items.Remove("Arc Warden")
             .Items.Remove("Goblin Techies")
-            .Items.Remove("Legion Commander")
+            .Items.Remove("Oracle")
             .Items.Remove("Phoenix")
-            .Items.Remove("Pit Lord")
-            .Items.Remove("Skywrath Mage")
             .Items.Remove("Soul Keeper")
-            .Items.Remove("Tauren Chieftain")
-            .Items.Remove("Tuskarr")
+            .Items.Remove("Winter Wyvern")
         End With
     End Sub
 
@@ -1481,7 +1508,7 @@ Public Class ItembuildClass
                 tooltip = "Animal Courier" + vbNewLine + vbNewLine + "Summon Animal Courier"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Arcane Boots"
-                tooltip = "Arcane Boots" + vbNewLine + vbNewLine + "+65 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
+                tooltip = "Arcane Boots" + vbNewLine + vbNewLine + "+55 Movement Speed " + vbNewLine + "+250 Mana" + vbNewLine + "Replenish Mana (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Armlet"
                 tooltip = "Armlet" + vbNewLine + vbNewLine + "+9 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "Unholy Strength (active)"
@@ -1505,7 +1532,7 @@ Public Class ItembuildClass
                 tooltip = "Blade of Alacrity" + vbNewLine + vbNewLine + "+10 Agility"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Bloodstone"
-                tooltip = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
+                tooltip = "Bloodstone" + vbNewLine + vbNewLine + "+500 HP" + vbNewLine + "+400 Mana" + vbNewLine + "+8 HP/sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+10 Damage" + vbNewLine + "Bloodpact" + vbNewLine + "5 Charges"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Boots of Elvenskin"
                 tooltip = "Boots of Elvenskin" + vbNewLine + vbNewLine + "+6 Agility"
@@ -1598,7 +1625,7 @@ Public Class ItembuildClass
                 tooltip = "Ethereal Blade" + vbNewLine + vbNewLine + "+40 Agility" + vbNewLine + "+10 Strength" + vbNewLine + "+10 Intelligence" + vbNewLine + "Ether Blast (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Eul's Scepter of Divinity"
-                tooltip = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+25 Movement Speed" + vbNewLine + "Cyclone (active)"
+                tooltip = "Eul's Scepter of Divinity" + vbNewLine + vbNewLine + "+10 Intelligence" + vbNewLine + "+150% Mana Regeneration" + vbNewLine + "+40 Movement Speed" + vbNewLine + "Cyclone (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Eye of Skadi"
                 tooltip = "Eye of Skadi" + vbNewLine + vbNewLine + "+25 All Attributes" + vbNewLine + "+200 HP" + vbNewLine + "+150 Mana" + vbNewLine + "Cold Attack"
@@ -1724,7 +1751,7 @@ Public Class ItembuildClass
                 tooltip = "Perseverance" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+125% Mana Regeneration"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Phase Boots"
-                tooltip = "Phase Boots" + vbNewLine + vbNewLine + "+60 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
+                tooltip = "Phase Boots" + vbNewLine + vbNewLine + "+50 Movement Speed" + vbNewLine + "+24 damage" + vbNewLine + "Phase (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Pipe of Insight"
                 tooltip = "Pipe of Insight" + vbNewLine + vbNewLine + "+11 HP/sec Regeneration" + vbNewLine + "+30% Magic Resistance" + vbNewLine + "Barrier (active)"
@@ -1739,7 +1766,7 @@ Public Class ItembuildClass
                 tooltip = "Poor Man's Shield" + vbNewLine + vbNewLine + "+6 Agility" + vbNewLine + "Damage Block"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Power Treads"
-                tooltip = "Power Treads" + vbNewLine + vbNewLine + "+60 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
+                tooltip = "Power Treads" + vbNewLine + vbNewLine + "+50 Move Speed" + vbNewLine + "+8 Selected Attribute" + vbNewLine + "+25 Attack Speed" + vbNewLine + "Switch Attribute (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Quarterstaff"
                 tooltip = "Quarterstaff" + vbNewLine + vbNewLine + "+10 Damage" + vbNewLine + "+10 Attack Speed"
@@ -1754,7 +1781,7 @@ Public Class ItembuildClass
                 tooltip = "Reaver" + vbNewLine + vbNewLine + "+25 Strength"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Refresher Orb"
-                tooltip = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
+                tooltip = "Refresher Orb" + vbNewLine + vbNewLine + "+5 HP/Sec Regeneration" + vbNewLine + "+10 Damage" + vbNewLine + "+200% Mana Regeneration" + vbNewLine + "+40 Damage" + vbNewLine + "Reset Cooldowns (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Ring of Basilius"
                 tooltip = "Ring of Basilius" + vbNewLine + vbNewLine + "+6 Damage" + vbNewLine + "+1 Armor" + vbNewLine + "Mana Aura" + vbNewLine + "Armor Aura"
@@ -1781,7 +1808,7 @@ Public Class ItembuildClass
                 tooltip = "Sange" + vbNewLine + vbNewLine + "+16 Strength" + vbNewLine + "+10 Damage" + vbNewLine + "Lesser Maim"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Sange and Yasha"
-                tooltip = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+12% Movement Speed" + vbNewLine + "Greater Maim"
+                tooltip = "Sange and Yasha" + vbNewLine + vbNewLine + "+16 Agility" + vbNewLine + "+16 Strength" + vbNewLine + "+12 Damage" + vbNewLine + "+15 Attack Speed" + vbNewLine + "+16% Movement Speed" + vbNewLine + "Greater Maim"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Satanic"
                 tooltip = "Satanic" + vbNewLine + vbNewLine + "+25 Strength" + vbNewLine + "+20 Damage" + vbNewLine + "+5 Armor" + vbNewLine + "+25% Lifesteal" + vbNewLine + "Unholy Rage (active)"
@@ -1823,7 +1850,7 @@ Public Class ItembuildClass
                 tooltip = "Talisman of Evasion" + vbNewLine + vbNewLine + "+25% Evasion"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Tango"
-                tooltip = "Tango" + vbNewLine + vbNewLine + "Eat Tree" + vbNewLine + "3 Charges"
+                tooltip = "Tango" + vbNewLine + vbNewLine + "Eat Tree" + vbNewLine + "4 Charges"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Town Portal Scroll"
                 tooltip = "Town Portal Scroll" + vbNewLine + vbNewLine + "Teleport" + vbNewLine + "1 Charges"
@@ -1838,7 +1865,7 @@ Public Class ItembuildClass
                 tooltip = "Vanguard" + vbNewLine + vbNewLine + "+6 HP/sec regeneration" + vbNewLine + "+275 HP" + vbNewLine + "Damage Block"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Veil of Discord"
-                tooltip = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+12 Intelligence" + vbNewLine + "Discord (active)"
+                tooltip = "Veil of Discord" + vbNewLine + vbNewLine + "+5 Armor" + vbNewLine + "+5 HP/sec Regeneration" + vbNewLine + "+6 Intelligence" + vbNewLine + "+3 Strength" + vbNewLine + "+3 Agility" + vbNewLine + "+3 Damage" + vbNewLine + "Discord (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Vitality Booster"
                 tooltip = "Vitality Booster" + vbNewLine + vbNewLine + "+250 HP"
@@ -1868,7 +1895,7 @@ Public Class ItembuildClass
                 tooltip = "Rod of Atos" + vbNewLine + vbNewLine + "+25 Intelligence" + vbNewLine + "+250 HP" + vbNewLine + "Cripple (active)"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Tranquil Boots"
-                tooltip = "Tranquil Boots" + vbNewLine + vbNewLine + "+80 Movement Speed" + vbNewLine + "+3 HP/sec Regeneration" + vbNewLine + "+3 Armor" + vbNewLine + "Rejuvenate (active)"
+                tooltip = "Tranquil Boots" + vbNewLine + vbNewLine + "(active)" + vbNewLine + "+85 Movement Speed" + vbNewLine + "+4 Armor" + vbNewLine + "+10 HP/sec Regeneration" + vbNewLine + vbNewLine + "(broken)" + vbNewLine + "+60 Movement Speed" + vbNewLine + "+4 Armor"
                 Return tooltip + vbNewLine + "Price: " + GetPrice(item_name).ToString
             Case "Shadow Amulet"
                 tooltip = "Shadow Amulet" + vbNewLine + vbNewLine + "+30 Attack Speed" + vbNewLine + "Fade (active)"
@@ -1892,13 +1919,13 @@ Public Class ItembuildClass
             Case "Armlet"
                 Return 2600
             Case "Assault Cuirass"
-                Return 5350
+                Return 5250
             Case "Battle Fury"
                 Return 4350
             Case "Belt of Strength"
                 Return 450
             Case "Black King Bar"
-                Return 3900
+                Return 3975
             Case "Blade Mail"
                 Return 2200
             Case "Blade of Alacrity"
@@ -1916,7 +1943,7 @@ Public Class ItembuildClass
             Case "Boots of Travel"
                 Return 2500
             Case "Bottle"
-                Return 600
+                Return 650
             Case "Bracer"
                 Return 525
             Case "Broadsword"
@@ -1980,7 +2007,7 @@ Public Class ItembuildClass
             Case "Gauntlets of Strength"
                 Return 150
             Case "Gem of True Sight"
-                Return 700
+                Return 900
             Case "Ghost Scepter"
                 Return 1600
             Case "Gloves of Haste"
@@ -1990,7 +2017,7 @@ Public Class ItembuildClass
             Case "Headdress"
                 Return 603
             Case "Healing Salve"
-                Return 100
+                Return 115
             Case "Heart of Tarrasque"
                 Return 5500
             Case "Heaven's Halberd"
@@ -2002,7 +2029,7 @@ Public Class ItembuildClass
             Case "Hood of Defiance"
                 Return 2125
             Case "Hyperstone"
-                Return 2100
+                Return 2000
             Case "Iron Branch"
                 Return 53
             Case "Javelin"
@@ -2028,7 +2055,7 @@ Public Class ItembuildClass
             Case "Mithril Hammer"
                 Return 1600
             Case "Mjollnir"
-                Return 5400
+                Return 5300
             Case "Monkey King Bar"
                 Return 5400
             Case "Morbid Mask"
@@ -2126,7 +2153,7 @@ Public Class ItembuildClass
             Case "Talisman of Evasion"
                 Return 1800
             Case "Tango"
-                Return 90
+                Return 125
             Case "Town Portal Scroll"
                 Return 135
             Case "Tranquil Boots"
@@ -2206,7 +2233,7 @@ Public Class ItembuildClass
             Case "Radiance (Recipe)"
                 Return 1350
             Case "Black King Bar (Recipe)"
-                Return 1300
+                Return 1375
             Case "Assault Cuirass (Recipe)"
                 Return 1300
             Case "Manta Style (Recipe)"
