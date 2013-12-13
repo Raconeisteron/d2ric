@@ -5,60 +5,6 @@ Public Class OptionsClass
     Friend WithEvents Itembuild As New ItembuildClass
     Dim LocRM As New ResourceManager("D2RIC.Resources", GetType(FormMain).Assembly)
 
-    'Change the path where steam is installed on
-    Public Sub ChangeSteamPath()
-        Using FolderBrowserDialog1 As FolderBrowserDialog = New FolderBrowserDialog
-            If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
-                FormMain.TextBox4.Text = FolderBrowserDialog1.SelectedPath
-            End If
-            Dim steam_path, path As String
-            steam_path = FormMain.TextBox4.Text
-            If My.Settings.client = "Release Client" Then
-                path = steam_path + "\SteamApps\common\dota 2\dota\itembuilds"
-            ElseIf My.Settings.client = "Test Client" Then
-                path = steam_path + "\SteamApps\common\dota 2 test\dota\itembuilds"
-            Else
-                path = steam_path + "\SteamApps\common\dota 2 beta\dota\itembuilds"
-            End If
-
-            If My.Computer.FileSystem.DirectoryExists(path) Then
-                ' existiert
-                My.Settings.path = path
-                My.Settings.Save()
-                MessageBox.Show(LocRM.GetString("pathChanged"))
-            Else
-                ' existiert nicht
-                MessageBox.Show(LocRM.GetString("checkPath"))
-            End If
-        End Using
-    End Sub
-
-    'Change the client (ex. beta client or test client)
-    Public Sub ChangeClient()
-        Dim steam_path, path As String
-        steam_path = FormMain.TextBox4.Text
-        If FormMain.ComboBoxClient.Text = "Release Client" Then
-            path = steam_path + "\SteamApps\common\dota 2\dota\itembuilds"
-        ElseIf FormMain.ComboBoxClient.Text = "Test Client" Then
-            path = steam_path + "\SteamApps\common\dota 2 test\dota\itembuilds"
-        Else
-            path = steam_path + "\SteamApps\common\dota 2 beta\dota\itembuilds"
-        End If
-
-        If My.Computer.FileSystem.DirectoryExists(path) Then
-            ' existiert
-            My.Settings.client = FormMain.ComboBoxClient.Text
-            My.Settings.path = path
-            My.Settings.Save()
-            Itembuild.Clear()
-            FormMain.ListBox1.ClearSelected()
-        Else
-            ' existiert nicht
-            MessageBox.Show(LocRM.GetString("clientNotFound"))
-            FormMain.ComboBoxClient.Text = My.Settings.client
-        End If
-    End Sub
-
     'Save language setting
     Public Sub ChangeLang()
         Dim lang As String = ""
@@ -104,28 +50,28 @@ Public Class OptionsClass
 
     'Create new backups with a timestring in name
     Public Sub Backup()
-        If Not IO.Directory.Exists(My.Settings.path & "\Backup") Then
+        If Not IO.Directory.Exists(My.Settings.dota2path & "\Backup") Then
             ' Nein! Jetzt erstellen...
             Try
-                IO.Directory.CreateDirectory(My.Settings.path & "\Backup")
+                IO.Directory.CreateDirectory(My.Settings.dota2path & "\Backup")
                 ' Ordner wurde korrekt erstellt!
             Catch ex As Exception
                 ' Ordner wurde nich erstellt
                 MessageBox.Show(LocRM.GetString("cantCreateFolder"))
             End Try
         End If
-        If IO.Directory.Exists(My.Settings.path & "\Backup") Then
+        If IO.Directory.Exists(My.Settings.dota2path & "\Backup") Then
             Try
-                IO.Directory.CreateDirectory(My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString)
+                IO.Directory.CreateDirectory(My.Settings.dota2path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString)
                 ' Ordner wurde korrekt erstellt!
             Catch ex As Exception
                 ' Ordner wurde nich erstellt
                 MessageBox.Show(LocRM.GetString("cantCreateFolder"))
             End Try
         End If
-        If IO.Directory.Exists(My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString) Then
-            For Each file As String In IO.Directory.GetFiles(My.Settings.path) ' Get all files in the folder
-                IO.File.Copy(file, My.Settings.path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "\" & cut_file(file), True)  ' Copy the files
+        If IO.Directory.Exists(My.Settings.dota2path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString) Then
+            For Each file As String In IO.Directory.GetFiles(My.Settings.dota2path) ' Get all files in the folder
+                IO.File.Copy(file, My.Settings.dota2path & "\Backup\" & System.DateTime.Now.Year.ToString & "-" & System.DateTime.Now.Month.ToString & "-" & System.DateTime.Now.Day.ToString & "\" & cut_file(file), True)  ' Copy the files
             Next
         End If
     End Sub
@@ -133,11 +79,11 @@ Public Class OptionsClass
     'Delete all backups
     Public Sub DeleteBackup()
         If MessageBox.Show(LocRM.GetString("deleteBackupsQuestion"), Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            If IO.Directory.Exists(My.Settings.path & "\Backup") Then
-                For Each folder As String In IO.Directory.GetDirectories(My.Settings.path & "\Backup") ' Get all folder
+            If IO.Directory.Exists(My.Settings.dota2path & "\Backup") Then
+                For Each folder As String In IO.Directory.GetDirectories(My.Settings.dota2path & "\Backup") ' Get all folder
                     IO.Directory.Delete(folder, True) ' Delete the folder
                 Next
-                For Each file As String In IO.Directory.GetFiles(My.Settings.path & "\Backup") ' Get all files in the folder
+                For Each file As String In IO.Directory.GetFiles(My.Settings.dota2path & "\Backup") ' Get all files in the folder
                     If Not file.Contains("default") Then
                         IO.File.Delete(file)  ' Delete the files
                     End If
@@ -148,8 +94,8 @@ Public Class OptionsClass
 
     'Open the backup folder, if it exists
     Public Sub OpenBackup()
-        If IO.Directory.Exists(My.Settings.path & "\Backup") Then
-            System.Diagnostics.Process.Start("explorer", My.Settings.path + "\Backup")
+        If IO.Directory.Exists(My.Settings.dota2path & "\Backup") Then
+            System.Diagnostics.Process.Start("explorer", My.Settings.dota2path + "\Backup")
         Else
             MessageBox.Show(LocRM.GetString("noBackupFolder"))
         End If

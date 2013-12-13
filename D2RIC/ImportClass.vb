@@ -8,7 +8,7 @@ Public Class ImportClass
     'Import the itembuild out of textbox2 and switch to the itembuild tab
     Public Sub Import()
         If FormMain.TextBox2.Text <> "" Then
-            Dim File As String = My.Settings.path + "\temp.txt"
+            Dim File As String = My.Settings.dota2path + "\temp.txt"
             IO.File.WriteAllText(File, FormMain.TextBox2.Text)
             If IO.File.Exists(File) Then
                 Dim ItemName As String
@@ -90,7 +90,7 @@ Public Class ImportClass
                         Itembuild.NewText &= Zeile & vbNewLine
                     End If
                 Next
-                IO.File.Delete(My.Settings.path + "\temp.txt")
+                IO.File.Delete(My.Settings.dota2path + "\temp.txt")
                 FormMain.TabControl1.SelectedTab = FormMain.TabPage1
             Else
                 MessageBox.Show(LocRM.GetString("cantLoadItembuild"))

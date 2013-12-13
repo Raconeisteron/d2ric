@@ -101,29 +101,19 @@ Public Class FormMain
                     TextBox3.Text = "Error!"
                 End If
             End If
-        ElseIf TabControl1.SelectedTab Is TabPage5 Then
-            If (My.Settings.path <> "") Then
-                TextBox4.Text = Microsoft.VisualBasic.Left(My.Settings.path, My.Settings.path.IndexOf("\SteamApps"))
-            End If
-            If My.Settings.client = "Release Client" Then
-                ComboBoxClient.Text = "Release Client"
-            ElseIf My.Settings.client = "Test Client" Then
-                ComboBoxClient.Text = "Test Client"
-            Else
-                ComboBoxClient.Text = "Beta Client"
-            End If
         ElseIf TabControl1.SelectedTab Is TabPage3 Then
             'Focus on TextBox2
             TextBox2.Select()
         End If
     End Sub
 
+#Region "Updater"
     Private Sub Check4Update()
         Dim pgversion As String = Application.ProductVersion
         If pgversion.Substring(pgversion.Length - 1) = "0" Then
             pgversion = pgversion.Substring(0, pgversion.Length - 2)
         End If
-        Dim aktversion As String = WebClient1.DownloadString("http://holyzone.bplaced.net/maddy/d2ric_version.txt")
+        Dim aktversion As String = WebClient1.DownloadString("https://dl.dropboxusercontent.com/u/15746440/D2RIC/d2ric_version.txt")
 
         If pgversion < aktversion Then 'Wenn die Programmversion kleiner als die Aktuelle Version ist:
             If MessageBox.Show(LocRM.GetString("update_Pt1") + vbNewLine + vbNewLine + LocRM.GetString("update_Pt2") + pgversion + vbNewLine + LocRM.GetString("update_Pt3") + aktversion + vbNewLine + vbNewLine + LocRM.GetString("update_Pt4"), LocRM.GetString("update_Title"), MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
@@ -133,6 +123,7 @@ Public Class FormMain
             'Nothing
         End If
     End Sub
+#End Region
 
     Private Sub CheckBox1_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox1.CheckedChanged
         If Not FirstChange Then
@@ -146,13 +137,16 @@ Public Class FormMain
         End If
     End Sub
 
+#Region "Button"
     Private Sub ButtonUpdate_Click(sender As System.Object, e As System.EventArgs) Handles ButtonUpdate.Click
-        LabelWait.Visible = True
-        BackgroundWorker1.RunWorkerAsync()
+        If Not LabelWait.Visible Then
+            LabelWait.Visible = True
+            BackgroundWorker1.RunWorkerAsync()
+        End If
     End Sub
 
     Private Sub ButtonOpenFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenFolder.Click
-        System.Diagnostics.Process.Start("explorer", My.Settings.path)
+        System.Diagnostics.Process.Start("explorer", My.Settings.dota2path)
     End Sub
 
     Private Sub ButtonSave_Click(sender As System.Object, e As System.EventArgs) Handles ButtonSave.Click
@@ -184,13 +178,14 @@ Public Class FormMain
         Export.SavingToTextfile()
     End Sub
 
-    Private Sub ButtonChangeSteam_Click(sender As System.Object, e As System.EventArgs) Handles ButtonChangeSteam.Click
-        Options.ChangeSteamPath()
+    Private Sub ButtonOpenBackupFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenBackupFolder.Click
+        Options.OpenBackup()
     End Sub
 
-    Private Sub ComboBoxClient_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxClient.SelectedIndexChanged
-        Options.ChangeClient()
+    Private Sub ButtonDefaultItembuild_Click(sender As System.Object, e As System.EventArgs) Handles ButtonDefaultItembuild.Click
+        Itembuild.LoadDefault()
     End Sub
+#End Region
 
     Private Sub ComboBoxLang_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBoxLang.SelectedIndexChanged
         Options.ChangeLang()
@@ -199,10 +194,6 @@ Public Class FormMain
         Else
             FirstLangChange = False
         End If
-    End Sub
-
-    Private Sub ButtonOpenBackupFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenBackupFolder.Click
-        Options.OpenBackup()
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
@@ -216,22 +207,10 @@ Public Class FormMain
     'CHANGE THE HEROS SHOWN IN THE LIST
     Private Sub ComboBox3_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox3.SelectedIndexChanged
         Itembuild.ChangeHeroList(ComboBox3, ListBox1)
-        If CheckBox2.Checked Then
-            Itembuild.ClearNotImplemented()
-        End If
+        Itembuild.ClearNotImplemented()
     End Sub
 
-    Private Sub CheckBox2_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox2.CheckedChanged
-        Itembuild.ChangeHeroList(ComboBox3, ListBox1)
-        If CheckBox2.Checked Then
-            Itembuild.ClearNotImplemented()
-        End If
-    End Sub
-
-    Private Sub ButtonDefaultItembuild_Click(sender As System.Object, e As System.EventArgs) Handles ButtonDefaultItembuild.Click
-        Itembuild.LoadDefault()
-    End Sub
-
+#Region "Itembox"
     Private Sub TextBoxItemsearch_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBoxItemsearch.TextChanged
         Timer1.Stop()
         Timer1.Start()
@@ -637,10 +616,12 @@ Public Class FormMain
                 Return 134
         End Select
     End Function
+#End Region
 
-    'Changes color to red when the costs exceed 603, otherwise to blue
+#Region "Items"
+    'Changes color to red when the costs exceed 625, otherwise to blue
     Public Sub CheckCosts(ByVal price As Integer)
-        If (price > 603) Then
+        If (price > 625) Then
             Label15.ForeColor = Color.Red
         Else
             Label15.ForeColor = Color.Black
@@ -1508,7 +1489,9 @@ Public Class FormMain
                 Return "Error! Itemname: " + item_name
         End Select
     End Function
+#End Region
 
+#Region "Drag&Drop"
     'Source: http://dotnet-snippets.de/dns/bild-transparent-machen-mit-colormatrix-SID168.aspx
     Private Function SetImageAlpha(ByVal Image As Image, ByVal Alpha As Single) As Image
         Dim ImgAttr As New Imaging.ImageAttributes()
@@ -1789,6 +1772,7 @@ Public Class FormMain
             Unsaved = True
         End If
     End Sub
+#End Region
 
     'Allow ctrl+a to select all text in this textbox
     Private Sub TextBox2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress

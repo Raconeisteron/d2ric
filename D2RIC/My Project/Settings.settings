@@ -5,9 +5,6 @@
     <Setting Name="Setting" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="path" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="clipboard" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
@@ -17,10 +14,10 @@
     <Setting Name="autoupdate" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="client" Type="System.String" Scope="User">
+    <Setting Name="lang" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="lang" Type="System.String" Scope="User">
+    <Setting Name="dota2path" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

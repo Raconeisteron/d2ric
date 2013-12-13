@@ -51,7 +51,6 @@ Partial Class FormMain
         Me.TextBoxItemsearch = New System.Windows.Forms.TextBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ButtonDefaultItembuild = New System.Windows.Forms.Button()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -73,15 +72,10 @@ Partial Class FormMain
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.ComboBoxLang = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBoxClient = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.ButtonOpenBackupFolder = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ButtonChangeSteam = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.ButtonBackup = New System.Windows.Forms.Button()
         Me.ButtonDeleteBackup = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -134,7 +128,6 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.TextBoxItemsearch)
         Me.TabPage1.Controls.Add(Me.ListView1)
         Me.TabPage1.Controls.Add(Me.ButtonDefaultItembuild)
-        Me.TabPage1.Controls.Add(Me.CheckBox2)
         Me.TabPage1.Controls.Add(Me.Label24)
         Me.TabPage1.Controls.Add(Me.ComboBox3)
         Me.TabPage1.Controls.Add(Me.Label12)
@@ -476,12 +469,6 @@ Partial Class FormMain
         Me.ButtonDefaultItembuild.Name = "ButtonDefaultItembuild"
         Me.ButtonDefaultItembuild.UseVisualStyleBackColor = True
         '
-        'CheckBox2
-        '
-        resources.ApplyResources(Me.CheckBox2, "CheckBox2")
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
         'Label24
         '
         resources.ApplyResources(Me.Label24, "Label24")
@@ -597,15 +584,10 @@ Partial Class FormMain
         '
         Me.TabPage5.Controls.Add(Me.ComboBoxLang)
         Me.TabPage5.Controls.Add(Me.Label16)
-        Me.TabPage5.Controls.Add(Me.Label10)
-        Me.TabPage5.Controls.Add(Me.ComboBoxClient)
         Me.TabPage5.Controls.Add(Me.CheckBox1)
         Me.TabPage5.Controls.Add(Me.ButtonOpenBackupFolder)
         Me.TabPage5.Controls.Add(Me.Label9)
-        Me.TabPage5.Controls.Add(Me.Label8)
         Me.TabPage5.Controls.Add(Me.Label7)
-        Me.TabPage5.Controls.Add(Me.ButtonChangeSteam)
-        Me.TabPage5.Controls.Add(Me.TextBox4)
         Me.TabPage5.Controls.Add(Me.ButtonBackup)
         Me.TabPage5.Controls.Add(Me.ButtonDeleteBackup)
         resources.ApplyResources(Me.TabPage5, "TabPage5")
@@ -624,19 +606,6 @@ Partial Class FormMain
         '
         resources.ApplyResources(Me.Label16, "Label16")
         Me.Label16.Name = "Label16"
-        '
-        'Label10
-        '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.Name = "Label10"
-        '
-        'ComboBoxClient
-        '
-        Me.ComboBoxClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBoxClient.FormattingEnabled = True
-        Me.ComboBoxClient.Items.AddRange(New Object() {resources.GetString("ComboBoxClient.Items"), resources.GetString("ComboBoxClient.Items1")})
-        resources.ApplyResources(Me.ComboBoxClient, "ComboBoxClient")
-        Me.ComboBoxClient.Name = "ComboBoxClient"
         '
         'CheckBox1
         '
@@ -657,26 +626,10 @@ Partial Class FormMain
         resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.Name = "Label9"
         '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.Name = "Label8"
-        '
         'Label7
         '
         resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
-        '
-        'ButtonChangeSteam
-        '
-        resources.ApplyResources(Me.ButtonChangeSteam, "ButtonChangeSteam")
-        Me.ButtonChangeSteam.Name = "ButtonChangeSteam"
-        Me.ButtonChangeSteam.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        resources.ApplyResources(Me.TextBox4, "TextBox4")
-        Me.TextBox4.Name = "TextBox4"
         '
         'ButtonBackup
         '
@@ -756,10 +709,7 @@ Partial Class FormMain
     Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
     Friend WithEvents ButtonBackup As System.Windows.Forms.Button
     Friend WithEvents ButtonDeleteBackup As System.Windows.Forms.Button
-    Friend WithEvents ButtonChangeSteam As System.Windows.Forms.Button
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents ButtonOpenBackupFolder As System.Windows.Forms.Button
     Friend WithEvents ButtonUpdate As System.Windows.Forms.Button
@@ -769,10 +719,7 @@ Partial Class FormMain
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents ButtonDefaultItembuild As System.Windows.Forms.Button
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents ComboBoxClient As System.Windows.Forms.ComboBox
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents TextBoxItemsearch As System.Windows.Forms.TextBox
