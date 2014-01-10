@@ -11,9 +11,6 @@
     <Setting Name="author" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="autoupdate" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="lang" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
