@@ -1,7 +1,6 @@
 ﻿Imports System.Security.Cryptography, System.Net, vb = Microsoft.VisualBasic, System.Resources, System.Globalization, System.Threading
 
 Public Class FormMain
-    Dim FirstChange As Boolean = True
     Dim FirstLangChange As Boolean = True
     Friend WithEvents Import As New ImportClass
     Friend WithEvents Export As New ExportClass
@@ -48,15 +47,6 @@ Public Class FormMain
         Me.ListView5.AllowDrop = True
         Me.ListView6.AllowDrop = True
         Me.ListView7.AllowDrop = True
-
-        If Not My.Settings.autoupdate Then
-            CheckBox1.Checked = False
-        Else
-            CheckBox1.Checked = True
-            LabelWait.Visible = True
-            BackgroundWorker1.RunWorkerAsync()
-        End If
-
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -109,40 +99,186 @@ Public Class FormMain
 
 #Region "Updater"
     Private Sub Check4Update()
-        Dim pgversion As String = Application.ProductVersion
-        If pgversion.Substring(pgversion.Length - 1) = "0" Then
-            pgversion = pgversion.Substring(0, pgversion.Length - 2)
-        End If
-        Dim aktversion As String = WebClient1.DownloadString("https://dl.dropboxusercontent.com/u/15746440/D2RIC/d2ric_version.txt")
-
-        If pgversion < aktversion Then 'Wenn die Programmversion kleiner als die Aktuelle Version ist:
-            If MessageBox.Show(LocRM.GetString("update_Pt1") + vbNewLine + vbNewLine + LocRM.GetString("update_Pt2") + pgversion + vbNewLine + LocRM.GetString("update_Pt3") + aktversion + vbNewLine + vbNewLine + LocRM.GetString("update_Pt4"), LocRM.GetString("update_Title"), MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                Process.Start("http://code.google.com/p/d2ric/downloads/list")
+        'if internet is available
+        If connectionInternet() = True Then
+            ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+            '' Syntax checkForUpdate ("link to a version.txt file containing the current version of the application on the server updates", "version of the new build")
+            '' The version.txt file must be in Read mode Execute on the server and must contain only ex Version: 2.0.0
+            '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+            ''we check if an update is available '-> here to change the version of the update
+            Dim pgversion As String = Application.ProductVersion
+            If pgversion.Substring(pgversion.Length - 1) = "0" Then
+                pgversion = pgversion.Substring(0, pgversion.Length - 2)
             End If
+            checkforupdate("https://dl.dropboxusercontent.com/u/15746440/D2RIC/d2ric_version.txt", pgversion)
         Else
-            'Nothing
+            ''no connection is informed that he is available and can not vériffier update
+            MsgBox("You are not connected to the Internet!" & vbCrLf _
+            & "It is therefore impossible to determine whether an update of the application is available.", _
+            MsgBoxStyle.Information, "Internet connection not available")
         End If
+    End Sub
+
+    'Variable declaration for the update.
+    Public Progress As New ProgressBar
+    Public url As String
+    Public bool_showUI As Boolean
+    Public Timer3 As New Windows.Forms.Timer
+
+    'function to check if the internet is available
+    Private Function connectionInternet() As Boolean
+        Dim objUrl As New System.Uri("http://www.google.com/")
+        Dim objWebReq As System.Net.WebRequest
+        objWebReq = System.Net.WebRequest.Create(objUrl)
+        Dim objResp As System.Net.WebResponse
+        Try
+            objResp = objWebReq.GetResponse
+            objResp.Close()
+            objWebReq = Nothing
+            Return True
+        Catch ex As Exception
+            objWebReq = Nothing
+            Return False
+        End Try
+    End Function
+
+    ''::::::::::::::::::::::::::::::::::::::::::::::::: UPDATE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'
+    '' To configure the system update.
+    ''
+    '' 1)
+    '' -> You must have a web server configured or you can use Dropbox Free
+    '' -> A folder on your web server
+    '' Eg Update version.txt file containing a sfx archive release.exe
+    '' In this file version.text you go up the version of the application that is on the server
+    ''
+    '' In the sfx archives created with WinRAR file. Exe application and the file you
+    '' You want déploiyer during the update eg release.exe <- (Archive sfx created with winrar)
+    ''
+    '' -> You need to edit the following line in the checkForUpdate sub ():
+    ''
+    '' DownloadUpdate ("http://server-adresse/Update/Release.exe", True)
+    ''
+    '' Replace the link to point to your sfx archive on your server
+    '' In our example http://server-adresse/Update/Release.exe
+    ''
+    '' 2)
+    '' -> In frmMain_Load () change the following line:
+    '' CheckForUpdate ("http://localhost/update/version.txt", "2.0.4")
+    ''
+    '' Replace the link to point to your version.txt
+    '' Eg http://server-adresse/Update/version.txt
+    '' And put the num / ro version of the build you are currently creating
+    ''
+    '' Version in version.txt and the version in the release.exe and line
+    '' CheckForUpdate () must be the same for The application does not require update
+    ''::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    Sub checkforupdate(ByVal updatetextfileurl As String, ByVal currentversion As String)
+        'we remove the old version of file version
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/version.dat") Then
+            My.Computer.FileSystem.DeleteFile(My.Application.Info.DirectoryPath + "/version.dat")
+        End If
+
+        'we remove the old version of update file
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/update.exe") Then
+            My.Computer.FileSystem.DeleteFile(My.Application.Info.DirectoryPath + "/update.exe")
+        End If
+
+        Try
+            My.Computer.Network.DownloadFile(updatetextfileurl, My.Application.Info.DirectoryPath + "/version.dat")
+            If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/version.dat") Then
+                Dim reader As New System.IO.StreamReader(My.Application.Info.DirectoryPath + "/version.dat")
+                Dim read As String = reader.ReadToEnd
+                reader.Close()
+                If read <> currentversion Then
+                    MsgBox("A new version is available. " & vbCrLf & _
+                     "You currently have version " & currentversion & "." & vbCrLf & _
+                     "The latest version is " & read & "." & vbCrLf & vbCrLf & _
+                     "The updated program will be launched automatically when closing the window." & vbCrLf & vbCrLf & _
+                     "Press OK to continue.", _
+                    MsgBoxStyle.Information, "Update Available")
+
+                    Try
+                        'the version file is deleted
+                        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/version.dat") Then
+                            My.Computer.FileSystem.DeleteFile(My.Application.Info.DirectoryPath + "/version.dat")
+                        End If
+                        'the update files are removed
+                        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/update.exe") Then
+                            My.Computer.FileSystem.DeleteFile(My.Application.Info.DirectoryPath + "/update.exe")
+                        End If
+                        'we call the sup downloadUpdate
+                        downloadupdate("https://dl.dropboxusercontent.com/u/15746440/D2RIC/release.exe", True)
+
+                    Catch ex As Exception
+                        MsgBox("Error: " + ex.Message)
+                    End Try
+
+                Else
+                    'we do nothing the program is up to date.
+                End If
+            Else
+                MsgBox("An error occurred while checking the version of the program.", MsgBoxStyle.Critical)
+            End If
+        Catch ex As Exception
+            MsgBox("Error with program update, " + ex.Message, MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Sub downloadupdate(ByVal updaterexecuteableurl As String, ByVal showUI As Boolean)
+        Try
+            My.Computer.Network.DownloadFile(updaterexecuteableurl, My.Application.Info.DirectoryPath + "/update.exe", "", "", showUI, 99999999, True)
+            If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/update.exe") Then
+
+                url = updaterexecuteableurl
+                bool_showUI = showUI
+                Timer3.Interval = 10
+                Progress.Maximum = 1000
+                Timer3.Enabled = True
+                Timer3.Start()
+                AddHandler Timer3.Tick, AddressOf Timer3_tick
+            Else
+                downloadupdate(updaterexecuteableurl, showUI)
+            End If
+
+        Catch ex As Exception
+            MsgBox("Error downloading the update, " + ex.Message)
+        End Try
+    End Sub
+
+    Sub Timer3_tick(ByVal sender As Object, ByVal e As System.EventArgs)
+        Try
+            Do Until Progress.Value = 1000
+                Progress.Value = Progress.Value + 1
+            Loop
+            If Progress.Value = 1000 Then
+                If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath + "/update.exe") Then
+                    Shell(My.Application.Info.DirectoryPath + "/update.exe", AppWinStyle.NormalFocus)
+                    Me.Close()
+                    Timer3.Stop()
+                    Timer3.Enabled = False
+                    Exit Sub
+                Else
+                    downloadupdate(url, bool_showUI)
+                End If
+            End If
+        Catch ex As Exception
+            If ex.Message.Contains("not") Then
+                Shell(My.Application.Info.DirectoryPath + "/update.exe", AppWinStyle.NormalFocus)
+                Me.Close()
+                Timer3.Stop()
+                Timer3.Enabled = False
+            End If
+        End Try
     End Sub
 #End Region
 
-    Private Sub CheckBox1_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox1.CheckedChanged
-        If Not FirstChange Then
-            If CheckBox1.Checked Then
-                My.Settings.autoupdate = True
-            Else
-                My.Settings.autoupdate = False
-            End If
-        Else
-            FirstChange = False
-        End If
-    End Sub
-
 #Region "Button"
     Private Sub ButtonUpdate_Click(sender As System.Object, e As System.EventArgs) Handles ButtonUpdate.Click
-        If Not LabelWait.Visible Then
-            LabelWait.Visible = True
-            BackgroundWorker1.RunWorkerAsync()
-        End If
+        LabelWait.Visible = True
+        Me.Update()
+        Check4Update()
+        LabelWait.Visible = False
     End Sub
 
     Private Sub ButtonOpenFolder_Click(sender As System.Object, e As System.EventArgs) Handles ButtonOpenFolder.Click
@@ -194,14 +330,6 @@ Public Class FormMain
         Else
             FirstLangChange = False
         End If
-    End Sub
-
-    Private Sub BackgroundWorker1_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Check4Update()
-    End Sub
-
-    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As System.Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        LabelWait.Visible = False
     End Sub
 
     'CHANGE THE HEROS SHOWN IN THE LIST
@@ -1555,6 +1683,13 @@ Public Class FormMain
         ListView1.DoDragDrop(Selected_Item, DragDropEffects.Copy)
     End Sub
 
+    Private Function GetStartCosts() As String
+        IntPrice = 0
+        For i = 0 To ListView2.Items.Count - 1
+            IntPrice += (Itembuild.GetPrice(ListView2.Items(i).SubItems(1).Text))
+        Next
+        Return IntPrice.ToString
+    End Function
     Private Sub ListView2_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView2.DragDrop
         Dim lvi As ListViewItem = Nothing
         Dim lv As ListView = CType(sender, ListView)
@@ -1566,9 +1701,8 @@ Public Class FormMain
                     .Items.Add(lvi)
                 End With
             End With
-            IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(ListView2.SelectedItems(0).SubItems(1).Text))
-            Label15.Text = IntPrice.ToString
-            CheckCosts(IntPrice.ToString)
+            Label15.Text = GetStartCosts()
+            CheckCosts(CInt(Label15.Text))
             Unsaved = True
         Else
             With ListView2
@@ -1576,9 +1710,8 @@ Public Class FormMain
                 .Items.AddRange(New ListViewItem() {item})
                 .Items(ListView2.Items.Count - 1).ToolTipText = Itembuild.GetToolTip(Selected_Item)
             End With
-            IntPrice = (CInt(Label15.Text) + Itembuild.GetPrice(Selected_Item))
-            Label15.Text = IntPrice.ToString
-            CheckCosts(IntPrice.ToString)
+            Label15.Text = GetStartCosts()
+            CheckCosts(CInt(Label15.Text))
             Unsaved = True
         End If
     End Sub
@@ -1586,15 +1719,9 @@ Public Class FormMain
         e.Effect = DragDropEffects.Copy
     End Sub
     Private Sub ListView2_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView2.ItemDrag
-        IntPrice = (CInt(Label15.Text) - Itembuild.GetPrice(ListView2.SelectedItems(0).SubItems(1).Text))
-        Label15.Text = IntPrice.ToString
-        CheckCosts(IntPrice.ToString)
+        Label15.Text = (CInt(Label15.Text) - Itembuild.GetPrice(ListView2.SelectedItems(0).SubItems(1).Text)).ToString
+        CheckCosts(CInt(Label15.Text))
         DoDragDrop(e.Item, DragDropEffects.Copy)
-        Try
-            ListView2.SelectedItems(0).Remove()
-        Catch ex As Exception
-            'Ignore Exception
-        End Try
     End Sub
 
     Private Sub ListView3_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView3.DragDrop

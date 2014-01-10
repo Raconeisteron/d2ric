@@ -302,7 +302,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABO
-        JQ4AAk1TRnQBSQFMAgEBiAEAAdgBAQHYAQEBKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
+        JQ4AAk1TRnQBSQFMAgEBiAEAAeABAQHgAQEBKAEAAR4BAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGg
         AwABGgEEAgABAQEAARgFAAHAAbABB/8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wCJAAEFAQcBBAEFAQcBBAEGAQcBBAEGAQgBBAEGAQcBBAEFAQYBBAEGAQcBAwIG
@@ -16859,36 +16859,6 @@
   <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="CheckBox1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CheckBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="CheckBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 268</value>
-  </data>
-  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 19</value>
-  </data>
-  <data name="CheckBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>346</value>
-  </data>
-  <data name="CheckBox1.Text" xml:space="preserve">
-    <value>Check for Updates on Startup</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.Name" xml:space="preserve">
-    <value>CheckBox1</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.Parent" xml:space="preserve">
-    <value>TabPage5</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="ButtonOpenBackupFolder.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 203</value>
   </data>
@@ -16911,7 +16881,7 @@
     <value>TabPage5</value>
   </data>
   <data name="&gt;&gt;ButtonOpenBackupFolder.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16941,7 +16911,7 @@
     <value>TabPage5</value>
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16971,7 +16941,7 @@
     <value>TabPage5</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="ButtonBackup.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 174</value>
@@ -16995,7 +16965,7 @@
     <value>TabPage5</value>
   </data>
   <data name="&gt;&gt;ButtonBackup.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="ButtonDeleteBackup.Location" type="System.Drawing.Point, System.Drawing">
     <value>112, 174</value>
@@ -17019,7 +16989,7 @@
     <value>TabPage5</value>
   </data>
   <data name="&gt;&gt;ButtonDeleteBackup.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="TabPage5.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -17129,9 +17099,6 @@
   <data name="&gt;&gt;LabelWait.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>116, 17</value>
-  </metadata>
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>389, 17</value>
   </metadata>
@@ -20426,12 +20393,6 @@
   </data>
   <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BackgroundWorker1.Name" xml:space="preserve">
-    <value>BackgroundWorker1</value>
-  </data>
-  <data name="&gt;&gt;BackgroundWorker1.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
     <value>Timer1</value>

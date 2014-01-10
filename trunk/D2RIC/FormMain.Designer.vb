@@ -72,7 +72,6 @@ Partial Class FormMain
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.ComboBoxLang = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.ButtonOpenBackupFolder = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -81,7 +80,6 @@ Partial Class FormMain
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.LabelWait = New System.Windows.Forms.Label()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
@@ -584,7 +582,6 @@ Partial Class FormMain
         '
         Me.TabPage5.Controls.Add(Me.ComboBoxLang)
         Me.TabPage5.Controls.Add(Me.Label16)
-        Me.TabPage5.Controls.Add(Me.CheckBox1)
         Me.TabPage5.Controls.Add(Me.ButtonOpenBackupFolder)
         Me.TabPage5.Controls.Add(Me.Label9)
         Me.TabPage5.Controls.Add(Me.Label7)
@@ -606,14 +603,6 @@ Partial Class FormMain
         '
         resources.ApplyResources(Me.Label16, "Label16")
         Me.Label16.Name = "Label16"
-        '
-        'CheckBox1
-        '
-        resources.ApplyResources(Me.CheckBox1, "CheckBox1")
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'ButtonOpenBackupFolder
         '
@@ -654,9 +643,6 @@ Partial Class FormMain
         resources.ApplyResources(Me.LabelWait, "LabelWait")
         Me.LabelWait.ForeColor = System.Drawing.Color.Red
         Me.LabelWait.Name = "LabelWait"
-        '
-        'BackgroundWorker1
-        '
         '
         'Timer1
         '
@@ -714,8 +700,6 @@ Partial Class FormMain
     Friend WithEvents ButtonOpenBackupFolder As System.Windows.Forms.Button
     Friend WithEvents ButtonUpdate As System.Windows.Forms.Button
     Friend WithEvents LabelWait As System.Windows.Forms.Label
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
